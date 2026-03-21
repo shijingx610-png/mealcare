@@ -102,28 +102,26 @@ var FDB=[
   {id:97,n:'FM 豆腐わかめスープ',s:'180ml',cal:42,p:3.0,f:1.5,c:3.5,cat:'ファミマ'},
 ];
 
-function todayStr() { return new Date().toISOString().slice(0,10); }
-function fmtDate(d) { var dt=new Date(d+'T12:00:00'); return (dt.getMonth()+1)+'/'+dt.getDate(); }
-function mkId() { return Math.random().toString(36).slice(2,9); }
+function todayStr(){return new Date().toISOString().slice(0,10);}
+function fmtDate(d){var dt=new Date(d+'T12:00:00');return (dt.getMonth()+1)+'/'+dt.getDate();}
+function mkId(){return Math.random().toString(36).slice(2,9);}
 
-function getMacros(items) {
-  if (!items) return {cal:0,p:0,f:0,c:0};
+function getMacros(items){
+  if(!items) return {cal:0,p:0,f:0,c:0};
   return items.reduce(function(a,it){
     var q=it.qty||1;
     return {cal:a.cal+(it.cal||0)*q,p:a.p+(it.p||0)*q,f:a.f+(it.f||0)*q,c:a.c+(it.c||0)*q};
   },{cal:0,p:0,f:0,c:0});
 }
-
-function getDayMacros(dm) {
-  if (!dm) return {cal:0,p:0,f:0,c:0};
+function getDayMacros(dm){
+  if(!dm) return {cal:0,p:0,f:0,c:0};
   var all=[].concat(dm.breakfast||[],dm.lunch||[],dm.dinner||[],dm.snack||[]);
   var r=getMacros(all);
   return {cal:Math.round(r.cal),p:Math.round(r.p*10)/10,f:Math.round(r.f*10)/10,c:Math.round(r.c*10)/10};
 }
-
-function calcGoals(pf) {
-  if (!pf) return {cal:2000,p:150,f:55,c:250};
-  if (pf.goals) return pf.goals;
+function calcGoals(pf){
+  if(!pf) return {cal:2000,p:150,f:55,c:250};
+  if(pf.goals) return pf.goals;
   var h=parseFloat(pf.height)||170,w=parseFloat(pf.weight)||70,a=parseInt(pf.age)||30,g=pf.gender;
   var bmr=g==='female'?10*w+6.25*h-5*a-161:10*w+6.25*h-5*a+5;
   var tdee=bmr*1.55;
@@ -133,9 +131,8 @@ function calcGoals(pf) {
   var cb=Math.round((cal-pr*4-ft*9)/4);
   return {cal:cal,p:pr,f:ft,c:cb};
 }
-
-function calcScore(m,goals) {
-  if (!goals||m.cal===0) return 0;
+function calcScore(m,goals){
+  if(!goals||m.cal===0) return 0;
   var cs=Math.max(0,100-Math.abs(m.cal-goals.cal)/goals.cal*100);
   var ps=m.p>=goals.p?100:m.p/goals.p*100;
   var fs=m.f<=goals.f*1.2?100:Math.max(0,100-(m.f-goals.f*1.2)/goals.f*50);
@@ -143,8 +140,56 @@ function calcScore(m,goals) {
   return Math.round(cs*0.4+ps*0.3+fs*0.15+cc*0.15);
 }
 
+// ── AI Photo Analysis ──
+function callPhotoAI(base64, mediaType, onSuccess, onError) {
+  var source = {};
+  source['type'] = 'base64';
+  source['media_type'] = mediaType;
+  source['data'] = base64;
+
+  var imgBlock = {};
+  imgBlock['type'] = 'image';
+  imgBlock['source'] = source;
+
+  var txtBlock = {};
+  txtBlock['type'] = 'text';
+  txtBlock['text'] = 'この食事写真に含まれる食品をJSONのみで返してください。形式: [{"n":"食品名","cal":数値,"p":数値,"f":数値,"c":数値,"s":"目安量"}]';
+
+  var userMsg = {};
+  userMsg['role'] = 'user';
+  userMsg['content'] = [imgBlock, txtBlock];
+
+  var body = {};
+  body['model'] = 'claude-sonnet-4-20250514';
+  body['max_tokens'] = 1000;
+  body['messages'] = [userMsg];
+
+  var hdrs = {};
+  hdrs['Content-Type'] = 'application/json';
+
+  var opts = {};
+  opts['method'] = 'POST';
+  opts['headers'] = hdrs;
+  opts['body'] = JSON.stringify(body);
+
+  fetch('https://api.anthropic.com/v1/messages', opts)
+    .then(function(r){return r.json();})
+    .then(function(data){
+      var blocks = data.content || [];
+      var text = '';
+      for(var i=0;i<blocks.length;i++){text+=blocks[i].text||'';}
+      var clean = text.replace(/```json/g,'').replace(/```/g,'').trim();
+      try{
+        var parsed = JSON.parse(clean);
+        if(Array.isArray(parsed)) onSuccess(parsed);
+        else onError();
+      }catch(e){onError();}
+    })
+    .catch(function(){onError();});
+}
+
 // ── Charts ──
-function DonutChart(props) {
+function DonutChart(props){
   var p=props.p||0,f=props.f||0,c=props.c||0,size=props.size||120;
   var tot=p+f+c||1;
   var slices=[{v:p,col:B},{v:f,col:Y},{v:c,col:G}];
@@ -163,66 +208,55 @@ function DonutChart(props) {
   return (
     <svg width={size} height={size}>
       {paths}
-      <circle cx={cx} cy={cy} r={r-16} fill={N2} />
+      <circle cx={cx} cy={cy} r={r-16} fill={N2}/>
     </svg>
   );
 }
-
-function BarProg(props) {
+function BarProg(props){
   var value=props.value||0,max=props.max||1,color=props.color||G,h=props.h||8;
   var pct=Math.min(100,max>0?(value/max)*100:0);
   return (
     <div style={{background:N3,borderRadius:4,height:h,overflow:'hidden'}}>
-      <div style={{width:pct+'%',height:'100%',background:pct>110?R:color,borderRadius:4,transition:'width 0.5s ease'}} />
+      <div style={{width:pct+'%',height:'100%',background:pct>110?R:color,borderRadius:4,transition:'width 0.5s ease'}}/>
     </div>
   );
 }
-
-function makeSvgLine(data,getVal,width,height,color) {
-  if (!data||data.length<2) return null;
-  var vals=data.map(getVal);
-  var mn=Math.min.apply(null,vals)-0.3,mx=Math.max.apply(null,vals)+0.3,rng=mx-mn||1;
-  var pl={l:30,r:8,t:8,b:20};
+function WeightChart(props){
+  var data=props.data,width=props.width||300,height=props.height||140;
+  if(!data||data.length<2) return <div style={{color:S,textAlign:'center',padding:20,fontSize:13}}>データなし</div>;
+  var vals=data.map(function(d){return d.weight;});
+  var mn=Math.min.apply(null,vals)-0.4,mx=Math.max.apply(null,vals)+0.4,rng=mx-mn||1;
+  var pl={l:34,r:8,t:8,b:22};
   var W=width-pl.l-pl.r,H=height-pl.t-pl.b;
-  var pts=data.map(function(d,i){return {x:pl.l+(i/(data.length-1))*W,y:pl.t+H-((getVal(d)-mn)/rng)*H};});
+  var pts=data.map(function(d,i){return {x:pl.l+(i/(data.length-1))*W,y:pl.t+H-((d.weight-mn)/rng)*H};});
   var line=pts.map(function(p,i){return (i===0?'M':'L')+p.x.toFixed(1)+','+p.y.toFixed(1);}).join(' ');
   var last=pts[pts.length-1];
   var area=line+'L'+last.x.toFixed(1)+','+(pl.t+H)+'L'+pl.l+','+(pl.t+H)+'Z';
-  return {pts:pts,line:line,area:area,mn:mn,mx:mx,rng:rng,pl:pl,W:W,H:H,last:last};
-}
-
-function WeightChart(props) {
-  var data=props.data,width=props.width||300,height=props.height||140;
-  if (!data||data.length<2) return <div style={{color:S,textAlign:'center',padding:20,fontSize:13}}>データなし</div>;
-  var sv=makeSvgLine(data,function(d){return d.weight;},width,height,G);
-  if (!sv) return null;
-  var yl=[sv.mn+(sv.mx-sv.mn)*0.1,(sv.mn+sv.mx)/2,sv.mx-(sv.mx-sv.mn)*0.1];
+  var yl=[mn+(mx-mn)*0.1,(mn+mx)/2,mx-(mx-mn)*0.1];
   var show=data.filter(function(_,i){return i===0||i===data.length-1||i===Math.floor(data.length/2);});
   return (
     <svg width={width} height={height} style={{overflow:'visible'}}>
       <defs>
         <linearGradient id="wg" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stopColor={G} stopOpacity="0.3" />
-          <stop offset="100%" stopColor={G} stopOpacity="0" />
+          <stop offset="0%" stopColor={G} stopOpacity="0.3"/>
+          <stop offset="100%" stopColor={G} stopOpacity="0"/>
         </linearGradient>
       </defs>
-      {yl.map(function(v,i){var y2=sv.pl.t+sv.H-((v-sv.mn)/sv.rng)*sv.H;return <line key={i} x1={sv.pl.l} x2={sv.pl.l+sv.W} y1={y2} y2={y2} stroke={N3} strokeWidth="1" strokeDasharray="3,3"/>;} )}
-      <path d={sv.area} fill="url(#wg)" />
-      <path d={sv.line} fill="none" stroke={G} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx={sv.last.x} cy={sv.last.y} r="4" fill={G} />
-      {yl.map(function(v,i){var y2=sv.pl.t+sv.H-((v-sv.mn)/sv.rng)*sv.H;return <text key={i} x={sv.pl.l-3} y={y2+4} textAnchor="end" fill={S} fontSize="9">{v.toFixed(1)}</text>;})}
-      {show.map(function(d,i){var idx=data.indexOf(d);return <text key={i} x={sv.pl.l+(idx/(data.length-1))*sv.W} y={height-3} textAnchor="middle" fill={S} fontSize="9">{fmtDate(d.date)}</text>;})}
+      {yl.map(function(v,i){var y2=pl.t+H-((v-mn)/rng)*H;return <line key={i} x1={pl.l} x2={pl.l+W} y1={y2} y2={y2} stroke={N3} strokeWidth="1" strokeDasharray="3,3"/>;} )}
+      <path d={area} fill="url(#wg)"/>
+      <path d={line} fill="none" stroke={G} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <circle cx={last.x} cy={last.y} r="4" fill={G}/>
+      {yl.map(function(v,i){var y2=pl.t+H-((v-mn)/rng)*H;return <text key={i} x={pl.l-3} y={y2+4} textAnchor="end" fill={S} fontSize="9">{v.toFixed(1)}</text>;})}
+      {show.map(function(d,i){var idx=data.indexOf(d);return <text key={i} x={pl.l+(idx/(data.length-1))*W} y={height-3} textAnchor="middle" fill={S} fontSize="9">{fmtDate(d.date)}</text>;})}
     </svg>
   );
 }
-
-function CalChart(props) {
+function CalChart(props){
   var data=props.data,goal=props.goal,width=props.width||300,height=props.height||100;
-  if (!data||data.length===0) return null;
+  if(!data||data.length===0) return null;
   var pad={l:6,r:6,t:6,b:20};
   var W=width-pad.l-pad.r,H=height-pad.t-pad.b;
-  var cals=data.map(function(d){return d.cal;});
-  var maxV=Math.max(goal*1.3,Math.max.apply(null,cals),100);
+  var maxV=Math.max(goal*1.3,Math.max.apply(null,data.map(function(d){return d.cal;})),100);
   var bw=Math.min(24,W/data.length-4);
   return (
     <svg width={width} height={height}>
@@ -233,20 +267,18 @@ function CalChart(props) {
         var col=d.cal>goal*1.08?R:d.cal>goal*0.88?G:Y;
         return (
           <g key={i}>
-            <rect x={x} y={y} width={bw} height={bh} fill={col} opacity={0.8} rx={2} />
+            <rect x={x} y={y} width={bw} height={bh} fill={col} opacity={0.8} rx={2}/>
             <text x={x+bw/2} y={height-4} textAnchor="middle" fill={S} fontSize="8">{fmtDate(d.date)}</text>
           </g>
         );
       })}
-      <line x1={pad.l} x2={pad.l+W} y1={pad.t+H-(goal/maxV)*H} y2={pad.t+H-(goal/maxV)*H} stroke={Y} strokeWidth="1.5" strokeDasharray="4,3" />
+      <line x1={pad.l} x2={pad.l+W} y1={pad.t+H-(goal/maxV)*H} y2={pad.t+H-(goal/maxV)*H} stroke={Y} strokeWidth="1.5" strokeDasharray="4,3"/>
     </svg>
   );
 }
-
-function MiniChart(props) {
-  var data=props.data;
-  var width=props.width||120,height=props.height||40;
-  if (!data||data.length<2) return null;
+function MiniChart(props){
+  var data=props.data,width=props.width||120,height=props.height||40;
+  if(!data||data.length<2) return null;
   var vals=data.map(function(d){return d.w;});
   var mn=Math.min.apply(null,vals)-0.2,mx=Math.max.apply(null,vals)+0.2,rng=mx-mn||1;
   var W=width-8,H=height-8;
@@ -260,20 +292,19 @@ function MiniChart(props) {
     <svg width={width} height={height}>
       <defs>
         <linearGradient id={gid} x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stopColor={col} stopOpacity="0.3" />
-          <stop offset="100%" stopColor={col} stopOpacity="0" />
+          <stop offset="0%" stopColor={col} stopOpacity="0.3"/>
+          <stop offset="100%" stopColor={col} stopOpacity="0"/>
         </linearGradient>
       </defs>
-      <path d={area} fill={'url(#'+gid+')'} />
-      <path d={line} fill="none" stroke={col} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx={last.x} cy={last.y} r="3" fill={col} />
+      <path d={area} fill={'url(#'+gid+')'}/>
+      <path d={line} fill="none" stroke={col} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <circle cx={last.x} cy={last.y} r="3" fill={col}/>
     </svg>
   );
 }
-
-function DetailChart(props) {
+function DetailChart(props){
   var wl=props.weightLog;
-  if (!wl||wl.length<2) return null;
+  if(!wl||wl.length<2) return null;
   var vals=wl.map(function(d){return d.w;});
   var mn=Math.min.apply(null,vals)-0.3,mx=Math.max.apply(null,vals)+0.3,rng=mx-mn||1;
   var W=192,H=64;
@@ -286,13 +317,13 @@ function DetailChart(props) {
     <svg width={200} height={80} style={{overflow:'visible'}}>
       <defs>
         <linearGradient id="cg" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stopColor={G} stopOpacity="0.3" />
-          <stop offset="100%" stopColor={G} stopOpacity="0" />
+          <stop offset="0%" stopColor={G} stopOpacity="0.3"/>
+          <stop offset="100%" stopColor={G} stopOpacity="0"/>
         </linearGradient>
       </defs>
-      <path d={area} fill="url(#cg)" />
-      <path d={line} fill="none" stroke={G} strokeWidth="2" strokeLinecap="round" />
-      <circle cx={last.x} cy={last.y} r="3.5" fill={G} />
+      <path d={area} fill="url(#cg)"/>
+      <path d={line} fill="none" stroke={G} strokeWidth="2" strokeLinecap="round"/>
+      <circle cx={last.x} cy={last.y} r="3.5" fill={G}/>
       {ends.map(function(d,i){
         var idx=wl.indexOf(d);
         return <text key={i} x={pts[idx].x} y={77} textAnchor={i===0?'start':'end'} fill={S} fontSize="9">{d.d}</text>;
@@ -302,10 +333,10 @@ function DetailChart(props) {
 }
 
 // ── Primitives ──
-function Cd(props) {
+function Cd(props){
   return <div style={Object.assign({background:props.bg||N2,borderRadius:16,padding:16},props.style||{})}>{props.children}</div>;
 }
-function Btn(props) {
+function Btn(props){
   var color=props.color||G,outline=props.outline||false,sm=props.sm||false,full=props.full||false;
   return (
     <button onClick={props.onClick} style={Object.assign({
@@ -318,19 +349,22 @@ function Btn(props) {
 }
 
 // ── Onboarding ──
-function Onboarding(props) {
+function Onboarding(props){
   var [step,setStep]=useState(0);
   var [form,setForm]=useState({name:'',age:'',gender:'male',height:'',weight:'',goal:'diet',targetWeight:'',targetCal:''});
-  function upd(k,v){setForm(function(f){return Object.assign({},f,{[k]:v});});}
+  function upd(k,v){setForm(function(f){var nf=Object.assign({},f);nf[k]=v;return nf;});}
   var auto=calcGoals(form);
   function submit(){
     var g=calcGoals(form);
-    props.onDone(Object.assign({},form,{goals:{cal:form.targetCal?+form.targetCal:g.cal,p:g.p,f:g.f,c:g.c}}));
+    var goals={cal:form.targetCal?+form.targetCal:g.cal,p:g.p,f:g.f,c:g.c};
+    var pf=Object.assign({},form);
+    pf.goals=goals;
+    props.onDone(pf);
   }
   var inpS={background:N,border:'1px solid '+N3,borderRadius:10,padding:'10px 14px',color:'#fff',fontSize:15,width:'100%',boxSizing:'border-box'};
   return (
     <div style={{background:N,minHeight:'100vh',maxWidth:480,margin:'0 auto'}}>
-      {step>0&&<div style={{padding:'14px 20px 0'}}><div style={{display:'flex',gap:6}}>{[1,2,3].map(function(i){return <div key={i} style={{flex:1,height:4,borderRadius:2,background:step>=i?G:N3}} />;})}</div></div>}
+      {step>0&&<div style={{padding:'14px 20px 0'}}><div style={{display:'flex',gap:6}}>{[1,2,3].map(function(i){return <div key={i} style={{flex:1,height:4,borderRadius:2,background:step>=i?G:N3}}/>;})}</div></div>}
       {step===0&&(
         <div style={{textAlign:'center',padding:'60px 24px'}}>
           <div style={{fontSize:72,marginBottom:16}}>🥗</div>
@@ -406,7 +440,7 @@ function Onboarding(props) {
 }
 
 // ── BottomNav ──
-function BottomNav(props) {
+function BottomNav(props){
   var tabs=[{id:'home',i:'🏠',l:'ホーム'},{id:'log',i:'✏️',l:'記録'},{id:'nutrition',i:'📊',l:'栄養'},{id:'weight',i:'⚖️',l:'体重'},{id:'coach',i:'👨‍💼',l:'コーチ'}];
   return (
     <div style={{position:'fixed',bottom:0,left:'50%',transform:'translateX(-50%)',width:'100%',maxWidth:480,background:N2,borderTop:'1px solid '+N3,display:'flex',zIndex:100}}>
@@ -415,7 +449,7 @@ function BottomNav(props) {
           <button key={t.id} onClick={function(){props.onChange(t.id);}} style={{flex:1,background:'none',border:'none',cursor:'pointer',padding:'10px 0 8px',display:'flex',flexDirection:'column',alignItems:'center',gap:2}}>
             <span style={{fontSize:20}}>{t.i}</span>
             <span style={{fontSize:9,fontWeight:700,color:props.tab===t.id?G:S}}>{t.l}</span>
-            {props.tab===t.id&&<div style={{width:18,height:2,background:G,borderRadius:1,marginTop:1}} />}
+            {props.tab===t.id&&<div style={{width:18,height:2,background:G,borderRadius:1,marginTop:1}}/>}
           </button>
         );
       })}
@@ -424,7 +458,7 @@ function BottomNav(props) {
 }
 
 // ── HomeScreen ──
-function HomeScreen(props) {
+function HomeScreen(props){
   var profile=props.profile,meals=props.meals,weights=props.weights,setTab=props.setTab,setMealTab=props.setMealTab;
   var [water,setWater]=useState(function(){try{var d=JSON.parse(localStorage.getItem('mc_water')||'{}');return d[todayStr()]||0;}catch(e){return 0;}});
   var today=todayStr();
@@ -452,9 +486,9 @@ function HomeScreen(props) {
             <div style={{color:S,fontSize:12,fontWeight:600}}>本日の摂取カロリー</div>
             <div style={{color:'#fff',fontSize:28,fontWeight:900}}>{m.cal}<span style={{color:S,fontSize:14,fontWeight:400}}> / {goals.cal} kcal</span></div>
           </div>
-          <DonutChart p={m.p} f={m.f} c={m.c} size={90} />
+          <DonutChart p={m.p} f={m.f} c={m.c} size={90}/>
         </div>
-        <BarProg value={m.cal} max={goals.cal} h={10} />
+        <BarProg value={m.cal} max={goals.cal} h={10}/>
         <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:8,marginTop:14}}>
           {[{l:'タンパク質',v:m.p,g:goals.p,c:B},{l:'脂質',v:m.f,g:goals.f,c:Y},{l:'炭水化物',v:m.c,g:goals.c,c:G}].map(function(n){
             return (
@@ -463,7 +497,7 @@ function HomeScreen(props) {
                   <span style={{color:n.c,fontSize:11,fontWeight:700}}>{n.l}</span>
                   <span style={{color:S,fontSize:10}}>{n.v}/{n.g}g</span>
                 </div>
-                <BarProg value={n.v} max={n.g} color={n.c} h={6} />
+                <BarProg value={n.v} max={n.g} color={n.c} h={6}/>
               </div>
             );
           })}
@@ -488,7 +522,7 @@ function HomeScreen(props) {
         </div>
         <div style={{display:'flex',gap:4,alignItems:'center'}}>
           <button onClick={removeWater} style={{background:N3,border:'none',borderRadius:8,color:'#fff',fontWeight:800,fontSize:16,width:32,height:32,cursor:'pointer',flexShrink:0}}>−</button>
-          {[0,1,2,3,4,5,6,7,8,9].map(function(i){return <div key={i} style={{flex:1,height:28,borderRadius:5,background:water>=(i+1)*200?B+'88':N3,border:'1px solid '+(water>=(i+1)*200?B:N3),transition:'all 0.3s'}} />;} )}
+          {[0,1,2,3,4,5,6,7,8,9].map(function(i){return <div key={i} style={{flex:1,height:28,borderRadius:5,background:water>=(i+1)*200?B+'88':N3,border:'1px solid '+(water>=(i+1)*200?B:N3),transition:'all 0.3s'}}/>;} )}
           <button onClick={addWater} style={{background:B,border:'none',borderRadius:8,color:'#fff',fontWeight:800,fontSize:16,width:32,height:32,cursor:'pointer',flexShrink:0}}>+</button>
         </div>
         <div style={{color:S,fontSize:11,marginTop:6}}>目標: 2000ml　+200ml ずつ追加</div>
@@ -538,13 +572,16 @@ function HomeScreen(props) {
 }
 
 // ── LogScreen ──
-function LogScreen(props) {
+function LogScreen(props){
   var meals=props.meals,setMeals=props.setMeals,mealTab=props.mealTab,setMealTab=props.setMealTab;
   var [day,setDay]=useState(todayStr());
   var [showAdd,setShowAdd]=useState(false);
   var [mode,setMode]=useState('search');
   var [search,setSearch]=useState('');
   var [manual,setManual]=useState({n:'',cal:'',p:'',f:'',c:''});
+  var [imgAnalyzing,setImgAnalyzing]=useState(false);
+  var [imgResults,setImgResults]=useState([]);
+  var [imgError,setImgError]=useState('');
   var dm=meals[day]||{breakfast:[],lunch:[],dinner:[],snack:[]};
   var tabs=[{id:'breakfast',l:'朝食',i:'🌅'},{id:'lunch',l:'昼食',i:'🌞'},{id:'dinner',l:'夕食',i:'🌙'},{id:'snack',l:'間食',i:'🍪'}];
   var items=dm[mealTab]||[];
@@ -554,9 +591,11 @@ function LogScreen(props) {
   function changeDay(delta){var d=new Date(day+'T12:00:00');d.setDate(d.getDate()+delta);setDay(d.toISOString().slice(0,10));}
   function addFood(food){
     var nit=Object.assign({},food,{qty:1,uid:mkId()});
-    var ndm=Object.assign({},dm,{[mealTab]:(dm[mealTab]||[]).concat([nit])});
-    setMeals(function(m){return Object.assign({},m,{[day]:ndm});});
-    setSearch('');setShowAdd(false);
+    var newItems=(dm[mealTab]||[]).concat([nit]);
+    var ndm=Object.assign({},dm);
+    ndm[mealTab]=newItems;
+    setMeals(function(m){var nm=Object.assign({},m);nm[day]=ndm;return nm;});
+    setSearch('');setShowAdd(false);setImgResults([]);
   }
   function addManual(){
     if(!manual.n||!manual.cal) return;
@@ -564,8 +603,25 @@ function LogScreen(props) {
     setManual({n:'',cal:'',p:'',f:'',c:''});
   }
   function removeFood(u){
-    var ndm=Object.assign({},dm,{[mealTab]:(dm[mealTab]||[]).filter(function(it){return it.uid!==u;})});
-    setMeals(function(m){return Object.assign({},m,{[day]:ndm});});
+    var newItems=(dm[mealTab]||[]).filter(function(it){return it.uid!==u;});
+    var ndm=Object.assign({},dm);
+    ndm[mealTab]=newItems;
+    setMeals(function(m){var nm=Object.assign({},m);nm[day]=ndm;return nm;});
+  }
+  function handleFileChange(e){
+    if(!e.target.files||!e.target.files[0]) return;
+    var file=e.target.files[0];
+    setImgAnalyzing(true);
+    setImgResults([]);
+    setImgError('');
+    var mediaType=file.type||'image/jpeg';
+    var reader=new FileReader();
+    reader.onerror=function(){setImgError('画像の読み込みに失敗しました。');setImgAnalyzing(false);};
+    reader.onload=function(ev){
+      var base64=ev.target.result.split(',')[1];
+      callPhotoAI(base64,mediaType,function(parsed){setImgResults(parsed);setImgAnalyzing(false);},function(){setImgError('判別できませんでした。別の写真を試してください。');setImgAnalyzing(false);});
+    };
+    reader.readAsDataURL(file);
   }
   var curTab=tabs.find(function(t){return t.id===mealTab;})||tabs[0];
   return (
@@ -612,13 +668,47 @@ function LogScreen(props) {
               <button onClick={function(){setShowAdd(false);}} style={{background:'none',border:'none',color:S,cursor:'pointer',fontSize:20}}>✕</button>
             </div>
             <div style={{display:'flex',gap:6,marginBottom:14}}>
-              {[{id:'search',l:'🔍 検索'},{id:'manual',l:'✏️ 手入力'}].map(function(mv){
-                return <button key={mv.id} onClick={function(){setMode(mv.id);}} style={{flex:1,background:mode===mv.id?G:N3,color:mode===mv.id?'#000':'#fff',border:'none',borderRadius:10,padding:'8px',cursor:'pointer',fontWeight:700,fontSize:12}}>{mv.l}</button>;
+              {[{id:'photo',l:'📸 写真AI'},{id:'search',l:'🔍 検索'},{id:'manual',l:'✏️ 手入力'}].map(function(mv){
+                return <button key={mv.id} onClick={function(){setMode(mv.id);}} style={{flex:1,background:mode===mv.id?G:N3,color:mode===mv.id?'#000':'#fff',border:'none',borderRadius:10,padding:'8px',cursor:'pointer',fontWeight:700,fontSize:11}}>{mv.l}</button>;
               })}
             </div>
+            {mode==='photo'&&(
+              <div>
+                <input id="mc-file-input" type="file" accept="image/*" style={{display:'none'}} onChange={handleFileChange}/>
+                <div style={{background:N,borderRadius:12,border:'2px dashed '+N3,padding:20,textAlign:'center',marginBottom:12}}>
+                  <div style={{fontSize:40,marginBottom:8}}>📸</div>
+                  <div style={{color:S2,fontSize:13,marginBottom:12}}>食事の写真をアップロードすると<br/>AIが食品とカロリーを自動判別します</div>
+                  <button onClick={function(){document.getElementById('mc-file-input').click();}} style={{background:G,border:'none',borderRadius:10,color:'#000',padding:'10px 20px',cursor:'pointer',fontWeight:700,fontSize:13}}>📷 写真を選択 / 撮影</button>
+                </div>
+                {imgAnalyzing&&(
+                  <div style={{textAlign:'center',padding:20}}>
+                    <div style={{fontSize:32,marginBottom:8}}>🤖</div>
+                    <div style={{color:G,fontWeight:700,fontSize:14}}>AIが食品を判別中...</div>
+                    <div style={{color:S,fontSize:12,marginTop:4}}>少しお待ちください</div>
+                  </div>
+                )}
+                {imgError&&<div style={{background:R+'22',border:'1px solid '+R+'44',borderRadius:10,padding:12,color:R,fontSize:13,textAlign:'center',marginBottom:10}}>{imgError}</div>}
+                {imgResults.length>0&&(
+                  <div>
+                    <div style={{color:G,fontWeight:700,fontSize:13,marginBottom:8}}>✅ 判別結果 - タップして追加</div>
+                    {imgResults.map(function(f,i){
+                      return (
+                        <div key={i} onClick={function(){addFood(Object.assign({id:'ai'+mkId()},f));}} style={{background:N,borderRadius:10,padding:'10px 12px',marginBottom:6,cursor:'pointer',display:'flex',justifyContent:'space-between',alignItems:'center',border:'1px solid '+G+'44'}}>
+                          <div>
+                            <div style={{color:'#fff',fontSize:13,fontWeight:700}}>{f.n}</div>
+                            <div style={{color:S,fontSize:11}}>{f.s||''}　P:{f.p}g F:{f.f}g C:{f.c}g</div>
+                          </div>
+                          <div style={{color:G,fontWeight:800,fontSize:14}}>{f.cal} kcal</div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            )}
             {mode==='search'&&(
               <div>
-                <input style={Object.assign({},inpS,{marginBottom:10})} placeholder="食品名・カテゴリで検索" value={search} onChange={function(e){setSearch(e.target.value);}} />
+                <input style={Object.assign({},inpS,{marginBottom:10})} placeholder="食品名・カテゴリで検索" value={search} onChange={function(e){setSearch(e.target.value);}}/>
                 {results.map(function(f){
                   return (
                     <div key={f.id} onClick={function(){addFood(f);}} style={{background:N,borderRadius:10,padding:'10px 12px',marginBottom:6,cursor:'pointer',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
@@ -631,11 +721,11 @@ function LogScreen(props) {
             )}
             {mode==='manual'&&(
               <div style={{display:'flex',flexDirection:'column',gap:10}}>
-                <input style={inpS} placeholder="食品名（必須）" value={manual.n} onChange={function(e){setManual(function(m){return Object.assign({},m,{n:e.target.value});});}} />
-                <input style={inpS} placeholder="カロリー (kcal)（必須）" type="number" value={manual.cal} onChange={function(e){setManual(function(m){return Object.assign({},m,{cal:e.target.value});});}} />
+                <input style={inpS} placeholder="食品名（必須）" value={manual.n} onChange={function(e){setManual(function(m){var nm=Object.assign({},m);nm.n=e.target.value;return nm;});}}/>
+                <input style={inpS} placeholder="カロリー (kcal)（必須）" type="number" value={manual.cal} onChange={function(e){setManual(function(m){var nm=Object.assign({},m);nm.cal=e.target.value;return nm;});}}/>
                 <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:8}}>
                   {[['p','P(g)'],['f','F(g)'],['c','C(g)']].map(function(pair){
-                    return <input key={pair[0]} style={inpS} placeholder={pair[1]} type="number" value={manual[pair[0]]} onChange={function(e){var k=pair[0];setManual(function(m){return Object.assign({},m,{[k]:e.target.value});});}} />;
+                    return <input key={pair[0]} style={inpS} placeholder={pair[1]} type="number" value={manual[pair[0]]} onChange={function(e){var k=pair[0];var v=e.target.value;setManual(function(m){var nm=Object.assign({},m);nm[k]=v;return nm;});}} />;
                   })}
                 </div>
                 <Btn onClick={addManual} full>追加</Btn>
@@ -649,7 +739,7 @@ function LogScreen(props) {
 }
 
 // ── NutritionScreen ──
-function NutritionScreen(props) {
+function NutritionScreen(props){
   var meals=props.meals,profile=props.profile;
   var goals=calcGoals(profile);
   var m=getDayMacros(meals[todayStr()]);
@@ -664,13 +754,13 @@ function NutritionScreen(props) {
       <Cd style={{marginBottom:12}}>
         <div style={{color:'#fff',fontWeight:700,marginBottom:12}}>今日のPFCバランス</div>
         <div style={{display:'flex',alignItems:'center',gap:16}}>
-          <DonutChart p={m.p} f={m.f} c={m.c} size={110} />
+          <DonutChart p={m.p} f={m.f} c={m.c} size={110}/>
           <div style={{flex:1}}>
             {[{l:'タンパク質(P)',v:m.p,g:goals.p,c:B},{l:'脂質(F)',v:m.f,g:goals.f,c:Y},{l:'炭水化物(C)',v:m.c,g:goals.c,c:G}].map(function(n){
               return (
                 <div key={n.l} style={{marginBottom:8}}>
                   <div style={{display:'flex',justifyContent:'space-between',marginBottom:4}}><span style={{color:n.c,fontSize:12,fontWeight:700}}>{n.l}</span><span style={{color:S,fontSize:11}}>{n.v}g / {n.g}g</span></div>
-                  <BarProg value={n.v} max={n.g} color={n.c} />
+                  <BarProg value={n.v} max={n.g} color={n.c}/>
                 </div>
               );
             })}
@@ -679,8 +769,8 @@ function NutritionScreen(props) {
       </Cd>
       <Cd style={{marginBottom:12}}>
         <div style={{color:'#fff',fontWeight:700,marginBottom:10}}>週間カロリー推移</div>
-        <CalChart data={calData} goal={goals.cal} width={320} />
-        <div style={{display:'flex',alignItems:'center',gap:6,marginTop:8}}><div style={{width:20,height:2,background:Y}} /><span style={{color:S,fontSize:11}}>目標: {goals.cal} kcal</span></div>
+        <CalChart data={calData} goal={goals.cal} width={320}/>
+        <div style={{display:'flex',alignItems:'center',gap:6,marginTop:8}}><div style={{width:20,height:2,background:Y}}/><span style={{color:S,fontSize:11}}>目標: {goals.cal} kcal</span></div>
       </Cd>
       <Cd style={{marginBottom:12}}>
         <div style={{color:'#fff',fontWeight:700,marginBottom:12}}>週間平均</div>
@@ -696,7 +786,7 @@ function NutritionScreen(props) {
 }
 
 // ── WeightScreen ──
-function WeightScreen(props) {
+function WeightScreen(props){
   var weights=props.weights,setWeights=props.setWeights,profile=props.profile;
   var [w,setW]=useState('');
   var [fat,setFat]=useState('');
@@ -719,8 +809,8 @@ function WeightScreen(props) {
       <Cd style={{marginBottom:12}}>
         <div style={{color:'#fff',fontWeight:700,marginBottom:12}}>体重を記録</div>
         <div style={{display:'flex',gap:8,marginBottom:8}}>
-          <input style={inpS} type="number" placeholder="体重 (kg)" value={w} onChange={function(e){setW(e.target.value);}} step="0.1" />
-          <input style={inpS} type="number" placeholder="体脂肪率 %" value={fat} onChange={function(e){setFat(e.target.value);}} step="0.1" />
+          <input style={inpS} type="number" placeholder="体重 (kg)" value={w} onChange={function(e){setW(e.target.value);}} step="0.1"/>
+          <input style={inpS} type="number" placeholder="体脂肪率 %" value={fat} onChange={function(e){setFat(e.target.value);}} step="0.1"/>
         </div>
         <Btn onClick={addWeight} full>記録する</Btn>
       </Cd>
@@ -732,7 +822,7 @@ function WeightScreen(props) {
             {profile&&profile.targetWeight&&<Cd style={{textAlign:'center',padding:14}}><div style={{color:G,fontSize:24,fontWeight:900}}>{(latest.weight-parseFloat(profile.targetWeight)).toFixed(1)}</div><div style={{color:S,fontSize:12}}>kg（目標まで）</div></Cd>}
             {change!==null&&<Cd style={{textAlign:'center',padding:14}}><div style={{color:change<=0?G:R,fontSize:24,fontWeight:900}}>{change>0?'+':''}{change}</div><div style={{color:S,fontSize:12}}>kg（開始からの変化）</div></Cd>}
           </div>
-          <Cd style={{marginBottom:12}}><div style={{color:'#fff',fontWeight:700,marginBottom:10}}>体重推移</div><WeightChart data={weights.slice(-21)} width={320} height={140} /></Cd>
+          <Cd style={{marginBottom:12}}><div style={{color:'#fff',fontWeight:700,marginBottom:10}}>体重推移</div><WeightChart data={weights.slice(-21)} width={320} height={140}/></Cd>
           {first&&(
             <Cd>
               <div style={{color:'#fff',fontWeight:700,marginBottom:12}}>ビフォーアフター</div>
@@ -756,18 +846,16 @@ function WeightScreen(props) {
 }
 
 // ── CoachScreen ──
-function CoachScreen(props) {
+function CoachScreen(props){
   var meals=props.meals,weights=props.weights,profile=props.profile;
   var [sub,setSub]=useState('report');
-  var [msgs,setMsgs]=useState([
-    {id:1,from:'coach',text:'今週もお疲れ様です！タンパク質の摂取量が先週より改善されています。この調子で続けましょう！',date:'2026-03-19'},
-    {id:2,from:'coach',text:'週2回の筋トレと合わせて、食後に軽いウォーキングを取り入れてみてください。脂質代謝が高まります。',date:'2026-03-20'},
-  ]);
-  var [missions,setMissions]=useState([
-    {id:1,text:'毎食タンパク質20g以上を意識する',done:false,auto:false,priority:'high'},
-    {id:2,text:'毎日記録をつける（7日連続）',done:true,auto:false,priority:'mid'},
-    {id:3,text:'夕食の炭水化物を100g以内に抑える',done:false,auto:false,priority:'mid'},
-  ]);
+  var initMsg1={id:1,from:'coach',text:'今週もお疲れ様です！タンパク質の摂取量が先週より改善されています。この調子で続けましょう！',date:'2026-03-19'};
+  var initMsg2={id:2,from:'coach',text:'週2回の筋トレと合わせて、食後に軽いウォーキングを取り入れてみてください。脂質代謝が高まります。',date:'2026-03-20'};
+  var [msgs,setMsgs]=useState([initMsg1,initMsg2]);
+  var initMs1={id:1,text:'毎食タンパク質20g以上を意識する',done:false,auto:false,priority:'high'};
+  var initMs2={id:2,text:'毎日記録をつける（7日連続）',done:true,auto:false,priority:'mid'};
+  var initMs3={id:3,text:'夕食の炭水化物を100g以内に抑える',done:false,auto:false,priority:'mid'};
+  var [missions,setMissions]=useState([initMs1,initMs2,initMs3]);
   var [missionMode,setMissionMode]=useState('user');
   var [coachPass,setCoachPass]=useState('');
   var [coachUnlocked,setCoachUnlocked]=useState(false);
@@ -791,36 +879,45 @@ function CoachScreen(props) {
   function pColor(p){return p==='high'?R:p==='mid'?Y:G;}
   function pLabel(p){return p==='high'?'高':p==='mid'?'中':'低';}
   function autoReply(text){
-    var igNote='\n\n💪 もっと詳しいアドバイスや食事・筋トレ情報はInstagramでも発信中！よかったら覗いてみてください☺️\n→ @sho.ishii_fit ( https://www.instagram.com/sho.ishii_fit/ )';
+    var igNote='\n\n💪 食事・筋トレ情報はInstagramでも発信中！\n→ @sho.ishii_fit ( https://www.instagram.com/sho.ishii_fit/ )';
     var reply='';
-    if(/体重|減.*(た|ない)|増.*(た|ない)|落ち/.test(text)) reply='体重の変化は日々の積み重ねです！週単位のトレンドで判断しましょう。引き続き記録を続けてください💪';
+    if(/体重|減.*(た|ない)|増.*(た|ない)|落ち/.test(text)) reply='体重の変化は日々の積み重ねです！週単位のトレンドで判断しましょう💪';
     else if(/タンパク質|プロテイン|筋肉|筋トレ|トレーニング/.test(text)) reply='タンパク質は筋肉の材料になる大切な栄養素です。体重×1.5〜2gを目安に毎食バランスよく摂れると理想的ですよ🍗';
     else if(/脂質|油|揚げ|カロリー高/.test(text)) reply='脂質は悪者ではありませんが摂りすぎには注意です。良質な脂質（アボカド・オリーブオイル・魚）を中心に選ぶと良いですよ🥑';
     else if(/眠れ|睡眠|疲れ|だるい|体調/.test(text)) reply='睡眠不足や疲れは食欲増加・代謝低下につながります。まずはしっかり休むことも立派なトレーニングです😌';
-    else if(/食欲|食べ過ぎ|つい食べ|間食|やめられ/.test(text)) reply='食欲のコントロールは誰でも難しいです。「なぜ食べたくなるか」を記録してみましょう。ストレス・睡眠不足・水分不足が原因のことが多いですよ🧘';
-    else if(/モチベ|やる気|続か|挫折|辛い|しんどい/.test(text)) reply='気持ちが落ちる時期は誰にでもあります！小さな目標を一つクリアするだけで十分です。今日も記録してくれたこと、それだけで素晴らしい👏';
+    else if(/食欲|食べ過ぎ|つい食べ|間食|やめられ/.test(text)) reply='食欲のコントロールは誰でも難しいです。ストレス・睡眠不足・水分不足が原因のことが多いですよ🧘';
+    else if(/モチベ|やる気|続か|挫折|辛い|しんどい/.test(text)) reply='気持ちが落ちる時期は誰にでもあります！今日も記録してくれたこと、それだけで素晴らしい👏';
     else if(/水分|水|飲み物/.test(text)) reply='水分補給はダイエット・筋肉合成・代謝すべてに影響します。1日1.5〜2Lを目安にこまめに飲む習慣をつけましょう💧';
-    else if(/炭水化物|糖質|ご飯|パン|ラーメン/.test(text)) reply='炭水化物はエネルギー源として重要です。完全にカットするより夕食を少し減らして朝・昼にしっかり摂るサイクルがおすすめです🍚';
+    else if(/炭水化物|糖質|ご飯|パン|ラーメン/.test(text)) reply='炭水化物はエネルギー源として重要です。夕食を少し減らして朝・昼にしっかり摂るサイクルがおすすめです🍚';
     else if(/おすすめ|何を食べ|メニュー|レシピ/.test(text)) reply='おすすめは「鶏むね肉＋ブロッコリー＋玄米」の組み合わせ！高タンパク・低脂質・栄養バランスが整った王道メニューです🥦🍗';
     else if(/ありがとう|感謝|嬉しい/.test(text)) reply='こちらこそ毎日頑張ってくれてありがとうございます！一緒に目標に向かっていきましょう😊';
-    else if(/質問|聞きた|教えて/.test(text)) reply='もちろんです！気になることはどんどん聞いてください。より具体的に教えてもらえると的確なアドバイスができますよ✍️';
-    else reply='メッセージありがとうございます！内容を確認しました。目標に向けて一緒に取り組んでいきましょう💡';
+    else if(/質問|聞きた|教えて/.test(text)) reply='もちろんです！気になることはどんどん聞いてください✍️';
+    else reply='メッセージありがとうございます！目標に向けて一緒に取り組んでいきましょう💡';
     return reply+igNote;
   }
   function send(){
     if(!input.trim()) return;
     var t=input;
-    setMsgs(function(m){return m.concat([{id:Date.now(),from:'user',text:t,date:todayStr()}]);});
+    var um={};um.id=Date.now();um.from='user';um.text=t;um.date=todayStr();
+    setMsgs(function(m){return m.concat([um]);});
     setInput('');
-    setTimeout(function(){setMsgs(function(m){return m.concat([{id:Date.now()+1,from:'coach',text:autoReply(t),date:todayStr()}]);});},800);
+    setTimeout(function(){
+      var cm={};cm.id=Date.now()+1;cm.from='coach';cm.text=autoReply(t);cm.date=todayStr();
+      setMsgs(function(m){return m.concat([cm]);});
+    },800);
   }
   function autoGenerate(){
     var nm=[];
-    if(avgP<goals.p*0.8) nm.push({id:Date.now()+1,text:'毎食タンパク質を意識して摂る（目標：'+goals.p+'g/日）',done:false,auto:true,priority:'high'});
-    if(avgF>goals.f*1.15) nm.push({id:Date.now()+2,text:'今週は揚げ物・脂っこい食事を2回以内に抑える',done:false,auto:true,priority:'high'});
-    if(recorded<5) nm.push({id:Date.now()+3,text:'今週は毎日食事を記録する（7日連続を目指そう）',done:false,auto:true,priority:'mid'});
-    if(avgCal>goals.cal*1.1) nm.push({id:Date.now()+4,text:'1日の摂取カロリーを'+goals.cal+'kcal以内に抑える',done:false,auto:true,priority:'high'});
-    if(nm.length===0) nm.push({id:Date.now()+5,text:'今週の目標：毎日水を2L以上飲む',done:false,auto:true,priority:'low'});
+    var m1={};m1.id=Date.now()+1;m1.text='毎食タンパク質を意識して摂る（目標：'+goals.p+'g/日）';m1.done=false;m1.auto=true;m1.priority='high';
+    var m2={};m2.id=Date.now()+2;m2.text='今週は揚げ物・脂っこい食事を2回以内に抑える';m2.done=false;m2.auto=true;m2.priority='high';
+    var m3={};m3.id=Date.now()+3;m3.text='今週は毎日食事を記録する（7日連続を目指そう）';m3.done=false;m3.auto=true;m3.priority='mid';
+    var m4={};m4.id=Date.now()+4;m4.text='1日の摂取カロリーを'+goals.cal+'kcal以内に抑える';m4.done=false;m4.auto=true;m4.priority='high';
+    var m5={};m5.id=Date.now()+5;m5.text='今週の目標：毎日水を2L以上飲む';m5.done=false;m5.auto=true;m5.priority='low';
+    if(avgP<goals.p*0.8) nm.push(m1);
+    if(avgF>goals.f*1.15) nm.push(m2);
+    if(recorded<5) nm.push(m3);
+    if(avgCal>goals.cal*1.1) nm.push(m4);
+    if(nm.length===0) nm.push(m5);
     setMissions(function(m){return m.filter(function(mi){return !mi.auto;}).concat(nm);});
     setAutoMsg(nm.length+'件のミッションを自動生成しました！');
     setTimeout(function(){setAutoMsg('');},3000);
@@ -868,7 +965,7 @@ function CoachScreen(props) {
             })}
           </div>
           <div style={{display:'flex',gap:8}}>
-            <input value={input} onChange={function(e){setInput(e.target.value);}} placeholder="コーチへのメッセージ..." onKeyDown={function(e){if(e.key==='Enter')send();}} style={{flex:1,background:N2,border:'1px solid '+N3,borderRadius:10,padding:'10px 14px',color:'#fff',fontSize:13}} />
+            <input value={input} onChange={function(e){setInput(e.target.value);}} placeholder="コーチへのメッセージ..." onKeyDown={function(e){if(e.key==='Enter')send();}} style={{flex:1,background:N2,border:'1px solid '+N3,borderRadius:10,padding:'10px 14px',color:'#fff',fontSize:13}}/>
             <Btn onClick={send} sm>送信</Btn>
           </div>
         </div>
@@ -883,7 +980,7 @@ function CoachScreen(props) {
             <Cd bg={N2} style={{marginBottom:12}}>
               <div style={{color:'#fff',fontWeight:700,marginBottom:8}}>コーチ用パスワード</div>
               <div style={{display:'flex',gap:8}}>
-                <input style={Object.assign({},inpS,{flex:1})} type="password" placeholder="パスワードを入力" value={coachPass} onChange={function(e){setCoachPass(e.target.value);}} onKeyDown={function(e){if(e.key==='Enter'&&coachPass==='syou5858')setCoachUnlocked(true);}} />
+                <input style={Object.assign({},inpS,{flex:1})} type="password" placeholder="パスワードを入力" value={coachPass} onChange={function(e){setCoachPass(e.target.value);}} onKeyDown={function(e){if(e.key==='Enter'&&coachPass==='syou5858')setCoachUnlocked(true);}}/>
                 <Btn onClick={function(){if(coachPass==='syou5858'){setCoachUnlocked(true);}else{alert('パスワードが違います');}}} sm color={PU} style={{color:'#fff'}}>解除</Btn>
               </div>
             </Cd>
@@ -906,13 +1003,18 @@ function CoachScreen(props) {
               </Cd>
               <Cd bg={N2} style={{marginBottom:12}}>
                 <div style={{color:'#fff',fontWeight:700,fontSize:13,marginBottom:10}}>＋ ミッションを手動追加</div>
-                <input style={Object.assign({},inpS,{marginBottom:8})} placeholder="ミッション内容を入力..." value={newMissionText} onChange={function(e){setNewMissionText(e.target.value);}} />
+                <input style={Object.assign({},inpS,{marginBottom:8})} placeholder="ミッション内容を入力..." value={newMissionText} onChange={function(e){setNewMissionText(e.target.value);}}/>
                 <div style={{display:'flex',gap:8,alignItems:'center'}}>
                   <div style={{color:S,fontSize:12,flexShrink:0}}>優先度：</div>
                   {[{v:'high',l:'高',c:R},{v:'mid',l:'中',c:Y},{v:'low',l:'低',c:G}].map(function(pv){
                     return <button key={pv.v} onClick={function(){setNewPriority(pv.v);}} style={{flex:1,background:newPriority===pv.v?pv.c:N3,color:'#fff',border:'none',borderRadius:8,padding:'6px',cursor:'pointer',fontWeight:700,fontSize:12}}>{pv.l}</button>;
                   })}
-                  <Btn onClick={function(){if(!newMissionText.trim())return;setMissions(function(m){return m.concat([{id:Date.now(),text:newMissionText,done:false,auto:false,priority:newPriority}]);});setNewMissionText('');}} sm color={PU} style={{color:'#fff',flexShrink:0}}>追加</Btn>
+                  <Btn onClick={function(){
+                    if(!newMissionText.trim()) return;
+                    var nm={};nm.id=Date.now();nm.text=newMissionText;nm.done=false;nm.auto=false;nm.priority=newPriority;
+                    setMissions(function(m){return m.concat([nm]);});
+                    setNewMissionText('');
+                  }} sm color={PU} style={{color:'#fff',flexShrink:0}}>追加</Btn>
                 </div>
               </Cd>
               {missions.map(function(ms){
@@ -920,13 +1022,19 @@ function CoachScreen(props) {
                   <Cd key={ms.id} style={{marginBottom:8,padding:12}}>
                     {editingId===ms.id?(
                       <div style={{display:'flex',gap:8}}>
-                        <input style={Object.assign({},inpS,{flex:1})} value={editText} onChange={function(e){setEditText(e.target.value);}} />
-                        <Btn onClick={function(){setMissions(function(m){return m.map(function(mi){return mi.id===editingId?Object.assign({},mi,{text:editText}):mi;});});setEditingId(null);}} sm color={G}>保存</Btn>
+                        <input style={Object.assign({},inpS,{flex:1})} value={editText} onChange={function(e){setEditText(e.target.value);}}/>
+                        <Btn onClick={function(){
+                          setMissions(function(m){return m.map(function(mi){
+                            if(mi.id!==editingId) return mi;
+                            var nm=Object.assign({},mi);nm.text=editText;return nm;
+                          });});
+                          setEditingId(null);
+                        }} sm color={G}>保存</Btn>
                         <Btn onClick={function(){setEditingId(null);}} sm outline>✕</Btn>
                       </div>
                     ):(
                       <div style={{display:'flex',alignItems:'center',gap:8}}>
-                        <div style={{width:6,height:6,borderRadius:'50%',background:pColor(ms.priority||'mid'),flexShrink:0}} />
+                        <div style={{width:6,height:6,borderRadius:'50%',background:pColor(ms.priority||'mid'),flexShrink:0}}/>
                         <div style={{flex:1,color:ms.done?S:S2,fontSize:12,textDecoration:ms.done?'line-through':'none'}}>{ms.text}</div>
                         {ms.auto&&<span style={{background:PU+'33',color:PU,fontSize:9,borderRadius:4,padding:'2px 5px'}}>AUTO</span>}
                         <button onClick={function(){setEditingId(ms.id);setEditText(ms.text);}} style={{background:'none',border:'none',color:B,cursor:'pointer',fontSize:14,padding:'0 2px'}}>✏️</button>
@@ -947,14 +1055,19 @@ function CoachScreen(props) {
                 return (
                   <div key={pr}>
                     <div style={{display:'flex',alignItems:'center',gap:6,marginBottom:6}}>
-                      <div style={{width:8,height:8,borderRadius:'50%',background:pColor(pr)}} />
+                      <div style={{width:8,height:8,borderRadius:'50%',background:pColor(pr)}}/>
                       <div style={{color:S,fontSize:11,fontWeight:700}}>優先度{pLabel(pr)}</div>
                     </div>
                     {group.map(function(ms){
                       return (
                         <Cd key={ms.id} style={{marginBottom:8,padding:12}}>
                           <div style={{display:'flex',alignItems:'center',gap:12}}>
-                            <button onClick={function(){setMissions(function(m){return m.map(function(mi){return mi.id===ms.id?Object.assign({},mi,{done:!mi.done}):mi;});});}} style={{width:24,height:24,borderRadius:'50%',border:'2px solid '+(ms.done?G:N3),background:ms.done?G:'transparent',cursor:'pointer',flexShrink:0,display:'flex',alignItems:'center',justifyContent:'center',color:'#000',fontSize:14,fontWeight:800}}>
+                            <button onClick={function(){
+                              setMissions(function(m){return m.map(function(mi){
+                                if(mi.id!==ms.id) return mi;
+                                var nm=Object.assign({},mi);nm.done=!mi.done;return nm;
+                              });});
+                            }} style={{width:24,height:24,borderRadius:'50%',border:'2px solid '+(ms.done?G:N3),background:ms.done?G:'transparent',cursor:'pointer',flexShrink:0,display:'flex',alignItems:'center',justifyContent:'center',color:'#000',fontSize:14,fontWeight:800}}>
                               {ms.done?'✓':''}
                             </button>
                             <div style={{flex:1}}>
@@ -970,7 +1083,7 @@ function CoachScreen(props) {
               })}
               <div style={{textAlign:'center',marginTop:10}}>
                 <div style={{color:S,fontSize:12,marginBottom:4}}>{missions.filter(function(m){return m.done;}).length}/{missions.length} 達成</div>
-                <BarProg value={missions.filter(function(m){return m.done;}).length} max={Math.max(missions.length,1)} h={6} />
+                <BarProg value={missions.filter(function(m){return m.done;}).length} max={Math.max(missions.length,1)} h={6}/>
               </div>
             </div>
           )}
@@ -981,24 +1094,31 @@ function CoachScreen(props) {
 }
 
 // ── ClientManagerScreen ──
-function ClientManagerScreen(props) {
+function ClientManagerScreen(props){
   var onClose=props.onClose,meals=props.meals||{},weights=props.weights||[],profile=props.profile;
-  var defaultClients=[
-    {id:'c1',name:'田中 健太',age:30,height:175,weight:73,goal:'diet',targetWeight:68,startDate:'2026-02-01',lastLogin:'2026-03-21',streak:14,avgCal:1850,avgP:98,weightLog:[{d:'2/1',w:73.0},{d:'2/8',w:72.4},{d:'2/15',w:72.0},{d:'2/22',w:71.5},{d:'3/1',w:71.2},{d:'3/8',w:70.8},{d:'3/15',w:70.5},{d:'3/21',w:70.1}],score:78},
-    {id:'c2',name:'鈴木 美咲',age:26,height:162,weight:58,goal:'diet',targetWeight:54,startDate:'2026-02-15',lastLogin:'2026-03-20',streak:5,avgCal:1420,avgP:72,weightLog:[{d:'2/15',w:58.0},{d:'2/22',w:57.6},{d:'3/1',w:57.3},{d:'3/8',w:57.0},{d:'3/15',w:56.8},{d:'3/21',w:56.5}],score:65},
-    {id:'c3',name:'山本 大輔',age:35,height:178,weight:82,goal:'muscle',targetWeight:80,startDate:'2026-01-10',lastLogin:'2026-03-18',streak:2,avgCal:2480,avgP:145,weightLog:[{d:'1/10',w:82.0},{d:'1/24',w:82.5},{d:'2/7',w:82.8},{d:'2/21',w:83.0},{d:'3/7',w:82.5},{d:'3/18',w:82.2}],score:52},
-    {id:'c4',name:'佐藤 あかり',age:22,height:158,weight:52,goal:'health',targetWeight:50,startDate:'2026-03-01',lastLogin:'2026-03-15',streak:0,avgCal:980,avgP:45,weightLog:[{d:'3/1',w:52.0},{d:'3/8',w:51.8},{d:'3/15',w:51.5}],score:38},
-  ];
+  var c1={};c1.id='c1';c1.name='田中 健太';c1.age=30;c1.height=175;c1.weight=73;c1.goal='diet';c1.targetWeight=68;c1.startDate='2026-02-01';c1.lastLogin='2026-03-21';c1.streak=14;c1.avgCal=1850;c1.avgP=98;c1.weightLog=[{d:'2/1',w:73.0},{d:'2/8',w:72.4},{d:'2/15',w:72.0},{d:'2/22',w:71.5},{d:'3/1',w:71.2},{d:'3/8',w:70.8},{d:'3/15',w:70.5},{d:'3/21',w:70.1}];c1.score=78;
+  var c2={};c2.id='c2';c2.name='鈴木 美咲';c2.age=26;c2.height=162;c2.weight=58;c2.goal='diet';c2.targetWeight=54;c2.startDate='2026-02-15';c2.lastLogin='2026-03-20';c2.streak=5;c2.avgCal=1420;c2.avgP=72;c2.weightLog=[{d:'2/15',w:58.0},{d:'2/22',w:57.6},{d:'3/1',w:57.3},{d:'3/8',w:57.0},{d:'3/15',w:56.8},{d:'3/21',w:56.5}];c2.score=65;
+  var c3={};c3.id='c3';c3.name='山本 大輔';c3.age=35;c3.height=178;c3.weight=82;c3.goal='muscle';c3.targetWeight=80;c3.startDate='2026-01-10';c3.lastLogin='2026-03-18';c3.streak=2;c3.avgCal=2480;c3.avgP=145;c3.weightLog=[{d:'1/10',w:82.0},{d:'1/24',w:82.5},{d:'2/7',w:82.8},{d:'2/21',w:83.0},{d:'3/7',w:82.5},{d:'3/18',w:82.2}];c3.score=52;
+  var c4={};c4.id='c4';c4.name='佐藤 あかり';c4.age=22;c4.height=158;c4.weight=52;c4.goal='health';c4.targetWeight=50;c4.startDate='2026-03-01';c4.lastLogin='2026-03-15';c4.streak=0;c4.avgCal=980;c4.avgP=45;c4.weightLog=[{d:'3/1',w:52.0},{d:'3/8',w:51.8},{d:'3/15',w:51.5}];c4.score=38;
+  var defaultClients=[c1,c2,c3,c4];
   function buildClients(base){
     return base.map(function(c){
       if(profile&&c.name===profile.name){
-        var days=Object.keys(meals).sort().slice(-7);
-        var rCal=days.length>0?Math.round(days.reduce(function(s,d){return s+getDayMacros(meals[d]).cal;},0)/days.length):c.avgCal;
-        var rP=days.length>0?Math.round(days.reduce(function(s,d){return s+getDayMacros(meals[d]).p;},0)/days.length*10)/10:c.avgP;
+        var ds=Object.keys(meals).sort().slice(-7);
+        var rCal=ds.length>0?Math.round(ds.reduce(function(s,d){return s+getDayMacros(meals[d]).cal;},0)/ds.length):c.avgCal;
+        var rP=ds.length>0?Math.round(ds.reduce(function(s,d){return s+getDayMacros(meals[d]).p;},0)/ds.length*10)/10:c.avgP;
         var rStreak=Object.keys(meals).filter(function(d){return getDayMacros(meals[d]).cal>0;}).length;
         var rScore=calcScore(getDayMacros(meals[todayStr()]),calcGoals(profile))||c.score;
         var rWL=weights.slice(-8).map(function(w){return {d:fmtDate(w.date),w:w.weight};});
-        return Object.assign({},c,{avgCal:rCal,avgP:rP,streak:rStreak,score:rScore,weightLog:rWL.length>=2?rWL:c.weightLog,lastLogin:todayStr(),weight:weights.length>0?weights[weights.length-1].weight:c.weight,height:parseFloat(profile.height)||c.height,goal:profile.goal||c.goal,targetWeight:parseFloat(profile.targetWeight)||c.targetWeight});
+        var nc=Object.assign({},c);
+        nc.avgCal=rCal;nc.avgP=rP;nc.streak=rStreak;nc.score=rScore;
+        nc.weightLog=rWL.length>=2?rWL:c.weightLog;
+        nc.lastLogin=todayStr();
+        nc.weight=weights.length>0?weights[weights.length-1].weight:c.weight;
+        nc.height=parseFloat(profile.height)||c.height;
+        nc.goal=profile.goal||c.goal;
+        nc.targetWeight=parseFloat(profile.targetWeight)||c.targetWeight;
+        return nc;
       }
       return c;
     });
@@ -1013,7 +1133,7 @@ function ClientManagerScreen(props) {
   function sLabel(s){return s==='active'?'✅ 順調':s==='warning'?'⚠️ 注意':'🚨 要対応';}
   function goalLabel(g){return g==='diet'?'ダイエット':g==='muscle'?'筋肉増量':g==='health'?'健康維持':'体重維持';}
   function daysSince(d){return Math.floor((new Date()-new Date(d))/86400000);}
-  function autoSt(c){var days=daysSince(c.lastLogin);if(days>=5||c.score<40)return 'danger';if(days>=3||c.score<60)return 'warning';return 'active';}
+  function autoSt(c){var ds=daysSince(c.lastLogin);if(ds>=5||c.score<40)return 'danger';if(ds>=3||c.score<60)return 'warning';return 'active';}
   var sorted=clients.filter(function(c){return filterStatus==='all'||autoSt(c)===filterStatus;}).sort(function(a,b){return sortKey==='score'?b.score-a.score:sortKey==='streak'?b.streak-a.streak:a.name.localeCompare(b.name);});
   var summary={total:clients.length,active:clients.filter(function(c){return autoSt(c)==='active';}).length,warning:clients.filter(function(c){return autoSt(c)==='warning';}).length,danger:clients.filter(function(c){return autoSt(c)==='danger';}).length,avgScore:Math.round(clients.reduce(function(s,c){return s+c.score;},0)/Math.max(clients.length,1))};
   if(view==='detail'&&selected){
@@ -1044,7 +1164,7 @@ function ClientManagerScreen(props) {
         <Cd style={{marginBottom:12}}>
           <div style={{color:'#fff',fontWeight:700,marginBottom:10}}>体重推移</div>
           <div style={{display:'flex',alignItems:'center',gap:16}}>
-            <DetailChart weightLog={c.weightLog} />
+            <DetailChart weightLog={c.weightLog}/>
             <div>
               <div style={{color:S,fontSize:11}}>開始時</div><div style={{color:'#fff',fontWeight:800}}>{c.weightLog[0].w} kg</div>
               <div style={{color:S,fontSize:11,marginTop:6}}>現在</div><div style={{color:'#fff',fontWeight:800}}>{c.weightLog[c.weightLog.length-1].w} kg</div>
@@ -1060,7 +1180,10 @@ function ClientManagerScreen(props) {
             })}
           </div>
         </Cd>
-        <Cd><div style={{color:'#fff',fontWeight:700,marginBottom:8}}>📝 コーチメモ</div><textarea value={notes[c.id]||''} onChange={function(e){setNotes(function(n){return Object.assign({},n,{[c.id]:e.target.value});});}} placeholder="このクライアントへのメモを入力..." style={Object.assign({},inpS2,{height:80,resize:'vertical'})} /></Cd>
+        <Cd>
+          <div style={{color:'#fff',fontWeight:700,marginBottom:8}}>📝 コーチメモ</div>
+          <textarea value={notes[c.id]||''} onChange={function(e){var cid=c.id;var v=e.target.value;setNotes(function(n){var nn=Object.assign({},n);nn[cid]=v;return nn;});}} placeholder="このクライアントへのメモを入力..." style={Object.assign({},inpS2,{height:80,resize:'vertical'})}/>
+        </Cd>
       </div>
     );
   }
@@ -1077,7 +1200,7 @@ function ClientManagerScreen(props) {
       </div>
       <Cd style={{marginBottom:14}}>
         <div style={{display:'flex',justifyContent:'space-between',marginBottom:6}}><span style={{color:'#fff',fontWeight:700,fontSize:13}}>平均スコア</span><span style={{color:summary.avgScore>=70?G:summary.avgScore>=50?Y:R,fontWeight:800}}>{summary.avgScore}点</span></div>
-        <BarProg value={summary.avgScore} max={100} color={summary.avgScore>=70?G:summary.avgScore>=50?Y:R} h={10} />
+        <BarProg value={summary.avgScore} max={100} color={summary.avgScore>=70?G:summary.avgScore>=50?Y:R} h={10}/>
       </Cd>
       <div style={{display:'flex',gap:6,marginBottom:10,flexWrap:'wrap'}}>
         {[{v:'all',l:'全員'},{v:'active',l:'✅ 順調'},{v:'warning',l:'⚠️ 注意'},{v:'danger',l:'🚨 要対応'}].map(function(f){
@@ -1091,17 +1214,17 @@ function ClientManagerScreen(props) {
         <table style={{borderCollapse:'collapse',width:'100%',minWidth:480,fontSize:12}}>
           <thead><tr style={{background:N3}}>{['名前','状態','スコア','継続','推移','ログイン',''].map(function(h,i){return <th key={i} style={{color:S2,padding:'9px 8px',textAlign:'left',whiteSpace:'nowrap',fontWeight:700}}>{h}</th>;})}</tr></thead>
           <tbody>
-            {sorted.map(function(c,i){
-              var st=autoSt(c),days=daysSince(c.lastLogin);
+            {sorted.map(function(cl,i){
+              var st=autoSt(cl),ds=daysSince(cl.lastLogin);
               return (
-                <tr key={c.id} style={{background:i%2===0?N2:N,borderBottom:'1px solid '+N3}}>
-                  <td style={{padding:'8px 8px',color:'#fff',fontWeight:700,whiteSpace:'nowrap'}}>{c.name}</td>
+                <tr key={cl.id} style={{background:i%2===0?N2:N,borderBottom:'1px solid '+N3}}>
+                  <td style={{padding:'8px 8px',color:'#fff',fontWeight:700,whiteSpace:'nowrap'}}>{cl.name}</td>
                   <td style={{padding:'8px 8px',whiteSpace:'nowrap'}}><span style={{background:sColor(st)+'22',color:sColor(st),borderRadius:6,padding:'2px 6px',fontSize:10,fontWeight:700}}>{sLabel(st)}</span></td>
-                  <td style={{padding:'8px 8px'}}><span style={{color:c.score>=70?G:c.score>=50?Y:R,fontWeight:800}}>{c.score}</span></td>
-                  <td style={{padding:'8px 8px',color:S2}}>{c.streak}日</td>
-                  <td style={{padding:'4px 8px'}}><MiniChart data={c.weightLog} /></td>
-                  <td style={{padding:'8px 8px',color:days>=3?R:S2,whiteSpace:'nowrap'}}>{days===0?'今日':days+'日前'}</td>
-                  <td style={{padding:'8px 8px'}}><button onClick={function(){setSelected(c.id);setView('detail');}} style={{background:PU,border:'none',borderRadius:6,color:'#fff',padding:'4px 8px',cursor:'pointer',fontSize:11,fontWeight:700}}>詳細</button></td>
+                  <td style={{padding:'8px 8px'}}><span style={{color:cl.score>=70?G:cl.score>=50?Y:R,fontWeight:800}}>{cl.score}</span></td>
+                  <td style={{padding:'8px 8px',color:S2}}>{cl.streak}日</td>
+                  <td style={{padding:'4px 8px'}}><MiniChart data={cl.weightLog}/></td>
+                  <td style={{padding:'8px 8px',color:ds>=3?R:S2,whiteSpace:'nowrap'}}>{ds===0?'今日':ds+'日前'}</td>
+                  <td style={{padding:'8px 8px'}}><button onClick={function(){setSelected(cl.id);setView('detail');}} style={{background:PU,border:'none',borderRadius:6,color:'#fff',padding:'4px 8px',cursor:'pointer',fontSize:11,fontWeight:700}}>詳細</button></td>
                 </tr>
               );
             })}
@@ -1126,13 +1249,13 @@ function ClientManagerScreen(props) {
 }
 
 // ── ExportScreen ──
-function ExportScreen(props) {
+function ExportScreen(props){
   var meals=props.meals,weights=props.weights,profile=props.profile,onClose=props.onClose;
   var [type,setType]=useState('meals');
   var [copied,setCopied]=useState(false);
   var goals=calcGoals(profile);
   function mealRows(){
-    var header=['日付','食事区分','食品名','カロリー','タンパク質(g)','脂質(g)','炭水化物(g)','合計Cal','合計P','合計F','合計C','スコア'];
+    var header=['日付','食事区分','食品名','カロリー','P(g)','F(g)','C(g)','合計Cal','合計P','合計F','合計C','スコア'];
     var rows=[header];
     Object.keys(meals).sort().forEach(function(date){
       var dm=meals[date];
@@ -1159,7 +1282,7 @@ function ExportScreen(props) {
     return rows;
   }
   function nutritionRows(){
-    var header=['日付','カロリー','目標Cal','Cal%','P(g)','目標P','P%','F(g)','目標F','F%','C(g)','目標C','C%','スコア'];
+    var header=['日付','Cal','目標Cal','Cal%','P(g)','目標P','P%','F(g)','目標F','F%','C(g)','目標C','C%','スコア'];
     var rows=[header];
     Object.keys(meals).sort().forEach(function(date){
       var m=getDayMacros(meals[date]);
@@ -1202,7 +1325,7 @@ function ExportScreen(props) {
           <button onClick={copyTSV} style={{flex:2,background:copied?G:B,color:'#fff',border:'none',borderRadius:10,padding:'11px',cursor:'pointer',fontWeight:700,fontSize:13}}>{copied?'✓ コピー完了！':'📋 タブ区切りでコピー'}</button>
           <button onClick={download} style={{flex:1,background:N2,color:'#fff',border:'1px solid '+N3,borderRadius:10,padding:'11px',cursor:'pointer',fontWeight:700,fontSize:12}}>⬇ CSV</button>
         </div>
-        <div style={{color:S,fontSize:12,marginBottom:6}}>{dataRows.length} 件のデータ（プレビュー）</div>
+        <div style={{color:S,fontSize:12,marginBottom:6}}>{dataRows.length} 件のデータ</div>
         <div style={{overflowX:'auto',borderRadius:12,border:'1px solid '+N3}}>
           <table style={{borderCollapse:'collapse',width:'100%',minWidth:400,fontSize:11}}>
             <thead><tr style={{background:N3}}>{header.map(function(h,i){return <th key={i} style={{color:S2,padding:'8px 8px',textAlign:'left',whiteSpace:'nowrap',fontWeight:700}}>{h}</th>;})}</tr></thead>
@@ -1224,7 +1347,7 @@ function ExportScreen(props) {
 }
 
 // ── Main App ──
-export default function App() {
+export default function App(){
   var [profile,setProfile]=useState(function(){try{return JSON.parse(localStorage.getItem('mc2_profile'))||null;}catch(e){return null;}});
   var [meals,setMeals]=useState(function(){try{var m=JSON.parse(localStorage.getItem('mc2_meals'));return m&&Object.keys(m).length>0?m:{};}catch(e){return {};}});
   var [weights,setWeights]=useState(function(){try{var w=JSON.parse(localStorage.getItem('mc2_weights'));return w&&w.length>0?w:[];}catch(e){return [];}});
@@ -1234,7 +1357,6 @@ export default function App() {
   var [showClients,setShowClients]=useState(false);
   var [clientPassInput,setClientPassInput]=useState('');
   var [showClientPassModal,setShowClientPassModal]=useState(false);
-
   useEffect(function(){try{if(profile)localStorage.setItem('mc2_profile',JSON.stringify(profile));}catch(e){};},[profile]);
   useEffect(function(){try{localStorage.setItem('mc2_meals',JSON.stringify(meals));}catch(e){};},[meals]);
   useEffect(function(){try{localStorage.setItem('mc2_weights',JSON.stringify(weights));}catch(e){};},[weights]);
@@ -1243,30 +1365,30 @@ export default function App() {
     try{
       var saved=JSON.parse(localStorage.getItem('mc_clients')||'[]');
       if(saved.length===0) return;
-      var updated=saved.map(function(c){return c.name===profile.name?Object.assign({},c,{lastLogin:todayStr()}):c;});
+      var updated=saved.map(function(c){
+        if(c.name!==profile.name) return c;
+        var nc=Object.assign({},c);nc.lastLogin=todayStr();return nc;
+      });
       localStorage.setItem('mc_clients',JSON.stringify(updated));
     }catch(e){}
   },[profile]);
-
   function openClientManager(){setClientPassInput('');setShowClientPassModal(true);}
   function submitClientPass(){
     if(clientPassInput==='syou5858'){setShowClientPassModal(false);setShowClients(true);}
     else{alert('パスワードが違います');}
   }
-
-  if(!profile) return <Onboarding onDone={function(pf){setProfile(pf);setTab('home');}} />;
-
+  if(!profile) return <Onboarding onDone={function(pf){setProfile(pf);setTab('home');}}/>;
   return (
     <div style={{background:N,minHeight:'100vh',maxWidth:480,margin:'0 auto',fontFamily:'-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif',color:'#fff',overflowX:'hidden',width:'100%',boxSizing:'border-box'}}>
-      {showExport&&<ExportScreen meals={meals} weights={weights} profile={profile} onClose={function(){setShowExport(false);}} />}
-      {showClients&&<ClientManagerScreen meals={meals} weights={weights} profile={profile} onClose={function(){setShowClients(false);}} />}
+      {showExport&&<ExportScreen meals={meals} weights={weights} profile={profile} onClose={function(){setShowExport(false);}}/>}
+      {showClients&&<ClientManagerScreen meals={meals} weights={weights} profile={profile} onClose={function(){setShowClients(false);}}/>}
       {showClientPassModal&&(
         <div style={{position:'fixed',inset:0,background:'rgba(0,0,0,0.85)',zIndex:400,display:'flex',alignItems:'center',justifyContent:'center'}}>
           <div style={{background:N2,borderRadius:20,padding:28,width:300}}>
             <div style={{textAlign:'center',fontSize:40,marginBottom:8}}>🔐</div>
             <div style={{color:'#fff',fontWeight:800,fontSize:16,textAlign:'center',marginBottom:4}}>コーチ専用エリア</div>
             <div style={{color:S,fontSize:12,textAlign:'center',marginBottom:18}}>パスワードを入力してください</div>
-            <input type="password" placeholder="パスワード" value={clientPassInput} onChange={function(e){setClientPassInput(e.target.value);}} onKeyDown={function(e){if(e.key==='Enter')submitClientPass();}} style={{background:N,border:'1px solid '+N3,borderRadius:10,padding:'10px 14px',color:'#fff',fontSize:15,width:'100%',boxSizing:'border-box',marginBottom:12}} autoFocus />
+            <input type="password" placeholder="パスワード" value={clientPassInput} onChange={function(e){setClientPassInput(e.target.value);}} onKeyDown={function(e){if(e.key==='Enter')submitClientPass();}} style={{background:N,border:'1px solid '+N3,borderRadius:10,padding:'10px 14px',color:'#fff',fontSize:15,width:'100%',boxSizing:'border-box',marginBottom:12}} autoFocus/>
             <div style={{display:'flex',gap:8}}>
               <button onClick={function(){setShowClientPassModal(false);}} style={{flex:1,background:N3,border:'none',borderRadius:10,color:'#fff',padding:'10px',cursor:'pointer',fontWeight:700,fontSize:13}}>キャンセル</button>
               <button onClick={submitClientPass} style={{flex:2,background:PU,border:'none',borderRadius:10,color:'#fff',padding:'10px',cursor:'pointer',fontWeight:700,fontSize:13}}>解除</button>
@@ -1279,13 +1401,13 @@ export default function App() {
           <button onClick={openClientManager} style={{background:PU+'22',border:'1px solid '+PU,borderRadius:8,color:PU,fontSize:11,fontWeight:700,padding:'6px 10px',cursor:'pointer'}}>🔐 コーチ管理</button>
           <button onClick={function(){setShowExport(true);}} style={{background:N2,border:'1px solid '+N3,borderRadius:8,color:S2,fontSize:11,fontWeight:700,padding:'6px 10px',cursor:'pointer'}}>📤 Sheets出力</button>
         </div>
-        {tab==='home'&&<HomeScreen profile={profile} meals={meals} weights={weights} setTab={setTab} setMealTab={setMealTab} />}
-        {tab==='log'&&<LogScreen meals={meals} setMeals={setMeals} mealTab={mealTab} setMealTab={setMealTab} />}
-        {tab==='nutrition'&&<NutritionScreen meals={meals} profile={profile} />}
-        {tab==='weight'&&<WeightScreen weights={weights} setWeights={setWeights} profile={profile} />}
-        {tab==='coach'&&<CoachScreen meals={meals} weights={weights} profile={profile} />}
+        {tab==='home'&&<HomeScreen profile={profile} meals={meals} weights={weights} setTab={setTab} setMealTab={setMealTab}/>}
+        {tab==='log'&&<LogScreen meals={meals} setMeals={setMeals} mealTab={mealTab} setMealTab={setMealTab}/>}
+        {tab==='nutrition'&&<NutritionScreen meals={meals} profile={profile}/>}
+        {tab==='weight'&&<WeightScreen weights={weights} setWeights={setWeights} profile={profile}/>}
+        {tab==='coach'&&<CoachScreen meals={meals} weights={weights} profile={profile}/>}
       </div>
-      <BottomNav tab={tab} onChange={setTab} />
+      <BottomNav tab={tab} onChange={setTab}/>
     </div>
   );
 }
