@@ -153,7 +153,7 @@ function callPhotoAI(base64, mediaType, onSuccess, onError) {
 
   var txtBlock = {};
   txtBlock['type'] = 'text';
-  txtBlock['text'] = 'この食事写真に含まれる食品をJSONのみで返してください。形式: [{"n":"食品名","cal":数値,"p":数値,"f":数値,"c":数値,"s":"目安量"}]';
+  txtBlock['text'] = 'あなたはプロの管理栄養士です。この食事写真を詳細に分析してください。以下のルールに従ってください。\n1. 写真に写っている全ての食品・料理を必ず特定する\n2. 判断が難しい場合でも、最も可能性が高いものを推定して回答する（「不明」「判断できない」は禁止）\n3. 盛り付けの量・器のサイズ・食品の見た目から重量を推定する\n4. 日本食・コンビニ食・外食など一般的な食事を想定してカロリーと栄養素を計算する\n5. 必ずJSON配列のみ返す。説明文・前置き・コードブロック記号は不要\n形式: [{"n":"具体的な食品名","cal":カロリー数値,"p":タンパク質g,"f":脂質g,"c":炭水化物g,"s":"推定量"}]';
 
   var userMsg = {};
   userMsg['role'] = 'user';
@@ -608,18 +608,28 @@ function LogScreen(props){
     ndm[mealTab]=newItems;
     setMeals(function(m){var nm=Object.assign({},m);nm[day]=ndm;return nm;});
   }
+  var [imgConfirm,setImgConfirm]=useState(null);
+
   function handleFileChange(e){
     if(!e.target.files||!e.target.files[0]) return;
     var file=e.target.files[0];
     setImgAnalyzing(true);
     setImgResults([]);
     setImgError('');
+    setImgConfirm(null);
     var mediaType=file.type||'image/jpeg';
     var reader=new FileReader();
     reader.onerror=function(){setImgError('画像の読み込みに失敗しました。');setImgAnalyzing(false);};
     reader.onload=function(ev){
       var base64=ev.target.result.split(',')[1];
-      callPhotoAI(base64,mediaType,function(parsed){setImgResults(parsed);setImgAnalyzing(false);},function(){setImgError('判別できませんでした。別の写真を試してください。');setImgAnalyzing(false);});
+      callPhotoAI(base64,mediaType,function(parsed){
+        setImgResults(parsed);
+        setImgConfirm('pending');
+        setImgAnalyzing(false);
+      },function(){
+        setImgError('判別できませんでした。別の写真を試してください。');
+        setImgAnalyzing(false);
+      });
     };
     reader.readAsDataURL(file);
   }
@@ -683,25 +693,57 @@ function LogScreen(props){
                 {imgAnalyzing&&(
                   <div style={{textAlign:'center',padding:20}}>
                     <div style={{fontSize:32,marginBottom:8}}>🤖</div>
-                    <div style={{color:G,fontWeight:700,fontSize:14}}>AIが食品を判別中...</div>
-                    <div style={{color:S,fontSize:12,marginTop:4}}>少しお待ちください</div>
+                    <div style={{color:G,fontWeight:700,fontSize:14}}>AIが食品を詳細分析中...</div>
+                    <div style={{color:S,fontSize:12,marginTop:4}}>栄養素・カロリーを計算しています</div>
                   </div>
                 )}
                 {imgError&&<div style={{background:R+'22',border:'1px solid '+R+'44',borderRadius:10,padding:12,color:R,fontSize:13,textAlign:'center',marginBottom:10}}>{imgError}</div>}
-                {imgResults.length>0&&(
+                {imgResults.length>0&&imgConfirm==='pending'&&(
                   <div>
-                    <div style={{color:G,fontWeight:700,fontSize:13,marginBottom:8}}>✅ 判別結果 - タップして追加</div>
+                    <div style={{background:B+'18',border:'1px solid '+B+'44',borderRadius:12,padding:14,marginBottom:12}}>
+                      <div style={{color:B,fontWeight:800,fontSize:14,marginBottom:6}}>🤖 以下の食品を検出しました。合っていますか？</div>
+                      {imgResults.map(function(f,i){
+                        return (
+                          <div key={i} style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'6px 0',borderBottom:i<imgResults.length-1?'1px solid '+N3:'none'}}>
+                            <div>
+                              <div style={{color:'#fff',fontSize:13,fontWeight:700}}>{f.n}</div>
+                              <div style={{color:S,fontSize:11}}>{f.s}　P:{f.p}g F:{f.f}g C:{f.c}g</div>
+                            </div>
+                            <div style={{color:G,fontWeight:800,fontSize:13}}>{f.cal} kcal</div>
+                          </div>
+                        );
+                      })}
+                      <div style={{marginTop:8}}>
+                        <div style={{color:G,fontWeight:700,fontSize:13,marginBottom:4}}>
+                          合計: {imgResults.reduce(function(s,f){return s+f.cal;},0)} kcal
+                        </div>
+                      </div>
+                    </div>
+                    <div style={{display:'flex',gap:8,marginBottom:10}}>
+                      <button onClick={function(){
+                        imgResults.forEach(function(f){addFood(Object.assign({id:'ai'+mkId()},f));});
+                        setImgConfirm('done');
+                      }} style={{flex:2,background:G,border:'none',borderRadius:10,color:'#000',padding:'11px',cursor:'pointer',fontWeight:700,fontSize:13}}>✅ はい、全て追加する</button>
+                      <button onClick={function(){setImgConfirm('select');}} style={{flex:1,background:N3,border:'none',borderRadius:10,color:'#fff',padding:'11px',cursor:'pointer',fontWeight:700,fontSize:12}}>選んで追加</button>
+                    </div>
+                    <button onClick={function(){setImgResults([]);setImgConfirm(null);}} style={{width:'100%',background:'none',border:'1px solid '+N3,borderRadius:10,color:S,padding:'8px',cursor:'pointer',fontSize:12}}>✕ キャンセル（撮り直す）</button>
+                  </div>
+                )}
+                {imgResults.length>0&&imgConfirm==='select'&&(
+                  <div>
+                    <div style={{color:S2,fontWeight:700,fontSize:13,marginBottom:8}}>追加したい食品をタップしてください</div>
                     {imgResults.map(function(f,i){
                       return (
                         <div key={i} onClick={function(){addFood(Object.assign({id:'ai'+mkId()},f));}} style={{background:N,borderRadius:10,padding:'10px 12px',marginBottom:6,cursor:'pointer',display:'flex',justifyContent:'space-between',alignItems:'center',border:'1px solid '+G+'44'}}>
                           <div>
                             <div style={{color:'#fff',fontSize:13,fontWeight:700}}>{f.n}</div>
-                            <div style={{color:S,fontSize:11}}>{f.s||''}　P:{f.p}g F:{f.f}g C:{f.c}g</div>
+                            <div style={{color:S,fontSize:11}}>{f.s}　P:{f.p}g F:{f.f}g C:{f.c}g</div>
                           </div>
                           <div style={{color:G,fontWeight:800,fontSize:14}}>{f.cal} kcal</div>
                         </div>
                       );
                     })}
+                    <button onClick={function(){setImgConfirm('pending');}} style={{width:'100%',background:'none',border:'1px solid '+N3,borderRadius:10,color:S,padding:'8px',cursor:'pointer',fontSize:12,marginTop:4}}>← 戻る</button>
                   </div>
                 )}
               </div>
