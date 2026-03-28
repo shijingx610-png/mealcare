@@ -1399,6 +1399,18 @@ export default function App(){
   var [showClients,setShowClients]=useState(false);
   var [clientPassInput,setClientPassInput]=useState('');
   var [showClientPassModal,setShowClientPassModal]=useState(false);
+  var [installPrompt,setInstallPrompt]=useState(null);
+  var [showInstallBanner,setShowInstallBanner]=useState(false);
+  useEffect(function(){
+    function handler(e){e.preventDefault();setInstallPrompt(e);setShowInstallBanner(true);}
+    window.addEventListener('beforeinstallprompt',handler);
+    return function(){window.removeEventListener('beforeinstallprompt',handler);};
+  },[]);
+  function handleInstall(){
+    if(!installPrompt)return;
+    installPrompt.prompt();
+    installPrompt.userChoice.then(function(){setInstallPrompt(null);setShowInstallBanner(false);});
+  }
   useEffect(function(){try{if(profile)localStorage.setItem('mc2_profile',JSON.stringify(profile));}catch(e){};},[profile]);
   useEffect(function(){try{localStorage.setItem('mc2_meals',JSON.stringify(meals));}catch(e){};},[meals]);
   useEffect(function(){try{localStorage.setItem('mc2_weights',JSON.stringify(weights));}catch(e){};},[weights]);
@@ -1435,6 +1447,15 @@ export default function App(){
               <button onClick={function(){setShowClientPassModal(false);}} style={{flex:1,background:N3,border:'none',borderRadius:10,color:'#fff',padding:'10px',cursor:'pointer',fontWeight:700,fontSize:13}}>キャンセル</button>
               <button onClick={submitClientPass} style={{flex:2,background:PU,border:'none',borderRadius:10,color:'#fff',padding:'10px',cursor:'pointer',fontWeight:700,fontSize:13}}>解除</button>
             </div>
+          </div>
+        </div>
+      )}
+      {showInstallBanner&&(
+        <div style={{background:N2,borderBottom:'1px solid '+N3,padding:'10px 16px',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+          <span style={{color:S2,fontSize:13,fontWeight:600}}>ホーム画面に追加</span>
+          <div style={{display:'flex',gap:8}}>
+            <button onClick={function(){setShowInstallBanner(false);}} style={{background:'none',border:'none',color:S,fontSize:12,cursor:'pointer'}}>✕</button>
+            <button onClick={handleInstall} style={{background:G,border:'none',borderRadius:8,color:'#fff',fontSize:12,fontWeight:700,padding:'6px 14px',cursor:'pointer'}}>インストール</button>
           </div>
         </div>
       )}
