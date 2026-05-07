@@ -457,6 +457,40 @@ function BottomNav(props){
   );
 }
 
+// ── SnsPostModal ──
+function SnsPostModal(props){
+  var m=props.m,goals=props.goals,score=props.score,streak=props.streak,onClose=props.onClose;
+  var [copied,setCopied]=useState(false);
+  var today=new Date().toLocaleDateString('ja-JP',{month:'long',day:'numeric',weekday:'short'});
+  var calPct=goals.cal>0?Math.round(m.cal/goals.cal*100):0;
+  var scoreEmoji=score>=80?'🏆':score>=60?'👍':'📝';
+  var postText='【MealCare 食事記録📊】\n'
+    +'📅 '+today+'\n'
+    +'🔥 食事スコア: '+score+'点 '+scoreEmoji+'\n'
+    +'🍽️ カロリー: '+Math.round(m.cal)+'/'+goals.cal+'kcal ('+calPct+'%)\n'
+    +'💪 タンパク質: '+Math.round(m.p)+'g / 目標'+goals.p+'g\n'
+    +(streak>0?'📈 連続記録: '+streak+'日目\n':'')
+    +'\n#ダイエット #筋トレ #食事管理 #MealCare';
+  function shareX(){window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(postText),'_blank');}
+  function shareNative(){if(navigator.share)navigator.share({title:'MealCare 食事記録',text:postText}).catch(function(){});}
+  function copy(){navigator.clipboard.writeText(postText).then(function(){setCopied(true);setTimeout(function(){setCopied(false);},2000);});}
+  return (
+    <div style={{position:'fixed',inset:0,background:'rgba(0,0,0,0.8)',zIndex:200,display:'flex',alignItems:'flex-end',justifyContent:'center'}} onClick={onClose}>
+      <div style={{background:N2,borderRadius:'20px 20px 0 0',padding:'20px',width:'100%',maxWidth:480}} onClick={function(e){e.stopPropagation();}}>
+        <div style={{width:40,height:4,background:N3,borderRadius:2,margin:'0 auto 16px'}}/>
+        <div style={{color:'#fff',fontWeight:800,fontSize:16,marginBottom:12}}>📱 SNSに投稿する</div>
+        <div style={{background:N,borderRadius:12,padding:14,marginBottom:14,fontSize:12,color:S2,lineHeight:1.7,whiteSpace:'pre-line'}}>{postText}</div>
+        <div style={{display:'flex',gap:8,marginBottom:8}}>
+          <button onClick={shareX} style={{flex:1,background:'#000',color:'#fff',border:'1px solid '+N3,borderRadius:10,padding:'11px',cursor:'pointer',fontWeight:700,fontSize:13}}>𝕏 Xで投稿</button>
+          {navigator.share&&<button onClick={shareNative} style={{flex:1,background:B,color:'#fff',border:'none',borderRadius:10,padding:'11px',cursor:'pointer',fontWeight:700,fontSize:13}}>📤 シェア</button>}
+        </div>
+        <button onClick={copy} style={{width:'100%',background:copied?G:N3,color:'#fff',border:'none',borderRadius:10,padding:'11px',cursor:'pointer',fontWeight:700,fontSize:13,marginBottom:8,boxSizing:'border-box'}}>{copied?'✓ コピー完了！':'📋 テキストをコピー'}</button>
+        <button onClick={onClose} style={{width:'100%',background:'transparent',color:S,border:'none',padding:'8px',cursor:'pointer',fontSize:13}}>閉じる</button>
+      </div>
+    </div>
+  );
+}
+
 // ── HomeScreen ──
 function HomeScreen(props){
   var profile=props.profile,meals=props.meals,weights=props.weights,setTab=props.setTab,setMealTab=props.setMealTab;
@@ -467,6 +501,7 @@ function HomeScreen(props){
   var goals=calcGoals(profile);
   var score=calcScore(m,goals);
   var streak=Object.keys(meals).filter(function(d){return getDayMacros(meals[d]).cal>0;}).length;
+  var [showSns,setShowSns]=useState(false);
   var lw=weights.length>0?weights[weights.length-1]:null;
   var bmi=lw&&profile?Math.round(lw.weight/Math.pow(parseFloat(profile.height)/100,2)*10)/10:null;
   function addWater(){var nw=water+200;setWater(nw);try{var d=JSON.parse(localStorage.getItem('mc_water')||'{}');d[today]=nw;localStorage.setItem('mc_water',JSON.stringify(d));}catch(e){}}
@@ -567,6 +602,8 @@ function HomeScreen(props){
           {score>=80?'素晴らしい食事バランスです！今日の目標達成率が高く、特にタンパク質が十分摂取できています。':score>=60?'良いペースです。もう少しタンパク質を意識して摂ると、より栄養バランスが整います。':'記録が少ないようです。まずは食事を記録する習慣をつけましょう。'}
         </div>
       </Cd>
+      <button onClick={function(){setShowSns(true);}} style={{width:'100%',background:N2,border:'1px solid '+N3,borderRadius:12,padding:'12px',cursor:'pointer',fontWeight:700,fontSize:13,color:S2,marginTop:10,boxSizing:'border-box'}}>📱 今日の記録をSNSでシェア</button>
+      {showSns&&<SnsPostModal m={m} goals={goals} score={score} streak={streak} onClose={function(){setShowSns(false);}}/>}
     </div>
   );
 }
