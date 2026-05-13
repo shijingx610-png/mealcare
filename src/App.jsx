@@ -1,4 +1,20 @@
 import React, { useState, useEffect } from "react";
+import { RECIPES } from "./data/recipes";
+
+function suggestRecipes(answer){
+  var scored=RECIPES.map(function(r){
+    var score=0;
+    if(r.scene.indexOf(answer.scene)>=0) score+=50;
+    if(r.calRange===answer.calRange) score+=30;
+    if(answer.ingredient==='おまかせ') score+=20;
+    else if(r.mainIngredient===answer.ingredient) score+=40;
+    score+=Math.max(0,20-r.cookTimeMin);
+    score+=Math.random()*5;
+    return {recipe:r,score:score};
+  });
+  scored.sort(function(a,b){return b.score-a.score;});
+  return scored.slice(0,3).map(function(x){return x.recipe;});
+}
 
 function migrateLocalStorage(){
   var currentVersion=localStorage.getItem('mc2_migration_v')||'0';
@@ -529,6 +545,57 @@ function BottomNav(props){
   );
 }
 
+// ── Recommendation helpers ──
+function getCurrentScene(d){
+  var h=d.getHours();
+  if(h>=4&&h<10) return '朝';
+  if(h>=10&&h<15) return '昼';
+  if(h>=15&&h<18) return '間食';
+  return '夕';
+}
+function getTodayRecommendation(profile,meals){
+  var today=todayStr();
+  var cached=null;
+  try{cached=JSON.parse(localStorage.getItem('mc2_today_recommend')||'null');}catch(e){}
+  if(cached&&cached.date===today){
+    var r=RECIPES.find(function(x){return x.id===cached.recipeId;});
+    if(r) return r;
+  }
+  var scene=getCurrentScene(new Date());
+  var todayMeals=meals[today]?getDayMacros(meals[today]):{cal:0};
+  var todayCal=todayMeals.cal||0;
+  var goals=calcGoals(profile);
+  var target=goals.cal||2000;
+  var remaining=target-todayCal;
+  var calRange=remaining<300?1:remaining<500?2:remaining<700?3:4;
+  var seed=new Date().getFullYear()*10000+(new Date().getMonth()+1)*100+new Date().getDate();
+  var recent=[];
+  try{
+    var log=JSON.parse(localStorage.getItem('mc2_recent_recipes')||'[]');
+    var cutoff=Date.now()-7*24*60*60*1000;
+    recent=log.filter(function(x){return x.at>cutoff;}).map(function(x){return x.id;});
+  }catch(e){}
+  var candidates=RECIPES.filter(function(r){return recent.indexOf(r.id)<0;});
+  if(candidates.length===0) candidates=RECIPES;
+  var scored=candidates.map(function(r){
+    var score=0;
+    if(scene&&r.scene.indexOf(scene)>=0) score+=50;
+    if(r.calRange===calRange) score+=30;
+    score+=Math.max(0,20-r.cookTimeMin);
+    score+=((r.id*seed)%17);
+    return {r:r,s:score};
+  });
+  scored.sort(function(a,b){return b.s-a.s;});
+  var pick=scored[0].r;
+  try{
+    localStorage.setItem('mc2_today_recommend',JSON.stringify({date:today,recipeId:pick.id}));
+    var log2=JSON.parse(localStorage.getItem('mc2_recent_recipes')||'[]');
+    log2.push({id:pick.id,at:Date.now()});
+    localStorage.setItem('mc2_recent_recipes',JSON.stringify(log2.slice(-30)));
+  }catch(e){}
+  return pick;
+}
+
 // ── HomeScreen ──
 function HomeScreen(props){
   var profile=props.profile,meals=props.meals,weights=props.weights,setTab=props.setTab,setMealTab=props.setMealTab;
@@ -599,6 +666,25 @@ function HomeScreen(props){
         </div>
         <div style={{color:S,fontSize:11,marginTop:6}}>目標: 2000ml　+200ml ずつ追加</div>
       </Cd>
+      {(() => {
+        var rec=getTodayRecommendation(profile,meals);
+        if(!rec) return null;
+        return (
+          <div style={{marginTop:4,marginBottom:14}}>
+            <div style={{fontSize:14,color:S,fontWeight:'bold',marginBottom:8}}>🍳 今日のおすすめレシピ</div>
+            <div style={{background:'linear-gradient(135deg,#1e293b 0%,#0f172a 100%)',borderRadius:16,padding:16,border:'1px solid '+N3}}>
+              <div style={{fontSize:12,color:G,fontWeight:'bold'}}>{rec.scene.join('・')}</div>
+              <div style={{fontSize:17,fontWeight:'bold',color:'#fff',marginTop:4}}>{rec.name}</div>
+              <div style={{fontSize:12,color:S2,marginTop:8}}>{rec.desc}</div>
+              <div style={{display:'flex',gap:12,marginTop:12,fontSize:12,color:S}}>
+                <span>⏱{rec.cookTimeMin}分</span>
+                <span>🔥{rec.cal}kcal</span>
+                <span>💪P{rec.p}g</span>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
       <div style={{color:'#fff',fontWeight:800,marginBottom:8}}>今日の食事</div>
       {mealSecs.map(function(ms){
         var items=dm[ms.id]||[];
@@ -643,6 +729,123 @@ function HomeScreen(props){
   );
 }
 
+// ── RecipeSuggestion ──
+function RecipeSuggestion(props){
+  var [step,setStep]=useState(1);
+  var [answer,setAnswer]=useState({scene:null,calRange:null,ingredient:null});
+  var [suggestions,setSuggestions]=useState([]);
+  var [selectedRecipe,setSelectedRecipe]=useState(null);
+
+  function selectScene(s){setAnswer(Object.assign({},answer,{scene:s}));setStep(2);}
+  function selectCal(c){setAnswer(Object.assign({},answer,{calRange:c}));setStep(3);}
+  function selectIng(i){
+    var newAns=Object.assign({},answer,{ingredient:i});
+    setAnswer(newAns);
+    setSuggestions(suggestRecipes(newAns));
+    setStep(4);
+  }
+  function goBack(){
+    if(step===2)setStep(1);
+    else if(step===3)setStep(2);
+    else if(step===4)setStep(3);
+    else if(step===5)setStep(4);
+  }
+  function recordRecipe(r){
+    var mealType=answer.scene;
+    props.addFood({id:'r'+mkId(),n:r.name,cal:r.cal,p:r.p,f:r.f,c:r.c,s:'レシピ:'+r.id},mealType);
+    alert('✅ '+r.name+' を記録しました');
+    props.onClose();
+  }
+
+  if(step===1){
+    return React.createElement('div',{style:{padding:16}},
+      React.createElement('div',{style:{fontSize:14,color:'#94a3b8',marginBottom:16}},'Step 1/3 食事シーンは？'),
+      ['朝','昼','夕','間食'].map(function(s){
+        return React.createElement('button',{
+          key:s,
+          onClick:function(){selectScene(s);},
+          style:{display:'block',width:'100%',padding:16,marginBottom:8,background:'#1e293b',color:'#fff',border:'1px solid #334155',borderRadius:8,fontSize:16}
+        },s);
+      })
+    );
+  }
+  if(step===2){
+    var labels={1:'〜300kcal（軽め）',2:'〜500kcal（標準）',3:'〜700kcal（しっかり）',4:'700+kcal（がっつり）'};
+    return React.createElement('div',{style:{padding:16}},
+      React.createElement('button',{onClick:goBack,style:{background:'none',border:'none',color:'#94a3b8',marginBottom:8}},'← 戻る'),
+      React.createElement('div',{style:{fontSize:14,color:'#94a3b8',marginBottom:16}},'Step 2/3 カロリーの目安は？'),
+      [1,2,3,4].map(function(c){
+        return React.createElement('button',{
+          key:c,
+          onClick:function(){selectCal(c);},
+          style:{display:'block',width:'100%',padding:16,marginBottom:8,background:'#1e293b',color:'#fff',border:'1px solid #334155',borderRadius:8,fontSize:15}
+        },labels[c]);
+      })
+    );
+  }
+  if(step===3){
+    var ings=['鶏むね','鶏もも','魚','卵','豆腐','野菜','おまかせ'];
+    return React.createElement('div',{style:{padding:16}},
+      React.createElement('button',{onClick:goBack,style:{background:'none',border:'none',color:'#94a3b8',marginBottom:8}},'← 戻る'),
+      React.createElement('div',{style:{fontSize:14,color:'#94a3b8',marginBottom:16}},'Step 3/3 メイン食材は？'),
+      ings.map(function(i){
+        return React.createElement('button',{
+          key:i,
+          onClick:function(){selectIng(i);},
+          style:{display:'block',width:'100%',padding:14,marginBottom:8,background:'#1e293b',color:'#fff',border:'1px solid #334155',borderRadius:8,fontSize:15}
+        },i);
+      })
+    );
+  }
+  if(step===4){
+    return React.createElement('div',{style:{padding:16}},
+      React.createElement('button',{onClick:goBack,style:{background:'none',border:'none',color:'#94a3b8',marginBottom:8}},'← 戻る'),
+      React.createElement('div',{style:{fontSize:16,fontWeight:'bold',color:'#fff',marginBottom:12}},'あなたへのおすすめ 3選'),
+      suggestions.map(function(r,i){
+        var medals=['🥇','🥈','🥉'];
+        return React.createElement('div',{
+          key:r.id,
+          onClick:function(){setSelectedRecipe(r);setStep(5);},
+          style:{background:'#1e293b',padding:14,borderRadius:10,marginBottom:8,border:'1px solid #334155',cursor:'pointer'}
+        },
+          React.createElement('div',{style:{fontSize:15,fontWeight:'bold',color:'#fff'}},medals[i]+' '+r.name),
+          React.createElement('div',{style:{fontSize:11,color:'#94a3b8',marginTop:4}},'⏱'+r.cookTimeMin+'分 🔥'+r.cal+'kcal 💪P'+r.p+'g 🧈F'+r.f+'g')
+        );
+      })
+    );
+  }
+  if(step===5&&selectedRecipe){
+    var r=selectedRecipe;
+    return React.createElement('div',{style:{padding:16}},
+      React.createElement('button',{onClick:goBack,style:{background:'none',border:'none',color:'#94a3b8',marginBottom:8}},'← 戻る'),
+      React.createElement('div',{style:{fontSize:18,fontWeight:'bold',color:'#fff'}},r.name),
+      React.createElement('div',{style:{fontSize:11,color:'#94a3b8',marginTop:2}},r.enName),
+      React.createElement('div',{style:{fontSize:13,color:'#cbd5e1',marginTop:8}},r.desc),
+      React.createElement('div',{style:{background:'#0f172a',padding:12,borderRadius:8,marginTop:12}},
+        React.createElement('div',{style:{color:'#22c55e',fontSize:14,fontWeight:'bold'}},'🔥 '+r.cal+'kcal'),
+        React.createElement('div',{style:{color:'#cbd5e1',fontSize:12,marginTop:4}},'💪P '+r.p+'g 🧈F '+r.f+'g 🍚C '+r.c+'g')
+      ),
+      React.createElement('div',{style:{fontSize:13,color:'#94a3b8',marginTop:16,marginBottom:8}},'─ 材料 ─'),
+      r.ingredients.map(function(ing,i){
+        return React.createElement('div',{key:i,style:{fontSize:13,color:'#cbd5e1',marginBottom:4}},'・'+ing.name+' '+ing.amount);
+      }),
+      React.createElement('div',{style:{fontSize:13,color:'#94a3b8',marginTop:16,marginBottom:8}},'─ 作り方 ─'),
+      r.steps.map(function(s,i){
+        return React.createElement('div',{key:i,style:{fontSize:13,color:'#cbd5e1',marginBottom:6}},(i+1)+'. '+s);
+      }),
+      React.createElement('div',{style:{fontSize:13,color:'#94a3b8',marginTop:16,marginBottom:8}},'─ ポイント ─'),
+      r.points.map(function(p,i){
+        return React.createElement('div',{key:i,style:{fontSize:13,color:'#cbd5e1',marginBottom:4}},'◎ '+p);
+      }),
+      React.createElement('button',{
+        onClick:function(){recordRecipe(r);},
+        style:{width:'100%',padding:14,marginTop:20,background:'#22c55e',color:'#fff',border:'none',borderRadius:10,fontSize:15,fontWeight:'bold',cursor:'pointer'}
+      },'＋ この内容で記録する')
+    );
+  }
+  return null;
+}
+
 // ── LogScreen ──
 function LogScreen(props){
   var meals=props.meals,setMeals=props.setMeals,mealTab=props.mealTab,setMealTab=props.setMealTab;
@@ -662,11 +865,13 @@ function LogScreen(props){
   var results=FDB.filter(function(f){return f.n.indexOf(search)>=0||f.cat.indexOf(search)>=0;}).slice(0,20);
   var inpS={background:N,border:'1px solid '+N3,borderRadius:8,padding:'8px 12px',color:'#fff',fontSize:13,width:'100%',boxSizing:'border-box'};
   function changeDay(delta){var d=new Date(day+'T12:00:00');d.setDate(d.getDate()+delta);setDay(d.toISOString().slice(0,10));}
-  function addFood(food){
+  function addFood(food,targetMeal){
+    var sceneMap={'朝':'breakfast','昼':'lunch','夕':'dinner','間食':'snack'};
+    var key=targetMeal?(sceneMap[targetMeal]||targetMeal):mealTab;
     var nit=Object.assign({},food,{qty:1,uid:mkId()});
-    var newItems=(dm[mealTab]||[]).concat([nit]);
+    var newItems=(dm[key]||[]).concat([nit]);
     var ndm=Object.assign({},dm);
-    ndm[mealTab]=newItems;
+    ndm[key]=newItems;
     setMeals(function(m){var nm=Object.assign({},m);nm[day]=ndm;return nm;});
     setSearch('');setShowAdd(false);setImgResults([]);
   }
@@ -747,8 +952,8 @@ function LogScreen(props){
               <div style={{color:'#fff',fontWeight:800,fontSize:16}}>食品を追加</div>
               <button onClick={function(){setShowAdd(false);}} style={{background:'none',border:'none',color:S,cursor:'pointer',fontSize:20}}>✕</button>
             </div>
-            <div style={{display:'flex',gap:6,marginBottom:14}}>
-              {[{id:'photo',l:'📸 写真AI',wip:true},{id:'search',l:'🔍 検索'},{id:'manual',l:'✏️ 手入力'}].map(function(mv){
+            <div style={{display:'flex',gap:6,marginBottom:14,flexWrap:'wrap'}}>
+              {[{id:'photo',l:'📸 写真AI',wip:true},{id:'search',l:'🔍 検索'},{id:'manual',l:'✏️ 手入力'},{id:'recipe',l:'🍳 レシピ提案'}].map(function(mv){
                 if(mv.wip){
                   return (
                     <button key={mv.id} onClick={function(){setMode(mv.id);}} style={{flex:1,background:mode===mv.id?G:N3,color:mode===mv.id?'#000':'#fff',border:'none',borderRadius:10,padding:'8px',cursor:'pointer',fontWeight:700,fontSize:11,opacity:0.5,position:'relative'}}>
@@ -851,6 +1056,9 @@ function LogScreen(props){
                 {err&&<div style={{background:'#fee2e2',color:'#991b1b',padding:'8px 12px',borderRadius:8,fontSize:13,marginBottom:8}}>{err}</div>}
                 <Btn onClick={addManual} full>追加</Btn>
               </div>
+            )}
+            {mode==='recipe'&&(
+              <RecipeSuggestion addFood={addFood} onClose={function(){setShowAdd(false);}}/>
             )}
           </div>
         </div>
