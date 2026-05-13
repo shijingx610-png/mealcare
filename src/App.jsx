@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 var G='#22c55e',N='#0f172a',N2='#1e293b',N3='#334155',S='#94a3b8',S2='#cbd5e1',R='#ef4444',Y='#f59e0b',B='#3b82f6',PU='#8b5cf6';
 
@@ -579,6 +579,7 @@ function LogScreen(props){
   var [mode,setMode]=useState('search');
   var [search,setSearch]=useState('');
   var [manual,setManual]=useState({n:'',cal:'',p:'',f:'',c:''});
+  var [err,setErr]=useState('');
   var [imgAnalyzing,setImgAnalyzing]=useState(false);
   var [imgResults,setImgResults]=useState([]);
   var [imgError,setImgError]=useState('');
@@ -598,8 +599,24 @@ function LogScreen(props){
     setSearch('');setShowAdd(false);setImgResults([]);
   }
   function addManual(){
-    if(!manual.n||!manual.cal) return;
-    addFood({id:'m'+mkId(),n:manual.n,cal:+manual.cal,p:+manual.p||0,f:+manual.f||0,c:+manual.c||0,s:'手入力'});
+    var name=(manual.n||'').trim();
+    if(!name||name.length>30){
+      setErr('食事名を入力してください（30文字以内）');
+      return;
+    }
+    var cal=+manual.cal;
+    if(isNaN(cal)||cal<0||cal>5000){
+      setErr('カロリーは0〜5000の範囲で入力してください');
+      return;
+    }
+    var p=manual.p===''?0:+manual.p;
+    var f=manual.f===''?0:+manual.f;
+    var c=manual.c===''?0:+manual.c;
+    if(isNaN(p)||p<0||p>500){setErr('たんぱく質は0〜500gで入力してください');return;}
+    if(isNaN(f)||f<0||f>500){setErr('脂質は0〜500gで入力してください');return;}
+    if(isNaN(c)||c<0||c>1000){setErr('炭水化物は0〜1000gで入力してください');return;}
+    setErr('');
+    addFood({id:'m'+mkId(),n:name,cal:cal,p:p,f:f,c:c,s:'手入力'});
     setManual({n:'',cal:'',p:'',f:'',c:''});
   }
   function removeFood(u){
@@ -611,27 +628,8 @@ function LogScreen(props){
   var [imgConfirm,setImgConfirm]=useState(null);
 
   function handleFileChange(e){
-    if(!e.target.files||!e.target.files[0]) return;
-    var file=e.target.files[0];
-    setImgAnalyzing(true);
-    setImgResults([]);
-    setImgError('');
-    setImgConfirm(null);
-    var mediaType=file.type||'image/jpeg';
-    var reader=new FileReader();
-    reader.onerror=function(){setImgError('画像の読み込みに失敗しました。');setImgAnalyzing(false);};
-    reader.onload=function(ev){
-      var base64=ev.target.result.split(',')[1];
-      callPhotoAI(base64,mediaType,function(parsed){
-        setImgResults(parsed);
-        setImgConfirm('pending');
-        setImgAnalyzing(false);
-      },function(){
-        setImgError('判別できませんでした。別の写真を試してください。');
-        setImgAnalyzing(false);
-      });
-    };
-    reader.readAsDataURL(file);
+    alert('写真からの自動入力機能は現在準備中です。\n手入力または検索をご利用ください。');
+    e.target.value='';
   }
   var curTab=tabs.find(function(t){return t.id===mealTab;})||tabs[0];
   return (
@@ -678,7 +676,15 @@ function LogScreen(props){
               <button onClick={function(){setShowAdd(false);}} style={{background:'none',border:'none',color:S,cursor:'pointer',fontSize:20}}>✕</button>
             </div>
             <div style={{display:'flex',gap:6,marginBottom:14}}>
-              {[{id:'photo',l:'📸 写真AI'},{id:'search',l:'🔍 検索'},{id:'manual',l:'✏️ 手入力'}].map(function(mv){
+              {[{id:'photo',l:'📸 写真AI',wip:true},{id:'search',l:'🔍 検索'},{id:'manual',l:'✏️ 手入力'}].map(function(mv){
+                if(mv.wip){
+                  return (
+                    <button key={mv.id} onClick={function(){setMode(mv.id);}} style={{flex:1,background:mode===mv.id?G:N3,color:mode===mv.id?'#000':'#fff',border:'none',borderRadius:10,padding:'8px',cursor:'pointer',fontWeight:700,fontSize:11,opacity:0.5,position:'relative'}}>
+                      {mv.l}
+                      <span style={{fontSize:9,display:'block',marginTop:2}}>準備中</span>
+                    </button>
+                  );
+                }
                 return <button key={mv.id} onClick={function(){setMode(mv.id);}} style={{flex:1,background:mode===mv.id?G:N3,color:mode===mv.id?'#000':'#fff',border:'none',borderRadius:10,padding:'8px',cursor:'pointer',fontWeight:700,fontSize:11}}>{mv.l}</button>;
               })}
             </div>
@@ -770,6 +776,7 @@ function LogScreen(props){
                     return <input key={pair[0]} style={inpS} placeholder={pair[1]} type="number" value={manual[pair[0]]} onChange={function(e){var k=pair[0];var v=e.target.value;setManual(function(m){var nm=Object.assign({},m);nm[k]=v;return nm;});}} />;
                   })}
                 </div>
+                {err&&<div style={{background:'#fee2e2',color:'#991b1b',padding:'8px 12px',borderRadius:8,fontSize:13,marginBottom:8}}>{err}</div>}
                 <Btn onClick={addManual} full>追加</Btn>
               </div>
             )}
@@ -832,10 +839,23 @@ function WeightScreen(props){
   var weights=props.weights,setWeights=props.setWeights,profile=props.profile;
   var [w,setW]=useState('');
   var [fat,setFat]=useState('');
+  var [errW,setErrW]=useState('');
   var inpS={background:N,border:'1px solid '+N3,borderRadius:8,padding:'10px 12px',color:'#fff',fontSize:15,flex:1};
   function addWeight(){
-    if(!w) return;
-    var entry={date:todayStr(),weight:+w,fat:fat?+fat:null};
+    var weight=+w;
+    if(!w||isNaN(weight)||weight<20||weight>300){
+      setErrW('体重は20〜300kgの範囲で入力してください');
+      return;
+    }
+    if(fat!==''){
+      var fatNum=+fat;
+      if(isNaN(fatNum)||fatNum<0||fatNum>60){
+        setErrW('体脂肪率は0〜60%の範囲で入力してください');
+        return;
+      }
+    }
+    setErrW('');
+    var entry={date:todayStr(),weight:weight,fat:fat?+fat:null};
     setWeights(weights.filter(function(e){return e.date!==todayStr();}).concat([entry]).sort(function(a,b){return a.date.localeCompare(b.date);}));
     setW('');setFat('');
   }
@@ -854,6 +874,7 @@ function WeightScreen(props){
           <input style={inpS} type="number" placeholder="体重 (kg)" value={w} onChange={function(e){setW(e.target.value);}} step="0.1"/>
           <input style={inpS} type="number" placeholder="体脂肪率 %" value={fat} onChange={function(e){setFat(e.target.value);}} step="0.1"/>
         </div>
+        {errW&&<div style={{background:'#fee2e2',color:'#991b1b',padding:'8px 12px',borderRadius:8,fontSize:13,marginBottom:8}}>{errW}</div>}
         <Btn onClick={addWeight} full>記録する</Btn>
       </Cd>
       {latest&&(
@@ -895,7 +916,7 @@ function CoachScreen(props){
   var initMsg2={id:2,from:'coach',text:'週2回の筋トレと合わせて、食後に軽いウォーキングを取り入れてみてください。脂質代謝が高まります。',date:'2026-03-20'};
   var [msgs,setMsgs]=useState([initMsg1,initMsg2]);
   var initMs1={id:1,text:'毎食タンパク質20g以上を意識する',done:false,auto:false,priority:'high'};
-  var initMs2={id:2,text:'毎日記録をつける（7日連続）',done:true,auto:false,priority:'mid'};
+  var initMs2={id:2,text:'毎日記録をつける（7日連続）',done:false,auto:false,priority:'mid'};
   var initMs3={id:3,text:'夕食の炭水化物を100g以内に抑える',done:false,auto:false,priority:'mid'};
   var [missions,setMissions]=useState([initMs1,initMs2,initMs3]);
   var [missionMode,setMissionMode]=useState('user');
