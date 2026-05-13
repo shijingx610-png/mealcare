@@ -1,5 +1,73 @@
 import React, { useState, useEffect } from "react";
 
+function migrateLocalStorage(){
+  var currentVersion=localStorage.getItem('mc2_migration_v')||'0';
+  if(currentVersion==='1') return;
+  try{
+    var oldWater=localStorage.getItem('mc_water');
+    if(oldWater&&!localStorage.getItem('mc2_water')){
+      localStorage.setItem('mc2_water',oldWater);
+    }
+    var oldClients=localStorage.getItem('mc_clients');
+    if(oldClients&&!localStorage.getItem('mc2_clients')){
+      localStorage.setItem('mc2_clients',oldClients);
+    }
+    var oldMeals=localStorage.getItem('mc_meals');
+    if(oldMeals&&!localStorage.getItem('mc2_meals')){
+      localStorage.setItem('mc2_meals',oldMeals);
+    }
+    var oldWeights=localStorage.getItem('mc_weights');
+    if(oldWeights&&!localStorage.getItem('mc2_weights')){
+      localStorage.setItem('mc2_weights',oldWeights);
+    }
+    ['mc_water','mc_clients','mc_meals','mc_weights'].forEach(function(k){
+      localStorage.removeItem(k);
+    });
+    localStorage.setItem('mc2_migration_v','1');
+  }catch(e){
+    console.error('[migration] failed',e);
+  }
+}
+
+class ErrorBoundary extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={hasError:false,error:null};
+  }
+  static getDerivedStateFromError(error){
+    return {hasError:true,error:error};
+  }
+  componentDidCatch(error,info){
+    console.error('[ErrorBoundary]',error,info);
+    try{
+      var logs=JSON.parse(localStorage.getItem('mc2_error_logs')||'[]');
+      logs.push({
+        at:new Date().toISOString(),
+        message:error.message,
+        screen:this.props.screen
+      });
+      localStorage.setItem('mc2_error_logs',JSON.stringify(logs.slice(-20)));
+    }catch(e){}
+  }
+  render(){
+    if(this.state.hasError){
+      var self=this;
+      return React.createElement('div',{
+        style:{padding:24,textAlign:'center',background:'#1e293b',borderRadius:12,margin:16,color:'#cbd5e1'}
+      },
+        React.createElement('div',{style:{fontSize:36,marginBottom:12}},'😢'),
+        React.createElement('div',{style:{fontSize:16,fontWeight:'bold',marginBottom:8}},'画面の表示に失敗しました'),
+        React.createElement('div',{style:{fontSize:12,opacity:0.8,marginBottom:16}},this.state.error?this.state.error.message:'不明なエラー'),
+        React.createElement('button',{
+          onClick:function(){self.setState({hasError:false,error:null});},
+          style:{background:'#22c55e',color:'#fff',border:'none',padding:'10px 24px',borderRadius:8,fontWeight:'bold',cursor:'pointer'}
+        },'🔄 もう一度開く')
+      );
+    }
+    return this.props.children;
+  }
+}
+
 var G='#22c55e',N='#0f172a',N2='#1e293b',N3='#334155',S='#94a3b8',S2='#cbd5e1',R='#ef4444',Y='#f59e0b',B='#3b82f6',PU='#8b5cf6';
 
 var FDB=[
@@ -102,6 +170,10 @@ var FDB=[
   {id:97,n:'FM 豆腐わかめスープ',s:'180ml',cal:42,p:3.0,f:1.5,c:3.5,cat:'ファミマ'},
 ];
 
+function getDisplayName(profile){
+  var name=profile&&profile.name?profile.name.trim():'';
+  return name&&name.length>0?name:'あなた';
+}
 function todayStr(){return new Date().toISOString().slice(0,10);}
 function fmtDate(d){var dt=new Date(d+'T12:00:00');return (dt.getMonth()+1)+'/'+dt.getDate();}
 function mkId(){return Math.random().toString(36).slice(2,9);}
@@ -460,7 +532,7 @@ function BottomNav(props){
 // ── HomeScreen ──
 function HomeScreen(props){
   var profile=props.profile,meals=props.meals,weights=props.weights,setTab=props.setTab,setMealTab=props.setMealTab;
-  var [water,setWater]=useState(function(){try{var d=JSON.parse(localStorage.getItem('mc_water')||'{}');return d[todayStr()]||0;}catch(e){return 0;}});
+  var [water,setWater]=useState(function(){try{var d=JSON.parse(localStorage.getItem('mc2_water')||'{}');return d[todayStr()]||0;}catch(e){return 0;}});
   var today=todayStr();
   var dm=meals[today]||{breakfast:[],lunch:[],dinner:[],snack:[]};
   var m=getDayMacros(dm);
@@ -469,8 +541,8 @@ function HomeScreen(props){
   var streak=Object.keys(meals).filter(function(d){return getDayMacros(meals[d]).cal>0;}).length;
   var lw=weights.length>0?weights[weights.length-1]:null;
   var bmi=lw&&profile?Math.round(lw.weight/Math.pow(parseFloat(profile.height)/100,2)*10)/10:null;
-  function addWater(){var nw=water+200;setWater(nw);try{var d=JSON.parse(localStorage.getItem('mc_water')||'{}');d[today]=nw;localStorage.setItem('mc_water',JSON.stringify(d));}catch(e){}}
-  function removeWater(){var nw=Math.max(0,water-200);setWater(nw);try{var d=JSON.parse(localStorage.getItem('mc_water')||'{}');d[today]=nw;localStorage.setItem('mc_water',JSON.stringify(d));}catch(e){}}
+  function addWater(){var nw=water+200;setWater(nw);try{var d=JSON.parse(localStorage.getItem('mc2_water')||'{}');d[today]=nw;localStorage.setItem('mc2_water',JSON.stringify(d));}catch(e){}}
+  function removeWater(){var nw=Math.max(0,water-200);setWater(nw);try{var d=JSON.parse(localStorage.getItem('mc2_water')||'{}');d[today]=nw;localStorage.setItem('mc2_water',JSON.stringify(d));}catch(e){}}
   var hour=new Date().getHours();
   var greeting=hour<11?'おはようございます':hour<17?'こんにちは':'こんばんは';
   var mealSecs=[{id:'breakfast',l:'朝食',i:'🌅'},{id:'lunch',l:'昼食',i:'🌞'},{id:'dinner',l:'夕食',i:'🌙'},{id:'snack',l:'間食',i:'🍪'}];
@@ -478,7 +550,7 @@ function HomeScreen(props){
     <div style={{padding:'16px 16px 90px',overflowX:'hidden'}}>
       <div style={{marginBottom:16}}>
         <div style={{color:S,fontSize:12}}>{new Date().toLocaleDateString('ja-JP',{year:'numeric',month:'long',day:'numeric',weekday:'short'})}</div>
-        <div style={{color:'#fff',fontSize:20,fontWeight:800}}>👋 {greeting}、{(profile&&profile.name)||'さん'}！</div>
+        <div style={{color:'#fff',fontSize:20,fontWeight:800}}>👋 {greeting}、{getDisplayName(profile)}！</div>
       </div>
       <Cd style={{marginBottom:12}}>
         <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:12}}>
@@ -1411,6 +1483,9 @@ function ExportScreen(props){
 
 // ── Main App ──
 export default function App(){
+  useEffect(function(){
+    migrateLocalStorage();
+  },[]);
   var [profile,setProfile]=useState(function(){try{return JSON.parse(localStorage.getItem('mc2_profile'))||null;}catch(e){return null;}});
   var [meals,setMeals]=useState(function(){try{var m=JSON.parse(localStorage.getItem('mc2_meals'));return m&&Object.keys(m).length>0?m:{};}catch(e){return {};}});
   var [weights,setWeights]=useState(function(){try{var w=JSON.parse(localStorage.getItem('mc2_weights'));return w&&w.length>0?w:[];}catch(e){return [];}});
@@ -1464,11 +1539,11 @@ export default function App(){
           <button onClick={openClientManager} style={{background:PU+'22',border:'1px solid '+PU,borderRadius:8,color:PU,fontSize:11,fontWeight:700,padding:'6px 10px',cursor:'pointer'}}>🔐 コーチ管理</button>
           <button onClick={function(){setShowExport(true);}} style={{background:N2,border:'1px solid '+N3,borderRadius:8,color:S2,fontSize:11,fontWeight:700,padding:'6px 10px',cursor:'pointer'}}>📤 Sheets出力</button>
         </div>
-        {tab==='home'&&<HomeScreen profile={profile} meals={meals} weights={weights} setTab={setTab} setMealTab={setMealTab}/>}
-        {tab==='log'&&<LogScreen meals={meals} setMeals={setMeals} mealTab={mealTab} setMealTab={setMealTab}/>}
-        {tab==='nutrition'&&<NutritionScreen meals={meals} profile={profile}/>}
-        {tab==='weight'&&<WeightScreen weights={weights} setWeights={setWeights} profile={profile}/>}
-        {tab==='coach'&&<CoachScreen meals={meals} weights={weights} profile={profile}/>}
+        {tab==='home'&&<ErrorBoundary screen="home"><HomeScreen profile={profile} meals={meals} weights={weights} setTab={setTab} setMealTab={setMealTab}/></ErrorBoundary>}
+        {tab==='log'&&<ErrorBoundary screen="log"><LogScreen meals={meals} setMeals={setMeals} mealTab={mealTab} setMealTab={setMealTab}/></ErrorBoundary>}
+        {tab==='nutrition'&&<ErrorBoundary screen="nutrition"><NutritionScreen meals={meals} profile={profile}/></ErrorBoundary>}
+        {tab==='weight'&&<ErrorBoundary screen="weight"><WeightScreen weights={weights} setWeights={setWeights} profile={profile}/></ErrorBoundary>}
+        {tab==='coach'&&<ErrorBoundary screen="coach"><CoachScreen meals={meals} weights={weights} profile={profile}/></ErrorBoundary>}
       </div>
       <BottomNav tab={tab} onChange={setTab}/>
     </div>
