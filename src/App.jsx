@@ -1188,6 +1188,33 @@ function WeightScreen(props){
   );
 }
 
+// ── LineConsultSection ──
+function LineConsultSection(){
+  var LINE_URL='https://line.me/R/ti/p/@741apbnk';
+  function handleClick(){
+    try{
+      var log=JSON.parse(localStorage.getItem('mc2_line_clicks')||'[]');
+      log.push({at:new Date().toISOString(),from:'coach'});
+      localStorage.setItem('mc2_line_clicks',JSON.stringify(log));
+    }catch(e){}
+    window.open(LINE_URL,'_blank','noopener');
+  }
+  return React.createElement('div',{style:{marginTop:24}},
+    React.createElement('div',{style:{fontSize:14,color:'#94a3b8',marginBottom:8,fontWeight:'bold'}},'個別相談'),
+    React.createElement('div',{
+      style:{background:'linear-gradient(135deg,#06C755 0%,#04a047 100%)',borderRadius:16,padding:20,color:'#fff',boxShadow:'0 4px 12px rgba(6,199,85,0.3)'}
+    },
+      React.createElement('div',{style:{fontSize:18,fontWeight:'bold',marginBottom:8}},'💬 翔と直接話す'),
+      React.createElement('div',{style:{fontSize:13,lineHeight:1.6,opacity:0.95,marginBottom:16}},'ダイエットの悩みや食事の相談、なんでもOK。翔本人がLINEで直接返信します。'),
+      React.createElement('button',{
+        onClick:handleClick,
+        style:{width:'100%',background:'#fff',color:'#06C755',border:'none',padding:'14px',borderRadius:10,fontSize:15,fontWeight:'bold',cursor:'pointer'}
+      },'LINEで相談する →'),
+      React.createElement('div',{style:{fontSize:11,opacity:0.85,marginTop:12,lineHeight:1.5,whiteSpace:'pre-line'}},'※ AIではなく翔本人が返信します\n※ 返信まで1〜2日いただく場合があります')
+    )
+  );
+}
+
 // ── CoachScreen ──
 function CoachScreen(props){
   var meals=props.meals,weights=props.weights,profile=props.profile;
@@ -1432,6 +1459,7 @@ function CoachScreen(props){
           )}
         </div>
       )}
+      <LineConsultSection/>
     </div>
   );
 }
