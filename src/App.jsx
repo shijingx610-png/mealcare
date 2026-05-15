@@ -228,52 +228,21 @@ function calcScore(m,goals){
   return Math.round(cs*0.4+ps*0.3+fs*0.15+cc*0.15);
 }
 
-// ── AI Photo Analysis ──
+// ── AI Photo Analysis (via /api/photo proxy) ──
 function callPhotoAI(base64, mediaType, onSuccess, onError) {
-  var source = {};
-  source['type'] = 'base64';
-  source['media_type'] = mediaType;
-  source['data'] = base64;
-
-  var imgBlock = {};
-  imgBlock['type'] = 'image';
-  imgBlock['source'] = source;
-
-  var txtBlock = {};
-  txtBlock['type'] = 'text';
-  txtBlock['text'] = 'あなたはプロの管理栄養士です。この食事写真を詳細に分析してください。以下のルールに従ってください。\n1. 写真に写っている全ての食品・料理を必ず特定する\n2. 判断が難しい場合でも、最も可能性が高いものを推定して回答する（「不明」「判断できない」は禁止）\n3. 盛り付けの量・器のサイズ・食品の見た目から重量を推定する\n4. 日本食・コンビニ食・外食など一般的な食事を想定してカロリーと栄養素を計算する\n5. 必ずJSON配列のみ返す。説明文・前置き・コードブロック記号は不要\n形式: [{"n":"具体的な食品名","cal":カロリー数値,"p":タンパク質g,"f":脂質g,"c":炭水化物g,"s":"推定量"}]';
-
-  var userMsg = {};
-  userMsg['role'] = 'user';
-  userMsg['content'] = [imgBlock, txtBlock];
-
-  var body = {};
-  body['model'] = 'claude-sonnet-4-20250514';
-  body['max_tokens'] = 1000;
-  body['messages'] = [userMsg];
-
-  var hdrs = {};
-  hdrs['Content-Type'] = 'application/json';
-
-  var opts = {};
-  opts['method'] = 'POST';
-  opts['headers'] = hdrs;
-  opts['body'] = JSON.stringify(body);
-
-  fetch('https://api.anthropic.com/v1/messages', opts)
-    .then(function(r){return r.json();})
-    .then(function(data){
-      var blocks = data.content || [];
-      var text = '';
-      for(var i=0;i<blocks.length;i++){text+=blocks[i].text||'';}
-      var clean = text.replace(/```json/g,'').replace(/```/g,'').trim();
-      try{
-        var parsed = JSON.parse(clean);
-        if(Array.isArray(parsed)) onSuccess(parsed);
-        else onError();
-      }catch(e){onError();}
+  fetch('/api/photo', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ base64: base64, mediaType: mediaType })
+  })
+    .then(function(r){ return r.json().then(function(d){ return {ok:r.ok, data:d}; }); })
+    .then(function(res){
+      if(!res.ok){ onError(); return; }
+      var items = res.data && res.data.items;
+      if(Array.isArray(items)) onSuccess(items);
+      else onError();
     })
-    .catch(function(){onError();});
+    .catch(function(){ onError(); });
 }
 
 // ── Charts ──
@@ -905,8 +874,27 @@ function LogScreen(props){
   var [imgConfirm,setImgConfirm]=useState(null);
 
   function handleFileChange(e){
-    alert('写真からの自動入力機能は現在準備中です。\n手入力または検索をご利用ください。');
-    e.target.value='';
+    if(!e.target.files||!e.target.files[0]) return;
+    var file=e.target.files[0];
+    setImgAnalyzing(true);
+    setImgResults([]);
+    setImgError('');
+    setImgConfirm(null);
+    var mediaType=file.type||'image/jpeg';
+    var reader=new FileReader();
+    reader.onerror=function(){setImgError('画像の読み込みに失敗しました。');setImgAnalyzing(false);};
+    reader.onload=function(ev){
+      var base64=ev.target.result.split(',')[1];
+      callPhotoAI(base64,mediaType,function(parsed){
+        setImgResults(parsed);
+        setImgConfirm('pending');
+        setImgAnalyzing(false);
+      },function(){
+        setImgError('判別できませんでした。別の写真を試してください。');
+        setImgAnalyzing(false);
+      });
+    };
+    reader.readAsDataURL(file);
   }
   var curTab=tabs.find(function(t){return t.id===mealTab;})||tabs[0];
   return (
@@ -953,15 +941,7 @@ function LogScreen(props){
               <button onClick={function(){setShowAdd(false);}} style={{background:'none',border:'none',color:S,cursor:'pointer',fontSize:20}}>✕</button>
             </div>
             <div style={{display:'flex',gap:6,marginBottom:14,flexWrap:'wrap'}}>
-              {[{id:'photo',l:'📸 写真AI',wip:true},{id:'search',l:'🔍 検索'},{id:'manual',l:'✏️ 手入力'},{id:'recipe',l:'🍳 レシピ提案'}].map(function(mv){
-                if(mv.wip){
-                  return (
-                    <button key={mv.id} onClick={function(){setMode(mv.id);}} style={{flex:1,background:mode===mv.id?G:N3,color:mode===mv.id?'#000':'#fff',border:'none',borderRadius:10,padding:'8px',cursor:'pointer',fontWeight:700,fontSize:11,opacity:0.5,position:'relative'}}>
-                      {mv.l}
-                      <span style={{fontSize:9,display:'block',marginTop:2}}>準備中</span>
-                    </button>
-                  );
-                }
+              {[{id:'photo',l:'📸 写真AI'},{id:'search',l:'🔍 検索'},{id:'manual',l:'✏️ 手入力'},{id:'recipe',l:'🍳 レシピ提案'}].map(function(mv){
                 return <button key={mv.id} onClick={function(){setMode(mv.id);}} style={{flex:1,background:mode===mv.id?G:N3,color:mode===mv.id?'#000':'#fff',border:'none',borderRadius:10,padding:'8px',cursor:'pointer',fontWeight:700,fontSize:11}}>{mv.l}</button>;
               })}
             </div>
