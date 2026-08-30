@@ -17,6 +17,21 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ---
 
+# メルカリ出品ヘルパー
+
+2つの入り口があります。用途で選んでください。
+
+| ページ | AIの使い方 | 費用 | APIキー |
+| --- | --- | --- | --- |
+| `/free.html`（**無料版**） | 指示文をコピーして手持ちのAIアプリ（Claude / ChatGPT の無料プランなど）に写真ごと貼り、返答をアプリに貼り戻す | **0円** | 不要 |
+| `/mercari.html`（自動版） | 写真をアップロードすると Claude が自動で解析する | 1回 5〜10円程度 | 必要 |
+
+どちらも出品文の作成・価格と手取りの計算・コピー・下書き保存は同じようにできます。
+違いは「AIに聞く操作を自分でするか、アプリが代わりにやるか」だけです。
+`/free.html` は1枚のHTMLだけで動くので、そのファイルを開くだけでも使えます。
+
+---
+
 # メルカリ出品AI（/mercari.html）
 
 商品の写真を渡すと、メルカリに出品するための情報一式をAIがまとめて作成するアプリです。
@@ -105,6 +120,7 @@ npm run dev       # http://localhost:5173/mercari.html
 | `api/listing.js` | Claude に写真を渡して出品情報を構造化JSONで受け取るサーバー関数 |
 | `api/image.js` | 画像URLをサーバー経由で取り込むサーバー関数（CORS回避・SSRF対策あり） |
 | `public/manifest.webmanifest` / `public/icon-*.png` | ホーム画面に追加したときのアイコンと表示設定 |
+| `public/free.html` | 無料版（APIキー不要・1ファイルで完結） |
 
 送料は2025年時点の目安です。改定された場合は `src/mercari/shipping.js` を更新するか、
 アプリ内の「送料を上書きする」欄に実際の金額を入力してください。

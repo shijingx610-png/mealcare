@@ -795,7 +795,10 @@ export default function MercariApp() {
                 2. Vercel のプロジェクト &gt; Settings &gt; Environment Variables に<br />
                 &nbsp;&nbsp;&nbsp;<code>ANTHROPIC_API_KEY</code> として登録<br />
                 3. Deployments から Redeploy<br />
-                設定するまでは「サンプルデータで画面を見る」でお試しください。
+                <br />
+                費用をかけたくない場合は、APIキーの要らない無料版
+                <a href="/free.html" style={{ color: '#fff', fontWeight: 700 }}>/free.html</a>
+                をお使いください（AIには手持ちのアプリで聞く方式です）。
               </div>
             ) : null}
           </Card>
