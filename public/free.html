@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#f2f1f4">
-<meta name="description" content="商品の写真から、メルカリの商品名・説明文・価格・送料と手取りを組み立てる出品支援ツール。APIキー不要・費用ゼロで動きます。">
+<meta name="description" content="商品の写真から、メルカリの商品名・説明文・価格・送料と手取りを自動で作る出品支援ツール。無料のAIキー1つで動きます。">
 <link rel="icon" type="image/svg+xml" href="/mercari-icon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
@@ -440,6 +440,45 @@
   .draft button { padding: 7px 10px; font-size: 12px; }
 
   .hidden { display: none !important; }
+
+  .keyline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .keyline .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--line-strong); flex: 0 0 auto; }
+  .keyline .dot.on { background: var(--good); }
+  .keyline button { padding: 5px 10px; font-size: 12px; }
+
+  details#manualBox { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 12px; }
+  details#manualBox summary { font-size: 12.5px; color: var(--muted); cursor: pointer; font-weight: 700; }
+  details#manualBox[open] summary { margin-bottom: 4px; }
+
+  .callout a { color: inherit; }
+  a { color: var(--accent); }
+
+  .spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 999px;
+    margin-right: 8px;
+    vertical-align: -2px;
+    animation: spin .7s linear infinite;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .spinner { animation-duration: 2.4s; }
+  }
 </style>
 
 <div class="wrap">
@@ -468,25 +507,58 @@
     </section>
 
     <section class="card">
-      <div class="card-head"><span class="step">2</span><h2>AIに下書きを書いてもらう</h2></div>
-      <p class="note">お使いのAIアプリ（Claude や ChatGPT の無料プランで動きます）に、写真と一緒に貼り付けてください。返ってきた文章をここに戻すと、以下の項目がすべて埋まります。</p>
-      <ol class="howto">
-        <li>「指示文をコピー」を押す</li>
-        <li>AIアプリを開き、商品写真を添付して貼り付け → 送信</li>
-        <li>返ってきた内容をコピーして、下の欄に貼り付け</li>
-      </ol>
-      <div class="btn-row">
-        <button type="button" class="primary" id="copyPrompt">指示文をコピー</button>
-      </div>
+      <div class="card-head"><span class="step">2</span><h2>AIが自動で書く</h2></div>
+      <p class="note">写真から、商品名・カテゴリ・状態・説明文・相場価格・配送方法まで、このアプリの中でまとめて作ります。</p>
+
       <label class="field">
-        <span class="lab">AIの回答を貼り付け</span>
-        <textarea id="pasteBox" rows="4" placeholder='{ "title": "…", "priceRecommended": 7800, … }'></textarea>
+        <span class="lab">分かっていること（任意・書くほど正確になります）</span>
+        <textarea id="f_memo" rows="2" placeholder="例: 3年前に15,000円で購入。10回ほど着用。箱と保証書あり。"></textarea>
       </label>
+
       <div class="btn-row">
-        <button type="button" id="applyPaste">反映する</button>
-        <button type="button" class="quiet" id="loadSample">サンプルを入れる</button>
+        <button type="button" class="primary full" id="generateBtn">写真からAIで自動生成</button>
       </div>
-      <div id="pasteMsg"></div>
+      <div id="genMsg"></div>
+
+      <div id="keyState" class="keyline"></div>
+
+      <div id="keyPanel" hidden>
+        <label class="field">
+          <span class="lab">Google AI Studio の APIキー（無料）</span>
+          <input type="password" id="f_key" placeholder="AIza..." autocomplete="off" spellcheck="false">
+        </label>
+        <div class="btn-row">
+          <button type="button" class="primary" id="saveKey">保存する</button>
+          <button type="button" class="quiet" id="clearKey">削除する</button>
+        </div>
+        <ol class="howto">
+          <li><a href="https://aistudio.google.com/apikey" target="_blank" rel="noreferrer">aistudio.google.com/apikey</a> をひらく（Googleアカウントでログイン）</li>
+          <li>「Create API key」でキーを作る（無料枠のままなら課金は発生しません）</li>
+          <li>コピーして上の欄に貼り、保存する</li>
+        </ol>
+        <p class="note">キーはこの端末のブラウザにだけ保存され、どこにも送られません（AIへのリクエストは端末から直接送られます）。無料枠では入力内容がGoogleのモデル改善に使われる場合があります。人が写った写真や個人情報を含む写真は避けてください。</p>
+      </div>
+
+      <details id="manualBox">
+        <summary>AIキーを使わずに、手持ちのAIアプリで書いてもらう</summary>
+        <ol class="howto">
+          <li>「指示文をコピー」を押す</li>
+          <li>Claude や ChatGPT のアプリを開き、商品写真を添付して貼り付け → 送信</li>
+          <li>返ってきた内容をコピーして、下の欄に貼り付け</li>
+        </ol>
+        <div class="btn-row">
+          <button type="button" id="copyPrompt">指示文をコピー</button>
+        </div>
+        <label class="field">
+          <span class="lab">AIの回答を貼り付け</span>
+          <textarea id="pasteBox" rows="3" placeholder='{ "title": "…", "priceRecommended": 7800, … }'></textarea>
+        </label>
+        <div class="btn-row">
+          <button type="button" id="applyPaste">反映する</button>
+          <button type="button" class="quiet" id="loadSample">サンプルを入れる</button>
+        </div>
+        <div id="pasteMsg"></div>
+      </details>
     </section>
 
     <section class="card">
@@ -596,13 +668,19 @@
 
     <section class="card">
       <div class="card-head"><span class="step">7</span><h2>メルカリに出品する</h2></div>
-      <p class="note">メルカリは外部アプリからの自動出品に対応していません。ここでコピーして、出品画面に貼り付けてください。写真は撮影したものをそのまま選びます。</p>
+      <p class="note">「メルカリに送る」を押すと、商品説明を自動でコピーしたうえで、写真を持ったまま共有メニューが開きます。そこでメルカリを選ぶと、写真つきで出品画面が立ち上がります。各欄は長押し →「ペースト」で貼り付けてください。</p>
+      <div class="btn-row">
+        <button type="button" class="primary full" id="shareBtn">メルカリに送る（写真＋説明）</button>
+      </div>
+      <div id="shareMsg"></div>
+      <span class="lab" style="margin-top:14px">1つずつコピーする</span>
       <div class="btn-row stack">
         <button type="button" data-copy="title">① 商品名をコピー</button>
         <button type="button" data-copy="desc">② 商品説明をコピー</button>
         <button type="button" data-copy="price">③ 価格をコピー</button>
       </div>
       <a class="sell-link" href="https://jp.mercari.com/sell" target="_blank" rel="noreferrer">メルカリの出品画面をひらく</a>
+      <p class="note">メルカリは外部アプリから項目を直接入力する仕組み（API）を公開していないため、貼り付けの操作だけは残ります。自動入力をうたうツールは規約違反になるので、この方法が現状いちばん速く安全です。</p>
       <div class="btn-row">
         <button type="button" id="saveDraft">下書きに保存</button>
         <button type="button" class="quiet" id="resetAll">次の商品へ</button>
@@ -652,6 +730,9 @@
   var MIN_PRICE = 300;
   var MAX_PHOTOS = 6;
   var DRAFT_KEY = "shuppin_drafts_v1";
+  var KEY_STORE = "shuppin_api_key_v1";
+  var GEMINI_MODEL = "gemini-2.5-flash";
+  var GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/" + GEMINI_MODEL + ":generateContent";
 
   var PROMPT = [
     "あなたは日本のフリマアプリ「メルカリ」で数千件の販売実績がある出品代行のプロです。",
@@ -718,6 +799,9 @@
 
   var state = {
     photos: [],
+    memo: "",
+    apiKey: "",
+    generating: false,
     ai: null,
     fields: {
       title: "", categoryPath: "", itemName: "", brand: "", size: "", color: "",
@@ -1170,6 +1254,181 @@
     refreshTitleCount();
   }
 
+  // ---- APIキー ----
+  function loadKey() {
+    try {
+      state.apiKey = localStorage.getItem(KEY_STORE) || "";
+    } catch (err) {
+      state.apiKey = "";
+    }
+  }
+
+  function storeKey(value) {
+    state.apiKey = value;
+    try {
+      if (value) localStorage.setItem(KEY_STORE, value);
+      else localStorage.removeItem(KEY_STORE);
+    } catch (err) {
+      toast("キーを保存できませんでした");
+    }
+  }
+
+  function renderKeyState() {
+    var box = $("keyState");
+    box.textContent = "";
+    var dot = document.createElement("span");
+    dot.className = "dot" + (state.apiKey ? " on" : "");
+    var text = document.createElement("span");
+    text.textContent = state.apiKey
+      ? "AIキー設定ずみ（このボタンだけで自動生成できます）"
+      : "自動生成には無料のAIキーが1回だけ必要です";
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "quiet";
+    btn.textContent = state.apiKey ? "キーを変更" : "キーを設定する";
+    btn.addEventListener("click", function () {
+      var panel = $("keyPanel");
+      panel.hidden = !panel.hidden;
+      if (!panel.hidden) $("f_key").focus();
+    });
+    box.appendChild(dot);
+    box.appendChild(text);
+    box.appendChild(btn);
+  }
+
+  // ---- 写真からの自動生成 ----
+  function setGenMsg(kind, heading, items) {
+    var box = $("genMsg");
+    box.textContent = "";
+    if (kind) box.appendChild(callout(kind, heading, items));
+  }
+
+  function generate() {
+    if (state.generating) return;
+    if (!state.photos.length) {
+      setGenMsg("warn", "先に写真を追加してください", ["1番の「撮影する」または「アルバム」から、商品の写真を選びます。"]);
+      return;
+    }
+    if (!state.apiKey) {
+      $("keyPanel").hidden = false;
+      setGenMsg("info", "無料のAIキーを1回だけ設定してください", ["下の手順でキーを作って貼り付けると、次からはボタン1つで生成できます。"]);
+      $("f_key").focus();
+      return;
+    }
+
+    var parts = state.photos.map(function (p) {
+      return { inline_data: { mime_type: "image/jpeg", data: p.url.split(",")[1] } };
+    });
+    var ask = PROMPT + "\n\n写真は" + state.photos.length + "枚";
+    ask += state.photos.length > 1 ? "（1枚目がメイン写真）です。" : "です。";
+    if (state.memo.trim()) {
+      ask += "\n出品者からの補足（写真より優先して信頼してよい情報）:\n" + state.memo.trim();
+    }
+    parts.push({ text: ask });
+
+    state.generating = true;
+    var btn = $("generateBtn");
+    btn.disabled = true;
+    btn.textContent = "";
+    var spin = document.createElement("span");
+    spin.className = "spinner";
+    btn.appendChild(spin);
+    btn.appendChild(document.createTextNode("AIが写真を見ています..."));
+    setGenMsg("info", "解析中", ["商品の特定 → 状態の判定 → 相場の推定 → 説明文の作成", "20〜40秒ほどかかります"]);
+
+    fetch(GEMINI_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-goog-api-key": state.apiKey },
+      body: JSON.stringify({
+        contents: [{ parts: parts }],
+        generationConfig: { responseMimeType: "application/json", temperature: 0.4 }
+      })
+    }).then(function (res) {
+      return res.json().then(function (data) { return { ok: res.ok, status: res.status, data: data }; });
+    }).then(function (r) {
+      if (!r.ok) {
+        var detail = r.data && r.data.error && r.data.error.message ? r.data.error.message : "";
+        if (r.status === 400 || r.status === 403) {
+          setGenMsg("warn", "キーが使えませんでした", ["APIキーをもう一度確認してください。", detail]);
+        } else if (r.status === 429) {
+          setGenMsg("warn", "無料枠の上限に届きました", ["しばらく時間をおいてからお試しください。", "急ぐ場合は下の「手持ちのAIアプリで書いてもらう」をお使いください。"]);
+        } else {
+          setGenMsg("warn", "生成できませんでした（" + r.status + "）", [detail || "少し時間をおいてお試しください。"]);
+        }
+        return;
+      }
+      var text = "";
+      try {
+        var cand = r.data.candidates && r.data.candidates[0];
+        (cand.content.parts || []).forEach(function (part) { text += part.text || ""; });
+      } catch (err) {
+        text = "";
+      }
+      var ai = parsePasted(text);
+      if (!ai) {
+        setGenMsg("warn", "AIの回答を読み取れませんでした", ["もう一度お試しください。写真を1〜2枚に減らすと通りやすくなります。"]);
+        return;
+      }
+      applyAi(ai);
+      setGenMsg(null);
+      toast("自動生成しました");
+      document.querySelectorAll(".card")[2].scrollIntoView({ behavior: "smooth", block: "start" });
+    }).catch(function () {
+      setGenMsg("warn", "AIに接続できませんでした", [
+        "電波の良い場所でもう一度お試しください。",
+        "この画面がプレビュー（claude.aiの中）の場合は、外部への通信が遮断されているため生成できません。自分のサイトに置いたものからお使いください。"
+      ]);
+    }).then(function () {
+      state.generating = false;
+      btn.disabled = false;
+      btn.textContent = "写真からAIで自動生成";
+    });
+  }
+
+  // ---- メルカリに送る ----
+  function dataUrlToFile(dataUrl, name) {
+    var base64 = dataUrl.split(",")[1];
+    var bin = atob(base64);
+    var bytes = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return new File([bytes], name, { type: "image/jpeg" });
+  }
+
+  function shareToMercari() {
+    var box = $("shareMsg");
+    box.textContent = "";
+    copy(state.desc);
+
+    var files = [];
+    try {
+      files = state.photos.map(function (p, i) { return dataUrlToFile(p.url, "item-" + (i + 1) + ".jpg"); });
+    } catch (err) {
+      files = [];
+    }
+
+    var payload = { title: state.fields.title, text: state.desc };
+    if (files.length && navigator.canShare && navigator.canShare({ files: files })) payload.files = files;
+
+    if (navigator.share) {
+      navigator.share(payload).then(function () {
+        box.appendChild(callout("info", "商品説明はコピー済みです", ["メルカリの出品画面で、各欄を長押し →「ペースト」で貼り付けてください。"]));
+      }).catch(function (err) {
+        if (err && err.name === "AbortError") return;
+        openSellPage(box);
+      });
+    } else {
+      openSellPage(box);
+    }
+  }
+
+  function openSellPage(box) {
+    box.textContent = "";
+    box.appendChild(callout("info", "共有メニューが使えない端末です", [
+      "商品説明はコピーしました。下の「メルカリの出品画面をひらく」から貼り付けてください。",
+      "スマホのメルカリアプリなら、写真つきの共有が使えます。"
+    ]));
+  }
+
   // ---- 下書き ----
   function readDrafts() {
     try {
@@ -1315,6 +1574,33 @@
     $("camInput").addEventListener("change", function (e) { addFiles(e.target.files); e.target.value = ""; });
     $("albumInput").addEventListener("change", function (e) { addFiles(e.target.files); e.target.value = ""; });
 
+    $("f_memo").addEventListener("input", function (e) { state.memo = e.target.value; });
+
+    $("generateBtn").addEventListener("click", generate);
+
+    $("saveKey").addEventListener("click", function () {
+      var value = $("f_key").value.trim();
+      if (!value) {
+        toast("キーを入力してください");
+        return;
+      }
+      storeKey(value);
+      $("f_key").value = "";
+      $("keyPanel").hidden = true;
+      renderKeyState();
+      setGenMsg(null);
+      toast("キーを保存しました");
+    });
+
+    $("clearKey").addEventListener("click", function () {
+      storeKey("");
+      $("f_key").value = "";
+      renderKeyState();
+      toast("キーを削除しました");
+    });
+
+    $("shareBtn").addEventListener("click", shareToMercari);
+
     $("copyPrompt").addEventListener("click", function () { copy(PROMPT); });
 
     $("applyPaste").addEventListener("click", function () {
@@ -1419,6 +1705,10 @@
       state.shipOverride = "";
       state.payer = "seller";
       state.descTouched = false;
+      state.memo = "";
+      $("f_memo").value = "";
+      setGenMsg(null);
+      $("shareMsg").textContent = "";
       syncFieldsToDom();
       setPrice(1000);
       renderPhotos();
@@ -1434,6 +1724,8 @@
     $("draftsBtn").addEventListener("click", function () { showDrafts($("draftsCard").hidden); });
     $("closeDrafts").addEventListener("click", function () { showDrafts(false); });
 
+    loadKey();
+    renderKeyState();
     syncFieldsToDom();
     renderPhotos();
     renderPriceChips();
