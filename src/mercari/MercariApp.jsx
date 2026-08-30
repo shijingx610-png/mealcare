@@ -31,29 +31,49 @@ function writeDrafts(list) {
   }
 }
 
-// 写真を縮小して base64 にする（API のサイズ上限対策）
+// 画像を縮小して base64 にする（API のサイズ上限対策）
+function compressDataUrl(sourceDataUrl, maxEdge, quality) {
+  return new Promise(function (resolve, reject) {
+    var img = new Image();
+    img.onerror = function () { reject(new Error('画像を読み込めませんでした')); };
+    img.onload = function () {
+      var scale = Math.min(1, maxEdge / Math.max(img.width, img.height));
+      var w = Math.max(1, Math.round(img.width * scale));
+      var h = Math.max(1, Math.round(img.height * scale));
+      var canvas = document.createElement('canvas');
+      canvas.width = w;
+      canvas.height = h;
+      var ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, w, h);
+      var dataUrl = canvas.toDataURL('image/jpeg', quality);
+      resolve({ dataUrl: dataUrl, base64: dataUrl.split(',')[1], mediaType: 'image/jpeg' });
+    };
+    img.src = sourceDataUrl;
+  });
+}
+
 function compressImage(file, maxEdge, quality) {
   return new Promise(function (resolve, reject) {
     var reader = new FileReader();
     reader.onerror = function () { reject(new Error('画像を読み込めませんでした')); };
     reader.onload = function (ev) {
-      var img = new Image();
-      img.onerror = function () { reject(new Error('画像を読み込めませんでした')); };
-      img.onload = function () {
-        var scale = Math.min(1, maxEdge / Math.max(img.width, img.height));
-        var w = Math.max(1, Math.round(img.width * scale));
-        var h = Math.max(1, Math.round(img.height * scale));
-        var canvas = document.createElement('canvas');
-        canvas.width = w;
-        canvas.height = h;
-        var ctx = canvas.getContext('2d');
-        ctx.drawImage(img, 0, 0, w, h);
-        var dataUrl = canvas.toDataURL('image/jpeg', quality);
-        resolve({ dataUrl: dataUrl, base64: dataUrl.split(',')[1], mediaType: 'image/jpeg' });
-      };
-      img.src = ev.target.result;
+      compressDataUrl(ev.target.result, maxEdge, quality).then(resolve, reject);
     };
     reader.readAsDataURL(file);
+  });
+}
+
+// 画像URLから取り込む（CORS を避けるためサーバー関数を経由する）
+function fetchImageByUrl(url) {
+  return fetch('/api/image', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url: url })
+  }).then(function (r) {
+    return r.json().then(function (d) {
+      if (!r.ok || !d.dataUrl) throw new Error(d.error || '画像を取得できませんでした');
+      return compressDataUrl(d.dataUrl, 1024, 0.72);
+    });
   });
 }
 
@@ -161,7 +181,11 @@ function CopyBtn(props) {
 // ---------- 写真選択画面 ----------
 function InputScreen(props) {
   var photos = props.photos;
-  var fileRef = useRef(null);
+  var albumRef = useRef(null);
+  var cameraRef = useRef(null);
+  var [urlOpen, setUrlOpen] = useState(false);
+  var [url, setUrl] = useState('');
+  var [urlLoading, setUrlLoading] = useState(false);
 
   function onFiles(e) {
     var files = e.target.files;
@@ -175,6 +199,20 @@ function InputScreen(props) {
       props.onError(err.message || '画像の読み込みに失敗しました');
     });
     e.target.value = '';
+  }
+
+  function addByUrl() {
+    if (!url.trim()) return;
+    setUrlLoading(true);
+    props.onError('');
+    fetchImageByUrl(url.trim()).then(function (r) {
+      props.onAddPhotos([{ id: mkId(), dataUrl: r.dataUrl, base64: r.base64, mediaType: r.mediaType }]);
+      setUrl('');
+      setUrlLoading(false);
+    }).catch(function (err) {
+      props.onError(err.message || '画像を取得できませんでした');
+      setUrlLoading(false);
+    });
   }
 
   return (
@@ -202,7 +240,7 @@ function InputScreen(props) {
           })}
           {photos.length < MAX_PHOTOS ? (
             <button
-              onClick={function () { fileRef.current.click(); }}
+              onClick={function () { albumRef.current.click(); }}
               style={{ paddingTop: '100%', position: 'relative', background: BG, border: '2px dashed ' + LINE, borderRadius: 10, cursor: 'pointer' }}
             >
               <span style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: SUB, fontSize: 12 }}>
@@ -211,7 +249,36 @@ function InputScreen(props) {
             </button>
           ) : null}
         </div>
-        <input ref={fileRef} type="file" accept="image/*" multiple style={{ display: 'none' }} onChange={onFiles} />
+
+        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+          <Btn kind="sub" style={{ flex: 1, minWidth: 96 }} disabled={photos.length >= MAX_PHOTOS} onClick={function () { cameraRef.current.click(); }}>📷 撮影する</Btn>
+          <Btn kind="sub" style={{ flex: 1, minWidth: 96 }} disabled={photos.length >= MAX_PHOTOS} onClick={function () { albumRef.current.click(); }}>アルバムから</Btn>
+          <Btn kind="sub" style={{ flex: 1, minWidth: 96 }} disabled={photos.length >= MAX_PHOTOS} onClick={function () { setUrlOpen(!urlOpen); }}>🔗 画像URL</Btn>
+        </div>
+
+        {urlOpen ? (
+          <div style={{ marginTop: 10, background: BG, borderRadius: 10, padding: 12 }}>
+            <Label>画像のURL（https://...）</Label>
+            <input
+              value={url}
+              onChange={function (e) { setUrl(e.target.value); }}
+              placeholder="https://example.com/item.jpg"
+              inputMode="url"
+              style={{ width: '100%', boxSizing: 'border-box', background: CARD, border: '1px solid ' + LINE, borderRadius: 10, color: '#fff', padding: '10px 12px', fontSize: 14, outline: 'none', marginBottom: 8 }}
+            />
+            <Btn full disabled={urlLoading || !url.trim()} onClick={addByUrl}>
+              {urlLoading ? '読み込み中...' : 'この画像を追加'}
+            </Btn>
+            <div style={{ color: SUB, fontSize: 11, marginTop: 8, lineHeight: 1.6 }}>
+              スマホのブラウザで画像を長押し →「画像アドレスをコピー」で取得できます。
+              メーカー公式の画像はAIの動作確認用です。実際にメルカリへ登録する写真は、
+              ご自身で撮影したものを使ってください（他サイトの画像の転載は規約違反になります）。
+            </div>
+          </div>
+        ) : null}
+
+        <input ref={albumRef} type="file" accept="image/*" multiple style={{ display: 'none' }} onChange={onFiles} />
+        <input ref={cameraRef} type="file" accept="image/*" capture="environment" style={{ display: 'none' }} onChange={onFiles} />
       </Card>
 
       <Card>
@@ -704,7 +771,7 @@ export default function MercariApp() {
 
   return (
     <div style={{ minHeight: '100vh', background: BG, color: SUB2, fontFamily: 'system-ui, -apple-system, "Hiragino Kaku Gothic ProN", sans-serif' }}>
-      <div style={{ position: 'sticky', top: 0, zIndex: 10, background: BG, borderBottom: '1px solid ' + LINE, padding: '12px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <div style={{ position: 'sticky', top: 0, zIndex: 10, background: BG, borderBottom: '1px solid ' + LINE, padding: '12px 16px', paddingTop: 'calc(12px + env(safe-area-inset-top))', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ color: '#fff', fontWeight: 800, fontSize: 16 }}>
           <span style={{ color: RED }}>●</span> メルカリ出品AI
         </div>
@@ -717,10 +784,20 @@ export default function MercariApp() {
         </div>
       </div>
 
-      <div style={{ maxWidth: 520, margin: '0 auto', padding: 16 }}>
+      <div style={{ maxWidth: 520, margin: '0 auto', padding: 16, paddingBottom: 'calc(24px + env(safe-area-inset-bottom))' }}>
         {error ? (
           <Card style={{ background: '#7f1d1d' }}>
-            <div style={{ color: '#fecaca', fontSize: 13 }}>{error}</div>
+            <div style={{ color: '#fecaca', fontSize: 13, lineHeight: 1.7 }}>{error}</div>
+            {error.indexOf('APIキー') >= 0 ? (
+              <div style={{ color: '#fecaca', fontSize: 12, marginTop: 10, lineHeight: 1.8 }}>
+                写真の解析には Anthropic の APIキーが必要です。<br />
+                1. console.anthropic.com でキーを作成<br />
+                2. Vercel のプロジェクト &gt; Settings &gt; Environment Variables に<br />
+                &nbsp;&nbsp;&nbsp;<code>ANTHROPIC_API_KEY</code> として登録<br />
+                3. Deployments から Redeploy<br />
+                設定するまでは「サンプルデータで画面を見る」でお試しください。
+              </div>
+            ) : null}
           </Card>
         ) : null}
 
