@@ -775,7 +775,8 @@ export default function MercariApp() {
         <div style={{ color: '#fff', fontWeight: 800, fontSize: 16 }}>
           <span style={{ color: RED }}>●</span> メルカリ出品AI
         </div>
-        <div style={{ display: 'flex', gap: 6 }}>
+        <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+          <a href="/free.html" style={{ color: SUB2, fontSize: 12, fontWeight: 700, textDecoration: 'none', border: '1px solid ' + LINE, borderRadius: 10, padding: '9px 12px' }}>無料版</a>
           {screen === 'drafts' ? (
             <Btn kind="ghost" onClick={function () { setScreen(listing.title ? 'result' : 'input'); }}>もどる</Btn>
           ) : (

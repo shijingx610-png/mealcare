@@ -288,6 +288,20 @@
     line-height: 1;
   }
 
+  .thumb .makemain {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 4px 0;
+    border: none;
+    border-radius: 0;
+    background: rgba(20, 16, 24, .62);
+    color: #fff;
+    font-size: 10.5px;
+    font-weight: 700;
+  }
+
   .empty {
     display: grid;
     place-items: center;
@@ -572,6 +586,9 @@
         <textarea id="f_title" rows="2" placeholder="ブランド 商品名 サイズ 色 など、検索される言葉を前に"></textarea>
       </label>
       <div class="counter"><span>検索されやすい言葉を前半に</span><span id="titleCount">0 / 40</span></div>
+      <div class="btn-row" id="trimRow" hidden>
+        <button type="button" class="quiet full" id="trimTitle">40文字に収める</button>
+      </div>
 
       <label class="field">
         <span class="lab">カテゴリ</span>
@@ -911,6 +928,18 @@
         renderPhotos();
       });
       box.appendChild(del);
+      if (i > 0) {
+        var main = document.createElement("button");
+        main.className = "makemain";
+        main.type = "button";
+        main.textContent = "メインにする";
+        main.addEventListener("click", function () {
+          state.photos = [p].concat(state.photos.filter(function (x) { return x.id !== p.id; }));
+          renderPhotos();
+          toast("メイン写真を入れ替えました");
+        });
+        box.appendChild(main);
+      }
       grid.appendChild(box);
     });
     if (state.photos.length < MAX_PHOTOS) {
@@ -1185,6 +1214,17 @@
     var el = $("titleCount");
     el.textContent = len + " / 40";
     el.className = len > 40 ? "over" : "";
+    $("trimRow").hidden = len <= 40;
+  }
+
+  // 40文字に収める。区切りのよい所（空白）で切り、なければそのまま40文字。
+  function trimTitle(text) {
+    var t = String(text || "").trim();
+    if (t.length <= 40) return t;
+    var cut = t.slice(0, 40);
+    var space = Math.max(cut.lastIndexOf(" "), cut.lastIndexOf("　"));
+    if (space >= 28) cut = cut.slice(0, space);
+    return cut.trim();
   }
 
   function setPrice(value) {
@@ -1578,6 +1618,13 @@
 
     $("generateBtn").addEventListener("click", generate);
 
+    $("trimTitle").addEventListener("click", function () {
+      state.fields.title = trimTitle(state.fields.title);
+      $("f_title").value = state.fields.title;
+      refreshTitleCount();
+      toast("40文字に収めました");
+    });
+
     $("saveKey").addEventListener("click", function () {
       var value = $("f_key").value.trim();
       if (!value) {
@@ -1588,7 +1635,13 @@
       $("f_key").value = "";
       $("keyPanel").hidden = true;
       renderKeyState();
-      setGenMsg(null);
+      if (value.indexOf("AIza") !== 0) {
+        setGenMsg("warn", "キーの形が少し違うようです", [
+          "Google AI Studio のキーは AIza で始まります。うまく生成できない場合は、キーをコピーし直してみてください。"
+        ]);
+      } else {
+        setGenMsg(null);
+      }
       toast("キーを保存しました");
     });
 

@@ -1,17 +1,32 @@
 {
-  "name": "メルカリ出品AI",
-  "short_name": "出品AI",
-  "description": "商品の写真から、メルカリの商品名・説明文・価格・配送方法をAIが作成します。",
+  "name": "メルカリ出品ヘルパー",
+  "short_name": "出品ヘルパー",
+  "description": "商品の写真から、メルカリの商品名・説明文・価格・送料と手取りを自動で作ります。",
   "lang": "ja",
-  "start_url": "/mercari.html",
+  "start_url": "/free.html",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
   "icons": [
-    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }
