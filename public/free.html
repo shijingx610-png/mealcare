@@ -455,6 +455,17 @@
 
   .hidden { display: none !important; }
 
+  details.research {
+    margin-top: 12px;
+    background: var(--surface-2);
+    border-radius: 12px;
+    padding: 10px 14px;
+  }
+
+  details.research summary { font-size: 12.5px; font-weight: 700; color: var(--ink-2); cursor: pointer; }
+  .research-body { font-size: 12.5px; color: var(--ink-2); white-space: pre-wrap; margin-top: 8px; line-height: 1.8; }
+  .research-src { font-size: 11px; color: var(--muted); margin-top: 8px; word-break: break-word; }
+
   .keyline {
     display: flex;
     align-items: center;
@@ -634,7 +645,7 @@
       </label>
     </section>
 
-    <section class="card">
+    <section class="card" id="cardPrice">
       <div class="card-head"><span class="step">4</span><h2>価格を決める</h2></div>
       <div id="priceReason"></div>
       <label class="field">
@@ -649,6 +660,9 @@
       <div class="breakdown" id="breakdown"></div>
       <span class="lab" style="margin-top:14px">手取りから逆算する</span>
       <div class="chips" id="profitChips"></div>
+      <div class="btn-row">
+        <button type="button" class="primary full" id="toPost">この価格で出品にすすむ</button>
+      </div>
     </section>
 
     <section class="card">
@@ -683,7 +697,7 @@
       </div>
     </section>
 
-    <section class="card">
+    <section class="card" id="cardPost">
       <div class="card-head"><span class="step">7</span><h2>メルカリに出品する</h2></div>
       <p class="note">「メルカリに送る」を押すと、商品説明を自動でコピーしたうえで、写真を持ったまま共有メニューが開きます。そこでメルカリを選ぶと、写真つきで出品画面が立ち上がります。各欄は長押し →「ペースト」で貼り付けてください。</p>
       <div class="btn-row">
@@ -716,7 +730,7 @@
       <div class="k">手元に残る</div>
       <div class="v profit" id="dockProfit">690円</div>
     </div>
-    <button type="button" class="primary" data-copy="desc">説明をコピー</button>
+    <button type="button" class="primary" id="dockShare">メルカリに送る</button>
   </div>
 </div>
 
@@ -789,6 +803,20 @@
     "}"
   ].join("\n");
 
+  var SEARCH_PROMPT = [
+    "添付した写真の商品を、Google検索を使って特定してください。フリマアプリに出品するための下調べです。",
+    "",
+    "調べること:",
+    "1. 商品名・ブランド・型番（写真のロゴ、タグ、刻印、形状を手がかりに検索する）",
+    "2. 新品の定価と発売時期",
+    "3. メルカリやラクマでの中古の売れている価格帯（状態別に分かれば状態も）",
+    "4. サイズや素材など、出品説明に書ける仕様",
+    "5. その商品ならではの注意点（人気の色、偽物が多い、付属品の有無で価格が変わる等）",
+    "",
+    "特定できない場合は「特定できず」と書き、写真から読み取れる特徴だけを挙げてください。推測を事実のように書かないでください。",
+    "日本語の箇条書きで、400文字以内にまとめてください。"
+  ].join("\n");
+
   var SAMPLE = {
     itemName: "ナイキ エアフォース1 07 ロー 白 27cm",
     title: "ナイキ エアフォース1 07 ロー ホワイト 27cm 箱付き",
@@ -818,6 +846,7 @@
     photos: [],
     memo: "",
     apiKey: "",
+    research: null,
     generating: false,
     ai: null,
     fields: {
@@ -1150,6 +1179,26 @@
     var box = $("aiNotes");
     box.textContent = "";
     var ai = state.ai;
+
+    if (state.research) {
+      var det = document.createElement("details");
+      det.className = "research";
+      var sum = document.createElement("summary");
+      sum.textContent = "写真検索でわかったこと";
+      det.appendChild(sum);
+      var pre = document.createElement("div");
+      pre.className = "research-body";
+      pre.textContent = state.research.text;
+      det.appendChild(pre);
+      if (state.research.sources.length) {
+        var src = document.createElement("div");
+        src.className = "research-src";
+        src.textContent = "参照: " + state.research.sources.join(" / ");
+        det.appendChild(src);
+      }
+      box.appendChild(det);
+    }
+
     if (!ai) return;
 
     if (ai.policyWarning) {
@@ -1356,63 +1405,66 @@
       return;
     }
 
-    var parts = state.photos.map(function (p) {
+    var imageParts = state.photos.map(function (p) {
       return { inline_data: { mime_type: "image/jpeg", data: p.url.split(",")[1] } };
     });
-    var ask = PROMPT + "\n\n写真は" + state.photos.length + "枚";
-    ask += state.photos.length > 1 ? "（1枚目がメイン写真）です。" : "です。";
-    if (state.memo.trim()) {
-      ask += "\n出品者からの補足（写真より優先して信頼してよい情報）:\n" + state.memo.trim();
-    }
-    parts.push({ text: ask });
 
-    state.generating = true;
+    var memo = state.memo.trim();
     var btn = $("generateBtn");
+    state.generating = true;
+    state.research = null;
     btn.disabled = true;
-    btn.textContent = "";
-    var spin = document.createElement("span");
-    spin.className = "spinner";
-    btn.appendChild(spin);
-    btn.appendChild(document.createTextNode("AIが写真を見ています..."));
-    setGenMsg("info", "解析中", ["商品の特定 → 状態の判定 → 相場の推定 → 説明文の作成", "20〜40秒ほどかかります"]);
+    setBtnBusy(btn, "写真から商品を検索中...");
+    setGenMsg("info", "① 写真検索で商品を特定しています", ["Google検索で同じ商品を探し、型番や相場を調べます。"]);
 
-    fetch(GEMINI_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "x-goog-api-key": state.apiKey },
-      body: JSON.stringify({
-        contents: [{ parts: parts }],
+    var searchAsk = SEARCH_PROMPT;
+    searchAsk += "\n写真は" + state.photos.length + "枚";
+    searchAsk += state.photos.length > 1 ? "（1枚目がメイン写真）です。" : "です。";
+    if (memo) searchAsk += "\n出品者からの補足:\n" + memo;
+
+    callGemini({
+      contents: [{ parts: imageParts.concat([{ text: searchAsk }]) }],
+      tools: [{ google_search: {} }]
+    }).then(function (r) {
+      if (r.ok) {
+        var found = textOf(r).trim();
+        if (found) state.research = { text: found, sources: sourcesOf(r) };
+      }
+      // 検索が使えなかった場合も、写真だけで作成に進む
+      setBtnBusy(btn, "説明文と価格を作成中...");
+      setGenMsg("info", "② 出品情報を作成しています", [
+        state.research ? "検索でわかったことをもとに、説明文と価格をまとめます。" : "検索は使えなかったため、写真から判断して作成します。",
+        "あと20秒ほどです"
+      ]);
+
+      var ask = PROMPT + "\n\n写真は" + state.photos.length + "枚";
+      ask += state.photos.length > 1 ? "（1枚目がメイン写真）です。" : "です。";
+      if (state.research) {
+        ask += "\n\n# 画像検索で調べた結果（信頼してよい情報。矛盾する場合はこちらを優先）\n" + state.research.text;
+      }
+      if (memo) {
+        ask += "\n\n# 出品者からの補足（最優先で信頼してよい情報）\n" + memo;
+      }
+
+      return callGemini({
+        contents: [{ parts: imageParts.concat([{ text: ask }]) }],
         generationConfig: { responseMimeType: "application/json", temperature: 0.4 }
-      })
-    }).then(function (res) {
-      return res.json().then(function (data) { return { ok: res.ok, status: res.status, data: data }; });
+      });
     }).then(function (r) {
       if (!r.ok) {
-        var detail = r.data && r.data.error && r.data.error.message ? r.data.error.message : "";
-        if (r.status === 400 || r.status === 403) {
-          setGenMsg("warn", "キーが使えませんでした", ["APIキーをもう一度確認してください。", detail]);
-        } else if (r.status === 429) {
-          setGenMsg("warn", "無料枠の上限に届きました", ["しばらく時間をおいてからお試しください。", "急ぐ場合は下の「手持ちのAIアプリで書いてもらう」をお使いください。"]);
-        } else {
-          setGenMsg("warn", "生成できませんでした（" + r.status + "）", [detail || "少し時間をおいてお試しください。"]);
-        }
+        setGenMsg("warn", apiErrorHeading(r), apiErrorBody(r));
         return;
       }
-      var text = "";
-      try {
-        var cand = r.data.candidates && r.data.candidates[0];
-        (cand.content.parts || []).forEach(function (part) { text += part.text || ""; });
-      } catch (err) {
-        text = "";
-      }
-      var ai = parsePasted(text);
+      var ai = parsePasted(textOf(r));
       if (!ai) {
         setGenMsg("warn", "AIの回答を読み取れませんでした", ["もう一度お試しください。写真を1〜2枚に減らすと通りやすくなります。"]);
         return;
       }
       applyAi(ai);
       setGenMsg(null);
-      toast("自動生成しました");
-      document.querySelectorAll(".card")[2].scrollIntoView({ behavior: "smooth", block: "start" });
+      toast("出品情報ができました");
+      // 残りは価格を決めるだけなので、価格カードへ送る
+      $("cardPrice").scrollIntoView({ behavior: "smooth", block: "start" });
     }).catch(function () {
       setGenMsg("warn", "AIに接続できませんでした", [
         "電波の良い場所でもう一度お試しください。",
@@ -1423,6 +1475,61 @@
       btn.disabled = false;
       btn.textContent = "写真からAIで自動生成";
     });
+  }
+
+  function setBtnBusy(btn, label) {
+    btn.textContent = "";
+    var spin = document.createElement("span");
+    spin.className = "spinner";
+    btn.appendChild(spin);
+    btn.appendChild(document.createTextNode(label));
+  }
+
+  function callGemini(body) {
+    return fetch(GEMINI_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-goog-api-key": state.apiKey },
+      body: JSON.stringify(body)
+    }).then(function (res) {
+      return res.json().then(function (data) { return { ok: res.ok, status: res.status, data: data }; });
+    });
+  }
+
+  function textOf(r) {
+    var out = "";
+    try {
+      (r.data.candidates[0].content.parts || []).forEach(function (part) { out += part.text || ""; });
+    } catch (err) {
+      out = "";
+    }
+    return out;
+  }
+
+  function sourcesOf(r) {
+    var list = [];
+    try {
+      var meta = r.data.candidates[0].groundingMetadata || {};
+      (meta.webSearchQueries || []).forEach(function (q) { list.push("検索したことば: " + q); });
+      (meta.groundingChunks || []).forEach(function (chunk) {
+        if (chunk.web && chunk.web.title) list.push(chunk.web.title);
+      });
+    } catch (err) {
+      return list;
+    }
+    return list.slice(0, 6);
+  }
+
+  function apiErrorHeading(r) {
+    if (r.status === 400 || r.status === 403) return "キーが使えませんでした";
+    if (r.status === 429) return "無料枠の上限に届きました";
+    return "生成できませんでした（" + r.status + "）";
+  }
+
+  function apiErrorBody(r) {
+    var detail = r.data && r.data.error && r.data.error.message ? r.data.error.message : "";
+    if (r.status === 400 || r.status === 403) return ["APIキーをもう一度確認してください。", detail];
+    if (r.status === 429) return ["しばらく時間をおいてからお試しください。", "急ぐ場合は下の「手持ちのAIアプリで書いてもらう」をお使いください。"];
+    return [detail || "少し時間をおいてお試しください。"];
   }
 
   // ---- メルカリに送る ----
@@ -1653,6 +1760,11 @@
     });
 
     $("shareBtn").addEventListener("click", shareToMercari);
+    $("dockShare").addEventListener("click", shareToMercari);
+
+    $("toPost").addEventListener("click", function () {
+      $("cardPost").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
 
     $("copyPrompt").addEventListener("click", function () { copy(PROMPT); });
 
@@ -1759,6 +1871,7 @@
       state.payer = "seller";
       state.descTouched = false;
       state.memo = "";
+      state.research = null;
       $("f_memo").value = "";
       setGenMsg(null);
       $("shareMsg").textContent = "";

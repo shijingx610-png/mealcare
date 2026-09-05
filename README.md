@@ -26,6 +26,15 @@ If you are developing a production application, we recommend using TypeScript wi
 | `/free.html`（**おすすめ・無料**） | 写真を選んでボタンを押すと、アプリ内で自動生成（Google AI Studio の無料枠を使用） | **0円** | 無料のAPIキー1つ（初回だけ） |
 | `/mercari.html` | 写真をアップロードすると Claude が自動で解析する | 1回 5〜10円程度 | Anthropic の有料APIキー |
 
+`/free.html` の流れは「写真を選ぶ → 自動生成 → 価格を決める → メルカリに送る」の4手です。
+自動生成は2段階で動きます。
+
+1. **写真検索** — Google検索を使って、写真の商品の型番・定価・中古相場・注意点を調べます
+   （結果は「写真検索でわかったこと」から確認できます）
+2. **出品情報の作成** — 調べた内容をもとに、商品名・カテゴリ・状態・説明文・価格帯・配送方法を作ります
+
+検索が使えない場合（無料枠の制限など）は、自動的に写真だけで作成する動きに切り替わります。
+
 `/free.html` は1枚のHTMLだけで完結します（ビルド不要・サーバー不要）。
 無料キーの取得は [aistudio.google.com/apikey](https://aistudio.google.com/apikey) から1分ほどです。
 キーはブラウザのlocalStorageにのみ保存され、AIへのリクエストは端末から直接送られます。
