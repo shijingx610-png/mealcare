@@ -239,7 +239,7 @@
   .btn-row > button { flex: 1 1 44%; }
   .btn-row.stack > button { flex: 1 1 100%; }
 
-  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 12px; }
 
   .thumb {
     position: relative;
@@ -284,12 +284,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 4px 0;
+    padding: 3px 0;
     border: none;
     border-radius: 0;
     background: rgba(20, 16, 24, .62);
     color: #fff;
-    font-size: 10.5px;
+    font-size: 9.5px;
     font-weight: 700;
   }
 
@@ -572,7 +572,7 @@
   <main id="main">
     <section class="card">
       <div class="card-head"><span class="step">1</span><h2>商品の写真</h2></div>
-      <p class="note">全体 → 正面 → ブランドタグ → キズのある所、の順が伝わりやすいです。最大6枚。</p>
+      <p class="note">全体 → 正面 → ブランドタグ → キズのある所、の順が伝わりやすいです。10枚まで（AIが見るのは先頭6枚）。</p>
       <div class="grid" id="photoGrid"></div>
       <div class="btn-row">
         <button type="button" id="camBtn">撮影する</button>
@@ -803,7 +803,8 @@
 
   var FEE_RATE = 0.1;
   var MIN_PRICE = 300;
-  var MAX_PHOTOS = 6;
+  var MAX_PHOTOS = 10;   // メルカリの上限
+  var AI_PHOTOS = 6;     // AIに送る枚数の上限（通信量をおさえるため）
   var DRAFT_KEY = "shuppin_drafts_v2";
   var SESSION_KEY = "shuppin_session_v1";
   var KEY_STORE = "shuppin_api_key_v1";
@@ -1534,10 +1535,22 @@
   }
 
   // ---------- 生成 ----------
-  function setGenMsg(kind, heading, items) {
+  function setGenMsg(kind, heading, items, retry) {
     var box = $("genMsg");
     box.textContent = "";
-    if (kind) box.appendChild(callout(kind, heading, items));
+    if (!kind) return;
+    box.appendChild(callout(kind, heading, items));
+    if (retry) {
+      var row = document.createElement("div");
+      row.className = "btn-row";
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "full";
+      btn.textContent = "もう一度ためす";
+      btn.addEventListener("click", generate);
+      row.appendChild(btn);
+      box.appendChild(row);
+    }
   }
 
   function setBtnBusy(btn, label) {
@@ -1608,7 +1621,8 @@
       return;
     }
 
-    var imageParts = state.photos.map(function (p) {
+    var aiPhotos = state.photos.slice(0, AI_PHOTOS);
+    var imageParts = aiPhotos.map(function (p) {
       return { inline_data: { mime_type: "image/jpeg", data: p.url.split(",")[1] } };
     });
 
@@ -1620,8 +1634,8 @@
     setBtnBusy(btn, "写真から商品を検索中...");
     setGenMsg("info", "① 写真検索で商品を特定しています", ["Google検索で同じ商品を探し、型番や相場を調べます。"]);
 
-    var searchAsk = SEARCH_PROMPT + "\n写真は" + state.photos.length + "枚";
-    searchAsk += state.photos.length > 1 ? "（1枚目がメイン写真）です。" : "です。";
+    var searchAsk = SEARCH_PROMPT + "\n写真は" + aiPhotos.length + "枚";
+    searchAsk += aiPhotos.length > 1 ? "（1枚目がメイン写真）です。" : "です。";
     if (memo) searchAsk += "\n出品者からの補足:\n" + memo;
 
     callGemini({
@@ -1638,8 +1652,8 @@
         "あと20秒ほどです"
       ]);
 
-      var ask = PROMPT + "\n\n写真は" + state.photos.length + "枚";
-      ask += state.photos.length > 1 ? "（1枚目がメイン写真）です。" : "です。";
+      var ask = PROMPT + "\n\n写真は" + aiPhotos.length + "枚";
+      ask += aiPhotos.length > 1 ? "（1枚目がメイン写真）です。" : "です。";
       if (state.research) ask += "\n\n# 画像検索で調べた結果（信頼してよい情報。矛盾する場合はこちらを優先）\n" + state.research.text;
       if (memo) ask += "\n\n# 出品者からの補足（最優先で信頼してよい情報）\n" + memo;
 
@@ -1649,12 +1663,12 @@
       });
     }).then(function (r) {
       if (!r.ok) {
-        setGenMsg("warn", apiErrorHeading(r), apiErrorBody(r));
+        setGenMsg("warn", apiErrorHeading(r), apiErrorBody(r), r.status !== 400 && r.status !== 403);
         return;
       }
       var ai = parsePasted(textOf(r));
       if (!ai) {
-        setGenMsg("warn", "AIの回答を読み取れませんでした", ["もう一度お試しください。写真を1〜2枚に減らすと通りやすくなります。"]);
+        setGenMsg("warn", "AIの回答を読み取れませんでした", ["写真を1〜2枚に減らすと通りやすくなります。"], true);
         return;
       }
       applyAi(ai);
@@ -1665,7 +1679,7 @@
       setGenMsg("warn", "AIに接続できませんでした", [
         "電波の良い場所でもう一度お試しください。",
         "この画面がプレビュー（claude.aiの中）の場合は、外部への通信が遮断されているため生成できません。自分のサイトに置いたものからお使いください。"
-      ]);
+      ], true);
     }).then(function () {
       state.generating = false;
       btn.disabled = false;
@@ -1707,9 +1721,9 @@
     steps.push({
       kicker: "STEP 1",
       title: "メルカリの出品画面をひらく",
-      hint: "メルカリアプリの「出品」→「持ち物を売る」まで進みます。ここから先は、この画面と行ったり来たりします。入力した内容は自動で保存されるので、アプリを切り替えても消えません。",
+      hint: "メルカリアプリを開き、下の「出品」→「持ち物を売る」まで進みます。ここから先はこの画面と行き来しますが、入力内容とナビの現在地は自動保存されるので、途中から続けられます。",
       link: "https://jp.mercari.com/sell",
-      linkLabel: "ブラウザで出品画面をひらく"
+      linkLabel: "アプリがない場合はブラウザで出品する"
     });
 
     steps.push({
@@ -1740,13 +1754,16 @@
       copy: state.desc
     });
 
+    var catLeaf = (state.fields.categoryPath || "").split(">").pop().trim();
     steps.push({
       kicker: "STEP 5",
       title: "カテゴリを選ぶ",
-      hint: "カテゴリ検索にこの言葉を貼ると早く見つかります。近いものがなければ一番近い階層でかまいません。",
+      hint: catLeaf
+        ? "メルカリが写真から提案してくることもあります。違っていたらこの階層を選び直してください。検索欄には「" + catLeaf + "」をコピーしてあります。"
+        : "カテゴリが未設定です。3番の画面で入れておくと、ここに表示されます。",
       value: state.fields.categoryPath || "（未設定）",
       valueClass: "short",
-      copy: state.fields.categoryPath
+      copy: catLeaf
     });
 
     if (state.fields.brand) {
@@ -1784,8 +1801,9 @@
 
     steps.push({
       title: "出品するを押して完了",
-      hint: "内容を確認して「出品する」を押します。おつかれさまでした。売れたら、発送は選んだ方法で送ってください。",
-      done: true
+      hint: "内容を確認して「出品する」を押します。おつかれさまでした。売れたら、選んだ配送方法で送ってください。",
+      done: true,
+      finish: true
     });
 
     // STEPの通し番号を振り直す
@@ -1855,6 +1873,27 @@
       abtn.addEventListener("click", step.action.run);
       arow.appendChild(abtn);
       body.appendChild(arow);
+    }
+
+    if (step.finish) {
+      var frow = document.createElement("div");
+      frow.className = "btn-row";
+      var save = document.createElement("button");
+      save.type = "button";
+      save.textContent = "下書きに残す";
+      save.addEventListener("click", function () {
+        $("saveDraft").click();
+      });
+      var next = document.createElement("button");
+      next.type = "button";
+      next.textContent = "次の商品へ";
+      next.addEventListener("click", function () {
+        closeNav();
+        $("resetAll").click();
+      });
+      frow.appendChild(save);
+      frow.appendChild(next);
+      body.appendChild(frow);
     }
 
     if (step.link) {
