@@ -99,11 +99,7 @@
     line-height: 1.7;
   }
 
-  .wrap {
-    max-width: 540px;
-    margin: 0 auto;
-    padding: 0 14px 132px;
-  }
+  .wrap { max-width: 540px; margin: 0 auto; padding: 0 14px 132px; }
 
   header.bar {
     position: sticky;
@@ -116,6 +112,7 @@
     justify-content: space-between;
     gap: 10px;
     padding: 12px 14px;
+    padding-top: calc(12px + env(safe-area-inset-top));
     margin: 0 -14px 16px;
   }
 
@@ -150,6 +147,14 @@
     text-wrap: balance;
   }
 
+  h3 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0;
+    text-wrap: balance;
+  }
+
   .card {
     background: var(--surface);
     border: 1px solid var(--line);
@@ -159,12 +164,7 @@
     margin-bottom: 14px;
   }
 
-  .card-head {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 4px;
-  }
+  .card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
 
   .step {
     flex: 0 0 auto;
@@ -181,12 +181,9 @@
     place-items: center;
   }
 
-  .note {
-    color: var(--muted);
-    font-size: 12.5px;
-    line-height: 1.75;
-    margin: 6px 0 0;
-  }
+  .note { color: var(--muted); font-size: 12.5px; line-height: 1.75; margin: 6px 0 0; }
+
+  .divider { height: 1px; background: var(--line); margin: 18px -16px; }
 
   label.field { display: block; margin-top: 14px; }
 
@@ -199,7 +196,7 @@
     margin-bottom: 5px;
   }
 
-  input[type="text"], input[type="url"], input[type="number"], textarea, select {
+  input[type="text"], input[type="password"], textarea, select {
     width: 100%;
     font-family: var(--body);
     font-size: 16px;
@@ -211,7 +208,7 @@
     outline: none;
   }
 
-  textarea { resize: vertical; line-height: 1.75; }
+  textarea { resize: vertical; line-height: 1.8; }
 
   input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible {
     outline: 2px solid var(--accent);
@@ -226,12 +223,11 @@
     font-size: 14px;
     font-weight: 700;
     border-radius: 10px;
-    border: 1px solid transparent;
+    border: 1px solid var(--line-strong);
     padding: 11px 14px;
     cursor: pointer;
     background: var(--surface-2);
     color: var(--ink);
-    border-color: var(--line-strong);
   }
 
   button.primary { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
@@ -243,12 +239,7 @@
   .btn-row > button { flex: 1 1 44%; }
   .btn-row.stack > button { flex: 1 1 100%; }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin-top: 12px;
-  }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
 
   .thumb {
     position: relative;
@@ -311,6 +302,7 @@
     color: var(--muted);
     font-size: 12px;
     text-align: center;
+    padding: 4px;
   }
 
   .breakdown { margin-top: 14px; background: var(--surface-2); border-radius: 12px; padding: 12px 14px; }
@@ -381,90 +373,17 @@
     display: block;
     text-align: center;
     text-decoration: none;
-    background: var(--accent);
-    color: var(--accent-ink);
+    background: var(--surface-2);
+    color: var(--ink);
+    border: 1px solid var(--line-strong);
     font-weight: 700;
+    font-size: 14px;
     border-radius: 10px;
-    padding: 13px;
+    padding: 11px;
     margin-top: 8px;
   }
 
-  .dock {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 30;
-    background: var(--surface);
-    border-top: 1px solid var(--line);
-    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
-  }
-
-  .dock-inner {
-    max-width: 540px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .dock .cell { flex: 1; }
-  .dock .k { font-size: 10.5px; letter-spacing: .08em; color: var(--muted); font-weight: 700; }
-  .dock .v { font-family: var(--num); font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; }
-  .dock .v.profit { color: var(--good); }
-  .dock .v.profit.negative { color: var(--accent); }
-  .dock button { flex: 0 0 auto; }
-
-  .toast {
-    position: fixed;
-    left: 50%;
-    bottom: 96px;
-    transform: translate(-50%, 12px);
-    background: var(--ink);
-    color: var(--bg);
-    font-size: 13px;
-    font-weight: 700;
-    padding: 9px 16px;
-    border-radius: 999px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .18s ease, transform .18s ease;
-    z-index: 40;
-  }
-
-  .toast.show { opacity: 1; transform: translate(-50%, 0); }
-
-  @media (prefers-reduced-motion: reduce) {
-    .toast { transition: none; }
-  }
-
-  .draft {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .draft:last-child { border-bottom: none; }
-  .draft img { width: 46px; height: 46px; border-radius: 8px; object-fit: cover; }
-  .draft .t { flex: 1; min-width: 0; }
-  .draft .t b { display: block; font-size: 13px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .draft .t span { font-size: 11.5px; color: var(--muted); font-family: var(--num); }
-  .draft button { padding: 7px 10px; font-size: 12px; }
-
-  .hidden { display: none !important; }
-
-  details.research {
-    margin-top: 12px;
-    background: var(--surface-2);
-    border-radius: 12px;
-    padding: 10px 14px;
-  }
-
-  details.research summary { font-size: 12.5px; font-weight: 700; color: var(--ink-2); cursor: pointer; }
-  .research-body { font-size: 12.5px; color: var(--ink-2); white-space: pre-wrap; margin-top: 8px; line-height: 1.8; }
-  .research-src { font-size: 11px; color: var(--muted); margin-top: 8px; word-break: break-word; }
+  a { color: var(--accent); }
 
   .keyline {
     display: flex;
@@ -480,12 +399,13 @@
   .keyline .dot.on { background: var(--good); }
   .keyline button { padding: 5px 10px; font-size: 12px; }
 
-  details#manualBox { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 12px; }
-  details#manualBox summary { font-size: 12.5px; color: var(--muted); cursor: pointer; font-weight: 700; }
-  details#manualBox[open] summary { margin-bottom: 4px; }
+  details.fold { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 12px; }
+  details.fold summary { font-size: 12.5px; color: var(--muted); cursor: pointer; font-weight: 700; }
 
-  .callout a { color: inherit; }
-  a { color: var(--accent); }
+  details.research { margin-top: 12px; background: var(--surface-2); border-radius: 12px; padding: 10px 14px; }
+  details.research summary { font-size: 12.5px; font-weight: 700; color: var(--ink-2); cursor: pointer; }
+  .research-body { font-size: 12.5px; color: var(--ink-2); white-space: pre-wrap; margin-top: 8px; line-height: 1.8; }
+  .research-src { font-size: 11px; color: var(--muted); margin-top: 8px; word-break: break-word; }
 
   .spinner {
     display: inline-block;
@@ -501,9 +421,140 @@
 
   @keyframes spin { to { transform: rotate(360deg); } }
 
+  .dock {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+  }
+
+  .dock-inner { max-width: 540px; margin: 0 auto; display: flex; align-items: center; gap: 14px; }
+  .dock .cell { flex: 1; }
+  .dock .k { font-size: 10.5px; letter-spacing: .08em; color: var(--muted); font-weight: 700; }
+  .dock .v { font-family: var(--num); font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .dock .v.profit { color: var(--good); }
+  .dock .v.profit.negative { color: var(--accent); }
+  .dock button { flex: 0 0 auto; }
+
+  /* 出品ナビ */
+  .nav {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 16px;
+    padding-top: calc(14px + env(safe-area-inset-top));
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-head .who { font-family: var(--display); font-weight: 700; font-size: 15px; }
+  .nav-head .count { font-family: var(--num); font-size: 12px; color: var(--muted); }
+  .nav-head button { padding: 6px 12px; font-size: 12px; }
+
+  .nav-track { display: flex; gap: 4px; padding: 10px 16px 0; }
+
+  .nav-track i {
+    flex: 1;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--line);
+  }
+
+  .nav-track i.on { background: var(--accent); }
+
+  .nav-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 18px 16px 20px;
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-kicker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .nav-body h3 { font-size: 21px; line-height: 1.5; }
+  .nav-hint { color: var(--muted); font-size: 13px; line-height: 1.8; margin-top: 8px; }
+
+  .nav-value {
+    margin-top: 14px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 15px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 44vh;
+    overflow-y: auto;
+  }
+
+  .nav-value.short { font-family: var(--display); font-size: 18px; font-weight: 700; }
+  .nav-value.money { font-family: var(--num); font-size: 26px; font-weight: 700; }
+
+  .nav-foot {
+    border-top: 1px solid var(--line);
+    background: var(--surface);
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  }
+
+  .nav-foot-inner { max-width: 540px; margin: 0 auto; display: flex; gap: 8px; }
+  .nav-foot button { flex: 1; padding: 14px; font-size: 15px; }
+  .nav-foot button.back { flex: 0 0 34%; }
+
+  .toast {
+    position: fixed;
+    left: 50%;
+    bottom: 96px;
+    transform: translate(-50%, 12px);
+    background: var(--ink);
+    color: var(--bg);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 9px 16px;
+    border-radius: 999px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .18s ease, transform .18s ease;
+    z-index: 60;
+  }
+
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
   @media (prefers-reduced-motion: reduce) {
+    .toast { transition: none; }
     .spinner { animation-duration: 2.4s; }
   }
+
+  .draft { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .draft:last-child { border-bottom: none; }
+  .draft img { width: 46px; height: 46px; border-radius: 8px; object-fit: cover; }
+  .draft .t { flex: 1; min-width: 0; }
+  .draft .t b { display: block; font-size: 13px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .draft .t span { font-size: 11.5px; color: var(--muted); font-family: var(--num); }
+  .draft button { padding: 7px 10px; font-size: 12px; }
+
+  .hidden { display: none !important; }
 </style>
 
 <div class="wrap">
@@ -533,7 +584,7 @@
 
     <section class="card">
       <div class="card-head"><span class="step">2</span><h2>AIが自動で書く</h2></div>
-      <p class="note">写真から、商品名・カテゴリ・状態・説明文・相場価格・配送方法まで、このアプリの中でまとめて作ります。</p>
+      <p class="note">写真をGoogle検索にかけて商品を特定し、商品名・カテゴリ・状態・説明文・相場価格・配送方法をまとめて作ります。</p>
 
       <label class="field">
         <span class="lab">分かっていること（任意・書くほど正確になります）</span>
@@ -544,7 +595,6 @@
         <button type="button" class="primary full" id="generateBtn">写真からAIで自動生成</button>
       </div>
       <div id="genMsg"></div>
-
       <div id="keyState" class="keyline"></div>
 
       <div id="keyPanel" hidden>
@@ -561,10 +611,10 @@
           <li>「Create API key」でキーを作る（無料枠のままなら課金は発生しません）</li>
           <li>コピーして上の欄に貼り、保存する</li>
         </ol>
-        <p class="note">キーはこの端末のブラウザにだけ保存され、どこにも送られません（AIへのリクエストは端末から直接送られます）。無料枠では入力内容がGoogleのモデル改善に使われる場合があります。人が写った写真や個人情報を含む写真は避けてください。</p>
+        <p class="note">キーはこの端末のブラウザにだけ保存され、どこにも送られません。無料枠では入力内容がGoogleのモデル改善に使われる場合があります。人が写った写真や個人情報を含む写真は避けてください。</p>
       </div>
 
-      <details id="manualBox">
+      <details class="fold" id="manualBox">
         <summary>AIキーを使わずに、手持ちのAIアプリで書いてもらう</summary>
         <ol class="howto">
           <li>「指示文をコピー」を押す</li>
@@ -576,7 +626,7 @@
         </div>
         <label class="field">
           <span class="lab">AIの回答を貼り付け</span>
-          <textarea id="pasteBox" rows="3" placeholder='{ "title": "…", "priceRecommended": 7800, … }'></textarea>
+          <textarea id="pasteBox" rows="3" placeholder='{ "title": "…", "description": "…" }'></textarea>
         </label>
         <div class="btn-row">
           <button type="button" id="applyPaste">反映する</button>
@@ -586,14 +636,14 @@
       </details>
     </section>
 
-    <section class="card">
-      <div class="card-head"><span class="step">3</span><h2>商品情報</h2></div>
-      <p class="note">AIを使わず、ここに直接書いても出品文はできあがります。</p>
+    <section class="card" id="cardContent">
+      <div class="card-head"><span class="step">3</span><h2>内容を確認する</h2></div>
+      <p class="note">メルカリの欄と同じ並びです。気になるところだけ直してください。</p>
 
       <div id="aiNotes"></div>
 
       <label class="field">
-        <span class="lab">商品名（メルカリのタイトル）</span>
+        <span class="lab">商品名</span>
         <textarea id="f_title" rows="2" placeholder="ブランド 商品名 サイズ 色 など、検索される言葉を前に"></textarea>
       </label>
       <div class="counter"><span>検索されやすい言葉を前半に</span><span id="titleCount">0 / 40</span></div>
@@ -602,12 +652,24 @@
       </div>
 
       <label class="field">
+        <span class="lab">商品の説明（この1つにすべて入っています）</span>
+        <textarea id="f_desc" rows="14" placeholder="AIが作った説明がここに入ります。手直しもできます。"></textarea>
+      </label>
+      <div class="counter"><span>ポイントもキズもこの中にまとめています</span><span id="descCount">0 / 1000</span></div>
+      <div class="checks">
+        <label><input type="checkbox" id="o_instant" checked>即購入OK</label>
+        <label><input type="checkbox" id="o_nego" checked>値下げ交渉可</label>
+        <label><input type="checkbox" id="o_smoke" checked>ペット・喫煙なし</label>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="quiet" id="fillTemplate">ひな形を入れる</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <label class="field">
         <span class="lab">カテゴリ</span>
         <input type="text" id="f_category" placeholder="メンズ &gt; 靴 &gt; スニーカー">
-      </label>
-      <label class="field">
-        <span class="lab">商品名（説明文に載せる正式名）</span>
-        <input type="text" id="f_itemName" placeholder="ナイキ エアフォース1 ロー 27cm">
       </label>
       <label class="field">
         <span class="lab">ブランド</span>
@@ -627,27 +689,12 @@
         <span class="lab">商品の状態</span>
         <select id="f_condition"></select>
       </label>
-      <label class="field">
-        <span class="lab">商品説明の本文</span>
-        <textarea id="f_body" rows="3" placeholder="どんな商品か、どのくらい使ったかを2〜4文で"></textarea>
-      </label>
-      <label class="field">
-        <span class="lab">おすすめポイント（1行に1つ）</span>
-        <textarea id="f_features" rows="3" placeholder="合わせやすい定番の白&#10;箱付き"></textarea>
-      </label>
-      <label class="field">
-        <span class="lab">キズ・汚れ（1行に1つ・正直に）</span>
-        <textarea id="f_flaws" rows="3" placeholder="ソール側面に薄い黄ばみ&#10;右足つま先に擦れ"></textarea>
-      </label>
-      <label class="field">
-        <span class="lab">ハッシュタグ（スペース区切り）</span>
-        <input type="text" id="f_tags" placeholder="#ナイキ #スニーカー">
-      </label>
     </section>
 
     <section class="card" id="cardPrice">
-      <div class="card-head"><span class="step">4</span><h2>価格を決める</h2></div>
+      <div class="card-head"><span class="step">4</span><h2>価格と送料を決める</h2></div>
       <div id="priceReason"></div>
+
       <label class="field">
         <span class="lab">販売価格</span>
         <div class="price-input">
@@ -660,15 +707,11 @@
       <div class="breakdown" id="breakdown"></div>
       <span class="lab" style="margin-top:14px">手取りから逆算する</span>
       <div class="chips" id="profitChips"></div>
-      <div class="btn-row">
-        <button type="button" class="primary full" id="toPost">この価格で出品にすすむ</button>
-      </div>
-    </section>
 
-    <section class="card">
-      <div class="card-head"><span class="step">5</span><h2>配送方法</h2></div>
+      <div class="divider"></div>
+
       <label class="field">
-        <span class="lab">発送に使う方法</span>
+        <span class="lab">配送方法</span>
         <select id="f_shipping"></select>
       </label>
       <p class="note" id="shipNote"></p>
@@ -680,38 +723,23 @@
       <p class="note">送料は2025年時点の目安です。最新の料金はメルカリアプリでご確認ください。</p>
     </section>
 
-    <section class="card">
-      <div class="card-head"><span class="step">6</span><h2>商品説明</h2></div>
-      <div class="checks">
-        <label><input type="checkbox" id="o_instant" checked>即購入OK</label>
-        <label><input type="checkbox" id="o_nego" checked>値下げ交渉可</label>
-        <label><input type="checkbox" id="o_smoke" checked>ペット・喫煙なし</label>
-      </div>
-      <label class="field">
-        <span class="lab">そのまま貼れる本文</span>
-        <textarea id="f_desc" rows="16"></textarea>
-      </label>
-      <div class="counter"><span>メルカリの上限は1,000文字</span><span id="descCount">0 / 1000</span></div>
-      <div class="btn-row">
-        <button type="button" class="quiet" id="rebuildDesc">項目から作り直す</button>
-      </div>
-    </section>
-
     <section class="card" id="cardPost">
-      <div class="card-head"><span class="step">7</span><h2>メルカリに出品する</h2></div>
-      <p class="note">「メルカリに送る」を押すと、商品説明を自動でコピーしたうえで、写真を持ったまま共有メニューが開きます。そこでメルカリを選ぶと、写真つきで出品画面が立ち上がります。各欄は長押し →「ペースト」で貼り付けてください。</p>
+      <div class="card-head"><span class="step">5</span><h2>メルカリに出品する</h2></div>
+      <p class="note">ナビが1画面ずつ「次にどこへ何を入れるか」を出します。コピーは自動なので、メルカリ側では長押し →「ペースト」を押すだけです。</p>
       <div class="btn-row">
-        <button type="button" class="primary full" id="shareBtn">メルカリに送る（写真＋説明）</button>
+        <button type="button" class="primary full" id="startNav">出品ナビをはじめる</button>
       </div>
-      <div id="shareMsg"></div>
-      <span class="lab" style="margin-top:14px">1つずつコピーする</span>
-      <div class="btn-row stack">
-        <button type="button" data-copy="title">① 商品名をコピー</button>
-        <button type="button" data-copy="desc">② 商品説明をコピー</button>
-        <button type="button" data-copy="price">③ 価格をコピー</button>
-      </div>
-      <a class="sell-link" href="https://jp.mercari.com/sell" target="_blank" rel="noreferrer">メルカリの出品画面をひらく</a>
-      <p class="note">メルカリは外部アプリから項目を直接入力する仕組み（API）を公開していないため、貼り付けの操作だけは残ります。自動入力をうたうツールは規約違反になるので、この方法が現状いちばん速く安全です。</p>
+
+      <details class="fold">
+        <summary>ナビを使わず、自分でコピーする</summary>
+        <div class="btn-row stack">
+          <button type="button" data-copy="title">商品名をコピー</button>
+          <button type="button" data-copy="desc">商品の説明をコピー</button>
+          <button type="button" data-copy="price">価格をコピー</button>
+        </div>
+        <a class="sell-link" href="https://jp.mercari.com/sell" target="_blank" rel="noreferrer">メルカリの出品画面をひらく</a>
+      </details>
+
       <div class="btn-row">
         <button type="button" id="saveDraft">下書きに保存</button>
         <button type="button" class="quiet" id="resetAll">次の商品へ</button>
@@ -720,7 +748,7 @@
   </main>
 </div>
 
-<div class="dock">
+<div class="dock" id="dock">
   <div class="dock-inner">
     <div class="cell">
       <div class="k">販売価格</div>
@@ -730,7 +758,23 @@
       <div class="k">手元に残る</div>
       <div class="v profit" id="dockProfit">690円</div>
     </div>
-    <button type="button" class="primary" id="dockShare">メルカリに送る</button>
+    <button type="button" class="primary" id="dockNav">出品ナビ</button>
+  </div>
+</div>
+
+<div class="nav" id="navPanel" role="dialog" aria-modal="true" aria-label="出品ナビ" hidden>
+  <div class="nav-head">
+    <span class="who">出品ナビ</span>
+    <span class="count" id="navCount">1 / 8</span>
+    <button type="button" class="quiet" id="navClose">とじる</button>
+  </div>
+  <div class="nav-track" id="navTrack"></div>
+  <div class="nav-body" id="navBody"></div>
+  <div class="nav-foot">
+    <div class="nav-foot-inner">
+      <button type="button" class="quiet back" id="navBack">もどる</button>
+      <button type="button" class="primary" id="navNext">つぎへ</button>
+    </div>
   </div>
 </div>
 
@@ -760,48 +804,11 @@
   var FEE_RATE = 0.1;
   var MIN_PRICE = 300;
   var MAX_PHOTOS = 6;
-  var DRAFT_KEY = "shuppin_drafts_v1";
+  var DRAFT_KEY = "shuppin_drafts_v2";
+  var SESSION_KEY = "shuppin_session_v1";
   var KEY_STORE = "shuppin_api_key_v1";
   var GEMINI_MODEL = "gemini-2.5-flash";
   var GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/" + GEMINI_MODEL + ":generateContent";
-
-  var PROMPT = [
-    "あなたは日本のフリマアプリ「メルカリ」で数千件の販売実績がある出品代行のプロです。",
-    "添付した商品写真を見て、出品に必要な情報をJSONだけで返してください（前置き・説明文・コードブロック記号は不要）。",
-    "",
-    "# ルール",
-    "1. 写真に写っている売る対象の商品を特定する。背景や小物は無視する。",
-    "2. titleは40文字以内。検索される語（ブランド・商品名・型番・サイズ・色）を前半に置く。煽り文句は入れない。",
-    "3. ブランド・型番・サイズは写真のロゴやタグから読み取れる場合のみ書く。読めない場合は空文字にし、questionsに確認事項として入れる。推測で書かない。",
-    "4. conditionは次の6つから選ぶ: 新品、未使用 / 未使用に近い / 目立った傷や汚れなし / やや傷や汚れあり / 傷や汚れあり / 全体的に状態が悪い",
-    "5. 写真から見えるキズ・汚れ・毛玉・日焼け・スレはflawsに正直に書く。",
-    "6. 価格は日本のメルカリの実際の売れ筋相場を基準に。販売手数料10%と送料が引かれること、値下げ交渉の余地200〜500円を織り込む。最低300円。",
-    "7. descriptionBodyは敬体で2〜4文。誇大表現や、写真から確認できないこと（購入時期・正規品保証など）は書かない。",
-    "8. 出品が禁止・制限されている可能性がある物ならpolicyWarningに理由を書く。問題なければ空文字。",
-    "",
-    "# 返すJSONの形",
-    "{",
-    '  "itemName": "商品の正式名称",',
-    '  "title": "メルカリのタイトル（40文字以内）",',
-    '  "brand": "ブランド名（不明なら空文字）",',
-    '  "categoryPath": "メンズ > 靴 > スニーカー のような階層",',
-    '  "size": "", "color": "",',
-    '  "condition": "6段階のいずれか",',
-    '  "conditionReason": "そう判断した写真上の根拠",',
-    '  "features": ["おすすめポイント2〜4個"],',
-    '  "flaws": ["写真から見えるキズや汚れ"],',
-    '  "descriptionBody": "商品説明の本文",',
-    '  "hashtags": ["#タグ3〜6個"],',
-    '  "priceMin": 0, "priceMax": 0, "priceRecommended": 0,',
-    '  "priceReason": "価格の根拠を1〜2文で",',
-    '  "shippingId": "' + SHIPPING.map(function (s) { return s.id; }).join(" / ") + '",',
-    '  "estimatedSize": "梱包後のおおよそのサイズと重さ",',
-    '  "photoAdvice": ["追加で撮ると売れやすい写真"],',
-    '  "questions": ["写真だけでは分からず出品者に確認したいこと"],',
-    '  "policyWarning": "",',
-    '  "confidence": "high / medium / low"',
-    "}"
-  ].join("\n");
 
   var SEARCH_PROMPT = [
     "添付した写真の商品を、Google検索を使って特定してください。フリマアプリに出品するための下調べです。",
@@ -817,6 +824,52 @@
     "日本語の箇条書きで、400文字以内にまとめてください。"
   ].join("\n");
 
+  var PROMPT = [
+    "あなたは日本のフリマアプリ「メルカリ」で数千件の販売実績があるプロの出品代行です。",
+    "添付の商品写真から、出品に必要な情報をJSONだけで返してください（前置き・説明・コードブロック記号は不要）。",
+    "",
+    "# ルール",
+    "1. 写真に写っている売る対象の商品を特定する。背景や小物は無視する。",
+    "2. titleは40文字以内。検索される語（ブランド・商品名・型番・サイズ・色）を前半に置く。煽り文句は入れない。",
+    "3. ブランド・型番・サイズは写真や検索結果から確認できる場合のみ書く。分からない場合は空文字にし、questionsに確認事項として入れる。推測で断定しない。",
+    "4. conditionは次の6つから選ぶ: 新品、未使用 / 未使用に近い / 目立った傷や汚れなし / やや傷や汚れあり / 傷や汚れあり / 全体的に状態が悪い",
+    "5. 価格は日本のメルカリの実際の売れ筋相場を基準に。販売手数料10%と送料が引かれること、値下げ交渉の余地200〜500円を織り込む。最低300円。",
+    "6. 出品が禁止・制限されている可能性がある物ならpolicyWarningに理由を書く。問題なければ空文字。",
+    "",
+    "# descriptionの書き方（最重要）",
+    "そのままメルカリの「商品の説明」に貼れる完成した本文を1つにまとめて書く。次の順で、この形を守る。",
+    "・冒頭に1行のあいさつ",
+    "・【ブランド】【商品名】【サイズ】【カラー】【状態】（分かる項目だけ）",
+    "・■商品説明 … 敬体で2〜4文",
+    "・■おすすめポイント … ・で始まる箇条書き2〜4行",
+    "・■キズ・汚れ … 写真から見える傷・汚れ・毛玉・日焼け・スレを・で始まる箇条書きで正直に。見当たらない場合もその旨を書く",
+    "・■発送について … 梱包と発送までの日数",
+    "・末尾に検索用のハッシュタグを3〜6個（#で始め、スペース区切りで1行）",
+    "誇大表現や、写真から確認できないこと（購入時期・正規品保証など）は書かない。",
+    "「即購入OK」「値下げ交渉可」「ペット・喫煙なし」の3行はアプリ側で付けるので書かない。",
+    "全体で900文字以内。",
+    "",
+    "# 返すJSONの形",
+    "{",
+    '  "itemName": "商品の正式名称",',
+    '  "title": "メルカリのタイトル（40文字以内）",',
+    '  "brand": "ブランド名（不明なら空文字）",',
+    '  "categoryPath": "メンズ > 靴 > スニーカー のような階層",',
+    '  "size": "", "color": "",',
+    '  "condition": "6段階のいずれか",',
+    '  "conditionReason": "そう判断した写真上の根拠",',
+    '  "description": "そのまま貼れる商品説明の全文",',
+    '  "priceMin": 0, "priceMax": 0, "priceRecommended": 0,',
+    '  "priceReason": "価格の根拠を1〜2文で",',
+    '  "shippingId": "' + SHIPPING.map(function (s) { return s.id; }).join(" / ") + '",',
+    '  "estimatedSize": "梱包後のおおよそのサイズと重さ",',
+    '  "photoAdvice": ["追加で撮ると売れやすい写真"],',
+    '  "questions": ["写真だけでは分からず出品者に確認したいこと"],',
+    '  "policyWarning": "",',
+    '  "confidence": "high / medium / low"',
+    "}"
+  ].join("\n");
+
   var SAMPLE = {
     itemName: "ナイキ エアフォース1 07 ロー 白 27cm",
     title: "ナイキ エアフォース1 07 ロー ホワイト 27cm 箱付き",
@@ -826,10 +879,34 @@
     color: "ホワイト",
     condition: "やや傷や汚れあり",
     conditionReason: "ソール側面に黄ばみ、つま先に薄い汚れが見えるため",
-    features: ["合わせやすい定番のオールホワイトです", "純正の箱が付属します", "ソールの摩耗は少なく、まだまだ履いていただけます"],
-    flaws: ["ソール側面に経年による薄い黄ばみがあります", "右足つま先に小さな擦れがあります"],
-    descriptionBody: "ナイキ エアフォース1 07 ローカットの27cmです。数回着用しましたが、目立った型崩れはありません。自宅保管品のため、細かな使用感はご了承ください。",
-    hashtags: ["#ナイキ", "#エアフォース1", "#スニーカー", "#27cm"],
+    description: [
+      "ご覧いただきありがとうございます。",
+      "",
+      "【ブランド】NIKE",
+      "【商品名】エアフォース1 07 ロー",
+      "【サイズ】27cm",
+      "【カラー】ホワイト",
+      "【状態】やや傷や汚れあり",
+      "",
+      "■商品説明",
+      "ナイキ エアフォース1 07 ローカットの27cmです。数回着用しましたが、目立った型崩れはありません。自宅保管品のため、細かな使用感はご了承ください。",
+      "",
+      "■おすすめポイント",
+      "・合わせやすい定番のオールホワイトです",
+      "・純正の箱が付属します",
+      "・ソールの摩耗は少なく、まだまだ履いていただけます",
+      "",
+      "■キズ・汚れ",
+      "・ソール側面に経年による薄い黄ばみがあります",
+      "・右足つま先に小さな擦れがあります",
+      "・中古品のため、神経質な方はご購入をお控えください",
+      "",
+      "■発送について",
+      "・箱に入れ、宅急便で発送予定です",
+      "・ご購入後、1〜2日以内に発送いたします（土日祝を除く）",
+      "",
+      "#ナイキ #エアフォース1 #スニーカー #27cm"
+    ].join("\n"),
     priceMin: 5500,
     priceMax: 9000,
     priceRecommended: 7800,
@@ -846,12 +923,12 @@
     photos: [],
     memo: "",
     apiKey: "",
-    research: null,
     generating: false,
+    research: null,
     ai: null,
     fields: {
       title: "", categoryPath: "", itemName: "", brand: "", size: "", color: "",
-      condition: CONDITIONS[2], body: "", features: "", flaws: "", tags: ""
+      condition: CONDITIONS[2], bodyText: ""
     },
     price: 1000,
     shippingId: "nekopos",
@@ -859,23 +936,25 @@
     payer: "seller",
     opts: { instant: true, nego: true, smoke: true },
     desc: "",
-    descTouched: false
+    descTouched: false,
+    navIndex: 0,
+    navOpen: false
   };
 
-  // ---- helpers ----
+  // ---------- 基本 ----------
   function $(id) { return document.getElementById(id); }
+
   function yen(n) {
     var v = Math.round(Number(n) || 0);
     var s = String(Math.abs(v)).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return (v < 0 ? "-" : "") + s + "円";
   }
-  function lines(text) {
-    return String(text || "").split("\n").map(function (t) { return t.trim(); }).filter(Boolean);
-  }
+
   function findShipping(id) {
     for (var i = 0; i < SHIPPING.length; i++) if (SHIPPING[i].id === id) return SHIPPING[i];
     return SHIPPING[0];
   }
+
   function toast(msg) {
     var el = $("toast");
     el.textContent = msg;
@@ -883,12 +962,10 @@
     clearTimeout(el._t);
     el._t = setTimeout(function () { el.classList.remove("show"); }, 1800);
   }
-  function copy(text) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function () { toast("コピーしました"); }, fallback);
-    } else {
-      fallback();
-    }
+
+  function copy(text, quiet) {
+    if (!text) return;
+    function done() { if (!quiet) toast("コピーしました"); }
     function fallback() {
       try {
         var ta = document.createElement("textarea");
@@ -899,14 +976,127 @@
         ta.select();
         document.execCommand("copy");
         document.body.removeChild(ta);
-        toast("コピーしました");
+        done();
       } catch (err) {
-        window.prompt("コピーできませんでした。手動で選択してください", text);
+        if (!quiet) window.prompt("コピーできませんでした。手動で選択してください", text);
       }
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function () {
+        if (quiet) return; // 自動コピーが弾かれても、画面には何も出さない
+        fallback();
+      });
+    } else {
+      fallback();
     }
   }
 
-  // ---- 写真 ----
+  function callout(kind, heading, items) {
+    var div = document.createElement("div");
+    div.className = "callout " + kind;
+    var b = document.createElement("b");
+    b.textContent = heading;
+    div.appendChild(b);
+    var ul = document.createElement("ul");
+    items.forEach(function (t) {
+      if (!t) return;
+      var li = document.createElement("li");
+      li.textContent = t;
+      ul.appendChild(li);
+    });
+    div.appendChild(ul);
+    return div;
+  }
+
+  // ---------- 保存 ----------
+  function safeGet(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function safeSet(key, value) {
+    try {
+      localStorage.setItem(key, value);
+      return true;
+    } catch (err) {
+      return false;
+    }
+  }
+
+  function loadKey() { state.apiKey = safeGet(KEY_STORE) || ""; }
+
+  function storeKey(value) {
+    state.apiKey = value;
+    try {
+      if (value) localStorage.setItem(KEY_STORE, value);
+      else localStorage.removeItem(KEY_STORE);
+    } catch (err) {
+      toast("キーを保存できませんでした");
+    }
+  }
+
+  // 作業中の内容を自動保存する（メルカリアプリに切り替えても消えないように）
+  var saveTimer = null;
+  function autosave() {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(function () {
+      var photos = state.photos;
+      var payload = {
+        fields: state.fields,
+        memo: state.memo,
+        price: state.price,
+        shippingId: state.shippingId,
+        shipOverride: state.shipOverride,
+        payer: state.payer,
+        opts: state.opts,
+        desc: state.desc,
+        descTouched: state.descTouched,
+        ai: state.ai,
+        research: state.research,
+        navIndex: state.navIndex,
+        navOpen: state.navOpen,
+        photos: photos
+      };
+      if (!safeSet(SESSION_KEY, JSON.stringify(payload))) {
+        // 写真が大きすぎる場合は文字情報だけ残す
+        payload.photos = [];
+        safeSet(SESSION_KEY, JSON.stringify(payload));
+      }
+    }, 400);
+  }
+
+  function restoreSession() {
+    var raw = safeGet(SESSION_KEY);
+    if (!raw) return false;
+    try {
+      var d = JSON.parse(raw);
+      if (!d || !d.fields) return false;
+      state.fields = d.fields;
+      state.memo = d.memo || "";
+      state.price = d.price || 1000;
+      state.shippingId = d.shippingId || "nekopos";
+      state.shipOverride = d.shipOverride || "";
+      state.payer = d.payer || "seller";
+      state.opts = d.opts || state.opts;
+      state.desc = d.desc || "";
+      state.descTouched = !!d.descTouched;
+      state.ai = d.ai || null;
+      state.research = d.research || null;
+      state.navIndex = d.navIndex || 0;
+      state.navOpen = !!d.navOpen;
+      state.photos = Array.isArray(d.photos) ? d.photos : [];
+      return true;
+    } catch (err) {
+      return false;
+    }
+  }
+
+  // ---------- 写真 ----------
+  function mkId() { return Math.random().toString(36).slice(2, 9); }
+
   function addFiles(fileList) {
     var room = MAX_PHOTOS - state.photos.length;
     var files = Array.prototype.slice.call(fileList, 0, room);
@@ -920,8 +1110,9 @@
           canvas.width = Math.max(1, Math.round(img.width * scale));
           canvas.height = Math.max(1, Math.round(img.height * scale));
           canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
-          state.photos.push({ id: Math.random().toString(36).slice(2, 9), url: canvas.toDataURL("image/jpeg", 0.72) });
+          state.photos.push({ id: mkId(), url: canvas.toDataURL("image/jpeg", 0.72) });
           renderPhotos();
+          autosave();
         };
         img.onerror = function () { toast("この画像は読み込めませんでした"); };
         img.src = ev.target.result;
@@ -955,6 +1146,7 @@
       del.addEventListener("click", function () {
         state.photos = state.photos.filter(function (x) { return x.id !== p.id; });
         renderPhotos();
+        autosave();
       });
       box.appendChild(del);
       if (i > 0) {
@@ -965,6 +1157,7 @@
         main.addEventListener("click", function () {
           state.photos = [p].concat(state.photos.filter(function (x) { return x.id !== p.id; }));
           renderPhotos();
+          autosave();
           toast("メイン写真を入れ替えました");
         });
         box.appendChild(main);
@@ -981,58 +1174,68 @@
     $("albumBtn").disabled = state.photos.length >= MAX_PHOTOS;
   }
 
-  // ---- 説明文 ----
+  // ---------- 説明文 ----------
+  function footerLines() {
+    var out = [];
+    if (state.opts.instant) out.push(FOOTER_LINES[0]);
+    if (state.opts.nego) out.push(FOOTER_LINES[1]);
+    if (state.opts.smoke) out.push(FOOTER_LINES[2]);
+    return out;
+  }
+
   function buildDescription() {
+    var body = String(state.fields.bodyText || "").trim();
+    if (!body) return "";
+    var foot = footerLines();
+    return (body + (foot.length ? "\n\n" + foot.join("\n") : "")).trim();
+  }
+
+  function templateBody() {
     var f = state.fields;
     var ship = findShipping(state.shippingId);
-    var out = [];
-    out.push("ご覧いただきありがとうございます。");
-    out.push("");
+    var out = ["ご覧いただきありがとうございます。", ""];
     if (f.brand) out.push("【ブランド】" + f.brand);
     if (f.itemName) out.push("【商品名】" + f.itemName);
     if (f.size) out.push("【サイズ】" + f.size);
     if (f.color) out.push("【カラー】" + f.color);
-    out.push("【状態】" + f.condition);
-    out.push("");
-    if (f.body) {
-      out.push("■商品説明");
-      out.push(f.body);
-      out.push("");
-    }
-    var features = lines(f.features);
-    if (features.length) {
-      out.push("■おすすめポイント");
-      features.forEach(function (x) { out.push("・" + x); });
-      out.push("");
-    }
-    out.push("■キズ・汚れについて");
-    var flaws = lines(f.flaws);
-    if (flaws.length) {
-      flaws.forEach(function (x) { out.push("・" + x); });
-      out.push("・上記以外に目立った不具合は見当たりませんが、中古品のため神経質な方はご購入をお控えください。");
-    } else {
-      out.push("・目立ったキズや汚れは見当たりません。");
-      out.push("・中古品のため、細かな使用感はご了承ください。");
-    }
-    out.push("");
-    out.push("■発送について");
-    out.push("・" + ship.label + "で発送予定です。");
-    out.push("・ご購入後、1〜2日以内に発送いたします（土日祝を除く）。");
-    out.push("");
-    var footer = [];
-    if (state.opts.instant) footer.push("即購入OKです。");
-    if (state.opts.nego) footer.push("お値下げのご相談もお気軽にコメントください。");
-    if (state.opts.smoke) footer.push("ペットは飼っておらず、喫煙者もおりません。");
-    if (footer.length) {
-      footer.forEach(function (x) { out.push(x); });
-      out.push("");
-    }
-    var tags = String(f.tags || "").trim();
-    if (tags) out.push(tags);
-    return out.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+    out.push("【状態】" + f.condition, "");
+    out.push("■商品説明", "（どんな商品か、どのくらい使ったかを2〜4文で）", "");
+    out.push("■おすすめポイント", "・", "・", "");
+    out.push("■キズ・汚れ", "・目立ったキズや汚れは見当たりません", "・中古品のため、細かな使用感はご了承ください", "");
+    out.push("■発送について", "・" + ship.label + "で発送予定です", "・ご購入後、1〜2日以内に発送いたします（土日祝を除く）", "");
+    out.push("#");
+    return out.join("\n");
   }
 
-  // ---- 計算 ----
+  function refreshDescription() {
+    if (!state.descTouched) {
+      state.desc = buildDescription();
+      $("f_desc").value = state.desc;
+    }
+    var el = $("descCount");
+    el.textContent = state.desc.length + " / 1000";
+    el.className = state.desc.length > 1000 ? "over" : "";
+    autosave();
+  }
+
+  function refreshTitleCount() {
+    var len = state.fields.title.length;
+    var el = $("titleCount");
+    el.textContent = len + " / 40";
+    el.className = len > 40 ? "over" : "";
+    $("trimRow").hidden = len <= 40;
+  }
+
+  function trimTitle(text) {
+    var t = String(text || "").trim();
+    if (t.length <= 40) return t;
+    var cut = t.slice(0, 40);
+    var space = Math.max(cut.lastIndexOf(" "), cut.lastIndexOf("　"));
+    if (space >= 28) cut = cut.slice(0, space);
+    return cut.trim();
+  }
+
+  // ---------- 計算 ----------
   function shippingCost() {
     var ship = findShipping(state.shippingId);
     if (state.payer === "buyer") return { fee: 0, material: 0 };
@@ -1058,7 +1261,7 @@
     return Math.ceil((target + cost.fee + cost.material) / (1 - FEE_RATE));
   }
 
-  // ---- レンダリング ----
+  // ---------- 表示 ----------
   function renderBreakdown() {
     var c = calc();
     var ship = findShipping(state.shippingId);
@@ -1082,6 +1285,7 @@
       div.appendChild(v);
       box.appendChild(div);
     });
+
     var total = document.createElement("div");
     total.className = "brow total" + (c.profit <= 0 ? " negative" : "");
     var tk = document.createElement("span");
@@ -1116,7 +1320,7 @@
     var box = $("priceChips");
     box.textContent = "";
     var ai = state.ai;
-    var items = ai
+    var items = ai && ai.priceMin
       ? [["相場の下限", ai.priceMin], ["AIのおすすめ", ai.priceRecommended], ["相場の上限", ai.priceMax]]
       : [["500円", 500], ["1,500円", 1500], ["3,000円", 3000], ["5,000円", 5000]];
     items.forEach(function (it) {
@@ -1126,7 +1330,7 @@
       var label = document.createElement("span");
       label.textContent = it[0];
       b.appendChild(label);
-      if (ai) {
+      if (ai && ai.priceMin) {
         var n = document.createElement("span");
         n.className = "n";
         n.textContent = yen(it[1]);
@@ -1162,6 +1366,7 @@
         state.payer = o[0];
         renderPayerChips();
         renderBreakdown();
+        autosave();
       });
       box.appendChild(b);
     });
@@ -1173,65 +1378,6 @@
     if (state.ai && state.ai.estimatedSize) note += "\nAIの梱包サイズ予想: " + state.ai.estimatedSize;
     $("shipNote").textContent = note;
     $("f_shipOverride").placeholder = "例: " + (ship.fee + ship.material);
-  }
-
-  function renderAiNotes() {
-    var box = $("aiNotes");
-    box.textContent = "";
-    var ai = state.ai;
-
-    if (state.research) {
-      var det = document.createElement("details");
-      det.className = "research";
-      var sum = document.createElement("summary");
-      sum.textContent = "写真検索でわかったこと";
-      det.appendChild(sum);
-      var pre = document.createElement("div");
-      pre.className = "research-body";
-      pre.textContent = state.research.text;
-      det.appendChild(pre);
-      if (state.research.sources.length) {
-        var src = document.createElement("div");
-        src.className = "research-src";
-        src.textContent = "参照: " + state.research.sources.join(" / ");
-        det.appendChild(src);
-      }
-      box.appendChild(det);
-    }
-
-    if (!ai) return;
-
-    if (ai.policyWarning) {
-      box.appendChild(callout("warn", "出品前に確認してください", [ai.policyWarning]));
-    }
-    if (ai.questions && ai.questions.length) {
-      box.appendChild(callout("info", "写真だけでは分からなかったこと", ai.questions));
-    }
-    if (ai.conditionReason) {
-      var p = document.createElement("p");
-      p.className = "note";
-      p.textContent = "状態の判断根拠: " + ai.conditionReason;
-      box.appendChild(p);
-    }
-    if (ai.photoAdvice && ai.photoAdvice.length) {
-      box.appendChild(callout("info", "追加で撮ると売れやすい写真", ai.photoAdvice));
-    }
-  }
-
-  function callout(kind, heading, items) {
-    var div = document.createElement("div");
-    div.className = "callout " + kind;
-    var b = document.createElement("b");
-    b.textContent = heading;
-    div.appendChild(b);
-    var ul = document.createElement("ul");
-    items.forEach(function (t) {
-      var li = document.createElement("li");
-      li.textContent = t;
-      ul.appendChild(li);
-    });
-    div.appendChild(ul);
-    return div;
   }
 
   function renderPriceReason() {
@@ -1249,31 +1395,40 @@
     box.appendChild(d);
   }
 
-  function refreshDescription() {
-    if (!state.descTouched) {
-      state.desc = buildDescription();
-      $("f_desc").value = state.desc;
+  function renderAiNotes() {
+    var box = $("aiNotes");
+    box.textContent = "";
+
+    if (state.research) {
+      var det = document.createElement("details");
+      det.className = "research";
+      var sum = document.createElement("summary");
+      sum.textContent = "写真検索でわかったこと";
+      det.appendChild(sum);
+      var body = document.createElement("div");
+      body.className = "research-body";
+      body.textContent = state.research.text;
+      det.appendChild(body);
+      if (state.research.sources && state.research.sources.length) {
+        var src = document.createElement("div");
+        src.className = "research-src";
+        src.textContent = "参照: " + state.research.sources.join(" / ");
+        det.appendChild(src);
+      }
+      box.appendChild(det);
     }
-    $("descCount").textContent = state.desc.length + " / 1000";
-    $("descCount").className = state.desc.length > 1000 ? "over" : "";
-  }
 
-  function refreshTitleCount() {
-    var len = state.fields.title.length;
-    var el = $("titleCount");
-    el.textContent = len + " / 40";
-    el.className = len > 40 ? "over" : "";
-    $("trimRow").hidden = len <= 40;
-  }
-
-  // 40文字に収める。区切りのよい所（空白）で切り、なければそのまま40文字。
-  function trimTitle(text) {
-    var t = String(text || "").trim();
-    if (t.length <= 40) return t;
-    var cut = t.slice(0, 40);
-    var space = Math.max(cut.lastIndexOf(" "), cut.lastIndexOf("　"));
-    if (space >= 28) cut = cut.slice(0, space);
-    return cut.trim();
+    var ai = state.ai;
+    if (!ai) return;
+    if (ai.policyWarning) box.appendChild(callout("warn", "出品前に確認してください", [ai.policyWarning]));
+    if (ai.questions && ai.questions.length) box.appendChild(callout("info", "写真だけでは分からなかったこと", ai.questions));
+    if (ai.photoAdvice && ai.photoAdvice.length) box.appendChild(callout("info", "追加で撮ると売れやすい写真", ai.photoAdvice));
+    if (ai.conditionReason) {
+      var p = document.createElement("p");
+      p.className = "note";
+      p.textContent = "状態の判断根拠: " + ai.conditionReason;
+      box.appendChild(p);
+    }
   }
 
   function setPrice(value) {
@@ -1285,9 +1440,28 @@
     range.value = String(Math.min(Number(range.max), Math.max(Number(range.min), v)));
     renderPriceChips();
     renderBreakdown();
+    autosave();
   }
 
-  // ---- AIの回答を反映 ----
+  function syncFieldsToDom() {
+    var f = state.fields;
+    $("f_title").value = f.title;
+    $("f_category").value = f.categoryPath;
+    $("f_brand").value = f.brand;
+    $("f_size").value = f.size;
+    $("f_color").value = f.color;
+    $("f_condition").value = f.condition;
+    $("f_memo").value = state.memo;
+    $("f_shipping").value = state.shippingId;
+    $("f_shipOverride").value = state.shipOverride;
+    $("f_desc").value = state.desc;
+    $("o_instant").checked = state.opts.instant;
+    $("o_nego").checked = state.opts.nego;
+    $("o_smoke").checked = state.opts.smoke;
+    refreshTitleCount();
+  }
+
+  // ---------- AIの結果を反映 ----------
   function parsePasted(text) {
     var raw = String(text || "").trim();
     if (!raw) return null;
@@ -1301,6 +1475,41 @@
     }
   }
 
+  // 説明を1つにまとめる。古い形（本文・ポイント・キズが別）で来ても組み立てる。
+  function bodyFromAi(ai) {
+    if (ai.description && String(ai.description).trim()) return String(ai.description).trim();
+    var out = ["ご覧いただきありがとうございます。", ""];
+    if (ai.brand) out.push("【ブランド】" + ai.brand);
+    if (ai.itemName) out.push("【商品名】" + ai.itemName);
+    if (ai.size) out.push("【サイズ】" + ai.size);
+    if (ai.color) out.push("【カラー】" + ai.color);
+    if (ai.condition) out.push("【状態】" + ai.condition);
+    out.push("");
+    if (ai.descriptionBody) out.push("■商品説明", ai.descriptionBody, "");
+    if (ai.features && ai.features.length) {
+      out.push("■おすすめポイント");
+      ai.features.forEach(function (x) { out.push("・" + x); });
+      out.push("");
+    }
+    out.push("■キズ・汚れ");
+    if (ai.flaws && ai.flaws.length) {
+      ai.flaws.forEach(function (x) { out.push("・" + x); });
+      out.push("・中古品のため、神経質な方はご購入をお控えください");
+    } else {
+      out.push("・目立ったキズや汚れは見当たりません");
+      out.push("・中古品のため、細かな使用感はご了承ください");
+    }
+    out.push("");
+    out.push("■発送について");
+    out.push("・" + findShipping(ai.shippingId || state.shippingId).label + "で発送予定です");
+    out.push("・ご購入後、1〜2日以内に発送いたします（土日祝を除く）");
+    if (ai.hashtags && ai.hashtags.length) {
+      out.push("");
+      out.push(ai.hashtags.map(function (t) { return t.charAt(0) === "#" ? t : "#" + t; }).join(" "));
+    }
+    return out.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  }
+
   function applyAi(ai) {
     state.ai = ai;
     var f = state.fields;
@@ -1311,170 +1520,24 @@
     f.size = ai.size || "";
     f.color = ai.color || "";
     f.condition = CONDITIONS.indexOf(ai.condition) >= 0 ? ai.condition : CONDITIONS[2];
-    f.body = ai.descriptionBody || "";
-    f.features = (ai.features || []).join("\n");
-    f.flaws = (ai.flaws || []).join("\n");
-    f.tags = (ai.hashtags || []).join(" ");
     if (ai.shippingId && findShipping(ai.shippingId).id === ai.shippingId) state.shippingId = ai.shippingId;
+    f.bodyText = stripFooter(bodyFromAi(ai));
     state.descTouched = false;
+    state.navIndex = 0;
     syncFieldsToDom();
     setPrice(ai.priceRecommended || ai.priceMin || 1000);
     renderAiNotes();
     renderPriceReason();
     renderShipNote();
     refreshDescription();
+    syncFieldsToDom();
   }
 
-  function syncFieldsToDom() {
-    var f = state.fields;
-    $("f_title").value = f.title;
-    $("f_category").value = f.categoryPath;
-    $("f_itemName").value = f.itemName;
-    $("f_brand").value = f.brand;
-    $("f_size").value = f.size;
-    $("f_color").value = f.color;
-    $("f_condition").value = f.condition;
-    $("f_body").value = f.body;
-    $("f_features").value = f.features;
-    $("f_flaws").value = f.flaws;
-    $("f_tags").value = f.tags;
-    $("f_shipping").value = state.shippingId;
-    $("f_shipOverride").value = state.shipOverride;
-    refreshTitleCount();
-  }
-
-  // ---- APIキー ----
-  function loadKey() {
-    try {
-      state.apiKey = localStorage.getItem(KEY_STORE) || "";
-    } catch (err) {
-      state.apiKey = "";
-    }
-  }
-
-  function storeKey(value) {
-    state.apiKey = value;
-    try {
-      if (value) localStorage.setItem(KEY_STORE, value);
-      else localStorage.removeItem(KEY_STORE);
-    } catch (err) {
-      toast("キーを保存できませんでした");
-    }
-  }
-
-  function renderKeyState() {
-    var box = $("keyState");
-    box.textContent = "";
-    var dot = document.createElement("span");
-    dot.className = "dot" + (state.apiKey ? " on" : "");
-    var text = document.createElement("span");
-    text.textContent = state.apiKey
-      ? "AIキー設定ずみ（このボタンだけで自動生成できます）"
-      : "自動生成には無料のAIキーが1回だけ必要です";
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "quiet";
-    btn.textContent = state.apiKey ? "キーを変更" : "キーを設定する";
-    btn.addEventListener("click", function () {
-      var panel = $("keyPanel");
-      panel.hidden = !panel.hidden;
-      if (!panel.hidden) $("f_key").focus();
-    });
-    box.appendChild(dot);
-    box.appendChild(text);
-    box.appendChild(btn);
-  }
-
-  // ---- 写真からの自動生成 ----
+  // ---------- 生成 ----------
   function setGenMsg(kind, heading, items) {
     var box = $("genMsg");
     box.textContent = "";
     if (kind) box.appendChild(callout(kind, heading, items));
-  }
-
-  function generate() {
-    if (state.generating) return;
-    if (!state.photos.length) {
-      setGenMsg("warn", "先に写真を追加してください", ["1番の「撮影する」または「アルバム」から、商品の写真を選びます。"]);
-      return;
-    }
-    if (!state.apiKey) {
-      $("keyPanel").hidden = false;
-      setGenMsg("info", "無料のAIキーを1回だけ設定してください", ["下の手順でキーを作って貼り付けると、次からはボタン1つで生成できます。"]);
-      $("f_key").focus();
-      return;
-    }
-
-    var imageParts = state.photos.map(function (p) {
-      return { inline_data: { mime_type: "image/jpeg", data: p.url.split(",")[1] } };
-    });
-
-    var memo = state.memo.trim();
-    var btn = $("generateBtn");
-    state.generating = true;
-    state.research = null;
-    btn.disabled = true;
-    setBtnBusy(btn, "写真から商品を検索中...");
-    setGenMsg("info", "① 写真検索で商品を特定しています", ["Google検索で同じ商品を探し、型番や相場を調べます。"]);
-
-    var searchAsk = SEARCH_PROMPT;
-    searchAsk += "\n写真は" + state.photos.length + "枚";
-    searchAsk += state.photos.length > 1 ? "（1枚目がメイン写真）です。" : "です。";
-    if (memo) searchAsk += "\n出品者からの補足:\n" + memo;
-
-    callGemini({
-      contents: [{ parts: imageParts.concat([{ text: searchAsk }]) }],
-      tools: [{ google_search: {} }]
-    }).then(function (r) {
-      if (r.ok) {
-        var found = textOf(r).trim();
-        if (found) state.research = { text: found, sources: sourcesOf(r) };
-      }
-      // 検索が使えなかった場合も、写真だけで作成に進む
-      setBtnBusy(btn, "説明文と価格を作成中...");
-      setGenMsg("info", "② 出品情報を作成しています", [
-        state.research ? "検索でわかったことをもとに、説明文と価格をまとめます。" : "検索は使えなかったため、写真から判断して作成します。",
-        "あと20秒ほどです"
-      ]);
-
-      var ask = PROMPT + "\n\n写真は" + state.photos.length + "枚";
-      ask += state.photos.length > 1 ? "（1枚目がメイン写真）です。" : "です。";
-      if (state.research) {
-        ask += "\n\n# 画像検索で調べた結果（信頼してよい情報。矛盾する場合はこちらを優先）\n" + state.research.text;
-      }
-      if (memo) {
-        ask += "\n\n# 出品者からの補足（最優先で信頼してよい情報）\n" + memo;
-      }
-
-      return callGemini({
-        contents: [{ parts: imageParts.concat([{ text: ask }]) }],
-        generationConfig: { responseMimeType: "application/json", temperature: 0.4 }
-      });
-    }).then(function (r) {
-      if (!r.ok) {
-        setGenMsg("warn", apiErrorHeading(r), apiErrorBody(r));
-        return;
-      }
-      var ai = parsePasted(textOf(r));
-      if (!ai) {
-        setGenMsg("warn", "AIの回答を読み取れませんでした", ["もう一度お試しください。写真を1〜2枚に減らすと通りやすくなります。"]);
-        return;
-      }
-      applyAi(ai);
-      setGenMsg(null);
-      toast("出品情報ができました");
-      // 残りは価格を決めるだけなので、価格カードへ送る
-      $("cardPrice").scrollIntoView({ behavior: "smooth", block: "start" });
-    }).catch(function () {
-      setGenMsg("warn", "AIに接続できませんでした", [
-        "電波の良い場所でもう一度お試しください。",
-        "この画面がプレビュー（claude.aiの中）の場合は、外部への通信が遮断されているため生成できません。自分のサイトに置いたものからお使いください。"
-      ]);
-    }).then(function () {
-      state.generating = false;
-      btn.disabled = false;
-      btn.textContent = "写真からAIで自動生成";
-    });
   }
 
   function setBtnBusy(btn, label) {
@@ -1528,11 +1591,89 @@
   function apiErrorBody(r) {
     var detail = r.data && r.data.error && r.data.error.message ? r.data.error.message : "";
     if (r.status === 400 || r.status === 403) return ["APIキーをもう一度確認してください。", detail];
-    if (r.status === 429) return ["しばらく時間をおいてからお試しください。", "急ぐ場合は下の「手持ちのAIアプリで書いてもらう」をお使いください。"];
+    if (r.status === 429) return ["しばらく時間をおいてからお試しください。", "急ぐ場合は「手持ちのAIアプリで書いてもらう」をお使いください。"];
     return [detail || "少し時間をおいてお試しください。"];
   }
 
-  // ---- メルカリに送る ----
+  function generate() {
+    if (state.generating) return;
+    if (!state.photos.length) {
+      setGenMsg("warn", "先に写真を追加してください", ["1番の「撮影する」または「アルバム」から、商品の写真を選びます。"]);
+      return;
+    }
+    if (!state.apiKey) {
+      $("keyPanel").hidden = false;
+      setGenMsg("info", "無料のAIキーを1回だけ設定してください", ["下の手順でキーを作って貼り付けると、次からはボタン1つで生成できます。"]);
+      $("f_key").focus();
+      return;
+    }
+
+    var imageParts = state.photos.map(function (p) {
+      return { inline_data: { mime_type: "image/jpeg", data: p.url.split(",")[1] } };
+    });
+
+    var memo = state.memo.trim();
+    var btn = $("generateBtn");
+    state.generating = true;
+    state.research = null;
+    btn.disabled = true;
+    setBtnBusy(btn, "写真から商品を検索中...");
+    setGenMsg("info", "① 写真検索で商品を特定しています", ["Google検索で同じ商品を探し、型番や相場を調べます。"]);
+
+    var searchAsk = SEARCH_PROMPT + "\n写真は" + state.photos.length + "枚";
+    searchAsk += state.photos.length > 1 ? "（1枚目がメイン写真）です。" : "です。";
+    if (memo) searchAsk += "\n出品者からの補足:\n" + memo;
+
+    callGemini({
+      contents: [{ parts: imageParts.concat([{ text: searchAsk }]) }],
+      tools: [{ google_search: {} }]
+    }).then(function (r) {
+      if (r.ok) {
+        var found = textOf(r).trim();
+        if (found) state.research = { text: found, sources: sourcesOf(r) };
+      }
+      setBtnBusy(btn, "説明文と価格を作成中...");
+      setGenMsg("info", "② 出品情報を作成しています", [
+        state.research ? "検索でわかったことをもとに、説明文と価格をまとめます。" : "検索は使えなかったため、写真から判断して作成します。",
+        "あと20秒ほどです"
+      ]);
+
+      var ask = PROMPT + "\n\n写真は" + state.photos.length + "枚";
+      ask += state.photos.length > 1 ? "（1枚目がメイン写真）です。" : "です。";
+      if (state.research) ask += "\n\n# 画像検索で調べた結果（信頼してよい情報。矛盾する場合はこちらを優先）\n" + state.research.text;
+      if (memo) ask += "\n\n# 出品者からの補足（最優先で信頼してよい情報）\n" + memo;
+
+      return callGemini({
+        contents: [{ parts: imageParts.concat([{ text: ask }]) }],
+        generationConfig: { responseMimeType: "application/json", temperature: 0.4 }
+      });
+    }).then(function (r) {
+      if (!r.ok) {
+        setGenMsg("warn", apiErrorHeading(r), apiErrorBody(r));
+        return;
+      }
+      var ai = parsePasted(textOf(r));
+      if (!ai) {
+        setGenMsg("warn", "AIの回答を読み取れませんでした", ["もう一度お試しください。写真を1〜2枚に減らすと通りやすくなります。"]);
+        return;
+      }
+      applyAi(ai);
+      setGenMsg(null);
+      toast("出品情報ができました");
+      $("cardPrice").scrollIntoView({ behavior: "smooth", block: "start" });
+    }).catch(function () {
+      setGenMsg("warn", "AIに接続できませんでした", [
+        "電波の良い場所でもう一度お試しください。",
+        "この画面がプレビュー（claude.aiの中）の場合は、外部への通信が遮断されているため生成できません。自分のサイトに置いたものからお使いください。"
+      ]);
+    }).then(function () {
+      state.generating = false;
+      btn.disabled = false;
+      btn.textContent = "写真からAIで自動生成";
+    });
+  }
+
+  // ---------- 出品ナビ ----------
   function dataUrlToFile(dataUrl, name) {
     var base64 = dataUrl.split(",")[1];
     var bin = atob(base64);
@@ -1541,45 +1682,241 @@
     return new File([bytes], name, { type: "image/jpeg" });
   }
 
-  function shareToMercari() {
-    var box = $("shareMsg");
-    box.textContent = "";
-    copy(state.desc);
-
+  function sharePhotos() {
     var files = [];
     try {
       files = state.photos.map(function (p, i) { return dataUrlToFile(p.url, "item-" + (i + 1) + ".jpg"); });
     } catch (err) {
       files = [];
     }
-
-    var payload = { title: state.fields.title, text: state.desc };
-    if (files.length && navigator.canShare && navigator.canShare({ files: files })) payload.files = files;
-
-    if (navigator.share) {
-      navigator.share(payload).then(function () {
-        box.appendChild(callout("info", "商品説明はコピー済みです", ["メルカリの出品画面で、各欄を長押し →「ペースト」で貼り付けてください。"]));
-      }).catch(function (err) {
+    if (files.length && navigator.canShare && navigator.canShare({ files: files }) && navigator.share) {
+      navigator.share({ files: files, title: state.fields.title }).catch(function (err) {
         if (err && err.name === "AbortError") return;
-        openSellPage(box);
+        toast("共有できませんでした。アルバムから選んでください");
       });
     } else {
-      openSellPage(box);
+      toast("この端末では共有が使えません。アルバムから選んでください");
     }
   }
 
-  function openSellPage(box) {
-    box.textContent = "";
-    box.appendChild(callout("info", "共有メニューが使えない端末です", [
-      "商品説明はコピーしました。下の「メルカリの出品画面をひらく」から貼り付けてください。",
-      "スマホのメルカリアプリなら、写真つきの共有が使えます。"
-    ]));
+  function navSteps() {
+    var ship = findShipping(state.shippingId);
+    var c = calc();
+    var steps = [];
+
+    steps.push({
+      kicker: "STEP 1",
+      title: "メルカリの出品画面をひらく",
+      hint: "メルカリアプリの「出品」→「持ち物を売る」まで進みます。ここから先は、この画面と行ったり来たりします。入力した内容は自動で保存されるので、アプリを切り替えても消えません。",
+      link: "https://jp.mercari.com/sell",
+      linkLabel: "ブラウザで出品画面をひらく"
+    });
+
+    steps.push({
+      kicker: "STEP 2",
+      title: "写真を登録する",
+      hint: state.photos.length
+        ? "メルカリ側で「アルバムから選ぶ」→ さきほどの写真を、上から順に選びます。共有で渡すこともできます。"
+        : "写真がまだありません。1番の画面で追加してください。",
+      action: state.photos.length ? { label: "写真を共有して渡す", run: sharePhotos } : null,
+      value: state.photos.length ? state.photos.length + "枚（1枚目がメイン写真）" : "",
+      valueClass: "short"
+    });
+
+    steps.push({
+      kicker: "STEP 3",
+      title: "商品名を貼り付ける",
+      hint: "メルカリの「商品名」欄を長押し →「ペースト」。コピーは済んでいます。",
+      value: state.fields.title || "（未入力）",
+      valueClass: "short",
+      copy: state.fields.title
+    });
+
+    steps.push({
+      kicker: "STEP 4",
+      title: "商品の説明を貼り付ける",
+      hint: "「商品の説明」欄を長押し →「ペースト」。ポイントもキズも、この1つに入っています。",
+      value: state.desc || "（未入力）",
+      copy: state.desc
+    });
+
+    steps.push({
+      kicker: "STEP 5",
+      title: "カテゴリを選ぶ",
+      hint: "カテゴリ検索にこの言葉を貼ると早く見つかります。近いものがなければ一番近い階層でかまいません。",
+      value: state.fields.categoryPath || "（未設定）",
+      valueClass: "short",
+      copy: state.fields.categoryPath
+    });
+
+    if (state.fields.brand) {
+      steps.push({
+        kicker: "STEP 6",
+        title: "ブランドを選ぶ",
+        hint: "ブランド欄でこの名前を検索します。候補に出てこない場合は空欄のままで大丈夫です。",
+        value: state.fields.brand,
+        valueClass: "short",
+        copy: state.fields.brand
+      });
+    }
+
+    steps.push({
+      title: "商品の状態を選ぶ",
+      hint: "同じ選択肢を選びます。迷ったら一段きびしい方を選ぶと、購入後のトラブルを避けられます。",
+      value: state.fields.condition,
+      valueClass: "short"
+    });
+
+    steps.push({
+      title: "配送方法を選ぶ",
+      hint: "配送料の負担は「" + (state.payer === "buyer" ? "着払い（購入者負担）" : "送料込み（出品者負担）") + "」、配送の方法はこれを選びます。",
+      value: ship.carrier + " / " + ship.label + "（目安 " + yen(ship.fee + ship.material) + "）",
+      valueClass: "short"
+    });
+
+    steps.push({
+      title: "販売価格を入れる",
+      hint: "手数料と送料を引くと、手元に残るのは " + yen(c.profit) + " です。",
+      value: yen(c.price),
+      valueClass: "money",
+      copy: String(c.price)
+    });
+
+    steps.push({
+      title: "出品するを押して完了",
+      hint: "内容を確認して「出品する」を押します。おつかれさまでした。売れたら、発送は選んだ方法で送ってください。",
+      done: true
+    });
+
+    // STEPの通し番号を振り直す
+    steps.forEach(function (s, i) { s.kicker = "STEP " + (i + 1); });
+    return steps;
   }
 
-  // ---- 下書き ----
+  function renderNav() {
+    var steps = navSteps();
+    if (state.navIndex >= steps.length) state.navIndex = steps.length - 1;
+    if (state.navIndex < 0) state.navIndex = 0;
+    var step = steps[state.navIndex];
+
+    $("navCount").textContent = (state.navIndex + 1) + " / " + steps.length;
+
+    var track = $("navTrack");
+    track.textContent = "";
+    steps.forEach(function (s, i) {
+      var bar = document.createElement("i");
+      if (i <= state.navIndex) bar.className = "on";
+      track.appendChild(bar);
+    });
+
+    var body = $("navBody");
+    body.textContent = "";
+
+    var kicker = document.createElement("div");
+    kicker.className = "nav-kicker";
+    kicker.textContent = step.kicker;
+    body.appendChild(kicker);
+
+    var h = document.createElement("h3");
+    h.textContent = step.title;
+    body.appendChild(h);
+
+    var hint = document.createElement("p");
+    hint.className = "nav-hint";
+    hint.textContent = step.hint;
+    body.appendChild(hint);
+
+    if (step.value) {
+      var val = document.createElement("div");
+      val.className = "nav-value" + (step.valueClass ? " " + step.valueClass : "");
+      val.textContent = step.value;
+      body.appendChild(val);
+    }
+
+    if (step.copy) {
+      var row = document.createElement("div");
+      row.className = "btn-row";
+      var cbtn = document.createElement("button");
+      cbtn.type = "button";
+      cbtn.className = "full";
+      cbtn.textContent = "もう一度コピーする";
+      cbtn.addEventListener("click", function () { copy(step.copy); });
+      row.appendChild(cbtn);
+      body.appendChild(row);
+    }
+
+    if (step.action) {
+      var arow = document.createElement("div");
+      arow.className = "btn-row";
+      var abtn = document.createElement("button");
+      abtn.type = "button";
+      abtn.className = "full";
+      abtn.textContent = step.action.label;
+      abtn.addEventListener("click", step.action.run);
+      arow.appendChild(abtn);
+      body.appendChild(arow);
+    }
+
+    if (step.link) {
+      var a = document.createElement("a");
+      a.className = "sell-link";
+      a.href = step.link;
+      a.target = "_blank";
+      a.rel = "noreferrer";
+      a.textContent = step.linkLabel || "ひらく";
+      body.appendChild(a);
+    }
+
+    $("navBack").disabled = state.navIndex === 0;
+    $("navNext").textContent = step.done ? "ナビを終える" : "貼れた・つぎへ";
+    body.scrollTop = 0;
+    autosave();
+  }
+
+  function openNav() {
+    state.navOpen = true;
+    $("navPanel").hidden = false;
+    $("dock").hidden = true;
+    document.body.style.overflow = "hidden";
+    renderNav();
+    copyForStep();
+    $("navNext").focus();
+  }
+
+  function closeNav() {
+    state.navOpen = false;
+    $("navPanel").hidden = true;
+    $("dock").hidden = false;
+    document.body.style.overflow = "";
+    autosave();
+  }
+
+  // いま開いている手順の文字を、押した勢いでコピーしておく
+  function copyForStep() {
+    var steps = navSteps();
+    var step = steps[state.navIndex];
+    if (step && step.copy) copy(step.copy, true);
+  }
+
+  function navGo(delta) {
+    var steps = navSteps();
+    var next = state.navIndex + delta;
+    if (next < 0) return;
+    if (next >= steps.length) {
+      closeNav();
+      toast("出品おつかれさまでした");
+      return;
+    }
+    state.navIndex = next;
+    renderNav();
+    var step = steps[next];
+    if (step && step.copy) copy(step.copy, true);
+  }
+
+  // ---------- 下書き ----------
   function readDrafts() {
     try {
-      var list = JSON.parse(localStorage.getItem(DRAFT_KEY) || "[]");
+      var list = JSON.parse(safeGet(DRAFT_KEY) || "[]");
       return Array.isArray(list) ? list : [];
     } catch (err) {
       return [];
@@ -1587,11 +1924,7 @@
   }
 
   function writeDrafts(list) {
-    try {
-      localStorage.setItem(DRAFT_KEY, JSON.stringify(list.slice(0, 20)));
-    } catch (err) {
-      toast("保存できませんでした（容量不足）");
-    }
+    if (!safeSet(DRAFT_KEY, JSON.stringify(list.slice(0, 20)))) toast("保存できませんでした（容量不足）");
   }
 
   function renderDrafts() {
@@ -1602,7 +1935,7 @@
     if (!list.length) {
       var p = document.createElement("p");
       p.className = "note";
-      p.textContent = "まだ保存されていません。7の「下書きに保存」で、この端末に保存できます。";
+      p.textContent = "まだ保存されていません。5番の「下書きに保存」で、この端末に保存できます。";
       box.appendChild(p);
       return;
     }
@@ -1618,7 +1951,7 @@
       var t = document.createElement("div");
       t.className = "t";
       var b = document.createElement("b");
-      b.textContent = d.fields.title || "（タイトルなし）";
+      b.textContent = (d.fields && d.fields.title) || "（タイトルなし）";
       var s = document.createElement("span");
       s.textContent = yen(d.price) + " ・ " + new Date(d.savedAt).toLocaleDateString("ja-JP");
       t.appendChild(b);
@@ -1631,18 +1964,17 @@
       open.addEventListener("click", function () {
         state.fields = d.fields;
         state.ai = d.ai || null;
+        state.research = d.research || null;
+        state.price = d.price;
         state.shippingId = d.shippingId;
         state.shipOverride = d.shipOverride || "";
         state.payer = d.payer || "seller";
         state.opts = d.opts || state.opts;
-        state.desc = d.desc;
+        state.desc = d.desc || "";
         state.descTouched = true;
-        state.photos = d.thumb ? [{ id: "t", url: d.thumb }] : [];
+        state.navIndex = 0;
+        state.photos = d.thumb ? [{ id: mkId(), url: d.thumb }] : [];
         syncFieldsToDom();
-        $("f_desc").value = state.desc;
-        $("o_instant").checked = state.opts.instant;
-        $("o_nego").checked = state.opts.nego;
-        $("o_smoke").checked = state.opts.smoke;
         setPrice(d.price);
         renderPhotos();
         renderAiNotes();
@@ -1674,12 +2006,12 @@
     if (open) renderDrafts();
   }
 
-  // ---- 起動 ----
+  // ---------- 起動 ----------
   function bindField(id, key, after) {
     $(id).addEventListener("input", function (e) {
       state.fields[key] = e.target.value;
       if (after) after();
-      refreshDescription();
+      autosave();
     });
   }
 
@@ -1702,18 +2034,56 @@
 
     bindField("f_title", "title", refreshTitleCount);
     bindField("f_category", "categoryPath");
-    bindField("f_itemName", "itemName");
     bindField("f_brand", "brand");
     bindField("f_size", "size");
     bindField("f_color", "color");
-    bindField("f_condition", "condition");
-    bindField("f_body", "body");
-    bindField("f_features", "features");
-    bindField("f_flaws", "flaws");
-    bindField("f_tags", "tags");
+
     $("f_condition").addEventListener("change", function (e) {
       state.fields.condition = e.target.value;
+      autosave();
+    });
+
+    $("f_memo").addEventListener("input", function (e) {
+      state.memo = e.target.value;
+      autosave();
+    });
+
+    $("f_desc").addEventListener("input", function (e) {
+      state.descTouched = true;
+      state.desc = e.target.value;
+      state.fields.bodyText = e.target.value;
+      var el = $("descCount");
+      el.textContent = state.desc.length + " / 1000";
+      el.className = state.desc.length > 1000 ? "over" : "";
+      autosave();
+    });
+
+    ["instant", "nego", "smoke"].forEach(function (key) {
+      var el = $("o_" + key);
+      el.addEventListener("change", function () {
+        state.opts[key] = el.checked;
+        if (state.descTouched) {
+          // 手直し済みの本文は壊さず、末尾の定型文だけ作り直す
+          state.fields.bodyText = stripFooter(state.desc);
+          state.descTouched = false;
+        }
+        refreshDescription();
+      });
+    });
+
+    $("fillTemplate").addEventListener("click", function () {
+      state.fields.bodyText = templateBody();
+      state.descTouched = false;
       refreshDescription();
+      toast("ひな形を入れました");
+    });
+
+    $("trimTitle").addEventListener("click", function () {
+      state.fields.title = trimTitle(state.fields.title);
+      $("f_title").value = state.fields.title;
+      refreshTitleCount();
+      autosave();
+      toast("40文字に収めました");
     });
 
     $("camBtn").addEventListener("click", function () { $("camInput").click(); });
@@ -1721,16 +2091,7 @@
     $("camInput").addEventListener("change", function (e) { addFiles(e.target.files); e.target.value = ""; });
     $("albumInput").addEventListener("change", function (e) { addFiles(e.target.files); e.target.value = ""; });
 
-    $("f_memo").addEventListener("input", function (e) { state.memo = e.target.value; });
-
     $("generateBtn").addEventListener("click", generate);
-
-    $("trimTitle").addEventListener("click", function () {
-      state.fields.title = trimTitle(state.fields.title);
-      $("f_title").value = state.fields.title;
-      refreshTitleCount();
-      toast("40文字に収めました");
-    });
 
     $("saveKey").addEventListener("click", function () {
       var value = $("f_key").value.trim();
@@ -1743,9 +2104,7 @@
       $("keyPanel").hidden = true;
       renderKeyState();
       if (value.indexOf("AIza") !== 0) {
-        setGenMsg("warn", "キーの形が少し違うようです", [
-          "Google AI Studio のキーは AIza で始まります。うまく生成できない場合は、キーをコピーし直してみてください。"
-        ]);
+        setGenMsg("warn", "キーの形が少し違うようです", ["Google AI Studio のキーは AIza で始まります。うまく生成できない場合は、コピーし直してみてください。"]);
       } else {
         setGenMsg(null);
       }
@@ -1757,13 +2116,6 @@
       $("f_key").value = "";
       renderKeyState();
       toast("キーを削除しました");
-    });
-
-    $("shareBtn").addEventListener("click", shareToMercari);
-    $("dockShare").addEventListener("click", shareToMercari);
-
-    $("toPost").addEventListener("click", function () {
-      $("cardPost").scrollIntoView({ behavior: "smooth", block: "start" });
     });
 
     $("copyPrompt").addEventListener("click", function () { copy(PROMPT); });
@@ -1793,6 +2145,7 @@
       $("priceRange").value = String(Math.min(Number($("priceRange").max), Math.max(300, state.price)));
       renderPriceChips();
       renderBreakdown();
+      autosave();
     });
 
     $("priceRange").addEventListener("input", function (e) { setPrice(e.target.value); });
@@ -1801,34 +2154,14 @@
       state.shippingId = e.target.value;
       renderShipNote();
       renderBreakdown();
-      refreshDescription();
+      autosave();
     });
 
     $("f_shipOverride").addEventListener("input", function (e) {
       e.target.value = e.target.value.replace(/[^0-9]/g, "");
       state.shipOverride = e.target.value;
       renderBreakdown();
-    });
-
-    ["instant", "nego", "smoke"].forEach(function (key) {
-      var el = $("o_" + key);
-      el.addEventListener("change", function () {
-        state.opts[key] = el.checked;
-        refreshDescription();
-      });
-    });
-
-    $("f_desc").addEventListener("input", function (e) {
-      state.descTouched = true;
-      state.desc = e.target.value;
-      $("descCount").textContent = state.desc.length + " / 1000";
-      $("descCount").className = state.desc.length > 1000 ? "over" : "";
-    });
-
-    $("rebuildDesc").addEventListener("click", function () {
-      state.descTouched = false;
-      refreshDescription();
-      toast("項目から作り直しました");
+      autosave();
     });
 
     Array.prototype.forEach.call(document.querySelectorAll("[data-copy]"), function (btn) {
@@ -1840,14 +2173,24 @@
       });
     });
 
+    $("startNav").addEventListener("click", function () {
+      state.navIndex = 0;
+      openNav();
+    });
+    $("dockNav").addEventListener("click", function () { openNav(); });
+    $("navClose").addEventListener("click", closeNav);
+    $("navNext").addEventListener("click", function () { navGo(1); });
+    $("navBack").addEventListener("click", function () { navGo(-1); });
+
     $("saveDraft").addEventListener("click", function () {
       var list = readDrafts();
       list.unshift({
-        id: Math.random().toString(36).slice(2, 9),
+        id: mkId(),
         savedAt: Date.now(),
         thumb: state.photos.length ? state.photos[0].url : "",
         fields: state.fields,
         ai: state.ai,
+        research: state.research,
         price: state.price,
         shippingId: state.shippingId,
         shipOverride: state.shipOverride,
@@ -1863,18 +2206,17 @@
     $("resetAll").addEventListener("click", function () {
       state.photos = [];
       state.ai = null;
+      state.research = null;
+      state.memo = "";
       state.fields = {
         title: "", categoryPath: "", itemName: "", brand: "", size: "", color: "",
-        condition: CONDITIONS[2], body: "", features: "", flaws: "", tags: ""
+        condition: CONDITIONS[2], bodyText: ""
       };
       state.shipOverride = "";
       state.payer = "seller";
       state.descTouched = false;
-      state.memo = "";
-      state.research = null;
-      $("f_memo").value = "";
-      setGenMsg(null);
-      $("shareMsg").textContent = "";
+      state.desc = "";
+      state.navIndex = 0;
       syncFieldsToDom();
       setPrice(1000);
       renderPhotos();
@@ -1883,6 +2225,7 @@
       renderPayerChips();
       renderShipNote();
       refreshDescription();
+      setGenMsg(null);
       window.scrollTo({ top: 0, behavior: "smooth" });
       toast("新しい出品をはじめます");
     });
@@ -1892,15 +2235,53 @@
 
     loadKey();
     renderKeyState();
+    restoreSession();
     syncFieldsToDom();
     renderPhotos();
     renderPriceChips();
     renderProfitChips();
     renderPayerChips();
     renderShipNote();
-    setPrice(1000);
+    renderAiNotes();
+    renderPriceReason();
+    setPrice(state.price);
     refreshDescription();
     renderDrafts();
+    if (state.navOpen) openNav();
+  }
+
+  // 定型文の行を本文から取り除く（トグルを切り替えたときの重複防止）
+  // 手直しで定型文が本文の途中に来ることがあるため、位置によらず取り除く。
+  var FOOTER_LINES = ["即購入OKです。", "お値下げのご相談もお気軽にコメントください。", "ペットは飼っておらず、喫煙者もおりません。"];
+
+  function stripFooter(text) {
+    var kept = String(text || "").split("\n").filter(function (line) {
+      return FOOTER_LINES.indexOf(line.trim()) < 0;
+    });
+    return kept.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  }
+
+  function renderKeyState() {
+    var box = $("keyState");
+    box.textContent = "";
+    var dot = document.createElement("span");
+    dot.className = "dot" + (state.apiKey ? " on" : "");
+    var text = document.createElement("span");
+    text.textContent = state.apiKey
+      ? "AIキー設定ずみ（このボタンだけで自動生成できます）"
+      : "自動生成には無料のAIキーが1回だけ必要です";
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "quiet";
+    btn.textContent = state.apiKey ? "キーを変更" : "キーを設定する";
+    btn.addEventListener("click", function () {
+      var panel = $("keyPanel");
+      panel.hidden = !panel.hidden;
+      if (!panel.hidden) $("f_key").focus();
+    });
+    box.appendChild(dot);
+    box.appendChild(text);
+    box.appendChild(btn);
   }
 
   init();
