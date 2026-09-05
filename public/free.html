@@ -1123,6 +1123,23 @@
     });
   }
 
+  // 下書き用の小さなサムネイルを作る（保存容量の節約）
+  function makeThumb(dataUrl) {
+    return new Promise(function (resolve) {
+      var img = new Image();
+      img.onload = function () {
+        var scale = Math.min(1, 240 / Math.max(img.width, img.height));
+        var canvas = document.createElement("canvas");
+        canvas.width = Math.max(1, Math.round(img.width * scale));
+        canvas.height = Math.max(1, Math.round(img.height * scale));
+        canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+        resolve(canvas.toDataURL("image/jpeg", 0.6));
+      };
+      img.onerror = function () { resolve(""); };
+      img.src = dataUrl;
+    });
+  }
+
   function renderPhotos() {
     var grid = $("photoGrid");
     grid.textContent = "";
@@ -2222,24 +2239,28 @@
     $("navBack").addEventListener("click", function () { navGo(-1); });
 
     $("saveDraft").addEventListener("click", function () {
-      var list = readDrafts();
-      list.unshift({
-        id: mkId(),
-        savedAt: Date.now(),
-        thumb: state.photos.length ? state.photos[0].url : "",
-        fields: state.fields,
-        ai: state.ai,
-        research: state.research,
-        price: state.price,
-        shippingId: state.shippingId,
-        shipOverride: state.shipOverride,
-        payer: state.payer,
-        opts: state.opts,
-        desc: state.desc
-      });
-      writeDrafts(list);
-      renderDrafts();
-      toast("下書きに保存しました");
+      function store(thumb) {
+        var list = readDrafts();
+        list.unshift({
+          id: mkId(),
+          savedAt: Date.now(),
+          thumb: thumb || "",
+          fields: state.fields,
+          ai: state.ai,
+          research: state.research,
+          price: state.price,
+          shippingId: state.shippingId,
+          shipOverride: state.shipOverride,
+          payer: state.payer,
+          opts: state.opts,
+          desc: state.desc
+        });
+        writeDrafts(list);
+        renderDrafts();
+        toast("下書きに保存しました");
+      }
+      if (state.photos.length) makeThumb(state.photos[0].url).then(store);
+      else store("");
     });
 
     $("resetAll").addEventListener("click", function () {
