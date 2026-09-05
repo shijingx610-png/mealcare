@@ -23,7 +23,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 | ページ | AIの使い方 | 費用 | 必要なもの |
 | --- | --- | --- | --- |
-| `/free.html`（**おすすめ・無料**） | 写真を選んでボタンを押すと、アプリ内で自動生成（Google AI Studio の無料枠を使用） | **0円** | 無料のAPIキー1つ（初回だけ） |
+| `/free.html`（**おすすめ・無料**） | 写真を選んでボタンを押すと、アプリ内で自動生成（Google AI Studio の無料枠を使用） | **0円** | サーバーにキーを置けば利用者は不要。置かない場合は各自の無料キー |
 | `/mercari.html` | 写真をアップロードすると Claude が自動で解析する | 1回 5〜10円程度 | Anthropic の有料APIキー |
 
 `/free.html` の流れは「写真を選ぶ → 自動生成 → 価格を決める → 出品ナビ」の4手です。
@@ -40,6 +40,40 @@ If you are developing a production application, we recommend using TypeScript wi
 キーはブラウザのlocalStorageにのみ保存され、AIへのリクエストは端末から直接送られます。
 無料枠では入力内容がモデル改善に使われる場合があるため、人物や個人情報が写った写真は避けてください。
 キーを設定しなくても、「手持ちのAIアプリで書いてもらう」（指示文をコピー→回答を貼り戻す）で同じ結果になります。
+
+### 他の人に渡して使ってもらう（推奨の設置方法）
+
+Vercel に置いて **サーバー側にAIキーを1つ持たせる**と、URLを渡された人は
+**何も設定せずに**使えます（キーの入力画面すら出ません）。
+
+1. このリポジトリを Vercel にデプロイする
+2. プロジェクト → Settings → Environment Variables に登録する
+
+| 環境変数 | 必須 | 役割 |
+| --- | --- | --- |
+| `GEMINI_API_KEY` | 必須 | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) で作る無料キー。設置した人の1つを全員で共有します |
+| `APP_PASSWORD` | 任意 | 設定すると合言葉を知っている人だけが使えます。URLが広まったときの保険 |
+| `DAILY_LIMIT` | 任意 | 1日あたりの生成回数の上限（既定 200） |
+| `PER_MINUTE_LIMIT` | 任意 | 同じ回線からの1分あたりの上限（既定 8） |
+
+3. Deployments → Redeploy
+4. `https://<あなたのURL>/free.html` を渡す
+
+渡された人の画面には「このアプリはこのまま使えます（設定は不要です）」と出て、
+写真を選んでボタンを押すだけになります。キーは端末に配られず、サーバーの中だけに
+あります。エラーが起きても、利用者にはキーの情報を見せません。
+
+**知っておいてほしいこと**
+
+- Gemini の無料枠には1分あたり・1日あたりの上限があります。同時に何人も使うと
+  「いま混み合っています」と表示されます（課金は発生しません）
+- 無料枠では入力内容がGoogleのモデル改善に使われる場合があります。人物や個人情報が
+  写った写真は避けるよう、渡す相手にも伝えてください
+- URLを知っている人は誰でも使えます。心配な場合は `APP_PASSWORD` を設定してください
+
+**サーバーを用意しない場合**も動きます。`public/free.html` を単体で配ると、
+受け取った人は「自分の無料キーを入れる」か「手持ちのAIアプリに指示文を貼る」
+のどちらかで使えます（アプリが自動で判別して案内を切り替えます）。
 
 ### 商品説明は1つにまとめています
 
@@ -155,6 +189,7 @@ npm run dev       # http://localhost:5173/mercari.html
 | `src/mercari/shipping.js` | 配送方法の送料表と手数料・手取りの計算 |
 | `api/listing.js` | Claude に写真を渡して出品情報を構造化JSONで受け取るサーバー関数 |
 | `api/image.js` | 画像URLをサーバー経由で取り込むサーバー関数（CORS回避・SSRF対策あり） |
+| `api/generate.js` | サーバー側のAIキーで出品情報を作るサーバー関数（合言葉・回数制限つき） |
 | `public/manifest.webmanifest` / `public/icon-*.png` | ホーム画面に追加したときのアイコンと表示設定 |
 | `public/free.html` | 無料版（APIキー不要・1ファイルで完結） |
 

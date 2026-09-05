@@ -584,7 +584,7 @@
 
     <section class="card">
       <div class="card-head"><span class="step">2</span><h2>AIが自動で書く</h2></div>
-      <p class="note">写真をGoogle検索にかけて商品を特定し、商品名・カテゴリ・状態・説明文・相場価格・配送方法をまとめて作ります。</p>
+      <p class="note">写真をGoogle検索にかけて商品を特定し、商品名・カテゴリ・状態・説明文・相場価格・配送方法をまとめて作ります。ボタンを押すだけです。</p>
 
       <label class="field">
         <span class="lab">分かっていること（任意・書くほど正確になります）</span>
@@ -596,6 +596,17 @@
       </div>
       <div id="genMsg"></div>
       <div id="keyState" class="keyline"></div>
+
+      <div id="passPanel" hidden>
+        <label class="field">
+          <span class="lab">合言葉</span>
+          <input type="password" id="f_pass" placeholder="配布した人から聞いた合言葉" autocomplete="off">
+        </label>
+        <div class="btn-row">
+          <button type="button" class="primary" id="savePass">保存する</button>
+        </div>
+        <p class="note">この端末にだけ保存されます。次からは入力不要です。</p>
+      </div>
 
       <div id="keyPanel" hidden>
         <label class="field">
@@ -808,6 +819,8 @@
   var DRAFT_KEY = "shuppin_drafts_v2";
   var SESSION_KEY = "shuppin_session_v1";
   var KEY_STORE = "shuppin_api_key_v1";
+  var PASS_STORE = "shuppin_password_v1";
+  var SERVER_URL = "/api/generate";
   var GEMINI_MODEL = "gemini-2.5-flash";
   var GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/" + GEMINI_MODEL + ":generateContent";
 
@@ -924,6 +937,8 @@
     photos: [],
     memo: "",
     apiKey: "",
+    password: "",
+    server: { checked: false, ready: false, needsPassword: false },
     generating: false,
     research: null,
     ai: null,
@@ -1631,6 +1646,23 @@
       setGenMsg("warn", "先に写真を追加してください", ["1番の「撮影する」または「アルバム」から、商品の写真を選びます。"]);
       return;
     }
+    var aiPhotos = state.photos.slice(0, AI_PHOTOS);
+
+    // サーバーがキーを持っている場合は、利用者の設定なしで作れる
+    if (state.server.ready) {
+      if (state.server.needsPassword && !state.password) {
+        $("passPanel").hidden = false;
+        setGenMsg("info", "合言葉を入れてください", ["このアプリを配布した人から聞いた合言葉を、下の欄に入れて保存します。"]);
+        $("f_pass").focus();
+        return;
+      }
+      state.generating = true;
+      $("generateBtn").disabled = true;
+      state.research = null;
+      generateOnServer(aiPhotos);
+      return;
+    }
+
     if (!state.apiKey) {
       $("keyPanel").hidden = false;
       setGenMsg("info", "無料のAIキーを1回だけ設定してください", ["下の手順でキーを作って貼り付けると、次からはボタン1つで生成できます。"]);
@@ -1638,7 +1670,6 @@
       return;
     }
 
-    var aiPhotos = state.photos.slice(0, AI_PHOTOS);
     var imageParts = aiPhotos.map(function (p) {
       return { inline_data: { mime_type: "image/jpeg", data: p.url.split(",")[1] } };
     });
@@ -2167,6 +2198,22 @@
       toast("キーを保存しました");
     });
 
+    $("savePass").addEventListener("click", function () {
+      var value = $("f_pass").value.trim();
+      state.password = value;
+      try {
+        if (value) localStorage.setItem(PASS_STORE, value);
+        else localStorage.removeItem(PASS_STORE);
+      } catch (err) {
+        console.warn("[pass] save failed", err.message);
+      }
+      $("f_pass").value = "";
+      $("passPanel").hidden = true;
+      renderKeyState();
+      setGenMsg(null);
+      toast("合言葉を保存しました");
+    });
+
     $("clearKey").addEventListener("click", function () {
       storeKey("");
       $("f_key").value = "";
@@ -2294,7 +2341,9 @@
     $("closeDrafts").addEventListener("click", function () { showDrafts(false); });
 
     loadKey();
+    state.password = safeGet(PASS_STORE) || "";
     renderKeyState();
+    probeServer();
     restoreSession();
     syncFieldsToDom();
     renderPhotos();
@@ -2324,6 +2373,37 @@
   function renderKeyState() {
     var box = $("keyState");
     box.textContent = "";
+
+    // サーバーにキーが用意されている場合、利用者は何も設定しなくてよい
+    if (state.server.ready) {
+      $("keyPanel").hidden = true;
+      var okDot = document.createElement("span");
+      okDot.className = "dot on";
+      var okText = document.createElement("span");
+      okText.textContent = state.server.needsPassword && !state.password
+        ? "このアプリは合言葉を入れると使えます"
+        : "このアプリはこのまま使えます（設定は不要です）";
+      box.appendChild(okDot);
+      box.appendChild(okText);
+      if (state.server.needsPassword) {
+        var passBtn = document.createElement("button");
+        passBtn.type = "button";
+        passBtn.className = "quiet";
+        passBtn.textContent = state.password ? "合言葉を変える" : "合言葉を入れる";
+        passBtn.addEventListener("click", function () {
+          var panel = $("passPanel");
+          panel.hidden = !panel.hidden;
+          if (!panel.hidden) $("f_pass").focus();
+        });
+        box.appendChild(passBtn);
+      }
+      $("manualBox").hidden = true;
+      return;
+    }
+
+    $("manualBox").hidden = false;
+    $("passPanel").hidden = true;
+
     var dot = document.createElement("span");
     dot.className = "dot" + (state.apiKey ? " on" : "");
     var text = document.createElement("span");
@@ -2342,6 +2422,76 @@
     box.appendChild(dot);
     box.appendChild(text);
     box.appendChild(btn);
+  }
+
+  // このアプリが置かれているサーバーが、AIキーを持っているかを確かめる
+  function probeServer() {
+    return fetch(SERVER_URL, { method: "GET" }).then(function (res) {
+      if (!res.ok) return null;
+      return res.json();
+    }).then(function (info) {
+      state.server.checked = true;
+      state.server.ready = !!(info && info.ready);
+      state.server.needsPassword = !!(info && info.needsPassword);
+      renderKeyState();
+    }).catch(function () {
+      state.server.checked = true;
+      state.server.ready = false;
+      renderKeyState();
+    });
+  }
+
+  // サーバー経由で作る（利用者はキーを持たない）
+  function generateOnServer(aiPhotos) {
+    var btn = $("generateBtn");
+    setBtnBusy(btn, "写真から作成中...");
+    setGenMsg("info", "AIが写真を見ています", ["商品の特定 → 相場の確認 → 説明文の作成", "30秒ほどかかります"]);
+
+    return fetch(SERVER_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        images: aiPhotos.map(function (p) { return { base64: p.url.split(",")[1] }; }),
+        memo: state.memo.trim(),
+        password: state.password
+      })
+    }).then(function (res) {
+      return res.json().then(function (data) { return { ok: res.ok, status: res.status, data: data }; });
+    }).then(function (r) {
+      if (!r.ok) {
+        if (r.status === 401) {
+          state.server.needsPassword = true;
+          $("passPanel").hidden = false;
+          renderKeyState();
+          setGenMsg("warn", "合言葉が必要です", [r.data.error || "配布した人に確認してください。"]);
+          return;
+        }
+        if (r.status === 501) {
+          // サーバーにキーがなかった場合は、各自のキーを使う方式に戻す
+          state.server.ready = false;
+          renderKeyState();
+          setGenMsg("info", "このサーバーにはAIキーがありません", ["各自のキーを設定するか、手持ちのAIアプリをお使いください。"]);
+          return;
+        }
+        setGenMsg("warn", "生成できませんでした", [r.data.error || "少し待ってからお試しください。"], r.status !== 401);
+        return;
+      }
+      if (!r.data.listing) {
+        setGenMsg("warn", "AIの回答を読み取れませんでした", ["写真を1〜2枚に減らすと通りやすくなります。"], true);
+        return;
+      }
+      state.research = r.data.research || null;
+      applyAi(r.data.listing);
+      setGenMsg(null);
+      toast("出品情報ができました");
+      $("cardPrice").scrollIntoView({ behavior: "smooth", block: "start" });
+    }).catch(function () {
+      setGenMsg("warn", "AIに接続できませんでした", ["電波の良い場所でもう一度お試しください。"], true);
+    }).then(function () {
+      state.generating = false;
+      btn.disabled = false;
+      btn.textContent = "写真からAIで自動生成";
+    });
   }
 
   init();
