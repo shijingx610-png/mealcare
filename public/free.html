@@ -663,14 +663,14 @@
       </div>
 
       <label class="field">
-        <span class="lab">商品の説明（この1つにすべて入っています）</span>
+        <span class="lab">商品の説明（テンプレートの型・この1つにすべて入っています）</span>
         <textarea id="f_desc" rows="14" placeholder="AIが作った説明がここに入ります。手直しもできます。"></textarea>
       </label>
-      <div class="counter"><span>ポイントもキズもこの中にまとめています</span><span id="descCount">0 / 1000</span></div>
+      <div class="counter"><span>サイズの実寸は測って入れてください</span><span id="descCount">0 / 1000</span></div>
       <div class="checks">
-        <label><input type="checkbox" id="o_instant" checked>即購入OK</label>
-        <label><input type="checkbox" id="o_nego" checked>値下げ交渉可</label>
-        <label><input type="checkbox" id="o_smoke" checked>ペット・喫煙なし</label>
+        <label><input type="checkbox" id="o_instant" checked>【コメントなし即購入OK!】</label>
+        <label><input type="checkbox" id="o_anon" checked>【匿名配送✨】</label>
+        <label><input type="checkbox" id="o_notes" checked>末尾の注意書き</label>
       </div>
       <div class="btn-row">
         <button type="button" class="quiet" id="fillTemplate">ひな形を入れる</button>
@@ -850,19 +850,41 @@
     "5. 価格は日本のメルカリの実際の売れ筋相場を基準に。販売手数料10%と送料が引かれること、値下げ交渉の余地200〜500円を織り込む。最低300円。",
     "6. 出品が禁止・制限されている可能性がある物ならpolicyWarningに理由を書く。問題なければ空文字。",
     "",
-    "# descriptionの書き方（最重要）",
-    "そのままメルカリの「商品の説明」に貼れる完成した本文を1つにまとめて書く。次の順で、この形を守る。",
-    "・冒頭に1行のあいさつ",
-    "・【ブランド】【商品名】【サイズ】【カラー】【状態】（分かる項目だけ）",
-    "・■商品説明 … 敬体で2〜4文",
-    "・■おすすめポイント … ・で始まる箇条書き2〜4行",
-    "・■キズ・汚れ … 写真から見える傷・汚れ・毛玉・日焼け・スレを・で始まる箇条書きで正直に。見当たらない場合もその旨を書く",
-    "・■発送について … 梱包と発送までの日数",
-    "・末尾に検索用のハッシュタグを3〜6個（#で始め、スペース区切りで1行）",
-    "誇大表現や、写真から確認できないこと（購入時期・正規品保証など）は書かない。",
-    "「即購入OK」「値下げ交渉可」「ペット・喫煙なし」の3行はアプリ側で付けるので書かない。",
-    "全体で900文字以内。",
+    "# descriptionの書き方（最重要・この型を必ず守る）",
+    "そのままメルカリの「商品の説明」に貼れる本文を1つにまとめて書く。",
+    "見出しは【商品】【状態】【カラー】【サイズ】【素材】【発送について】の6つ。この順番と表記を必ず守る。",
     "",
+    "【商品】",
+    "1行目にブランド名（不明ならカタカナや型番などの呼び名）。",
+    "2行目以降に特徴を1行ずつ3〜8行。丈・シルエット・機能・素材の見どころ・付属品・金具の色など、写真と検索結果から言えることを並べる。文章にせず短い語で改行する。",
+    "",
+    "【状態】",
+    "写真から見える傷・汚れ・毛玉・スレ・日焼け・使用感を具体的に書く。場所と程度を書き、隠さない。",
+    "良い点も1〜2文添える。見当たらない場合も、中古品である旨は必ず書く。",
+    "",
+    "【カラー】",
+    "英語と日本語の両方を書く（例: ブラック 黒）。",
+    "",
+    "【サイズ】",
+    "1行目に「表記」＋タグ等で確認できたサイズ。読み取れない場合は「表記」とだけ書く。",
+    "2行目以降は採寸の項目名だけを並べ、数値は書かない（出品者が実測して記入するため）。",
+    "項目は商品の種類に合わせる。衣類なら 肩幅 / 身幅 / 着丈 / 袖丈、パンツなら ウエスト / 股上 / 股下 / わたり、",
+    "靴なら 表記サイズ / 全長 / ソール幅、バッグなら 縦 / 横 / マチ / 持ち手、家電や雑貨なら 本体サイズ / 重さ。",
+    "最後の行に「※多少の誤差ご容赦ください。」を入れる。",
+    "",
+    "【素材】",
+    "洗濯表示や品質表示が読み取れる場合はその内容（表地/裏地/中綿/毛皮 など）。",
+    "読み取れない場合は項目名だけを残す（例: 表地： 裏地：）。推測で素材名を断定しない。",
+    "",
+    "【発送について】",
+    "梱包方法と注意を2〜4行。衣類なら「コンパクトに折り畳み圧縮する場合があります。畳じわご了承ください。」のように書く。",
+    "",
+    "その他のルール:",
+    "・冒頭の【コメントなし即購入OK!】【匿名配送】と、末尾の※注意書きはアプリ側が付けるので絶対に書かない。",
+    "・絵文字は✨や♪を各見出しに1つまで。多用しない。",
+    "・誇大表現、写真から確認できないこと（購入時期・正規品保証・未使用など）は書かない。",
+    "・数値を推測で埋めない。分からない箇所は項目名だけを残し、questionsに確認事項として入れる。",
+    "・全体で900文字以内。",
     "# 返すJSONの形",
     "{",
     '  "itemName": "商品の正式名称",',
@@ -894,32 +916,36 @@
     condition: "やや傷や汚れあり",
     conditionReason: "ソール側面に黄ばみ、つま先に薄い汚れが見えるため",
     description: [
-      "ご覧いただきありがとうございます。",
+      "【商品】",
+      "NIKE ナイキ",
+      "エアフォース1 07 ローカット",
+      "オールホワイト 定番モデル",
+      "厚みのあるソール",
+      "純正の箱付き",
       "",
-      "【ブランド】NIKE",
-      "【商品名】エアフォース1 07 ロー",
-      "【サイズ】27cm",
-      "【カラー】ホワイト",
-      "【状態】やや傷や汚れあり",
+      "【状態】",
+      "ソール側面に経年による薄い黄ばみがあります。",
+      "右足つま先に小さな擦れがあります。",
+      "アッパーの型崩れはなく、ソールの摩耗も少ないため、",
+      "まだまだ履いていただけます♪",
       "",
-      "■商品説明",
-      "ナイキ エアフォース1 07 ローカットの27cmです。数回着用しましたが、目立った型崩れはありません。自宅保管品のため、細かな使用感はご了承ください。",
+      "【カラー】",
+      "ホワイト 白",
       "",
-      "■おすすめポイント",
-      "・合わせやすい定番のオールホワイトです",
-      "・純正の箱が付属します",
-      "・ソールの摩耗は少なく、まだまだ履いていただけます",
+      "【サイズ】",
+      "表記27cm",
+      "全長\u3000",
+      "ソール幅\u3000",
+      "履き口内寸\u3000",
+      "※多少の誤差ご容赦ください。",
       "",
-      "■キズ・汚れ",
-      "・ソール側面に経年による薄い黄ばみがあります",
-      "・右足つま先に小さな擦れがあります",
-      "・中古品のため、神経質な方はご購入をお控えください",
+      "【素材】",
+      "アッパー：",
+      "ソール：",
       "",
-      "■発送について",
-      "・箱に入れ、宅急便で発送予定です",
-      "・ご購入後、1〜2日以内に発送いたします（土日祝を除く）",
-      "",
-      "#ナイキ #エアフォース1 #スニーカー #27cm"
+      "【発送について】",
+      "純正の箱に入れて発送いたします。",
+      "箱に配送ラベルを直接貼る場合があります。"
     ].join("\n"),
     priceMin: 5500,
     priceMax: 9000,
@@ -950,7 +976,7 @@
     shippingId: "nekopos",
     shipOverride: "",
     payer: "seller",
-    opts: { instant: true, nego: true, smoke: true },
+    opts: { instant: true, anon: true, notes: true },
     desc: "",
     descTouched: false,
     navIndex: 0,
@@ -1084,6 +1110,15 @@
     }, 400);
   }
 
+  function normalizeOpts(opts) {
+    var o = opts || {};
+    return {
+      instant: o.instant !== false,
+      anon: o.anon !== undefined ? !!o.anon : true,
+      notes: o.notes !== undefined ? !!o.notes : true
+    };
+  }
+
   function restoreSession() {
     var raw = safeGet(SESSION_KEY);
     if (!raw) return false;
@@ -1096,7 +1131,7 @@
       state.shippingId = d.shippingId || "nekopos";
       state.shipOverride = d.shipOverride || "";
       state.payer = d.payer || "seller";
-      state.opts = d.opts || state.opts;
+      state.opts = normalizeOpts(d.opts);
       state.desc = d.desc || "";
       state.descTouched = !!d.descTouched;
       state.ai = d.ai || null;
@@ -1208,36 +1243,51 @@
   }
 
   // ---------- 説明文 ----------
-  function footerLines() {
-    var out = [];
-    if (state.opts.instant) out.push(FOOTER_LINES[0]);
-    if (state.opts.nego) out.push(FOOTER_LINES[1]);
-    if (state.opts.smoke) out.push(FOOTER_LINES[2]);
-    return out;
-  }
-
   function buildDescription() {
-    var body = String(state.fields.bodyText || "").trim();
+    var body = stripFixed(state.fields.bodyText);
     if (!body) return "";
-    var foot = footerLines();
-    return (body + (foot.length ? "\n\n" + foot.join("\n") : "")).trim();
+    var out = [];
+    if (state.opts.instant) out.push(HEADER_LINES[0]);
+    if (state.opts.anon) out.push(HEADER_LINES[1]);
+    if (out.length) out.push("");
+    out.push(body);
+    if (state.opts.notes) {
+      out.push("");
+      out.push("");
+      out.push(NOTES_BLOCK);
+    }
+    return out.join("\n").replace(/\n{4,}/g, "\n\n\n").trim();
   }
 
   function templateBody() {
     var f = state.fields;
-    var ship = findShipping(state.shippingId);
-    var out = ["ご覧いただきありがとうございます。", ""];
-    if (f.brand) out.push("【ブランド】" + f.brand);
-    if (f.itemName) out.push("【商品名】" + f.itemName);
-    if (f.size) out.push("【サイズ】" + f.size);
-    if (f.color) out.push("【カラー】" + f.color);
-    out.push("【状態】" + f.condition, "");
-    out.push("■商品説明", "（どんな商品か、どのくらい使ったかを2〜4文で）", "");
-    out.push("■おすすめポイント", "・", "・", "");
-    out.push("■キズ・汚れ", "・目立ったキズや汚れは見当たりません", "・中古品のため、細かな使用感はご了承ください", "");
-    out.push("■発送について", "・" + ship.label + "で発送予定です", "・ご購入後、1〜2日以内に発送いたします（土日祝を除く）", "");
-    out.push("#");
-    return out.join("\n");
+    return [
+      "【商品】",
+      f.brand || "ブランド名",
+      f.itemName || "商品名・特徴",
+      "",
+      "【状態】",
+      "",
+      "【カラー】",
+      f.color || "",
+      "",
+      "【サイズ】",
+      "表記" + (f.size || ""),
+      "肩幅\u3000",
+      "身幅\u3000",
+      "着丈\u3000",
+      "袖丈\u3000",
+      "※多少の誤差ご容赦ください。",
+      "",
+      "【素材】",
+      "表地：",
+      "裏地：",
+      "",
+      "【発送について】",
+      "コンパクトに折り畳み",
+      "圧縮する場合があります。",
+      "畳じわご了承ください。"
+    ].join("\n");
   }
 
   function refreshDescription() {
@@ -1489,8 +1539,8 @@
     $("f_shipOverride").value = state.shipOverride;
     $("f_desc").value = state.desc;
     $("o_instant").checked = state.opts.instant;
-    $("o_nego").checked = state.opts.nego;
-    $("o_smoke").checked = state.opts.smoke;
+    $("o_anon").checked = state.opts.anon;
+    $("o_notes").checked = state.opts.notes;
     refreshTitleCount();
   }
 
@@ -1511,31 +1561,24 @@
   // 説明を1つにまとめる。古い形（本文・ポイント・キズが別）で来ても組み立てる。
   function bodyFromAi(ai) {
     if (ai.description && String(ai.description).trim()) return String(ai.description).trim();
-    var out = ["ご覧いただきありがとうございます。", ""];
-    if (ai.brand) out.push("【ブランド】" + ai.brand);
-    if (ai.itemName) out.push("【商品名】" + ai.itemName);
-    if (ai.size) out.push("【サイズ】" + ai.size);
-    if (ai.color) out.push("【カラー】" + ai.color);
-    if (ai.condition) out.push("【状態】" + ai.condition);
-    out.push("");
-    if (ai.descriptionBody) out.push("■商品説明", ai.descriptionBody, "");
-    if (ai.features && ai.features.length) {
-      out.push("■おすすめポイント");
-      ai.features.forEach(function (x) { out.push("・" + x); });
-      out.push("");
-    }
-    out.push("■キズ・汚れ");
+
+    // 古い形（本文・ポイント・キズが別）で返ってきた場合も、テンプレートの型に流し込む
+    var out = ["【商品】"];
+    if (ai.brand) out.push(ai.brand);
+    if (ai.itemName) out.push(ai.itemName);
+    (ai.features || []).forEach(function (x) { out.push(x); });
+    out.push("", "【状態】");
+    if (ai.descriptionBody) out.push(ai.descriptionBody);
     if (ai.flaws && ai.flaws.length) {
-      ai.flaws.forEach(function (x) { out.push("・" + x); });
-      out.push("・中古品のため、神経質な方はご購入をお控えください");
+      ai.flaws.forEach(function (x) { out.push(x); });
     } else {
-      out.push("・目立ったキズや汚れは見当たりません");
-      out.push("・中古品のため、細かな使用感はご了承ください");
+      out.push("目立ったキズや汚れは見当たりません。");
     }
-    out.push("");
-    out.push("■発送について");
-    out.push("・" + findShipping(ai.shippingId || state.shippingId).label + "で発送予定です");
-    out.push("・ご購入後、1〜2日以内に発送いたします（土日祝を除く）");
+    out.push("中古品、自宅保管品です。");
+    out.push("", "【カラー】", ai.color || "");
+    out.push("", "【サイズ】", "表記" + (ai.size || ""), "\u3000", "※多少の誤差ご容赦ください。");
+    out.push("", "【素材】", "表地：", "裏地：");
+    out.push("", "【発送について】", "コンパクトに梱包して発送いたします。");
     if (ai.hashtags && ai.hashtags.length) {
       out.push("");
       out.push(ai.hashtags.map(function (t) { return t.charAt(0) === "#" ? t : "#" + t; }).join(" "));
@@ -1554,7 +1597,7 @@
     f.color = ai.color || "";
     f.condition = CONDITIONS.indexOf(ai.condition) >= 0 ? ai.condition : CONDITIONS[2];
     if (ai.shippingId && findShipping(ai.shippingId).id === ai.shippingId) state.shippingId = ai.shippingId;
-    f.bodyText = stripFooter(bodyFromAi(ai));
+    f.bodyText = stripFixed(bodyFromAi(ai));
     state.descTouched = false;
     state.navIndex = 0;
     syncFieldsToDom();
@@ -2056,7 +2099,7 @@
         state.shippingId = d.shippingId;
         state.shipOverride = d.shipOverride || "";
         state.payer = d.payer || "seller";
-        state.opts = d.opts || state.opts;
+        state.opts = normalizeOpts(d.opts);
         state.desc = d.desc || "";
         state.descTouched = true;
         state.navIndex = 0;
@@ -2145,13 +2188,13 @@
       autosave();
     });
 
-    ["instant", "nego", "smoke"].forEach(function (key) {
+    ["instant", "anon", "notes"].forEach(function (key) {
       var el = $("o_" + key);
       el.addEventListener("change", function () {
         state.opts[key] = el.checked;
         if (state.descTouched) {
-          // 手直し済みの本文は壊さず、末尾の定型文だけ作り直す
-          state.fields.bodyText = stripFooter(state.desc);
+          // 手直し済みの本文は壊さず、前後の固定パーツだけ作り直す
+          state.fields.bodyText = stripFixed(state.desc);
           state.descTouched = false;
         }
         refreshDescription();
@@ -2359,13 +2402,30 @@
     if (state.navOpen) openNav();
   }
 
-  // 定型文の行を本文から取り除く（トグルを切り替えたときの重複防止）
-  // 手直しで定型文が本文の途中に来ることがあるため、位置によらず取り除く。
-  var FOOTER_LINES = ["即購入OKです。", "お値下げのご相談もお気軽にコメントください。", "ペットは飼っておらず、喫煙者もおりません。"];
+  // 本文の前後に付く固定パーツ（テンプレートに合わせたもの）
+  var HEADER_LINES = ["【コメントなし即購入OK!】", "【匿名配送\u2728】"];
 
-  function stripFooter(text) {
+  var NOTES_BLOCK = [
+    "※素人検品になりますので",
+    "見落しを含め、",
+    "中古品、自宅保管にご理解頂ける方のみご検討をお願いします。",
+    "",
+    "※完璧をお求めの方はご購入をお控えください。",
+    "",
+    "※何かありましたらご購入前にご質問ください☺︎",
+    "",
+    "※プロフィールを読んだ上で",
+    "ご検討ください。"
+  ].join("\n");
+
+  // 手直しで固定パーツが本文に紛れ込んでも、二重にならないよう取り除く。
+  // 固定パーツの行だけを消すので、利用者が書き足した文は残る。
+  var NOTES_LINES = NOTES_BLOCK.split("\n").filter(function (line) { return line.trim() !== ""; });
+
+  function stripFixed(text) {
     var kept = String(text || "").split("\n").filter(function (line) {
-      return FOOTER_LINES.indexOf(line.trim()) < 0;
+      var t = line.trim();
+      return HEADER_LINES.indexOf(t) < 0 && NOTES_LINES.indexOf(t) < 0;
     });
     return kept.join("\n").replace(/\n{3,}/g, "\n\n").trim();
   }
@@ -2497,6 +2557,7 @@
   init();
 })();
 </script>
+
 
 </body>
 </html>
