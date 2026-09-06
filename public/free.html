@@ -1,0 +1,2563 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f2f1f4">
+<meta name="description" content="商品の写真から、メルカリの商品名・説明文・価格・送料と手取りを自動で作る出品支援ツール。無料のAIキー1つで動きます。">
+<link rel="icon" type="image/svg+xml" href="/mercari-icon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="出品ヘルパー">
+<title>メルカリ出品ヘルパー</title>
+<style>
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&family=Roboto+Mono:wght@500;700&display=swap">
+<style>
+  :root {
+    --bg: #f2f1f4;
+    --surface: #ffffff;
+    --surface-2: #f7f6f8;
+    --line: #dedce3;
+    --line-strong: #c6c3cf;
+    --ink: #1b1a20;
+    --ink-2: #4a4854;
+    --muted: #74717f;
+    --accent: #d2382a;
+    --accent-ink: #ffffff;
+    --accent-soft: #fbeceb;
+    --good: #10714a;
+    --good-soft: #e6f2ec;
+    --warn: #8a5a00;
+    --warn-soft: #fbf1dc;
+    --shadow: 0 1px 2px rgba(24, 20, 30, .06), 0 8px 20px -12px rgba(24, 20, 30, .25);
+    --radius: 14px;
+    --display: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", system-ui, sans-serif;
+    --body: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif;
+    --num: "Roboto Mono", ui-monospace, monospace;
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #131217;
+      --surface: #1d1c23;
+      --surface-2: #26242d;
+      --line: #322f3b;
+      --line-strong: #46424f;
+      --ink: #f3f1f6;
+      --ink-2: #cfccd6;
+      --muted: #9a97a5;
+      --accent: #ff6d5a;
+      --accent-ink: #2a0c07;
+      --accent-soft: #3a1c18;
+      --good: #5cd39c;
+      --good-soft: #16332a;
+      --warn: #e0ad55;
+      --warn-soft: #33280f;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 24px -14px rgba(0, 0, 0, .8);
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #131217;
+    --surface: #1d1c23;
+    --surface-2: #26242d;
+    --line: #322f3b;
+    --line-strong: #46424f;
+    --ink: #f3f1f6;
+    --ink-2: #cfccd6;
+    --muted: #9a97a5;
+    --accent: #ff6d5a;
+    --accent-ink: #2a0c07;
+    --accent-soft: #3a1c18;
+    --good: #5cd39c;
+    --good-soft: #16332a;
+    --warn: #e0ad55;
+    --warn-soft: #33280f;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 24px -14px rgba(0, 0, 0, .8);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .wrap { max-width: 540px; margin: 0 auto; padding: 0 14px 132px; }
+
+  header.bar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 14px;
+    padding-top: calc(12px + env(safe-area-inset-top));
+    margin: 0 -14px 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: .2px;
+  }
+
+  .brand .mark {
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0;
+    letter-spacing: .2px;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+    margin-bottom: 14px;
+  }
+
+  .card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+
+  .step {
+    flex: 0 0 auto;
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: var(--surface-2);
+    border: 1px solid var(--line-strong);
+    color: var(--ink-2);
+    font-family: var(--num);
+    font-size: 11px;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+  }
+
+  .note { color: var(--muted); font-size: 12.5px; line-height: 1.75; margin: 6px 0 0; }
+
+  .divider { height: 1px; background: var(--line); margin: 18px -16px; }
+
+  label.field { display: block; margin-top: 14px; }
+
+  .lab {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    color: var(--muted);
+    margin-bottom: 5px;
+  }
+
+  input[type="text"], input[type="password"], textarea, select {
+    width: 100%;
+    font-family: var(--body);
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 10px 12px;
+    outline: none;
+  }
+
+  textarea { resize: vertical; line-height: 1.8; }
+
+  input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .row { display: flex; gap: 10px; }
+  .row > * { flex: 1; min-width: 0; }
+
+  button {
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 1px solid var(--line-strong);
+    padding: 11px 14px;
+    cursor: pointer;
+    background: var(--surface-2);
+    color: var(--ink);
+  }
+
+  button.primary { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
+  button.quiet { background: transparent; border-color: var(--line); color: var(--ink-2); }
+  button:disabled { opacity: .45; cursor: not-allowed; }
+  button.full { width: 100%; }
+
+  .btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  .btn-row > button { flex: 1 1 44%; }
+  .btn-row.stack > button { flex: 1 1 100%; }
+
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 12px; }
+
+  .thumb {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+  }
+
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .thumb .tag {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 6px;
+  }
+
+  .thumb .del {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-radius: 999px;
+    background: rgba(20, 16, 24, .62);
+    color: #fff;
+    border: none;
+    font-size: 13px;
+    line-height: 1;
+  }
+
+  .thumb .makemain {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 3px 0;
+    border: none;
+    border-radius: 0;
+    background: rgba(20, 16, 24, .62);
+    color: #fff;
+    font-size: 9.5px;
+    font-weight: 700;
+  }
+
+  .empty {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    border: 1.5px dashed var(--line-strong);
+    border-radius: 10px;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+    padding: 4px;
+  }
+
+  .breakdown { margin-top: 14px; background: var(--surface-2); border-radius: 12px; padding: 12px 14px; }
+
+  .brow {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--ink-2);
+    padding: 3px 0;
+  }
+
+  .brow b { font-family: var(--num); font-weight: 500; font-variant-numeric: tabular-nums; }
+
+  .brow.total {
+    border-top: 1px solid var(--line-strong);
+    margin-top: 8px;
+    padding-top: 10px;
+    color: var(--ink);
+    align-items: baseline;
+  }
+
+  .brow.total span:first-child { font-weight: 700; font-size: 14px; }
+  .brow.total b { font-family: var(--num); font-size: 21px; font-weight: 700; color: var(--good); }
+  .brow.total.negative b { color: var(--accent); }
+
+  .price-input { display: flex; align-items: center; gap: 8px; }
+  .price-input input { font-family: var(--num); font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .price-input span { font-size: 15px; color: var(--muted); font-weight: 700; }
+
+  input[type="range"] { width: 100%; accent-color: var(--accent); margin: 12px 0 4px; }
+
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+
+  .chip {
+    flex: 1 1 auto;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 6px;
+    border-radius: 9px;
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    color: var(--ink-2);
+    white-space: nowrap;
+  }
+
+  .chip.on { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
+  .chip .n { display: block; font-family: var(--num); font-size: 12px; font-variant-numeric: tabular-nums; }
+
+  .callout { border-radius: 12px; padding: 12px 14px; font-size: 13px; line-height: 1.75; margin-top: 12px; }
+  .callout.warn { background: var(--warn-soft); color: var(--warn); }
+  .callout.info { background: var(--accent-soft); color: var(--accent); }
+  .callout ul { margin: 6px 0 0; padding-left: 1.1em; }
+  .callout li { margin: 2px 0; }
+
+  .counter { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--muted); margin-top: 5px; }
+  .counter .over { color: var(--accent); font-weight: 700; }
+
+  .checks { display: flex; flex-wrap: wrap; gap: 10px 16px; margin-top: 12px; }
+  .checks label { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ink-2); cursor: pointer; }
+  .checks input { accent-color: var(--accent); width: 17px; height: 17px; }
+
+  ol.howto { margin: 10px 0 0; padding-left: 1.25em; font-size: 13px; color: var(--ink-2); }
+  ol.howto li { margin: 4px 0; }
+
+  .sell-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: var(--surface-2);
+    color: var(--ink);
+    border: 1px solid var(--line-strong);
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 11px;
+    margin-top: 8px;
+  }
+
+  a { color: var(--accent); }
+
+  .keyline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .keyline .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--line-strong); flex: 0 0 auto; }
+  .keyline .dot.on { background: var(--good); }
+  .keyline button { padding: 5px 10px; font-size: 12px; }
+
+  details.fold { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 12px; }
+  details.fold summary { font-size: 12.5px; color: var(--muted); cursor: pointer; font-weight: 700; }
+
+  details.research { margin-top: 12px; background: var(--surface-2); border-radius: 12px; padding: 10px 14px; }
+  details.research summary { font-size: 12.5px; font-weight: 700; color: var(--ink-2); cursor: pointer; }
+  .research-body { font-size: 12.5px; color: var(--ink-2); white-space: pre-wrap; margin-top: 8px; line-height: 1.8; }
+  .research-src { font-size: 11px; color: var(--muted); margin-top: 8px; word-break: break-word; }
+
+  .spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 999px;
+    margin-right: 8px;
+    vertical-align: -2px;
+    animation: spin .7s linear infinite;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .dock {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+  }
+
+  .dock-inner { max-width: 540px; margin: 0 auto; display: flex; align-items: center; gap: 14px; }
+  .dock .cell { flex: 1; }
+  .dock .k { font-size: 10.5px; letter-spacing: .08em; color: var(--muted); font-weight: 700; }
+  .dock .v { font-family: var(--num); font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .dock .v.profit { color: var(--good); }
+  .dock .v.profit.negative { color: var(--accent); }
+  .dock button { flex: 0 0 auto; }
+
+  /* 出品ナビ */
+  .nav {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 16px;
+    padding-top: calc(14px + env(safe-area-inset-top));
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-head .who { font-family: var(--display); font-weight: 700; font-size: 15px; }
+  .nav-head .count { font-family: var(--num); font-size: 12px; color: var(--muted); }
+  .nav-head button { padding: 6px 12px; font-size: 12px; }
+
+  .nav-track { display: flex; gap: 4px; padding: 10px 16px 0; }
+
+  .nav-track i {
+    flex: 1;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--line);
+  }
+
+  .nav-track i.on { background: var(--accent); }
+
+  .nav-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 18px 16px 20px;
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-kicker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .nav-body h3 { font-size: 21px; line-height: 1.5; }
+  .nav-hint { color: var(--muted); font-size: 13px; line-height: 1.8; margin-top: 8px; }
+
+  .nav-value {
+    margin-top: 14px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 15px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 44vh;
+    overflow-y: auto;
+  }
+
+  .nav-value.short { font-family: var(--display); font-size: 18px; font-weight: 700; }
+  .nav-value.money { font-family: var(--num); font-size: 26px; font-weight: 700; }
+
+  .nav-foot {
+    border-top: 1px solid var(--line);
+    background: var(--surface);
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  }
+
+  .nav-foot-inner { max-width: 540px; margin: 0 auto; display: flex; gap: 8px; }
+  .nav-foot button { flex: 1; padding: 14px; font-size: 15px; }
+  .nav-foot button.back { flex: 0 0 34%; }
+
+  .toast {
+    position: fixed;
+    left: 50%;
+    bottom: 96px;
+    transform: translate(-50%, 12px);
+    background: var(--ink);
+    color: var(--bg);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 9px 16px;
+    border-radius: 999px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .18s ease, transform .18s ease;
+    z-index: 60;
+  }
+
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .toast { transition: none; }
+    .spinner { animation-duration: 2.4s; }
+  }
+
+  .draft { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .draft:last-child { border-bottom: none; }
+  .draft img { width: 46px; height: 46px; border-radius: 8px; object-fit: cover; }
+  .draft .t { flex: 1; min-width: 0; }
+  .draft .t b { display: block; font-size: 13px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .draft .t span { font-size: 11.5px; color: var(--muted); font-family: var(--num); }
+  .draft button { padding: 7px 10px; font-size: 12px; }
+
+  .hidden { display: none !important; }
+</style>
+
+<div class="wrap">
+  <header class="bar">
+    <div class="brand"><span class="mark">↑</span>出品ヘルパー</div>
+    <button class="quiet" id="draftsBtn" type="button">下書き 0</button>
+  </header>
+
+  <section class="card" id="draftsCard" hidden>
+    <div class="card-head"><h2>保存した下書き</h2></div>
+    <div id="draftList"></div>
+    <div class="btn-row"><button class="quiet full" id="closeDrafts" type="button">閉じる</button></div>
+  </section>
+
+  <main id="main">
+    <section class="card">
+      <div class="card-head"><span class="step">1</span><h2>商品の写真</h2></div>
+      <p class="note">全体 → 正面 → ブランドタグ → キズのある所、の順が伝わりやすいです。10枚まで（AIが見るのは先頭6枚）。</p>
+      <div class="grid" id="photoGrid"></div>
+      <div class="btn-row">
+        <button type="button" id="camBtn">撮影する</button>
+        <button type="button" id="albumBtn">アルバム</button>
+      </div>
+      <input type="file" id="camInput" accept="image/*" capture="environment" class="hidden">
+      <input type="file" id="albumInput" accept="image/*" multiple class="hidden">
+    </section>
+
+    <section class="card">
+      <div class="card-head"><span class="step">2</span><h2>AIが自動で書く</h2></div>
+      <p class="note">写真をGoogle検索にかけて商品を特定し、商品名・カテゴリ・状態・説明文・相場価格・配送方法をまとめて作ります。ボタンを押すだけです。</p>
+
+      <label class="field">
+        <span class="lab">分かっていること（任意・書くほど正確になります）</span>
+        <textarea id="f_memo" rows="2" placeholder="例: 3年前に15,000円で購入。10回ほど着用。箱と保証書あり。"></textarea>
+      </label>
+
+      <div class="btn-row">
+        <button type="button" class="primary full" id="generateBtn">写真からAIで自動生成</button>
+      </div>
+      <div id="genMsg"></div>
+      <div id="keyState" class="keyline"></div>
+
+      <div id="passPanel" hidden>
+        <label class="field">
+          <span class="lab">合言葉</span>
+          <input type="password" id="f_pass" placeholder="配布した人から聞いた合言葉" autocomplete="off">
+        </label>
+        <div class="btn-row">
+          <button type="button" class="primary" id="savePass">保存する</button>
+        </div>
+        <p class="note">この端末にだけ保存されます。次からは入力不要です。</p>
+      </div>
+
+      <div id="keyPanel" hidden>
+        <label class="field">
+          <span class="lab">Google AI Studio の APIキー（無料）</span>
+          <input type="password" id="f_key" placeholder="AIza..." autocomplete="off" spellcheck="false">
+        </label>
+        <div class="btn-row">
+          <button type="button" class="primary" id="saveKey">保存する</button>
+          <button type="button" class="quiet" id="clearKey">削除する</button>
+        </div>
+        <ol class="howto">
+          <li><a href="https://aistudio.google.com/apikey" target="_blank" rel="noreferrer">aistudio.google.com/apikey</a> をひらく（Googleアカウントでログイン）</li>
+          <li>「Create API key」でキーを作る（無料枠のままなら課金は発生しません）</li>
+          <li>コピーして上の欄に貼り、保存する</li>
+        </ol>
+        <p class="note">キーはこの端末のブラウザにだけ保存され、どこにも送られません。無料枠では入力内容がGoogleのモデル改善に使われる場合があります。人が写った写真や個人情報を含む写真は避けてください。</p>
+      </div>
+
+      <details class="fold" id="manualBox">
+        <summary>AIキーを使わずに、手持ちのAIアプリで書いてもらう</summary>
+        <ol class="howto">
+          <li>「指示文をコピー」を押す</li>
+          <li>Claude や ChatGPT のアプリを開き、商品写真を添付して貼り付け → 送信</li>
+          <li>返ってきた内容をコピーして、下の欄に貼り付け</li>
+        </ol>
+        <div class="btn-row">
+          <button type="button" id="copyPrompt">指示文をコピー</button>
+        </div>
+        <label class="field">
+          <span class="lab">AIの回答を貼り付け</span>
+          <textarea id="pasteBox" rows="3" placeholder='{ "title": "…", "description": "…" }'></textarea>
+        </label>
+        <div class="btn-row">
+          <button type="button" id="applyPaste">反映する</button>
+          <button type="button" class="quiet" id="loadSample">サンプルを入れる</button>
+        </div>
+        <div id="pasteMsg"></div>
+      </details>
+    </section>
+
+    <section class="card" id="cardContent">
+      <div class="card-head"><span class="step">3</span><h2>内容を確認する</h2></div>
+      <p class="note">メルカリの欄と同じ並びです。気になるところだけ直してください。</p>
+
+      <div id="aiNotes"></div>
+
+      <label class="field">
+        <span class="lab">商品名</span>
+        <textarea id="f_title" rows="2" placeholder="ブランド 商品名 サイズ 色 など、検索される言葉を前に"></textarea>
+      </label>
+      <div class="counter"><span>検索されやすい言葉を前半に</span><span id="titleCount">0 / 40</span></div>
+      <div class="btn-row" id="trimRow" hidden>
+        <button type="button" class="quiet full" id="trimTitle">40文字に収める</button>
+      </div>
+
+      <label class="field">
+        <span class="lab">商品の説明（テンプレートの型・この1つにすべて入っています）</span>
+        <textarea id="f_desc" rows="14" placeholder="AIが作った説明がここに入ります。手直しもできます。"></textarea>
+      </label>
+      <div class="counter"><span>サイズの実寸は測って入れてください</span><span id="descCount">0 / 1000</span></div>
+      <div class="checks">
+        <label><input type="checkbox" id="o_instant" checked>【コメントなし即購入OK!】</label>
+        <label><input type="checkbox" id="o_anon" checked>【匿名配送✨】</label>
+        <label><input type="checkbox" id="o_notes" checked>末尾の注意書き</label>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="quiet" id="fillTemplate">ひな形を入れる</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <label class="field">
+        <span class="lab">カテゴリ</span>
+        <input type="text" id="f_category" placeholder="メンズ &gt; 靴 &gt; スニーカー">
+      </label>
+      <label class="field">
+        <span class="lab">ブランド</span>
+        <input type="text" id="f_brand" placeholder="ノーブランドなら空欄">
+      </label>
+      <div class="row">
+        <label class="field">
+          <span class="lab">サイズ</span>
+          <input type="text" id="f_size">
+        </label>
+        <label class="field">
+          <span class="lab">カラー</span>
+          <input type="text" id="f_color">
+        </label>
+      </div>
+      <label class="field">
+        <span class="lab">商品の状態</span>
+        <select id="f_condition"></select>
+      </label>
+    </section>
+
+    <section class="card" id="cardPrice">
+      <div class="card-head"><span class="step">4</span><h2>価格と送料を決める</h2></div>
+      <div id="priceReason"></div>
+
+      <label class="field">
+        <span class="lab">販売価格</span>
+        <div class="price-input">
+          <input type="text" id="f_price" inputmode="numeric" value="1000">
+          <span>円</span>
+        </div>
+      </label>
+      <input type="range" id="priceRange" min="300" max="20000" step="50" value="1000" aria-label="販売価格のスライダー">
+      <div class="chips" id="priceChips"></div>
+      <div class="breakdown" id="breakdown"></div>
+      <span class="lab" style="margin-top:14px">手取りから逆算する</span>
+      <div class="chips" id="profitChips"></div>
+
+      <div class="divider"></div>
+
+      <label class="field">
+        <span class="lab">配送方法</span>
+        <select id="f_shipping"></select>
+      </label>
+      <p class="note" id="shipNote"></p>
+      <div class="chips" id="payerChips"></div>
+      <label class="field">
+        <span class="lab">送料を上書きする（空欄なら上の料金）</span>
+        <input type="text" id="f_shipOverride" inputmode="numeric" placeholder="例: 850">
+      </label>
+      <p class="note">送料は2025年時点の目安です。最新の料金はメルカリアプリでご確認ください。</p>
+    </section>
+
+    <section class="card" id="cardPost">
+      <div class="card-head"><span class="step">5</span><h2>メルカリに出品する</h2></div>
+      <p class="note">ナビが1画面ずつ「次にどこへ何を入れるか」を出します。コピーは自動なので、メルカリ側では長押し →「ペースト」を押すだけです。</p>
+      <div class="btn-row">
+        <button type="button" class="primary full" id="startNav">出品ナビをはじめる</button>
+      </div>
+
+      <details class="fold">
+        <summary>ナビを使わず、自分でコピーする</summary>
+        <div class="btn-row stack">
+          <button type="button" data-copy="title">商品名をコピー</button>
+          <button type="button" data-copy="desc">商品の説明をコピー</button>
+          <button type="button" data-copy="price">価格をコピー</button>
+        </div>
+        <a class="sell-link" href="https://jp.mercari.com/sell" target="_blank" rel="noreferrer">メルカリの出品画面をひらく</a>
+      </details>
+
+      <div class="btn-row">
+        <button type="button" id="saveDraft">下書きに保存</button>
+        <button type="button" class="quiet" id="resetAll">次の商品へ</button>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="dock" id="dock">
+  <div class="dock-inner">
+    <div class="cell">
+      <div class="k">販売価格</div>
+      <div class="v" id="dockPrice">1,000円</div>
+    </div>
+    <div class="cell">
+      <div class="k">手元に残る</div>
+      <div class="v profit" id="dockProfit">690円</div>
+    </div>
+    <button type="button" class="primary" id="dockNav">出品ナビ</button>
+  </div>
+</div>
+
+<div class="nav" id="navPanel" role="dialog" aria-modal="true" aria-label="出品ナビ" hidden>
+  <div class="nav-head">
+    <span class="who">出品ナビ</span>
+    <span class="count" id="navCount">1 / 8</span>
+    <button type="button" class="quiet" id="navClose">とじる</button>
+  </div>
+  <div class="nav-track" id="navTrack"></div>
+  <div class="nav-body" id="navBody"></div>
+  <div class="nav-foot">
+    <div class="nav-foot-inner">
+      <button type="button" class="quiet back" id="navBack">もどる</button>
+      <button type="button" class="primary" id="navNext">つぎへ</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  "use strict";
+
+  var CONDITIONS = ["新品、未使用", "未使用に近い", "目立った傷や汚れなし", "やや傷や汚れあり", "傷や汚れあり", "全体的に状態が悪い"];
+
+  var SHIPPING = [
+    { id: "nekopos", label: "ネコポス", carrier: "らくらくメルカリ便", fee: 210, material: 0, size: "A4・厚さ3cm・1kg以内", hint: "本、薄手の衣類、小物" },
+    { id: "yu_packet", label: "ゆうパケット", carrier: "ゆうゆうメルカリ便", fee: 230, material: 0, size: "A4・厚さ3cm・1kg以内", hint: "本、CD、薄手の衣類" },
+    { id: "yu_packet_post", label: "ゆうパケットポスト", carrier: "ゆうゆうメルカリ便", fee: 215, material: 5, size: "厚さ3cm・2kg以内", hint: "ポスト投函で発送（専用シール5円）" },
+    { id: "compact", label: "宅急便コンパクト", carrier: "らくらくメルカリ便", fee: 450, material: 70, size: "専用BOX 25×20×5cm", hint: "厚みのある小物（専用BOX 70円）" },
+    { id: "yu_packet_plus", label: "ゆうパケットプラス", carrier: "ゆうゆうメルカリ便", fee: 455, material: 65, size: "専用箱 24×17×7cm", hint: "厚みのある小物（専用箱 65円）" },
+    { id: "takkyubin60", label: "宅急便 60サイズ", carrier: "らくらくメルカリ便", fee: 750, material: 0, size: "3辺合計60cm・2kg以内", hint: "スニーカー、バッグ" },
+    { id: "yu_pack60", label: "ゆうパック 60サイズ", carrier: "ゆうゆうメルカリ便", fee: 770, material: 0, size: "3辺合計60cm・25kg以内", hint: "重さのある60サイズ" },
+    { id: "takkyubin80", label: "宅急便 80サイズ", carrier: "らくらくメルカリ便", fee: 850, material: 0, size: "3辺合計80cm・5kg以内", hint: "衣類まとめ、中型の箱物" },
+    { id: "yu_pack80", label: "ゆうパック 80サイズ", carrier: "ゆうゆうメルカリ便", fee: 870, material: 0, size: "3辺合計80cm・25kg以内", hint: "重さのある80サイズ" },
+    { id: "takkyubin100", label: "宅急便 100サイズ", carrier: "らくらくメルカリ便", fee: 1050, material: 0, size: "3辺合計100cm・10kg以内", hint: "コート、大きめの箱物" },
+    { id: "yu_pack100", label: "ゆうパック 100サイズ", carrier: "ゆうゆうメルカリ便", fee: 1070, material: 0, size: "3辺合計100cm・25kg以内", hint: "重さのある100サイズ" },
+    { id: "large", label: "120サイズ以上", carrier: "らくらくメルカリ便ほか", fee: 1200, material: 0, size: "3辺合計120cm〜", hint: "大型商品。送料は上書きしてください" }
+  ];
+
+  var FEE_RATE = 0.1;
+  var MIN_PRICE = 300;
+  var MAX_PHOTOS = 10;   // メルカリの上限
+  var AI_PHOTOS = 6;     // AIに送る枚数の上限（通信量をおさえるため）
+  var DRAFT_KEY = "shuppin_drafts_v2";
+  var SESSION_KEY = "shuppin_session_v1";
+  var KEY_STORE = "shuppin_api_key_v1";
+  var PASS_STORE = "shuppin_password_v1";
+  var SERVER_URL = "/api/generate";
+  var GEMINI_MODEL = "gemini-2.5-flash";
+  var GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/" + GEMINI_MODEL + ":generateContent";
+
+  var SEARCH_PROMPT = [
+    "添付した写真の商品を、Google検索を使って特定してください。フリマアプリに出品するための下調べです。",
+    "",
+    "調べること:",
+    "1. 商品名・ブランド・型番（写真のロゴ、タグ、刻印、形状を手がかりに検索する）",
+    "2. 新品の定価と発売時期",
+    "3. メルカリやラクマでの中古の売れている価格帯（状態別に分かれば状態も）",
+    "4. サイズや素材など、出品説明に書ける仕様",
+    "5. その商品ならではの注意点（人気の色、偽物が多い、付属品の有無で価格が変わる等）",
+    "",
+    "特定できない場合は「特定できず」と書き、写真から読み取れる特徴だけを挙げてください。推測を事実のように書かないでください。",
+    "日本語の箇条書きで、400文字以内にまとめてください。"
+  ].join("\n");
+
+  var PROMPT = [
+    "あなたは日本のフリマアプリ「メルカリ」で数千件の販売実績があるプロの出品代行です。",
+    "添付の商品写真から、出品に必要な情報をJSONだけで返してください（前置き・説明・コードブロック記号は不要）。",
+    "",
+    "# ルール",
+    "1. 写真に写っている売る対象の商品を特定する。背景や小物は無視する。",
+    "2. titleは40文字以内。検索される語（ブランド・商品名・型番・サイズ・色）を前半に置く。煽り文句は入れない。",
+    "3. ブランド・型番・サイズは写真や検索結果から確認できる場合のみ書く。分からない場合は空文字にし、questionsに確認事項として入れる。推測で断定しない。",
+    "4. conditionは次の6つから選ぶ: 新品、未使用 / 未使用に近い / 目立った傷や汚れなし / やや傷や汚れあり / 傷や汚れあり / 全体的に状態が悪い",
+    "5. 価格は日本のメルカリの実際の売れ筋相場を基準に。販売手数料10%と送料が引かれること、値下げ交渉の余地200〜500円を織り込む。最低300円。",
+    "6. 出品が禁止・制限されている可能性がある物ならpolicyWarningに理由を書く。問題なければ空文字。",
+    "",
+    "# descriptionの書き方（最重要・この型を必ず守る）",
+    "そのままメルカリの「商品の説明」に貼れる本文を1つにまとめて書く。",
+    "見出しは【商品】【状態】【カラー】【サイズ】【素材】【発送について】の6つ。この順番と表記を必ず守る。",
+    "",
+    "【商品】",
+    "1行目にブランド名（不明ならカタカナや型番などの呼び名）。",
+    "2行目以降に特徴を1行ずつ3〜8行。丈・シルエット・機能・素材の見どころ・付属品・金具の色など、写真と検索結果から言えることを並べる。文章にせず短い語で改行する。",
+    "",
+    "【状態】",
+    "写真から見える傷・汚れ・毛玉・スレ・日焼け・使用感を具体的に書く。場所と程度を書き、隠さない。",
+    "良い点も1〜2文添える。見当たらない場合も、中古品である旨は必ず書く。",
+    "",
+    "【カラー】",
+    "英語と日本語の両方を書く（例: ブラック 黒）。",
+    "",
+    "【サイズ】",
+    "1行目に「表記」＋タグ等で確認できたサイズ。読み取れない場合は「表記」とだけ書く。",
+    "2行目以降は採寸の項目名だけを並べ、数値は書かない（出品者が実測して記入するため）。",
+    "項目は商品の種類に合わせる。衣類なら 肩幅 / 身幅 / 着丈 / 袖丈、パンツなら ウエスト / 股上 / 股下 / わたり、",
+    "靴なら 表記サイズ / 全長 / ソール幅、バッグなら 縦 / 横 / マチ / 持ち手、家電や雑貨なら 本体サイズ / 重さ。",
+    "最後の行に「※多少の誤差ご容赦ください。」を入れる。",
+    "",
+    "【素材】",
+    "洗濯表示や品質表示が読み取れる場合はその内容（表地/裏地/中綿/毛皮 など）。",
+    "読み取れない場合は項目名だけを残す（例: 表地： 裏地：）。推測で素材名を断定しない。",
+    "",
+    "【発送について】",
+    "梱包方法と注意を2〜4行。衣類なら「コンパクトに折り畳み圧縮する場合があります。畳じわご了承ください。」のように書く。",
+    "",
+    "その他のルール:",
+    "・冒頭の【コメントなし即購入OK!】【匿名配送】と、末尾の※注意書きはアプリ側が付けるので絶対に書かない。",
+    "・絵文字は✨や♪を各見出しに1つまで。多用しない。",
+    "・誇大表現、写真から確認できないこと（購入時期・正規品保証・未使用など）は書かない。",
+    "・数値を推測で埋めない。分からない箇所は項目名だけを残し、questionsに確認事項として入れる。",
+    "・全体で900文字以内。",
+    "# 返すJSONの形",
+    "{",
+    '  "itemName": "商品の正式名称",',
+    '  "title": "メルカリのタイトル（40文字以内）",',
+    '  "brand": "ブランド名（不明なら空文字）",',
+    '  "categoryPath": "メンズ > 靴 > スニーカー のような階層",',
+    '  "size": "", "color": "",',
+    '  "condition": "6段階のいずれか",',
+    '  "conditionReason": "そう判断した写真上の根拠",',
+    '  "description": "そのまま貼れる商品説明の全文",',
+    '  "priceMin": 0, "priceMax": 0, "priceRecommended": 0,',
+    '  "priceReason": "価格の根拠を1〜2文で",',
+    '  "shippingId": "' + SHIPPING.map(function (s) { return s.id; }).join(" / ") + '",',
+    '  "estimatedSize": "梱包後のおおよそのサイズと重さ",',
+    '  "photoAdvice": ["追加で撮ると売れやすい写真"],',
+    '  "questions": ["写真だけでは分からず出品者に確認したいこと"],',
+    '  "policyWarning": "",',
+    '  "confidence": "high / medium / low"',
+    "}"
+  ].join("\n");
+
+  var SAMPLE = {
+    itemName: "ナイキ エアフォース1 07 ロー 白 27cm",
+    title: "ナイキ エアフォース1 07 ロー ホワイト 27cm 箱付き",
+    brand: "NIKE",
+    categoryPath: "メンズ > 靴 > スニーカー",
+    size: "27cm",
+    color: "ホワイト",
+    condition: "やや傷や汚れあり",
+    conditionReason: "ソール側面に黄ばみ、つま先に薄い汚れが見えるため",
+    description: [
+      "【商品】",
+      "NIKE ナイキ",
+      "エアフォース1 07 ローカット",
+      "オールホワイト 定番モデル",
+      "厚みのあるソール",
+      "純正の箱付き",
+      "",
+      "【状態】",
+      "ソール側面に経年による薄い黄ばみがあります。",
+      "右足つま先に小さな擦れがあります。",
+      "アッパーの型崩れはなく、ソールの摩耗も少ないため、",
+      "まだまだ履いていただけます♪",
+      "",
+      "【カラー】",
+      "ホワイト 白",
+      "",
+      "【サイズ】",
+      "表記27cm",
+      "全長\u3000",
+      "ソール幅\u3000",
+      "履き口内寸\u3000",
+      "※多少の誤差ご容赦ください。",
+      "",
+      "【素材】",
+      "アッパー：",
+      "ソール：",
+      "",
+      "【発送について】",
+      "純正の箱に入れて発送いたします。",
+      "箱に配送ラベルを直接貼る場合があります。"
+    ].join("\n"),
+    priceMin: 5500,
+    priceMax: 9000,
+    priceRecommended: 7800,
+    priceReason: "同モデル同サイズの中古は6,000〜9,000円台で売れています。箱付きのぶん高めに設定できます。",
+    shippingId: "takkyubin80",
+    estimatedSize: "靴箱込みで80サイズ・約1.5kg",
+    photoAdvice: ["ソールの裏側（摩耗が分かる写真）", "インソールのサイズ表記", "箱のラベル部分"],
+    questions: ["購入時期と着用回数を教えてください", "購入店舗は分かりますか"],
+    policyWarning: "",
+    confidence: "medium"
+  };
+
+  var state = {
+    photos: [],
+    memo: "",
+    apiKey: "",
+    password: "",
+    server: { checked: false, ready: false, needsPassword: false },
+    generating: false,
+    research: null,
+    ai: null,
+    fields: {
+      title: "", categoryPath: "", itemName: "", brand: "", size: "", color: "",
+      condition: CONDITIONS[2], bodyText: ""
+    },
+    price: 1000,
+    shippingId: "nekopos",
+    shipOverride: "",
+    payer: "seller",
+    opts: { instant: true, anon: true, notes: true },
+    desc: "",
+    descTouched: false,
+    navIndex: 0,
+    navOpen: false
+  };
+
+  // ---------- 基本 ----------
+  function $(id) { return document.getElementById(id); }
+
+  function yen(n) {
+    var v = Math.round(Number(n) || 0);
+    var s = String(Math.abs(v)).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return (v < 0 ? "-" : "") + s + "円";
+  }
+
+  function findShipping(id) {
+    for (var i = 0; i < SHIPPING.length; i++) if (SHIPPING[i].id === id) return SHIPPING[i];
+    return SHIPPING[0];
+  }
+
+  function toast(msg) {
+    var el = $("toast");
+    el.textContent = msg;
+    el.classList.add("show");
+    clearTimeout(el._t);
+    el._t = setTimeout(function () { el.classList.remove("show"); }, 1800);
+  }
+
+  function copy(text, quiet) {
+    if (!text) return;
+    function done() { if (!quiet) toast("コピーしました"); }
+    function fallback() {
+      try {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        done();
+      } catch (err) {
+        if (!quiet) window.prompt("コピーできませんでした。手動で選択してください", text);
+      }
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function () {
+        if (quiet) return; // 自動コピーが弾かれても、画面には何も出さない
+        fallback();
+      });
+    } else {
+      fallback();
+    }
+  }
+
+  function callout(kind, heading, items) {
+    var div = document.createElement("div");
+    div.className = "callout " + kind;
+    var b = document.createElement("b");
+    b.textContent = heading;
+    div.appendChild(b);
+    var ul = document.createElement("ul");
+    items.forEach(function (t) {
+      if (!t) return;
+      var li = document.createElement("li");
+      li.textContent = t;
+      ul.appendChild(li);
+    });
+    div.appendChild(ul);
+    return div;
+  }
+
+  // ---------- 保存 ----------
+  function safeGet(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function safeSet(key, value) {
+    try {
+      localStorage.setItem(key, value);
+      return true;
+    } catch (err) {
+      return false;
+    }
+  }
+
+  function loadKey() { state.apiKey = safeGet(KEY_STORE) || ""; }
+
+  function storeKey(value) {
+    state.apiKey = value;
+    try {
+      if (value) localStorage.setItem(KEY_STORE, value);
+      else localStorage.removeItem(KEY_STORE);
+    } catch (err) {
+      toast("キーを保存できませんでした");
+    }
+  }
+
+  // 作業中の内容を自動保存する（メルカリアプリに切り替えても消えないように）
+  var saveTimer = null;
+  function autosave() {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(function () {
+      var photos = state.photos;
+      var payload = {
+        fields: state.fields,
+        memo: state.memo,
+        price: state.price,
+        shippingId: state.shippingId,
+        shipOverride: state.shipOverride,
+        payer: state.payer,
+        opts: state.opts,
+        desc: state.desc,
+        descTouched: state.descTouched,
+        ai: state.ai,
+        research: state.research,
+        navIndex: state.navIndex,
+        navOpen: state.navOpen,
+        photos: photos
+      };
+      if (!safeSet(SESSION_KEY, JSON.stringify(payload))) {
+        // 写真が大きすぎる場合は文字情報だけ残す
+        payload.photos = [];
+        safeSet(SESSION_KEY, JSON.stringify(payload));
+      }
+    }, 400);
+  }
+
+  function normalizeOpts(opts) {
+    var o = opts || {};
+    return {
+      instant: o.instant !== false,
+      anon: o.anon !== undefined ? !!o.anon : true,
+      notes: o.notes !== undefined ? !!o.notes : true
+    };
+  }
+
+  function restoreSession() {
+    var raw = safeGet(SESSION_KEY);
+    if (!raw) return false;
+    try {
+      var d = JSON.parse(raw);
+      if (!d || !d.fields) return false;
+      state.fields = d.fields;
+      state.memo = d.memo || "";
+      state.price = d.price || 1000;
+      state.shippingId = d.shippingId || "nekopos";
+      state.shipOverride = d.shipOverride || "";
+      state.payer = d.payer || "seller";
+      state.opts = normalizeOpts(d.opts);
+      state.desc = d.desc || "";
+      state.descTouched = !!d.descTouched;
+      state.ai = d.ai || null;
+      state.research = d.research || null;
+      state.navIndex = d.navIndex || 0;
+      state.navOpen = !!d.navOpen;
+      state.photos = Array.isArray(d.photos) ? d.photos : [];
+      return true;
+    } catch (err) {
+      return false;
+    }
+  }
+
+  // ---------- 写真 ----------
+  function mkId() { return Math.random().toString(36).slice(2, 9); }
+
+  function addFiles(fileList) {
+    var room = MAX_PHOTOS - state.photos.length;
+    var files = Array.prototype.slice.call(fileList, 0, room);
+    files.forEach(function (file) {
+      var reader = new FileReader();
+      reader.onload = function (ev) {
+        var img = new Image();
+        img.onload = function () {
+          var scale = Math.min(1, 1024 / Math.max(img.width, img.height));
+          var canvas = document.createElement("canvas");
+          canvas.width = Math.max(1, Math.round(img.width * scale));
+          canvas.height = Math.max(1, Math.round(img.height * scale));
+          canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+          state.photos.push({ id: mkId(), url: canvas.toDataURL("image/jpeg", 0.72) });
+          renderPhotos();
+          autosave();
+        };
+        img.onerror = function () { toast("この画像は読み込めませんでした"); };
+        img.src = ev.target.result;
+      };
+      reader.onerror = function () { toast("画像を読み込めませんでした"); };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  // 下書き用の小さなサムネイルを作る（保存容量の節約）
+  function makeThumb(dataUrl) {
+    return new Promise(function (resolve) {
+      var img = new Image();
+      img.onload = function () {
+        var scale = Math.min(1, 240 / Math.max(img.width, img.height));
+        var canvas = document.createElement("canvas");
+        canvas.width = Math.max(1, Math.round(img.width * scale));
+        canvas.height = Math.max(1, Math.round(img.height * scale));
+        canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+        resolve(canvas.toDataURL("image/jpeg", 0.6));
+      };
+      img.onerror = function () { resolve(""); };
+      img.src = dataUrl;
+    });
+  }
+
+  function renderPhotos() {
+    var grid = $("photoGrid");
+    grid.textContent = "";
+    state.photos.forEach(function (p, i) {
+      var box = document.createElement("div");
+      box.className = "thumb";
+      var img = document.createElement("img");
+      img.src = p.url;
+      img.alt = "商品写真 " + (i + 1);
+      box.appendChild(img);
+      if (i === 0) {
+        var tag = document.createElement("span");
+        tag.className = "tag";
+        tag.textContent = "メイン";
+        box.appendChild(tag);
+      }
+      var del = document.createElement("button");
+      del.className = "del";
+      del.type = "button";
+      del.textContent = "✕";
+      del.setAttribute("aria-label", (i + 1) + "枚目を削除");
+      del.addEventListener("click", function () {
+        state.photos = state.photos.filter(function (x) { return x.id !== p.id; });
+        renderPhotos();
+        autosave();
+      });
+      box.appendChild(del);
+      if (i > 0) {
+        var main = document.createElement("button");
+        main.className = "makemain";
+        main.type = "button";
+        main.textContent = "メインにする";
+        main.addEventListener("click", function () {
+          state.photos = [p].concat(state.photos.filter(function (x) { return x.id !== p.id; }));
+          renderPhotos();
+          autosave();
+          toast("メイン写真を入れ替えました");
+        });
+        box.appendChild(main);
+      }
+      grid.appendChild(box);
+    });
+    if (state.photos.length < MAX_PHOTOS) {
+      var empty = document.createElement("div");
+      empty.className = "empty";
+      empty.textContent = state.photos.length === 0 ? "写真がまだありません" : "あと" + (MAX_PHOTOS - state.photos.length) + "枚";
+      grid.appendChild(empty);
+    }
+    $("camBtn").disabled = state.photos.length >= MAX_PHOTOS;
+    $("albumBtn").disabled = state.photos.length >= MAX_PHOTOS;
+  }
+
+  // ---------- 説明文 ----------
+  function buildDescription() {
+    var body = stripFixed(state.fields.bodyText);
+    if (!body) return "";
+    var out = [];
+    if (state.opts.instant) out.push(HEADER_LINES[0]);
+    if (state.opts.anon) out.push(HEADER_LINES[1]);
+    if (out.length) out.push("");
+    out.push(body);
+    if (state.opts.notes) {
+      out.push("");
+      out.push("");
+      out.push(NOTES_BLOCK);
+    }
+    return out.join("\n").replace(/\n{4,}/g, "\n\n\n").trim();
+  }
+
+  function templateBody() {
+    var f = state.fields;
+    return [
+      "【商品】",
+      f.brand || "ブランド名",
+      f.itemName || "商品名・特徴",
+      "",
+      "【状態】",
+      "",
+      "【カラー】",
+      f.color || "",
+      "",
+      "【サイズ】",
+      "表記" + (f.size || ""),
+      "肩幅\u3000",
+      "身幅\u3000",
+      "着丈\u3000",
+      "袖丈\u3000",
+      "※多少の誤差ご容赦ください。",
+      "",
+      "【素材】",
+      "表地：",
+      "裏地：",
+      "",
+      "【発送について】",
+      "コンパクトに折り畳み",
+      "圧縮する場合があります。",
+      "畳じわご了承ください。"
+    ].join("\n");
+  }
+
+  function refreshDescription() {
+    if (!state.descTouched) {
+      state.desc = buildDescription();
+      $("f_desc").value = state.desc;
+    }
+    var el = $("descCount");
+    el.textContent = state.desc.length + " / 1000";
+    el.className = state.desc.length > 1000 ? "over" : "";
+    autosave();
+  }
+
+  function refreshTitleCount() {
+    var len = state.fields.title.length;
+    var el = $("titleCount");
+    el.textContent = len + " / 40";
+    el.className = len > 40 ? "over" : "";
+    $("trimRow").hidden = len <= 40;
+  }
+
+  function trimTitle(text) {
+    var t = String(text || "").trim();
+    if (t.length <= 40) return t;
+    var cut = t.slice(0, 40);
+    var space = Math.max(cut.lastIndexOf(" "), cut.lastIndexOf("　"));
+    if (space >= 28) cut = cut.slice(0, space);
+    return cut.trim();
+  }
+
+  // ---------- 計算 ----------
+  function shippingCost() {
+    var ship = findShipping(state.shippingId);
+    if (state.payer === "buyer") return { fee: 0, material: 0 };
+    if (state.shipOverride !== "") return { fee: Number(state.shipOverride) || 0, material: 0 };
+    return { fee: ship.fee, material: ship.material };
+  }
+
+  function calc() {
+    var cost = shippingCost();
+    var price = Number(state.price) || 0;
+    var fee = Math.floor(price * FEE_RATE);
+    return {
+      price: price,
+      fee: fee,
+      shipping: cost.fee,
+      material: cost.material,
+      profit: price - fee - cost.fee - cost.material
+    };
+  }
+
+  function priceForProfit(target) {
+    var cost = shippingCost();
+    return Math.ceil((target + cost.fee + cost.material) / (1 - FEE_RATE));
+  }
+
+  // ---------- 表示 ----------
+  function renderBreakdown() {
+    var c = calc();
+    var ship = findShipping(state.shippingId);
+    var rows = [
+      ["販売価格", c.price],
+      ["販売手数料（10%）", -c.fee],
+      [state.payer === "buyer" ? "送料（着払い・購入者負担）" : "送料（" + ship.label + "）", -c.shipping]
+    ];
+    if (c.material > 0) rows.push(["梱包資材（専用箱など）", -c.material]);
+
+    var box = $("breakdown");
+    box.textContent = "";
+    rows.forEach(function (r) {
+      var div = document.createElement("div");
+      div.className = "brow";
+      var k = document.createElement("span");
+      k.textContent = r[0];
+      var v = document.createElement("b");
+      v.textContent = yen(r[1]);
+      div.appendChild(k);
+      div.appendChild(v);
+      box.appendChild(div);
+    });
+
+    var total = document.createElement("div");
+    total.className = "brow total" + (c.profit <= 0 ? " negative" : "");
+    var tk = document.createElement("span");
+    tk.textContent = "手元に残る金額";
+    var tv = document.createElement("b");
+    tv.textContent = yen(c.profit);
+    total.appendChild(tk);
+    total.appendChild(tv);
+    box.appendChild(total);
+
+    if (c.profit <= 0) {
+      var w = document.createElement("div");
+      w.className = "brow";
+      w.style.color = "var(--accent)";
+      w.textContent = "手数料と送料で赤字です。価格を上げるか、送料の安い方法を選んでください。";
+      box.appendChild(w);
+    } else if (c.price < MIN_PRICE) {
+      var m = document.createElement("div");
+      m.className = "brow";
+      m.style.color = "var(--warn)";
+      m.textContent = "メルカリの最低価格は300円です。";
+      box.appendChild(m);
+    }
+
+    $("dockPrice").textContent = yen(c.price);
+    var dp = $("dockProfit");
+    dp.textContent = yen(c.profit);
+    dp.classList.toggle("negative", c.profit <= 0);
+  }
+
+  function renderPriceChips() {
+    var box = $("priceChips");
+    box.textContent = "";
+    var ai = state.ai;
+    var items = ai && ai.priceMin
+      ? [["相場の下限", ai.priceMin], ["AIのおすすめ", ai.priceRecommended], ["相場の上限", ai.priceMax]]
+      : [["500円", 500], ["1,500円", 1500], ["3,000円", 3000], ["5,000円", 5000]];
+    items.forEach(function (it) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "chip" + (Number(state.price) === Number(it[1]) ? " on" : "");
+      var label = document.createElement("span");
+      label.textContent = it[0];
+      b.appendChild(label);
+      if (ai && ai.priceMin) {
+        var n = document.createElement("span");
+        n.className = "n";
+        n.textContent = yen(it[1]);
+        b.appendChild(n);
+      }
+      b.addEventListener("click", function () { setPrice(it[1]); });
+      box.appendChild(b);
+    });
+  }
+
+  function renderProfitChips() {
+    var box = $("profitChips");
+    box.textContent = "";
+    [1000, 3000, 5000, 10000].forEach(function (t) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "chip";
+      b.textContent = yen(t) + "残す";
+      b.addEventListener("click", function () { setPrice(priceForProfit(t)); });
+      box.appendChild(b);
+    });
+  }
+
+  function renderPayerChips() {
+    var box = $("payerChips");
+    box.textContent = "";
+    [["seller", "送料込み（出品者負担）"], ["buyer", "着払い（購入者負担）"]].forEach(function (o) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "chip" + (state.payer === o[0] ? " on" : "");
+      b.textContent = o[1];
+      b.addEventListener("click", function () {
+        state.payer = o[0];
+        renderPayerChips();
+        renderBreakdown();
+        autosave();
+      });
+      box.appendChild(b);
+    });
+  }
+
+  function renderShipNote() {
+    var ship = findShipping(state.shippingId);
+    var note = ship.size + " ・ " + ship.hint;
+    if (state.ai && state.ai.estimatedSize) note += "\nAIの梱包サイズ予想: " + state.ai.estimatedSize;
+    $("shipNote").textContent = note;
+    $("f_shipOverride").placeholder = "例: " + (ship.fee + ship.material);
+  }
+
+  function renderPriceReason() {
+    var box = $("priceReason");
+    box.textContent = "";
+    if (!state.ai || !state.ai.priceReason) return;
+    var d = document.createElement("div");
+    d.className = "callout info";
+    var head = document.createElement("b");
+    head.textContent = "AIが見た相場 " + yen(state.ai.priceMin) + " 〜 " + yen(state.ai.priceMax);
+    var p = document.createElement("div");
+    p.textContent = state.ai.priceReason;
+    d.appendChild(head);
+    d.appendChild(p);
+    box.appendChild(d);
+  }
+
+  function renderAiNotes() {
+    var box = $("aiNotes");
+    box.textContent = "";
+
+    if (state.research) {
+      var det = document.createElement("details");
+      det.className = "research";
+      var sum = document.createElement("summary");
+      sum.textContent = "写真検索でわかったこと";
+      det.appendChild(sum);
+      var body = document.createElement("div");
+      body.className = "research-body";
+      body.textContent = state.research.text;
+      det.appendChild(body);
+      if (state.research.sources && state.research.sources.length) {
+        var src = document.createElement("div");
+        src.className = "research-src";
+        src.textContent = "参照: " + state.research.sources.join(" / ");
+        det.appendChild(src);
+      }
+      box.appendChild(det);
+    }
+
+    var ai = state.ai;
+    if (!ai) return;
+    if (ai.policyWarning) box.appendChild(callout("warn", "出品前に確認してください", [ai.policyWarning]));
+    if (ai.questions && ai.questions.length) box.appendChild(callout("info", "写真だけでは分からなかったこと", ai.questions));
+    if (ai.photoAdvice && ai.photoAdvice.length) box.appendChild(callout("info", "追加で撮ると売れやすい写真", ai.photoAdvice));
+    if (ai.conditionReason) {
+      var p = document.createElement("p");
+      p.className = "note";
+      p.textContent = "状態の判断根拠: " + ai.conditionReason;
+      box.appendChild(p);
+    }
+  }
+
+  function setPrice(value) {
+    var v = Math.max(0, Math.round(Number(value) || 0));
+    state.price = v;
+    $("f_price").value = v;
+    var range = $("priceRange");
+    range.max = String(Math.max(20000, Math.ceil(v * 1.5 / 50) * 50));
+    range.value = String(Math.min(Number(range.max), Math.max(Number(range.min), v)));
+    renderPriceChips();
+    renderBreakdown();
+    autosave();
+  }
+
+  function syncFieldsToDom() {
+    var f = state.fields;
+    $("f_title").value = f.title;
+    $("f_category").value = f.categoryPath;
+    $("f_brand").value = f.brand;
+    $("f_size").value = f.size;
+    $("f_color").value = f.color;
+    $("f_condition").value = f.condition;
+    $("f_memo").value = state.memo;
+    $("f_shipping").value = state.shippingId;
+    $("f_shipOverride").value = state.shipOverride;
+    $("f_desc").value = state.desc;
+    $("o_instant").checked = state.opts.instant;
+    $("o_anon").checked = state.opts.anon;
+    $("o_notes").checked = state.opts.notes;
+    refreshTitleCount();
+  }
+
+  // ---------- AIの結果を反映 ----------
+  function parsePasted(text) {
+    var raw = String(text || "").trim();
+    if (!raw) return null;
+    var start = raw.indexOf("{");
+    var end = raw.lastIndexOf("}");
+    if (start < 0 || end <= start) return null;
+    try {
+      return JSON.parse(raw.slice(start, end + 1));
+    } catch (err) {
+      return null;
+    }
+  }
+
+  // 説明を1つにまとめる。古い形（本文・ポイント・キズが別）で来ても組み立てる。
+  function bodyFromAi(ai) {
+    if (ai.description && String(ai.description).trim()) return String(ai.description).trim();
+
+    // 古い形（本文・ポイント・キズが別）で返ってきた場合も、テンプレートの型に流し込む
+    var out = ["【商品】"];
+    if (ai.brand) out.push(ai.brand);
+    if (ai.itemName) out.push(ai.itemName);
+    (ai.features || []).forEach(function (x) { out.push(x); });
+    out.push("", "【状態】");
+    if (ai.descriptionBody) out.push(ai.descriptionBody);
+    if (ai.flaws && ai.flaws.length) {
+      ai.flaws.forEach(function (x) { out.push(x); });
+    } else {
+      out.push("目立ったキズや汚れは見当たりません。");
+    }
+    out.push("中古品、自宅保管品です。");
+    out.push("", "【カラー】", ai.color || "");
+    out.push("", "【サイズ】", "表記" + (ai.size || ""), "\u3000", "※多少の誤差ご容赦ください。");
+    out.push("", "【素材】", "表地：", "裏地：");
+    out.push("", "【発送について】", "コンパクトに梱包して発送いたします。");
+    if (ai.hashtags && ai.hashtags.length) {
+      out.push("");
+      out.push(ai.hashtags.map(function (t) { return t.charAt(0) === "#" ? t : "#" + t; }).join(" "));
+    }
+    return out.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  }
+
+  function applyAi(ai) {
+    state.ai = ai;
+    var f = state.fields;
+    f.title = ai.title || "";
+    f.categoryPath = ai.categoryPath || "";
+    f.itemName = ai.itemName || "";
+    f.brand = ai.brand || "";
+    f.size = ai.size || "";
+    f.color = ai.color || "";
+    f.condition = CONDITIONS.indexOf(ai.condition) >= 0 ? ai.condition : CONDITIONS[2];
+    if (ai.shippingId && findShipping(ai.shippingId).id === ai.shippingId) state.shippingId = ai.shippingId;
+    f.bodyText = stripFixed(bodyFromAi(ai));
+    state.descTouched = false;
+    state.navIndex = 0;
+    syncFieldsToDom();
+    setPrice(ai.priceRecommended || ai.priceMin || 1000);
+    renderAiNotes();
+    renderPriceReason();
+    renderShipNote();
+    refreshDescription();
+    syncFieldsToDom();
+  }
+
+  // ---------- 生成 ----------
+  function setGenMsg(kind, heading, items, retry) {
+    var box = $("genMsg");
+    box.textContent = "";
+    if (!kind) return;
+    box.appendChild(callout(kind, heading, items));
+    if (retry) {
+      var row = document.createElement("div");
+      row.className = "btn-row";
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "full";
+      btn.textContent = "もう一度ためす";
+      btn.addEventListener("click", generate);
+      row.appendChild(btn);
+      box.appendChild(row);
+    }
+  }
+
+  function setBtnBusy(btn, label) {
+    btn.textContent = "";
+    var spin = document.createElement("span");
+    spin.className = "spinner";
+    btn.appendChild(spin);
+    btn.appendChild(document.createTextNode(label));
+  }
+
+  function callGemini(body) {
+    return fetch(GEMINI_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-goog-api-key": state.apiKey },
+      body: JSON.stringify(body)
+    }).then(function (res) {
+      return res.json().then(function (data) { return { ok: res.ok, status: res.status, data: data }; });
+    });
+  }
+
+  function textOf(r) {
+    var out = "";
+    try {
+      (r.data.candidates[0].content.parts || []).forEach(function (part) { out += part.text || ""; });
+    } catch (err) {
+      out = "";
+    }
+    return out;
+  }
+
+  function sourcesOf(r) {
+    var list = [];
+    try {
+      var meta = r.data.candidates[0].groundingMetadata || {};
+      (meta.webSearchQueries || []).forEach(function (q) { list.push("検索したことば: " + q); });
+      (meta.groundingChunks || []).forEach(function (chunk) {
+        if (chunk.web && chunk.web.title) list.push(chunk.web.title);
+      });
+    } catch (err) {
+      return list;
+    }
+    return list.slice(0, 6);
+  }
+
+  function apiErrorHeading(r) {
+    if (r.status === 400 || r.status === 403) return "キーが使えませんでした";
+    if (r.status === 429) return "無料枠の上限に届きました";
+    return "生成できませんでした（" + r.status + "）";
+  }
+
+  function apiErrorBody(r) {
+    var detail = r.data && r.data.error && r.data.error.message ? r.data.error.message : "";
+    if (r.status === 400 || r.status === 403) return ["APIキーをもう一度確認してください。", detail];
+    if (r.status === 429) return ["しばらく時間をおいてからお試しください。", "急ぐ場合は「手持ちのAIアプリで書いてもらう」をお使いください。"];
+    return [detail || "少し時間をおいてお試しください。"];
+  }
+
+  function generate() {
+    if (state.generating) return;
+    if (!state.photos.length) {
+      setGenMsg("warn", "先に写真を追加してください", ["1番の「撮影する」または「アルバム」から、商品の写真を選びます。"]);
+      return;
+    }
+    var aiPhotos = state.photos.slice(0, AI_PHOTOS);
+
+    // サーバーがキーを持っている場合は、利用者の設定なしで作れる
+    if (state.server.ready) {
+      if (state.server.needsPassword && !state.password) {
+        $("passPanel").hidden = false;
+        setGenMsg("info", "合言葉を入れてください", ["このアプリを配布した人から聞いた合言葉を、下の欄に入れて保存します。"]);
+        $("f_pass").focus();
+        return;
+      }
+      state.generating = true;
+      $("generateBtn").disabled = true;
+      state.research = null;
+      generateOnServer(aiPhotos);
+      return;
+    }
+
+    if (!state.apiKey) {
+      $("keyPanel").hidden = false;
+      setGenMsg("info", "無料のAIキーを1回だけ設定してください", ["下の手順でキーを作って貼り付けると、次からはボタン1つで生成できます。"]);
+      $("f_key").focus();
+      return;
+    }
+
+    var imageParts = aiPhotos.map(function (p) {
+      return { inline_data: { mime_type: "image/jpeg", data: p.url.split(",")[1] } };
+    });
+
+    var memo = state.memo.trim();
+    var btn = $("generateBtn");
+    state.generating = true;
+    state.research = null;
+    btn.disabled = true;
+    setBtnBusy(btn, "写真から商品を検索中...");
+    setGenMsg("info", "① 写真検索で商品を特定しています", ["Google検索で同じ商品を探し、型番や相場を調べます。"]);
+
+    var searchAsk = SEARCH_PROMPT + "\n写真は" + aiPhotos.length + "枚";
+    searchAsk += aiPhotos.length > 1 ? "（1枚目がメイン写真）です。" : "です。";
+    if (memo) searchAsk += "\n出品者からの補足:\n" + memo;
+
+    callGemini({
+      contents: [{ parts: imageParts.concat([{ text: searchAsk }]) }],
+      tools: [{ google_search: {} }]
+    }).then(function (r) {
+      if (r.ok) {
+        var found = textOf(r).trim();
+        if (found) state.research = { text: found, sources: sourcesOf(r) };
+      }
+      setBtnBusy(btn, "説明文と価格を作成中...");
+      setGenMsg("info", "② 出品情報を作成しています", [
+        state.research ? "検索でわかったことをもとに、説明文と価格をまとめます。" : "検索は使えなかったため、写真から判断して作成します。",
+        "あと20秒ほどです"
+      ]);
+
+      var ask = PROMPT + "\n\n写真は" + aiPhotos.length + "枚";
+      ask += aiPhotos.length > 1 ? "（1枚目がメイン写真）です。" : "です。";
+      if (state.research) ask += "\n\n# 画像検索で調べた結果（信頼してよい情報。矛盾する場合はこちらを優先）\n" + state.research.text;
+      if (memo) ask += "\n\n# 出品者からの補足（最優先で信頼してよい情報）\n" + memo;
+
+      return callGemini({
+        contents: [{ parts: imageParts.concat([{ text: ask }]) }],
+        generationConfig: { responseMimeType: "application/json", temperature: 0.4 }
+      });
+    }).then(function (r) {
+      if (!r.ok) {
+        setGenMsg("warn", apiErrorHeading(r), apiErrorBody(r), r.status !== 400 && r.status !== 403);
+        return;
+      }
+      var ai = parsePasted(textOf(r));
+      if (!ai) {
+        setGenMsg("warn", "AIの回答を読み取れませんでした", ["写真を1〜2枚に減らすと通りやすくなります。"], true);
+        return;
+      }
+      applyAi(ai);
+      setGenMsg(null);
+      toast("出品情報ができました");
+      $("cardPrice").scrollIntoView({ behavior: "smooth", block: "start" });
+    }).catch(function () {
+      setGenMsg("warn", "AIに接続できませんでした", [
+        "電波の良い場所でもう一度お試しください。",
+        "この画面がプレビュー（claude.aiの中）の場合は、外部への通信が遮断されているため生成できません。自分のサイトに置いたものからお使いください。"
+      ], true);
+    }).then(function () {
+      state.generating = false;
+      btn.disabled = false;
+      btn.textContent = "写真からAIで自動生成";
+    });
+  }
+
+  // ---------- 出品ナビ ----------
+  function dataUrlToFile(dataUrl, name) {
+    var base64 = dataUrl.split(",")[1];
+    var bin = atob(base64);
+    var bytes = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return new File([bytes], name, { type: "image/jpeg" });
+  }
+
+  function sharePhotos() {
+    var files = [];
+    try {
+      files = state.photos.map(function (p, i) { return dataUrlToFile(p.url, "item-" + (i + 1) + ".jpg"); });
+    } catch (err) {
+      files = [];
+    }
+    if (files.length && navigator.canShare && navigator.canShare({ files: files }) && navigator.share) {
+      navigator.share({ files: files, title: state.fields.title }).catch(function (err) {
+        if (err && err.name === "AbortError") return;
+        toast("共有できませんでした。アルバムから選んでください");
+      });
+    } else {
+      toast("この端末では共有が使えません。アルバムから選んでください");
+    }
+  }
+
+  function navSteps() {
+    var ship = findShipping(state.shippingId);
+    var c = calc();
+    var steps = [];
+
+    steps.push({
+      kicker: "STEP 1",
+      title: "メルカリの出品画面をひらく",
+      hint: "メルカリアプリを開き、下の「出品」→「持ち物を売る」まで進みます。ここから先はこの画面と行き来しますが、入力内容とナビの現在地は自動保存されるので、途中から続けられます。",
+      link: "https://jp.mercari.com/sell",
+      linkLabel: "アプリがない場合はブラウザで出品する"
+    });
+
+    steps.push({
+      kicker: "STEP 2",
+      title: "写真を登録する",
+      hint: state.photos.length
+        ? "メルカリ側で「アルバムから選ぶ」→ さきほどの写真を、上から順に選びます。共有で渡すこともできます。"
+        : "写真がまだありません。1番の画面で追加してください。",
+      action: state.photos.length ? { label: "写真を共有して渡す", run: sharePhotos } : null,
+      value: state.photos.length ? state.photos.length + "枚（1枚目がメイン写真）" : "",
+      valueClass: "short"
+    });
+
+    steps.push({
+      kicker: "STEP 3",
+      title: "商品名を貼り付ける",
+      hint: "メルカリの「商品名」欄を長押し →「ペースト」。コピーは済んでいます。",
+      value: state.fields.title || "（未入力）",
+      valueClass: "short",
+      copy: state.fields.title
+    });
+
+    steps.push({
+      kicker: "STEP 4",
+      title: "商品の説明を貼り付ける",
+      hint: "「商品の説明」欄を長押し →「ペースト」。ポイントもキズも、この1つに入っています。",
+      value: state.desc || "（未入力）",
+      copy: state.desc
+    });
+
+    var catLeaf = (state.fields.categoryPath || "").split(">").pop().trim();
+    steps.push({
+      kicker: "STEP 5",
+      title: "カテゴリを選ぶ",
+      hint: catLeaf
+        ? "メルカリが写真から提案してくることもあります。違っていたらこの階層を選び直してください。検索欄には「" + catLeaf + "」をコピーしてあります。"
+        : "カテゴリが未設定です。3番の画面で入れておくと、ここに表示されます。",
+      value: state.fields.categoryPath || "（未設定）",
+      valueClass: "short",
+      copy: catLeaf
+    });
+
+    if (state.fields.brand) {
+      steps.push({
+        kicker: "STEP 6",
+        title: "ブランドを選ぶ",
+        hint: "ブランド欄でこの名前を検索します。候補に出てこない場合は空欄のままで大丈夫です。",
+        value: state.fields.brand,
+        valueClass: "short",
+        copy: state.fields.brand
+      });
+    }
+
+    steps.push({
+      title: "商品の状態を選ぶ",
+      hint: "同じ選択肢を選びます。迷ったら一段きびしい方を選ぶと、購入後のトラブルを避けられます。",
+      value: state.fields.condition,
+      valueClass: "short"
+    });
+
+    steps.push({
+      title: "配送方法を選ぶ",
+      hint: "配送料の負担は「" + (state.payer === "buyer" ? "着払い（購入者負担）" : "送料込み（出品者負担）") + "」、配送の方法はこれを選びます。",
+      value: ship.carrier + " / " + ship.label + "（目安 " + yen(ship.fee + ship.material) + "）",
+      valueClass: "short"
+    });
+
+    steps.push({
+      title: "販売価格を入れる",
+      hint: "手数料と送料を引くと、手元に残るのは " + yen(c.profit) + " です。",
+      value: yen(c.price),
+      valueClass: "money",
+      copy: String(c.price)
+    });
+
+    steps.push({
+      title: "出品するを押して完了",
+      hint: "内容を確認して「出品する」を押します。おつかれさまでした。売れたら、選んだ配送方法で送ってください。",
+      done: true,
+      finish: true
+    });
+
+    // STEPの通し番号を振り直す
+    steps.forEach(function (s, i) { s.kicker = "STEP " + (i + 1); });
+    return steps;
+  }
+
+  function renderNav() {
+    var steps = navSteps();
+    if (state.navIndex >= steps.length) state.navIndex = steps.length - 1;
+    if (state.navIndex < 0) state.navIndex = 0;
+    var step = steps[state.navIndex];
+
+    $("navCount").textContent = (state.navIndex + 1) + " / " + steps.length;
+
+    var track = $("navTrack");
+    track.textContent = "";
+    steps.forEach(function (s, i) {
+      var bar = document.createElement("i");
+      if (i <= state.navIndex) bar.className = "on";
+      track.appendChild(bar);
+    });
+
+    var body = $("navBody");
+    body.textContent = "";
+
+    var kicker = document.createElement("div");
+    kicker.className = "nav-kicker";
+    kicker.textContent = step.kicker;
+    body.appendChild(kicker);
+
+    var h = document.createElement("h3");
+    h.textContent = step.title;
+    body.appendChild(h);
+
+    var hint = document.createElement("p");
+    hint.className = "nav-hint";
+    hint.textContent = step.hint;
+    body.appendChild(hint);
+
+    if (step.value) {
+      var val = document.createElement("div");
+      val.className = "nav-value" + (step.valueClass ? " " + step.valueClass : "");
+      val.textContent = step.value;
+      body.appendChild(val);
+    }
+
+    if (step.copy) {
+      var row = document.createElement("div");
+      row.className = "btn-row";
+      var cbtn = document.createElement("button");
+      cbtn.type = "button";
+      cbtn.className = "full";
+      cbtn.textContent = "もう一度コピーする";
+      cbtn.addEventListener("click", function () { copy(step.copy); });
+      row.appendChild(cbtn);
+      body.appendChild(row);
+    }
+
+    if (step.action) {
+      var arow = document.createElement("div");
+      arow.className = "btn-row";
+      var abtn = document.createElement("button");
+      abtn.type = "button";
+      abtn.className = "full";
+      abtn.textContent = step.action.label;
+      abtn.addEventListener("click", step.action.run);
+      arow.appendChild(abtn);
+      body.appendChild(arow);
+    }
+
+    if (step.finish) {
+      var frow = document.createElement("div");
+      frow.className = "btn-row";
+      var save = document.createElement("button");
+      save.type = "button";
+      save.textContent = "下書きに残す";
+      save.addEventListener("click", function () {
+        $("saveDraft").click();
+      });
+      var next = document.createElement("button");
+      next.type = "button";
+      next.textContent = "次の商品へ";
+      next.addEventListener("click", function () {
+        closeNav();
+        $("resetAll").click();
+      });
+      frow.appendChild(save);
+      frow.appendChild(next);
+      body.appendChild(frow);
+    }
+
+    if (step.link) {
+      var a = document.createElement("a");
+      a.className = "sell-link";
+      a.href = step.link;
+      a.target = "_blank";
+      a.rel = "noreferrer";
+      a.textContent = step.linkLabel || "ひらく";
+      body.appendChild(a);
+    }
+
+    $("navBack").disabled = state.navIndex === 0;
+    $("navNext").textContent = step.done ? "ナビを終える" : "貼れた・つぎへ";
+    body.scrollTop = 0;
+    autosave();
+  }
+
+  function openNav() {
+    state.navOpen = true;
+    $("navPanel").hidden = false;
+    $("dock").hidden = true;
+    document.body.style.overflow = "hidden";
+    renderNav();
+    copyForStep();
+    $("navNext").focus();
+  }
+
+  function closeNav() {
+    state.navOpen = false;
+    $("navPanel").hidden = true;
+    $("dock").hidden = false;
+    document.body.style.overflow = "";
+    autosave();
+  }
+
+  // いま開いている手順の文字を、押した勢いでコピーしておく
+  function copyForStep() {
+    var steps = navSteps();
+    var step = steps[state.navIndex];
+    if (step && step.copy) copy(step.copy, true);
+  }
+
+  function navGo(delta) {
+    var steps = navSteps();
+    var next = state.navIndex + delta;
+    if (next < 0) return;
+    if (next >= steps.length) {
+      closeNav();
+      toast("出品おつかれさまでした");
+      return;
+    }
+    state.navIndex = next;
+    renderNav();
+    var step = steps[next];
+    if (step && step.copy) copy(step.copy, true);
+  }
+
+  // ---------- 下書き ----------
+  function readDrafts() {
+    try {
+      var list = JSON.parse(safeGet(DRAFT_KEY) || "[]");
+      return Array.isArray(list) ? list : [];
+    } catch (err) {
+      return [];
+    }
+  }
+
+  function writeDrafts(list) {
+    if (!safeSet(DRAFT_KEY, JSON.stringify(list.slice(0, 20)))) toast("保存できませんでした（容量不足）");
+  }
+
+  function renderDrafts() {
+    var list = readDrafts();
+    $("draftsBtn").textContent = "下書き " + list.length;
+    var box = $("draftList");
+    box.textContent = "";
+    if (!list.length) {
+      var p = document.createElement("p");
+      p.className = "note";
+      p.textContent = "まだ保存されていません。5番の「下書きに保存」で、この端末に保存できます。";
+      box.appendChild(p);
+      return;
+    }
+    list.forEach(function (d) {
+      var row = document.createElement("div");
+      row.className = "draft";
+      if (d.thumb) {
+        var img = document.createElement("img");
+        img.src = d.thumb;
+        img.alt = "";
+        row.appendChild(img);
+      }
+      var t = document.createElement("div");
+      t.className = "t";
+      var b = document.createElement("b");
+      b.textContent = (d.fields && d.fields.title) || "（タイトルなし）";
+      var s = document.createElement("span");
+      s.textContent = yen(d.price) + " ・ " + new Date(d.savedAt).toLocaleDateString("ja-JP");
+      t.appendChild(b);
+      t.appendChild(s);
+      row.appendChild(t);
+
+      var open = document.createElement("button");
+      open.type = "button";
+      open.textContent = "開く";
+      open.addEventListener("click", function () {
+        state.fields = d.fields;
+        state.ai = d.ai || null;
+        state.research = d.research || null;
+        state.price = d.price;
+        state.shippingId = d.shippingId;
+        state.shipOverride = d.shipOverride || "";
+        state.payer = d.payer || "seller";
+        state.opts = normalizeOpts(d.opts);
+        state.desc = d.desc || "";
+        state.descTouched = true;
+        state.navIndex = 0;
+        state.photos = d.thumb ? [{ id: mkId(), url: d.thumb }] : [];
+        syncFieldsToDom();
+        setPrice(d.price);
+        renderPhotos();
+        renderAiNotes();
+        renderPriceReason();
+        renderPayerChips();
+        renderShipNote();
+        refreshDescription();
+        showDrafts(false);
+        toast("下書きを開きました");
+      });
+      row.appendChild(open);
+
+      var del = document.createElement("button");
+      del.type = "button";
+      del.className = "quiet";
+      del.textContent = "削除";
+      del.addEventListener("click", function () {
+        writeDrafts(readDrafts().filter(function (x) { return x.id !== d.id; }));
+        renderDrafts();
+      });
+      row.appendChild(del);
+      box.appendChild(row);
+    });
+  }
+
+  function showDrafts(open) {
+    $("draftsCard").hidden = !open;
+    $("main").hidden = open;
+    if (open) renderDrafts();
+  }
+
+  // ---------- 起動 ----------
+  function bindField(id, key, after) {
+    $(id).addEventListener("input", function (e) {
+      state.fields[key] = e.target.value;
+      if (after) after();
+      autosave();
+    });
+  }
+
+  function init() {
+    var condSel = $("f_condition");
+    CONDITIONS.forEach(function (c) {
+      var o = document.createElement("option");
+      o.value = c;
+      o.textContent = c;
+      condSel.appendChild(o);
+    });
+
+    var shipSel = $("f_shipping");
+    SHIPPING.forEach(function (s) {
+      var o = document.createElement("option");
+      o.value = s.id;
+      o.textContent = s.carrier + " / " + s.label + " " + yen(s.fee + s.material);
+      shipSel.appendChild(o);
+    });
+
+    bindField("f_title", "title", refreshTitleCount);
+    bindField("f_category", "categoryPath");
+    bindField("f_brand", "brand");
+    bindField("f_size", "size");
+    bindField("f_color", "color");
+
+    $("f_condition").addEventListener("change", function (e) {
+      state.fields.condition = e.target.value;
+      autosave();
+    });
+
+    $("f_memo").addEventListener("input", function (e) {
+      state.memo = e.target.value;
+      autosave();
+    });
+
+    $("f_desc").addEventListener("input", function (e) {
+      state.descTouched = true;
+      state.desc = e.target.value;
+      state.fields.bodyText = e.target.value;
+      var el = $("descCount");
+      el.textContent = state.desc.length + " / 1000";
+      el.className = state.desc.length > 1000 ? "over" : "";
+      autosave();
+    });
+
+    ["instant", "anon", "notes"].forEach(function (key) {
+      var el = $("o_" + key);
+      el.addEventListener("change", function () {
+        state.opts[key] = el.checked;
+        if (state.descTouched) {
+          // 手直し済みの本文は壊さず、前後の固定パーツだけ作り直す
+          state.fields.bodyText = stripFixed(state.desc);
+          state.descTouched = false;
+        }
+        refreshDescription();
+      });
+    });
+
+    $("fillTemplate").addEventListener("click", function () {
+      state.fields.bodyText = templateBody();
+      state.descTouched = false;
+      refreshDescription();
+      toast("ひな形を入れました");
+    });
+
+    $("trimTitle").addEventListener("click", function () {
+      state.fields.title = trimTitle(state.fields.title);
+      $("f_title").value = state.fields.title;
+      refreshTitleCount();
+      autosave();
+      toast("40文字に収めました");
+    });
+
+    $("camBtn").addEventListener("click", function () { $("camInput").click(); });
+    $("albumBtn").addEventListener("click", function () { $("albumInput").click(); });
+    $("camInput").addEventListener("change", function (e) { addFiles(e.target.files); e.target.value = ""; });
+    $("albumInput").addEventListener("change", function (e) { addFiles(e.target.files); e.target.value = ""; });
+
+    $("generateBtn").addEventListener("click", generate);
+
+    $("saveKey").addEventListener("click", function () {
+      var value = $("f_key").value.trim();
+      if (!value) {
+        toast("キーを入力してください");
+        return;
+      }
+      storeKey(value);
+      $("f_key").value = "";
+      $("keyPanel").hidden = true;
+      renderKeyState();
+      if (value.indexOf("AIza") !== 0) {
+        setGenMsg("warn", "キーの形が少し違うようです", ["Google AI Studio のキーは AIza で始まります。うまく生成できない場合は、コピーし直してみてください。"]);
+      } else {
+        setGenMsg(null);
+      }
+      toast("キーを保存しました");
+    });
+
+    $("savePass").addEventListener("click", function () {
+      var value = $("f_pass").value.trim();
+      state.password = value;
+      try {
+        if (value) localStorage.setItem(PASS_STORE, value);
+        else localStorage.removeItem(PASS_STORE);
+      } catch (err) {
+        console.warn("[pass] save failed", err.message);
+      }
+      $("f_pass").value = "";
+      $("passPanel").hidden = true;
+      renderKeyState();
+      setGenMsg(null);
+      toast("合言葉を保存しました");
+    });
+
+    $("clearKey").addEventListener("click", function () {
+      storeKey("");
+      $("f_key").value = "";
+      renderKeyState();
+      toast("キーを削除しました");
+    });
+
+    $("copyPrompt").addEventListener("click", function () { copy(PROMPT); });
+
+    $("applyPaste").addEventListener("click", function () {
+      var ai = parsePasted($("pasteBox").value);
+      var msg = $("pasteMsg");
+      msg.textContent = "";
+      if (!ai) {
+        msg.appendChild(callout("warn", "読み取れませんでした", ["AIの回答のうち { から } までを、そのまま貼り付けてください。"]));
+        return;
+      }
+      applyAi(ai);
+      $("pasteBox").value = "";
+      toast("反映しました");
+    });
+
+    $("loadSample").addEventListener("click", function () {
+      applyAi(JSON.parse(JSON.stringify(SAMPLE)));
+      toast("サンプルを入れました");
+    });
+
+    $("f_price").addEventListener("input", function (e) {
+      var digits = e.target.value.replace(/[^0-9]/g, "");
+      e.target.value = digits;
+      state.price = Number(digits) || 0;
+      $("priceRange").value = String(Math.min(Number($("priceRange").max), Math.max(300, state.price)));
+      renderPriceChips();
+      renderBreakdown();
+      autosave();
+    });
+
+    $("priceRange").addEventListener("input", function (e) { setPrice(e.target.value); });
+
+    $("f_shipping").addEventListener("change", function (e) {
+      state.shippingId = e.target.value;
+      renderShipNote();
+      renderBreakdown();
+      autosave();
+    });
+
+    $("f_shipOverride").addEventListener("input", function (e) {
+      e.target.value = e.target.value.replace(/[^0-9]/g, "");
+      state.shipOverride = e.target.value;
+      renderBreakdown();
+      autosave();
+    });
+
+    Array.prototype.forEach.call(document.querySelectorAll("[data-copy]"), function (btn) {
+      btn.addEventListener("click", function () {
+        var kind = btn.getAttribute("data-copy");
+        if (kind === "title") copy(state.fields.title);
+        else if (kind === "price") copy(String(state.price));
+        else copy(state.desc);
+      });
+    });
+
+    $("startNav").addEventListener("click", function () {
+      state.navIndex = 0;
+      openNav();
+    });
+    $("dockNav").addEventListener("click", function () { openNav(); });
+    $("navClose").addEventListener("click", closeNav);
+    $("navNext").addEventListener("click", function () { navGo(1); });
+    $("navBack").addEventListener("click", function () { navGo(-1); });
+
+    $("saveDraft").addEventListener("click", function () {
+      function store(thumb) {
+        var list = readDrafts();
+        list.unshift({
+          id: mkId(),
+          savedAt: Date.now(),
+          thumb: thumb || "",
+          fields: state.fields,
+          ai: state.ai,
+          research: state.research,
+          price: state.price,
+          shippingId: state.shippingId,
+          shipOverride: state.shipOverride,
+          payer: state.payer,
+          opts: state.opts,
+          desc: state.desc
+        });
+        writeDrafts(list);
+        renderDrafts();
+        toast("下書きに保存しました");
+      }
+      if (state.photos.length) makeThumb(state.photos[0].url).then(store);
+      else store("");
+    });
+
+    $("resetAll").addEventListener("click", function () {
+      state.photos = [];
+      state.ai = null;
+      state.research = null;
+      state.memo = "";
+      state.fields = {
+        title: "", categoryPath: "", itemName: "", brand: "", size: "", color: "",
+        condition: CONDITIONS[2], bodyText: ""
+      };
+      state.shipOverride = "";
+      state.payer = "seller";
+      state.descTouched = false;
+      state.desc = "";
+      state.navIndex = 0;
+      syncFieldsToDom();
+      setPrice(1000);
+      renderPhotos();
+      renderAiNotes();
+      renderPriceReason();
+      renderPayerChips();
+      renderShipNote();
+      refreshDescription();
+      setGenMsg(null);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      toast("新しい出品をはじめます");
+    });
+
+    $("draftsBtn").addEventListener("click", function () { showDrafts($("draftsCard").hidden); });
+    $("closeDrafts").addEventListener("click", function () { showDrafts(false); });
+
+    loadKey();
+    state.password = safeGet(PASS_STORE) || "";
+    renderKeyState();
+    probeServer();
+    restoreSession();
+    syncFieldsToDom();
+    renderPhotos();
+    renderPriceChips();
+    renderProfitChips();
+    renderPayerChips();
+    renderShipNote();
+    renderAiNotes();
+    renderPriceReason();
+    setPrice(state.price);
+    refreshDescription();
+    renderDrafts();
+    if (state.navOpen) openNav();
+  }
+
+  // 本文の前後に付く固定パーツ（テンプレートに合わせたもの）
+  var HEADER_LINES = ["【コメントなし即購入OK!】", "【匿名配送\u2728】"];
+
+  var NOTES_BLOCK = [
+    "※素人検品になりますので",
+    "見落しを含め、",
+    "中古品、自宅保管にご理解頂ける方のみご検討をお願いします。",
+    "",
+    "※完璧をお求めの方はご購入をお控えください。",
+    "",
+    "※何かありましたらご購入前にご質問ください☺︎",
+    "",
+    "※プロフィールを読んだ上で",
+    "ご検討ください。"
+  ].join("\n");
+
+  // 手直しで固定パーツが本文に紛れ込んでも、二重にならないよう取り除く。
+  // 固定パーツの行だけを消すので、利用者が書き足した文は残る。
+  var NOTES_LINES = NOTES_BLOCK.split("\n").filter(function (line) { return line.trim() !== ""; });
+
+  function stripFixed(text) {
+    var kept = String(text || "").split("\n").filter(function (line) {
+      var t = line.trim();
+      return HEADER_LINES.indexOf(t) < 0 && NOTES_LINES.indexOf(t) < 0;
+    });
+    return kept.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  }
+
+  function renderKeyState() {
+    var box = $("keyState");
+    box.textContent = "";
+
+    // サーバーにキーが用意されている場合、利用者は何も設定しなくてよい
+    if (state.server.ready) {
+      $("keyPanel").hidden = true;
+      var okDot = document.createElement("span");
+      okDot.className = "dot on";
+      var okText = document.createElement("span");
+      okText.textContent = state.server.needsPassword && !state.password
+        ? "このアプリは合言葉を入れると使えます"
+        : "このアプリはこのまま使えます（設定は不要です）";
+      box.appendChild(okDot);
+      box.appendChild(okText);
+      if (state.server.needsPassword) {
+        var passBtn = document.createElement("button");
+        passBtn.type = "button";
+        passBtn.className = "quiet";
+        passBtn.textContent = state.password ? "合言葉を変える" : "合言葉を入れる";
+        passBtn.addEventListener("click", function () {
+          var panel = $("passPanel");
+          panel.hidden = !panel.hidden;
+          if (!panel.hidden) $("f_pass").focus();
+        });
+        box.appendChild(passBtn);
+      }
+      $("manualBox").hidden = true;
+      return;
+    }
+
+    $("manualBox").hidden = false;
+    $("passPanel").hidden = true;
+
+    var dot = document.createElement("span");
+    dot.className = "dot" + (state.apiKey ? " on" : "");
+    var text = document.createElement("span");
+    text.textContent = state.apiKey
+      ? "AIキー設定ずみ（このボタンだけで自動生成できます）"
+      : "自動生成には無料のAIキーが1回だけ必要です";
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "quiet";
+    btn.textContent = state.apiKey ? "キーを変更" : "キーを設定する";
+    btn.addEventListener("click", function () {
+      var panel = $("keyPanel");
+      panel.hidden = !panel.hidden;
+      if (!panel.hidden) $("f_key").focus();
+    });
+    box.appendChild(dot);
+    box.appendChild(text);
+    box.appendChild(btn);
+  }
+
+  // このアプリが置かれているサーバーが、AIキーを持っているかを確かめる
+  function probeServer() {
+    return fetch(SERVER_URL, { method: "GET" }).then(function (res) {
+      if (!res.ok) return null;
+      return res.json();
+    }).then(function (info) {
+      state.server.checked = true;
+      state.server.ready = !!(info && info.ready);
+      state.server.needsPassword = !!(info && info.needsPassword);
+      renderKeyState();
+    }).catch(function () {
+      state.server.checked = true;
+      state.server.ready = false;
+      renderKeyState();
+    });
+  }
+
+  // サーバー経由で作る（利用者はキーを持たない）
+  function generateOnServer(aiPhotos) {
+    var btn = $("generateBtn");
+    setBtnBusy(btn, "写真から作成中...");
+    setGenMsg("info", "AIが写真を見ています", ["商品の特定 → 相場の確認 → 説明文の作成", "30秒ほどかかります"]);
+
+    return fetch(SERVER_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        images: aiPhotos.map(function (p) { return { base64: p.url.split(",")[1] }; }),
+        memo: state.memo.trim(),
+        password: state.password
+      })
+    }).then(function (res) {
+      return res.json().then(function (data) { return { ok: res.ok, status: res.status, data: data }; });
+    }).then(function (r) {
+      if (!r.ok) {
+        if (r.status === 401) {
+          state.server.needsPassword = true;
+          $("passPanel").hidden = false;
+          renderKeyState();
+          setGenMsg("warn", "合言葉が必要です", [r.data.error || "配布した人に確認してください。"]);
+          return;
+        }
+        if (r.status === 501) {
+          // サーバーにキーがなかった場合は、各自のキーを使う方式に戻す
+          state.server.ready = false;
+          renderKeyState();
+          setGenMsg("info", "このサーバーにはAIキーがありません", ["各自のキーを設定するか、手持ちのAIアプリをお使いください。"]);
+          return;
+        }
+        setGenMsg("warn", "生成できませんでした", [r.data.error || "少し待ってからお試しください。"], r.status !== 401);
+        return;
+      }
+      if (!r.data.listing) {
+        setGenMsg("warn", "AIの回答を読み取れませんでした", ["写真を1〜2枚に減らすと通りやすくなります。"], true);
+        return;
+      }
+      state.research = r.data.research || null;
+      applyAi(r.data.listing);
+      setGenMsg(null);
+      toast("出品情報ができました");
+      $("cardPrice").scrollIntoView({ behavior: "smooth", block: "start" });
+    }).catch(function () {
+      setGenMsg("warn", "AIに接続できませんでした", ["電波の良い場所でもう一度お試しください。"], true);
+    }).then(function () {
+      state.generating = false;
+      btn.disabled = false;
+      btn.textContent = "写真からAIで自動生成";
+    });
+  }
+
+  init();
+})();
+</script>
+
+
+</body>
+</html>
