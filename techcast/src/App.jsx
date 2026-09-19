@@ -6,6 +6,13 @@ import {
   pickDefaultVoice
 } from './lib/speech.js';
 import {
+  BackgroundAudio,
+  ScreenWakeLock,
+  isMediaSessionSupported,
+  setMediaSession,
+  setMediaSessionState
+} from './lib/media-session.js';
+import {
   deleteEpisode,
   exportAll,
   importAll,
@@ -70,17 +77,60 @@ export default function App() {
   });
 
   const playerRef = useRef(null);
-  if (playerRef.current === null) playerRef.current = new EpisodePlayer();
+  if (playerRef.current === null) {
+    playerRef.current = new EpisodePlayer({ backgroundAudio: new BackgroundAudio() });
+  }
   const player = playerRef.current;
+
+  const wakeLockRef = useRef(null);
+  if (wakeLockRef.current === null) wakeLockRef.current = new ScreenWakeLock();
 
   const autoRunRef = useRef(false);
   const generateRef = useRef(null);
+  const lastRunDayRef = useRef(null);
 
   // --- 初期化 --------------------------------------------------------------
 
   useEffect(() => player.subscribe(setPlayback), [player]);
 
-  useEffect(() => () => player.dispose(), [player]);
+  useEffect(() => {
+    const wakeLock = wakeLockRef.current;
+    return () => {
+      player.dispose();
+      wakeLock.dispose();
+    };
+  }, [player]);
+
+  // ロック画面とイヤホンのボタンから操作できるようにする。
+  // 番組が変わるたびに登録し直さないと、表示が前の番組のままになる。
+  useEffect(() => {
+    if (!currentEpisode) return;
+    setMediaSession({
+      title: currentEpisode.title,
+      artist: 'TechCast',
+      album: currentEpisode.dateLabel,
+      handlers: {
+        onPlay: () => player.play(),
+        onPause: () => player.pause(),
+        onStop: () => player.stop(),
+        onNext: () => player.skipSegment(1),
+        onPrev: () => player.skipSegment(-1)
+      }
+    });
+  }, [currentEpisode, player]);
+
+  useEffect(() => {
+    if (playback.state === 'playing') setMediaSessionState('playing');
+    else if (playback.state === 'paused') setMediaSessionState('paused');
+    else setMediaSessionState('none');
+  }, [playback.state]);
+
+  // 画面が消えると読み上げが止まる端末があるので、再生中だけ点けておく。
+  useEffect(() => {
+    const wakeLock = wakeLockRef.current;
+    if (settings.keepScreenAwake && playback.state === 'playing') wakeLock.request();
+    else wakeLock.release();
+  }, [settings.keepScreenAwake, playback.state]);
 
   useEffect(() => {
     let cancelled = false;
@@ -129,7 +179,8 @@ export default function App() {
           interestWeights: settings.interestWeights,
           useClaude: options.useClaude ?? settings.useClaude,
           excludeLinks: options.includeSeen ? [] : recentlyCoveredLinks(stored),
-          learnedTermIds: loadLearnedTerms()
+          learnedTermIds: loadLearnedTerms(),
+          urlOverrides: settings.sourceUrlOverrides || {}
         });
         const next = saveEpisode(episode);
         setEpisodes(next);
@@ -148,6 +199,22 @@ export default function App() {
     generateRef.current = generate;
   }, [generate]);
 
+  // 毎朝の更新。アプリを開きっぱなしにしていても、日付が変わって戻ってきたら作り直す。
+  // 「毎日新しいニュースに入れ替わっている」が運用の前提なので、
+  // ユーザーが更新を意識しなくて済むようにしておく。
+  useEffect(() => {
+    function onVisible() {
+      if (document.visibilityState !== 'visible') return;
+      if (!loadSettings().autoGenerateOnOpen) return;
+      if (loadEpisodes().some((e) => e.id === todayId())) return;
+      if (autoRunRef.current && lastRunDayRef.current === todayId()) return;
+      lastRunDayRef.current = todayId();
+      generateRef.current?.();
+    }
+    document.addEventListener('visibilitychange', onVisible);
+    return () => document.removeEventListener('visibilitychange', onVisible);
+  }, []);
+
   // 情報源カタログの取得と、朝いちばんの自動生成。
   // 自動生成をここに置いているのは、「カタログが返ってきた」という外部イベントに
   // ぶら下げたいから。別の effect にすると、状態の変化を追いかける形になって複雑になる。
@@ -163,6 +230,7 @@ export default function App() {
         if (!loadSettings().autoGenerateOnOpen) return;
         if (loadEpisodes().some((e) => e.id === todayId())) return;
         autoRunRef.current = true;
+        lastRunDayRef.current = todayId();
         generateRef.current?.();
       })
       .catch(() => {
@@ -195,6 +263,29 @@ export default function App() {
 
   function handleToggleLearned(termId) {
     setLearnedTerms(toggleLearnedTerm(termId));
+  }
+
+  function handleSaveSourceUrl(sourceId, url) {
+    if (!url) return;
+    updateSettings({
+      sourceUrlOverrides: { ...(settings.sourceUrlOverrides || {}), [sourceId]: url }
+    });
+  }
+
+  function handleClearSourceUrl(sourceId) {
+    const next = { ...(settings.sourceUrlOverrides || {}) };
+    delete next[sourceId];
+    updateSettings({ sourceUrlOverrides: next });
+  }
+
+  // プリセットは情報源と興味の重みをまとめて差し替える。
+  // 片方だけ変えても番組の中身は変わらないので、必ずセットで適用する。
+  function handleApplyPreset(preset) {
+    updateSettings({
+      presetId: preset.id,
+      enabledSourceIds: preset.sourceIds,
+      interestWeights: preset.weights || null
+    });
   }
 
   function handleSelectEpisode(episode) {
@@ -285,7 +376,12 @@ export default function App() {
           <SourcesView
             catalog={catalog}
             enabledSourceIds={enabledSourceIds}
-            onChange={(ids) => updateSettings({ enabledSourceIds: ids })}
+            urlOverrides={settings.sourceUrlOverrides || {}}
+            presetId={settings.presetId}
+            onChange={(ids) => updateSettings({ enabledSourceIds: ids, presetId: null })}
+            onApplyPreset={handleApplyPreset}
+            onSaveUrl={handleSaveSourceUrl}
+            onClearUrl={handleClearSourceUrl}
             postJson={postJson}
           />
         )}
@@ -297,6 +393,8 @@ export default function App() {
             learnedTerms={learnedTerms}
             onChange={updateSettings}
             onVoiceChange={handleVoiceChange}
+            mediaSessionSupported={isMediaSessionSupported()}
+            wakeLockSupported={ScreenWakeLock.isSupported()}
             onExport={exportAll}
             onImport={(payload) => {
               importAll(payload);

@@ -2,7 +2,7 @@
 // ---------------------------------------------------------------------------
 // フロントからは「設定を渡すとエピソードが返る」だけに見えるようにする。
 
-import { SOURCES, SOURCE_BY_ID, defaultEnabledSourceIds } from './sources.js';
+import { SOURCE_BY_ID, defaultEnabledSourceIds } from './sources.js';
 import { fetchAllSources } from './rss.js';
 import { defaultInterestWeights } from './taxonomy.js';
 import { dedupe, scoreItem, select, planFor } from './rank.js';
@@ -25,6 +25,7 @@ export async function collect({
   maxAgeHours = 36,
   excludeLinks = [],
   learnedTermIds = [],
+  urlOverrides = {},
   timeoutMs
 } = {}) {
   const sources = resolveSources(sourceIds);
@@ -40,7 +41,7 @@ export async function collect({
   }
 
   const weights = { ...defaultInterestWeights(), ...(interestWeights || {}) };
-  const { items, health } = await fetchAllSources(sources, { timeoutMs });
+  const { items, health } = await fetchAllSources(sources, { timeoutMs, urlOverrides });
 
   const unique = dedupe(items);
   const now = Date.now();
@@ -118,4 +119,4 @@ export async function generateEpisode(options = {}) {
   }
 }
 
-export { SOURCES };
+export { SOURCES, PRESETS } from './sources.js';

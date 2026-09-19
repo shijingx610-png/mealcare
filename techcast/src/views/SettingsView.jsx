@@ -13,6 +13,8 @@ export default function SettingsView({
   learnedTerms,
   onChange,
   onVoiceChange,
+  mediaSessionSupported,
+  wakeLockSupported,
   onExport,
   onImport
 }) {
@@ -151,6 +153,32 @@ export default function SettingsView({
         )}
       </fieldset>
 
+      <fieldset>
+        <legend>スマホで聞く</legend>
+        <label className="switch-row">
+          <input
+            type="checkbox"
+            checked={settings.keepScreenAwake}
+            onChange={(e) => onChange({ keepScreenAwake: e.target.checked })}
+          />
+          <span>再生中は画面を消さない</span>
+        </label>
+        <p className="hint">
+          ブラウザの読み上げは、画面が消えると止まる端末があります。
+          最後まで聞き切るにはこれを入れておくのが確実です。そのぶん電池は減ります。
+          {!wakeLockSupported && ' このブラウザはこの機能に対応していないため、設定しても効きません。'}
+        </p>
+        <p className="hint">
+          {mediaSessionSupported
+            ? 'ロック画面とイヤホンのボタンから、再生・停止・コーナー送りができます。'
+            : 'このブラウザはロック画面からの操作に対応していません。'}
+        </p>
+        <p className="hint">
+          ホーム画面に追加すると、アプリのように開けてオフラインでも過去の番組を聞けます。
+          iOS は共有メニューから、Android はメニューから追加できます。
+        </p>
+      </fieldset>
+
       {catalog && (
         <fieldset>
           <legend>興味の重み</legend>
@@ -177,6 +205,40 @@ export default function SettingsView({
               );
             })}
           </div>
+        </fieldset>
+      )}
+
+      {catalog?.podcast && (
+        <fieldset>
+          <legend>ポッドキャストアプリで聞く</legend>
+          {catalog.podcast.ttsProvider ? (
+            <>
+              <p className="hint">
+                音声合成が設定されています（{catalog.podcast.ttsProvider}）。
+                下の URL を普段のポッドキャストアプリに登録すると、毎朝の番組がそちらに届きます。
+                ロック画面もバックグラウンド再生もオフラインも、アプリ側の機能で手に入ります。
+              </p>
+              <p className="feed-url">
+                <code>{catalog.podcast.feedUrl}</code>
+                <button
+                  type="button"
+                  onClick={() => navigator.clipboard?.writeText(catalog.podcast.feedUrl)}
+                >
+                  コピー
+                </button>
+              </p>
+              <p className="hint">
+                配信できる回：{catalog.podcast.episodesWithAudio} 本。
+                毎朝の自動生成を動かしていないと増えません。
+              </p>
+            </>
+          ) : (
+            <p className="hint">
+              音声合成が未設定のため、いまはこのアプリ内での読み上げのみです。
+              VOICEVOX か Google Cloud TTS を設定すると、音声ファイルが作られ、
+              ポッドキャストアプリから購読できるようになります。手順は README に書いてあります。
+            </p>
+          )}
         </fieldset>
       )}
 

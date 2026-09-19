@@ -38,7 +38,14 @@ function apiDevMiddleware(env) {
           const handler = mod.default;
           if (typeof handler !== 'function') return next();
 
-          await handler({ ...req, body, method: req.method, query: {} }, createResponse(res));
+          // Vercel のハンドラが見るのは headers / query / body / method。
+          // IncomingMessage をそのまま展開しても headers は写らないので明示的に渡す。
+          const url = new URL(req.url, 'http://localhost');
+          const query = Object.fromEntries(url.searchParams.entries());
+          await handler(
+            { headers: req.headers, method: req.method, url: req.url, query, body },
+            createResponse(res)
+          );
         } catch (err) {
           server.config.logger.error(`[api/${name}] ${err.stack || err.message}`);
           if (!res.writableEnded) {
@@ -98,9 +105,14 @@ function createResponse(res) {
       return this;
     },
     send(payload) {
-      res.end(typeof payload === 'string' ? payload : JSON.stringify(payload));
+      res.end(
+        typeof payload === 'string' || Buffer.isBuffer(payload)
+          ? payload
+          : JSON.stringify(payload)
+      );
       return this;
     },
+    // 音声は Buffer のまま返す。文字列化すると壊れる。
     end(payload) {
       res.end(payload);
       return this;

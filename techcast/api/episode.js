@@ -23,6 +23,8 @@ export default async function handler(req, res) {
       maxAgeHours: Number(body.maxAgeHours) > 0 ? Number(body.maxAgeHours) : 36,
       excludeLinks: Array.isArray(body.excludeLinks) ? body.excludeLinks.slice(0, 500) : [],
       learnedTermIds: Array.isArray(body.learnedTermIds) ? body.learnedTermIds : [],
+      urlOverrides:
+        body.urlOverrides && typeof body.urlOverrides === 'object' ? body.urlOverrides : {},
       useClaude: body.useClaude !== false
     });
     res.status(200).json({ episode });

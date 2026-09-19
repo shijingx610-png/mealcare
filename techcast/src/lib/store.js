@@ -39,12 +39,17 @@ function write(key, value) {
 export const DEFAULT_SETTINGS = {
   enabledSourceIds: null, // null = サーバー側の既定（core のみ）
   interestWeights: null, // null = タグごとの既定値
+  // フィードが移転したときに手で直した URL。カタログより優先される。
+  sourceUrlOverrides: {},
+  presetId: null,
   durationMin: 10,
   maxAgeHours: 36,
   useClaude: true,
   rate: 1.15,
   voiceURI: null,
-  autoGenerateOnOpen: true
+  autoGenerateOnOpen: true,
+  // 再生中に画面が消えると読み上げが止まる端末があるため、既定で点けておく
+  keepScreenAwake: true
 };
 
 export function loadSettings() {

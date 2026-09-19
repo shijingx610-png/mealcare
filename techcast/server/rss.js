@@ -191,81 +191,192 @@ export function parseFeed(xml) {
 }
 
 /**
- * 1 つの情報源を取得して正規化する。失敗しても投げず、結果に理由を載せる。
- * @param {{id:string,name:string,url:string,lang:string,weight:number,tags:string[]}} source
- * @param {{timeoutMs?:number, maxItems?:number}} [options]
+ * HTML からフィードの場所を見つける。
+ *
+ * フィードの URL は移転する。だが移転先はたいてい、サイトのトップページの
+ * <link rel="alternate" type="application/rss+xml" href="..."> に書いてある。
+ * これは RSS の自動検出として昔から使われている仕組みで、
+ * 「カタログの URL が死んだら本人に聞きにいく」ための最短経路になる。
  */
-export async function fetchSource(source, options = {}) {
-  const timeoutMs = options.timeoutMs ?? DEFAULT_TIMEOUT_MS;
-  const maxItems = options.maxItems ?? 25;
-  const startedAt = Date.now();
+export function discoverFeedUrls(html, baseUrl) {
+  if (!html) return [];
+  const found = [];
+
+  const linkTags = html.match(/<link\b[^>]*>/gi) || [];
+  for (const tag of linkTags) {
+    if (!/rel\s*=\s*["']?[^"'>]*alternate/i.test(tag)) continue;
+    if (!/type\s*=\s*["'](application\/(rss|atom)\+xml|application\/rdf\+xml|text\/xml)["']/i.test(tag)) {
+      continue;
+    }
+    const href = /href\s*=\s*["']([^"']+)["']/i.exec(tag);
+    if (!href) continue;
+    try {
+      found.push(new URL(decodeEntities(href[1]).trim(), baseUrl).toString());
+    } catch {
+      // 解決できない href は捨てる
+    }
+  }
+
+  // よくある置き場所も候補に足す。<link> を書いていないサイトがまだ多い。
+  if (found.length === 0) {
+    for (const guess of ['/feed', '/rss', '/rss.xml', '/atom.xml', '/index.rdf', '/feed.xml']) {
+      try {
+        found.push(new URL(guess, baseUrl).toString());
+      } catch {
+        // 無視
+      }
+    }
+  }
+
+  return [...new Set(found)];
+}
+
+async function fetchXml(url, timeoutMs) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
-
   try {
-    const res = await fetch(source.url, {
+    const res = await fetch(url, {
       signal: controller.signal,
       redirect: 'follow',
       headers: {
         'User-Agent': USER_AGENT,
-        Accept: 'application/rss+xml, application/atom+xml, application/xml, text/xml, */*'
+        Accept:
+          'application/rss+xml, application/atom+xml, application/xml, text/xml, text/html;q=0.8, */*;q=0.5'
       }
     });
-
-    if (!res.ok) {
-      return {
-        sourceId: source.id,
-        ok: false,
-        error: `HTTP ${res.status}`,
-        elapsedMs: Date.now() - startedAt,
-        items: []
-      };
-    }
-
+    if (!res.ok) return { ok: false, error: `HTTP ${res.status}` };
     const buf = new Uint8Array(await res.arrayBuffer());
-    const xml = decodeBytes(buf, res.headers.get('content-type'));
-    const parsed = parseFeed(xml);
-
-    if (parsed.length === 0) {
-      return {
-        sourceId: source.id,
-        ok: false,
-        error: 'フィードとして解釈できる項目が 0 件',
-        elapsedMs: Date.now() - startedAt,
-        items: []
-      };
-    }
-
-    const items = parsed
-      .filter((entry) => entry.title && entry.link)
-      .slice(0, maxItems)
-      .map((entry) => ({
-        ...entry,
-        sourceId: source.id,
-        sourceName: source.name,
-        sourceWeight: source.weight ?? 1,
-        sourceTags: source.tags ?? [],
-        lang: source.lang ?? 'ja'
-      }));
-
     return {
-      sourceId: source.id,
       ok: true,
-      error: null,
-      elapsedMs: Date.now() - startedAt,
-      items
+      text: decodeBytes(buf, res.headers.get('content-type')),
+      finalUrl: res.url || url
     };
   } catch (err) {
     const aborted = err && (err.name === 'AbortError' || err.name === 'TimeoutError');
     return {
-      sourceId: source.id,
       ok: false,
-      error: aborted ? `タイムアウト (${timeoutMs}ms)` : String(err?.message || err),
-      elapsedMs: Date.now() - startedAt,
-      items: []
+      error: aborted ? `タイムアウト (${timeoutMs}ms)` : String(err?.message || err)
     };
   } finally {
     clearTimeout(timer);
+  }
+}
+
+function normalizeItems(parsed, source, resolvedUrl, maxItems) {
+  return parsed
+    .filter((entry) => entry.title && entry.link)
+    .slice(0, maxItems)
+    .map((entry) => ({
+      ...entry,
+      sourceId: source.id,
+      sourceName: source.name,
+      sourceWeight: source.weight ?? 1,
+      sourceTags: source.tags ?? [],
+      lang: source.lang ?? 'ja',
+      sourceUrl: resolvedUrl
+    }));
+}
+
+/**
+ * 候補 URL を順に試し、最初に読めたものを使う。
+ * 全部だめならサイトのトップから自動検出を試みる。
+ *
+ * @param {object} source カタログの1件
+ * @param {{timeoutMs?:number, maxItems?:number, overrideUrl?:string, discover?:boolean}} [options]
+ */
+export async function fetchSource(source, options = {}) {
+  const timeoutMs = options.timeoutMs ?? DEFAULT_TIMEOUT_MS;
+  const maxItems = options.maxItems ?? 25;
+  const allowDiscovery = options.discover !== false;
+  const startedAt = Date.now();
+
+  // 手動で直した URL を最優先。次にカタログの URL、その次に代替 URL。
+  const candidates = [
+    options.overrideUrl,
+    source.url,
+    ...(source.altUrls || [])
+  ].filter(Boolean);
+
+  const tried = [];
+
+  for (const url of [...new Set(candidates)]) {
+    const res = await fetchXml(url, timeoutMs);
+    if (!res.ok) {
+      tried.push({ url, error: res.error });
+      continue;
+    }
+    const parsed = parseFeed(res.text);
+    if (parsed.length === 0) {
+      tried.push({ url, error: 'フィードとして解釈できる項目が 0 件' });
+      continue;
+    }
+    return {
+      sourceId: source.id,
+      ok: true,
+      error: null,
+      resolvedUrl: url,
+      movedFrom: url === source.url ? null : source.url,
+      discovered: false,
+      tried,
+      elapsedMs: Date.now() - startedAt,
+      items: normalizeItems(parsed, source, url, maxItems)
+    };
+  }
+
+  // ここまで全滅。サイト本体にフィードの場所を聞きにいく。
+  const homepage = source.homepage || originOf(source.url);
+  if (allowDiscovery && homepage) {
+    const page = await fetchXml(homepage, timeoutMs);
+    if (page.ok) {
+      const discovered = discoverFeedUrls(page.text, page.finalUrl || homepage).filter(
+        (u) => !candidates.includes(u)
+      );
+      for (const url of discovered.slice(0, 4)) {
+        const res = await fetchXml(url, timeoutMs);
+        if (!res.ok) {
+          tried.push({ url, error: res.error });
+          continue;
+        }
+        const parsed = parseFeed(res.text);
+        if (parsed.length === 0) {
+          tried.push({ url, error: 'フィードとして解釈できる項目が 0 件' });
+          continue;
+        }
+        return {
+          sourceId: source.id,
+          ok: true,
+          error: null,
+          resolvedUrl: url,
+          movedFrom: source.url,
+          discovered: true,
+          tried,
+          elapsedMs: Date.now() - startedAt,
+          items: normalizeItems(parsed, source, url, maxItems)
+        };
+      }
+    } else {
+      tried.push({ url: homepage, error: page.error });
+    }
+  }
+
+  return {
+    sourceId: source.id,
+    ok: false,
+    error: tried[0]?.error || '取得できませんでした',
+    resolvedUrl: null,
+    movedFrom: null,
+    discovered: false,
+    tried,
+    elapsedMs: Date.now() - startedAt,
+    items: []
+  };
+}
+
+function originOf(url) {
+  try {
+    return new URL(url).origin;
+  } catch {
+    return null;
   }
 }
 
@@ -273,7 +384,10 @@ export async function fetchSource(source, options = {}) {
  * 複数の情報源を並列取得する。1 つ落ちても全体は止めない。
  */
 export async function fetchAllSources(sources, options = {}) {
-  const results = await Promise.all(sources.map((s) => fetchSource(s, options)));
+  const overrides = options.urlOverrides || {};
+  const results = await Promise.all(
+    sources.map((s) => fetchSource(s, { ...options, overrideUrl: overrides[s.id] }))
+  );
   const items = results.flatMap((r) => r.items);
   const health = results.map(({ items: _items, ...rest }) => rest);
   return { items, health };

@@ -23,6 +23,7 @@ import {
   select
 } from '../rank.js';
 import { collect, generateEpisode } from '../pipeline.js';
+import { discoverFeedUrls, fetchSource } from '../rss.js';
 import { SOURCES } from '../sources.js';
 import { buildTemplateEpisode } from '../script-template.js';
 import { RSS_JA, RDF_JA, ATOM_EN, BROKEN } from './fixtures/feeds.js';
@@ -382,6 +383,149 @@ describe('収集から台本まで', () => {
     assert.ok(episode.fallbackReason, '理由が伝えられていない');
     assert.ok(episode.segments.length >= 2, '空の番組が返っている');
     assert.ok(episode.terms.length > 0, '記事ゼロでも用語は届けたい');
+  });
+});
+
+// --- フィードURLの自己修復 -------------------------------------------------
+// 「カタログの URL が死んでいて何も表示されない」を、アプリ側で吸収できるかを見る。
+
+describe('フィードURLの自己修復', () => {
+  let server;
+  let base;
+
+  before(async () => {
+    server = createServer((req, res) => {
+      // 生きているフィード
+      if (req.url === '/alive.xml' || req.url === '/moved/feed.xml' || req.url === '/manual.xml') {
+        res.writeHead(200, { 'Content-Type': 'application/rss+xml; charset=utf-8' });
+        res.end(RSS_JA);
+        return;
+      }
+      // トップページ。移転先を <link> で告知している
+      if (req.url === '/home') {
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end(
+          '<html><head><link rel="alternate" type="application/rss+xml" href="/moved/feed.xml"></head><body>移転しました</body></html>'
+        );
+        return;
+      }
+      // 告知のないトップページ
+      if (req.url === '/silent-home') {
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end('<html><head></head><body>何も書いていない</body></html>');
+        return;
+      }
+      // 200 は返すがフィードではない、という一番たちの悪いパターン
+      if (req.url === '/not-a-feed.xml') {
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end(BROKEN);
+        return;
+      }
+      res.writeHead(404);
+      res.end('gone');
+    });
+    await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+    base = `http://127.0.0.1:${server.address().port}`;
+  });
+
+  after(async () => {
+    await new Promise((resolve) => server.close(resolve));
+  });
+
+  test('主URLが死んでいたら代替URLに乗り換える', async () => {
+    const r = await fetchSource({
+      id: 'x',
+      name: 'テスト',
+      url: `${base}/dead.xml`,
+      altUrls: [`${base}/alive.xml`],
+      homepage: `${base}/home`,
+      weight: 1,
+      tags: []
+    });
+    assert.equal(r.ok, true);
+    assert.equal(r.resolvedUrl, `${base}/alive.xml`);
+    assert.equal(r.movedFrom, `${base}/dead.xml`, '移転元が記録されていない');
+    assert.equal(r.discovered, false);
+    assert.ok(r.items.length > 0);
+  });
+
+  test('200を返すがフィードでないURLは失敗として扱う', async () => {
+    const r = await fetchSource({
+      id: 'x',
+      name: 'テスト',
+      url: `${base}/not-a-feed.xml`,
+      altUrls: [],
+      homepage: `${base}/silent-home`,
+      weight: 1,
+      tags: []
+    });
+    assert.equal(r.ok, false);
+    assert.ok(
+      r.tried.some((t) => /0 件/.test(t.error)),
+      'フィードとして解釈できない旨が残っていない'
+    );
+  });
+
+  test('候補が全滅したらトップページから移転先を見つける', async () => {
+    const r = await fetchSource({
+      id: 'x',
+      name: 'テスト',
+      url: `${base}/dead.xml`,
+      altUrls: [`${base}/also-dead.xml`],
+      homepage: `${base}/home`,
+      weight: 1,
+      tags: []
+    });
+    assert.equal(r.ok, true, '自動検出で復帰できていない');
+    assert.equal(r.discovered, true);
+    assert.equal(r.resolvedUrl, `${base}/moved/feed.xml`);
+    assert.ok(r.items.length > 0);
+  });
+
+  test('手で直したURLが最優先される', async () => {
+    const r = await fetchSource(
+      {
+        id: 'x',
+        name: 'テスト',
+        url: `${base}/alive.xml`,
+        altUrls: [],
+        homepage: `${base}/home`,
+        weight: 1,
+        tags: []
+      },
+      { overrideUrl: `${base}/manual.xml` }
+    );
+    assert.equal(r.ok, true);
+    assert.equal(r.resolvedUrl, `${base}/manual.xml`);
+  });
+
+  test('本当に全部だめなら、試したURLを理由つきで返す', async () => {
+    const r = await fetchSource({
+      id: 'x',
+      name: 'テスト',
+      url: `${base}/dead.xml`,
+      altUrls: [`${base}/also-dead.xml`],
+      homepage: `${base}/silent-home`,
+      weight: 1,
+      tags: []
+    });
+    assert.equal(r.ok, false);
+    assert.ok(r.tried.length >= 2, '試行の記録が残っていない');
+    assert.ok(r.error, '理由が空');
+  });
+
+  test('HTMLからフィードの場所を読む', () => {
+    const urls = discoverFeedUrls(
+      '<link rel="alternate" type="application/rss+xml" href="/feed/index.xml">',
+      'https://example.test/news/'
+    );
+    assert.deepEqual(urls, ['https://example.test/feed/index.xml']);
+  });
+
+  test('告知がないサイトには定番の置き場所を当たる', () => {
+    const urls = discoverFeedUrls('<html><head></head></html>', 'https://example.test/');
+    assert.ok(urls.includes('https://example.test/feed'));
+    assert.ok(urls.includes('https://example.test/index.rdf'));
   });
 });
 

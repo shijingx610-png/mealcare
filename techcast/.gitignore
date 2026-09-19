@@ -8,5 +8,8 @@ dist-ssr
 !.env.example
 .vercel
 
+# 生成した音声と台本
+.techcast-data
+
 *.log
 .DS_Store

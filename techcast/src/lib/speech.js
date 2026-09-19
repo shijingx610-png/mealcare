@@ -92,7 +92,10 @@ export function pickDefaultVoice(voices) {
 }
 
 export class EpisodePlayer {
-  constructor() {
+  // backgroundAudio を渡すと、再生中だけ無音に近い音声を鳴らし続ける。
+  // これがないと OS が「音声再生中」と認識せず、ロック画面の操作が出ない。
+  constructor(options = {}) {
+    this.backgroundAudio = options.backgroundAudio || null;
     this.queue = [];
     this.index = 0;
     this.rate = 1.15;
@@ -153,6 +156,9 @@ export class EpisodePlayer {
 
   play() {
     if (!isSpeechSupported() || this.queue.length === 0) return;
+    // ユーザー操作の延長で呼ばれている前提。ここを外すと自動再生が拒否される。
+    if (this.backgroundAudio) this.backgroundAudio.start();
+
     if (this.state === 'paused') {
       window.speechSynthesis.resume();
       this.state = 'playing';
@@ -171,6 +177,7 @@ export class EpisodePlayer {
     if (!isSpeechSupported()) return;
     this.stopWatchdog();
     window.speechSynthesis.pause();
+    if (this.backgroundAudio) this.backgroundAudio.stop();
     this.state = 'paused';
     this.emit();
   }
@@ -183,6 +190,7 @@ export class EpisodePlayer {
   stop() {
     this.stopWatchdog();
     this.cancelSpeech();
+    if (this.backgroundAudio) this.backgroundAudio.stop();
     this.index = 0;
     this.state = 'idle';
     this.emit();
@@ -244,6 +252,7 @@ export class EpisodePlayer {
       if (this.index >= this.queue.length) {
         this.state = 'ended';
         this.stopWatchdog();
+        if (this.backgroundAudio) this.backgroundAudio.stop();
         this.emit();
         return;
       }
@@ -256,6 +265,7 @@ export class EpisodePlayer {
       if (this.stopping || event.error === 'interrupted' || event.error === 'canceled') return;
       this.state = 'paused';
       this.stopWatchdog();
+      if (this.backgroundAudio) this.backgroundAudio.stop();
       this.emit();
     };
 

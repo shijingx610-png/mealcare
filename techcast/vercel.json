@@ -2,6 +2,13 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
     "api/episode.js": { "maxDuration": 60 },
-    "api/health.js": { "maxDuration": 30 }
-  }
+    "api/health.js": { "maxDuration": 60 },
+    "api/cron.js": { "maxDuration": 300 }
+  },
+  "crons": [
+    {
+      "path": "/api/cron",
+      "schedule": "30 20 * * *"
+    }
+  ]
 }
