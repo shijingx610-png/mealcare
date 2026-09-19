@@ -44,6 +44,8 @@ IT・SaaS・AI業界のニュースを毎朝自動で集めて、**耳で聞け�
 
 ## 動かす
 
+**アプリ内で聞くだけなら、これだけ。**
+
 ```bash
 cd techcast
 npm install
@@ -51,6 +53,15 @@ npm run dev
 ```
 
 http://localhost:5174 を開く。初回は自動でその日の番組を作り始める。
+
+**音声ファイルを作って毎朝自動更新するなら**、常駐させる。
+
+```bash
+npm run build
+npm start          # http://localhost:3000
+```
+
+`npm start` のほうはスケジューラを内蔵していて、毎朝決まった時刻に番組を作り直す。
 
 **最初にやること**：「情報源」タブの「使用中の情報源を確認」を押す。
 読み込めないフィードがあれば、その場で移転先を見つけて「この URL に切り替える」で直せる。
@@ -72,7 +83,7 @@ npm run dev
 ### テストと静的検査
 
 ```bash
-npm test     # 65 ケース。ローカルにサーバーを立てて、取得から配信まで通しで検証する
+npm test     # 82 ケース。ローカルにサーバーを立てて、取得から配信まで通しで検証する
 npm run lint
 npm run build
 ```
@@ -84,6 +95,20 @@ npm run build
 ブラウザの読み上げには弱点がある。**画面を消すと止まる端末がある**ことと、
 オフラインで音声を持ち歩けないことだ。普段のポッドキャストアプリで聞けるようにすると、
 ロック画面・バックグラウンド再生・オフライン・再生位置の記憶が全部そちらの機能で手に入る。
+
+**VOICEVOX を使って毎朝決まった時刻に用意する手順は、[docs/VOICEVOX.md](./docs/VOICEVOX.md) に
+一本道でまとめてある。** 以下はその要約。
+
+### いちばん短い道
+
+```bash
+cd techcast
+cp .env.example .env          # ANTHROPIC_API_KEY を入れる（任意）
+docker compose up -d          # VOICEVOX ごと起動する
+```
+
+これだけで、毎朝 4:30（日本時間）に番組ができ続ける。
+`http://localhost:3000/api/podcast` をポッドキャストアプリに登録すれば購読できる。
 
 必要なのは 3 つ。
 
@@ -114,19 +139,27 @@ echo 'GOOGLE_TTS_VOICE=ja-JP-Neural2-B' >> .env
 
 ### 2. 毎朝、番組を作らせる
 
-`/api/cron` を 1 日 1 回叩くだけ。叩かれると、記事を集めて台本を書き、音声を作って保存する。
+`npm start`（または `docker compose up -d`）で動かすサーバーには**スケジューラが内蔵されている**。
+cron を別に用意する必要はない。
 
 ```bash
-curl -X POST http://localhost:5174/api/cron
+DAILY_HOUR=4
+DAILY_MINUTE=30          # 5時に聞き始められるよう、少し前に作る
+DAILY_TIMEZONE=Asia/Tokyo
 ```
 
-Vercel にデプロイしている場合は `vercel.json` に設定済み（毎日 20:30 UTC ＝ 日本時間の朝 5:30）。
-自分のサーバーなら cron で十分。
+サーバーの時計が UTC でも、指定したタイムゾーンの時刻で走る。
+予定時刻に機械が止まっていた場合は、次に起動した時点でその日の番組がまだ無ければ自動で作る。
 
-```cron
-30 5 * * * curl -sS -X POST https://あなたのドメイン/api/cron -H "Authorization: Bearer $CRON_SECRET"
+手で作りたいときはこれ。
+
+```bash
+npm run daily:now              # すでにある日は何もしない
+npm run daily:now -- --force   # 作り直す
 ```
 
+外部の cron や Vercel Cron から叩くこともできる。その場合の入口は `/api/cron`。
+Vercel にデプロイしている場合は `vercel.json` に設定済み（毎日 19:30 UTC ＝ 日本時間 4:30）。
 公開環境では `CRON_SECRET` を必ず設定すること。未設定だと誰でも叩ける。
 
 ### 3. ポッドキャストアプリに登録する
@@ -134,8 +167,10 @@ Vercel にデプロイしている場合は `vercel.json` に設定済み（毎�
 設定タブに出ている URL をコピーして、アプリの「URL で追加」に貼る。
 
 ```
-https://あなたのドメイン/api/podcast
+http://localhost:3000/api/podcast
 ```
+
+同じ家の Wi-Fi にいるスマホから聞くなら、`PUBLIC_BASE_URL` にそのマシンの IP を書く。
 
 Apple Podcasts、Pocket Casts、Overcast、AntennaPod などはこの方法で購読できる。
 Spotify は公開番組の登録しか受け付けないので、個人用途では他のアプリが向いている。
@@ -145,12 +180,13 @@ Spotify は公開番組の登録しか受け付けないので、個人用途で
 生成した音声と台本は `TECHCAST_DATA_DIR`（既定は `.techcast-data/`）に置かれる。
 
 **Vercel のファイルシステムは使い捨てなので、そのままではポッドキャスト配信は成立しない。**
-この用途では、次のどれかにする。
+VOICEVOX も置けない。この用途では常駐環境にする。
 
-- 自宅サーバー、VPS、Raspberry Pi、Docker などで常駐させる（VOICEVOX とも相性がいい）
-- Vercel に永続ディスクを付ける
-- `server/audio/store.js` を外部ストレージ向けに差し替える。
-  読み書きする関数は 4 つだけなので、S3 や R2 への置き換えは難しくない
+- 自宅サーバー、ミニPC、Raspberry Pi、VPS で `docker compose up -d`
+- 普段使いの PC でも動く。ただし朝に電源が入っていないと、その時刻には作られない
+  （次に起動したときに自動で作り直す）
+- どうしても Vercel で配信したい場合は `server/audio/store.js` を
+  S3 や R2 向けに差し替える。読み書きする関数は 4 つだけ
 
 アプリ内で聞くだけなら Vercel のままで問題ない。
 
@@ -193,12 +229,20 @@ techcast/
 │   ├── script-claude.js        Claude での台本生成
 │   ├── episode-shape.js        エピソードの共通フォーマット
 │   ├── pipeline.js             収集から台本までの一本道
+│   ├── daily-job.js            毎朝の生成そのもの
+│   ├── schedule.js             決まった時刻に走らせる
 │   ├── audio/
 │   │   ├── tts.js              音声合成（VOICEVOX / Google）
 │   │   ├── store.js            生成物の保存
 │   │   ├── podcast-feed.js     ポッドキャスト用RSSの組み立て
 │   │   └── base-url.js         配信URLの決定
 │   └── __tests__/              回帰テスト 65 件
+├── server.js                   単体で動くサーバー（Vercel なしで全部動かす入口）
+├── docker-compose.yml          VOICEVOX ごと起動する構成
+├── docs/VOICEVOX.md            音声化と毎朝の自動更新の手順
+├── scripts/
+│   ├── voicevox-speakers.mjs   使える声の一覧を出す
+│   └── run-daily.mjs           今日の番組を手で作る
 ├── api/                        サーバーレス関数
 │   ├── sources.js              GET  カタログ・プリセット・配信状態
 │   ├── health.js               POST 情報源のヘルスチェックと移転先の提示
