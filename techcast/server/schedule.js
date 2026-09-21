@@ -58,6 +58,10 @@ export function scheduleDaily({
   // 同じマシンで VOICEVOX を一緒に立ち上げている場合、起動直後はまだ
   // エンジンが応答しない。少し待ってから取りこぼしを拾う。
   catchUpDelayMs = 10_000,
+  // 現在時刻の取り出し口。既定では実時計を見る。
+  // 差し替えられるようにしているのは、テストで「予定時刻の前と後」を
+  // 実行した時刻に左右されずに再現するため。
+  now = () => new Date(),
   run,
   log = () => {}
 }) {
@@ -95,10 +99,10 @@ export function scheduleDaily({
 
   function scheduleNext() {
     if (stopped) return;
-    const delay = Math.min(msUntilNext(safeHour, safeMinute, timeZone), MAX_TIMEOUT_MS);
+    const delay = Math.min(msUntilNext(safeHour, safeMinute, timeZone, now()), MAX_TIMEOUT_MS);
     timer = setTimeout(async () => {
       // 上限で刻んだ場合はまだ時刻ではないので、もう一度測り直す
-      if (msUntilNext(safeHour, safeMinute, timeZone) > 60_000) {
+      if (msUntilNext(safeHour, safeMinute, timeZone, now()) > 60_000) {
         scheduleNext();
         return;
       }
@@ -111,7 +115,7 @@ export function scheduleDaily({
   if (enabled) {
     // 起動時の取りこぼし。今日の予定時刻を過ぎているのに番組が無ければ、すぐ作る。
     // 朝 5 時にPCを開いたら、もうできている状態にしたい。
-    if (catchUp && isPastToday(safeHour, safeMinute, timeZone)) {
+    if (catchUp && isPastToday(safeHour, safeMinute, timeZone, now())) {
       const t = setTimeout(() => execute('catch-up'), catchUpDelayMs);
       if (typeof t.unref === 'function') t.unref();
     }
