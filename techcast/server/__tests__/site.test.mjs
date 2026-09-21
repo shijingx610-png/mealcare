@@ -195,3 +195,36 @@ describe('静的配信のフィード', () => {
     assert.match(xml, /^<\?xml version="1\.0" encoding="UTF-8"\?>/);
   });
 });
+
+// --- 時間の表記 ------------------------------------------------------------
+// 初回の自動実行のログで「4分43秒」が「5分43秒」と出ていた。
+// 分を四捨五入したせいで、秒の側と足して実体を超えていた。
+
+describe('時間の表記', () => {
+  test('分を切り上げない', async () => {
+    const { formatDuration } = await import('../episode-shape.js');
+    assert.equal(formatDuration(283.37), '4分43秒', '分が切り上がっている');
+    assert.equal(formatDuration(59), '0分59秒');
+    assert.equal(formatDuration(60), '1分0秒');
+    assert.equal(formatDuration(3599), '59分59秒');
+  });
+
+  test('分と秒を足すと元の秒数に戻る', async () => {
+    const { formatDuration } = await import('../episode-shape.js');
+    for (const seconds of [1, 59, 60, 61, 283.37, 599.6, 1234]) {
+      const [, m, s] = /^(\d+)分(\d+)秒$/.exec(formatDuration(seconds));
+      assert.equal(
+        Number(m) * 60 + Number(s),
+        Math.round(seconds),
+        `${seconds}秒 の表記が実体と合わない`
+      );
+    }
+  });
+
+  test('ざっくり表示は1分を下回らない', async () => {
+    const { roughMinutes } = await import('../episode-shape.js');
+    assert.equal(roughMinutes(0), 1);
+    assert.equal(roughMinutes(10), 1);
+    assert.equal(roughMinutes(600), 10);
+  });
+});

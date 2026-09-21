@@ -35,6 +35,27 @@ export function toRef(item) {
 }
 
 /**
+ * 秒を「4分43秒」の形にする。
+ *
+ * 分に Math.round を使うと 283 秒が「5分43秒」になる。
+ * 秒の側で 43 を出しているのに分を切り上げてしまうため、合計が合わなくなる。
+ * 分は切り捨てでないといけない。
+ */
+export function formatDuration(seconds) {
+  const total = Math.max(0, Math.round(seconds || 0));
+  const m = Math.floor(total / 60);
+  const s = total % 60;
+  return `${m}分${s}秒`;
+}
+
+/**
+ * ざっくり「約5分」と出すとき用。一覧やバッジなど、細かさが要らない場所で使う。
+ */
+export function roughMinutes(seconds) {
+  return Math.max(1, Math.round((seconds || 0) / 60));
+}
+
+/**
  * 読み上げ時間の概算。日本語は 1 分あたり 320 文字前後で読まれる想定。
  */
 export function estimateMinutes(segments) {

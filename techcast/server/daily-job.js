@@ -3,6 +3,7 @@
 // HTTP から叩かれる場合（api/cron.js）と、サーバー内蔵のスケジューラから
 // 呼ばれる場合の両方で使う。処理が 2 か所に分かれると必ずズレるので 1 本にした。
 
+import { formatDuration } from './episode-shape.js';
 import { generateEpisode } from './pipeline.js';
 import { createTtsProvider, synthesizeEpisodeWithChapters } from './audio/tts.js';
 import { saveEpisode, getEpisode, listEpisodes } from './audio/store.js';
@@ -91,7 +92,7 @@ export async function runDailyJob({
         ttsError = null;
         log(
           `[daily] 音声ができました: ${(audio.length / 1024 / 1024).toFixed(1)}MB / ` +
-            `${Math.round(durationSec / 60)}分${Math.round(durationSec % 60)}秒` +
+            `${formatDuration(durationSec)}` +
             `（${provider.name}、${Math.round((Date.now() - startedAt) / 1000)}秒で合成）`
         );
         break;

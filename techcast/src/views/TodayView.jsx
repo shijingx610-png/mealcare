@@ -217,8 +217,9 @@ export default function TodayView({
             {episode.generator === 'claude' ? 'Claude 生成' : 'テンプレート生成'}
           </span>
           <span className="chip">
+            {/* 音声がある回は実測。分を四捨五入すると 4分43秒 が「5分」になって合わない */}
             {episode.audio?.durationSec
-              ? `${Math.round(episode.audio.durationSec / 60)} 分`
+              ? clock(episode.audio.durationSec)
               : `約 ${episode.estimatedMinutes} 分`}
           </span>
           {episode.audio && <span className="chip chip-audio">音声つき</span>}
