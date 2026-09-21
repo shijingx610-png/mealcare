@@ -12,6 +12,8 @@ IT・SaaS・AI業界のニュースを毎朝自動で集めて、**耳で聞け�
 2. **普段のポッドキャストアプリで聞く** — 音声合成を設定すると MP3/WAV が作られ、
    Apple Podcasts や Spotify、Pocket Casts に自分専用の番組として登録できる
 
+**とりあえず動かしたい場合は [QUICKSTART.md](./QUICKSTART.md) を見てほしい。`npm run setup` の 1 コマンドで立ち上がる。**
+
 設計の理由と展望は [DESIGN.md](./DESIGN.md) に書いてある。
 
 ---
@@ -103,12 +105,13 @@ npm run build
 
 ```bash
 cd techcast
-cp .env.example .env          # ANTHROPIC_API_KEY を入れる（任意）
-docker compose up -d          # VOICEVOX ごと起動する
+npm install
+npm run setup
 ```
 
-これだけで、毎朝 4:30（日本時間）に番組ができ続ける。
-`http://localhost:3000/api/podcast` をポッドキャストアプリに登録すれば購読できる。
+設定ファイルの用意、VOICEVOX とアプリの起動、最初の 1 本の生成までを自動でやる。
+あとは毎朝 4:30（日本時間）に番組ができ続ける。
+表示される `http://localhost:3000/api/podcast` をポッドキャストアプリに登録すれば購読できる。
 
 必要なのは 3 つ。
 

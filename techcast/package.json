@@ -5,6 +5,7 @@
   "type": "module",
   "description": "IT・SaaS業界のニュースを毎朝ポッドキャストとして聞くための個人用アプリ",
   "scripts": {
+    "setup": "node scripts/setup.mjs",
     "dev": "vite",
     "build": "vite build",
     "start": "node server.js",
