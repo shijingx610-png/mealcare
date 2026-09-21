@@ -13,7 +13,9 @@
     "lint": "eslint .",
     "test": "node --test server/__tests__/*.test.mjs",
     "voices": "node scripts/voicevox-speakers.mjs",
-    "daily:now": "node scripts/run-daily.mjs"
+    "daily:now": "node scripts/run-daily.mjs",
+    "build:demo-data": "node scripts/build-demo-data.mjs",
+    "build:artifact": "VITE_ARTIFACT=true vite build --outDir dist-artifact && node scripts/build-artifact-page.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.126.0",

@@ -122,7 +122,25 @@ function createResponse(res) {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, rootDir, '');
+  // 共有リンク（Artifact）として配るビルドは、絶対パスだと資産を見つけられない。
+  // VITE_ARTIFACT=true のときだけ相対パスに切り替える。
+  const forArtifact = env.VITE_ARTIFACT === 'true';
+
   return {
+    base: forArtifact ? './' : '/',
+    // 共有リンク用は毎回同じファイル名にする。ハッシュ名のままだと、
+    // 更新のたびに古い資産が公開先に残り続ける。
+    build: forArtifact
+      ? {
+          rollupOptions: {
+            output: {
+              entryFileNames: 'assets/app.js',
+              chunkFileNames: 'assets/[name].js',
+              assetFileNames: 'assets/app.[ext]'
+            }
+          }
+        }
+      : {},
     plugins: [react(), apiDevMiddleware(env)],
     server: { port: 5174 }
   };

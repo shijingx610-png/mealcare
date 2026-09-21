@@ -24,16 +24,5 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script>
-      // サービスワーカーはホーム画面追加とオフライン表示のためだけに使う。
-      // 開発中はキャッシュが邪魔になるので登録しない。
-      if ('serviceWorker' in navigator && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-        window.addEventListener('load', function () {
-          navigator.serviceWorker.register('/sw.js').catch(function () {
-            // 登録できなくてもアプリ自体は動く
-          });
-        });
-      }
-    </script>
   </body>
 </html>

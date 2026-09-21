@@ -24,6 +24,7 @@ import {
   saveSettings,
   toggleLearnedTerm
 } from './lib/store.js';
+import { DEMO_DATA } from './lib/demo-data.js';
 import TodayView from './views/TodayView.jsx';
 import LibraryView from './views/LibraryView.jsx';
 import SourcesView from './views/SourcesView.jsx';
@@ -64,6 +65,8 @@ export default function App() {
     () => loadEpisodes().find((e) => e.id === todayId()) || null
   );
   const [catalog, setCatalog] = useState(null);
+  // API に届かない場所（共有リンクなど）で開かれたとき、画面が空のままにならないようにする。
+  const [demoMode, setDemoMode] = useState(false);
   const [learnedTerms, setLearnedTerms] = useState(loadLearnedTerms);
   const [generating, setGenerating] = useState(false);
   const [error, setError] = useState(null);
@@ -187,12 +190,16 @@ export default function App() {
         setCurrentEpisode(episode);
         setTab('today');
       } catch (err) {
-        setError(err.message);
+        setError(
+          demoMode
+            ? 'これはデモです。実際のニュースを集めるには、自分のパソコンでアプリを起動してください。'
+            : err.message
+        );
       } finally {
         setGenerating(false);
       }
     },
-    [settings]
+    [settings, demoMode]
   );
 
   useEffect(() => {
@@ -234,11 +241,12 @@ export default function App() {
         generateRef.current?.();
       })
       .catch(() => {
-        if (!cancelled) {
-          setError(
-            '情報源の一覧を取得できませんでした。開発サーバーが起動しているか確認してください。'
-          );
-        }
+        if (cancelled) return;
+        // サーバーが居ない＝共有リンクや静的配置で開かれた、とみなす。
+        // エラーを出して終わりにせず、サンプルの中身を見せて何のアプリか分かるようにする。
+        setDemoMode(true);
+        setCatalog(DEMO_DATA.catalog);
+        setCurrentEpisode(DEMO_DATA.episode);
       });
     return () => {
       cancelled = true;
@@ -341,6 +349,20 @@ export default function App() {
           <button type="button" onClick={() => setError(null)} aria-label="閉じる">
             ×
           </button>
+        </div>
+      )}
+
+      {demoMode && (
+        <div className="banner banner-demo">
+          <div>
+            <strong>これはデモです。</strong>
+            <br />
+            読み上げているニュースはすべて説明用の例で、実際の記事ではありません。
+            画面の作りと聞こえ方を確かめるためのものです。
+            <br />
+            本物のニュースを毎朝受け取るには、自分のパソコンで起動してください。手順は
+            QUICKSTART.md にあります。
+          </div>
         </div>
       )}
 
