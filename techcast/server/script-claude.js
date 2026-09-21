@@ -12,6 +12,8 @@ import Anthropic from '@anthropic-ai/sdk';
 import { z } from 'zod';
 import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
 import { buildEpisode, formatDateLabel, toRef } from './episode-shape.js';
+import { scriptBudget } from './script-budget.js';
+import { planFor } from './rank.js';
 
 const MODEL = 'claude-opus-5';
 
@@ -62,6 +64,8 @@ IT・SaaS・インターネット業界への転職を目指している社会�
 - 熱はあるが、押しつけない。`;
 
 function buildUserPrompt({ dateLabel, durationMin, deepDive, roundup, terms }) {
+  // 各パートの文字数は尺から逆算する。目分量で決めると合計が尺に合わない。
+  const budget = scriptBudget(durationMin, planFor(durationMin));
   const deepDiveList = deepDive
     .map((item, i) => {
       const lines = [
@@ -92,6 +96,8 @@ function buildUserPrompt({ dateLabel, durationMin, deepDive, roundup, terms }) {
     .join('\n');
 
   return `今日は${dateLabel}です。${durationMin}分の番組の台本を書いてください。
+全体で日本語 約${budget.total}文字が目安です（読み上げ ${durationMin} 分ぶん）。
+短いと尺が足りず、長いと聞き疲れます。各パートの文字数の指示を守ってください。
 
 ## 深掘りするニュース（${deepDive.length}本）
 ${deepDiveList || '（該当なし）'}
@@ -106,26 +112,27 @@ ${termList || '（該当なし）'}
 
 **title**: エピソードのタイトル。25文字以内。今日いちばんの話題が分かるもの。
 
-**opening**: 挨拶と、今日の見出し${deepDive.length}本の予告。150文字前後。
+**opening**: 挨拶と、今日の見出し${deepDive.length}本の予告。${budget.opening}文字前後。
 最後に、今日のニュース全体に共通する流れや空気があれば一言添える。無理に見つけなくてよい。
 
 **deepDives**: 上の[0]から順に、深掘りニュースごとに1つ。itemIndex には対応する番号を入れる。
-1本あたり${durationMin >= 15 ? 450 : durationMin >= 10 ? 350 : 280}文字前後。次の3つを、この順で地続きの文章として書く。
+**1本あたり${budget.deepDiveEach}文字前後。ここが番組の中身なので、短くしすぎない。**
+次の3つを、この順で地続きの文章として書く。
   1. 何が起きたか（事実。記事に書かれている範囲で）
   2. なぜこれが業界にとって意味があるか（一般的な業界知識で補ってよいが、記事の事実と区別が付く言い方で）
   3. 業界の外にいるリスナーにとって、これがどう関係するか
 heading には、耳で聞いて分かる短い日本語の見出しを入れる（英語記事も日本語にする）。
 
 **glossary**: 上に挙げた termId ごとに1つ。参考定義を丸写しせず、今日のニュースの文脈につなげて言い直す。
-1つあたり150文字前後。termId は必ず上のリストのものを使う。
+1つあたり${budget.glossaryEach}文字前後。termId は必ず上のリストのものを使う。
 
-**career**: 転職活動の役に立つ一言。120文字前後。
+**career**: 転職活動の役に立つ一言。${budget.career}文字前後。
 今日のニュースから自然につながる話にする。つながらなければ、面談や書類づくりの実務的な工夫でよい。
 精神論にしない。今日から試せる具体性を必ず入れる。
 
-**roundup**: 一言ニュースを続けて読む原稿。1本あたり1文か2文。英語の見出しは日本語にする。全体で${roundup.length * 60}文字前後。
+**roundup**: 一言ニュースを続けて読む原稿。1本あたり1文か2文。英語の見出しは日本語にする。全体で${budget.roundupTotal}文字前後（1本あたり${budget.roundupEach}文字前後）。
 
-**closing**: 締めの挨拶。80文字前後。聞き終えたあとに前向きな気持ちが残るように。
+**closing**: 締めの挨拶。${budget.closing}文字前後。聞き終えたあとに前向きな気持ちが残るように。
 「全部覚えなくていい」という趣旨を、毎回同じ言い回しにならない形で入れる。`;
 }
 

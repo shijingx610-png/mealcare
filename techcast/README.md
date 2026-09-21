@@ -6,13 +6,20 @@ IT・SaaS・AI業界のニュースを毎朝自動で集めて、**耳で聞け�
 ニュースを読み上げるだけでなく、その日に出てきた業界用語の解説と、
 面談や面接での使いどころまでを 1 本の番組に入れている。
 
-聞き方は 2 通りある。
+動かし方は 3 通りある。
 
-1. **このアプリで聞く** — 設定不要。開くだけでその日の番組ができて、ブラウザが読み上げる
-2. **普段のポッドキャストアプリで聞く** — 音声合成を設定すると MP3/WAV が作られ、
-   Apple Podcasts や Spotify、Pocket Casts に自分専用の番組として登録できる
+| | 置き場所 | パソコンの常時起動 | 音声ファイル | 費用 |
+|---|---|---|---|---|
+| **GitHub にまかせる** | GitHub Actions + Pages | 不要 | できる | 0円（Claude を使えば月数百円） |
+| **自分のサーバーで動かす** | 自宅サーバー・VPS・Docker | 必要 | できる | 0円（同上） |
+| **手元で試す** | ノートPC | 不要 | できない（ブラウザ読み上げ） | 0円 |
 
-**とりあえず動かしたい場合は [QUICKSTART.md](./QUICKSTART.md) を見てほしい。`npm run setup` の 1 コマンドで立ち上がる。**
+いちばん手間が少ないのは **GitHub にまかせる**方法。毎朝 4:30 に GitHub 側で
+番組が作られ、GitHub Pages に配信される。自分のパソコンは一切起動しなくていい。
+手順は [docs/PAGES.md](./docs/PAGES.md)。
+
+**とりあえず動かしたい場合は [QUICKSTART.md](./QUICKSTART.md) を見てほしい。**
+GitHub にまかせる方法（パソコン不要）と、自分のパソコンで動かす方法の 2 つがある。
 
 設計の理由と展望は [DESIGN.md](./DESIGN.md) に書いてある。
 
@@ -85,7 +92,7 @@ npm run dev
 ### テストと静的検査
 
 ```bash
-npm test     # 82 ケース。ローカルにサーバーを立てて、取得から配信まで通しで検証する
+npm test     # 97 ケース。ローカルにサーバーを立てて、取得から配信まで通しで検証する
 npm run lint
 npm run build
 ```
@@ -234,15 +241,18 @@ techcast/
 │   ├── pipeline.js             収集から台本までの一本道
 │   ├── daily-job.js            毎朝の生成そのもの
 │   ├── schedule.js             決まった時刻に走らせる
+│   ├── script-budget.js        尺から各パートの文字数を逆算する
 │   ├── audio/
-│   │   ├── tts.js              音声合成（VOICEVOX / Google）
+│   │   ├── tts.js              音声合成（VOICEVOX / Google）とチャプター
+│   │   ├── mp3.js              WAV を MP3 にする（純JS、外部コマンド不要）
 │   │   ├── store.js            生成物の保存
 │   │   ├── podcast-feed.js     ポッドキャスト用RSSの組み立て
 │   │   └── base-url.js         配信URLの決定
 │   └── __tests__/              回帰テスト 65 件
 ├── server.js                   単体で動くサーバー（Vercel なしで全部動かす入口）
 ├── docker-compose.yml          VOICEVOX ごと起動する構成
-├── docs/VOICEVOX.md            音声化と毎朝の自動更新の手順
+├── docs/PAGES.md               GitHub にまかせる手順（パソコン不要）
+├── docs/VOICEVOX.md            自分のサーバーで動かす手順
 ├── scripts/
 │   ├── voicevox-speakers.mjs   使える声の一覧を出す
 │   └── run-daily.mjs           今日の番組を手で作る

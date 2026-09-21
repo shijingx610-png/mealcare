@@ -16,10 +16,26 @@ function formatTime(iso) {
   return `${d.getHours()}:${String(d.getMinutes()).padStart(2, '0')}`;
 }
 
-function PlayerBar({ episode, playback, player, speechSupported }) {
-  const { state, index, total, segmentIndex } = playback;
-  const percent = total > 0 ? Math.round((index / total) * 100) : 0;
+function clock(seconds) {
+  if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
+  const m = Math.floor(seconds / 60);
+  const s = Math.floor(seconds % 60);
+  return `${m}:${String(s).padStart(2, '0')}`;
+}
+
+function PlayerBar({ episode, playback, player, speechSupported, onSeek }) {
+  const { state, index, total, segmentIndex, currentTime = 0, duration = 0 } = playback;
+
+  // 音声ファイルなら時間で、読み上げならブロック数で進み具合を出す。
+  const isAudio = playback.kind === 'audio' && duration > 0;
+  const percent = isAudio
+    ? Math.min(100, (currentTime / duration) * 100)
+    : total > 0
+      ? Math.round((index / total) * 100)
+      : 0;
+
   const currentSegment = episode.segments[segmentIndex];
+  const canPlay = isAudio || speechSupported;
 
   return (
     <div className="player">
@@ -28,7 +44,7 @@ function PlayerBar({ episode, playback, player, speechSupported }) {
           type="button"
           className="player-skip"
           onClick={() => player.skipSegment(-1)}
-          disabled={!speechSupported}
+          disabled={!canPlay}
           aria-label="前のコーナーへ"
         >
           ⏮
@@ -37,7 +53,7 @@ function PlayerBar({ episode, playback, player, speechSupported }) {
           type="button"
           className="player-play"
           onClick={() => player.toggle()}
-          disabled={!speechSupported}
+          disabled={!canPlay}
           aria-label={state === 'playing' ? '一時停止' : '再生'}
         >
           {state === 'playing' ? '❚❚' : '▶'}
@@ -46,7 +62,7 @@ function PlayerBar({ episode, playback, player, speechSupported }) {
           type="button"
           className="player-skip"
           onClick={() => player.skipSegment(1)}
-          disabled={!speechSupported}
+          disabled={!canPlay}
           aria-label="次のコーナーへ"
         >
           ⏭
@@ -58,12 +74,37 @@ function PlayerBar({ episode, playback, player, speechSupported }) {
           <span className="player-heading">{currentSegment?.heading || ''}</span>
         </div>
       </div>
-      <div className="player-progress" role="progressbar" aria-valuenow={percent} aria-valuemin={0} aria-valuemax={100}>
-        <div className="player-progress-fill" style={{ width: `${percent}%` }} />
-      </div>
+      {isAudio ? (
+        <div className="player-seek">
+          <input
+            type="range"
+            min="0"
+            max={Math.floor(duration)}
+            step="1"
+            value={Math.floor(currentTime)}
+            onChange={(e) => onSeek?.(Number(e.target.value))}
+            aria-label="再生位置"
+          />
+        </div>
+      ) : (
+        <div
+          className="player-progress"
+          role="progressbar"
+          aria-valuenow={percent}
+          aria-valuemin={0}
+          aria-valuemax={100}
+        >
+          <div className="player-progress-fill" style={{ width: `${percent}%` }} />
+        </div>
+      )}
       <p className="player-meta">
-        {state === 'ended' ? '再生が終わりました' : `${index + 1} / ${total} ブロック`}
+        {isAudio
+          ? `${clock(currentTime)} / ${clock(duration)}`
+          : state === 'ended'
+            ? '再生が終わりました'
+            : `${index + 1} / ${total} ブロック`}
         {state === 'paused' && '・一時停止中'}
+        {state === 'error' && '・音声を読み込めませんでした'}
       </p>
     </div>
   );
@@ -126,7 +167,9 @@ export default function TodayView({
   generating,
   speechSupported,
   learnedTerms,
+  mode = 'api',
   onGenerate,
+  onSeek,
   onToggleLearned
 }) {
   if (generating) {
@@ -147,10 +190,16 @@ export default function TodayView({
     return (
       <section className="empty">
         <h2>まだ今朝の番組がありません</h2>
-        <p>情報源から記事を集めて、聞ける形の台本にします。</p>
-        <button type="button" className="primary" onClick={() => onGenerate()}>
-          今朝の番組を作る
-        </button>
+        {mode === 'api' ? (
+          <>
+            <p>情報源から記事を集めて、聞ける形の台本にします。</p>
+            <button type="button" className="primary" onClick={() => onGenerate()}>
+              今朝の番組を作る
+            </button>
+          </>
+        ) : (
+          <p>配信された番組がまだありません。翌朝またのぞいてみてください。</p>
+        )}
       </section>
     );
   }
@@ -167,7 +216,12 @@ export default function TodayView({
           <span className={episode.generator === 'claude' ? 'chip chip-claude' : 'chip'}>
             {episode.generator === 'claude' ? 'Claude 生成' : 'テンプレート生成'}
           </span>
-          <span className="chip">約 {episode.estimatedMinutes} 分</span>
+          <span className="chip">
+            {episode.audio?.durationSec
+              ? `${Math.round(episode.audio.durationSec / 60)} 分`
+              : `約 ${episode.estimatedMinutes} 分`}
+          </span>
+          {episode.audio && <span className="chip chip-audio">音声つき</span>}
           <span className="chip">
             深掘り {episode.items.deepDive.length} / 一言 {episode.items.roundup.length}
           </span>
@@ -191,6 +245,7 @@ export default function TodayView({
         playback={playback}
         player={player}
         speechSupported={speechSupported}
+        onSeek={onSeek}
       />
 
       <div className="segments">
@@ -223,14 +278,20 @@ export default function TodayView({
         </section>
       )}
 
-      <div className="regenerate">
-        <button type="button" onClick={() => onGenerate()} disabled={generating}>
-          作り直す
-        </button>
-        <button type="button" onClick={() => onGenerate({ includeSeen: true })} disabled={generating}>
-          既出も含めて作り直す
-        </button>
-      </div>
+      {mode === 'api' && (
+        <div className="regenerate">
+          <button type="button" onClick={() => onGenerate()} disabled={generating}>
+            作り直す
+          </button>
+          <button
+            type="button"
+            onClick={() => onGenerate({ includeSeen: true })}
+            disabled={generating}
+          >
+            既出も含めて作り直す
+          </button>
+        </div>
+      )}
     </section>
   );
 }

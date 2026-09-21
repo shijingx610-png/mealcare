@@ -23,6 +23,13 @@ function toRfc822(iso) {
   return (Number.isNaN(d.getTime()) ? new Date() : d).toUTCString();
 }
 
+function durationLabelFromSeconds(seconds) {
+  const total = Math.max(1, Math.round(seconds));
+  const m = Math.floor(total / 60);
+  const s = total % 60;
+  return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+}
+
 function durationLabel(minutes) {
   const total = Math.max(1, Math.round((minutes || 1) * 60));
   const m = Math.floor(total / 60);
@@ -51,7 +58,20 @@ function buildDescription(episode) {
   return lines.join('\n').trim();
 }
 
-export function buildPodcastFeed({ episodes, baseUrl, title, description, author, imageUrl }) {
+export function buildPodcastFeed({
+  episodes,
+  baseUrl,
+  title,
+  description,
+  author,
+  imageUrl,
+  // 音声の置き場所は配り方で変わる。
+  //   サーバー配信 → /api/audio?id=...
+  //   静的配信     → audio/<id>.mp3
+  // ここを差し替えられるようにして、フィードの組み立て自体は共通にする。
+  audioUrlFor = (episode) => `${baseUrl}/api/audio?id=${encodeURIComponent(episode.id)}`,
+  episodeUrlFor = (episode) => `${baseUrl}/?episode=${episode.id}`
+}) {
   const feedTitle = title || 'TechCast — IT・SaaS業界の朝';
   const feedDescription =
     description ||
@@ -64,18 +84,22 @@ export function buildPodcastFeed({ episodes, baseUrl, title, description, author
 
   const items = withAudio
     .map((episode) => {
-      const audioUrl = `${baseUrl}/api/audio?id=${encodeURIComponent(episode.id)}`;
+      const audioUrl = audioUrlFor(episode);
       return `    <item>
       <title>${escapeXml(episode.title)}</title>
       <description>${escapeXml(buildDescription(episode))}</description>
       <pubDate>${toRfc822(episode.createdAt)}</pubDate>
       <guid isPermaLink="false">techcast-${escapeXml(episode.id)}</guid>
-      <link>${escapeXml(`${baseUrl}/?episode=${episode.id}`)}</link>
+      <link>${escapeXml(episodeUrlFor(episode))}</link>
       <enclosure url="${escapeXml(audioUrl)}" length="${episode.audio.bytes}" type="${escapeXml(
         episode.audio.contentType || 'audio/mpeg'
       )}" />
       <itunes:title>${escapeXml(episode.title)}</itunes:title>
-      <itunes:duration>${durationLabel(episode.estimatedMinutes)}</itunes:duration>
+      <itunes:duration>${
+        episode.audio?.durationSec
+          ? durationLabelFromSeconds(episode.audio.durationSec)
+          : durationLabel(episode.estimatedMinutes)
+      }</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
     </item>`;

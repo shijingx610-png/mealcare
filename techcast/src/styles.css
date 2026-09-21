@@ -425,3 +425,12 @@ a { color: var(--accent); }
   line-height: 1.75;
 }
 .banner-demo strong { color: var(--accent); }
+
+.chip-audio { background: rgba(111, 213, 154, 0.16); color: var(--ok); border-color: transparent; }
+
+.player-seek { margin-top: 12px; }
+.player-seek input[type='range'] {
+  width: 100%;
+  accent-color: var(--accent);
+  height: 20px;
+}

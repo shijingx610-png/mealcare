@@ -16,7 +16,7 @@ const isLocalHost = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostna
 if (
   'serviceWorker' in navigator &&
   import.meta.env.PROD &&
-  import.meta.env.VITE_ARTIFACT !== 'true' &&
+  import.meta.env.VITE_RELATIVE !== 'true' &&
   !isLocalHost
 ) {
   window.addEventListener('load', () => {

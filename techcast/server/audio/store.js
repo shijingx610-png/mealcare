@@ -22,17 +22,24 @@ function episodeDir(baseDir, id) {
   return path.join(baseDir, 'episodes', id);
 }
 
-export async function saveEpisode(episode, { audio, extension, contentType, baseDir } = {}) {
+export async function saveEpisode(
+  episode,
+  { audio, extension, contentType, chapters, durationSec, baseDir } = {}
+) {
   const dir = episodeDir(baseDir || dataDir(), episode.id);
   await fs.mkdir(dir, { recursive: true });
 
   const meta = {
     ...episode,
+    // チャプターは音声が無くても持っておく。
+    // 台本だけ先に出来て音声が後から付く場合があるため。
+    chapters: chapters || episode.chapters || null,
     audio: audio
       ? {
           file: `audio.${extension}`,
           contentType,
-          bytes: audio.length
+          bytes: audio.length,
+          durationSec: durationSec ?? null
         }
       : null
   };

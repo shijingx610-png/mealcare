@@ -10,6 +10,8 @@
 //
 // どちらも未設定なら null を返す。その場合アプリはブラウザ読み上げのまま動く。
 
+import { wavDurationSeconds } from './mp3.js';
+
 const VOICEVOX_DEFAULT_SPEAKER = 3;
 
 class TtsError extends Error {
@@ -173,16 +175,61 @@ export function splitForSynthesis(text, maxChars = MAX_CHARS_PER_REQUEST) {
  * WAV の場合はヘッダを書き直して結合し、MP3 はそのまま連結する。
  */
 export async function synthesizeEpisode(provider, episode, options = {}) {
-  const script = episode.segments.map((s) => s.body).join('\n\n');
-  const chunks = splitForSynthesis(script);
+  const { audio } = await synthesizeEpisodeWithChapters(provider, episode, options);
+  return audio;
+}
 
+// 日本語の読み上げは 1 秒あたり 5〜6 文字前後。
+// WAV 以外で長さをバイト数から割り出せないときの当て推量に使う。
+const CHARS_PER_SECOND = 5.4;
+
+/**
+ * セグメントごとに合成して、1 本につないだ音声とチャプターを返す。
+ *
+ * まとめて合成したほうが呼び出し回数は減るが、それだと
+ * 「どのコーナーが何秒から始まるか」が分からなくなる。
+ * コーナー単位で頭出しできることのほうが、聞く側には効く。
+ */
+export async function synthesizeEpisodeWithChapters(provider, episode, options = {}) {
   const parts = [];
-  for (const chunk of chunks) {
-    parts.push(await provider.synthesize(chunk, options));
+  const chapters = [];
+  let elapsed = 0;
+
+  for (const segment of episode.segments) {
+    const chunks = splitForSynthesis(segment.body);
+    const pieces = [];
+    for (const chunk of chunks) {
+      pieces.push(await provider.synthesize(chunk, options));
+    }
+
+    const merged =
+      provider.extension === 'wav' ? concatWav(pieces) : Buffer.concat(pieces);
+
+    let seconds;
+    if (provider.extension === 'wav') {
+      try {
+        seconds = wavDurationSeconds(merged);
+      } catch {
+        seconds = segment.body.length / CHARS_PER_SECOND;
+      }
+    } else {
+      seconds = segment.body.length / CHARS_PER_SECOND;
+    }
+
+    chapters.push({
+      segmentId: segment.id,
+      kind: segment.kind,
+      heading: segment.heading,
+      startSec: Number(elapsed.toFixed(2)),
+      endSec: Number((elapsed + seconds).toFixed(2))
+    });
+
+    elapsed += seconds;
+    parts.push(merged);
   }
 
-  if (provider.extension === 'wav') return concatWav(parts);
-  return Buffer.concat(parts);
+  const audio = provider.extension === 'wav' ? concatWav(parts) : Buffer.concat(parts);
+  return { audio, chapters, durationSec: Number(elapsed.toFixed(2)) };
 }
 
 /**

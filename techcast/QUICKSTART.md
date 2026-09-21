@@ -1,19 +1,45 @@
-# はじめかた（1ページ）
+# はじめかた
 
 AI・IT業界のニュースを毎朝まとめて、ポッドキャストとして聞けるようにします。
 
+進め方は 2 つあります。**上のほうがおすすめです。**
+
 ---
 
-## 必要なもの
+## A. GitHub にまかせる（パソコン不要・おすすめ）
 
-**Docker** だけです。入っていなければ先に入れてください。
+毎朝 GitHub が番組を作って配信します。あなたのパソコンは関係ありません。
+寝ていても旅行中でも増えます。費用もかかりません。
+
+準備は 4 つ、10 分ほどです。
+
+1. **このブランチを `main` に取り込む**
+   定期実行は `main` にあるものしか動きません。ここが一番よく抜けます。
+2. **Settings → Pages → Source を「GitHub Actions」にする**
+3. **Settings → Secrets → Actions に `ANTHROPIC_API_KEY` を入れる**（任意）
+4. **Actions タブ → TechCast daily → Run workflow** を一度押す
+
+10 分ほどで終わり、実行結果のページにアプリと購読用フィードの URL が出ます。
+
+```
+アプリ          https://あなたのユーザー名.github.io/mealcare/
+購読用フィード  https://あなたのユーザー名.github.io/mealcare/feed.xml
+```
+
+購読用フィードを、普段のポッドキャストアプリの「URL で追加」に貼ってください。
+あとは毎朝 4:30（日本時間）に新しい回が届きます。
+
+**詳しい手順は [docs/PAGES.md](./docs/PAGES.md) にあります。**
+
+---
+
+## B. 自分のパソコンで動かす
+
+情報源や重みを調整しながらその場で作り直したいとき向けです。
+Docker が要ります。入っていなければ先に入れてください。
 
 - macOS / Windows … [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - Linux … `curl -fsSL https://get.docker.com | sh`
-
----
-
-## 手順
 
 ```bash
 cd techcast
@@ -21,73 +47,33 @@ npm install
 npm run setup
 ```
 
-これだけです。`npm run setup` が次のことを全部やります。
-
-1. 設定ファイル（`.env`）を作る
-2. VOICEVOX とアプリを起動する
-3. 起動を待つ
-4. 今日の番組を 1 本作って確かめる
-
-終わると、こう表示されます。
+`npm run setup` が設定ファイルの用意、VOICEVOX の起動、最初の 1 本の生成まで
+全部やります。終わるとこう出ます。
 
 ```
-セットアップ完了
-
-  アプリ          http://localhost:3000
-  購読用フィード  http://localhost:3000/api/podcast
+アプリ          http://localhost:3000
+購読用フィード  http://localhost:3000/api/podcast
 ```
 
----
+毎朝 4:30 に自動で番組ができます。パソコンを止めていて動けなかった日は、
+次に起動したときに作り直します。
 
-## 聞く
+**詳しい手順は [docs/VOICEVOX.md](./docs/VOICEVOX.md) にあります。**
 
-**パソコンで聞く**　`http://localhost:3000` を開いて再生ボタンを押します。
-
-**スマホで聞く**　ポッドキャストアプリの「URL で追加」に購読用フィードを貼ります。
-Apple Podcasts、Pocket Casts、Overcast、AntennaPod などが対応しています。
-
-同じ家の Wi-Fi から聞く場合は、`localhost` をパソコンの IP に変えてください。
-IP は次で調べられます。
-
-```bash
-ipconfig getifaddr en0          # macOS
-hostname -I | awk '{print $1}'  # Linux
-```
-
-`.env` に書いておくと、フィードの中身も正しい URL になります。
-
-```bash
-PUBLIC_BASE_URL=http://192.168.1.20:3000
-```
-
-書いたら `docker compose up -d` で反映されます。
-
----
-
-## 毎日の更新
-
-**何もしなくて大丈夫です。** 毎朝 4:30 に新しい番組ができます。
-
-パソコンを止めていて 4:30 に動けなかった場合は、次に起動したときに自動で作り直します。
-
-時刻を変えたいときは `.env` に書きます。
-
-```bash
-DAILY_HOUR=4
-DAILY_MINUTE=30
-```
+両方を併用しても構いません。
 
 ---
 
 ## 声を変える
 
-使える声の一覧を出します。
+**A の場合**　Settings → Secrets and variables → Actions → Variables に
+`VOICEVOX_SPEAKER` を足します。
+
+**B の場合**　使える声の一覧を出して、`.env` に書きます。
 
 ```bash
 docker compose exec techcast node scripts/voicevox-speakers.mjs
 ```
-
-気に入った ID を `.env` に書いて、`docker compose up -d` で反映します。
 
 ```bash
 VOICEVOX_SPEAKER=3
@@ -96,55 +82,29 @@ TTS_SPEED=1.2
 
 ---
 
-## 台本の質を上げる（任意）
-
-`.env` に API キーを 1 行足すと、英語のニュースが日本語になり、
-ニュース同士のつながりも説明されるようになります。
-
-```bash
-ANTHROPIC_API_KEY=sk-ant-...
-```
-
-費用の目安は月 200 円から 700 円ほどです。入れなくても番組は作られます。
-
----
-
-## よく使うコマンド
-
-```bash
-docker compose logs -f techcast    # 動いているか見る
-docker compose down                # 止める
-docker compose up -d               # また動かす
-
-docker compose exec techcast node scripts/run-daily.mjs --force   # 今すぐ作り直す
-```
-
----
-
 ## 困ったとき
+
+**記事が集まらない**
+
+情報源のフィードが移転しているか止まっています。アプリの「情報源」タブで
+「使用中の情報源を確認」を押すと、その場で移転先を見つけて直せます。
+A の場合は、Actions の実行結果のページに移転の記録が出ます。
 
 **音声だけできていない**
 
-VOICEVOX が応答していません。台本は残っているので、アプリ内では読み上げで聞けます。
+VOICEVOX が動いていません。台本は残っているので、アプリ内では読み上げで聞けます。
 
 ```bash
 docker compose ps
 docker compose logs voicevox | tail
 ```
 
-**記事が集まらない**
-
-アプリの「情報源」タブで「使用中の情報源を確認」を押してください。
-読み込めないフィードがあれば、その場で移転先を見つけて直せます。
-
 **イメージが見つからないと言われる**
 
-`.env` に次を足して `npm run setup` をやり直してください。
+VOICEVOX のイメージ名は時期によって変わります。次を試してください。
 
 ```bash
 VOICEVOX_IMAGE=voicevox/voicevox_engine:cpu-ubuntu20.04-latest
 ```
 
-**もっと詳しく**
-
-[docs/VOICEVOX.md](./docs/VOICEVOX.md) に、Docker を使わない方法や設定の一覧があります。
+A の場合は Variables に、B の場合は `.env` に書きます。

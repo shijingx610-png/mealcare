@@ -1,0 +1,45 @@
+# TechCast の回帰テスト
+# ---------------------------------------------------------------------------
+# 毎朝の自動生成が静かに壊れるのを防ぐための番人。
+# techcast/ に触れた変更でだけ動かす。
+
+name: TechCast test
+
+on:
+  push:
+    paths:
+      - 'techcast/**'
+      - '.github/workflows/techcast-test.yml'
+  pull_request:
+    paths:
+      - 'techcast/**'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: techcast
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: techcast/package-lock.json
+
+      - run: npm ci
+
+      - name: 静的検査
+        run: npm run lint
+
+      - name: 回帰テスト
+        run: npm test
+
+      - name: ビルド
+        run: |
+          npm run build
+          npm run build:static

@@ -4,7 +4,7 @@
 // 呼ばれる場合の両方で使う。処理が 2 か所に分かれると必ずズレるので 1 本にした。
 
 import { generateEpisode } from './pipeline.js';
-import { createTtsProvider, synthesizeEpisode } from './audio/tts.js';
+import { createTtsProvider, synthesizeEpisodeWithChapters } from './audio/tts.js';
 import { saveEpisode, getEpisode, listEpisodes } from './audio/store.js';
 
 export function todayId(date = new Date(), timeZone = process.env.DAILY_TIMEZONE) {
@@ -73,6 +73,8 @@ export async function runDailyJob({
 
   const provider = createTtsProvider();
   let audio = null;
+  let chapters = null;
+  let durationSec = null;
   let ttsError = null;
 
   if (provider) {
@@ -82,10 +84,15 @@ export async function runDailyJob({
     for (let attempt = 1; attempt <= attempts; attempt += 1) {
       try {
         const startedAt = Date.now();
-        audio = await synthesizeEpisode(provider, episode);
+        const result = await synthesizeEpisodeWithChapters(provider, episode);
+        audio = result.audio;
+        chapters = result.chapters;
+        durationSec = result.durationSec;
         ttsError = null;
         log(
-          `[daily] 音声ができました: ${(audio.length / 1024 / 1024).toFixed(1)}MB（${provider.name}、${Math.round((Date.now() - startedAt) / 1000)}秒）`
+          `[daily] 音声ができました: ${(audio.length / 1024 / 1024).toFixed(1)}MB / ` +
+            `${Math.round(durationSec / 60)}分${Math.round(durationSec % 60)}秒` +
+            `（${provider.name}、${Math.round((Date.now() - startedAt) / 1000)}秒で合成）`
         );
         break;
       } catch (err) {
@@ -107,7 +114,9 @@ export async function runDailyJob({
   const saved = await saveEpisode(episode, {
     audio,
     extension: provider?.extension,
-    contentType: provider?.contentType
+    contentType: provider?.contentType,
+    chapters,
+    durationSec
   });
 
   return {
@@ -120,6 +129,7 @@ export async function runDailyJob({
     fallbackReason: saved.fallbackReason || null,
     tts: provider ? provider.name : null,
     audioBytes: audio ? audio.length : 0,
+    durationSec,
     ttsError
   };
 }

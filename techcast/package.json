@@ -15,10 +15,14 @@
     "voices": "node scripts/voicevox-speakers.mjs",
     "daily:now": "node scripts/run-daily.mjs",
     "build:demo-data": "node scripts/build-demo-data.mjs",
-    "build:artifact": "VITE_ARTIFACT=true vite build --outDir dist-artifact && node scripts/build-artifact-page.mjs"
+    "build:artifact": "VITE_RELATIVE=true vite build --outDir dist-artifact && node scripts/build-artifact-page.mjs",
+    "build:static": "VITE_RELATIVE=true vite build --outDir dist-static",
+    "build:site": "npm run build:static && node scripts/build-site.mjs",
+    "prune": "node scripts/prune-episodes.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.126.0",
+    "@breezystack/lamejs": "^1.2.7",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "zod": "^4.6.5"

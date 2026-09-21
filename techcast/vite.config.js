@@ -124,7 +124,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, rootDir, '');
   // 共有リンク（Artifact）として配るビルドは、絶対パスだと資産を見つけられない。
   // VITE_ARTIFACT=true のときだけ相対パスに切り替える。
-  const forArtifact = env.VITE_ARTIFACT === 'true';
+  const forArtifact = env.VITE_RELATIVE === 'true' || env.VITE_ARTIFACT === 'true';
 
   return {
     base: forArtifact ? './' : '/',

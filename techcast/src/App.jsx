@@ -24,6 +24,8 @@ import {
   saveSettings,
   toggleLearnedTerm
 } from './lib/store.js';
+import { AudioFilePlayer } from './lib/audio-player.js';
+import { loadStaticIndex, loadStaticEpisode } from './lib/static-source.js';
 import { DEMO_DATA } from './lib/demo-data.js';
 import TodayView from './views/TodayView.jsx';
 import LibraryView from './views/LibraryView.jsx';
@@ -65,8 +67,15 @@ export default function App() {
     () => loadEpisodes().find((e) => e.id === todayId()) || null
   );
   const [catalog, setCatalog] = useState(null);
-  // API に届かない場所（共有リンクなど）で開かれたとき、画面が空のままにならないようにする。
-  const [demoMode, setDemoMode] = useState(false);
+
+  // 動き方は3通りある。起動時に上から順に試す。
+  //   'api'    自分のサーバーがある。記事を集めて台本を書ける
+  //   'static' 置いてあるだけの場所（GitHub Pages など）。
+  //            生成は別のところで済んでいて、ここでは聞くだけ
+  //   'demo'   どちらも無い。何のアプリか分かるサンプルを見せる
+  const [mode, setMode] = useState('api');
+  const [staticIndex, setStaticIndex] = useState(null);
+  const demoMode = mode === 'demo';
   const [learnedTerms, setLearnedTerms] = useState(loadLearnedTerms);
   const [generating, setGenerating] = useState(false);
   const [error, setError] = useState(null);
@@ -79,11 +88,20 @@ export default function App() {
     segmentId: null
   });
 
-  const playerRef = useRef(null);
-  if (playerRef.current === null) {
-    playerRef.current = new EpisodePlayer({ backgroundAudio: new BackgroundAudio() });
+  // 読み上げと音声ファイルの2種類を持ち、エピソードに音声があるほうを使う。
+  // 操作の口は同じにしてあるので、画面側はどちらかを意識しない。
+  const speechPlayerRef = useRef(null);
+  if (speechPlayerRef.current === null) {
+    speechPlayerRef.current = new EpisodePlayer({ backgroundAudio: new BackgroundAudio() });
   }
-  const player = playerRef.current;
+  const audioPlayerRef = useRef(null);
+  if (audioPlayerRef.current === null) audioPlayerRef.current = new AudioFilePlayer();
+
+  const audioUrl = currentEpisode?.audio?.file
+    ? currentEpisode.audio.url || currentEpisode.audio.file
+    : null;
+  const usesAudioFile = Boolean(audioUrl) && AudioFilePlayer.isSupported();
+  const player = usesAudioFile ? audioPlayerRef.current : speechPlayerRef.current;
 
   const wakeLockRef = useRef(null);
   if (wakeLockRef.current === null) wakeLockRef.current = new ScreenWakeLock();
@@ -97,12 +115,15 @@ export default function App() {
   useEffect(() => player.subscribe(setPlayback), [player]);
 
   useEffect(() => {
+    const speech = speechPlayerRef.current;
+    const audio = audioPlayerRef.current;
     const wakeLock = wakeLockRef.current;
     return () => {
-      player.dispose();
+      speech.dispose();
+      audio.dispose();
       wakeLock.dispose();
     };
-  }, [player]);
+  }, []);
 
   // ロック画面とイヤホンのボタンから操作できるようにする。
   // 番組が変わるたびに登録し直さないと、表示が前の番組のままになる。
@@ -159,13 +180,25 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    player.setRate(settings.rate);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    speechPlayerRef.current.setRate(settings.rate);
+    audioPlayerRef.current.setRate(settings.rate);
   }, [settings.rate]);
 
   useEffect(() => {
-    if (currentEpisode) player.load(currentEpisode.segments);
-  }, [currentEpisode, player]);
+    if (!currentEpisode) return;
+    // 片方に切り替えるときは、もう片方を確実に止める。
+    // 止め忘れると読み上げと音声が二重に鳴る。
+    if (usesAudioFile) {
+      speechPlayerRef.current.stop();
+      audioPlayerRef.current.load(currentEpisode.segments, {
+        url: audioUrl,
+        chapters: currentEpisode.chapters
+      });
+    } else {
+      audioPlayerRef.current.stop();
+      speechPlayerRef.current.load(currentEpisode.segments);
+    }
+  }, [currentEpisode, usesAudioFile, audioUrl]);
 
   // --- エピソード生成 ------------------------------------------------------
 
@@ -222,15 +255,23 @@ export default function App() {
     return () => document.removeEventListener('visibilitychange', onVisible);
   }, []);
 
-  // 情報源カタログの取得と、朝いちばんの自動生成。
-  // 自動生成をここに置いているのは、「カタログが返ってきた」という外部イベントに
-  // ぶら下げたいから。別の effect にすると、状態の変化を追いかける形になって複雑になる。
+  // 起動時に、どの動き方ができるかを上から順に試す。
+  //   1. 自分のサーバー（記事を集めて台本を書ける）
+  //   2. 置いてあるだけの配信（生成済みを聞く）
+  //   3. デモ（何のアプリか分かるサンプル）
+  // 自動生成をここに置いているのは、「サーバーが居ると分かった」という
+  // 外部イベントにぶら下げたいから。別の effect にすると状態を追いかける形になる。
   useEffect(() => {
     let cancelled = false;
-    fetch('/api/sources')
-      .then((r) => r.json())
-      .then((data) => {
+
+    async function boot() {
+      try {
+        const res = await fetch('/api/sources');
+        if (!res.ok) throw new Error(String(res.status));
+        const data = await res.json();
         if (cancelled) return;
+
+        setMode('api');
         setCatalog(data);
 
         if (autoRunRef.current) return;
@@ -239,15 +280,43 @@ export default function App() {
         autoRunRef.current = true;
         lastRunDayRef.current = todayId();
         generateRef.current?.();
-      })
-      .catch(() => {
+        return;
+      } catch {
+        // サーバーが居ない。次を試す。
+      }
+
+      try {
+        const index = await loadStaticIndex();
         if (cancelled) return;
-        // サーバーが居ない＝共有リンクや静的配置で開かれた、とみなす。
-        // エラーを出して終わりにせず、サンプルの中身を見せて何のアプリか分かるようにする。
-        setDemoMode(true);
-        setCatalog(DEMO_DATA.catalog);
-        setCurrentEpisode(DEMO_DATA.episode);
-      });
+        if (index.episodes.length === 0) throw new Error('配信されている番組がありません');
+
+        const latest = index.episodes[0];
+        const episode = await loadStaticEpisode(latest);
+        if (cancelled) return;
+
+        setMode('static');
+        setStaticIndex(index);
+        setCatalog({
+          ...DEMO_DATA.catalog,
+          podcast: {
+            ttsProvider: 'static',
+            feedUrl: index.feedUrl,
+            episodesWithAudio: index.episodes.filter((e) => e.audio).length
+          }
+        });
+        setCurrentEpisode(episode);
+        return;
+      } catch {
+        // 静的配信でもない。
+      }
+
+      if (cancelled) return;
+      setMode('demo');
+      setCatalog(DEMO_DATA.catalog);
+      setCurrentEpisode(DEMO_DATA.episode);
+    }
+
+    boot();
     return () => {
       cancelled = true;
     };
@@ -296,8 +365,18 @@ export default function App() {
     });
   }
 
-  function handleSelectEpisode(episode) {
-    setCurrentEpisode(episode);
+  async function handleSelectEpisode(episode) {
+    // 静的配信では一覧に概要しか無いので、開くときに台本を取りにいく。
+    if (mode === 'static' && !episode.segments) {
+      try {
+        setCurrentEpisode(await loadStaticEpisode(episode));
+      } catch (err) {
+        setError(`この回を読み込めませんでした：${err.message}`);
+        return;
+      }
+    } else {
+      setCurrentEpisode(episode);
+    }
     setTab('today');
   }
 
@@ -359,9 +438,6 @@ export default function App() {
             <br />
             読み上げているニュースはすべて説明用の例で、実際の記事ではありません。
             画面の作りと聞こえ方を確かめるためのものです。
-            <br />
-            本物のニュースを毎朝受け取るには、自分のパソコンで起動してください。手順は
-            QUICKSTART.md にあります。
           </div>
         </div>
       )}
@@ -382,13 +458,16 @@ export default function App() {
             generating={generating}
             speechSupported={speechSupported}
             learnedTerms={learnedTerms}
+            mode={mode}
             onGenerate={generate}
+            onSeek={(seconds) => player.seek?.(seconds)}
             onToggleLearned={handleToggleLearned}
           />
         )}
         {tab === 'library' && (
           <LibraryView
-            episodes={episodes}
+            episodes={mode === 'static' ? staticIndex?.episodes || [] : episodes}
+            readOnly={mode !== 'api'}
             currentId={currentEpisode?.id}
             onSelect={handleSelectEpisode}
             onDelete={handleDeleteEpisode}
