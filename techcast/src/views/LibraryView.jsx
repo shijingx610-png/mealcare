@@ -7,8 +7,11 @@ function itemCount(ep) {
 
 function minutesLabel(ep) {
   const seconds = ep.audio?.durationSec;
-  if (seconds) return `${Math.round(seconds / 60)}分`;
-  return `約${ep.estimatedMinutes}分`;
+  if (!seconds) return `約${ep.estimatedMinutes}分`;
+  // 分を四捨五入すると 4分43秒 が「5分」になって実体と合わない
+  const m = Math.floor(seconds / 60);
+  const s = Math.round(seconds % 60);
+  return `${m}:${String(s).padStart(2, '0')}`;
 }
 
 export default function LibraryView({ episodes, currentId, readOnly, onSelect, onDelete }) {

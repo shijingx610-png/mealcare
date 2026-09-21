@@ -18,6 +18,7 @@ import path from 'node:path';
 import { listEpisodes, statAudio } from '../server/audio/store.js';
 import { buildPodcastFeed } from '../server/audio/podcast-feed.js';
 import { wavToMp3, wavDurationSeconds } from '../server/audio/mp3.js';
+import { formatDuration } from '../server/episode-shape.js';
 import { loadEnvFile } from '../server/load-env.js';
 
 loadEnvFile('.env');
@@ -104,7 +105,7 @@ async function main() {
       };
       console.log(
         `  ${episode.id}  ${(mp3.length / 1024 / 1024).toFixed(1)}MB` +
-          (durationSec ? `  ${Math.round(durationSec / 60)}分` : '')
+          (durationSec ? `  ${formatDuration(durationSec)}` : '')
       );
     } else {
       console.log(`  ${episode.id}  音声なし（台本のみ）`);

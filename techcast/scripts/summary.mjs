@@ -7,6 +7,7 @@
 //   node scripts/summary.mjs >> $GITHUB_STEP_SUMMARY
 
 import { listEpisodes } from '../server/audio/store.js';
+import { formatDuration } from '../server/episode-shape.js';
 import { loadEnvFile } from '../server/load-env.js';
 
 loadEnvFile('.env');
@@ -28,7 +29,7 @@ console.log('| --- | --- |');
 console.log(`| 日付 | ${latest.dateLabel} |`);
 console.log(`| 台本 | ${latest.generator === 'claude' ? 'Claude' : 'テンプレート'} |`);
 console.log(
-  `| 音声 | ${audio ? `${mb(audio.bytes)}MB / ${Math.round((audio.durationSec || 0) / 60)}分` : 'なし'} |`
+  `| 音声 | ${audio ? `${mb(audio.bytes)}MB / ${formatDuration(audio.durationSec)}` : 'なし'} |`
 );
 console.log(`| 記事 | 深掘り ${latest.items?.deepDive?.length ?? 0} 本 / 一言 ${latest.items?.roundup?.length ?? 0} 本 |`);
 console.log(`| 用語 | ${(latest.terms || []).map((t) => t.term).join('、') || 'なし'} |`);
