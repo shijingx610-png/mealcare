@@ -77,12 +77,20 @@ describe('エピソードIDの日付', () => {
 });
 
 describe('スケジューラの挙動', () => {
+  // スケジューラは「時刻」しか見ない。いまが 22:45 のときに 2 時間後を
+  // 指定すると 0:45 になり、その日のうちではもう過ぎた時刻になってしまう。
+  // 実時計に頼ると、回す時刻によって結果が変わる。時計を固定して確かめる。
+  //
+  // 日本時間 2026年9月21日 10:00 に実行したことにする。
+  const at10am = () => new Date('2026-09-21T01:00:00Z');
+
   test('予定時刻を過ぎていれば起動直後に拾いにいく', async () => {
     const runs = [];
     const schedule = scheduleDaily({
-      hour: 0,
-      minute: 1, // 必ず過去になる
+      hour: 4,
+      minute: 30, // 10:00 時点ではもう過ぎている
       timeZone: 'Asia/Tokyo',
+      now: at10am,
       catchUp: true,
       catchUpDelayMs: 5,
       run: async (reason) => {
@@ -97,10 +105,13 @@ describe('スケジューラの挙動', () => {
 
   test('まだ予定時刻が来ていなければ走らない', async () => {
     const runs = [];
+    // 固定の時刻を書くと、実行時刻によってはすでに過ぎていて落ちる。
+    // 「いまから2時間後」にすれば、いつ回しても必ず未来になる。
     const schedule = scheduleDaily({
-      hour: 23,
-      minute: 59,
+      hour: 20,
+      minute: 0, // 10:00 時点ではまだ来ていない
       timeZone: 'Asia/Tokyo',
+      now: at10am,
       catchUp: true,
       catchUpDelayMs: 5,
       run: async (reason) => {
@@ -110,16 +121,16 @@ describe('スケジューラの挙動', () => {
     });
     await new Promise((r) => setTimeout(r, 60));
     schedule.stop();
-    // 日本時間 23:59 ちょうどに実行した場合だけ拾うので、基本は 0 件
-    assert.ok(runs.length <= 1);
+    assert.equal(runs.length, 0, '予定時刻より前なのに走っている');
   });
 
   test('無効にすれば一切走らない', async () => {
     const runs = [];
     const schedule = scheduleDaily({
       enabled: false,
-      hour: 0,
-      minute: 1,
+      hour: 4,
+      minute: 30,
+      now: at10am,
       catchUp: true,
       catchUpDelayMs: 5,
       run: async () => {
@@ -134,8 +145,10 @@ describe('スケジューラの挙動', () => {
   test('生成が失敗してもスケジュールごと止まらない', async () => {
     const logs = [];
     const schedule = scheduleDaily({
-      hour: 0,
-      minute: 1,
+      hour: 4,
+      minute: 30,
+      timeZone: 'Asia/Tokyo',
+      now: at10am,
       catchUp: true,
       catchUpDelayMs: 5,
       log: (...args) => logs.push(args.join(' ')),
@@ -154,8 +167,10 @@ describe('スケジューラの挙動', () => {
     let active = 0;
     let maxActive = 0;
     const schedule = scheduleDaily({
-      hour: 23,
-      minute: 59,
+      hour: 20,
+      minute: 0,
+      timeZone: 'Asia/Tokyo',
+      now: at10am,
       catchUp: false,
       run: async () => {
         active += 1;

@@ -268,7 +268,8 @@ describe('用語辞書', () => {
 describe('収集から台本まで', () => {
   let server;
   let base;
-  const originalUrls = new Map();
+  // 本番のカタログを一時的に差し替えるので、元に戻せるよう控えておく。
+  const originalSources = new Map();
 
   before(async () => {
     server = createServer((req, res) => {
@@ -291,7 +292,12 @@ describe('収集から台本まで', () => {
     await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
     base = `http://127.0.0.1:${server.address().port}`;
 
-    // カタログの URL を一時的にフィクスチャへ向ける
+    // カタログをフィクスチャへ向ける。
+    //
+    // url だけ差し替えると、取得に失敗したときに altUrls と homepage の
+    // 実在する URL へ抜けてしまう。ネットに出られる環境では本物のフィードを
+    // 拾って成功し、「壊れたフィード」のはずが通ってしまう。
+    // 外に出る経路を全部塞いでおく。
     const mapping = {
       'itmedia-news': '/a.xml',
       'cnet-japan': '/b.rdf',
@@ -299,16 +305,25 @@ describe('収集から台本まで', () => {
       publickey: '/broken.xml'
     };
     for (const source of SOURCES) {
-      if (mapping[source.id]) {
-        originalUrls.set(source.id, source.url);
-        source.url = base + mapping[source.id];
-      }
+      if (!mapping[source.id]) continue;
+      originalSources.set(source.id, {
+        url: source.url,
+        altUrls: source.altUrls,
+        homepage: source.homepage
+      });
+      source.url = base + mapping[source.id];
+      source.altUrls = [];
+      source.homepage = `${base}/silent-home`;
     }
   });
 
   after(async () => {
     for (const source of SOURCES) {
-      if (originalUrls.has(source.id)) source.url = originalUrls.get(source.id);
+      const original = originalSources.get(source.id);
+      if (!original) continue;
+      source.url = original.url;
+      source.altUrls = original.altUrls;
+      source.homepage = original.homepage;
     }
     await new Promise((resolve) => server.close(resolve));
   });
