@@ -13,17 +13,25 @@ AI・IT業界のニュースを毎朝まとめて、ポッドキャストとし�
 
 準備は 4 つ、10 分ほどです。
 
-1. **このブランチを `main` に取り込む**
+1. **ブランチを `main` に取り込む**
+   <https://github.com/shijingx610-png/mealcare/compare/main...claude/it-news-podcast-app-kf9nqc>
+   → Create pull request → Create pull request → Merge pull request
    定期実行は `main` にあるものしか動きません。ここが一番よく抜けます。
-2. **Settings → Pages → Source を「GitHub Actions」にする**
-3. **Settings → Secrets → Actions に `ANTHROPIC_API_KEY` を入れる**（任意）
-4. **Actions タブ → TechCast daily → Run workflow** を一度押す
+2. **Pages を有効にする**
+   <https://github.com/shijingx610-png/mealcare/settings/pages>
+   → Source を「GitHub Actions」に変える
+3. **Claude の鍵を登録する**（任意）
+   <https://github.com/shijingx610-png/mealcare/settings/secrets/actions/new>
+   → Name に `ANTHROPIC_API_KEY`、Secret に鍵
+4. **一度手で動かす**
+   <https://github.com/shijingx610-png/mealcare/actions/workflows/techcast-daily.yml>
+   → Run workflow（手順 1 の前はこのページが出ません）
 
 10 分ほどで終わり、実行結果のページにアプリと購読用フィードの URL が出ます。
 
 ```
-アプリ          https://あなたのユーザー名.github.io/mealcare/
-購読用フィード  https://あなたのユーザー名.github.io/mealcare/feed.xml
+アプリ          https://shijingx610-png.github.io/mealcare/
+購読用フィード  https://shijingx610-png.github.io/mealcare/feed.xml
 ```
 
 購読用フィードを、普段のポッドキャストアプリの「URL で追加」に貼ってください。

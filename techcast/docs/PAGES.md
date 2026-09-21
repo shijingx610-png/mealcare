@@ -15,7 +15,17 @@ GitHub が毎朝あなたの代わりに番組を作って、配信まで済ま�
 **これが一番大事です。** GitHub の定期実行は、既定のブランチ（`main`）にある
 ワークフローしか動かしません。作業ブランチに置いたままだと、いつまで経っても動きません。
 
-GitHub でプルリクエストを作ってマージするか、手元でこうします。
+**このリンクを開いてください。**
+
+<https://github.com/shijingx610-png/mealcare/compare/main...claude/it-news-podcast-app-kf9nqc>
+
+そこから 3 回クリックするだけです。
+
+1. 緑の **Create pull request** を押す
+2. 次の画面でもう一度 **Create pull request** を押す
+3. **Merge pull request** → **Confirm merge** を押す
+
+手元のターミナルでやるなら、こちらでも同じです。
 
 ```bash
 git checkout main
@@ -27,11 +37,14 @@ git push origin main
 
 ## 2. Pages を有効にする
 
-1. リポジトリの **Settings** を開く
-2. 左の **Pages** をクリック
-3. **Source** を **GitHub Actions** にする
+**このリンクを開いてください。**
 
-これだけです。ブランチを選ぶ欄は触らなくて構いません。
+<https://github.com/shijingx610-png/mealcare/settings/pages>
+
+**Build and deployment** の下にある **Source** を、
+**Deploy from a branch** から **GitHub Actions** に変えます。
+
+保存ボタンはありません。選んだ時点で反映されます。
 
 ---
 
@@ -43,9 +56,17 @@ git push origin main
 - ニュース同士のつながりが説明される
 - 用語の解説がその日の文脈に合わせて言い直される
 
-1. **Settings** → **Secrets and variables** → **Actions**
-2. **New repository secret**
-3. Name に `ANTHROPIC_API_KEY`、Secret に鍵を貼る
+鍵はここで作ります。`sk-ant-` で始まる文字列です。作成時に一度しか表示されないのでコピーしておいてください。
+
+<https://console.anthropic.com/account/keys>
+
+登録はこちらです。
+
+<https://github.com/shijingx610-png/mealcare/settings/secrets/actions/new>
+
+- **Name** に `ANTHROPIC_API_KEY`
+- **Secret** に鍵を貼る
+- **Add secret** を押す
 
 > 鍵はここにしか置かないでください。コードに直接書くと、公開リポジトリなので誰でも読めます。
 
@@ -55,9 +76,15 @@ git push origin main
 
 定期実行を待たずに、その場で確かめます。
 
-1. **Actions** タブを開く
-2. 左から **TechCast daily** を選ぶ
-3. **Run workflow** を押す（ブランチは `main`）
+**このリンクを開いてください。**
+
+<https://github.com/shijingx610-png/mealcare/actions/workflows/techcast-daily.yml>
+
+右側の **Run workflow** を押し、Branch が `main` になっているのを確かめて、
+もう一度緑の **Run workflow** を押します。
+
+> このページは、手順 1 を終えるまで表示されません。
+> 「見つかりません」と出たら、マージがまだ済んでいないということです。
 
 10 分ほどで終わります。終わったら実行結果のページに、その朝の中身と
 アプリの URL、購読用フィードの URL が出ます。
@@ -68,16 +95,14 @@ git push origin main
 
 **アプリ**
 
-```
-https://あなたのユーザー名.github.io/mealcare/
-```
+<https://shijingx610-png.github.io/mealcare/>
 
 開いて再生ボタンを押すだけです。台本も全部読めます。
 
 **ポッドキャストアプリ**
 
 ```
-https://あなたのユーザー名.github.io/mealcare/feed.xml
+https://shijingx610-png.github.io/mealcare/feed.xml
 ```
 
 この URL を、普段のポッドキャストアプリの「URL で追加」に貼ります。
@@ -90,8 +115,9 @@ Apple Podcasts、Pocket Casts、Overcast、AntennaPod などが対応してい�
 
 ## 設定を変える
 
-**Settings** → **Secrets and variables** → **Actions** → **Variables** タブで足します。
-どれも任意です。
+ここで足します。どれも任意です。
+
+<https://github.com/shijingx610-png/mealcare/settings/variables/actions>
 
 | 名前 | 既定 | 意味 |
 | --- | --- | --- |
@@ -159,7 +185,9 @@ GitHub Pages に配信する
 
 **実行が失敗する**
 
-Actions タブで赤くなっている実行を開くと、どのステップで止まったかが出ます。
+<https://github.com/shijingx610-png/mealcare/actions>
+
+赤くなっている実行を開くと、どのステップで止まったかが出ます。
 実行結果のページには、その朝の中身と、読み込めなかった情報源の一覧も出ます。
 
 **記事が 0 本になる**
@@ -176,7 +204,7 @@ Actions タブで赤くなっている実行を開くと、どのステップで
 **定期実行が止まった**
 
 GitHub は、60 日間なにも動きがないリポジトリの定期実行を自動で止めます。
-Actions タブに再開のボタンが出るので押してください。
+<https://github.com/shijingx610-png/mealcare/actions> に再開のボタンが出るので押してください。
 普段から手を入れていれば起きません。
 
 **音声だけできていない**
