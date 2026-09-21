@@ -1,0 +1,50 @@
+# TechCast + VOICEVOX
+# ---------------------------------------------------------------------------
+# これ 1 つで、毎朝の番組づくりから配信までが動き続ける。
+#
+#   cp .env.example .env     # ANTHROPIC_API_KEY を入れる（任意）
+#   docker compose up -d
+#
+# 起動後:
+#   アプリ          http://localhost:3000
+#   購読用フィード  http://localhost:3000/api/podcast
+#   話者の一覧      docker compose exec techcast node scripts/voicevox-speakers.mjs
+
+services:
+  voicevox:
+    # CPU 版。GPU があるなら nvidia-latest に替えると速い。
+    # タグが見つからない場合は cpu-ubuntu20.04-latest を試してください。
+    image: ${VOICEVOX_IMAGE:-voicevox/voicevox_engine:cpu-latest}
+    container_name: techcast-voicevox
+    restart: unless-stopped
+    # 外に出す必要はないが、話者の確認や動作テストに便利なので開けておく
+    ports:
+      - '${VOICEVOX_PORT:-50021}:50021'
+    # 合成は CPU を使い切るので、他の作業を邪魔しない程度に抑える
+    deploy:
+      resources:
+        limits:
+          cpus: '${VOICEVOX_CPUS:-2}'
+
+  techcast:
+    build: .
+    container_name: techcast
+    restart: unless-stopped
+    ports:
+      - '${APP_PORT:-3000}:3000'
+    env_file:
+      - .env
+    environment:
+      # コンテナ同士はサービス名で通じる。.env の VOICEVOX_URL より優先する。
+      VOICEVOX_URL: http://voicevox:50021
+      TECHCAST_DATA_DIR: /data
+      # 毎朝の生成時刻。5 時に聞き始められるよう、少し前に作っておく。
+      DAILY_HOUR: ${DAILY_HOUR:-4}
+      DAILY_MINUTE: ${DAILY_MINUTE:-30}
+      DAILY_TIMEZONE: ${DAILY_TIMEZONE:-Asia/Tokyo}
+      TZ: ${DAILY_TIMEZONE:-Asia/Tokyo}
+    volumes:
+      # 音声と台本はここに残る。コンテナを作り直しても消えない。
+      - ./.techcast-data:/data
+    depends_on:
+      - voicevox

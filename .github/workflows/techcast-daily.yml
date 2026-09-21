@@ -1,0 +1,186 @@
+# TechCast — 毎朝の番組を作って GitHub Pages に配る
+# ---------------------------------------------------------------------------
+# 自分のパソコンを一切起動しなくても、毎朝ここで番組ができる。
+#
+# 必要な準備は 3 つだけ（README と docs/PAGES.md に手順あり）。
+#   1. Settings → Pages → Source を "GitHub Actions" にする
+#   2. Settings → Secrets → Actions に ANTHROPIC_API_KEY を入れる（任意）
+#   3. Actions タブからこのワークフローを一度手で実行する
+#
+# 生成した台本と音声は techcast-data ブランチに残す。
+# 毎回ひとつの commit で置き換えるので、履歴でリポジトリが太らない。
+
+name: TechCast daily
+
+on:
+  schedule:
+    # 19:30 UTC = 日本時間 4:30。5 時に聞き始められるよう少し前に作る。
+    - cron: '30 19 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'その日の番組があっても作り直す'
+        type: boolean
+        default: false
+      duration:
+        description: '番組の長さ（分）'
+        type: choice
+        options: ['5', '10', '15']
+        default: '10'
+
+# Pages への配信と、データ用ブランチへの書き込みに必要
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# 同時に走らせない。走ると同じ日の番組を二重に作ってしまう。
+concurrency:
+  group: techcast-daily
+  cancel-in-progress: false
+
+env:
+  DATA_DIR: ${{ github.workspace }}/techcast-data
+  DATA_BRANCH: techcast-data
+  KEEP_EPISODES: '30'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    outputs:
+      episode: ${{ steps.daily.outputs.episode }}
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+
+      - name: これまでの番組を取得
+        id: data
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.DATA_BRANCH }}
+          path: techcast-data
+
+      - name: 保存先を用意
+        run: |
+          mkdir -p "$DATA_DIR/episodes"
+          count=$(ls -1 "$DATA_DIR/episodes" 2>/dev/null | wc -l)
+          echo "保存済みの番組: ${count} 本"
+
+      - name: Node を用意
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: techcast/package-lock.json
+
+      - name: 依存を入れる
+        working-directory: techcast
+        run: npm ci
+
+      - name: VOICEVOX を起動
+        run: |
+          docker run -d --name voicevox -p 50021:50021 \
+            ${{ vars.VOICEVOX_IMAGE || 'voicevox/voicevox_engine:cpu-latest' }}
+          echo "エンジンの起動を待っています"
+          for i in $(seq 1 60); do
+            if curl -sf http://127.0.0.1:50021/version > /dev/null; then
+              echo "起動しました: $(curl -s http://127.0.0.1:50021/version)"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::warning::VOICEVOX が起動しませんでした。台本だけ作ります。"
+          docker logs voicevox | tail -30 || true
+
+      - name: 今日の番組を作る
+        id: daily
+        working-directory: techcast
+        env:
+          TECHCAST_DATA_DIR: ${{ env.DATA_DIR }}
+          VOICEVOX_URL: http://127.0.0.1:50021
+          VOICEVOX_SPEAKER: ${{ vars.VOICEVOX_SPEAKER || '3' }}
+          TTS_SPEED: ${{ vars.TTS_SPEED || '1.1' }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EPISODE_MINUTES: ${{ inputs.duration || '10' }}
+          DAILY_TIMEZONE: Asia/Tokyo
+        run: |
+          if [ "${{ inputs.force }}" = "true" ]; then
+            node scripts/run-daily.mjs --force
+          else
+            node scripts/run-daily.mjs
+          fi
+
+      - name: 結果を実行ページに残す
+        if: always()
+        working-directory: techcast
+        env:
+          TECHCAST_DATA_DIR: ${{ env.DATA_DIR }}
+        run: node scripts/summary.mjs >> "$GITHUB_STEP_SUMMARY"
+
+      - name: 古い番組を捨てる
+        working-directory: techcast
+        env:
+          TECHCAST_DATA_DIR: ${{ env.DATA_DIR }}
+        run: node scripts/prune-episodes.mjs --keep "$KEEP_EPISODES"
+
+      - name: 番組をデータ用ブランチに保存
+        run: |
+          cd "$DATA_DIR"
+          # 音声は1本数MBある。履歴を積むとリポジトリが際限なく太るので、
+          # 毎回まっさらに作り直した1コミットで置き換える。
+          rm -rf .git
+          git init -q -b snapshot
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "保存するものがありません。"
+          else
+            git commit -q -m "番組を更新: $(date -u +%Y-%m-%d)"
+            git push -q -f \
+              "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" \
+              snapshot:"$DATA_BRANCH"
+            echo "保存しました（${DATA_BRANCH} ブランチ、$(ls -1 episodes | wc -l) 本）"
+          fi
+
+      - name: 配信用サイトを組み立てる
+        working-directory: techcast
+        env:
+          TECHCAST_DATA_DIR: ${{ env.DATA_DIR }}
+          PODCAST_TITLE: ${{ vars.PODCAST_TITLE }}
+          PODCAST_AUTHOR: ${{ vars.PODCAST_AUTHOR }}
+        run: |
+          BASE_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          npm run build:static
+          node scripts/build-site.mjs --base-url "$BASE_URL" --keep "$KEEP_EPISODES"
+
+      - name: Pages 用に固める
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: techcast/site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: GitHub Pages に配信
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: 聞き方を実行ページに残す
+        run: |
+          {
+            echo "## 配信しました"
+            echo ""
+            echo "| | |"
+            echo "| --- | --- |"
+            echo "| アプリ | ${{ steps.deploy.outputs.page_url }} |"
+            echo "| 購読用フィード | ${{ steps.deploy.outputs.page_url }}feed.xml |"
+            echo ""
+            echo "購読用フィードを、ポッドキャストアプリの「URL で追加」に貼ると毎朝届きます。"
+          } >> "$GITHUB_STEP_SUMMARY"

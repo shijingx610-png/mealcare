@@ -1,0 +1,18 @@
+node_modules
+dist
+dist-ssr
+dist-artifact
+dist-static
+site
+*.local
+
+.env
+.env.*
+!.env.example
+.vercel
+
+# 生成した音声と台本
+.techcast-data
+
+*.log
+.DS_Store
