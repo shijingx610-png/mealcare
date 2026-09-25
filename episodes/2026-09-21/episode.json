@@ -1,0 +1,451 @@
+{
+  "id": "2026-09-21",
+  "createdAt": "2026-09-21T22:40:54.230Z",
+  "dateLabel": "9月21日（月）",
+  "durationMin": 10,
+  "estimatedMinutes": 5.9,
+  "generator": "template",
+  "title": "9月21日（月） Discover what’s next: 5 days left to save up to $200 on your TechCrunch Disrupt 2026 ticket ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。9月21日（月）のテックニュースをお届けします。今日の見出しは3本です。1つ目、Discover what’s next: 5 days left to save up to $200 on your TechCrunch Disrupt 2026 ticket。2つ目、Teams会議をAIエージェントの「教材」に 埋もれた経験則を資産に変える新たな手法とは。3つ目、Higgsfield AI ships new video features in a day with GPT-6 Astra。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Discover what’s next: 5 days left to save up to $200 on your TechCrunch Disrupt 2026 ticket",
+      "body": "1本目。TechCrunchから、Discover what’s next: 5 days left to save up to $200 on your TechCrunch Disrupt 2026 ticket。このニュースはTechCrunchでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Discover what’s next: 5 days left to save up to $200 on your TechCrunch Disrupt 2026 ticket",
+          "url": "https://techcrunch.com/2026/09/21/discover-whats-next-5-days-left-to-save-up-to-200-on-techcrunch-disrupt-2026/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-21T19:25:00.000Z",
+          "alsoReportedBy": [
+            "TechCrunch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Teams会議をAIエージェントの「教材」に 埋もれた経験則を資産に変える新たな手法とは",
+      "body": "2本目。ITmedia AI+から、Teams会議をAIエージェントの「教材」に 埋もれた経験則を資産に変える新たな手法とは。AIエージェントの活用が広がる中、企業固有の「仕事の進め方」をどうAIに教えるかが課題になっている。Teams会議に埋もれた判断や経験則を、AIが扱える業務知識へどう変換するか。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "Teams会議をAIエージェントの「教材」に 埋もれた経験則を資産に変える新たな手法とは",
+          "url": "https://kn.itmedia.co.jp/kn/article/2609/22/2000001658/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-09-21T22:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
+      "body": "3本目。OpenAI Newsから、Higgsfield AI ships new video features in a day with GPT-6 Astra。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
+          "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-09-21T12:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。最後に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。職務経歴書は、前職の業務をそのまま書くより「どの課題を、どう測って、どう改善したか」に翻訳すると、業界が違っても伝わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Meta’s AI agent has been blocked from using Amazon.com。TechCrunchから、Meta’s Muse is outpacing ChatGPT’s early mobile launch。OpenAI Newsから、Advisory Group on Mathematics and Artificial Intelligence。Hacker News フロントページから、Transformers Explained Visually。Hacker News フロントページから、Data Protection Commission fines Google €403M over processing of location data。Hacker News フロントページから、AI coding has made CI a bottleneck, so we reworked ours to keep up。以上です。",
+      "refs": [
+        {
+          "title": "Meta’s AI agent has been blocked from using Amazon.com",
+          "url": "https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-21T17:55:18.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Meta’s Muse is outpacing ChatGPT’s early mobile launch",
+          "url": "https://techcrunch.com/2026/09/21/metas-muse-is-outpacing-chatgpts-early-mobile-launch/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-21T19:19:21.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Advisory Group on Mathematics and Artificial Intelligence",
+          "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-09-21T12:00:00.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        },
+        {
+          "title": "Transformers Explained Visually",
+          "url": "https://poloclub.github.io/transformer-explainer/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-09-21T19:43:49.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Data Protection Commission fines Google €403M over processing of location data",
+          "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-09-21T22:33:45.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+          "url": "https://linear.app/now/ci-bottleneck-reworked",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-09-21T19:23:33.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "Discover what’s next: 5 days left to save up to $200 on your TechCrunch Disrupt 2026 ticket",
+        "url": "https://techcrunch.com/2026/09/21/discover-whats-next-5-days-left-to-save-up-to-200-on-techcrunch-disrupt-2026/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-21T19:25:00.000Z",
+        "alsoReportedBy": [
+          "TechCrunch"
+        ]
+      },
+      {
+        "title": "Teams会議をAIエージェントの「教材」に 埋もれた経験則を資産に変える新たな手法とは",
+        "url": "https://kn.itmedia.co.jp/kn/article/2609/22/2000001658/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-09-21T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
+        "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-09-21T12:00:00.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Meta’s AI agent has been blocked from using Amazon.com",
+        "url": "https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-21T17:55:18.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Meta’s Muse is outpacing ChatGPT’s early mobile launch",
+        "url": "https://techcrunch.com/2026/09/21/metas-muse-is-outpacing-chatgpts-early-mobile-launch/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-21T19:19:21.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Advisory Group on Mathematics and Artificial Intelligence",
+        "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-09-21T12:00:00.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "Transformers Explained Visually",
+        "url": "https://poloclub.github.io/transformer-explainer/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-09-21T19:43:49.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Data Protection Commission fines Google €403M over processing of location data",
+        "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-09-21T22:33:45.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+        "url": "https://linear.app/now/ci-bottleneck-reworked",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-09-21T19:23:33.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 628
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 186
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 757
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 839
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 727
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 805
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1603
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 816
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 400
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 427
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1646
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 711
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 197,
+    "eligible": 67
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 38.5
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Discover what’s next: 5 days left to save up to $200 on your TechCrunch Disrupt 2026 ticket",
+      "startSec": 38.5,
+      "endSec": 75.31
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Teams会議をAIエージェントの「教材」に 埋もれた経験則を資産に変える新たな手法とは",
+      "startSec": 75.31,
+      "endSec": 110.66
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
+      "startSec": 110.66,
+      "endSec": 137.15
+    },
+    {
+      "segmentId": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 137.15,
+      "endSec": 199.96
+    },
+    {
+      "segmentId": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 199.96,
+      "endSec": 213.23
+    },
+    {
+      "segmentId": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 213.23,
+      "endSec": 265.48
+    },
+    {
+      "segmentId": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 265.48,
+      "endSec": 275.96
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 13245996,
+    "durationSec": 275.96
+  }
+}

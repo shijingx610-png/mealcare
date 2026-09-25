@@ -1,0 +1,443 @@
+{
+  "id": "2026-09-25",
+  "createdAt": "2026-09-25T22:34:46.251Z",
+  "dateLabel": "9月25日（金）",
+  "durationMin": 10,
+  "estimatedMinutes": 6.4,
+  "generator": "template",
+  "title": "9月25日（金） Anthropic Pushes Its $2 Trillion IPO to November, Meta’s Muse Hits #1, and a $40M Seed for a Model That Doesn’t Talk: The Latest 20VC x SaaStr ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。9月25日（金）のテックニュースをお届けします。今日の見出しは3本です。1つ目、Anthropic Pushes Its $2 Trillion IPO to November, Meta’s Muse Hits #1, and a $40M Seed for a Model That Doesn’t Talk: The Latest 20VC x SaaStr。2つ目、Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing。3つ目、Proaction boosts sales 60% and saves 75+ hours with Codex。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Anthropic Pushes Its $2 Trillion IPO to November, Meta’s Muse Hits #1, and a $40M Seed for a Model That Doesn’t Talk: The Latest 20VC x SaaStr",
+      "body": "1本目。SaaStrから、Anthropic Pushes Its $2 Trillion IPO to November, Meta’s Muse Hits #1, and a $40M Seed for a Model That Doesn’t Talk: The Latest 20VC x SaaStr。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Anthropic Pushes Its $2 Trillion IPO to November, Meta’s Muse Hits #1, and a $40M Seed for a Model That Doesn’t Talk: The Latest 20VC x SaaStr",
+          "url": "https://www.saastr.com/anthropic-pushes-its-2-trillion-ipo-to-november-metas-muse-hits-1-and-a-40m-seed-for-a-model-that-doesnt-talk-the-latest-20vc-x-saastr/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-09-25T18:17:35.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
+      "body": "2本目。TechCrunchから、Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing。調達額そのものより、何に使うと言っているかを聞くと、その会社がいま何に困っているかが分かります。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
+          "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-25T18:33:59.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+      "body": "3本目。OpenAI Newsから、Proaction boosts sales 60% and saves 75+ hours with Codex。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+          "url": "https://openai.com/index/proaction",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-09-25T19:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。シード、シリーズA・B・C、読み方はシード、シリーズエー。スタートアップの資金調達の段階です。シードは製品を作り始める頃、シリーズAはPMFが見え始めた頃、BやCは営業や採用で一気に広げる段階を指します。段階ごとに社内の整い具合が全く違います。「整っていない環境を面白がれるか」は自己分析の材料になります。最後に、SDK、読み方はエスディーケー。ある機能を自分のアプリに組み込むための道具一式です。APIを使いやすく包んだもの、と捉えておけば実務では困りません。APIが「窓口」なら、SDKは「窓口に行くための定期券と地図」です。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。志望動機は「業界が伸びているから」だけだと弱くなります。どのニュースを見て何を面白いと思ったのか、具体的な一本があると説得力が変わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Anthropic to pay Akamai $11.6 billion over seven years in cloud deal。TechCrunchから、Unsecured OpenAI agents posted 53 user images on the internet without the lab’s knowledge。SaaStrから、5 Interesting Learnings from GitLab at $1.13 Billion in Revenue: 24% Billings Growth, $20M of Flex in Six Weeks, and 400 Basis Points of AI Margin Cost。Hacker News フロントページから、Meta's Muse appears to use an OpenAI model labeled muse-special。Hacker News フロントページから、Alan Kay: Shannon gave us a way of dealing with noisy channels [video]。はてなブックマーク テクノロジーから、OpenAIとClaudeのAgent SDKから学ぶAgentの基本構成 - ぷらすのブログ。以上です。",
+      "refs": [
+        {
+          "title": "Anthropic to pay Akamai $11.6 billion over seven years in cloud deal",
+          "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-25T19:13:38.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Unsecured OpenAI agents posted 53 user images on the internet without the lab’s knowledge",
+          "url": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-25T22:20:47.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "5 Interesting Learnings from GitLab at $1.13 Billion in Revenue: 24% Billings Growth, $20M of Flex in Six Weeks, and 400 Basis Points of AI Margin Cost",
+          "url": "https://www.saastr.com/5-interesting-learnings-from-gitlab-at-1-13-billion-in-revenue-24-billings-growth-20m-of-flex-in-six-weeks-and-400-basis-points-of-ai-margin-cost/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-09-25T14:10:08.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Meta's Muse appears to use an OpenAI model labeled muse-special",
+          "url": "https://mouse.dev/blog/muse-special/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-09-25T18:18:06.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Alan Kay: Shannon gave us a way of dealing with noisy channels [video]",
+          "url": "https://www.youtube.com/watch?v=Cjntrqhn8pk",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-09-25T18:37:05.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "OpenAIとClaudeのAgent SDKから学ぶAgentの基本構成 - ぷらすのブログ",
+          "url": "https://blog.p1ass.com/posts/agent-foundations/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-09-25T13:15:56.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "Anthropic Pushes Its $2 Trillion IPO to November, Meta’s Muse Hits #1, and a $40M Seed for a Model That Doesn’t Talk: The Latest 20VC x SaaStr",
+        "url": "https://www.saastr.com/anthropic-pushes-its-2-trillion-ipo-to-november-metas-muse-hits-1-and-a-40m-seed-for-a-model-that-doesnt-talk-the-latest-20vc-x-saastr/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-09-25T18:17:35.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
+        "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-25T18:33:59.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+        "url": "https://openai.com/index/proaction",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-09-25T19:00:00.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Anthropic to pay Akamai $11.6 billion over seven years in cloud deal",
+        "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-25T19:13:38.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Unsecured OpenAI agents posted 53 user images on the internet without the lab’s knowledge",
+        "url": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-25T22:20:47.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "5 Interesting Learnings from GitLab at $1.13 Billion in Revenue: 24% Billings Growth, $20M of Flex in Six Weeks, and 400 Basis Points of AI Margin Cost",
+        "url": "https://www.saastr.com/5-interesting-learnings-from-gitlab-at-1-13-billion-in-revenue-24-billings-growth-20m-of-flex-in-six-weeks-and-400-basis-points-of-ai-margin-cost/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-09-25T14:10:08.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Meta's Muse appears to use an OpenAI model labeled muse-special",
+        "url": "https://mouse.dev/blog/muse-special/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-09-25T18:18:06.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Alan Kay: Shannon gave us a way of dealing with noisy channels [video]",
+        "url": "https://www.youtube.com/watch?v=Cjntrqhn8pk",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-09-25T18:37:05.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAIとClaudeのAgent SDKから学ぶAgentの基本構成 - ぷらすのブログ",
+        "url": "https://blog.p1ass.com/posts/agent-foundations/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-09-25T13:15:56.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "series",
+      "term": "シード / シリーズA・B・C",
+      "reading": "シード、シリーズエー",
+      "category": "スタートアップ",
+      "level": 1,
+      "definition": "スタートアップの資金調達の段階です。シードは製品を作り始める頃、シリーズAはPMFが見え始めた頃、BやCは営業や採用で一気に広げる段階を指します。",
+      "interview": "段階ごとに社内の整い具合が全く違います。「整っていない環境を面白がれるか」は自己分析の材料になります。"
+    },
+    {
+      "id": "sdk",
+      "term": "SDK",
+      "reading": "エスディーケー",
+      "category": "技術",
+      "level": 2,
+      "definition": "ある機能を自分のアプリに組み込むための道具一式です。APIを使いやすく包んだもの、と捉えておけば実務では困りません。",
+      "interview": "APIが「窓口」なら、SDKは「窓口に行くための定期券と地図」です。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 599
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 162
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1031
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 1046
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 678
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 698
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1634
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 1037
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 602
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 692
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 8401
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1060
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 199,
+    "eligible": 109
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 47.15
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Anthropic Pushes Its $2 Trillion IPO to November, Meta’s Muse Hits #1, and a $40M Seed for a Model That Doesn’t Talk: The Latest 20VC x SaaStr",
+      "startSec": 47.15,
+      "endSec": 83.63
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
+      "startSec": 83.63,
+      "endSec": 110.51
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+      "startSec": 110.51,
+      "endSec": 138.57
+    },
+    {
+      "segmentId": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 138.57,
+      "endSec": 195.97
+    },
+    {
+      "segmentId": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 195.97,
+      "endSec": 209.25
+    },
+    {
+      "segmentId": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 209.25,
+      "endSec": 281.09
+    },
+    {
+      "segmentId": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 281.09,
+      "endSec": 291.56
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 13995052,
+    "durationSec": 291.56
+  }
+}
