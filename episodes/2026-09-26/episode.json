@@ -1,0 +1,443 @@
+{
+  "id": "2026-09-26",
+  "createdAt": "2026-09-26T22:02:38.198Z",
+  "dateLabel": "9月26日（土）",
+  "durationMin": 10,
+  "estimatedMinutes": 5.9,
+  "generator": "template",
+  "title": "9月26日（土） 「テレワーク廃止で人が辞める」「争奪戦が激しいITエンジニア職」、変革期を生き抜く組織の選択 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。9月26日（土）のテックニュースをお届けします。今日の見出しは3本です。1つ目、「テレワーク廃止で人が辞める」「争奪戦が激しいITエンジニア職」、変革期を生き抜く組織の選択。2つ目、Insurers claim AI is already increasing healthcare costs。3つ目、Everyone Should Publish the Deepest, Most Direct Competitive Evals They Can. Case Study: $100m ARR Gorgias for AI CX。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "「テレワーク廃止で人が辞める」「争奪戦が激しいITエンジニア職」、変革期を生き抜く組織の選択",
+      "body": "1本目。はてなブックマーク テクノロジーから、「テレワーク廃止で人が辞める」「争奪戦が激しいITエンジニア職」、変革期を生き抜く組織の選択。企業における出社回帰への方針転換とそれに伴う人材流出の懸念、生成AIが浸透してもなお解消されないエンジニア不足など、組織と人材に関するテーマに大きな関心が寄せられました。インフラ面ではVMware製品からの脱却策、データベースやネットワーク構築の最適化、ゼロトラストの本来の目的など、直面するコスト高や運...採用や働き方のニュースは、そのまま自分の選択肢の話です。",
+      "refs": [
+        {
+          "title": "「テレワーク廃止で人が辞める」「争奪戦が激しいITエンジニア職」、変革期を生き抜く組織の選択",
+          "url": "https://atmarkit.itmedia.co.jp/ait/articles/2609/26/news010.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-09-26T15:26:34.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Insurers claim AI is already increasing healthcare costs",
+      "body": "2本目。TechCrunchから、Insurers claim AI is already increasing healthcare costs。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Insurers claim AI is already increasing healthcare costs",
+          "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-26T21:02:06.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Everyone Should Publish the Deepest, Most Direct Competitive Evals They Can. Case Study: $100m ARR Gorgias for AI CX",
+      "body": "3本目。SaaStrから、Everyone Should Publish the Deepest, Most Direct Competitive Evals They Can. Case Study: $100m ARR Gorgias for AI CX。指標が出てくるニュースは、業界の共通言語を覚える絶好の機会です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Everyone Should Publish the Deepest, Most Direct Competitive Evals They Can. Case Study: $100m ARR Gorgias for AI CX",
+          "url": "https://www.saastr.com/everyone-should-publish-the-deepest-most-direct-competitive-evals-they-can-case-study-100m-arr-gorgias-for-ai-cx/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-09-26T14:10:28.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。最後に、ゼロトラスト、読み方はゼロトラスト。社内ネットワークの中だから安全、とは考えず、すべてのアクセスを毎回疑って確認する設計方針です。リモートワークの普及で主流になりました。「境界を守る」から「一つひとつを確認する」への転換、と一言で言えると伝わります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。知らない用語が出てきたら、その場で調べるより一度メモして夜にまとめて潰すほうが続きます。完璧に理解しようとしないことが、続けるコツです。",
+      "refs": []
+    },
+    {
+      "id": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Meta and YouTube say they will run ads for ‘Musk’ documentary after all。TechCrunchから、TikTok agrees to pay at least $100M in Alabama settlement。はてなブックマーク テクノロジーから、【検証】Google AI Pro 限界まで使い倒したらめちゃくちゃお得 説｜ぶるぺん/blue.pen5805。Hacker News フロントページから、Drawgent: Coding agent on a live Excalidraw canvas。Hacker News フロントページから、Welcome to the Medical Clinic at the Interplanetary Relay Station。はてなブックマーク テクノロジーから、チャットGPT利用者の画像を流出 オープンAI、新たに暴走事案：朝日新聞。以上です。",
+      "refs": [
+        {
+          "title": "Meta and YouTube say they will run ads for ‘Musk’ documentary after all",
+          "url": "https://techcrunch.com/2026/09/26/meta-says-it-will-run-ads-for-musk-documentary-after-all/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-26T17:44:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "TikTok agrees to pay at least $100M in Alabama settlement",
+          "url": "https://techcrunch.com/2026/09/26/tiktok-agrees-to-pay-at-least-100m-in-alabama-settlement/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-26T20:24:45.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "【検証】Google AI Pro 限界まで使い倒したらめちゃくちゃお得 説｜ぶるぺん/blue.pen5805",
+          "url": "https://note.com/blue_pen5805/n/nb124b104c28b",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-09-26T06:52:37.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Drawgent: Coding agent on a live Excalidraw canvas",
+          "url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-09-26T15:56:34.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Welcome to the Medical Clinic at the Interplanetary Relay Station",
+          "url": "https://www.lightspeedmagazine.com/fiction/welcome-to-the-medical-clinic-at-the-interplanetary-relay-station/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-09-26T20:08:50.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "チャットGPT利用者の画像を流出 オープンAI、新たに暴走事案：朝日新聞",
+          "url": "https://www.asahi.com/articles/ASV9V2V4JV9VULZU001M.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-09-26T09:53:04.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "「テレワーク廃止で人が辞める」「争奪戦が激しいITエンジニア職」、変革期を生き抜く組織の選択",
+        "url": "https://atmarkit.itmedia.co.jp/ait/articles/2609/26/news010.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-09-26T15:26:34.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Insurers claim AI is already increasing healthcare costs",
+        "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-26T21:02:06.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Everyone Should Publish the Deepest, Most Direct Competitive Evals They Can. Case Study: $100m ARR Gorgias for AI CX",
+        "url": "https://www.saastr.com/everyone-should-publish-the-deepest-most-direct-competitive-evals-they-can-case-study-100m-arr-gorgias-for-ai-cx/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-09-26T14:10:28.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Meta and YouTube say they will run ads for ‘Musk’ documentary after all",
+        "url": "https://techcrunch.com/2026/09/26/meta-says-it-will-run-ads-for-musk-documentary-after-all/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-26T17:44:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "TikTok agrees to pay at least $100M in Alabama settlement",
+        "url": "https://techcrunch.com/2026/09/26/tiktok-agrees-to-pay-at-least-100m-in-alabama-settlement/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-26T20:24:45.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "【検証】Google AI Pro 限界まで使い倒したらめちゃくちゃお得 説｜ぶるぺん/blue.pen5805",
+        "url": "https://note.com/blue_pen5805/n/nb124b104c28b",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-09-26T06:52:37.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Drawgent: Coding agent on a live Excalidraw canvas",
+        "url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-09-26T15:56:34.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Welcome to the Medical Clinic at the Interplanetary Relay Station",
+        "url": "https://www.lightspeedmagazine.com/fiction/welcome-to-the-medical-clinic-at-the-interplanetary-relay-station/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-09-26T20:08:50.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "チャットGPT利用者の画像を流出 オープンAI、新たに暴走事案：朝日新聞",
+        "url": "https://www.asahi.com/articles/ASV9V2V4JV9VULZU001M.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-09-26T09:53:04.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "zero-trust",
+      "term": "ゼロトラスト",
+      "reading": "ゼロトラスト",
+      "category": "セキュリティ",
+      "level": 2,
+      "definition": "社内ネットワークの中だから安全、とは考えず、すべてのアクセスを毎回疑って確認する設計方針です。リモートワークの普及で主流になりました。",
+      "interview": "「境界を守る」から「一つひとつを確認する」への転換、と一言で言えると伝わります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 558
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 188
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 542
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 472
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 521
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 189
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 820
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 450
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 277
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 301
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 6008
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 464
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 200,
+    "eligible": 74
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 36.29
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "「テレワーク廃止で人が辞める」「争奪戦が激しいITエンジニア職」、変革期を生き抜く組織の選択",
+      "startSec": 36.29,
+      "endSec": 79.37
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Insurers claim AI is already increasing healthcare costs",
+      "startSec": 79.37,
+      "endSec": 102.55
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Everyone Should Publish the Deepest, Most Direct Competitive Evals They Can. Case Study: $100m ARR Gorgias for AI CX",
+      "startSec": 102.55,
+      "endSec": 129.34
+    },
+    {
+      "segmentId": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 129.34,
+      "endSec": 187.68
+    },
+    {
+      "segmentId": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 187.68,
+      "endSec": 200.02
+    },
+    {
+      "segmentId": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 200.02,
+      "endSec": 257.66
+    },
+    {
+      "segmentId": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 257.66,
+      "endSec": 268.14
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 12870700,
+    "durationSec": 268.14
+  }
+}
