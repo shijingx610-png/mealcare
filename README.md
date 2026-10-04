@@ -1,16 +1,41 @@
-# React + Vite
+# MealCare
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+sho（ハイブリッドボディメイク）のクライアント向け食事・体重記録アプリ。
+React + Vite で作られた SPA で、Vercel にデプロイして使う。
 
-Currently, two official plugins are available:
+## 主な機能
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 食事記録（食品データベース検索・手入力・写真AI・レシピ提案）
+  - 食品データベースは約970品（食材・料理・コンビニ・外食チェーン・お菓子・飲み物・お酒）。`src/data/foods/`
+  - 値は日本食品標準成分表（八訂）などを参考にした目安。量はグラムで調整できる
+  - データベースにない食品は、名前から AI で推定して記録できる
+- PFC と カロリーの目標計算、栄養分析、体重推移
+- コーチ連携（公式LINE `@741apbnk`）
+  - 日報・週報・相談・ミッション達成報告を、本文を入れた状態で公式LINEのトークに渡す
+  - 送信はクライアント本人が LINE 上で行い、返信も LINE に届く
 
-## React Compiler
+## データの保存先
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+記録はすべて端末のブラウザ（localStorage）に保存される。サーバーには送らない。
+機種変更やブラウザのデータ削除で消えるため、必要に応じて「📤 データ出力」から CSV を保存する。
 
-## Expanding the ESLint configuration
+## 写真AI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+`api/photo.js`（Vercel Function）が Claude API を呼ぶ。
+
+- Vercel の環境変数に `ANTHROPIC_API_KEY` を設定する
+- 画像はブラウザ側で長辺 1568px の JPEG に縮小してから送る（HEIC もここで変換される）
+- 写真には「ご飯は大盛り」などの補足を添えられる。結果は1品ずつグラムを直せる
+- 同じエンドポイントに `{ text }` を送ると、写真なしで食品名から推定する
+
+## 開発
+
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run lint
+npm test         # API と食品データのテスト
+npm run build
+```
+
+`techcast/` は別アプリ（ポッドキャスト）で、mealcare とは独立している。
