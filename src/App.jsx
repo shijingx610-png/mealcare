@@ -1314,10 +1314,10 @@ function LineConsultSection(){
     <div style={{marginTop:24}}>
       <div style={{fontSize:14,color:S,marginBottom:8,fontWeight:'bold'}}>個別相談</div>
       <div style={{background:'linear-gradient(135deg,#06C755 0%,#04a047 100%)',borderRadius:16,padding:20,color:'#fff',boxShadow:'0 4px 12px rgba(6,199,85,0.3)'}}>
-        <div style={{fontSize:18,fontWeight:'bold',marginBottom:8}}>💬 翔と直接話す</div>
+        <div style={{fontSize:18,fontWeight:'bold',marginBottom:8}}>💬 shoと直接話す</div>
         <div style={{fontSize:13,lineHeight:1.6,opacity:0.95,marginBottom:16}}>まだ友だち追加していない方は、先に公式LINEを追加してください。日報・週報・相談はすべてこのLINEに届きます。</div>
         <button onClick={function(){openLine(null,'coach_add');}} style={{width:'100%',background:'#fff',color:'#06C755',border:'none',padding:'14px',borderRadius:10,fontSize:15,fontWeight:'bold',cursor:'pointer'}}>公式LINEを友だち追加 →</button>
-        <div style={{fontSize:11,opacity:0.85,marginTop:12,lineHeight:1.5,whiteSpace:'pre-line'}}>{'※ AIではなく翔本人が返信します\n※ 返信まで1〜2日いただく場合があります'}</div>
+        <div style={{fontSize:11,opacity:0.85,marginTop:12,lineHeight:1.5,whiteSpace:'pre-line'}}>{'※ AIではなくsho本人が返信します\n※ 返信まで1〜2日いただく場合があります'}</div>
       </div>
     </div>
   );
@@ -1416,7 +1416,7 @@ function CoachScreen(props){
         <div>
           <Cd style={{marginBottom:10}}>
             <div style={{color:'#fff',fontWeight:700,marginBottom:8}}>コーチに相談する</div>
-            <div style={{color:S,fontSize:12,lineHeight:1.6,marginBottom:10}}>書いた内容は公式LINEで翔に届き、返信もLINEに届きます。どんな小さなことでも大丈夫です。</div>
+            <div style={{color:S,fontSize:12,lineHeight:1.6,marginBottom:10}}>書いた内容は公式LINEでshoに届き、返信もLINEに届きます。どんな小さなことでも大丈夫です。</div>
             <div style={{display:'flex',flexWrap:'wrap',gap:6,marginBottom:10}}>
               {CONSULT_TEMPLATES.map(function(t){
                 return <button key={t.l} onClick={function(){setDraft(function(d){return d?d+'\n'+t.t:t.t;});}} style={{background:N3,border:'none',borderRadius:14,color:S2,fontSize:11,padding:'5px 10px',cursor:'pointer'}}>{t.l}</button>;
