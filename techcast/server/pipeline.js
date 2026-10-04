@@ -26,7 +26,8 @@ export async function collect({
   excludeLinks = [],
   learnedTermIds = [],
   urlOverrides = {},
-  timeoutMs
+  timeoutMs,
+  template = false
 } = {}) {
   const sources = resolveSources(sourceIds);
   if (sources.length === 0) {
@@ -36,7 +37,7 @@ export async function collect({
       terms: [],
       health: [],
       stats: { fetched: 0, unique: 0, eligible: 0, sources: 0 },
-      plan: planFor(durationMin)
+      plan: planFor(durationMin, { template })
     };
   }
 
@@ -49,7 +50,8 @@ export async function collect({
   const { deepDive, roundup, plan, eligibleCount } = select(scored, {
     durationMin,
     maxAgeHours,
-    excludeLinks
+    excludeLinks,
+    template
   });
 
   const chosen = [...deepDive, ...roundup];
@@ -82,7 +84,10 @@ export async function collect({
  */
 export async function generateEpisode(options = {}) {
   const { useClaude = true, date = new Date(), durationMin = 10, apiKey } = options;
-  const collected = await collect({ ...options, durationMin });
+  // Claude が使えない朝は、本数を増やした構成で集める。テンプレートはRSSの要約しか
+  // 持たないので、Claude と同じ本数だと尺に届かない。
+  const willUseClaude = useClaude && Boolean(apiKey || process.env.ANTHROPIC_API_KEY);
+  const collected = await collect({ ...options, durationMin, template: !willUseClaude });
 
   const base = {
     date,

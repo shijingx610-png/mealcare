@@ -239,15 +239,28 @@ export const DURATION_PLANS = {
   15: { deepDive: 4, roundup: 8, glossary: 3 }
 };
 
-export function planFor(durationMin) {
-  return DURATION_PLANS[durationMin] || DURATION_PLANS[10];
+// テンプレート経路はRSSの要約をそのまま使うので、1本から引き出せる分量が決まっている。
+// Claude と同じ本数だと尺の半分で話し終えてしまうため、本数のほうを増やして埋める。
+// 水増しした言い回しを足すより、扱うニュースを増やすほうが聞く側の得になる。
+export const TEMPLATE_DURATION_PLANS = {
+  5: { deepDive: 3, roundup: 6, glossary: 2 },
+  10: { deepDive: 5, roundup: 12, glossary: 4 },
+  15: { deepDive: 7, roundup: 16, glossary: 5 }
+};
+
+export function planFor(durationMin, { template = false } = {}) {
+  const table = template ? TEMPLATE_DURATION_PLANS : DURATION_PLANS;
+  return table[durationMin] || table[10];
 }
 
 /**
  * スコア順に並べつつ、同じ情報源ばかりにならないよう制約をかけて選ぶ。
  */
-export function select(scored, { durationMin = 10, maxAgeHours = 36, excludeLinks = [] } = {}) {
-  const plan = planFor(durationMin);
+export function select(
+  scored,
+  { durationMin = 10, maxAgeHours = 36, excludeLinks = [], template = false } = {}
+) {
+  const plan = planFor(durationMin, { template });
   const excluded = new Set(excludeLinks.map(canonicalUrl));
   const now = Date.now();
 
@@ -265,13 +278,22 @@ export function select(scored, { durationMin = 10, maxAgeHours = 36, excludeLink
   const roundup = [];
 
   // 深掘りは 1 情報源あたり 1 本まで。朝いちばんの3本が同じ媒体だと視野が狭まる。
-  for (const item of eligible) {
-    if (deepDive.length >= plan.deepDive) break;
-    const used = perSource.get(item.sourceId) || 0;
-    if (used >= 1) continue;
-    perSource.set(item.sourceId, used + 1);
-    deepDive.push(item);
-  }
+  const fillDeepDive = (candidates) => {
+    for (const item of candidates) {
+      if (deepDive.length >= plan.deepDive) return;
+      const used = perSource.get(item.sourceId) || 0;
+      if (used >= 1) continue;
+      perSource.set(item.sourceId, used + 1);
+      deepDive.push(item);
+    }
+  };
+
+  // 日本語の記事を先に埋める。英語記事は要約を日本語音声で読み上げられないので、
+  // 深掘り枠に置くと見出ししか伝わらず、中身も尺も痩せる。
+  // 英語のニュースは見出しを並べるラウンドアップのほうが役に立つ。
+  fillDeepDive(eligible.filter((item) => item.lang !== 'en'));
+  // 日本語だけで枠が埋まらなければ、スコア順で英語記事も入れる。
+  fillDeepDive(eligible);
 
   // ラウンドアップは 1 情報源あたり 2 本まで
   const chosen = new Set(deepDive.map((i) => i.canonical || canonicalUrl(i.link)));
