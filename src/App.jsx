@@ -24,10 +24,6 @@ function migrateLocalStorage(){
     if(oldWater&&!localStorage.getItem('mc2_water')){
       localStorage.setItem('mc2_water',oldWater);
     }
-    var oldClients=localStorage.getItem('mc_clients');
-    if(oldClients&&!localStorage.getItem('mc2_clients')){
-      localStorage.setItem('mc2_clients',oldClients);
-    }
     var oldMeals=localStorage.getItem('mc_meals');
     if(oldMeals&&!localStorage.getItem('mc2_meals')){
       localStorage.setItem('mc2_meals',oldMeals);
@@ -36,7 +32,7 @@ function migrateLocalStorage(){
     if(oldWeights&&!localStorage.getItem('mc2_weights')){
       localStorage.setItem('mc2_weights',oldWeights);
     }
-    ['mc_water','mc_clients','mc_meals','mc_weights'].forEach(function(k){
+    ['mc_water','mc_meals','mc_weights'].forEach(function(k){
       localStorage.removeItem(k);
     });
     localStorage.setItem('mc2_migration_v','1');
@@ -63,7 +59,7 @@ class ErrorBoundary extends React.Component {
         screen:this.props.screen
       });
       localStorage.setItem('mc2_error_logs',JSON.stringify(logs.slice(-20)));
-    }catch(e){}
+    }catch{/* ログ保存に失敗しても画面表示は続ける */}
   }
   render(){
     if(this.state.hasError){
@@ -190,7 +186,22 @@ function getDisplayName(profile){
   var name=profile&&profile.name?profile.name.trim():'';
   return name&&name.length>0?name:'あなた';
 }
-function todayStr(){return new Date().toISOString().slice(0,10);}
+// 端末のローカル日付（日本時間なら JST）で YYYY-MM-DD を返す。toISOString は UTC なので使わない
+function dateStr(d){var m=d.getMonth()+1,day=d.getDate();return d.getFullYear()+'-'+(m<10?'0':'')+m+'-'+(day<10?'0':'')+day;}
+function todayStr(){return dateStr(new Date());}
+function shiftDate(ds,delta){var d=new Date(ds+'T12:00:00');d.setDate(d.getDate()+delta);return dateStr(d);}
+function lastNDays(n){var t=todayStr(),out=[];for(var i=n-1;i>=0;i--)out.push(shiftDate(t,-i));return out;}
+function hasRecord(meals,d){return getDayMacros(meals[d]).cal>0;}
+// 今日（今日が未記録なら昨日）から遡って連続で記録できている日数
+function calcStreak(meals){
+  var d=todayStr();
+  if(!hasRecord(meals,d)) d=shiftDate(d,-1);
+  var n=0;
+  while(hasRecord(meals,d)&&n<3650){n++;d=shiftDate(d,-1);}
+  return n;
+}
+function loadJSON(key,fallback){try{var v=JSON.parse(localStorage.getItem(key));return v==null?fallback:v;}catch{return fallback;}}
+function saveJSON(key,value){try{localStorage.setItem(key,JSON.stringify(value));}catch(e){console.error('[storage] save failed',key,e);}}
 function fmtDate(d){var dt=new Date(d+'T12:00:00');return (dt.getMonth()+1)+'/'+dt.getDate();}
 function mkId(){return Math.random().toString(36).slice(2,9);}
 
@@ -229,20 +240,104 @@ function calcScore(m,goals){
 }
 
 // ── AI Photo Analysis (via /api/photo proxy) ──
+// スマホの写真は数MB〜十数MBあり、HEIC のこともある。長辺1568pxの JPEG に縮小してから送る
+var PHOTO_MAX_EDGE=1568;
+function prepareImage(file){
+  return new Promise(function(resolve,reject){
+    var url=URL.createObjectURL(file);
+    var img=new Image();
+    img.onload=function(){
+      var scale=Math.min(1,PHOTO_MAX_EDGE/Math.max(img.naturalWidth,img.naturalHeight));
+      var w=Math.round(img.naturalWidth*scale),h=Math.round(img.naturalHeight*scale);
+      var canvas=document.createElement('canvas');
+      canvas.width=w;canvas.height=h;
+      var ctx=canvas.getContext('2d');
+      ctx.fillStyle='#fff';ctx.fillRect(0,0,w,h);
+      ctx.drawImage(img,0,0,w,h);
+      URL.revokeObjectURL(url);
+      var dataUrl=canvas.toDataURL('image/jpeg',0.85);
+      resolve({base64:dataUrl.split(',')[1],mediaType:'image/jpeg'});
+    };
+    img.onerror=function(){URL.revokeObjectURL(url);reject(new Error('decode failed'));};
+    img.src=url;
+  });
+}
+function photoErrorMessage(status){
+  if(status===422) return '食べ物を見つけられませんでした。料理全体が写るように撮り直してみてください。';
+  if(status===413) return '画像が大きすぎました。別の写真で試してください。';
+  if(status===429) return '混み合っています。少し時間をおいてもう一度お試しください。';
+  if(status===0) return '通信できませんでした。電波の良い場所でもう一度お試しください。';
+  return '解析に失敗しました。もう一度試すか、検索・手入力で記録してください。';
+}
 function callPhotoAI(base64, mediaType, onSuccess, onError) {
   fetch('/api/photo', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ base64: base64, mediaType: mediaType })
   })
-    .then(function(r){ return r.json().then(function(d){ return {ok:r.ok, data:d}; }); })
+    .then(function(r){ return r.json().catch(function(){return {};}).then(function(d){ return {ok:r.ok, status:r.status, data:d}; }); })
     .then(function(res){
-      if(!res.ok){ onError(); return; }
       var items = res.data && res.data.items;
-      if(Array.isArray(items)) onSuccess(items);
-      else onError();
+      if(res.ok && Array.isArray(items) && items.length>0) onSuccess(items);
+      else onError(photoErrorMessage(res.ok?422:res.status));
     })
-    .catch(function(){ onError(); });
+    .catch(function(){ onError(photoErrorMessage(0)); });
+}
+
+// ── LINE 公式アカウント連携 ──
+var LINE_ID='@741apbnk';
+var LINE_ADD_URL='https://line.me/R/ti/p/'+LINE_ID;
+// 公式アカウントとのトークを開き、本文を入力欄に入れた状態にする（送信はユーザーが押す）
+function lineMessageUrl(text){return 'https://line.me/R/oaMessage/'+LINE_ID+'/?'+encodeURIComponent(text);}
+function openLine(text,from){
+  var log=loadJSON('mc2_line_clicks',[]);
+  log.push({at:new Date().toISOString(),from:from||'coach'});
+  saveJSON('mc2_line_clicks',log.slice(-100));
+  window.open(text?lineMessageUrl(text):LINE_ADD_URL,'_blank','noopener');
+}
+var MEAL_SECTIONS=[{id:'breakfast',l:'朝食'},{id:'lunch',l:'昼食'},{id:'dinner',l:'夕食'},{id:'snack',l:'間食'}];
+function buildDailyReport(profile,meals,weights,day){
+  var goals=calcGoals(profile);
+  var dm=meals[day]||{};
+  var m=getDayMacros(dm);
+  var lines=['【MealCare 日報】'+getDisplayName(profile)+' / '+fmtDate(day)];
+  lines.push('摂取 '+m.cal+' / 目標 '+goals.cal+' kcal');
+  lines.push('P '+m.p+'g / F '+m.f+'g / C '+m.c+'g（スコア '+calcScore(m,goals)+'点）');
+  MEAL_SECTIONS.forEach(function(sec){
+    var items=dm[sec.id]||[];
+    if(items.length===0) return;
+    var cal=Math.round(getMacros(items).cal);
+    lines.push('■'+sec.l+'（'+cal+'kcal）'+items.map(function(it){return it.n+((it.qty||1)!==1?'×'+it.qty:'');}).join('、'));
+  });
+  var w=weights.find(function(x){return x.date===day;});
+  if(w) lines.push('体重 '+w.weight+'kg'+(w.fat?' / 体脂肪率 '+w.fat+'%':''));
+  return lines.join('\n');
+}
+function summarizeWeek(profile,meals,weights){
+  var goals=calcGoals(profile);
+  var days=lastNDays(7);
+  var rec=days.filter(function(d){return hasRecord(meals,d);});
+  function avg(k){return rec.length?rec.reduce(function(s,d){return s+getDayMacros(meals[d])[k];},0)/rec.length:0;}
+  var inWeek=weights.filter(function(w){return w.date>=days[0];});
+  var wChange=inWeek.length>=2?Math.round((inWeek[inWeek.length-1].weight-inWeek[0].weight)*10)/10:null;
+  var avgScore=rec.length?rec.reduce(function(s,d){return s+calcScore(getDayMacros(meals[d]),goals);},0)/rec.length:0;
+  return {goals:goals,days:days,recorded:rec.length,avgCal:avg('cal'),avgP:avg('p'),avgF:avg('f'),avgC:avg('c'),wChange:wChange,latestWeight:weights.length?weights[weights.length-1].weight:null,avgScore:avgScore};
+}
+function buildWeeklyReport(profile,meals,weights,missions){
+  var w=summarizeWeek(profile,meals,weights);
+  var lines=['【MealCare 週報】'+getDisplayName(profile)+' / '+fmtDate(w.days[0])+'〜'+fmtDate(w.days[6])];
+  lines.push('記録日数 '+w.recorded+'/7日');
+  if(w.recorded>0){
+    lines.push('平均 '+Math.round(w.avgCal)+' kcal（目標 '+w.goals.cal+'）');
+    lines.push('平均 P '+w.avgP.toFixed(0)+'g / F '+w.avgF.toFixed(0)+'g / C '+w.avgC.toFixed(0)+'g');
+    lines.push('食事スコア平均 '+Math.round(w.avgScore)+'点');
+  }
+  if(w.latestWeight!==null) lines.push('体重 '+w.latestWeight+'kg'+(w.wChange!==null?'（今週 '+(w.wChange>0?'+':'')+w.wChange+'kg）':''));
+  if(missions&&missions.length>0){
+    var done=missions.filter(function(m){return m.done;}).length;
+    lines.push('ミッション '+done+'/'+missions.length+' 達成');
+  }
+  return lines.join('\n');
 }
 
 // ── Charts ──
@@ -407,17 +502,37 @@ function Btn(props){
 
 // ── Onboarding ──
 function Onboarding(props){
-  var [step,setStep]=useState(0);
-  var [form,setForm]=useState({name:'',age:'',gender:'male',height:'',weight:'',goal:'diet',targetWeight:'',targetCal:''});
+  var initial=props.initial;
+  var [step,setStep]=useState(initial?1:0);
+  var [form,setForm]=useState(function(){
+    var base={name:'',age:'',gender:'male',height:'',weight:'',goal:'diet',targetWeight:'',targetCal:''};
+    if(!initial) return base;
+    var f=Object.assign(base,initial);
+    delete f.goals;
+    return f;
+  });
+  var [formErr,setFormErr]=useState('');
   function upd(k,v){setForm(function(f){var nf=Object.assign({},f);nf[k]=v;return nf;});}
   var auto=calcGoals(form);
+  function inRange(v,min,max){var n=parseFloat(v);return !isNaN(n)&&n>=min&&n<=max;}
+  function nextFromBasics(){
+    if(!form.name.trim()) return setFormErr('お名前を入力してください（コーチへの報告に使います）');
+    if(!inRange(form.age,10,100)) return setFormErr('年齢は10〜100の範囲で入力してください');
+    if(!inRange(form.height,100,230)) return setFormErr('身長は100〜230cmの範囲で入力してください');
+    if(!inRange(form.weight,25,250)) return setFormErr('体重は25〜250kgの範囲で入力してください');
+    setFormErr('');setStep(2);
+  }
   function submit(){
+    if(form.targetWeight!==''&&!inRange(form.targetWeight,25,250)) return setFormErr('目標体重は25〜250kgの範囲で入力してください');
+    if(form.targetCal!==''&&!inRange(form.targetCal,800,6000)) return setFormErr('目標カロリーは800〜6000kcalの範囲で入力してください');
+    setFormErr('');
     var g=calcGoals(form);
     var goals={cal:form.targetCal?+form.targetCal:g.cal,p:g.p,f:g.f,c:g.c};
-    var pf=Object.assign({},form);
+    var pf=Object.assign({},form,{name:form.name.trim()});
     pf.goals=goals;
     props.onDone(pf);
   }
+  var errBox=formErr?<div style={{background:'#fee2e2',color:'#991b1b',padding:'8px 12px',borderRadius:8,fontSize:13,marginTop:10}}>{formErr}</div>:null;
   var inpS={background:N,border:'1px solid '+N3,borderRadius:10,padding:'10px 14px',color:'#fff',fontSize:15,width:'100%',boxSizing:'border-box'};
   return (
     <div style={{background:N,minHeight:'100vh',maxWidth:480,margin:'0 auto'}}>
@@ -432,9 +547,9 @@ function Onboarding(props){
       )}
       {step===1&&(
         <div style={{padding:'24px 20px'}}>
-          <h2 style={{color:'#fff',fontSize:20,fontWeight:800,marginBottom:20}}>基本情報を入力</h2>
+          <h2 style={{color:'#fff',fontSize:20,fontWeight:800,marginBottom:20}}>{initial?'プロフィールを編集':'基本情報を入力'}</h2>
           <div style={{display:'flex',flexDirection:'column',gap:14}}>
-            <div><label style={{color:S,fontSize:12,fontWeight:600,display:'block',marginBottom:5}}>お名前</label><input style={inpS} value={form.name} onChange={function(e){upd('name',e.target.value);}}/></div>
+            <div><label style={{color:S,fontSize:12,fontWeight:600,display:'block',marginBottom:5}}>お名前（LINEの表示名と同じだとスムーズです）</label><input style={inpS} value={form.name} onChange={function(e){upd('name',e.target.value);}}/></div>
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:10}}>
               <div><label style={{color:S,fontSize:12,fontWeight:600,display:'block',marginBottom:5}}>年齢</label><input style={inpS} type="number" value={form.age} onChange={function(e){upd('age',e.target.value);}}/></div>
               <div><label style={{color:S,fontSize:12,fontWeight:600,display:'block',marginBottom:5}}>性別</label>
@@ -447,9 +562,10 @@ function Onboarding(props){
               <div><label style={{color:S,fontSize:12,fontWeight:600,display:'block',marginBottom:5}}>身長(cm)</label><input style={inpS} type="number" value={form.height} onChange={function(e){upd('height',e.target.value);}}/></div>
               <div><label style={{color:S,fontSize:12,fontWeight:600,display:'block',marginBottom:5}}>体重(kg)</label><input style={inpS} type="number" value={form.weight} onChange={function(e){upd('weight',e.target.value);}}/></div>
             </div>
+            {errBox}
             <div style={{display:'flex',gap:10,marginTop:4}}>
-              <Btn onClick={function(){setStep(0);}} outline sm style={{flex:1}}>戻る</Btn>
-              <Btn onClick={function(){setStep(2);}} style={{flex:2}}>次へ</Btn>
+              <Btn onClick={function(){setFormErr('');if(initial)props.onCancel();else setStep(0);}} outline sm style={{flex:1}}>{initial?'キャンセル':'戻る'}</Btn>
+              <Btn onClick={nextFromBasics} style={{flex:2}}>次へ</Btn>
             </div>
           </div>
         </div>
@@ -486,9 +602,10 @@ function Onboarding(props){
           </Cd>
           <div style={{marginBottom:12}}><label style={{color:S,fontSize:12,fontWeight:600,display:'block',marginBottom:5}}>目標体重(kg)</label><input style={inpS} type="number" value={form.targetWeight} onChange={function(e){upd('targetWeight',e.target.value);}}/></div>
           <div style={{marginBottom:18}}><label style={{color:S,fontSize:12,fontWeight:600,display:'block',marginBottom:5}}>カロリー調整（空欄で自動計算）</label><input style={inpS} type="number" value={form.targetCal} onChange={function(e){upd('targetCal',e.target.value);}} placeholder={String(auto.cal)}/></div>
-          <div style={{display:'flex',gap:10}}>
-            <Btn onClick={function(){setStep(2);}} outline sm style={{flex:1}}>戻る</Btn>
-            <Btn onClick={submit} style={{flex:2,padding:'12px',fontSize:15}}>🎉 スタート！</Btn>
+          {errBox}
+          <div style={{display:'flex',gap:10,marginTop:10}}>
+            <Btn onClick={function(){setFormErr('');setStep(2);}} outline sm style={{flex:1}}>戻る</Btn>
+            <Btn onClick={submit} style={{flex:2,padding:'12px',fontSize:15}}>{initial?'保存する':'🎉 スタート！'}</Btn>
           </div>
         </div>
       )}
@@ -524,8 +641,7 @@ function getCurrentScene(d){
 }
 function getTodayRecommendation(profile,meals){
   var today=todayStr();
-  var cached=null;
-  try{cached=JSON.parse(localStorage.getItem('mc2_today_recommend')||'null');}catch(e){}
+  var cached=loadJSON('mc2_today_recommend',null);
   if(cached&&cached.date===today){
     var r=RECIPES.find(function(x){return x.id===cached.recipeId;});
     if(r) return r;
@@ -538,12 +654,8 @@ function getTodayRecommendation(profile,meals){
   var remaining=target-todayCal;
   var calRange=remaining<300?1:remaining<500?2:remaining<700?3:4;
   var seed=new Date().getFullYear()*10000+(new Date().getMonth()+1)*100+new Date().getDate();
-  var recent=[];
-  try{
-    var log=JSON.parse(localStorage.getItem('mc2_recent_recipes')||'[]');
-    var cutoff=Date.now()-7*24*60*60*1000;
-    recent=log.filter(function(x){return x.at>cutoff;}).map(function(x){return x.id;});
-  }catch(e){}
+  var cutoff=Date.now()-7*24*60*60*1000;
+  var recent=loadJSON('mc2_recent_recipes',[]).filter(function(x){return x.at>cutoff;}).map(function(x){return x.id;});
   var candidates=RECIPES.filter(function(r){return recent.indexOf(r.id)<0;});
   if(candidates.length===0) candidates=RECIPES;
   var scored=candidates.map(function(r){
@@ -556,29 +668,28 @@ function getTodayRecommendation(profile,meals){
   });
   scored.sort(function(a,b){return b.s-a.s;});
   var pick=scored[0].r;
-  try{
-    localStorage.setItem('mc2_today_recommend',JSON.stringify({date:today,recipeId:pick.id}));
-    var log2=JSON.parse(localStorage.getItem('mc2_recent_recipes')||'[]');
-    log2.push({id:pick.id,at:Date.now()});
-    localStorage.setItem('mc2_recent_recipes',JSON.stringify(log2.slice(-30)));
-  }catch(e){}
+  saveJSON('mc2_today_recommend',{date:today,recipeId:pick.id});
+  var log2=loadJSON('mc2_recent_recipes',[]);
+  log2.push({id:pick.id,at:Date.now()});
+  saveJSON('mc2_recent_recipes',log2.slice(-30));
   return pick;
 }
 
 // ── HomeScreen ──
 function HomeScreen(props){
   var profile=props.profile,meals=props.meals,weights=props.weights,setTab=props.setTab,setMealTab=props.setMealTab;
-  var [water,setWater]=useState(function(){try{var d=JSON.parse(localStorage.getItem('mc2_water')||'{}');return d[todayStr()]||0;}catch(e){return 0;}});
+  var [water,setWater]=useState(function(){return loadJSON('mc2_water',{})[todayStr()]||0;});
   var today=todayStr();
   var dm=meals[today]||{breakfast:[],lunch:[],dinner:[],snack:[]};
   var m=getDayMacros(dm);
   var goals=calcGoals(profile);
   var score=calcScore(m,goals);
-  var streak=Object.keys(meals).filter(function(d){return getDayMacros(meals[d]).cal>0;}).length;
+  var streak=calcStreak(meals);
   var lw=weights.length>0?weights[weights.length-1]:null;
   var bmi=lw&&profile?Math.round(lw.weight/Math.pow(parseFloat(profile.height)/100,2)*10)/10:null;
-  function addWater(){var nw=water+200;setWater(nw);try{var d=JSON.parse(localStorage.getItem('mc2_water')||'{}');d[today]=nw;localStorage.setItem('mc2_water',JSON.stringify(d));}catch(e){}}
-  function removeWater(){var nw=Math.max(0,water-200);setWater(nw);try{var d=JSON.parse(localStorage.getItem('mc2_water')||'{}');d[today]=nw;localStorage.setItem('mc2_water',JSON.stringify(d));}catch(e){}}
+  function saveWater(nw){setWater(nw);var d=loadJSON('mc2_water',{});d[today]=nw;saveJSON('mc2_water',d);}
+  function addWater(){saveWater(water+200);}
+  function removeWater(){saveWater(Math.max(0,water-200));}
   var hour=new Date().getHours();
   var greeting=hour<11?'おはようございます':hour<17?'こんにちは':'こんばんは';
   var mealSecs=[{id:'breakfast',l:'朝食',i:'🌅'},{id:'lunch',l:'昼食',i:'🌞'},{id:'dinner',l:'夕食',i:'🌙'},{id:'snack',l:'間食',i:'🍪'}];
@@ -689,10 +800,15 @@ function HomeScreen(props){
         </Cd>
       )}
       <Cd style={{marginTop:10,background:G+'18',border:'1px solid '+G+'44'}}>
-        <div style={{color:G,fontWeight:800,fontSize:13,marginBottom:4}}>🤖 AIアドバイス</div>
+        <div style={{color:G,fontWeight:800,fontSize:13,marginBottom:4}}>💡 今日のワンポイント</div>
         <div style={{color:S2,fontSize:13,lineHeight:1.6}}>
-          {score>=80?'素晴らしい食事バランスです！今日の目標達成率が高く、特にタンパク質が十分摂取できています。':score>=60?'良いペースです。もう少しタンパク質を意識して摂ると、より栄養バランスが整います。':'記録が少ないようです。まずは食事を記録する習慣をつけましょう。'}
+          {m.cal===0?'まずは1食だけでも記録してみましょう。最初から完璧じゃなくて大丈夫です。':score>=80?'いいバランスです。この調子で、無理なく続けていきましょう。':m.p<goals.p*0.7?'たんぱく質が少なめです。次の食事で卵・納豆・サラダチキンなどを1品足してみましょう。':'いいペースです。残りの食事で目標カロリーに近づけていきましょう。'}
         </div>
+      </Cd>
+      <Cd style={{marginTop:10,background:'#06C75518',border:'1px solid #06C75566'}}>
+        <div style={{color:'#06C755',fontWeight:800,fontSize:13,marginBottom:4}}>📤 今日の記録をコーチに報告</div>
+        <div style={{color:S2,fontSize:12,lineHeight:1.6,marginBottom:10}}>食事内容をまとめた日報をLINEで送れます。送信前に内容を確認・追記できます。</div>
+        <Btn onClick={function(){openLine(buildDailyReport(profile,meals,weights,today),'home_daily');}} full color="#06C755" style={{color:'#fff'}}>LINEで日報を送る</Btn>
       </Cd>
     </div>
   );
@@ -833,16 +949,32 @@ function LogScreen(props){
   var mm=getMacros(items);
   var results=FDB.filter(function(f){return f.n.indexOf(search)>=0||f.cat.indexOf(search)>=0;}).slice(0,20);
   var inpS={background:N,border:'1px solid '+N3,borderRadius:8,padding:'8px 12px',color:'#fff',fontSize:13,width:'100%',boxSizing:'border-box'};
-  function changeDay(delta){var d=new Date(day+'T12:00:00');d.setDate(d.getDate()+delta);setDay(d.toISOString().slice(0,10));}
-  function addFood(food,targetMeal){
+  function changeDay(delta){setDay(shiftDate(day,delta));}
+  // meals は関数型で更新する（写真の「全て追加」のように連続で呼ばれても取りこぼさない）
+  function updateMeal(key,fn){
+    setMeals(function(m){
+      var cur=m[day]||{breakfast:[],lunch:[],dinner:[],snack:[]};
+      var ndm=Object.assign({},cur);
+      ndm[key]=fn(cur[key]||[]);
+      var nm=Object.assign({},m);nm[day]=ndm;return nm;
+    });
+  }
+  function addFood(food,targetMeal,keepOpen){
     var sceneMap={'朝':'breakfast','昼':'lunch','夕':'dinner','間食':'snack'};
     var key=targetMeal?(sceneMap[targetMeal]||targetMeal):mealTab;
     var nit=Object.assign({},food,{qty:1,uid:mkId()});
-    var newItems=(dm[key]||[]).concat([nit]);
-    var ndm=Object.assign({},dm);
-    ndm[key]=newItems;
-    setMeals(function(m){var nm=Object.assign({},m);nm[day]=ndm;return nm;});
+    updateMeal(key,function(list){return list.concat([nit]);});
+    if(keepOpen) return;
     setSearch('');setShowAdd(false);setImgResults([]);
+  }
+  function changeQty(u,delta){
+    updateMeal(mealTab,function(list){
+      return list.map(function(it){
+        if(it.uid!==u) return it;
+        var q=Math.round(((it.qty||1)+delta)*10)/10;
+        return Object.assign({},it,{qty:Math.max(0.5,Math.min(10,q))});
+      });
+    });
   }
   function addManual(){
     var name=(manual.n||'').trim();
@@ -866,35 +998,33 @@ function LogScreen(props){
     setManual({n:'',cal:'',p:'',f:'',c:''});
   }
   function removeFood(u){
-    var newItems=(dm[mealTab]||[]).filter(function(it){return it.uid!==u;});
-    var ndm=Object.assign({},dm);
-    ndm[mealTab]=newItems;
-    setMeals(function(m){var nm=Object.assign({},m);nm[day]=ndm;return nm;});
+    updateMeal(mealTab,function(list){return list.filter(function(it){return it.uid!==u;});});
   }
   var [imgConfirm,setImgConfirm]=useState(null);
+  var [imgAdded,setImgAdded]=useState({});
 
   function handleFileChange(e){
     if(!e.target.files||!e.target.files[0]) return;
     var file=e.target.files[0];
+    e.target.value='';// 同じ写真を選び直しても onChange が発火するように
     setImgAnalyzing(true);
     setImgResults([]);
     setImgError('');
     setImgConfirm(null);
-    var mediaType=file.type||'image/jpeg';
-    var reader=new FileReader();
-    reader.onerror=function(){setImgError('画像の読み込みに失敗しました。');setImgAnalyzing(false);};
-    reader.onload=function(ev){
-      var base64=ev.target.result.split(',')[1];
-      callPhotoAI(base64,mediaType,function(parsed){
+    setImgAdded({});
+    prepareImage(file).then(function(img){
+      callPhotoAI(img.base64,img.mediaType,function(parsed){
         setImgResults(parsed);
         setImgConfirm('pending');
         setImgAnalyzing(false);
-      },function(){
-        setImgError('判別できませんでした。別の写真を試してください。');
+      },function(msg){
+        setImgError(msg);
         setImgAnalyzing(false);
       });
-    };
-    reader.readAsDataURL(file);
+    }).catch(function(){
+      setImgError('この画像は読み込めませんでした。JPEG / PNG の写真でお試しください。');
+      setImgAnalyzing(false);
+    });
   }
   var curTab=tabs.find(function(t){return t.id===mealTab;})||tabs[0];
   return (
@@ -922,7 +1052,12 @@ function LogScreen(props){
             <div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
               <div style={{flex:1}}>
                 <div style={{color:'#fff',fontWeight:700,fontSize:13}}>{it.n}</div>
-                <div style={{color:S,fontSize:11}}>{it.s||''}　P:{(it.p*(it.qty||1)).toFixed(1)}g F:{(it.f*(it.qty||1)).toFixed(1)}g C:{(it.c*(it.qty||1)).toFixed(1)}g</div>
+                <div style={{color:S,fontSize:11}}>{it.s||''}　P:{((it.p||0)*(it.qty||1)).toFixed(1)}g F:{((it.f||0)*(it.qty||1)).toFixed(1)}g C:{((it.c||0)*(it.qty||1)).toFixed(1)}g</div>
+                <div style={{display:'flex',alignItems:'center',gap:6,marginTop:6}}>
+                  <button aria-label="量を減らす" onClick={function(){changeQty(it.uid,-0.5);}} style={{background:N3,border:'none',borderRadius:6,color:'#fff',width:26,height:22,cursor:'pointer',fontWeight:800}}>−</button>
+                  <span style={{color:S2,fontSize:12,minWidth:34,textAlign:'center'}}>×{it.qty||1}</span>
+                  <button aria-label="量を増やす" onClick={function(){changeQty(it.uid,0.5);}} style={{background:N3,border:'none',borderRadius:6,color:'#fff',width:26,height:22,cursor:'pointer',fontWeight:800}}>＋</button>
+                </div>
               </div>
               <div style={{display:'flex',alignItems:'center',gap:10}}>
                 <div style={{color:G,fontWeight:800,fontSize:14}}>{Math.round(it.cal*(it.qty||1))} kcal</div>
@@ -950,14 +1085,15 @@ function LogScreen(props){
                 <input id="mc-file-input" type="file" accept="image/*" style={{display:'none'}} onChange={handleFileChange}/>
                 <div style={{background:N,borderRadius:12,border:'2px dashed '+N3,padding:20,textAlign:'center',marginBottom:12}}>
                   <div style={{fontSize:40,marginBottom:8}}>📸</div>
-                  <div style={{color:S2,fontSize:13,marginBottom:12}}>食事の写真をアップロードすると<br/>AIが食品とカロリーを自動判別します</div>
+                  <div style={{color:S2,fontSize:13,marginBottom:12}}>食事の写真をアップロードすると<br/>AIが食品とカロリーを推定します</div>
+                  <div style={{color:S,fontSize:11,marginBottom:12}}>※ 推定値です。量が違うときは追加後に「×」で調整できます</div>
                   <button onClick={function(){document.getElementById('mc-file-input').click();}} style={{background:G,border:'none',borderRadius:10,color:'#000',padding:'10px 20px',cursor:'pointer',fontWeight:700,fontSize:13}}>📷 写真を選択 / 撮影</button>
                 </div>
                 {imgAnalyzing&&(
                   <div style={{textAlign:'center',padding:20}}>
                     <div style={{fontSize:32,marginBottom:8}}>🤖</div>
                     <div style={{color:G,fontWeight:700,fontSize:14}}>AIが食品を詳細分析中...</div>
-                    <div style={{color:S,fontSize:12,marginTop:4}}>栄養素・カロリーを計算しています</div>
+                    <div style={{color:S,fontSize:12,marginTop:4}}>栄養素・カロリーを計算しています（10〜30秒ほど）</div>
                   </div>
                 )}
                 {imgError&&<div style={{background:R+'22',border:'1px solid '+R+'44',borderRadius:10,padding:12,color:R,fontSize:13,textAlign:'center',marginBottom:10}}>{imgError}</div>}
@@ -978,14 +1114,14 @@ function LogScreen(props){
                       })}
                       <div style={{marginTop:8}}>
                         <div style={{color:G,fontWeight:700,fontSize:13,marginBottom:4}}>
-                          合計: {imgResults.reduce(function(s,f){return s+f.cal;},0)} kcal
+                          合計: {imgResults.reduce(function(sum,f){return sum+(f.cal||0);},0)} kcal
                         </div>
                       </div>
                     </div>
                     <div style={{display:'flex',gap:8,marginBottom:10}}>
                       <button onClick={function(){
-                        imgResults.forEach(function(f){addFood(Object.assign({id:'ai'+mkId()},f));});
-                        setImgConfirm('done');
+                        imgResults.forEach(function(f){addFood(Object.assign({id:'ai'+mkId()},f),null,true);});
+                        setImgConfirm(null);setImgResults([]);setShowAdd(false);
                       }} style={{flex:2,background:G,border:'none',borderRadius:10,color:'#000',padding:'11px',cursor:'pointer',fontWeight:700,fontSize:13}}>✅ はい、全て追加する</button>
                       <button onClick={function(){setImgConfirm('select');}} style={{flex:1,background:N3,border:'none',borderRadius:10,color:'#fff',padding:'11px',cursor:'pointer',fontWeight:700,fontSize:12}}>選んで追加</button>
                     </div>
@@ -997,16 +1133,16 @@ function LogScreen(props){
                     <div style={{color:S2,fontWeight:700,fontSize:13,marginBottom:8}}>追加したい食品をタップしてください</div>
                     {imgResults.map(function(f,i){
                       return (
-                        <div key={i} onClick={function(){addFood(Object.assign({id:'ai'+mkId()},f));}} style={{background:N,borderRadius:10,padding:'10px 12px',marginBottom:6,cursor:'pointer',display:'flex',justifyContent:'space-between',alignItems:'center',border:'1px solid '+G+'44'}}>
+                        <div key={i} onClick={function(){if(imgAdded[i])return;addFood(Object.assign({id:'ai'+mkId()},f),null,true);setImgAdded(function(a){var na=Object.assign({},a);na[i]=true;return na;});}} style={{background:imgAdded[i]?G+'22':N,borderRadius:10,padding:'10px 12px',marginBottom:6,cursor:imgAdded[i]?'default':'pointer',display:'flex',justifyContent:'space-between',alignItems:'center',border:'1px solid '+G+'44'}}>
                           <div>
-                            <div style={{color:'#fff',fontSize:13,fontWeight:700}}>{f.n}</div>
+                            <div style={{color:'#fff',fontSize:13,fontWeight:700}}>{imgAdded[i]?'✓ ':''}{f.n}</div>
                             <div style={{color:S,fontSize:11}}>{f.s}　P:{f.p}g F:{f.f}g C:{f.c}g</div>
                           </div>
                           <div style={{color:G,fontWeight:800,fontSize:14}}>{f.cal} kcal</div>
                         </div>
                       );
                     })}
-                    <button onClick={function(){setImgConfirm('pending');}} style={{width:'100%',background:'none',border:'1px solid '+N3,borderRadius:10,color:S,padding:'8px',cursor:'pointer',fontSize:12,marginTop:4}}>← 戻る</button>
+                    <button onClick={function(){setImgConfirm(null);setImgResults([]);setShowAdd(false);}} style={{width:'100%',background:G,border:'none',borderRadius:10,color:'#000',padding:'10px',cursor:'pointer',fontWeight:700,fontSize:13,marginTop:4}}>完了</button>
                   </div>
                 )}
               </div>
@@ -1052,11 +1188,11 @@ function NutritionScreen(props){
   var meals=props.meals,profile=props.profile;
   var goals=calcGoals(profile);
   var m=getDayMacros(meals[todayStr()]);
-  var days=Object.keys(meals).sort().slice(-7);
+  var days=lastNDays(7);
   var calData=days.map(function(d){return {date:d,cal:getDayMacros(meals[d]).cal};});
-  function avg(k){return days.reduce(function(s,d){return s+getDayMacros(meals[d])[k];},0)/Math.max(days.length,1);}
-  var avgCal=avg('cal'),avgP=avg('p'),avgF=avg('f'),avgC=avg('c');
-  var tip=avgF>goals.f*1.15?'今週は脂質が多めです。揚げ物を減らしてみましょう。':avgP<goals.p*0.8?'タンパク質が不足気味です。肉・魚・卵を意識しましょう。':'バランスよく食べられています！この調子を維持しましょう。';
+  var week=summarizeWeek(profile,meals,[]);
+  var avgCal=week.avgCal,avgP=week.avgP,avgF=week.avgF,avgC=week.avgC;
+  var tip=week.recorded===0?'まだ今週の記録がありません。1日1食からでも記録してみましょう。':avgF>goals.f*1.15?'今週は脂質が多めです。揚げ物を減らしてみましょう。':avgP<goals.p*0.8?'タンパク質が不足気味です。肉・魚・卵を意識しましょう。':'バランスよく食べられています！この調子を維持しましょう。';
   return (
     <div style={{padding:'16px 16px 90px'}}>
       <div style={{color:'#fff',fontSize:18,fontWeight:800,marginBottom:14}}>📊 栄養分析</div>
@@ -1082,7 +1218,7 @@ function NutritionScreen(props){
         <div style={{display:'flex',alignItems:'center',gap:6,marginTop:8}}><div style={{width:20,height:2,background:Y}}/><span style={{color:S,fontSize:11}}>目標: {goals.cal} kcal</span></div>
       </Cd>
       <Cd style={{marginBottom:12}}>
-        <div style={{color:'#fff',fontWeight:700,marginBottom:12}}>週間平均</div>
+        <div style={{color:'#fff',fontWeight:700,marginBottom:12}}>週間平均<span style={{color:S,fontSize:11,fontWeight:400}}>（記録した{week.recorded}日分）</span></div>
         <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:10}}>
           {[{l:'平均カロリー',v:Math.round(avgCal)+'kcal',c:'#fff'},{l:'平均P',v:avgP.toFixed(1)+'g',c:B},{l:'平均F',v:avgF.toFixed(1)+'g',c:Y},{l:'平均C',v:avgC.toFixed(1)+'g',c:G}].map(function(n){
             return <Cd key={n.l} bg={N} style={{padding:10,textAlign:'center'}}><div style={{color:n.c,fontWeight:800,fontSize:16}}>{n.v}</div><div style={{color:S,fontSize:11}}>{n.l}</div></Cd>;
@@ -1146,6 +1282,19 @@ function WeightScreen(props){
             {change!==null&&<Cd style={{textAlign:'center',padding:14}}><div style={{color:change<=0?G:R,fontSize:24,fontWeight:900}}>{change>0?'+':''}{change}</div><div style={{color:S,fontSize:12}}>kg（開始からの変化）</div></Cd>}
           </div>
           <Cd style={{marginBottom:12}}><div style={{color:'#fff',fontWeight:700,marginBottom:10}}>体重推移</div><WeightChart data={weights.slice(-21)} width={320} height={140}/></Cd>
+          <Cd style={{marginBottom:12}}>
+            <div style={{color:'#fff',fontWeight:700,marginBottom:8}}>最近の記録</div>
+            {weights.slice(-7).reverse().map(function(e){
+              return (
+                <div key={e.date} style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'6px 0',borderBottom:'1px solid '+N3}}>
+                  <span style={{color:S,fontSize:12}}>{fmtDate(e.date)}</span>
+                  <span style={{color:'#fff',fontSize:13,fontWeight:700}}>{e.weight} kg{e.fat?<span style={{color:S,fontWeight:400}}> / {e.fat}%</span>:null}</span>
+                  <button aria-label="この記録を削除" onClick={function(){if(window.confirm(fmtDate(e.date)+' の記録を削除しますか？'))setWeights(weights.filter(function(x){return x.date!==e.date;}));}} style={{background:'none',border:'none',color:R,cursor:'pointer',fontSize:14}}>✕</button>
+                </div>
+              );
+            })}
+            <div style={{color:S,fontSize:11,marginTop:6}}>同じ日にもう一度記録すると上書きされます</div>
+          </Cd>
           {first&&(
             <Cd>
               <div style={{color:'#fff',fontWeight:700,marginBottom:12}}>ビフォーアフター</div>
@@ -1170,431 +1319,183 @@ function WeightScreen(props){
 
 // ── LineConsultSection ──
 function LineConsultSection(){
-  var LINE_URL='https://line.me/R/ti/p/@741apbnk';
-  function handleClick(){
-    try{
-      var log=JSON.parse(localStorage.getItem('mc2_line_clicks')||'[]');
-      log.push({at:new Date().toISOString(),from:'coach'});
-      localStorage.setItem('mc2_line_clicks',JSON.stringify(log));
-    }catch(e){}
-    window.open(LINE_URL,'_blank','noopener');
-  }
-  return React.createElement('div',{style:{marginTop:24}},
-    React.createElement('div',{style:{fontSize:14,color:'#94a3b8',marginBottom:8,fontWeight:'bold'}},'個別相談'),
-    React.createElement('div',{
-      style:{background:'linear-gradient(135deg,#06C755 0%,#04a047 100%)',borderRadius:16,padding:20,color:'#fff',boxShadow:'0 4px 12px rgba(6,199,85,0.3)'}
-    },
-      React.createElement('div',{style:{fontSize:18,fontWeight:'bold',marginBottom:8}},'💬 翔と直接話す'),
-      React.createElement('div',{style:{fontSize:13,lineHeight:1.6,opacity:0.95,marginBottom:16}},'ダイエットの悩みや食事の相談、なんでもOK。翔本人がLINEで直接返信します。'),
-      React.createElement('button',{
-        onClick:handleClick,
-        style:{width:'100%',background:'#fff',color:'#06C755',border:'none',padding:'14px',borderRadius:10,fontSize:15,fontWeight:'bold',cursor:'pointer'}
-      },'LINEで相談する →'),
-      React.createElement('div',{style:{fontSize:11,opacity:0.85,marginTop:12,lineHeight:1.5,whiteSpace:'pre-line'}},'※ AIではなく翔本人が返信します\n※ 返信まで1〜2日いただく場合があります')
-    )
+  return (
+    <div style={{marginTop:24}}>
+      <div style={{fontSize:14,color:S,marginBottom:8,fontWeight:'bold'}}>個別相談</div>
+      <div style={{background:'linear-gradient(135deg,#06C755 0%,#04a047 100%)',borderRadius:16,padding:20,color:'#fff',boxShadow:'0 4px 12px rgba(6,199,85,0.3)'}}>
+        <div style={{fontSize:18,fontWeight:'bold',marginBottom:8}}>💬 翔と直接話す</div>
+        <div style={{fontSize:13,lineHeight:1.6,opacity:0.95,marginBottom:16}}>まだ友だち追加していない方は、先に公式LINEを追加してください。日報・週報・相談はすべてこのLINEに届きます。</div>
+        <button onClick={function(){openLine(null,'coach_add');}} style={{width:'100%',background:'#fff',color:'#06C755',border:'none',padding:'14px',borderRadius:10,fontSize:15,fontWeight:'bold',cursor:'pointer'}}>公式LINEを友だち追加 →</button>
+        <div style={{fontSize:11,opacity:0.85,marginTop:12,lineHeight:1.5,whiteSpace:'pre-line'}}>{'※ AIではなく翔本人が返信します\n※ 返信まで1〜2日いただく場合があります'}</div>
+      </div>
+    </div>
   );
 }
 
 // ── CoachScreen ──
+var DEFAULT_MISSIONS=[
+  {id:1,text:'毎食タンパク質20g以上を意識する',done:false,auto:false,priority:'high'},
+  {id:2,text:'毎日記録をつける（7日連続）',done:false,auto:false,priority:'mid'},
+  {id:3,text:'夕食の炭水化物を100g以内に抑える',done:false,auto:false,priority:'mid'}
+];
+var CONSULT_TEMPLATES=[
+  {l:'食事の相談',t:'食事について相談です。\n'},
+  {l:'外食・飲み会',t:'外食・飲み会の予定があります。何に気をつければいいですか？\n'},
+  {l:'体重が落ちない',t:'記録は続けていますが、体重がなかなか落ちません。\n'},
+  {l:'続かない',t:'最近、記録や食事管理が続かなくなっています。\n'}
+];
 function CoachScreen(props){
   var meals=props.meals,weights=props.weights,profile=props.profile;
   var [sub,setSub]=useState('report');
-  var initMsg1={id:1,from:'coach',text:'今週もお疲れ様です！タンパク質の摂取量が先週より改善されています。この調子で続けましょう！',date:'2026-03-19'};
-  var initMsg2={id:2,from:'coach',text:'週2回の筋トレと合わせて、食後に軽いウォーキングを取り入れてみてください。脂質代謝が高まります。',date:'2026-03-20'};
-  var [msgs,setMsgs]=useState([initMsg1,initMsg2]);
-  var initMs1={id:1,text:'毎食タンパク質20g以上を意識する',done:false,auto:false,priority:'high'};
-  var initMs2={id:2,text:'毎日記録をつける（7日連続）',done:false,auto:false,priority:'mid'};
-  var initMs3={id:3,text:'夕食の炭水化物を100g以内に抑える',done:false,auto:false,priority:'mid'};
-  var [missions,setMissions]=useState([initMs1,initMs2,initMs3]);
-  var [missionMode,setMissionMode]=useState('user');
-  var [coachPass,setCoachPass]=useState('');
-  var [coachUnlocked,setCoachUnlocked]=useState(false);
-  var [editingId,setEditingId]=useState(null);
-  var [editText,setEditText]=useState('');
+  var [missions,setMissions]=useState(function(){return loadJSON('mc2_missions',DEFAULT_MISSIONS);});
+  var [draft,setDraft]=useState(function(){return loadJSON('mc2_consult_draft','');});
+  var [attachReport,setAttachReport]=useState(true);
   var [newMissionText,setNewMissionText]=useState('');
   var [newPriority,setNewPriority]=useState('mid');
   var [autoMsg,setAutoMsg]=useState('');
-  var [input,setInput]=useState('');
-  var goals=calcGoals(profile);
-  var days=Object.keys(meals).sort().slice(-7);
-  var avgCal=days.reduce(function(s,d){return s+getDayMacros(meals[d]).cal;},0)/Math.max(days.length,1);
-  var avgP=days.reduce(function(s,d){return s+getDayMacros(meals[d]).p;},0)/Math.max(days.length,1);
-  var avgF=days.reduce(function(s,d){return s+getDayMacros(meals[d]).f;},0)/Math.max(days.length,1);
-  var recorded=days.filter(function(d){return getDayMacros(meals[d]).cal>0;}).length;
-  var lw=weights.length>0?weights[weights.length-1]:null;
-  var fw=weights.length>0?weights[0]:null;
-  var wChange=lw&&fw?Math.round((lw.weight-fw.weight)*10)/10:null;
-  var avgScore=days.reduce(function(s,d){return s+calcScore(getDayMacros(meals[d]),goals);},0)/Math.max(days.length,1);
+  useEffect(function(){saveJSON('mc2_missions',missions);},[missions]);
+  useEffect(function(){saveJSON('mc2_consult_draft',draft);},[draft]);
+  var week=summarizeWeek(profile,meals,weights);
+  var goals=week.goals,avgCal=week.avgCal,avgP=week.avgP,avgF=week.avgF,recorded=week.recorded,wChange=week.wChange,avgScore=week.avgScore;
+  var weeklyText=buildWeeklyReport(profile,meals,weights,missions);
   var inpS={background:N,border:'1px solid '+N3,borderRadius:8,padding:'8px 12px',color:'#fff',fontSize:13,width:'100%',boxSizing:'border-box'};
   function pColor(p){return p==='high'?R:p==='mid'?Y:G;}
   function pLabel(p){return p==='high'?'高':p==='mid'?'中':'低';}
-  function autoReply(text){
-    var igNote='\n\n💪 食事・筋トレ情報はInstagramでも発信中！\n→ @sho.ishii_fit ( https://www.instagram.com/sho.ishii_fit/ )';
-    var reply='';
-    if(/体重|減.*(た|ない)|増.*(た|ない)|落ち/.test(text)) reply='体重の変化は日々の積み重ねです！週単位のトレンドで判断しましょう💪';
-    else if(/タンパク質|プロテイン|筋肉|筋トレ|トレーニング/.test(text)) reply='タンパク質は筋肉の材料になる大切な栄養素です。体重×1.5〜2gを目安に毎食バランスよく摂れると理想的ですよ🍗';
-    else if(/脂質|油|揚げ|カロリー高/.test(text)) reply='脂質は悪者ではありませんが摂りすぎには注意です。良質な脂質（アボカド・オリーブオイル・魚）を中心に選ぶと良いですよ🥑';
-    else if(/眠れ|睡眠|疲れ|だるい|体調/.test(text)) reply='睡眠不足や疲れは食欲増加・代謝低下につながります。まずはしっかり休むことも立派なトレーニングです😌';
-    else if(/食欲|食べ過ぎ|つい食べ|間食|やめられ/.test(text)) reply='食欲のコントロールは誰でも難しいです。ストレス・睡眠不足・水分不足が原因のことが多いですよ🧘';
-    else if(/モチベ|やる気|続か|挫折|辛い|しんどい/.test(text)) reply='気持ちが落ちる時期は誰にでもあります！今日も記録してくれたこと、それだけで素晴らしい👏';
-    else if(/水分|水|飲み物/.test(text)) reply='水分補給はダイエット・筋肉合成・代謝すべてに影響します。1日1.5〜2Lを目安にこまめに飲む習慣をつけましょう💧';
-    else if(/炭水化物|糖質|ご飯|パン|ラーメン/.test(text)) reply='炭水化物はエネルギー源として重要です。夕食を少し減らして朝・昼にしっかり摂るサイクルがおすすめです🍚';
-    else if(/おすすめ|何を食べ|メニュー|レシピ/.test(text)) reply='おすすめは「鶏むね肉＋ブロッコリー＋玄米」の組み合わせ！高タンパク・低脂質・栄養バランスが整った王道メニューです🥦🍗';
-    else if(/ありがとう|感謝|嬉しい/.test(text)) reply='こちらこそ毎日頑張ってくれてありがとうございます！一緒に目標に向かっていきましょう😊';
-    else if(/質問|聞きた|教えて/.test(text)) reply='もちろんです！気になることはどんどん聞いてください✍️';
-    else reply='メッセージありがとうございます！目標に向けて一緒に取り組んでいきましょう💡';
-    return reply+igNote;
+  function sendConsult(){
+    var body=draft.trim();
+    if(!body) return;
+    openLine(body+(attachReport?'\n\n'+weeklyText:''),'coach_consult');
+    setDraft('');
   }
-  function send(){
-    if(!input.trim()) return;
-    var t=input;
-    var um={};um.id=Date.now();um.from='user';um.text=t;um.date=todayStr();
-    setMsgs(function(m){return m.concat([um]);});
-    setInput('');
-    setTimeout(function(){
-      var cm={};cm.id=Date.now()+1;cm.from='coach';cm.text=autoReply(t);cm.date=todayStr();
-      setMsgs(function(m){return m.concat([cm]);});
-    },800);
-  }
-  function autoGenerate(){
+  function suggestMissions(){
     var nm=[];
-    var m1={};m1.id=Date.now()+1;m1.text='毎食タンパク質を意識して摂る（目標：'+goals.p+'g/日）';m1.done=false;m1.auto=true;m1.priority='high';
-    var m2={};m2.id=Date.now()+2;m2.text='今週は揚げ物・脂っこい食事を2回以内に抑える';m2.done=false;m2.auto=true;m2.priority='high';
-    var m3={};m3.id=Date.now()+3;m3.text='今週は毎日食事を記録する（7日連続を目指そう）';m3.done=false;m3.auto=true;m3.priority='mid';
-    var m4={};m4.id=Date.now()+4;m4.text='1日の摂取カロリーを'+goals.cal+'kcal以内に抑える';m4.done=false;m4.auto=true;m4.priority='high';
-    var m5={};m5.id=Date.now()+5;m5.text='今週の目標：毎日水を2L以上飲む';m5.done=false;m5.auto=true;m5.priority='low';
-    if(avgP<goals.p*0.8) nm.push(m1);
-    if(avgF>goals.f*1.15) nm.push(m2);
-    if(recorded<5) nm.push(m3);
-    if(avgCal>goals.cal*1.1) nm.push(m4);
-    if(nm.length===0) nm.push(m5);
+    var base=Date.now();
+    function mk(i,text,priority){return {id:base+i,text:text,done:false,auto:true,priority:priority};}
+    if(avgP<goals.p*0.8) nm.push(mk(1,'毎食タンパク質を意識して摂る（目標：'+goals.p+'g/日）','high'));
+    if(avgF>goals.f*1.15) nm.push(mk(2,'今週は揚げ物・脂っこい食事を2回以内に抑える','high'));
+    if(recorded<5) nm.push(mk(3,'今週は毎日食事を記録する（7日連続を目指そう）','mid'));
+    if(avgCal>goals.cal*1.1) nm.push(mk(4,'1日の摂取カロリーを'+goals.cal+'kcal以内に抑える','high'));
+    if(nm.length===0) nm.push(mk(5,'今週の目標：毎日水を2L以上飲む','low'));
     setMissions(function(m){return m.filter(function(mi){return !mi.auto;}).concat(nm);});
-    setAutoMsg(nm.length+'件のミッションを自動生成しました！');
+    setAutoMsg(nm.length+'件のミッションを追加しました');
     setTimeout(function(){setAutoMsg('');},3000);
   }
+  function addMission(){
+    var text=newMissionText.trim();
+    if(!text) return;
+    setMissions(function(m){return m.concat([{id:Date.now(),text:text.slice(0,60),done:false,auto:false,priority:newPriority}]);});
+    setNewMissionText('');
+  }
+  var doneCount=missions.filter(function(m){return m.done;}).length;
   return (
     <div style={{padding:'12px 16px 90px'}}>
       <div style={{color:'#fff',fontSize:18,fontWeight:800,marginBottom:12}}>👨‍💼 コーチ</div>
       <div style={{display:'flex',gap:6,marginBottom:14}}>
-        {[{id:'report',l:'📋 レポート'},{id:'messages',l:'💬 メッセージ'},{id:'missions',l:'🎯 ミッション'}].map(function(sv){
+        {[{id:'report',l:'📋 レポート'},{id:'consult',l:'💬 相談'},{id:'missions',l:'🎯 ミッション'}].map(function(sv){
           return <button key={sv.id} onClick={function(){setSub(sv.id);}} style={{flex:1,background:sub===sv.id?G:N2,color:sub===sv.id?'#000':'#fff',border:'none',borderRadius:10,padding:'8px 4px',cursor:'pointer',fontWeight:700,fontSize:11,whiteSpace:'nowrap'}}>{sv.l}</button>;
         })}
       </div>
       {sub==='report'&&(
         <div>
           <Cd style={{marginBottom:10}}>
-            <div style={{color:'#fff',fontWeight:700,marginBottom:12}}>週次レポート</div>
+            <div style={{color:'#fff',fontWeight:700,marginBottom:12}}>週次レポート<span style={{color:S,fontSize:11,fontWeight:400}}>（直近7日）</span></div>
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8}}>
-              {[{l:'平均カロリー',v:Math.round(avgCal)+'kcal',c:G},{l:'記録日数',v:recorded+'/7日',c:B},{l:'体重変化',v:wChange!==null?(wChange>0?'+':'')+wChange+'kg':'--',c:wChange!==null&&wChange<=0?G:R},{l:'食事スコア',v:Math.round(avgScore)+'点',c:avgScore>=70?G:Y}].map(function(n){
+              {[{l:'平均カロリー',v:recorded?Math.round(avgCal)+'kcal':'--',c:G},{l:'記録日数',v:recorded+'/7日',c:B},{l:'体重変化',v:wChange!==null?(wChange>0?'+':'')+wChange+'kg':'--',c:wChange!==null&&wChange<=0?G:wChange===null?S:R},{l:'食事スコア',v:recorded?Math.round(avgScore)+'点':'--',c:avgScore>=70?G:Y}].map(function(n){
                 return <Cd key={n.l} bg={N} style={{padding:12,textAlign:'center'}}><div style={{color:n.c,fontSize:18,fontWeight:900}}>{n.v}</div><div style={{color:S,fontSize:11,marginTop:2}}>{n.l}</div></Cd>;
               })}
             </div>
           </Cd>
-          <Cd style={{background:G+'18',border:'1px solid '+G+'44'}}>
-            <div style={{color:G,fontWeight:700,marginBottom:6}}>AIサマリー</div>
+          <Cd style={{background:G+'18',border:'1px solid '+G+'44',marginBottom:10}}>
+            <div style={{color:G,fontWeight:700,marginBottom:6}}>今週のまとめ</div>
             <div style={{color:S2,fontSize:13,lineHeight:1.7}}>
-              {recorded>=5?'今週は'+recorded+'日記録できました。素晴らしい継続力です！':'今週は'+recorded+'日の記録です。毎日記録する習慣をつけましょう。'}
-              {wChange!==null&&wChange<0?' 体重は'+Math.abs(wChange)+'kg減少しています。目標に向けて順調に進んでいます。':''}
-              {avgScore>=70?' 食事スコアも高水準をキープできています。':' 食事スコアは'+Math.round(avgScore)+'点です。栄養バランスを意識してみましょう。'}
+              {recorded>=5?'今週は'+recorded+'日記録できました。この積み重ねが一番の近道です。':recorded>0?'今週は'+recorded+'日の記録です。完璧じゃなくて大丈夫。まずは1日1食からでも続けていきましょう。':'今週はまだ記録がありません。今日の1食から始めてみましょう。'}
+              {wChange!==null&&wChange<0?' 体重は'+Math.abs(wChange)+'kg減っています。順調です。':''}
+              {recorded>0?(avgScore>=70?' 食事スコアも良い水準です。':' 食事スコアは'+Math.round(avgScore)+'点。どこを整えるかはコーチと一緒に考えましょう。'):''}
             </div>
+          </Cd>
+          <Cd style={{background:'#06C75518',border:'1px solid #06C75566'}}>
+            <div style={{color:'#06C755',fontWeight:800,fontSize:13,marginBottom:8}}>📤 週報をコーチに送る</div>
+            <pre style={{textAlign:'left',background:N,borderRadius:8,padding:10,color:S2,fontSize:11,lineHeight:1.6,whiteSpace:'pre-wrap',margin:'0 0 10px',fontFamily:'inherit'}}>{weeklyText}</pre>
+            <Btn onClick={function(){openLine(weeklyText,'coach_weekly');}} full color="#06C755" style={{color:'#fff'}}>LINEで週報を送る</Btn>
+            <div style={{color:S,fontSize:11,marginTop:8,lineHeight:1.5}}>LINEが開き、上の内容が入力欄に入ります。ひとこと添えて送信してください。</div>
           </Cd>
         </div>
       )}
-      {sub==='messages'&&(
+      {sub==='consult'&&(
         <div>
-          <div style={{marginBottom:10,maxHeight:340,overflowY:'auto',display:'flex',flexDirection:'column',gap:10}}>
-            {msgs.map(function(msg){
-              return (
-                <div key={msg.id} style={{display:'flex',justifyContent:msg.from==='user'?'flex-end':'flex-start'}}>
-                  <div style={{maxWidth:'80%',background:msg.from==='user'?G:N2,borderRadius:msg.from==='user'?'16px 16px 4px 16px':'16px 16px 16px 4px',padding:'10px 14px'}}>
-                    <div style={{color:msg.from==='user'?'#000':'#fff',fontSize:13,lineHeight:1.6,whiteSpace:'pre-line'}}>{msg.text}</div>
-                    <div style={{color:msg.from==='user'?'rgba(0,0,0,0.4)':'rgba(255,255,255,0.4)',fontSize:10,marginTop:4}}>{fmtDate(msg.date)}</div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          <div style={{display:'flex',gap:8}}>
-            <input value={input} onChange={function(e){setInput(e.target.value);}} placeholder="コーチへのメッセージ..." onKeyDown={function(e){if(e.key==='Enter')send();}} style={{flex:1,background:N2,border:'1px solid '+N3,borderRadius:10,padding:'10px 14px',color:'#fff',fontSize:13}}/>
-            <Btn onClick={send} sm>送信</Btn>
-          </div>
+          <Cd style={{marginBottom:10}}>
+            <div style={{color:'#fff',fontWeight:700,marginBottom:8}}>コーチに相談する</div>
+            <div style={{color:S,fontSize:12,lineHeight:1.6,marginBottom:10}}>書いた内容は公式LINEで翔に届き、返信もLINEに届きます。どんな小さなことでも大丈夫です。</div>
+            <div style={{display:'flex',flexWrap:'wrap',gap:6,marginBottom:10}}>
+              {CONSULT_TEMPLATES.map(function(t){
+                return <button key={t.l} onClick={function(){setDraft(function(d){return d?d+'\n'+t.t:t.t;});}} style={{background:N3,border:'none',borderRadius:14,color:S2,fontSize:11,padding:'5px 10px',cursor:'pointer'}}>{t.l}</button>;
+              })}
+            </div>
+            <textarea value={draft} onChange={function(e){setDraft(e.target.value);}} placeholder="例：来週の飲み会、何を頼めばいいですか？" rows={5} style={Object.assign({},inpS,{resize:'vertical',lineHeight:1.6,fontFamily:'inherit'})}/>
+            <label style={{display:'flex',alignItems:'center',gap:8,color:S2,fontSize:12,margin:'10px 0'}}>
+              <input type="checkbox" checked={attachReport} onChange={function(e){setAttachReport(e.target.checked);}}/>
+              今週の記録（週報）を一緒に送る
+            </label>
+            <Btn onClick={sendConsult} full color="#06C755" style={{color:'#fff',opacity:draft.trim()?1:0.5}}>LINEで送る</Btn>
+          </Cd>
         </div>
       )}
       {sub==='missions'&&(
         <div>
-          <div style={{display:'flex',gap:6,marginBottom:12}}>
-            <button onClick={function(){setMissionMode('user');}} style={{flex:1,background:missionMode==='user'?G:N2,color:missionMode==='user'?'#000':'#fff',border:'none',borderRadius:10,padding:'8px',cursor:'pointer',fontWeight:700,fontSize:12}}>👤 ユーザー</button>
-            <button onClick={function(){setMissionMode('coach');}} style={{flex:1,background:missionMode==='coach'?PU:N2,color:'#fff',border:'1px solid '+(missionMode==='coach'?PU:N3),borderRadius:10,padding:'8px',cursor:'pointer',fontWeight:700,fontSize:12}}>🔑 コーチ管理</button>
-          </div>
-          {missionMode==='coach'&&!coachUnlocked&&(
-            <Cd bg={N2} style={{marginBottom:12}}>
-              <div style={{color:'#fff',fontWeight:700,marginBottom:8}}>コーチ用パスワード</div>
-              <div style={{display:'flex',gap:8}}>
-                <input style={Object.assign({},inpS,{flex:1})} type="password" placeholder="パスワードを入力" value={coachPass} onChange={function(e){setCoachPass(e.target.value);}} onKeyDown={function(e){if(e.key==='Enter'&&coachPass==='syou5858')setCoachUnlocked(true);}}/>
-                <Btn onClick={function(){if(coachPass==='syou5858'){setCoachUnlocked(true);}else{alert('パスワードが違います');}}} sm color={PU} style={{color:'#fff'}}>解除</Btn>
-              </div>
-            </Cd>
-          )}
-          {missionMode==='coach'&&coachUnlocked&&(
-            <div>
-              <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:10}}>
-                <div style={{color:PU,fontWeight:800,fontSize:14}}>🔑 コーチ管理パネル</div>
-                <button onClick={function(){setCoachUnlocked(false);setMissionMode('user');}} style={{background:'none',border:'none',color:S,fontSize:12,cursor:'pointer'}}>ロック</button>
-              </div>
-              <Cd bg={N2} style={{marginBottom:12}}>
-                <div style={{color:'#fff',fontWeight:700,fontSize:13,marginBottom:4}}>🤖 データ分析から自動生成</div>
-                <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:8,marginBottom:10}}>
-                  {[{l:'平均P',v:avgP.toFixed(0)+'g',ok:avgP>=goals.p*0.8},{l:'平均Cal',v:Math.round(avgCal)+'kcal',ok:Math.abs(avgCal-goals.cal)<goals.cal*0.1},{l:'記録日数',v:recorded+'/7',ok:recorded>=5}].map(function(it){
-                    return <div key={it.l} style={{background:N,borderRadius:8,padding:'8px',textAlign:'center'}}><div style={{color:it.ok?G:R,fontWeight:800,fontSize:14}}>{it.v}</div><div style={{color:S,fontSize:10}}>{it.l}</div></div>;
-                  })}
-                </div>
-                {autoMsg&&<div style={{color:G,fontSize:12,marginBottom:8,fontWeight:700}}>{autoMsg}</div>}
-                <Btn onClick={autoGenerate} full color={PU} style={{color:'#fff'}}>⚡ AIミッションを自動生成</Btn>
-              </Cd>
-              <Cd bg={N2} style={{marginBottom:12}}>
-                <div style={{color:'#fff',fontWeight:700,fontSize:13,marginBottom:10}}>＋ ミッションを手動追加</div>
-                <input style={Object.assign({},inpS,{marginBottom:8})} placeholder="ミッション内容を入力..." value={newMissionText} onChange={function(e){setNewMissionText(e.target.value);}}/>
-                <div style={{display:'flex',gap:8,alignItems:'center'}}>
-                  <div style={{color:S,fontSize:12,flexShrink:0}}>優先度：</div>
-                  {[{v:'high',l:'高',c:R},{v:'mid',l:'中',c:Y},{v:'low',l:'低',c:G}].map(function(pv){
-                    return <button key={pv.v} onClick={function(){setNewPriority(pv.v);}} style={{flex:1,background:newPriority===pv.v?pv.c:N3,color:'#fff',border:'none',borderRadius:8,padding:'6px',cursor:'pointer',fontWeight:700,fontSize:12}}>{pv.l}</button>;
-                  })}
-                  <Btn onClick={function(){
-                    if(!newMissionText.trim()) return;
-                    var nm={};nm.id=Date.now();nm.text=newMissionText;nm.done=false;nm.auto=false;nm.priority=newPriority;
-                    setMissions(function(m){return m.concat([nm]);});
-                    setNewMissionText('');
-                  }} sm color={PU} style={{color:'#fff',flexShrink:0}}>追加</Btn>
-                </div>
-              </Cd>
-              {missions.map(function(ms){
-                return (
-                  <Cd key={ms.id} style={{marginBottom:8,padding:12}}>
-                    {editingId===ms.id?(
-                      <div style={{display:'flex',gap:8}}>
-                        <input style={Object.assign({},inpS,{flex:1})} value={editText} onChange={function(e){setEditText(e.target.value);}}/>
-                        <Btn onClick={function(){
-                          setMissions(function(m){return m.map(function(mi){
-                            if(mi.id!==editingId) return mi;
-                            var nm=Object.assign({},mi);nm.text=editText;return nm;
-                          });});
-                          setEditingId(null);
-                        }} sm color={G}>保存</Btn>
-                        <Btn onClick={function(){setEditingId(null);}} sm outline>✕</Btn>
-                      </div>
-                    ):(
-                      <div style={{display:'flex',alignItems:'center',gap:8}}>
-                        <div style={{width:6,height:6,borderRadius:'50%',background:pColor(ms.priority||'mid'),flexShrink:0}}/>
-                        <div style={{flex:1,color:ms.done?S:S2,fontSize:12,textDecoration:ms.done?'line-through':'none'}}>{ms.text}</div>
-                        {ms.auto&&<span style={{background:PU+'33',color:PU,fontSize:9,borderRadius:4,padding:'2px 5px'}}>AUTO</span>}
-                        <button onClick={function(){setEditingId(ms.id);setEditText(ms.text);}} style={{background:'none',border:'none',color:B,cursor:'pointer',fontSize:14,padding:'0 2px'}}>✏️</button>
-                        <button onClick={function(){setMissions(function(m){return m.filter(function(mi){return mi.id!==ms.id;});});}} style={{background:'none',border:'none',color:R,cursor:'pointer',fontSize:14,padding:'0 2px'}}>🗑</button>
-                      </div>
-                    )}
-                  </Cd>
-                );
+          <Cd bg={N2} style={{marginBottom:12}}>
+            <div style={{color:S,fontSize:12,lineHeight:1.6,marginBottom:10}}>コーチから届いたミッションをここに入れておくと、毎日チェックできます。</div>
+            <input style={Object.assign({},inpS,{marginBottom:8})} placeholder="ミッション内容を入力..." value={newMissionText} onChange={function(e){setNewMissionText(e.target.value);}} onKeyDown={function(e){if(e.key==='Enter')addMission();}}/>
+            <div style={{display:'flex',gap:8,alignItems:'center'}}>
+              <div style={{color:S,fontSize:12,flexShrink:0}}>優先度：</div>
+              {[{v:'high',l:'高',c:R},{v:'mid',l:'中',c:Y},{v:'low',l:'低',c:G}].map(function(pv){
+                return <button key={pv.v} onClick={function(){setNewPriority(pv.v);}} style={{flex:1,background:newPriority===pv.v?pv.c:N3,color:'#fff',border:'none',borderRadius:8,padding:'6px',cursor:'pointer',fontWeight:700,fontSize:12}}>{pv.l}</button>;
               })}
+              <Btn onClick={addMission} sm style={{flexShrink:0}}>追加</Btn>
             </div>
-          )}
-          {missionMode==='user'&&(
-            <div>
-              {missions.length===0&&<div style={{textAlign:'center',padding:'30px 0',color:S}}><div style={{fontSize:36,marginBottom:8}}>🎯</div><div>ミッションはまだありません</div></div>}
-              {['high','mid','low'].map(function(pr){
-                var group=missions.filter(function(ms){return (ms.priority||'mid')===pr;});
-                if(group.length===0) return null;
-                return (
-                  <div key={pr}>
-                    <div style={{display:'flex',alignItems:'center',gap:6,marginBottom:6}}>
-                      <div style={{width:8,height:8,borderRadius:'50%',background:pColor(pr)}}/>
-                      <div style={{color:S,fontSize:11,fontWeight:700}}>優先度{pLabel(pr)}</div>
-                    </div>
-                    {group.map(function(ms){
-                      return (
-                        <Cd key={ms.id} style={{marginBottom:8,padding:12}}>
-                          <div style={{display:'flex',alignItems:'center',gap:12}}>
-                            <button onClick={function(){
-                              setMissions(function(m){return m.map(function(mi){
-                                if(mi.id!==ms.id) return mi;
-                                var nm=Object.assign({},mi);nm.done=!mi.done;return nm;
-                              });});
-                            }} style={{width:24,height:24,borderRadius:'50%',border:'2px solid '+(ms.done?G:N3),background:ms.done?G:'transparent',cursor:'pointer',flexShrink:0,display:'flex',alignItems:'center',justifyContent:'center',color:'#000',fontSize:14,fontWeight:800}}>
-                              {ms.done?'✓':''}
-                            </button>
-                            <div style={{flex:1}}>
-                              <div style={{color:ms.done?S:S2,fontSize:13,textDecoration:ms.done?'line-through':'none'}}>{ms.text}</div>
-                              {ms.auto&&<span style={{color:PU,fontSize:10}}>⚡ AI自動生成</span>}
-                            </div>
-                          </div>
-                        </Cd>
-                      );
-                    })}
-                  </div>
-                );
-              })}
-              <div style={{textAlign:'center',marginTop:10}}>
-                <div style={{color:S,fontSize:12,marginBottom:4}}>{missions.filter(function(m){return m.done;}).length}/{missions.length} 達成</div>
-                <BarProg value={missions.filter(function(m){return m.done;}).length} max={Math.max(missions.length,1)} h={6}/>
+            <button onClick={suggestMissions} style={{width:'100%',marginTop:10,background:'none',border:'1px dashed '+N3,borderRadius:10,color:S2,padding:'8px',cursor:'pointer',fontSize:12}}>📊 今週の記録からミッションを提案してもらう</button>
+            {autoMsg&&<div style={{color:G,fontSize:12,marginTop:8,fontWeight:700}}>{autoMsg}</div>}
+          </Cd>
+          {missions.length===0&&<div style={{textAlign:'center',padding:'30px 0',color:S}}><div style={{fontSize:36,marginBottom:8}}>🎯</div><div>ミッションはまだありません</div></div>}
+          {['high','mid','low'].map(function(pr){
+            var group=missions.filter(function(ms){return (ms.priority||'mid')===pr;});
+            if(group.length===0) return null;
+            return (
+              <div key={pr}>
+                <div style={{display:'flex',alignItems:'center',gap:6,marginBottom:6}}>
+                  <div style={{width:8,height:8,borderRadius:'50%',background:pColor(pr)}}/>
+                  <div style={{color:S,fontSize:11,fontWeight:700}}>優先度{pLabel(pr)}</div>
+                </div>
+                {group.map(function(ms){
+                  return (
+                    <Cd key={ms.id} style={{marginBottom:8,padding:12}}>
+                      <div style={{display:'flex',alignItems:'center',gap:12}}>
+                        <button aria-label={ms.done?'未達成に戻す':'達成にする'} onClick={function(){
+                          setMissions(function(m){return m.map(function(mi){return mi.id===ms.id?Object.assign({},mi,{done:!mi.done}):mi;});});
+                        }} style={{width:24,height:24,borderRadius:'50%',border:'2px solid '+(ms.done?G:N3),background:ms.done?G:'transparent',cursor:'pointer',flexShrink:0,display:'flex',alignItems:'center',justifyContent:'center',color:'#000',fontSize:14,fontWeight:800}}>
+                          {ms.done?'✓':''}
+                        </button>
+                        <div style={{flex:1}}>
+                          <div style={{color:ms.done?S:S2,fontSize:13,textDecoration:ms.done?'line-through':'none'}}>{ms.text}</div>
+                          {ms.auto&&<span style={{color:PU,fontSize:10}}>📊 記録から提案</span>}
+                        </div>
+                        <button aria-label="ミッションを削除" onClick={function(){setMissions(function(m){return m.filter(function(mi){return mi.id!==ms.id;});});}} style={{background:'none',border:'none',color:S,cursor:'pointer',fontSize:14,padding:'0 2px'}}>🗑</button>
+                      </div>
+                    </Cd>
+                  );
+                })}
               </div>
+            );
+          })}
+          {missions.length>0&&(
+            <div style={{textAlign:'center',marginTop:10}}>
+              <div style={{color:S,fontSize:12,marginBottom:4}}>{doneCount}/{missions.length} 達成</div>
+              <BarProg value={doneCount} max={Math.max(missions.length,1)} h={6}/>
+              <button onClick={function(){openLine('【ミッション報告】'+getDisplayName(profile)+'\n'+missions.map(function(m){return (m.done?'✅ ':'⬜ ')+m.text;}).join('\n'),'coach_missions');}} style={{marginTop:12,background:'none',border:'1px solid #06C755',borderRadius:10,color:'#06C755',padding:'8px 14px',cursor:'pointer',fontSize:12,fontWeight:700}}>達成状況をLINEで報告</button>
             </div>
           )}
         </div>
       )}
       <LineConsultSection/>
-    </div>
-  );
-}
-
-// ── ClientManagerScreen ──
-function ClientManagerScreen(props){
-  var onClose=props.onClose,meals=props.meals||{},weights=props.weights||[],profile=props.profile;
-  var c1={};c1.id='c1';c1.name='田中 健太';c1.age=30;c1.height=175;c1.weight=73;c1.goal='diet';c1.targetWeight=68;c1.startDate='2026-02-01';c1.lastLogin='2026-03-21';c1.streak=14;c1.avgCal=1850;c1.avgP=98;c1.weightLog=[{d:'2/1',w:73.0},{d:'2/8',w:72.4},{d:'2/15',w:72.0},{d:'2/22',w:71.5},{d:'3/1',w:71.2},{d:'3/8',w:70.8},{d:'3/15',w:70.5},{d:'3/21',w:70.1}];c1.score=78;
-  var c2={};c2.id='c2';c2.name='鈴木 美咲';c2.age=26;c2.height=162;c2.weight=58;c2.goal='diet';c2.targetWeight=54;c2.startDate='2026-02-15';c2.lastLogin='2026-03-20';c2.streak=5;c2.avgCal=1420;c2.avgP=72;c2.weightLog=[{d:'2/15',w:58.0},{d:'2/22',w:57.6},{d:'3/1',w:57.3},{d:'3/8',w:57.0},{d:'3/15',w:56.8},{d:'3/21',w:56.5}];c2.score=65;
-  var c3={};c3.id='c3';c3.name='山本 大輔';c3.age=35;c3.height=178;c3.weight=82;c3.goal='muscle';c3.targetWeight=80;c3.startDate='2026-01-10';c3.lastLogin='2026-03-18';c3.streak=2;c3.avgCal=2480;c3.avgP=145;c3.weightLog=[{d:'1/10',w:82.0},{d:'1/24',w:82.5},{d:'2/7',w:82.8},{d:'2/21',w:83.0},{d:'3/7',w:82.5},{d:'3/18',w:82.2}];c3.score=52;
-  var c4={};c4.id='c4';c4.name='佐藤 あかり';c4.age=22;c4.height=158;c4.weight=52;c4.goal='health';c4.targetWeight=50;c4.startDate='2026-03-01';c4.lastLogin='2026-03-15';c4.streak=0;c4.avgCal=980;c4.avgP=45;c4.weightLog=[{d:'3/1',w:52.0},{d:'3/8',w:51.8},{d:'3/15',w:51.5}];c4.score=38;
-  var defaultClients=[c1,c2,c3,c4];
-  function buildClients(base){
-    return base.map(function(c){
-      if(profile&&c.name===profile.name){
-        var ds=Object.keys(meals).sort().slice(-7);
-        var rCal=ds.length>0?Math.round(ds.reduce(function(s,d){return s+getDayMacros(meals[d]).cal;},0)/ds.length):c.avgCal;
-        var rP=ds.length>0?Math.round(ds.reduce(function(s,d){return s+getDayMacros(meals[d]).p;},0)/ds.length*10)/10:c.avgP;
-        var rStreak=Object.keys(meals).filter(function(d){return getDayMacros(meals[d]).cal>0;}).length;
-        var rScore=calcScore(getDayMacros(meals[todayStr()]),calcGoals(profile))||c.score;
-        var rWL=weights.slice(-8).map(function(w){return {d:fmtDate(w.date),w:w.weight};});
-        var nc=Object.assign({},c);
-        nc.avgCal=rCal;nc.avgP=rP;nc.streak=rStreak;nc.score=rScore;
-        nc.weightLog=rWL.length>=2?rWL:c.weightLog;
-        nc.lastLogin=todayStr();
-        nc.weight=weights.length>0?weights[weights.length-1].weight:c.weight;
-        nc.height=parseFloat(profile.height)||c.height;
-        nc.goal=profile.goal||c.goal;
-        nc.targetWeight=parseFloat(profile.targetWeight)||c.targetWeight;
-        return nc;
-      }
-      return c;
-    });
-  }
-  var [clients]=useState(function(){try{var s=JSON.parse(localStorage.getItem('mc_clients')||'[]');return buildClients(s.length>0?s:defaultClients);}catch(e){return buildClients(defaultClients);}});
-  var [selected,setSelected]=useState(null);
-  var [view,setView]=useState('list');
-  var [sortKey,setSortKey]=useState('name');
-  var [filterStatus,setFilterStatus]=useState('all');
-  var [notes,setNotes]=useState({});
-  function sColor(s){return s==='active'?G:s==='warning'?Y:R;}
-  function sLabel(s){return s==='active'?'✅ 順調':s==='warning'?'⚠️ 注意':'🚨 要対応';}
-  function goalLabel(g){return g==='diet'?'ダイエット':g==='muscle'?'筋肉増量':g==='health'?'健康維持':'体重維持';}
-  function daysSince(d){return Math.floor((new Date()-new Date(d))/86400000);}
-  function autoSt(c){var ds=daysSince(c.lastLogin);if(ds>=5||c.score<40)return 'danger';if(ds>=3||c.score<60)return 'warning';return 'active';}
-  var sorted=clients.filter(function(c){return filterStatus==='all'||autoSt(c)===filterStatus;}).sort(function(a,b){return sortKey==='score'?b.score-a.score:sortKey==='streak'?b.streak-a.streak:a.name.localeCompare(b.name);});
-  var summary={total:clients.length,active:clients.filter(function(c){return autoSt(c)==='active';}).length,warning:clients.filter(function(c){return autoSt(c)==='warning';}).length,danger:clients.filter(function(c){return autoSt(c)==='danger';}).length,avgScore:Math.round(clients.reduce(function(s,c){return s+c.score;},0)/Math.max(clients.length,1))};
-  if(view==='detail'&&selected){
-    var c=clients.find(function(cl){return cl.id===selected;});
-    if(!c) return null;
-    var st=autoSt(c);
-    var bmi=Math.round(c.weight/Math.pow(c.height/100,2)*10)/10;
-    var diff=c.weightLog.length>1?Math.round((c.weightLog[c.weightLog.length-1].w-c.weightLog[0].w)*10)/10:0;
-    var alerts=[];
-    if(daysSince(c.lastLogin)>=3) alerts.push('最終ログインから'+daysSince(c.lastLogin)+'日経過しています');
-    if(c.avgCal<1200) alerts.push('1日の平均カロリーが低すぎます（1200kcal未満）');
-    if(c.avgP<50) alerts.push('タンパク質摂取量が不足しています');
-    if(c.streak===0) alerts.push('記録が途絶えています。声かけが必要です');
-    var inpS2={background:N,border:'1px solid '+N3,borderRadius:8,padding:'8px 12px',color:'#fff',fontSize:13,width:'100%',boxSizing:'border-box'};
-    return (
-      <div style={{padding:'12px 16px 100px'}}>
-        <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:14}}>
-          <button onClick={function(){setView('list');}} style={{background:N3,border:'none',color:'#fff',borderRadius:8,padding:'6px 12px',cursor:'pointer'}}>← 一覧</button>
-          <div style={{color:'#fff',fontWeight:800,fontSize:16}}>{c.name}</div>
-          <span style={{marginLeft:'auto',background:sColor(st)+'22',color:sColor(st),borderRadius:8,padding:'4px 10px',fontSize:12,fontWeight:700}}>{sLabel(st)}</span>
-        </div>
-        {alerts.length>0&&<Cd bg={R+'18'} style={{marginBottom:12,border:'1px solid '+R+'44'}}><div style={{color:R,fontWeight:700,marginBottom:6}}>⚠️ 自動アラート</div>{alerts.map(function(a,i){return <div key={i} style={{color:S2,fontSize:12,lineHeight:1.8}}>・{a}</div>;})}</Cd>}
-        <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:8,marginBottom:12}}>
-          {[{l:'食事スコア',v:c.score+'点',c:c.score>=70?G:c.score>=50?Y:R},{l:'連続記録',v:c.streak+'日',c:G},{l:'最終ログイン',v:daysSince(c.lastLogin)===0?'今日':daysSince(c.lastLogin)+'日前',c:daysSince(c.lastLogin)>=3?R:G}].map(function(n){
-            return <Cd key={n.l} bg={N2} style={{padding:10,textAlign:'center'}}><div style={{color:n.c,fontWeight:800,fontSize:16}}>{n.v}</div><div style={{color:S,fontSize:10,marginTop:2}}>{n.l}</div></Cd>;
-          })}
-        </div>
-        <Cd style={{marginBottom:12}}>
-          <div style={{color:'#fff',fontWeight:700,marginBottom:10}}>体重推移</div>
-          <div style={{display:'flex',alignItems:'center',gap:16}}>
-            <DetailChart weightLog={c.weightLog}/>
-            <div>
-              <div style={{color:S,fontSize:11}}>開始時</div><div style={{color:'#fff',fontWeight:800}}>{c.weightLog[0].w} kg</div>
-              <div style={{color:S,fontSize:11,marginTop:6}}>現在</div><div style={{color:'#fff',fontWeight:800}}>{c.weightLog[c.weightLog.length-1].w} kg</div>
-              <div style={{color:diff<=0?G:R,fontWeight:700,fontSize:13,marginTop:4}}>{diff>0?'+':''}{diff} kg</div>
-            </div>
-          </div>
-        </Cd>
-        <Cd style={{marginBottom:12}}>
-          <div style={{color:'#fff',fontWeight:700,marginBottom:10}}>基本情報</div>
-          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8}}>
-            {[{l:'目標',v:goalLabel(c.goal)},{l:'目標体重',v:c.targetWeight+'kg'},{l:'BMI',v:String(bmi)},{l:'平均Cal',v:c.avgCal+'kcal'},{l:'平均P',v:c.avgP+'g'},{l:'開始日',v:c.startDate}].map(function(n){
-              return <div key={n.l} style={{background:N,borderRadius:8,padding:'8px 10px',display:'flex',justifyContent:'space-between'}}><span style={{color:S,fontSize:12}}>{n.l}</span><span style={{color:'#fff',fontSize:12,fontWeight:700}}>{n.v}</span></div>;
-            })}
-          </div>
-        </Cd>
-        <Cd>
-          <div style={{color:'#fff',fontWeight:700,marginBottom:8}}>📝 コーチメモ</div>
-          <textarea value={notes[c.id]||''} onChange={function(e){var cid=c.id;var v=e.target.value;setNotes(function(n){var nn=Object.assign({},n);nn[cid]=v;return nn;});}} placeholder="このクライアントへのメモを入力..." style={Object.assign({},inpS2,{height:80,resize:'vertical'})}/>
-        </Cd>
-      </div>
-    );
-  }
-  return (
-    <div style={{padding:'12px 16px 100px'}}>
-      <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:14}}>
-        <button onClick={onClose} style={{background:N3,border:'none',color:'#fff',borderRadius:8,padding:'6px 12px',cursor:'pointer'}}>← 戻る</button>
-        <div style={{color:'#fff',fontWeight:800,fontSize:16}}>👥 クライアント管理</div>
-      </div>
-      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:8,marginBottom:14}}>
-        {[{l:'合計',v:summary.total,c:'#fff'},{l:'順調',v:summary.active,c:G},{l:'注意',v:summary.warning,c:Y},{l:'要対応',v:summary.danger,c:R}].map(function(n){
-          return <Cd key={n.l} bg={N2} style={{padding:10,textAlign:'center'}}><div style={{color:n.c,fontWeight:900,fontSize:20}}>{n.v}</div><div style={{color:S,fontSize:10}}>{n.l}</div></Cd>;
-        })}
-      </div>
-      <Cd style={{marginBottom:14}}>
-        <div style={{display:'flex',justifyContent:'space-between',marginBottom:6}}><span style={{color:'#fff',fontWeight:700,fontSize:13}}>平均スコア</span><span style={{color:summary.avgScore>=70?G:summary.avgScore>=50?Y:R,fontWeight:800}}>{summary.avgScore}点</span></div>
-        <BarProg value={summary.avgScore} max={100} color={summary.avgScore>=70?G:summary.avgScore>=50?Y:R} h={10}/>
-      </Cd>
-      <div style={{display:'flex',gap:6,marginBottom:10,flexWrap:'wrap'}}>
-        {[{v:'all',l:'全員'},{v:'active',l:'✅ 順調'},{v:'warning',l:'⚠️ 注意'},{v:'danger',l:'🚨 要対応'}].map(function(f){
-          return <button key={f.v} onClick={function(){setFilterStatus(f.v);}} style={{background:filterStatus===f.v?PU:N2,color:'#fff',border:'none',borderRadius:8,padding:'5px 10px',cursor:'pointer',fontSize:11,fontWeight:700}}>{f.l}</button>;
-        })}
-        <select value={sortKey} onChange={function(e){setSortKey(e.target.value);}} style={{background:N2,color:S,border:'1px solid '+N3,borderRadius:8,padding:'5px 10px',fontSize:11,marginLeft:'auto'}}>
-          <option value="name">名前順</option><option value="score">スコア順</option><option value="streak">継続日数順</option>
-        </select>
-      </div>
-      <div style={{overflowX:'auto',borderRadius:12,border:'1px solid '+N3,marginBottom:14}}>
-        <table style={{borderCollapse:'collapse',width:'100%',minWidth:480,fontSize:12}}>
-          <thead><tr style={{background:N3}}>{['名前','状態','スコア','継続','推移','ログイン',''].map(function(h,i){return <th key={i} style={{color:S2,padding:'9px 8px',textAlign:'left',whiteSpace:'nowrap',fontWeight:700}}>{h}</th>;})}</tr></thead>
-          <tbody>
-            {sorted.map(function(cl,i){
-              var st=autoSt(cl),ds=daysSince(cl.lastLogin);
-              return (
-                <tr key={cl.id} style={{background:i%2===0?N2:N,borderBottom:'1px solid '+N3}}>
-                  <td style={{padding:'8px 8px',color:'#fff',fontWeight:700,whiteSpace:'nowrap'}}>{cl.name}</td>
-                  <td style={{padding:'8px 8px',whiteSpace:'nowrap'}}><span style={{background:sColor(st)+'22',color:sColor(st),borderRadius:6,padding:'2px 6px',fontSize:10,fontWeight:700}}>{sLabel(st)}</span></td>
-                  <td style={{padding:'8px 8px'}}><span style={{color:cl.score>=70?G:cl.score>=50?Y:R,fontWeight:800}}>{cl.score}</span></td>
-                  <td style={{padding:'8px 8px',color:S2}}>{cl.streak}日</td>
-                  <td style={{padding:'4px 8px'}}><MiniChart data={cl.weightLog}/></td>
-                  <td style={{padding:'8px 8px',color:ds>=3?R:S2,whiteSpace:'nowrap'}}>{ds===0?'今日':ds+'日前'}</td>
-                  <td style={{padding:'8px 8px'}}><button onClick={function(){setSelected(cl.id);setView('detail');}} style={{background:PU,border:'none',borderRadius:6,color:'#fff',padding:'4px 8px',cursor:'pointer',fontSize:11,fontWeight:700}}>詳細</button></td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-      {clients.filter(function(c){return autoSt(c)==='danger';}).length>0&&(
-        <Cd bg={R+'18'} style={{border:'1px solid '+R+'44'}}>
-          <div style={{color:R,fontWeight:700,marginBottom:8}}>🚨 要フォロー</div>
-          {clients.filter(function(c){return autoSt(c)==='danger';}).map(function(c){
-            return (
-              <div key={c.id} style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:6,padding:'8px 10px',background:N,borderRadius:8}}>
-                <div><div style={{color:'#fff',fontWeight:700,fontSize:13}}>{c.name}</div><div style={{color:S,fontSize:11}}>{daysSince(c.lastLogin)>=5?daysSince(c.lastLogin)+'日間ログインなし':'スコア'+c.score+'点'}</div></div>
-                <button onClick={function(){setSelected(c.id);setView('detail');}} style={{background:R,border:'none',borderRadius:8,color:'#fff',padding:'6px 12px',cursor:'pointer',fontSize:12,fontWeight:700}}>確認</button>
-              </div>
-            );
-          })}
-        </Cd>
-      )}
     </div>
   );
 }
@@ -1648,13 +1549,16 @@ function ExportScreen(props){
   var rows=getRows();
   var header=rows[0];
   var dataRows=rows.slice(1);
-  function copyTSV(){navigator.clipboard.writeText(toTSV(rows)).then(function(){setCopied(true);setTimeout(function(){setCopied(false);},2000);});}
+  function copyTSV(){
+    if(!navigator.clipboard){alert('この端末ではコピーできません。CSVをダウンロードしてください。');return;}
+    navigator.clipboard.writeText(toTSV(rows)).then(function(){setCopied(true);setTimeout(function(){setCopied(false);},2000);}).catch(function(){alert('コピーに失敗しました。CSVをダウンロードしてください。');});
+  }
   function download(){
     var blob=new Blob(['\uFEFF'+toCSV(rows)],{type:'text/csv;charset=utf-8'});
     var url=URL.createObjectURL(blob);
     var a=document.createElement('a');
     a.href=url;a.download='mealcare_'+type+'_'+todayStr()+'.csv';a.click();
-    URL.revokeObjectURL(url);
+    setTimeout(function(){URL.revokeObjectURL(url);},1000);
   }
   return (
     <div style={{position:'fixed',inset:0,background:N,zIndex:300,overflow:'auto',maxWidth:480,margin:'0 auto'}}>
@@ -1688,10 +1592,6 @@ function ExportScreen(props){
           </table>
           {dataRows.length>15&&<div style={{color:S,fontSize:11,textAlign:'center',padding:'8px',background:N2}}>... 他 {dataRows.length-15} 件</div>}
         </div>
-        <Cd bg={N2} style={{marginTop:14}}>
-          <div style={{color:'#fff',fontWeight:700,fontSize:13,marginBottom:6}}>🔗 対象スプレッドシート</div>
-          <a href="https://docs.google.com/spreadsheets/d/1VNIHx9MuKUJ4EP5gcpqiznf-6wxQnpmZz9xCpVIIwuM/edit" target="_blank" rel="noreferrer" style={{color:B,fontSize:12,wordBreak:'break-all'}}>食事管理シート →</a>
-        </Cd>
       </div>
     </div>
   );
@@ -1699,61 +1599,27 @@ function ExportScreen(props){
 
 // ── Main App ──
 export default function App(){
-  useEffect(function(){
-    migrateLocalStorage();
-  },[]);
-  var [profile,setProfile]=useState(function(){try{return JSON.parse(localStorage.getItem('mc2_profile'))||null;}catch(e){return null;}});
-  var [meals,setMeals]=useState(function(){try{var m=JSON.parse(localStorage.getItem('mc2_meals'));return m&&Object.keys(m).length>0?m:{};}catch(e){return {};}});
-  var [weights,setWeights]=useState(function(){try{var w=JSON.parse(localStorage.getItem('mc2_weights'));return w&&w.length>0?w:[];}catch(e){return [];}});
+  // 旧キー（mc_*）からの移行は state を読む前に済ませる
+  useState(migrateLocalStorage);
+  var [profile,setProfile]=useState(function(){return loadJSON('mc2_profile',null);});
+  var [meals,setMeals]=useState(function(){var m=loadJSON('mc2_meals',{});return m&&typeof m==='object'?m:{};});
+  var [weights,setWeights]=useState(function(){var w=loadJSON('mc2_weights',[]);return Array.isArray(w)?w:[];});
   var [tab,setTab]=useState('home');
   var [mealTab,setMealTab]=useState('breakfast');
   var [showExport,setShowExport]=useState(false);
-  var [showClients,setShowClients]=useState(false);
-  var [clientPassInput,setClientPassInput]=useState('');
-  var [showClientPassModal,setShowClientPassModal]=useState(false);
-  useEffect(function(){try{if(profile)localStorage.setItem('mc2_profile',JSON.stringify(profile));}catch(e){};},[profile]);
-  useEffect(function(){try{localStorage.setItem('mc2_meals',JSON.stringify(meals));}catch(e){};},[meals]);
-  useEffect(function(){try{localStorage.setItem('mc2_weights',JSON.stringify(weights));}catch(e){};},[weights]);
-  useEffect(function(){
-    if(!profile) return;
-    try{
-      var saved=JSON.parse(localStorage.getItem('mc_clients')||'[]');
-      if(saved.length===0) return;
-      var updated=saved.map(function(c){
-        if(c.name!==profile.name) return c;
-        var nc=Object.assign({},c);nc.lastLogin=todayStr();return nc;
-      });
-      localStorage.setItem('mc_clients',JSON.stringify(updated));
-    }catch(e){}
-  },[profile]);
-  function openClientManager(){setClientPassInput('');setShowClientPassModal(true);}
-  function submitClientPass(){
-    if(clientPassInput==='syou5858'){setShowClientPassModal(false);setShowClients(true);}
-    else{alert('パスワードが違います');}
-  }
+  var [editingProfile,setEditingProfile]=useState(false);
+  useEffect(function(){if(profile)saveJSON('mc2_profile',profile);},[profile]);
+  useEffect(function(){saveJSON('mc2_meals',meals);},[meals]);
+  useEffect(function(){saveJSON('mc2_weights',weights);},[weights]);
   if(!profile) return <Onboarding onDone={function(pf){setProfile(pf);setTab('home');}}/>;
+  if(editingProfile) return <Onboarding initial={profile} onCancel={function(){setEditingProfile(false);}} onDone={function(pf){setProfile(pf);setEditingProfile(false);}}/>;
   return (
     <div style={{background:N,minHeight:'100vh',maxWidth:480,margin:'0 auto',fontFamily:'-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif',color:'#fff',overflowX:'hidden',width:'100%',boxSizing:'border-box'}}>
       {showExport&&<ExportScreen meals={meals} weights={weights} profile={profile} onClose={function(){setShowExport(false);}}/>}
-      {showClients&&<ClientManagerScreen meals={meals} weights={weights} profile={profile} onClose={function(){setShowClients(false);}}/>}
-      {showClientPassModal&&(
-        <div style={{position:'fixed',inset:0,background:'rgba(0,0,0,0.85)',zIndex:400,display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <div style={{background:N2,borderRadius:20,padding:28,width:300}}>
-            <div style={{textAlign:'center',fontSize:40,marginBottom:8}}>🔐</div>
-            <div style={{color:'#fff',fontWeight:800,fontSize:16,textAlign:'center',marginBottom:4}}>コーチ専用エリア</div>
-            <div style={{color:S,fontSize:12,textAlign:'center',marginBottom:18}}>パスワードを入力してください</div>
-            <input type="password" placeholder="パスワード" value={clientPassInput} onChange={function(e){setClientPassInput(e.target.value);}} onKeyDown={function(e){if(e.key==='Enter')submitClientPass();}} style={{background:N,border:'1px solid '+N3,borderRadius:10,padding:'10px 14px',color:'#fff',fontSize:15,width:'100%',boxSizing:'border-box',marginBottom:12}} autoFocus/>
-            <div style={{display:'flex',gap:8}}>
-              <button onClick={function(){setShowClientPassModal(false);}} style={{flex:1,background:N3,border:'none',borderRadius:10,color:'#fff',padding:'10px',cursor:'pointer',fontWeight:700,fontSize:13}}>キャンセル</button>
-              <button onClick={submitClientPass} style={{flex:2,background:PU,border:'none',borderRadius:10,color:'#fff',padding:'10px',cursor:'pointer',fontWeight:700,fontSize:13}}>解除</button>
-            </div>
-          </div>
-        </div>
-      )}
       <div style={{paddingTop:8}}>
         <div style={{display:'flex',justifyContent:'flex-end',gap:6,padding:'6px 16px 4px'}}>
-          <button onClick={openClientManager} style={{background:PU+'22',border:'1px solid '+PU,borderRadius:8,color:PU,fontSize:11,fontWeight:700,padding:'6px 10px',cursor:'pointer'}}>🔐 コーチ管理</button>
-          <button onClick={function(){setShowExport(true);}} style={{background:N2,border:'1px solid '+N3,borderRadius:8,color:S2,fontSize:11,fontWeight:700,padding:'6px 10px',cursor:'pointer'}}>📤 Sheets出力</button>
+          <button onClick={function(){setEditingProfile(true);}} style={{background:N2,border:'1px solid '+N3,borderRadius:8,color:S2,fontSize:11,fontWeight:700,padding:'6px 10px',cursor:'pointer'}}>⚙️ プロフィール・目標</button>
+          <button onClick={function(){setShowExport(true);}} style={{background:N2,border:'1px solid '+N3,borderRadius:8,color:S2,fontSize:11,fontWeight:700,padding:'6px 10px',cursor:'pointer'}}>📤 データ出力</button>
         </div>
         {tab==='home'&&<ErrorBoundary screen="home"><HomeScreen profile={profile} meals={meals} weights={weights} setTab={setTab} setMealTab={setMealTab}/></ErrorBoundary>}
         {tab==='log'&&<ErrorBoundary screen="log"><LogScreen meals={meals} setMeals={setMeals} mealTab={mealTab} setMealTab={setMealTab}/></ErrorBoundary>}
