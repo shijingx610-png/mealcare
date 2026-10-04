@@ -34,18 +34,36 @@ test('normalizeItems は数値を丸めて不正値を落とす', function () {
     { n: '', cal: 100 },
     null
   ]);
-  assert.deepEqual(out, [{ n: '白米', cal: 252, p: 3.8, f: 0, c: 0, s: '150g' }]);
+  assert.deepEqual(out, [{ n: '白米', g: 0, cal: 252, p: 3.8, f: 0, c: 0, s: '150g' }]);
 });
 
 test('写真を送ると食品リストを返し、新しいモデルと構造化出力でリクエストする', async function () {
-  fakeClaude({ items: [{ n: '鶏の唐揚げ', cal: 300, p: 18, f: 20, c: 10, s: '4個' }] });
+  fakeClaude({ items: [{ n: '鶏の唐揚げ', g: 120, cal: 300, p: 18, f: 20, c: 10, s: '4個' }] });
   var res = mockRes();
-  await handler({ method: 'POST', body: { base64: 'AAAA', mediaType: 'image/jpeg' } }, res);
+  await handler({ method: 'POST', body: { base64: 'AAAA', mediaType: 'image/jpeg', hint: 'ご飯は大盛り' } }, res);
   assert.equal(res.statusCode, 200);
   assert.equal(res.body.items[0].n, '鶏の唐揚げ');
   assert.equal(lastRequest.body.model, 'claude-opus-5-5');
   assert.equal(lastRequest.body.output_config.format.type, 'json_schema');
   assert.equal(lastRequest.body.fallbacks, 'default');
+  assert.equal(lastRequest.body.output_config.effort, 'high');
+  assert.match(lastRequest.body.messages[0].content[1].text, /ご飯は大盛り/);
+  assert.equal(res.body.items[0].g, 120);
+});
+
+test('文字だけでも推定できる（データベースにない食品用）', async function () {
+  fakeClaude({ items: [{ n: '金のハンバーグ', g: 240, cal: 350, p: 20, f: 22, c: 15, s: '1袋' }] });
+  var res = mockRes();
+  await handler({ method: 'POST', body: { text: 'セブンの金のハンバーグ' } }, res);
+  assert.equal(res.statusCode, 200);
+  assert.equal(lastRequest.body.messages[0].content[0].type, 'text');
+  assert.match(lastRequest.body.messages[0].content[0].text, /金のハンバーグ/);
+});
+
+test('画像も文字もなければ 400', async function () {
+  var res = mockRes();
+  await handler({ method: 'POST', body: {} }, res);
+  assert.equal(res.statusCode, 400);
 });
 
 test('食べ物が見つからないときは 422', async function () {

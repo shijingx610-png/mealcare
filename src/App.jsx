@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { RECIPES } from "./data/recipes";
+import { searchFoods, scaleFood } from "./data/foods/index.js";
 
 function suggestRecipes(answer){
   var scored=RECIPES.map(function(r){
@@ -82,105 +83,6 @@ class ErrorBoundary extends React.Component {
 
 var G='#22c55e',N='#0f172a',N2='#1e293b',N3='#334155',S='#94a3b8',S2='#cbd5e1',R='#ef4444',Y='#f59e0b',B='#3b82f6',PU='#8b5cf6';
 
-var FDB=[
-  {id:1,n:'白米',s:'150g',cal:252,p:3.8,f:0.5,c:55.7,cat:'穀物'},
-  {id:2,n:'玄米',s:'150g',cal:248,p:4.2,f:1.5,c:51.3,cat:'穀物'},
-  {id:3,n:'食パン',s:'60g',cal:158,p:5.6,f:2.6,c:28.0,cat:'穀物'},
-  {id:4,n:'うどん',s:'200g',cal:210,p:5.2,f:0.8,c:43.2,cat:'穀物'},
-  {id:5,n:'そば',s:'200g',cal:264,p:9.6,f:1.0,c:51.2,cat:'穀物'},
-  {id:6,n:'パスタ',s:'80g',cal:302,p:9.7,f:1.5,c:58.8,cat:'穀物'},
-  {id:7,n:'オートミール',s:'30g',cal:114,p:4.0,f:2.1,c:20.4,cat:'穀物'},
-  {id:8,n:'鶏むね肉',s:'100g',cal:108,p:22.3,f:1.5,c:0,cat:'肉・魚'},
-  {id:9,n:'鶏もも肉',s:'100g',cal:190,p:17.3,f:14.2,c:0,cat:'肉・魚'},
-  {id:10,n:'豚ロース',s:'100g',cal:263,p:19.3,f:19.2,c:0.2,cat:'肉・魚'},
-  {id:11,n:'牛もも肉',s:'100g',cal:182,p:21.2,f:10.7,c:0.6,cat:'肉・魚'},
-  {id:12,n:'サーモン',s:'100g',cal:138,p:19.1,f:7.1,c:0.1,cat:'肉・魚'},
-  {id:13,n:'マグロ赤身',s:'100g',cal:125,p:26.4,f:1.4,c:0.1,cat:'肉・魚'},
-  {id:14,n:'卵',s:'1個',cal:76,p:6.2,f:5.2,c:0.2,cat:'卵・豆'},
-  {id:15,n:'豆腐',s:'150g',cal:84,p:7.4,f:4.8,c:2.4,cat:'卵・豆'},
-  {id:16,n:'納豆',s:'1P',cal:90,p:7.4,f:4.5,c:5.4,cat:'卵・豆'},
-  {id:17,n:'ブロッコリー',s:'100g',cal:37,p:4.3,f:0.5,c:5.2,cat:'野菜'},
-  {id:18,n:'ほうれん草',s:'100g',cal:23,p:2.2,f:0.4,c:3.1,cat:'野菜'},
-  {id:19,n:'トマト',s:'150g',cal:29,p:1.1,f:0.2,c:5.6,cat:'野菜'},
-  {id:20,n:'きゅうり',s:'100g',cal:14,p:1.0,f:0.1,c:3.0,cat:'野菜'},
-  {id:21,n:'にんじん',s:'100g',cal:39,p:0.7,f:0.1,c:9.3,cat:'野菜'},
-  {id:22,n:'アボカド',s:'1/2個',cal:125,p:1.6,f:11.3,c:5.8,cat:'野菜'},
-  {id:23,n:'さつまいも',s:'100g',cal:130,p:1.2,f:0.2,c:30.3,cat:'野菜'},
-  {id:24,n:'バナナ',s:'1本',cal:86,p:1.1,f:0.2,c:22.5,cat:'果物'},
-  {id:25,n:'りんご',s:'1/2個',cal:87,p:0.2,f:0.2,c:22.7,cat:'果物'},
-  {id:26,n:'みかん',s:'1個',cal:38,p:0.6,f:0.1,c:9.1,cat:'果物'},
-  {id:27,n:'牛乳',s:'200ml',cal:134,p:6.6,f:7.6,c:9.6,cat:'乳製品'},
-  {id:28,n:'ヨーグルト',s:'100g',cal:62,p:3.6,f:3.0,c:4.9,cat:'乳製品'},
-  {id:29,n:'チーズ',s:'20g',cal:68,p:4.5,f:5.2,c:0.3,cat:'乳製品'},
-  {id:30,n:'豆乳',s:'200ml',cal:92,p:7.2,f:4.0,c:6.2,cat:'乳製品'},
-  {id:31,n:'味噌汁',s:'1杯',cal:40,p:2.8,f:1.5,c:4.0,cat:'その他'},
-  {id:32,n:'プロテインバー',s:'1本',cal:180,p:20.0,f:6.0,c:20.0,cat:'その他'},
-  {id:33,n:'おにぎり鮭',s:'1個',cal:197,p:5.0,f:1.5,c:40.5,cat:'その他'},
-  {id:34,n:'サンドイッチ',s:'1個',cal:250,p:10.0,f:8.0,c:35.0,cat:'その他'},
-  {id:35,n:'ビッグマック',s:'1個',cal:525,p:27.0,f:29.0,c:45.0,cat:'ファスト'},
-  {id:36,n:'フライドポテトM',s:'170g',cal:454,p:5.3,f:22.0,c:56.0,cat:'ファスト'},
-  {id:37,n:'カレーライス',s:'1皿',cal:714,p:17.5,f:19.0,c:112.0,cat:'その他'},
-  {id:38,n:'ラーメン',s:'1杯',cal:495,p:18.0,f:16.0,c:68.0,cat:'その他'},
-  {id:39,n:'親子丼',s:'1杯',cal:620,p:24.0,f:16.0,c:88.0,cat:'その他'},
-  {id:40,n:'餃子',s:'5個',cal:197,p:8.3,f:10.5,c:18.7,cat:'その他'},
-  {id:41,n:'プロテイン',s:'1杯',cal:110,p:22.0,f:1.5,c:3.0,cat:'サプリ'},
-  {id:42,n:'アーモンド',s:'20粒',cal:166,p:6.0,f:14.3,c:5.6,cat:'ナッツ'},
-  {id:43,n:'ツナ缶',s:'1缶',cal:70,p:13.5,f:1.5,c:0,cat:'肉・魚'},
-  {id:44,n:'いわし缶',s:'1缶',cal:180,p:22.5,f:9.9,c:0.3,cat:'肉・魚'},
-  {id:45,n:'コーラ',s:'350ml',cal:144,p:0,f:0,c:36.0,cat:'飲料'},
-  {id:46,n:'コーヒー',s:'200ml',cal:8,p:0.4,f:0,c:1.2,cat:'飲料'},
-  {id:47,n:'緑茶',s:'200ml',cal:4,p:0.4,f:0,c:0.6,cat:'飲料'},
-  {id:48,n:'かぼちゃ',s:'100g',cal:91,p:1.9,f:0.3,c:20.6,cat:'野菜'},
-  {id:49,n:'じゃがいも',s:'100g',cal:76,p:1.8,f:0.1,c:17.6,cat:'野菜'},
-  {id:50,n:'えのき',s:'100g',cal:22,p:2.7,f:0.2,c:3.7,cat:'野菜'},
-  {id:51,n:'しらす',s:'20g',cal:24,p:3.8,f:0.5,c:0.1,cat:'肉・魚'},
-  {id:52,n:'全粒粉パン',s:'60g',cal:148,p:6.0,f:2.2,c:26.4,cat:'穀物'},
-  {id:53,n:'豆乳ヨーグルト',s:'100g',cal:58,p:3.5,f:2.8,c:4.8,cat:'乳製品'},
-  {id:54,n:'オリーブオイル',s:'大1',cal:111,p:0,f:12.0,c:0,cat:'調味料'},
-  {id:55,n:'バター',s:'10g',cal:75,p:0.1,f:8.2,c:0,cat:'調味料'},
-  {id:56,n:'鶏ささみ',s:'100g',cal:98,p:23.0,f:0.8,c:0,cat:'肉・魚'},
-  {id:57,n:'豚もも肉',s:'100g',cal:171,p:20.5,f:9.3,c:0.2,cat:'肉・魚'},
-  {id:58,n:'タラ',s:'100g',cal:72,p:17.6,f:0.2,c:0.1,cat:'肉・魚'},
-  {id:59,n:'エビ',s:'100g',cal:82,p:18.4,f:0.6,c:0.1,cat:'肉・魚'},
-  {id:60,n:'ホタテ',s:'100g',cal:72,p:13.5,f:0.9,c:1.5,cat:'肉・魚'},
-  {id:61,n:'サバ缶',s:'1缶150g',cal:228,p:26.2,f:13.9,c:0.3,cat:'肉・魚'},
-  {id:62,n:'鶏ハム',s:'100g',cal:120,p:22.0,f:2.8,c:1.0,cat:'肉・魚'},
-  {id:63,n:'ゆで卵',s:'1個',cal:78,p:6.5,f:5.4,c:0.3,cat:'卵・豆'},
-  {id:64,n:'枝豆',s:'50g',cal:68,p:5.8,f:3.2,c:4.5,cat:'卵・豆'},
-  {id:65,n:'小松菜',s:'100g',cal:14,p:1.5,f:0.2,c:2.4,cat:'野菜'},
-  {id:66,n:'キャベツ',s:'100g',cal:23,p:1.3,f:0.2,c:5.2,cat:'野菜'},
-  {id:67,n:'もやし',s:'100g',cal:15,p:1.7,f:0.1,c:2.6,cat:'野菜'},
-  {id:68,n:'こんにゃく',s:'100g',cal:5,p:0.1,f:0,c:2.3,cat:'野菜'},
-  {id:69,n:'キウイ',s:'1個',cal:53,p:1.0,f:0.2,c:13.5,cat:'果物'},
-  {id:70,n:'いちご',s:'100g',cal:34,p:0.9,f:0.1,c:8.5,cat:'果物'},
-  {id:71,n:'ギリシャヨーグルト',s:'100g',cal:59,p:10.0,f:0.2,c:3.6,cat:'乳製品'},
-  {id:72,n:'カッテージチーズ',s:'100g',cal:99,p:13.3,f:4.5,c:1.9,cat:'乳製品'},
-  {id:73,n:'サラダチキン',s:'1枚115g',cal:115,p:24.5,f:1.4,c:0.5,cat:'加工食品'},
-  {id:74,n:'照り焼きチキン',s:'150g',cal:220,p:30.0,f:7.5,c:8.5,cat:'料理'},
-  {id:75,n:'野菜炒め',s:'200g',cal:155,p:8.0,f:8.5,c:12.0,cat:'料理'},
-  {id:76,n:'鶏鍋',s:'400g',cal:280,p:28.0,f:8.0,c:18.0,cat:'料理'},
-  {id:77,n:'オートミール粥',s:'200g',cal:130,p:5.0,f:2.5,c:22.0,cat:'料理'},
-  {id:78,n:'ブロッコリーツナサラダ',s:'200g',cal:115,p:16.0,f:3.5,c:6.0,cat:'料理'},
-  {id:79,n:'LSN サラダチキン プレーン',s:'110g',cal:116,p:24.4,f:1.5,c:1.0,cat:'ローソン'},
-  {id:80,n:'LSN サラダチキン スモーク',s:'115g',cal:124,p:24.5,f:2.0,c:1.5,cat:'ローソン'},
-  {id:81,n:'LSN ブランパン',s:'1個35g',cal:68,p:5.4,f:2.9,c:2.0,cat:'ローソン'},
-  {id:82,n:'LSN からあげクン',s:'5個100g',cal:230,p:13.5,f:15.0,c:8.0,cat:'ローソン'},
-  {id:83,n:'LSN おにぎり 鮭',s:'105g',cal:178,p:4.5,f:1.2,c:37.0,cat:'ローソン'},
-  {id:84,n:'LSN おにぎり 昆布',s:'100g',cal:168,p:3.2,f:0.5,c:36.5,cat:'ローソン'},
-  {id:85,n:'LSN ギリシャヨーグルト',s:'100g',cal:59,p:10.0,f:0.2,c:3.6,cat:'ローソン'},
-  {id:86,n:'LSN ゆでたまご',s:'1個',cal:76,p:6.5,f:5.2,c:0.3,cat:'ローソン'},
-  {id:87,n:'LSN 豚汁スープ',s:'200g',cal:88,p:4.5,f:3.2,c:10.5,cat:'ローソン'},
-  {id:88,n:'FM サラダチキン プレーン',s:'115g',cal:120,p:25.0,f:1.5,c:1.0,cat:'ファミマ'},
-  {id:89,n:'FM サラダチキン 柚子こしょう',s:'115g',cal:118,p:24.5,f:1.4,c:1.2,cat:'ファミマ'},
-  {id:90,n:'FM サラダチキンスティック',s:'67g',cal:83,p:12.2,f:2.5,c:0.4,cat:'ファミマ'},
-  {id:91,n:'FM ファミチキ胸肉',s:'95g',cal:220,p:18.5,f:12.5,c:8.5,cat:'ファミマ'},
-  {id:92,n:'FM おにぎり 鮭',s:'105g',cal:180,p:4.6,f:1.3,c:37.5,cat:'ファミマ'},
-  {id:93,n:'FM おにぎり 明太子',s:'105g',cal:175,p:4.2,f:1.0,c:37.0,cat:'ファミマ'},
-  {id:94,n:'FM チキンとたまごのサラダ',s:'160g',cal:145,p:12.5,f:7.5,c:7.0,cat:'ファミマ'},
-  {id:95,n:'FM おでん 大根',s:'100g',cal:25,p:0.8,f:0.1,c:5.5,cat:'ファミマ'},
-  {id:96,n:'FM おでん たまご',s:'60g',cal:78,p:6.5,f:5.2,c:0.5,cat:'ファミマ'},
-  {id:97,n:'FM 豆腐わかめスープ',s:'180ml',cal:42,p:3.0,f:1.5,c:3.5,cat:'ファミマ'},
-];
 
 function getDisplayName(profile){
   var name=profile&&profile.name?profile.name.trim():'';
@@ -269,16 +171,17 @@ function photoErrorMessage(status){
   if(status===0) return '通信できませんでした。電波の良い場所でもう一度お試しください。';
   return '解析に失敗しました。もう一度試すか、検索・手入力で記録してください。';
 }
-function callPhotoAI(base64, mediaType, onSuccess, onError) {
+// payload: { base64, mediaType, hint } で写真、{ text } で文字から推定
+function callFoodAI(payload, onSuccess, onError) {
   fetch('/api/photo', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ base64: base64, mediaType: mediaType })
+    body: JSON.stringify(payload)
   })
     .then(function(r){ return r.json().catch(function(){return {};}).then(function(d){ return {ok:r.ok, status:r.status, data:d}; }); })
     .then(function(res){
       var items = res.data && res.data.items;
-      if(res.ok && Array.isArray(items) && items.length>0) onSuccess(items);
+      if(res.ok && Array.isArray(items) && items.length>0) onSuccess(items.map(function(it){return Object.assign({},it,{base:Object.assign({},it)});}));
       else onError(photoErrorMessage(res.ok?422:res.status));
     })
     .catch(function(){ onError(photoErrorMessage(0)); });
@@ -947,7 +850,51 @@ function LogScreen(props){
   var tabs=[{id:'breakfast',l:'朝食',i:'🌅'},{id:'lunch',l:'昼食',i:'🌞'},{id:'dinner',l:'夕食',i:'🌙'},{id:'snack',l:'間食',i:'🍪'}];
   var items=dm[mealTab]||[];
   var mm=getMacros(items);
-  var results=FDB.filter(function(f){return f.n.indexOf(search)>=0||f.cat.indexOf(search)>=0;}).slice(0,20);
+  var results=search.trim()?searchFoods(search,null,40):[];
+  var [picked,setPicked]=useState(null);
+  var [pickGrams,setPickGrams]=useState('');
+  var [hint,setHint]=useState('');
+  var [recent,setRecent]=useState(function(){return loadJSON('mc2_recent_foods',[]);});
+  function rememberFood(food){
+    var entry={n:food.n,s:food.s,g:food.g,cal:food.cal,p:food.p,f:food.f,c:food.c};
+    setRecent(function(r){
+      var nr=[entry].concat(r.filter(function(x){return !(x.n===entry.n&&x.s===entry.s);})).slice(0,20);
+      saveJSON('mc2_recent_foods',nr);
+      return nr;
+    });
+  }
+  function pickFood(food){setPicked(food);setPickGrams(String(food.g||100));}
+  var pickedScaled=picked&&+pickGrams>0?scaleFood(picked,+pickGrams):null;
+  function addPicked(){
+    if(!pickedScaled) return;
+    var label=+pickGrams===picked.g?picked.s:pickGrams+'g';
+    var item=Object.assign({},pickedScaled,{id:'f'+mkId(),s:label});
+    rememberFood(item);
+    setPicked(null);
+    addFood(item);
+  }
+  function estimateByText(){
+    var q=search.trim();
+    if(!q) return;
+    setImgAnalyzing(true);setImgResults([]);setImgError('');setImgConfirm(null);setImgAdded({});
+    callFoodAI({text:q},function(parsed){
+      setImgResults(parsed);setImgConfirm('pending');setImgAnalyzing(false);
+    },function(msg){setImgError(msg);setImgAnalyzing(false);});
+  }
+  function setResultGrams(i,v){
+    setImgResults(function(list){
+      return list.map(function(it,idx){
+        if(idx!==i) return it;
+        var grams=Math.max(0,Math.min(3000,+v||0));
+        var base=it.base;
+        if(!base||!base.g) return Object.assign({},it,{g:grams});
+        var r=grams/base.g;
+        return Object.assign({},it,{g:grams,s:grams+'g',cal:Math.round(base.cal*r),p:Math.round(base.p*r*10)/10,f:Math.round(base.f*r*10)/10,c:Math.round(base.c*r*10)/10});
+      });
+    });
+  }
+  function removeResult(i){setImgResults(function(list){return list.filter(function(_,idx){return idx!==i;});});}
+  function cleanAI(f){var o=Object.assign({id:'ai'+mkId()},f);delete o.base;return o;}
   var inpS={background:N,border:'1px solid '+N3,borderRadius:8,padding:'8px 12px',color:'#fff',fontSize:13,width:'100%',boxSizing:'border-box'};
   function changeDay(delta){setDay(shiftDate(day,delta));}
   // meals は関数型で更新する（写真の「全て追加」のように連続で呼ばれても取りこぼさない）
@@ -965,7 +912,10 @@ function LogScreen(props){
     var nit=Object.assign({},food,{qty:1,uid:mkId()});
     updateMeal(key,function(list){return list.concat([nit]);});
     if(keepOpen) return;
-    setSearch('');setShowAdd(false);setImgResults([]);
+    closeAdd();
+  }
+  function closeAdd(){
+    setShowAdd(false);setSearch('');setPicked(null);setImgResults([]);setImgConfirm(null);setImgError('');
   }
   function changeQty(u,delta){
     updateMeal(mealTab,function(list){
@@ -1013,7 +963,7 @@ function LogScreen(props){
     setImgConfirm(null);
     setImgAdded({});
     prepareImage(file).then(function(img){
-      callPhotoAI(img.base64,img.mediaType,function(parsed){
+      callFoodAI({base64:img.base64,mediaType:img.mediaType,hint:hint.trim()},function(parsed){
         setImgResults(parsed);
         setImgConfirm('pending');
         setImgAnalyzing(false);
@@ -1069,63 +1019,59 @@ function LogScreen(props){
       })}
       <Btn onClick={function(){setShowAdd(true);}} full style={{marginTop:8,padding:'12px'}}>＋ 食品を追加</Btn>
       {showAdd&&(
-        <div onClick={function(e){if(e.target===e.currentTarget)setShowAdd(false);}} style={{position:'fixed',inset:0,background:'rgba(0,0,0,0.7)',zIndex:200,display:'flex',alignItems:'flex-end',justifyContent:'center'}}>
+        <div onClick={function(e){if(e.target===e.currentTarget)closeAdd();}} style={{position:'fixed',inset:0,background:'rgba(0,0,0,0.7)',zIndex:200,display:'flex',alignItems:'flex-end',justifyContent:'center'}}>
           <div style={{background:N2,borderRadius:'20px 20px 0 0',padding:'20px',width:'100%',maxWidth:480,maxHeight:'80vh',overflow:'auto'}}>
             <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:14}}>
               <div style={{color:'#fff',fontWeight:800,fontSize:16}}>食品を追加</div>
-              <button onClick={function(){setShowAdd(false);}} style={{background:'none',border:'none',color:S,cursor:'pointer',fontSize:20}}>✕</button>
+              <button aria-label="閉じる" onClick={closeAdd} style={{background:'none',border:'none',color:S,cursor:'pointer',fontSize:20}}>✕</button>
             </div>
             <div style={{display:'flex',gap:6,marginBottom:14,flexWrap:'wrap'}}>
               {[{id:'photo',l:'📸 写真AI'},{id:'search',l:'🔍 検索'},{id:'manual',l:'✏️ 手入力'},{id:'recipe',l:'🍳 レシピ提案'}].map(function(mv){
                 return <button key={mv.id} onClick={function(){setMode(mv.id);}} style={{flex:1,background:mode===mv.id?G:N3,color:mode===mv.id?'#000':'#fff',border:'none',borderRadius:10,padding:'8px',cursor:'pointer',fontWeight:700,fontSize:11}}>{mv.l}</button>;
               })}
             </div>
-            {mode==='photo'&&(
-              <div>
-                <input id="mc-file-input" type="file" accept="image/*" style={{display:'none'}} onChange={handleFileChange}/>
-                <div style={{background:N,borderRadius:12,border:'2px dashed '+N3,padding:20,textAlign:'center',marginBottom:12}}>
-                  <div style={{fontSize:40,marginBottom:8}}>📸</div>
-                  <div style={{color:S2,fontSize:13,marginBottom:12}}>食事の写真をアップロードすると<br/>AIが食品とカロリーを推定します</div>
-                  <div style={{color:S,fontSize:11,marginBottom:12}}>※ 推定値です。量が違うときは追加後に「×」で調整できます</div>
-                  <button onClick={function(){document.getElementById('mc-file-input').click();}} style={{background:G,border:'none',borderRadius:10,color:'#000',padding:'10px 20px',cursor:'pointer',fontWeight:700,fontSize:13}}>📷 写真を選択 / 撮影</button>
-                </div>
+            {(imgAnalyzing||imgError||imgResults.length>0)&&(
+              <div style={{marginBottom:12}}>
                 {imgAnalyzing&&(
                   <div style={{textAlign:'center',padding:20}}>
                     <div style={{fontSize:32,marginBottom:8}}>🤖</div>
-                    <div style={{color:G,fontWeight:700,fontSize:14}}>AIが食品を詳細分析中...</div>
-                    <div style={{color:S,fontSize:12,marginTop:4}}>栄養素・カロリーを計算しています（10〜30秒ほど）</div>
+                    <div style={{color:G,fontWeight:700,fontSize:14}}>AIが分析中...</div>
+                    <div style={{color:S,fontSize:12,marginTop:4}}>量と栄養素を計算しています（10〜40秒ほど）</div>
                   </div>
                 )}
                 {imgError&&<div style={{background:R+'22',border:'1px solid '+R+'44',borderRadius:10,padding:12,color:R,fontSize:13,textAlign:'center',marginBottom:10}}>{imgError}</div>}
                 {imgResults.length>0&&imgConfirm==='pending'&&(
                   <div>
-                    <div style={{background:B+'18',border:'1px solid '+B+'44',borderRadius:12,padding:14,marginBottom:12}}>
-                      <div style={{color:B,fontWeight:800,fontSize:14,marginBottom:6}}>🤖 以下の食品を検出しました。合っていますか？</div>
+                    <div style={{background:B+'18',border:'1px solid '+B+'44',borderRadius:12,padding:14,marginBottom:12,textAlign:'left'}}>
+                      <div style={{color:B,fontWeight:800,fontSize:14,marginBottom:4}}>🤖 この内容で合っていますか？</div>
+                      <div style={{color:S,fontSize:11,marginBottom:8}}>量（g）を直すとカロリーも自動で計算し直します</div>
                       {imgResults.map(function(f,i){
                         return (
-                          <div key={i} style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'6px 0',borderBottom:i<imgResults.length-1?'1px solid '+N3:'none'}}>
-                            <div>
-                              <div style={{color:'#fff',fontSize:13,fontWeight:700}}>{f.n}</div>
-                              <div style={{color:S,fontSize:11}}>{f.s}　P:{f.p}g F:{f.f}g C:{f.c}g</div>
+                          <div key={i} style={{padding:'8px 0',borderBottom:i<imgResults.length-1?'1px solid '+N3:'none'}}>
+                            <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:8}}>
+                              <div style={{color:'#fff',fontSize:13,fontWeight:700,flex:1}}>{f.n}</div>
+                              <div style={{color:G,fontWeight:800,fontSize:13}}>{f.cal} kcal</div>
+                              <button aria-label={f.n+'を外す'} onClick={function(){removeResult(i);}} style={{background:'none',border:'none',color:S,cursor:'pointer',fontSize:14}}>✕</button>
                             </div>
-                            <div style={{color:G,fontWeight:800,fontSize:13}}>{f.cal} kcal</div>
+                            <div style={{display:'flex',alignItems:'center',gap:6,marginTop:4}}>
+                              <input aria-label={f.n+'の量（g）'} type="number" inputMode="numeric" value={f.g||''} onChange={function(e){setResultGrams(i,e.target.value);}} style={{width:70,background:N,border:'1px solid '+N3,borderRadius:6,padding:'4px 6px',color:'#fff',fontSize:12}}/>
+                              <span style={{color:S,fontSize:11}}>g　P:{f.p}g F:{f.f}g C:{f.c}g</span>
+                            </div>
                           </div>
                         );
                       })}
-                      <div style={{marginTop:8}}>
-                        <div style={{color:G,fontWeight:700,fontSize:13,marginBottom:4}}>
-                          合計: {imgResults.reduce(function(sum,f){return sum+(f.cal||0);},0)} kcal
-                        </div>
+                      <div style={{color:G,fontWeight:700,fontSize:13,marginTop:8}}>
+                        合計: {imgResults.reduce(function(sum,f){return sum+(f.cal||0);},0)} kcal
                       </div>
                     </div>
                     <div style={{display:'flex',gap:8,marginBottom:10}}>
                       <button onClick={function(){
-                        imgResults.forEach(function(f){addFood(Object.assign({id:'ai'+mkId()},f),null,true);});
-                        setImgConfirm(null);setImgResults([]);setShowAdd(false);
-                      }} style={{flex:2,background:G,border:'none',borderRadius:10,color:'#000',padding:'11px',cursor:'pointer',fontWeight:700,fontSize:13}}>✅ はい、全て追加する</button>
+                        imgResults.forEach(function(f){var it=cleanAI(f);rememberFood(it);addFood(it,null,true);});
+                        closeAdd();
+                      }} style={{flex:2,background:G,border:'none',borderRadius:10,color:'#000',padding:'11px',cursor:'pointer',fontWeight:700,fontSize:13}}>✅ 全て追加する</button>
                       <button onClick={function(){setImgConfirm('select');}} style={{flex:1,background:N3,border:'none',borderRadius:10,color:'#fff',padding:'11px',cursor:'pointer',fontWeight:700,fontSize:12}}>選んで追加</button>
                     </div>
-                    <button onClick={function(){setImgResults([]);setImgConfirm(null);}} style={{width:'100%',background:'none',border:'1px solid '+N3,borderRadius:10,color:S,padding:'8px',cursor:'pointer',fontSize:12}}>✕ キャンセル（撮り直す）</button>
+                    <button onClick={function(){setImgResults([]);setImgConfirm(null);}} style={{width:'100%',background:'none',border:'1px solid '+N3,borderRadius:10,color:S,padding:'8px',cursor:'pointer',fontSize:12}}>✕ やり直す</button>
                   </div>
                 )}
                 {imgResults.length>0&&imgConfirm==='select'&&(
@@ -1133,8 +1079,8 @@ function LogScreen(props){
                     <div style={{color:S2,fontWeight:700,fontSize:13,marginBottom:8}}>追加したい食品をタップしてください</div>
                     {imgResults.map(function(f,i){
                       return (
-                        <div key={i} onClick={function(){if(imgAdded[i])return;addFood(Object.assign({id:'ai'+mkId()},f),null,true);setImgAdded(function(a){var na=Object.assign({},a);na[i]=true;return na;});}} style={{background:imgAdded[i]?G+'22':N,borderRadius:10,padding:'10px 12px',marginBottom:6,cursor:imgAdded[i]?'default':'pointer',display:'flex',justifyContent:'space-between',alignItems:'center',border:'1px solid '+G+'44'}}>
-                          <div>
+                        <div key={i} onClick={function(){if(imgAdded[i])return;var it=cleanAI(f);rememberFood(it);addFood(it,null,true);setImgAdded(function(a){var na=Object.assign({},a);na[i]=true;return na;});}} style={{background:imgAdded[i]?G+'22':N,borderRadius:10,padding:'10px 12px',marginBottom:6,cursor:imgAdded[i]?'default':'pointer',display:'flex',justifyContent:'space-between',alignItems:'center',border:'1px solid '+G+'44'}}>
+                          <div style={{textAlign:'left'}}>
                             <div style={{color:'#fff',fontSize:13,fontWeight:700}}>{imgAdded[i]?'✓ ':''}{f.n}</div>
                             <div style={{color:S,fontSize:11}}>{f.s}　P:{f.p}g F:{f.f}g C:{f.c}g</div>
                           </div>
@@ -1142,22 +1088,67 @@ function LogScreen(props){
                         </div>
                       );
                     })}
-                    <button onClick={function(){setImgConfirm(null);setImgResults([]);setShowAdd(false);}} style={{width:'100%',background:G,border:'none',borderRadius:10,color:'#000',padding:'10px',cursor:'pointer',fontWeight:700,fontSize:13,marginTop:4}}>完了</button>
+                    <button onClick={closeAdd} style={{width:'100%',background:G,border:'none',borderRadius:10,color:'#000',padding:'10px',cursor:'pointer',fontWeight:700,fontSize:13,marginTop:4}}>完了</button>
                   </div>
                 )}
               </div>
             )}
-            {mode==='search'&&(
+            {mode==='photo'&&!imgAnalyzing&&imgResults.length===0&&(
               <div>
-                <input style={Object.assign({},inpS,{marginBottom:10})} placeholder="食品名・カテゴリで検索" value={search} onChange={function(e){setSearch(e.target.value);}}/>
-                {results.map(function(f){
+                <input id="mc-file-input" type="file" accept="image/*" style={{display:'none'}} onChange={handleFileChange}/>
+                <div style={{background:N,borderRadius:12,border:'2px dashed '+N3,padding:20,textAlign:'center',marginBottom:12}}>
+                  <div style={{fontSize:40,marginBottom:8}}>📸</div>
+                  <div style={{color:S2,fontSize:13,marginBottom:12}}>食事の写真をアップロードすると<br/>AIが食品とカロリーを推定します</div>
+                  <input value={hint} onChange={function(e){setHint(e.target.value);}} placeholder="補足（任意）例：ご飯は大盛り、ドレッシングあり" style={Object.assign({},inpS,{marginBottom:12})}/>
+                  <button onClick={function(){document.getElementById('mc-file-input').click();}} style={{background:G,border:'none',borderRadius:10,color:'#000',padding:'10px 20px',cursor:'pointer',fontWeight:700,fontSize:13}}>📷 写真を選択 / 撮影</button>
+                  <div style={{color:S,fontSize:11,marginTop:12,lineHeight:1.6,textAlign:'left'}}>精度を上げるコツ：真上から料理全体を撮る／お皿や箸を一緒に写す／量や味付けは補足に書く</div>
+                </div>
+              </div>
+            )}
+            {mode==='search'&&!picked&&imgResults.length===0&&!imgAnalyzing&&(
+              <div>
+                <input style={Object.assign({},inpS,{marginBottom:10})} placeholder="食品名・料理名・お店の名前で検索" value={search} onChange={function(e){setSearch(e.target.value);setImgError('');}}/>
+                {!search.trim()&&recent.length>0&&<div style={{color:S,fontSize:12,margin:'4px 0 8px',textAlign:'left'}}>最近使った食品</div>}
+                {!search.trim()&&recent.length===0&&<div style={{color:S,fontSize:12,margin:'4px 0 8px',textAlign:'left'}}>約970品の食材・料理・コンビニ・外食メニューから探せます</div>}
+                {(search.trim()?results:recent).map(function(f,i){
                   return (
-                    <div key={f.id} onClick={function(){addFood(f);}} style={{background:N,borderRadius:10,padding:'10px 12px',marginBottom:6,cursor:'pointer',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-                      <div><div style={{color:'#fff',fontSize:13,fontWeight:600}}>{f.n}</div><div style={{color:S,fontSize:11}}>{f.s}　P:{f.p}g F:{f.f}g C:{f.c}g</div></div>
-                      <div style={{color:G,fontWeight:800,fontSize:13}}>{f.cal} kcal</div>
+                    <div key={(f.id||f.n+f.s)+i} onClick={function(){if(search.trim())pickFood(f);else{rememberFood(f);addFood(Object.assign({id:'f'+mkId()},f));}}} style={{background:N,borderRadius:10,padding:'10px 12px',marginBottom:6,cursor:'pointer',display:'flex',justifyContent:'space-between',alignItems:'center',gap:8}}>
+                      <div style={{textAlign:'left'}}><div style={{color:'#fff',fontSize:13,fontWeight:600}}>{f.n}</div><div style={{color:S,fontSize:11}}>{f.s}　P:{f.p}g F:{f.f}g C:{f.c}g</div></div>
+                      <div style={{color:G,fontWeight:800,fontSize:13,whiteSpace:'nowrap'}}>{f.cal} kcal</div>
                     </div>
                   );
                 })}
+                {search.trim()&&(
+                  <div style={{background:PU+'18',border:'1px solid '+PU+'55',borderRadius:12,padding:12,marginTop:8,textAlign:'left'}}>
+                    <div style={{color:S2,fontSize:12,marginBottom:8}}>{results.length===0?'見つかりませんでした。':'ぴったりのものがない？'}AIが「{search.trim()}」のカロリーを推定します。</div>
+                    <button onClick={estimateByText} style={{width:'100%',background:PU,border:'none',borderRadius:10,color:'#fff',padding:'10px',cursor:'pointer',fontWeight:700,fontSize:13}}>🤖 AIで推定する</button>
+                  </div>
+                )}
+              </div>
+            )}
+            {mode==='search'&&picked&&(
+              <div style={{textAlign:'left'}}>
+                <button onClick={function(){setPicked(null);}} style={{background:'none',border:'none',color:S,marginBottom:8,cursor:'pointer'}}>← 検索に戻る</button>
+                <div style={{color:'#fff',fontSize:16,fontWeight:800}}>{picked.n}</div>
+                <div style={{color:S,fontSize:12,marginBottom:12}}>基準：{picked.s}（{picked.g}g）＝ {picked.cal} kcal</div>
+                <div style={{display:'flex',gap:6,marginBottom:10}}>
+                  {[0.5,1,1.5,2].map(function(r){
+                    var gv=Math.round(picked.g*r);
+                    var on=+pickGrams===gv;
+                    return <button key={r} onClick={function(){setPickGrams(String(gv));}} style={{flex:1,background:on?G:N3,color:on?'#000':'#fff',border:'none',borderRadius:8,padding:'8px 4px',cursor:'pointer',fontWeight:700,fontSize:12}}>×{r}</button>;
+                  })}
+                </div>
+                <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:12}}>
+                  <input aria-label="量（g）" type="number" inputMode="numeric" value={pickGrams} onChange={function(e){setPickGrams(e.target.value);}} style={Object.assign({},inpS,{flex:1})}/>
+                  <span style={{color:S,fontSize:13}}>g</span>
+                </div>
+                {pickedScaled&&(
+                  <Cd bg={N} style={{marginBottom:12,padding:12}}>
+                    <div style={{color:G,fontSize:20,fontWeight:900}}>{pickedScaled.cal} kcal</div>
+                    <div style={{color:S2,fontSize:12}}>P {pickedScaled.p}g / F {pickedScaled.f}g / C {pickedScaled.c}g</div>
+                  </Cd>
+                )}
+                <Btn onClick={addPicked} full>この量で追加</Btn>
               </div>
             )}
             {mode==='manual'&&(
@@ -1174,7 +1165,7 @@ function LogScreen(props){
               </div>
             )}
             {mode==='recipe'&&(
-              <RecipeSuggestion addFood={addFood} onClose={function(){setShowAdd(false);}}/>
+              <RecipeSuggestion addFood={addFood} onClose={closeAdd}/>
             )}
           </div>
         </div>

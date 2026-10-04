@@ -11,12 +11,20 @@ export const config = {
 var MODEL = 'claude-opus-5-5';
 var ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
 
-var PROMPT = 'あなたはプロの管理栄養士です。この食事写真を分析し、写っている食品・料理ごとにカロリーとPFCを推定してください。\n'
-  + '- 写っている食品・料理はすべて挙げる。判断が難しくても、最も可能性が高いものを推定する\n'
-  + '- 盛り付けの量・器のサイズ・見た目から重量を推定し、s に「約200g」「1杯」のように書く\n'
-  + '- 日本の家庭料理・コンビニ食・外食の一般的な値を基準にする\n'
-  + '- n は具体的な料理名（例：「鶏の唐揚げ」「白米」）、cal は kcal、p/f/c はグラム\n'
-  + '- 食べ物が写っていない場合は items を空配列にする';
+var RULES = 'あなたは日本の食事に詳しい管理栄養士です。食事のカロリーとPFC（たんぱく質・脂質・炭水化物）を、できるだけ正確に推定してください。\n'
+  + '\n手順:\n'
+  + '1. 食品・料理をすべて特定する。定食やセットは「ごはん」「味噌汁」「主菜」のように1品ずつ分ける\n'
+  + '2. 1品ずつ重量（g）を見積もる。器の大きさを手がかりにする（茶碗のごはん約150g、丼のごはん約250g、味噌汁約180g、ラーメン1杯約600g、小鉢約70g、取り皿の直径約15cm、箸の長さ約23cm）\n'
+  + '3. 日本食品標準成分表（八訂）の100gあたりの値を基準に、重量から計算する。揚げ物の衣と吸油、炒め油、ドレッシング、ソース、マヨネーズなど見落としやすい油脂・調味料も含める\n'
+  + '4. コンビニ商品・チェーン店のメニューと分かる場合は、その商品の一般的な栄養成分表示の値を優先する\n'
+  + '\n出力:\n'
+  + '- n は具体的な料理名（例：「鶏の唐揚げ」「白米ごはん」）\n'
+  + '- g は推定重量（グラム）、s は「約150g」「1杯」「5個」のような量の表示\n'
+  + '- cal は kcal、p/f/c はグラム。迷ったときは少なめに見積もらず、最も可能性が高い値にする\n'
+  + '- 食べ物が含まれない場合は items を空配列にする';
+
+var PHOTO_PROMPT = 'この食事写真を分析してください。';
+var TEXT_PROMPT = '次の食事の内容から推定してください（写真はありません）。量の指定がなければ一般的な1人前とする。\n食事: ';
 
 var SCHEMA = {
   type: 'object',
@@ -27,13 +35,14 @@ var SCHEMA = {
         type: 'object',
         properties: {
           n: { type: 'string' },
+          g: { type: 'number' },
           cal: { type: 'number' },
           p: { type: 'number' },
           f: { type: 'number' },
           c: { type: 'number' },
           s: { type: 'string' }
         },
-        required: ['n', 'cal', 'p', 'f', 'c', 's'],
+        required: ['n', 'g', 'cal', 'p', 'f', 'c', 's'],
         additionalProperties: false
       }
     }
@@ -56,6 +65,7 @@ export function normalizeItems(items) {
     .map(function (it) {
       return {
         n: it.n.trim().slice(0, 40),
+        g: Math.round(clampNum(it.g, 3000)),
         cal: Math.round(clampNum(it.cal, 5000)),
         p: Math.round(clampNum(it.p, 500) * 10) / 10,
         f: Math.round(clampNum(it.f, 500) * 10) / 10,
@@ -77,17 +87,31 @@ export default async function handler(req, res) {
   var body = req.body || {};
   var base64 = body.base64;
   var mediaType = body.mediaType || 'image/jpeg';
-  if (!base64 || typeof base64 !== 'string') {
-    res.status(400).json({ error: 'base64 is required' });
-    return;
-  }
-  if (ALLOWED_TYPES.indexOf(mediaType) < 0) {
-    res.status(415).json({ error: 'unsupported image type' });
-    return;
-  }
-  // Claude API の画像上限は 5MB（base64 で約 6.7MB）
-  if (base64.length > 6.5 * 1024 * 1024) {
-    res.status(413).json({ error: 'image too large' });
+  var text = typeof body.text === 'string' ? body.text.trim().slice(0, 300) : '';
+  var hint = typeof body.hint === 'string' ? body.hint.trim().slice(0, 200) : '';
+  var content;
+  if (base64) {
+    if (typeof base64 !== 'string') {
+      res.status(400).json({ error: 'base64 must be a string' });
+      return;
+    }
+    if (ALLOWED_TYPES.indexOf(mediaType) < 0) {
+      res.status(415).json({ error: 'unsupported image type' });
+      return;
+    }
+    // Claude API の画像上限は 5MB（base64 で約 6.7MB）
+    if (base64.length > 6.5 * 1024 * 1024) {
+      res.status(413).json({ error: 'image too large' });
+      return;
+    }
+    content = [
+      { type: 'image', source: { type: 'base64', media_type: mediaType, data: base64 } },
+      { type: 'text', text: PHOTO_PROMPT + (hint ? '\n食べた人からの補足（優先して反映する）: ' + hint : '') }
+    ];
+  } else if (text) {
+    content = [{ type: 'text', text: TEXT_PROMPT + text }];
+  } else {
+    res.status(400).json({ error: 'base64 or text is required' });
     return;
   }
 
@@ -95,30 +119,26 @@ export default async function handler(req, res) {
   try {
     var response = await client.beta.messages.create({
       model: MODEL,
-      max_tokens: 4000,
+      max_tokens: 16000,
       betas: ['server-side-fallback-2026-07-01'],
       fallbacks: 'default',
+      system: RULES,
       output_config: {
-        effort: 'medium',
+        // 写真は量の見積もりに考える時間をかけたほうが精度が上がる
+        effort: base64 ? 'high' : 'medium',
         format: { type: 'json_schema', schema: SCHEMA }
       },
-      messages: [{
-        role: 'user',
-        content: [
-          { type: 'image', source: { type: 'base64', media_type: mediaType, data: base64 } },
-          { type: 'text', text: PROMPT }
-        ]
-      }]
+      messages: [{ role: 'user', content: content }]
     });
     if (response.stop_reason === 'refusal') {
       res.status(422).json({ error: 'refused' });
       return;
     }
-    var text = '';
-    response.content.forEach(function (b) { if (b.type === 'text') text += b.text; });
+    var out = '';
+    response.content.forEach(function (b) { if (b.type === 'text') out += b.text; });
     var parsed;
     try {
-      parsed = JSON.parse(text);
+      parsed = JSON.parse(out);
     } catch (e) {
       res.status(502).json({ error: 'parse failed', message: String(e) });
       return;
