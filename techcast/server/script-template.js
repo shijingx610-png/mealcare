@@ -5,6 +5,7 @@
 // 「なぜ自分に関係するか」は、決め打ちの型でもかなりの部分まで届けられる。
 
 import { buildEpisode, formatDateLabel, toRef } from './episode-shape.js';
+import { scriptBudget } from './script-budget.js';
 
 // タグごとの「なぜ気になるか」の切り口。順番に使い回して単調さを減らす。
 const ANGLE_BY_TAG = {
@@ -77,12 +78,17 @@ const CAREER_NOTES = [
   '職務経歴書は、前職の業務をそのまま書くより「どの課題を、どう測って、どう改善したか」に翻訳すると、業界が違っても伝わります。'
 ];
 
-function pickAngle(tags, seed) {
+// 記事のタグから「なぜ気になるか」を拾う。タグ違いで最大 count 本まで。
+// 同じタグから2本取ると論点が重なるので、1タグ1本に絞る。
+function pickAngles(tags, seed, count = 1) {
+  const out = [];
   for (const { tagId } of tags || []) {
+    if (out.length >= count) break;
     const angles = ANGLE_BY_TAG[tagId];
-    if (angles && angles.length) return angles[seed % angles.length];
+    if (angles && angles.length) out.push(angles[seed % angles.length]);
   }
-  return '業界の地図に一つ点を置くつもりで、覚えておくだけで十分です。';
+  if (out.length === 0) out.push('業界の地図に一つ点を置くつもりで、覚えておくだけで十分です。');
+  return out;
 }
 
 // 「SaaS / PaaS / IaaS」のような見出し用の表記は、読み上げるとスラッシュが邪魔になる。
@@ -107,6 +113,20 @@ function summarize(item, maxChars = 180) {
   return lastStop > maxChars * 0.5 ? cut.slice(0, lastStop + 1) : `${cut}…`;
 }
 
+// ラウンドアップは一言だけ添えたい。途中で切れた文を読み上げると耳障りなので、
+// 丸ごと収まる最初の一文だけを使い、収まらなければ見出しだけにする。
+function firstSentence(text, maxChars) {
+  const raw = (text || '').trim();
+  if (!raw || maxChars <= 0) return '';
+  const matched = raw.match(/^.*?[。！？]/);
+  const head = (matched ? matched[0] : raw).trim();
+  return head.length <= maxChars ? sentence(head) : '';
+}
+
+function clamp(value, min, max) {
+  return Math.min(max, Math.max(min, value));
+}
+
 export function buildTemplateEpisode({
   date = new Date(),
   durationMin = 10,
@@ -118,6 +138,17 @@ export function buildTemplateEpisode({
 }) {
   const dateLabel = formatDateLabel(date);
   const segments = [];
+
+  // 尺から逆算した持ち時間。Claude 経路と同じ配分表を使う。
+  // 実際に選べた本数で計算するので、記事が少ない朝は1本あたりを厚くする。
+  const budget = scriptBudget(durationMin, {
+    deepDive: Math.max(1, deepDive.length),
+    roundup: roundup.length,
+    glossary: terms.length
+  });
+  // 深掘り1本の持ち時間から、見出し・補足・切り口のぶんを引いた残りを要約に充てる。
+  const summaryCap = clamp(budget.deepDiveEach - 180, 180, 480);
+  const roundupCap = clamp(budget.roundupEach - 45, 0, 110);
 
   // --- オープニング ---
   const headlines = deepDive.map((i) => i.title).filter(Boolean);
@@ -141,21 +172,30 @@ export function buildTemplateEpisode({
     // 英語記事の原文要約をそのまま読み上げると、日本語の音声では聞き取れない。
     // 翻訳できるのは Claude 経路だけなので、こちらでは要約を落として位置づけだけ伝える。
     const isEnglish = item.lang === 'en';
+    const angles = pickAngles(item.tags, index, 2);
     const parts = [
       `${index + 1}本目。${item.sourceName}から、${sentence(item.title)}`,
-      isEnglish ? '' : summarize(item),
+      isEnglish ? '' : summarize(item, summaryCap),
       item.corroboration > 0
         ? `このニュースは${item.alsoReportedBy.slice(0, 2).join('と')}でも同時に取り上げられています。それだけ注目度が高い話題です。`
         : '',
-      pickAngle(item.tags, index),
-      isEnglish
-        ? '英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。'
-        : ''
-    ];
+      angles[0]
+    ].filter(Boolean);
+
+    // 要約が短くて持ち時間に届かないときだけ、別のタグの切り口をもう一つ足す。
+    if (angles[1] && parts.join('').length < budget.deepDiveEach * 0.75) {
+      parts.push(angles[1]);
+    }
+    if (isEnglish) {
+      parts.push(
+        '英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。'
+      );
+    }
+
     segments.push({
       kind: 'deepDive',
       heading: item.title,
-      body: parts.filter(Boolean).join(''),
+      body: parts.join(''),
       refs: [toRef(item)]
     });
   });
@@ -188,7 +228,12 @@ export function buildTemplateEpisode({
   if (roundup.length) {
     const body = [
       '最後に、その他の気になったニュースを短く並べます。',
-      ...roundup.map((item) => `${item.sourceName}から、${sentence(item.title)}`),
+      ...roundup.map((item) => {
+        const head = `${item.sourceName}から、${sentence(item.title)}`;
+        // 英語記事は見出しだけ。原文を読み上げても日本語音声では伝わらない。
+        if (item.lang === 'en') return head;
+        return `${head}${firstSentence(item.summary, roundupCap)}`;
+      }),
       '以上です。'
     ].join('');
     segments.push({

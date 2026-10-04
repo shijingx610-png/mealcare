@@ -18,6 +18,7 @@ import {
   dedupe,
   extractEntities,
   isSameStory,
+  planFor,
   recencyScore,
   scoreItem,
   select
@@ -217,6 +218,82 @@ describe('スコアと選定', () => {
     const { deepDive } = select(scored, { durationMin: 10 });
     const ids = deepDive.map((d) => d.sourceId);
     assert.equal(new Set(ids).size, ids.length, '同じ情報源が深掘りに複数入っている');
+  });
+
+  test('深掘りは日本語の記事を先に埋める', () => {
+    const now = Date.now();
+    // 英語のほうがスコアが高い状況をわざと作る。それでも深掘りは日本語を優先する。
+    const scored = [
+      ...Array.from({ length: 4 }, (_, i) => ({
+        title: `English story ${i}`,
+        link: `https://en.test/${i}`,
+        canonical: `https://en.test/${i}`,
+        sourceId: `en${i}`,
+        lang: 'en',
+        publishedAt: new Date(now).toISOString(),
+        score: 100 - i
+      })),
+      ...Array.from({ length: 4 }, (_, i) => ({
+        title: `日本語の記事${i}`,
+        link: `https://ja.test/${i}`,
+        canonical: `https://ja.test/${i}`,
+        sourceId: `ja${i}`,
+        lang: 'ja',
+        publishedAt: new Date(now).toISOString(),
+        score: 10 - i
+      }))
+    ];
+    const { deepDive, roundup } = select(scored, { durationMin: 10 });
+    assert.equal(
+      deepDive.filter((i) => i.lang === 'en').length,
+      0,
+      '日本語が足りているのに英語が深掘りに入っている'
+    );
+    assert.ok(
+      roundup.some((i) => i.lang === 'en'),
+      '英語の記事がラウンドアップにも出てこない'
+    );
+  });
+
+  test('日本語が足りなければ英語で深掘りを埋める', () => {
+    const now = Date.now();
+    const scored = [
+      {
+        title: '日本語の記事',
+        link: 'https://ja.test/1',
+        canonical: 'https://ja.test/1',
+        sourceId: 'ja1',
+        lang: 'ja',
+        publishedAt: new Date(now).toISOString(),
+        score: 5
+      },
+      ...Array.from({ length: 5 }, (_, i) => ({
+        title: `English story ${i}`,
+        link: `https://en.test/${i}`,
+        canonical: `https://en.test/${i}`,
+        sourceId: `en${i}`,
+        lang: 'en',
+        publishedAt: new Date(now).toISOString(),
+        score: 9 - i
+      }))
+    ];
+    const { deepDive } = select(scored, { durationMin: 10 });
+    assert.equal(deepDive.length, 3, '深掘りの枠が埋まっていない');
+    assert.equal(deepDive[0].lang, 'ja', '日本語が先頭に来ていない');
+    assert.ok(
+      deepDive.slice(1).every((i) => i.lang === 'en'),
+      '残りの枠が英語で埋まっていない'
+    );
+    const keys = deepDive.map((i) => i.canonical);
+    assert.equal(new Set(keys).size, keys.length, '同じ記事が二重に入っている');
+  });
+
+  test('テンプレート経路は本数を増やした構成を使う', () => {
+    const claude = planFor(10);
+    const template = planFor(10, { template: true });
+    assert.ok(template.deepDive > claude.deepDive, '深掘りの本数が増えていない');
+    assert.ok(template.roundup > claude.roundup, 'ラウンドアップの本数が増えていない');
+    assert.ok(template.glossary >= claude.glossary, '用語の数が減っている');
   });
 
   test('既出の記事を除外する', () => {
@@ -571,6 +648,65 @@ describe('台本の体裁', () => {
     assert.ok(!text.includes('http'), 'URL が読み上げ原稿に入っている');
     assert.ok(!text.includes('*'), '記号が混ざっている');
     assert.ok(!text.includes('undefined'));
+  });
+
+  test('ラウンドアップは日本語だけ一言添え、英語は見出しのみ', () => {
+    const mk = (lang, title, summary) => ({
+      title,
+      summary,
+      link: `https://x.test/${encodeURIComponent(title)}`,
+      publishedAt: new Date().toISOString(),
+      sourceName: lang === 'ja' ? '国内媒体' : 'Foreign Outlet',
+      sourceId: lang,
+      lang,
+      tags: [],
+      corroboration: 0,
+      alsoReportedBy: []
+    });
+    const episode = buildTemplateEpisode({
+      date: new Date(),
+      durationMin: 10,
+      deepDive: [],
+      roundup: [
+        mk('ja', '国内の記事', '一文目です。二文目はここから始まります。'),
+        mk('en', 'A foreign story', 'This English summary must never be read aloud.')
+      ],
+      terms: []
+    });
+    const body = episode.segments.find((s) => s.kind === 'roundup').body;
+    assert.ok(body.includes('一文目です。'), '日本語の一言が入っていない');
+    assert.ok(!body.includes('二文目'), '一文を超えて読み上げようとしている');
+    assert.ok(
+      !body.includes('This English summary'),
+      '英語の要約が読み上げ原稿に入っている'
+    );
+    assert.ok(body.includes('A foreign story'), '英語記事の見出しが落ちている');
+  });
+
+  test('尺が長いほど台本も長くなる', () => {
+    const items = Array.from({ length: 8 }, (_, i) => ({
+      title: `日本語の記事${i}`,
+      summary: 'クラウド事業者が国内の設備を増強すると発表した。需要の伸びが背景にある。',
+      link: `https://x.test/${i}`,
+      publishedAt: new Date().toISOString(),
+      sourceName: `媒体${i}`,
+      sourceId: `s${i}`,
+      lang: 'ja',
+      tags: [{ tagId: 'cloud', strength: 2 }],
+      corroboration: 0,
+      alsoReportedBy: []
+    }));
+    const lengthOf = (durationMin, deep, round) =>
+      buildTemplateEpisode({
+        date: new Date(),
+        durationMin,
+        deepDive: items.slice(0, deep),
+        roundup: items.slice(deep, deep + round),
+        terms: []
+      })
+        .segments.reduce((total, seg) => total + seg.body.length, 0);
+
+    assert.ok(lengthOf(10, 5, 3) > lengthOf(5, 2, 2), '尺を伸ばしても台本が長くなっていない');
   });
 
   test('用語名のスラッシュを読み上げ用に直す', () => {
