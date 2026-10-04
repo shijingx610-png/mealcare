@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="メルカリ出品AI">
+  <rect width="512" height="512" rx="113" fill="#ff4b3a"/>
+  <rect x="112" y="154" width="287" height="236" rx="26" fill="#ffffff"/>
+  <path d="M122 205h267" stroke="#ff4b3a" stroke-width="11" stroke-linecap="round"/>
+  <path d="M256 246v106" stroke="#ff4b3a" stroke-width="28" stroke-linecap="round"/>
+  <path d="M256 223l44 44h-88z" fill="#ff4b3a"/>
+</svg>
