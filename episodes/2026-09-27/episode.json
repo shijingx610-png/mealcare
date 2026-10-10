@@ -1,0 +1,447 @@
+{
+  "id": "2026-09-27",
+  "createdAt": "2026-09-27T22:25:11.294Z",
+  "dateLabel": "9月27日（日）",
+  "durationMin": 10,
+  "estimatedMinutes": 6.2,
+  "generator": "template",
+  "title": "9月27日（日） 「Docker Cloud Sandboxes」発表、AIエージェント向けサンドボックスをローカルとクラウド間で自由に移動可能に ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。9月27日（日）のテックニュースをお届けします。今日の見出しは3本です。1つ目、「Docker Cloud Sandboxes」発表、AIエージェント向けサンドボックスをローカルとクラウド間で自由に移動可能に。2つ目、Can Muse overcome Meta’s trust issues?。3つ目、トランプ大統領と習主席、AIを「超知能（SI）」と呼ぶことで合意 「米中SI対話」も創設。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "「Docker Cloud Sandboxes」発表、AIエージェント向けサンドボックスをローカルとクラウド間で自由に移動可能に",
+      "body": "1本目。Publickeyから、「Docker Cloud Sandboxes」発表、AIエージェント向けサンドボックスをローカルとクラウド間で自由に移動可能に。Docker社はAIエージェント向けのサンドボックス環境をクラウド上で提供する「Docker Cloud Sandboxes」を発表しました。 同社はすでにローカルで動作するサンドボックス環境の「Docker Sandboxes」を今年（2...クラウド基盤の話は、その上で動くサービス全部に影響します。地味ですが土台の話です。",
+      "refs": [
+        {
+          "title": "「Docker Cloud Sandboxes」発表、AIエージェント向けサンドボックスをローカルとクラウド間で自由に移動可能に",
+          "url": "https://www.publickey1.jp/blog/26/docker_cloud_snadboxesai.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-09-27T16:02:18.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Can Muse overcome Meta’s trust issues?",
+      "body": "2本目。TechCrunchから、Can Muse overcome Meta’s trust issues?AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Can Muse overcome Meta’s trust issues?",
+          "url": "https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-27T19:57:30.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "トランプ大統領と習主席、AIを「超知能（SI）」と呼ぶことで合意 「米中SI対話」も創設",
+      "body": "3本目。ITmedia AI+から、トランプ大統領と習主席、AIを「超知能（SI）」と呼ぶことで合意 「米中SI対話」も創設。米連邦政府は、習近平国家主席の国賓訪問に関するファクトシートを公開した。首脳会談でAIを「超知能（SI）」と呼ぶことで合意し、リスク対応の定期対話や連絡チャネルを創設した。公式晩餐会にはマスク氏やザッカーバーグ氏らIT首脳が集結した。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "トランプ大統領と習主席、AIを「超知能（SI）」と呼ぶことで合意 「米中SI対話」も創設",
+          "url": "https://www.itmedia.co.jp/news/article/2609/28/2000001776/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-09-27T21:38:20.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。最後に、API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。職務経歴書は、前職の業務をそのまま書くより「どの課題を、どう測って、どう改善したか」に翻訳すると、業界が違っても伝わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。Publickeyから、マイクロソフト、企業内アプリの実行基盤「Copilot Managed Runtime」プレビュー公開。Microsoft 365と同じテナント内でコード実行、管理者による集中管理も。TechCrunchから、Anthropic’s CEO is about to have dinner with President Trump。はてなブックマーク テクノロジーから、GitHub - Niko1221/Strata: Qwen3.8-Flash-Next (125B MoE) on a 12-24 GB NVIDIA GPU + 64 GB RAM: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optional image input.ITmedia AI+から、安川電機が熟練工の「感覚」をAIロボットで再現、カメラで見ながらアーク溶接。ITmedia AI+から、ファナックがAI溶接エージェント実演 ロボット制御装置が安全PLCに。TechCrunchから、Anthropic’s Dario Amodei gets the SNL treatment。以上です。",
+      "refs": [
+        {
+          "title": "マイクロソフト、企業内アプリの実行基盤「Copilot Managed Runtime」プレビュー公開。Microsoft 365と同じテナント内でコード実行、管理者による集中管理も",
+          "url": "https://www.publickey1.jp/blog/26/copilot_managed_runtimemicrosoft_365.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-09-27T15:59:50.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Anthropic’s CEO is about to have dinner with President Trump",
+          "url": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-27T20:34:28.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "GitHub - Niko1221/Strata: Qwen3.8-Flash-Next (125B MoE) on a 12-24 GB NVIDIA GPU + 64 GB RAM: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optional image input.",
+          "url": "https://github.com/Niko1221/Strata",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-09-27T13:57:56.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "安川電機が熟練工の「感覚」をAIロボットで再現、カメラで見ながらアーク溶接",
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2609/28/news049.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-09-27T21:45:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "ファナックがAI溶接エージェント実演 ロボット制御装置が安全PLCに",
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2609/28/news038.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-09-27T21:15:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Anthropic’s Dario Amodei gets the SNL treatment",
+          "url": "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-27T16:30:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "「Docker Cloud Sandboxes」発表、AIエージェント向けサンドボックスをローカルとクラウド間で自由に移動可能に",
+        "url": "https://www.publickey1.jp/blog/26/docker_cloud_snadboxesai.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-09-27T16:02:18.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Can Muse overcome Meta’s trust issues?",
+        "url": "https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-27T19:57:30.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "トランプ大統領と習主席、AIを「超知能（SI）」と呼ぶことで合意 「米中SI対話」も創設",
+        "url": "https://www.itmedia.co.jp/news/article/2609/28/2000001776/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-09-27T21:38:20.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      }
+    ],
+    "roundup": [
+      {
+        "title": "マイクロソフト、企業内アプリの実行基盤「Copilot Managed Runtime」プレビュー公開。Microsoft 365と同じテナント内でコード実行、管理者による集中管理も",
+        "url": "https://www.publickey1.jp/blog/26/copilot_managed_runtimemicrosoft_365.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-09-27T15:59:50.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Anthropic’s CEO is about to have dinner with President Trump",
+        "url": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-27T20:34:28.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "GitHub - Niko1221/Strata: Qwen3.8-Flash-Next (125B MoE) on a 12-24 GB NVIDIA GPU + 64 GB RAM: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optional image input.",
+        "url": "https://github.com/Niko1221/Strata",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-09-27T13:57:56.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "安川電機が熟練工の「感覚」をAIロボットで再現、カメラで見ながらアーク溶接",
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2609/28/news049.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-09-27T21:45:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ファナックがAI溶接エージェント実演 ロボット制御装置が安全PLCに",
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2609/28/news038.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-09-27T21:15:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Anthropic’s Dario Amodei gets the SNL treatment",
+        "url": "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-27T16:30:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 737
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 184
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 745
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 789
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 816
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 297
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 2126
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 765
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 351
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 372
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 532
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 659
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 201,
+    "eligible": 65
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 34.78
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "「Docker Cloud Sandboxes」発表、AIエージェント向けサンドボックスをローカルとクラウド間で自由に移動可能に",
+      "startSec": 34.78,
+      "endSec": 69.15
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Can Muse overcome Meta’s trust issues?",
+      "startSec": 69.15,
+      "endSec": 91.36
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "トランプ大統領と習主席、AIを「超知能（SI）」と呼ぶことで合意 「米中SI対話」も創設",
+      "startSec": 91.36,
+      "endSec": 141.23
+    },
+    {
+      "segmentId": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 141.23,
+      "endSec": 198.97
+    },
+    {
+      "segmentId": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 198.97,
+      "endSec": 212.23
+    },
+    {
+      "segmentId": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 212.23,
+      "endSec": 299.24
+    },
+    {
+      "segmentId": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 299.24,
+      "endSec": 309.72
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 14866476,
+    "durationSec": 309.72
+  }
+}

@@ -1,0 +1,459 @@
+{
+  "id": "2026-10-03",
+  "createdAt": "2026-10-03T22:16:07.671Z",
+  "dateLabel": "10月3日（土）",
+  "durationMin": 10,
+  "estimatedMinutes": 6.4,
+  "generator": "template",
+  "title": "10月3日（土） OpenAI safety employee resigns, claiming the company’s ‘culture is broken’ ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月3日（土）のテックニュースをお届けします。今日の見出しは3本です。1つ目、OpenAI safety employee resigns, claiming the company’s ‘culture is broken’。2つ目、We Vibe Coded Our Own Calendly. Our AI Agent Pushed Us To Do It, and It Was Right.。3つ目、Meta、AIエージェント「Muse」とつながる自作ガジェット向けSDKをオープンソースで公開 「Raspberry Pi」などに対応。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "OpenAI safety employee resigns, claiming the company’s ‘culture is broken’",
+      "body": "1本目。TechCrunchから、OpenAI safety employee resigns, claiming the company’s ‘culture is broken’。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "OpenAI safety employee resigns, claiming the company’s ‘culture is broken’",
+          "url": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-03T16:30:01.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "We Vibe Coded Our Own Calendly. Our AI Agent Pushed Us To Do It, and It Was Right.",
+      "body": "2本目。SaaStrから、We Vibe Coded Our Own Calendly. Our AI Agent Pushed Us To Do It, and It Was Right.AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "We Vibe Coded Our Own Calendly. Our AI Agent Pushed Us To Do It, and It Was Right.",
+          "url": "https://www.saastr.com/we-vibe-coded-our-own-calendly-our-ai-agent-pushed-us-to-do-it-and-it-was-right/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-03T15:00:09.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Meta、AIエージェント「Muse」とつながる自作ガジェット向けSDKをオープンソースで公開 「Raspberry Pi」などに対応",
+      "body": "3本目。ITmedia AI+から、Meta、AIエージェント「Muse」とつながる自作ガジェット向けSDKをオープンソースで公開 「Raspberry Pi」などに対応。Metaは、パーソナルAI「Muse」と連携するガジェットを自作できるプロジェクト「Muse Gadgets」を発表した。ESP32やRaspberry Pi向けSDKをGitHubでオープンソース公開。自作機器や家電と連携させる専用デバイス「Muse Home Link」も米国の有料会員向けに無償提供する。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。開発者向けの話題は、技術職以外でも「現場が何を楽に感じるか」を知る手がかりになります。",
+      "refs": [
+        {
+          "title": "Meta、AIエージェント「Muse」とつながる自作ガジェット向けSDKをオープンソースで公開 「Raspberry Pi」などに対応",
+          "url": "https://www.itmedia.co.jp/news/article/2610/03/2000001984/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-03T01:41:21.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。最後に、SDK、読み方はエスディーケー。ある機能を自分のアプリに組み込むための道具一式です。APIを使いやすく包んだもの、と捉えておけば実務では困りません。APIが「窓口」なら、SDKは「窓口に行くための定期券と地図」です。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。職務経歴書は、前職の業務をそのまま書くより「どの課題を、どう測って、どう改善したか」に翻訳すると、業界が違っても伝わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Amazon responds to data center backlash, says it no longer uses NDAs。ITmedia AI+から、Amazon、データセンター批判に反論 10億ドル超の地域支援策も発表。SaaStrから、Why Okta Tripled on … 11% Growth. 5 Interesting Learnings From One of the Biggest Re-Ratings in B2B This Year: 14% cRPO Growth, 30% of Bookings From New Products, and ~50x Forward Earnings。Hacker News フロントページから、Getting the most out of Opus 5.5 in Claude and Claude Code。TechCrunchから、Federal judge calls Flock ‘indiscriminate mass surveillance’。ITmedia AI+から、Apple、macOSの「フルディスクアクセス」に追加の制御を導入へ 「AIエージェントの進化でリスクが大幅に増大」。以上です。",
+      "refs": [
+        {
+          "title": "Amazon responds to data center backlash, says it no longer uses NDAs",
+          "url": "https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-03T18:43:57.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Amazon、データセンター批判に反論 10億ドル超の地域支援策も発表",
+          "url": "https://www.itmedia.co.jp/news/article/2610/03/2000001985/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-03T08:52:00.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "Why Okta Tripled on … 11% Growth. 5 Interesting Learnings From One of the Biggest Re-Ratings in B2B This Year: 14% cRPO Growth, 30% of Bookings From New Products, and ~50x Forward Earnings",
+          "url": "https://www.saastr.com/okta-tripled-on-11-growth-5-interesting-learnings-from-one-of-the-biggest-re-ratings-in-b2b-this-year-14-crpo-growth-30-of-bookings-from-new-products-and-50x-forward-earnings/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-03T12:10:06.000Z",
+          "alsoReportedBy": [
+            "SaaStr"
+          ]
+        },
+        {
+          "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+          "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-03T18:29:30.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Federal judge calls Flock ‘indiscriminate mass surveillance’",
+          "url": "https://techcrunch.com/2026/10/03/federal-judge-calls-flock-indiscriminate-mass-surveillance/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-03T19:33:15.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Apple、macOSの「フルディスクアクセス」に追加の制御を導入へ 「AIエージェントの進化でリスクが大幅に増大」",
+          "url": "https://www.itmedia.co.jp/news/article/2610/03/2000001983/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-03T00:38:06.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "OpenAI safety employee resigns, claiming the company’s ‘culture is broken’",
+        "url": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-03T16:30:01.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "We Vibe Coded Our Own Calendly. Our AI Agent Pushed Us To Do It, and It Was Right.",
+        "url": "https://www.saastr.com/we-vibe-coded-our-own-calendly-our-ai-agent-pushed-us-to-do-it-and-it-was-right/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-03T15:00:09.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Meta、AIエージェント「Muse」とつながる自作ガジェット向けSDKをオープンソースで公開 「Raspberry Pi」などに対応",
+        "url": "https://www.itmedia.co.jp/news/article/2610/03/2000001984/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-03T01:41:21.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Amazon responds to data center backlash, says it no longer uses NDAs",
+        "url": "https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-03T18:43:57.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Amazon、データセンター批判に反論 10億ドル超の地域支援策も発表",
+        "url": "https://www.itmedia.co.jp/news/article/2610/03/2000001985/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-03T08:52:00.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Why Okta Tripled on … 11% Growth. 5 Interesting Learnings From One of the Biggest Re-Ratings in B2B This Year: 14% cRPO Growth, 30% of Bookings From New Products, and ~50x Forward Earnings",
+        "url": "https://www.saastr.com/okta-tripled-on-11-growth-5-interesting-learnings-from-one-of-the-biggest-re-ratings-in-b2b-this-year-14-crpo-growth-30-of-bookings-from-new-products-and-50x-forward-earnings/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-03T12:10:06.000Z",
+        "alsoReportedBy": [
+          "SaaStr"
+        ]
+      },
+      {
+        "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+        "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-03T18:29:30.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Federal judge calls Flock ‘indiscriminate mass surveillance’",
+        "url": "https://techcrunch.com/2026/10/03/federal-judge-calls-flock-indiscriminate-mass-surveillance/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-03T19:33:15.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Apple、macOSの「フルディスクアクセス」に追加の制御を導入へ 「AIエージェントの進化でリスクが大幅に増大」",
+        "url": "https://www.itmedia.co.jp/news/article/2610/03/2000001983/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-03T00:38:06.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "sdk",
+      "term": "SDK",
+      "reading": "エスディーケー",
+      "category": "技術",
+      "level": 2,
+      "definition": "ある機能を自分のアプリに組み込むための道具一式です。APIを使いやすく包んだもの、と捉えておけば実務では困りません。",
+      "interview": "APIが「窓口」なら、SDKは「窓口に行くための定期券と地図」です。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 750
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 188
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 665
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 629
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 704
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 219
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1897
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 622
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 280
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 356
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 521
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 525
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 193,
+    "eligible": 62
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 39.52
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "OpenAI safety employee resigns, claiming the company’s ‘culture is broken’",
+      "startSec": 39.52,
+      "endSec": 66.84
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "We Vibe Coded Our Own Calendly. Our AI Agent Pushed Us To Do It, and It Was Right.",
+      "startSec": 66.84,
+      "endSec": 94.12
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Meta、AIエージェント「Muse」とつながる自作ガジェット向けSDKをオープンソースで公開 「Raspberry Pi」などに対応",
+      "startSec": 94.12,
+      "endSec": 145.87
+    },
+    {
+      "segmentId": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 145.87,
+      "endSec": 200.53
+    },
+    {
+      "segmentId": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 200.53,
+      "endSec": 213.8
+    },
+    {
+      "segmentId": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 213.8,
+      "endSec": 286.49
+    },
+    {
+      "segmentId": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 286.49,
+      "endSec": 296.96
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 14254124,
+    "durationSec": 296.96
+  }
+}

@@ -1,0 +1,455 @@
+{
+  "id": "2026-09-30",
+  "createdAt": "2026-09-30T23:07:00.309Z",
+  "dateLabel": "9月30日（水）",
+  "durationMin": 10,
+  "estimatedMinutes": 6.9,
+  "generator": "template",
+  "title": "9月30日（水） Gemini 4 Argon: our next era of frontier intelligence ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。9月30日（水）のテックニュースをお届けします。今日の見出しは3本です。1つ目、Gemini 4 Argon: our next era of frontier intelligence。2つ目、Google、「Gemini 4 Pro」ではなく「Gemini 4 Agron」発表 まずはサイバー防御組織に限定提供、出力上限は100万トークンに。3つ目、Next.jsアプリをCloudflare WorkersやAWS LambdaなどVercel以外のサーバレス基盤へデプロイできる「Vinext 1.0」リリース。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Gemini 4 Argon: our next era of frontier intelligence",
+      "body": "1本目。はてなブックマーク テクノロジーから、Gemini 4 Argon: our next era of frontier intelligence。Back Innovation & AI See all in Innovation & AI Models & Research Google DeepMind Google Research Google Labs Gemini models Quantum computing See all Products Developer tools Gemin…このニュースはHacker News フロントページでも同時に取り上げられています。それだけ注目度が高い話題です。クラウド基盤の話は、その上で動くサービス全部に影響します。地味ですが土台の話です。",
+      "refs": [
+        {
+          "title": "Gemini 4 Argon: our next era of frontier intelligence",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-09-30T20:28:49.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Google、「Gemini 4 Pro」ではなく「Gemini 4 Agron」発表 まずはサイバー防御組織に限定提供、出力上限は100万トークンに",
+      "body": "2本目。ITmedia AI+から、Google、「Gemini 4 Pro」ではなく「Gemini 4 Agron」発表 まずはサイバー防御組織に限定提供、出力上限は100万トークンに。Googleは、次世代フロンティアモデル「Gemini 4 Argon」を発表した。最大出力100万トークンに対応し、長時間に及ぶ業務処理や自律的なサイバー脆弱性修正に強みを持つ。安全対策を強化した上で、まずは信頼できるサイバー防御組織に先行提供し、有料APIなどで順次拡大する。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "Google、「Gemini 4 Pro」ではなく「Gemini 4 Agron」発表 まずはサイバー防御組織に限定提供、出力上限は100万トークンに",
+          "url": "https://www.itmedia.co.jp/news/article/2610/01/2000001912/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-09-30T22:16:25.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Next.jsアプリをCloudflare WorkersやAWS LambdaなどVercel以外のサーバレス基盤へデプロイできる「Vinext 1.0」リリース",
+      "body": "3本目。Publickeyから、Next.jsアプリをCloudflare WorkersやAWS LambdaなどVercel以外のサーバレス基盤へデプロイできる「Vinext 1.0」リリース。Cloudflareは、代表的なWebアプリケーションフレームワークであるNext.jsを用いて開発したアプリケーションを、Cloudflare WorkersやAWS Lambda、NetlifyといったVercel以外のサーバレス基盤に...このニュースははてなブックマーク テクノロジーでも同時に取り上げられています。それだけ注目度が高い話題です。開発者向けの話題は、技術職以外でも「現場が何を楽に感じるか」を知る手がかりになります。",
+      "refs": [
+        {
+          "title": "Next.jsアプリをCloudflare WorkersやAWS LambdaなどVercel以外のサーバレス基盤へデプロイできる「Vinext 1.0」リリース",
+          "url": "https://www.publickey1.jp/blog/26/vercelnextjscloudflare_workersaws_lambdavercelvinext_10.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-09-30T15:10:38.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。最後に、トークン、読み方はトークン。AIが文章を扱うときの最小単位です。日本語ならおおむね1文字が1トークン前後。AIの利用料金はこのトークン数で決まります。AI企業の原価構造はトークン単価。値下げのニュースが業界に効く理由がここにあります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。求人票を見るときは、事業フェーズを先に確認してみてください。資金調達直後なのか、黒字化を目指している段階なのかで、求められる動き方がまるで違います。",
+      "refs": []
+    },
+    {
+      "id": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。ITmedia AI+から、日立とファナックがフィジカルAI協業 日立エッジAI×ファナックロボ有効性も検証。TechCrunchから、Factory CEO just accused his VC board advisor of spying for Cognition。TechCrunchから、Valor, Atreides, and Sequoia back AI startup Flow Engineering at $750M valuation。はてなブックマーク テクノロジーから、GitHub - nanaism/yomiyasu: AI生成された文章の不自然さを取り除き、人間にとって自然な日本語へ書き直すためのAgent Skill。ITmedia AI+から、「デジタルスレッドとAIで動かす」 富士ソフトがスマート工場で10％成長狙う。ITmedia NEWSから、米Micron、AI需要で売上高は前年同期比4.8倍、純利益は11.8倍と過去最高を更新。以上です。",
+      "refs": [
+        {
+          "title": "日立とファナックがフィジカルAI協業 日立エッジAI×ファナックロボ有効性も検証",
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2610/01/news031.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-09-30T22:30:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Factory CEO just accused his VC board advisor of spying for Cognition",
+          "url": "https://techcrunch.com/2026/09/30/factory-ceo-just-accused-his-vc-board-advisor-of-spying-for-cognition/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-30T20:39:09.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Valor, Atreides, and Sequoia back AI startup Flow Engineering at $750M valuation",
+          "url": "https://techcrunch.com/2026/09/30/valor-atreides-and-sequoia-back-ai-startup-flow-engineering-at-750m-valuation/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-30T21:07:40.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "GitHub - nanaism/yomiyasu: AI生成された文章の不自然さを取り除き、人間にとって自然な日本語へ書き直すためのAgent Skill",
+          "url": "https://github.com/nanaism/yomiyasu",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-09-30T18:28:31.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「デジタルスレッドとAIで動かす」 富士ソフトがスマート工場で10％成長狙う",
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2610/01/news034.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-09-30T22:15:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "米Micron、AI需要で売上高は前年同期比4.8倍、純利益は11.8倍と過去最高を更新",
+          "url": "https://www.itmedia.co.jp/news/article/2610/01/2000001914/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-09-30T22:47:58.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "Gemini 4 Argon: our next era of frontier intelligence",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-09-30T20:28:49.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "Google、「Gemini 4 Pro」ではなく「Gemini 4 Agron」発表 まずはサイバー防御組織に限定提供、出力上限は100万トークンに",
+        "url": "https://www.itmedia.co.jp/news/article/2610/01/2000001912/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-09-30T22:16:25.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Next.jsアプリをCloudflare WorkersやAWS LambdaなどVercel以外のサーバレス基盤へデプロイできる「Vinext 1.0」リリース",
+        "url": "https://www.publickey1.jp/blog/26/vercelnextjscloudflare_workersaws_lambdavercelvinext_10.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-09-30T15:10:38.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      }
+    ],
+    "roundup": [
+      {
+        "title": "日立とファナックがフィジカルAI協業 日立エッジAI×ファナックロボ有効性も検証",
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2610/01/news031.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-09-30T22:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Factory CEO just accused his VC board advisor of spying for Cognition",
+        "url": "https://techcrunch.com/2026/09/30/factory-ceo-just-accused-his-vc-board-advisor-of-spying-for-cognition/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-30T20:39:09.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Valor, Atreides, and Sequoia back AI startup Flow Engineering at $750M valuation",
+        "url": "https://techcrunch.com/2026/09/30/valor-atreides-and-sequoia-back-ai-startup-flow-engineering-at-750m-valuation/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-30T21:07:40.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "GitHub - nanaism/yomiyasu: AI生成された文章の不自然さを取り除き、人間にとって自然な日本語へ書き直すためのAgent Skill",
+        "url": "https://github.com/nanaism/yomiyasu",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-09-30T18:28:31.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「デジタルスレッドとAIで動かす」 富士ソフトがスマート工場で10％成長狙う",
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2610/01/news034.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-09-30T22:15:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "米Micron、AI需要で売上高は前年同期比4.8倍、純利益は11.8倍と過去最高を更新",
+        "url": "https://www.itmedia.co.jp/news/article/2610/01/2000001914/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-09-30T22:47:58.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "token",
+      "term": "トークン",
+      "reading": "トークン",
+      "category": "AI",
+      "level": 2,
+      "definition": "AIが文章を扱うときの最小単位です。日本語ならおおむね1文字が1トークン前後。AIの利用料金はこのトークン数で決まります。",
+      "interview": "AI企業の原価構造はトークン単価。値下げのニュースが業界に効く理由がここにあります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 704
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 197
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 775
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 761
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 816
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 398
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1464
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 725
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 470
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 471
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1582
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 676
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 191,
+    "eligible": 120
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 44.05
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Gemini 4 Argon: our next era of frontier intelligence",
+      "startSec": 44.05,
+      "endSec": 86.54
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Google、「Gemini 4 Pro」ではなく「Gemini 4 Agron」発表 まずはサイバー防御組織に限定提供、出力上限は100万トークンに",
+      "startSec": 86.54,
+      "endSec": 144.01
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Next.jsアプリをCloudflare WorkersやAWS LambdaなどVercel以外のサーバレス基盤へデプロイできる「Vinext 1.0」リリース",
+      "startSec": 144.01,
+      "endSec": 188.75
+    },
+    {
+      "segmentId": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 188.75,
+      "endSec": 240.16
+    },
+    {
+      "segmentId": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 240.16,
+      "endSec": 254.35
+    },
+    {
+      "segmentId": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 254.35,
+      "endSec": 319.39
+    },
+    {
+      "segmentId": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 319.39,
+      "endSec": 329.87
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 15833644,
+    "durationSec": 329.87
+  }
+}

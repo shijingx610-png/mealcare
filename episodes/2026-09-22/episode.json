@@ -1,0 +1,455 @@
+{
+  "id": "2026-09-22",
+  "createdAt": "2026-09-22T22:21:33.586Z",
+  "dateLabel": "9月22日（火）",
+  "durationMin": 10,
+  "estimatedMinutes": 6,
+  "generator": "template",
+  "title": "9月22日（火） Snorkel AI triples valuation to $3.5B as demand for AI training data booms ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。9月22日（火）のテックニュースをお届けします。今日の見出しは3本です。1つ目、Snorkel AI triples valuation to $3.5B as demand for AI training data booms。2つ目、Being a System of Record Helps With Retention. But Alone, It Won’t Equal Growth。3つ目、OpenAI、GPT-6の「Sol」と「Luna」公開 Astraの性能向上を低価格で。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Snorkel AI triples valuation to $3.5B as demand for AI training data booms",
+      "body": "1本目。TechCrunchから、Snorkel AI triples valuation to $3.5B as demand for AI training data booms。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Snorkel AI triples valuation to $3.5B as demand for AI training data booms",
+          "url": "https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-22T21:56:43.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Being a System of Record Helps With Retention. But Alone, It Won’t Equal Growth",
+      "body": "2本目。SaaStrから、Being a System of Record Helps With Retention. But Alone, It Won’t Equal Growth。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Being a System of Record Helps With Retention. But Alone, It Won’t Equal Growth",
+          "url": "https://www.saastr.com/being-a-system-of-record-helps-with-retention-but-alone-it-wont-equal-growth/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-09-22T14:10:02.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "OpenAI、GPT-6の「Sol」と「Luna」公開 Astraの性能向上を低価格で",
+      "body": "3本目。CNET Japanから、OpenAI、GPT-6の「Sol」と「Luna」公開 Astraの性能向上を低価格で。米OpenAIは9月22日（現地時間）、AIモデル「GPT-6 Sol」と「GPT-6 Luna」を発表した。9月初めに公開した最上位モデル「GPT-6 Astra」と同様の手法で学習させ、Astraで得た性能向上を、より高速で低価格なモデルにも反映したという。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "OpenAI、GPT-6の「Sol」と「Luna」公開 Astraの性能向上を低価格で",
+          "url": "https://japan.cnet.com/article/35252853/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-09-22T20:05:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。最後に、AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。カジュアル面談では、今日のニュースを一つ持っていくだけで会話が動きます。「これ見たんですが、御社ではどう捉えていますか」は、準備している人にしか出せない質問です。",
+      "refs": []
+    },
+    {
+      "id": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Anthropic releases Opus 5.5 with lower prices and Fable-level performance。OpenAI Newsから、Parallel cut research time and cost in half with GPT‑6 Astra。TechCrunchから、Five AI safety sessions every founder should have on their TechCrunch Disrupt 2026 agenda。Hacker News フロントページから、Launch HN: Coverage Cat (YC S22) – Umbrella insurance via your personal agent。OpenAI Newsから、Introducing GPT-6 Sol and Luna。CNET Japanから、AnthropicがClaude新モデル「Opus 5.5」発表 Fable 5.1並みの性能をOpus 5より4割安く。以上です。",
+      "refs": [
+        {
+          "title": "Anthropic releases Opus 5.5 with lower prices and Fable-level performance",
+          "url": "https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-22T16:30:07.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        },
+        {
+          "title": "Parallel cut research time and cost in half with GPT‑6 Astra",
+          "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-09-22T12:00:00.000Z",
+          "alsoReportedBy": [
+            "OpenAI News"
+          ]
+        },
+        {
+          "title": "Five AI safety sessions every founder should have on their TechCrunch Disrupt 2026 agenda",
+          "url": "https://techcrunch.com/2026/09/22/five-ai-safety-sessions-every-founder-should-have-on-their-techcrunch-disrupt-2026-agenda/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-22T15:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Launch HN: Coverage Cat (YC S22) – Umbrella insurance via your personal agent",
+          "url": "https://www.coveragecat.com/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-09-22T17:26:36.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Introducing GPT-6 Sol and Luna",
+          "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-09-22T18:00:00.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        },
+        {
+          "title": "AnthropicがClaude新モデル「Opus 5.5」発表 Fable 5.1並みの性能をOpus 5より4割安く",
+          "url": "https://japan.cnet.com/article/35252851/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-09-22T19:14:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "Snorkel AI triples valuation to $3.5B as demand for AI training data booms",
+        "url": "https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-22T21:56:43.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Being a System of Record Helps With Retention. But Alone, It Won’t Equal Growth",
+        "url": "https://www.saastr.com/being-a-system-of-record-helps-with-retention-but-alone-it-wont-equal-growth/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-09-22T14:10:02.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAI、GPT-6の「Sol」と「Luna」公開 Astraの性能向上を低価格で",
+        "url": "https://japan.cnet.com/article/35252853/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-09-22T20:05:00.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Anthropic releases Opus 5.5 with lower prices and Fable-level performance",
+        "url": "https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-22T16:30:07.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "Parallel cut research time and cost in half with GPT‑6 Astra",
+        "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-09-22T12:00:00.000Z",
+        "alsoReportedBy": [
+          "OpenAI News"
+        ]
+      },
+      {
+        "title": "Five AI safety sessions every founder should have on their TechCrunch Disrupt 2026 agenda",
+        "url": "https://techcrunch.com/2026/09/22/five-ai-safety-sessions-every-founder-should-have-on-their-techcrunch-disrupt-2026-agenda/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-22T15:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Launch HN: Coverage Cat (YC S22) – Umbrella insurance via your personal agent",
+        "url": "https://www.coveragecat.com/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-09-22T17:26:36.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Introducing GPT-6 Sol and Luna",
+        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-09-22T18:00:00.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "AnthropicがClaude新モデル「Opus 5.5」発表 Fable 5.1並みの性能をOpus 5より4割安く",
+        "url": "https://japan.cnet.com/article/35252851/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-09-22T19:14:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 772
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 204
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 967
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 957
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 772
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 832
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1592
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 913
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 467
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 486
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1851
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 852
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 194,
+    "eligible": 77
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 37.25
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Snorkel AI triples valuation to $3.5B as demand for AI training data booms",
+      "startSec": 37.25,
+      "endSec": 64.07
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Being a System of Record Helps With Retention. But Alone, It Won’t Equal Growth",
+      "startSec": 64.07,
+      "endSec": 90.65
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "OpenAI、GPT-6の「Sol」と「Luna」公開 Astraの性能向上を低価格で",
+      "startSec": 90.65,
+      "endSec": 138.61
+    },
+    {
+      "segmentId": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 138.61,
+      "endSec": 201.46
+    },
+    {
+      "segmentId": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 201.46,
+      "endSec": 215.82
+    },
+    {
+      "segmentId": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 215.82,
+      "endSec": 276.92
+    },
+    {
+      "segmentId": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 276.92,
+      "endSec": 287.39
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 13794860,
+    "durationSec": 287.39
+  }
+}

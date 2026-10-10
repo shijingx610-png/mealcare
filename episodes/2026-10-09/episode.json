@@ -1,0 +1,623 @@
+{
+  "id": "2026-10-09",
+  "createdAt": "2026-10-09T23:23:42.644Z",
+  "dateLabel": "10月9日（金）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.5,
+  "generator": "template",
+  "title": "10月9日（金） JR九州、メアド最大130万件漏洩か ソフトバンク子会社不正アクセス - 日本経済新聞 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月9日（金）のテックニュースをお届けします。今日の見出しは5本です。1つ目、JR九州、メアド最大130万件漏洩か ソフトバンク子会社不正アクセス - 日本経済新聞。2つ目、韓国の銀行狙ったサイバー攻撃、犯人は「中国在住の26歳」か Claudeで作られた“履歴書”から浮上。3つ目、IDCFクラウド障害、親会社のソフトバンクが顧客窓口に 調査・復旧も支援。4つ目、AIエージェントの「暴走」をどう防ぐ？ マイクロソフトがアクセスを制限する「MXC」を提供開始。5つ目、Amazon and others are done keeping data center deals secret. Is it enough to build trust?。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "JR九州、メアド最大130万件漏洩か ソフトバンク子会社不正アクセス - 日本経済新聞",
+      "body": "1本目。はてなブックマーク テクノロジーから、JR九州、メアド最大130万件漏洩か ソフトバンク子会社不正アクセス - 日本経済新聞。JR九州は9日、同社のウェブ会員として登録されたメールアドレス最大約130万件が漏洩した可能性があると発表した。メールアドレス以外の個人情報の漏洩はないとしている。JR九州によると、ソフトバンク子会社のIDCフロ。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "JR九州、メアド最大130万件漏洩か ソフトバンク子会社不正アクセス - 日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOJC09B7T0Z01C26A0000000/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-09T12:47:05.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "韓国の銀行狙ったサイバー攻撃、犯人は「中国在住の26歳」か Claudeで作られた“履歴書”から浮上",
+      "body": "2本目。ITmedia AI+から、韓国の銀行狙ったサイバー攻撃、犯人は「中国在住の26歳」か Claudeで作られた“履歴書”から浮上。米CrowdStrikeは10月7日（現地時間）、韓国の金融機関を狙ったサイバー攻撃の攻撃者が、中国在住の26歳の人物である可能性を示す分析結果を公表した。攻撃者が使ったAIツールの履歴に、本人のものとみられる個人情報が残っていたという。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "韓国の銀行狙ったサイバー攻撃、犯人は「中国在住の26歳」か Claudeで作られた“履歴書”から浮上",
+          "url": "https://www.itmedia.co.jp/news/article/2610/09/2000002176/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-09T10:08:10.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "IDCFクラウド障害、親会社のソフトバンクが顧客窓口に 調査・復旧も支援",
+      "body": "3本目。ITmedia NEWSから、IDCFクラウド障害、親会社のソフトバンクが顧客窓口に 調査・復旧も支援。フトバンクとの緊密な連携の下、（1）顧客へのバックアップ手順の案内と移行環境の提案、（2）顧客の要望に従って、顧客の仮想サーバの起動や停止などの作業の代行――を行っているという。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "IDCFクラウド障害、親会社のソフトバンクが顧客窓口に 調査・復旧も支援",
+          "url": "https://www.itmedia.co.jp/news/article/2610/10/2000002187/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-09T22:49:06.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "AIエージェントの「暴走」をどう防ぐ？ マイクロソフトがアクセスを制限する「MXC」を提供開始",
+      "body": "4本目。CNET Japanから、AIエージェントの「暴走」をどう防ぐ？ マイクロソフトがアクセスを制限する「MXC」を提供開始。AIエージェントによるサイバーセキュリティ上の被害を防ぐため、マイクロソフトはエージェントの行動範囲を制限する「Microsoft Execution Containers（MXC）」の一般提供を開始した。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "AIエージェントの「暴走」をどう防ぐ？ マイクロソフトがアクセスを制限する「MXC」を提供開始",
+          "url": "https://japan.cnet.com/article/35253423/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-09T07:45:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Amazon and others are done keeping data center deals secret. Is it enough to build trust?",
+      "body": "5本目。TechCrunchから、Amazon and others are done keeping data center deals secret. Is it enough to build trust?クラウド基盤の話は、その上で動くサービス全部に影響します。地味ですが土台の話です。大手の動きは、業界全体のルールが変わる合図になることがあります。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Amazon and others are done keeping data center deals secret. Is it enough to build trust?",
+          "url": "https://techcrunch.com/video/amazon-and-others-are-done-keeping-data-center-deals-secret-is-it-enough-to-build-trust/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-09T16:56:42.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。次に、LLM、大規模言語モデル、読み方はエルエルエム。大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。最後に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。職務経歴書は、前職の業務をそのまま書くより「どの課題を、どう測って、どう改善したか」に翻訳すると、業界が違っても伝わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、The maker of non-text AI model Jev valued at $7.5B just weeks after launch。TechCrunchから、An Anthropic AI model sent a false homicide tip to Philadelphia police。はてなブックマーク テクノロジーから、OpenAIとAnthropicに新ライバル出現。中国ではなく地元アメリカから | ギズモード・ジャパン。アメリカのAI勢力図が変わるかもしれません。はてなブックマーク テクノロジーから、ドコモの顧客情報1億件超がダークウェブに？ 同社「流出は確認していない」。ITmedia AI+から、Anthropic、サイバー防御の新たな取り組み「Cyber Mission」 OSS向け無料脆弱性スキャンや重要インフラ防御プログラムも。Hacker News フロントページから、OpenAI mistranslated mathematics into code for its Navier-Stokes proof。SaaStrから、It Takes 12 Years to IPO. Then Another 2-3 for Your VCs to Get Liquid. And Founders Can Generally Only Sell About ~4% a Year.Hacker News フロントページから、Typesafe AI raises $870M at $7.5B。ITmedia AI+から、履歴書100通に1通「AIだけが読める文字」 20万件調査でわかった“就活ハック”の手口 米研究。Hacker News フロントページから、Japan's Most Famous Tuna Buyer Says He Turned Somali Pirates into Fishermen。ITmedia NEWSから、IDCFクラウド障害、顧客データ「取り出し・復元困難」 復元は顧客側のバックアップ頼み。「データを復元できるのは顧客自身が保持しているバックアップデータからのみ」としている。ITmedia NEWSから、「バイトル」会員メアド最大約389万件漏えい 海外から「仕様不備」突く不正アクセス。原因は、システムの一部機能の仕様の不備を突いた海外からの不正アクセス。以上です。",
+      "refs": [
+        {
+          "title": "The maker of non-text AI model Jev valued at $7.5B just weeks after launch",
+          "url": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-09T21:41:29.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "An Anthropic AI model sent a false homicide tip to Philadelphia police",
+          "url": "https://techcrunch.com/2026/10/09/an-anthropic-ai-model-sent-a-false-homicide-tip-to-philadelphia-police/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-09T19:36:56.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "OpenAIとAnthropicに新ライバル出現。中国ではなく地元アメリカから | ギズモード・ジャパン",
+          "url": "https://www.gizmodo.jp/article/openai-and-anthropic-have-a-new-threat-to-worry-about-and-it-isnt-china/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-09T11:35:53.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "ドコモの顧客情報1億件超がダークウェブに？ 同社「流出は確認していない」",
+          "url": "https://www.itmedia.co.jp/news/article/2610/09/2000002177/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-09T13:59:34.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "Anthropic、サイバー防御の新たな取り組み「Cyber Mission」 OSS向け無料脆弱性スキャンや重要インフラ防御プログラムも",
+          "url": "https://www.itmedia.co.jp/news/article/2610/09/2000002164/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-09T04:20:56.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "OpenAI mistranslated mathematics into code for its Navier-Stokes proof",
+          "url": "https://www.newscientist.com/article/2592824-openai-mistranslated-mathematics-into-code-for-its-navier-stokes-proof/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-09T21:25:09.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "It Takes 12 Years to IPO. Then Another 2-3 for Your VCs to Get Liquid. And Founders Can Generally Only Sell About ~4% a Year.",
+          "url": "https://www.saastr.com/it-takes-12-years-to-ipo-then-another-2-3-for-your-vcs-to-get-liquid-and-founders-can-generally-only-sell-about-4-a-year/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-09T14:10:45.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Typesafe AI raises $870M at $7.5B",
+          "url": "https://typesafe.ai/blog/series-ai",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-09T17:02:31.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "履歴書100通に1通「AIだけが読める文字」 20万件調査でわかった“就活ハック”の手口 米研究",
+          "url": "https://www.itmedia.co.jp/news/article/2610/09/2000002102/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-09T03:00:00.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "Japan's Most Famous Tuna Buyer Says He Turned Somali Pirates into Fishermen",
+          "url": "https://www.japaninsides.com/the-sushi-king-who-went-to-somalia-how-japans-most-famous-tuna-buyer-says-he-turned-pirates-into-fishermen-55344",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-09T22:05:53.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "IDCFクラウド障害、顧客データ「取り出し・復元困難」 復元は顧客側のバックアップ頼み",
+          "url": "https://www.itmedia.co.jp/news/article/2610/09/2000002147/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-09T21:56:46.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「バイトル」会員メアド最大約389万件漏えい 海外から「仕様不備」突く不正アクセス",
+          "url": "https://www.itmedia.co.jp/news/article/2610/10/2000002186/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-09T22:27:31.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "JR九州、メアド最大130万件漏洩か ソフトバンク子会社不正アクセス - 日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZQOJC09B7T0Z01C26A0000000/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-09T12:47:05.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "韓国の銀行狙ったサイバー攻撃、犯人は「中国在住の26歳」か Claudeで作られた“履歴書”から浮上",
+        "url": "https://www.itmedia.co.jp/news/article/2610/09/2000002176/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-09T10:08:10.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "IDCFクラウド障害、親会社のソフトバンクが顧客窓口に 調査・復旧も支援",
+        "url": "https://www.itmedia.co.jp/news/article/2610/10/2000002187/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-09T22:49:06.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AIエージェントの「暴走」をどう防ぐ？ マイクロソフトがアクセスを制限する「MXC」を提供開始",
+        "url": "https://japan.cnet.com/article/35253423/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-09T07:45:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Amazon and others are done keeping data center deals secret. Is it enough to build trust?",
+        "url": "https://techcrunch.com/video/amazon-and-others-are-done-keeping-data-center-deals-secret-is-it-enough-to-build-trust/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-09T16:56:42.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "The maker of non-text AI model Jev valued at $7.5B just weeks after launch",
+        "url": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-09T21:41:29.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "An Anthropic AI model sent a false homicide tip to Philadelphia police",
+        "url": "https://techcrunch.com/2026/10/09/an-anthropic-ai-model-sent-a-false-homicide-tip-to-philadelphia-police/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-09T19:36:56.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAIとAnthropicに新ライバル出現。中国ではなく地元アメリカから | ギズモード・ジャパン",
+        "url": "https://www.gizmodo.jp/article/openai-and-anthropic-have-a-new-threat-to-worry-about-and-it-isnt-china/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-09T11:35:53.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ドコモの顧客情報1億件超がダークウェブに？ 同社「流出は確認していない」",
+        "url": "https://www.itmedia.co.jp/news/article/2610/09/2000002177/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-09T13:59:34.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Anthropic、サイバー防御の新たな取り組み「Cyber Mission」 OSS向け無料脆弱性スキャンや重要インフラ防御プログラムも",
+        "url": "https://www.itmedia.co.jp/news/article/2610/09/2000002164/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-09T04:20:56.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "OpenAI mistranslated mathematics into code for its Navier-Stokes proof",
+        "url": "https://www.newscientist.com/article/2592824-openai-mistranslated-mathematics-into-code-for-its-navier-stokes-proof/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-09T21:25:09.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "It Takes 12 Years to IPO. Then Another 2-3 for Your VCs to Get Liquid. And Founders Can Generally Only Sell About ~4% a Year.",
+        "url": "https://www.saastr.com/it-takes-12-years-to-ipo-then-another-2-3-for-your-vcs-to-get-liquid-and-founders-can-generally-only-sell-about-4-a-year/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-09T14:10:45.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Typesafe AI raises $870M at $7.5B",
+        "url": "https://typesafe.ai/blog/series-ai",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-09T17:02:31.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "履歴書100通に1通「AIだけが読める文字」 20万件調査でわかった“就活ハック”の手口 米研究",
+        "url": "https://www.itmedia.co.jp/news/article/2610/09/2000002102/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-09T03:00:00.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Japan's Most Famous Tuna Buyer Says He Turned Somali Pirates into Fishermen",
+        "url": "https://www.japaninsides.com/the-sushi-king-who-went-to-somalia-how-japans-most-famous-tuna-buyer-says-he-turned-pirates-into-fishermen-55344",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-09T22:05:53.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "IDCFクラウド障害、顧客データ「取り出し・復元困難」 復元は顧客側のバックアップ頼み",
+        "url": "https://www.itmedia.co.jp/news/article/2610/09/2000002147/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-09T21:56:46.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「バイトル」会員メアド最大約389万件漏えい 海外から「仕様不備」突く不正アクセス",
+        "url": "https://www.itmedia.co.jp/news/article/2610/10/2000002186/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-09T22:27:31.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "llm",
+      "term": "LLM（大規模言語モデル）",
+      "reading": "エルエルエム",
+      "category": "AI",
+      "level": 1,
+      "definition": "大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。",
+      "interview": "「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 587
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 183
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1009
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 1035
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 692
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 445
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1423
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 984
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 568
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 615
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 4313
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 946
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 190,
+    "eligible": 106
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 59.22
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "JR九州、メアド最大130万件漏洩か ソフトバンク子会社不正アクセス - 日本経済新聞",
+      "startSec": 59.22,
+      "endSec": 104.15
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "韓国の銀行狙ったサイバー攻撃、犯人は「中国在住の26歳」か Claudeで作られた“履歴書”から浮上",
+      "startSec": 104.15,
+      "endSec": 153.73
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "IDCFクラウド障害、親会社のソフトバンクが顧客窓口に 調査・復旧も支援",
+      "startSec": 153.73,
+      "endSec": 186.33
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "AIエージェントの「暴走」をどう防ぐ？ マイクロソフトがアクセスを制限する「MXC」を提供開始",
+      "startSec": 186.33,
+      "endSec": 221.87
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Amazon and others are done keeping data center deals secret. Is it enough to build trust?",
+      "startSec": 221.87,
+      "endSec": 252.31
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 252.31,
+      "endSec": 360.87
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 360.87,
+      "endSec": 374.14
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 374.14,
+      "endSec": 519.36
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 519.36,
+      "endSec": 529.83
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 25432108,
+    "durationSec": 529.83
+  }
+}
