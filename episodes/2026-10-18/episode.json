@@ -1,0 +1,603 @@
+{
+  "id": "2026-10-18",
+  "createdAt": "2026-10-18T21:39:02.562Z",
+  "dateLabel": "10月18日（日）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.3,
+  "generator": "template",
+  "title": "10月18日（日） 不正アクセス急増背景に“中国製LLM”台頭、AIが自動で偵察→侵入→情報奪取「情報漏れていない人の方が珍しい」専門家が警鐘、対策は?（テレビ高知） - Yahoo!ニュース ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月18日（日）のテックニュースをお届けします。今日の見出しは5本です。1つ目、不正アクセス急増背景に“中国製LLM”台頭、AIが自動で偵察→侵入→情報奪取「情報漏れていない人の方が珍しい」専門家が警鐘、対策は?（テレビ高知） - Yahoo!ニュース。2つ目、「AI画像」と「本物の写真」、いずれ科学的にも判別困難に--OpenAI担当者が警告。3つ目、マイクロソフト、.NETのツールチェーンマネージャ「dotnetup」プレビュー公開。複数バージョンの.NET環境を管理可能。4つ目、「11回止めたのに本番DBが消えた」 AIエージェント“6つの暴走”と、人間の承認を増やしても防げない理由。5つ目、祝・連載再開！ 「キャプテン翼」大好きマンガ家による最新家庭用ゲーム“魂のプレゼン”。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "不正アクセス急増背景に“中国製LLM”台頭、AIが自動で偵察→侵入→情報奪取「情報漏れていない人の方が珍しい」専門家が警鐘、対策は?（テレビ高知） - Yahoo!ニュース",
+      "body": "1本目。はてなブックマーク テクノロジーから、不正アクセス急増背景に“中国製LLM”台頭、AIが自動で偵察→侵入→情報奪取「情報漏れていない人の方が珍しい」専門家が警鐘、対策は?（テレビ高知） - Yahoo!ニュース。不正アクセス急増背景に“中国製LLM”台頭、AIが自動で偵察→侵入→情報奪取「情報漏れていない人の方が珍しい」専門家が警鐘、対策は?（テレビ高知） - Yahoo!ニュース。このニュースははてなブックマーク テクノロジーでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "不正アクセス急増背景に“中国製LLM”台頭、AIが自動で偵察→侵入→情報奪取「情報漏れていない人の方が珍しい」専門家が警鐘、対策は?（テレビ高知） - Yahoo!ニュース",
+          "url": "https://news.yahoo.co.jp/articles/2c807564e567a7a66e8718bce6ebd38538c605e8",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-18T10:16:23.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "「AI画像」と「本物の写真」、いずれ科学的にも判別困難に--OpenAI担当者が警告",
+      "body": "2本目。CNET Japanから、「AI画像」と「本物の写真」、いずれ科学的にも判別困難に--OpenAI担当者が警告。AIが生成した画像は、将来、科学的に見分けられなくなるかもしれない。OpenAIの政策担当弁護士Shira Anderson氏が米司法の会合でこうした見方を示したと、Reutersを引用したBreitbartが10月17日に報じた。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "「AI画像」と「本物の写真」、いずれ科学的にも判別困難に--OpenAI担当者が警告",
+          "url": "https://japan.cnet.com/article/35253687/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-18T21:01:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "マイクロソフト、.NETのツールチェーンマネージャ「dotnetup」プレビュー公開。複数バージョンの.NET環境を管理可能",
+      "body": "3本目。Publickeyから、マイクロソフト、.NETのツールチェーンマネージャ「dotnetup」プレビュー公開。複数バージョンの.NET環境を管理可能。マイクロソフトは、.NETの各種コマンドラインツールやC#コンパイラ、ビルドエンジン、ランタイムなどを含む.NETのツールチェーンをまとめてインストールし、バージョン管理などができるツールチェーンマネージャ「dotnetup」をパブリックプ...新機能のニュースは、競合がどこを脅威だと思っているかの裏返しでもあります。",
+      "refs": [
+        {
+          "title": "マイクロソフト、.NETのツールチェーンマネージャ「dotnetup」プレビュー公開。複数バージョンの.NET環境を管理可能",
+          "url": "https://www.publickey1.jp/blog/26/netdotnetupnet.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-10-18T15:35:52.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "「11回止めたのに本番DBが消えた」 AIエージェント“6つの暴走”と、人間の承認を増やしても防げない理由",
+      "body": "4本目。ITmedia AI+から、「11回止めたのに本番DBが消えた」 AIエージェント“6つの暴走”と、人間の承認を増やしても防げない理由。AIコーディングエージェントの自律性が高まる一方、本番データベースの削除といった事故も起こっています。では、「人間の承認」を増やせば事故は防げるのでしょうか。事例と対策から、事故を起こさないAIエージェントの設計について考えます。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "「11回止めたのに本番DBが消えた」 AIエージェント“6つの暴走”と、人間の承認を増やしても防げない理由",
+          "url": "https://atmarkit.itmedia.co.jp/ait/articles/2610/18/news004.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-17T23:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "祝・連載再開！ 「キャプテン翼」大好きマンガ家による最新家庭用ゲーム“魂のプレゼン”",
+      "body": "5本目。ITmedia NEWSから、祝・連載再開！ 「キャプテン翼」大好きマンガ家による最新家庭用ゲーム“魂のプレゼン”。これまでちゃんとメディア化されてこなかった原作の「ワールドユース編」を題材にしてくれてありがとう！ というわけで、今回は家庭用ゲーム「キャプテン翼2 WORLD FIGHTERS」について、キャプ翼大好きなボクが熱く語ります。身近なサービスの変化は、ユーザー目線の実感を持って語れる貴重な題材です。",
+      "refs": [
+        {
+          "title": "祝・連載再開！ 「キャプテン翼」大好きマンガ家による最新家庭用ゲーム“魂のプレゼン”",
+          "url": "https://www.itmedia.co.jp/news/article/2610/18/2000002348/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-17T22:16:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、LLM、大規模言語モデル、読み方はエルエルエム。大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。最後に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。求人票を見るときは、事業フェーズを先に確認してみてください。資金調達直後なのか、黒字化を目指している段階なのかで、求められる動き方がまるで違います。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Everyone’s watching the Elizabeth Holmes documentary ‘You Can See Everything’。SaaStrから、Jason’s Takes on This Week’s 20VC x SaaStr: Pro Rata Fights, the First Real AI Price Drop, and Why $500M ARR Isn’t Safe Anymore。TechCrunchから、Anthropic says it’s committing 5% of its shares to a ‘public benefit fund’。TechCrunchから、No agenda, no rush, no leaving San Francisco: Benchmark’s partners on investing in a frenzied market。Hacker News フロントページから、Hybrid Reasoning Agents: 35–55% fewer tokens and up to 2.6× faster inference。CNET Japanから、買ったゲームを「所有」できるように--米議員、サーバー停止後のプレイ守る法案構想。Hacker News フロントページから、PalmOS Lemmings。はてなブックマーク テクノロジーから、日本語の業務データが、そのまま日本語のオントロジーに。Context Ontology Accelerator v0.3.6 の日本語対応。Hacker News フロントページから、Namecheap just seized and disabled all my domains。はてなブックマーク テクノロジーから、アップル iPhone Duo、「並外れた予約需要」。すでに出荷予定は2027年1月下旬以降、高額転売も | テクノエッジ TechnoEdge。CNET Japanから、セガ「ショーグン2」改訂版、品質不足で販売停止 Steam評価は「圧倒的に不評」。以上です。",
+      "refs": [
+        {
+          "title": "Everyone’s watching the Elizabeth Holmes documentary ‘You Can See Everything’",
+          "url": "https://techcrunch.com/2026/10/18/everyones-watching-the-elizabeth-holmes-documentary-you-can-see-everything/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-18T19:03:38.000Z",
+          "alsoReportedBy": [
+            "TechCrunch",
+            "Hacker News フロントページ"
+          ]
+        },
+        {
+          "title": "Jason’s Takes on This Week’s 20VC x SaaStr: Pro Rata Fights, the First Real AI Price Drop, and Why $500M ARR Isn’t Safe Anymore",
+          "url": "https://www.saastr.com/jasons-takes-on-this-weeks-20vc-x-saastr-pro-rata-fights-the-first-real-ai-price-drop-and-why-500m-arr-isnt-safe-anymore/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-18T14:10:54.000Z",
+          "alsoReportedBy": [
+            "SaaStr"
+          ]
+        },
+        {
+          "title": "Anthropic says it’s committing 5% of its shares to a ‘public benefit fund’",
+          "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-18T20:37:40.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "No agenda, no rush, no leaving San Francisco: Benchmark’s partners on investing in a frenzied market",
+          "url": "https://techcrunch.com/2026/10/18/no-agenda-no-rush-no-leaving-san-francisco-benchmarks-partners-on-investing-in-a-frenzied-market/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-18T21:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Hybrid Reasoning Agents: 35–55% fewer tokens and up to 2.6× faster inference",
+          "url": "https://arxiv.org/abs/2610.18861",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-18T20:48:14.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "買ったゲームを「所有」できるように--米議員、サーバー停止後のプレイ守る法案構想",
+          "url": "https://japan.cnet.com/article/35253689/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-18T21:30:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "PalmOS Lemmings",
+          "url": "https://github.com/ardiri/palmos-lemmings",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-18T17:56:59.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "日本語の業務データが、そのまま日本語のオントロジーに。Context Ontology Accelerator v0.3.6 の日本語対応",
+          "url": "https://zenn.dev/aws_japan/articles/context-ontology-accelerator-multilingual",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-18T12:27:12.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Namecheap just seized and disabled all my domains",
+          "url": "https://www.reddit.com/r/sysadmin/comments/1x8cycd/namecheap_just_seized_and_disabled_all_my_domains/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-18T16:56:56.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "アップル iPhone Duo、「並外れた予約需要」。すでに出荷予定は2027年1月下旬以降、高額転売も | テクノエッジ TechnoEdge",
+          "url": "https://www.techno-edge.net/article/2026/10/18/5603.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-18T11:33:45.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "セガ「ショーグン2」改訂版、品質不足で販売停止 Steam評価は「圧倒的に不評」",
+          "url": "https://japan.cnet.com/article/35253673/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-18T09:03:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "不正アクセス急増背景に“中国製LLM”台頭、AIが自動で偵察→侵入→情報奪取「情報漏れていない人の方が珍しい」専門家が警鐘、対策は?（テレビ高知） - Yahoo!ニュース",
+        "url": "https://news.yahoo.co.jp/articles/2c807564e567a7a66e8718bce6ebd38538c605e8",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-18T10:16:23.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "「AI画像」と「本物の写真」、いずれ科学的にも判別困難に--OpenAI担当者が警告",
+        "url": "https://japan.cnet.com/article/35253687/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-18T21:01:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "マイクロソフト、.NETのツールチェーンマネージャ「dotnetup」プレビュー公開。複数バージョンの.NET環境を管理可能",
+        "url": "https://www.publickey1.jp/blog/26/netdotnetupnet.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-10-18T15:35:52.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「11回止めたのに本番DBが消えた」 AIエージェント“6つの暴走”と、人間の承認を増やしても防げない理由",
+        "url": "https://atmarkit.itmedia.co.jp/ait/articles/2610/18/news004.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-17T23:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "祝・連載再開！ 「キャプテン翼」大好きマンガ家による最新家庭用ゲーム“魂のプレゼン”",
+        "url": "https://www.itmedia.co.jp/news/article/2610/18/2000002348/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-17T22:16:00.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Everyone’s watching the Elizabeth Holmes documentary ‘You Can See Everything’",
+        "url": "https://techcrunch.com/2026/10/18/everyones-watching-the-elizabeth-holmes-documentary-you-can-see-everything/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-18T19:03:38.000Z",
+        "alsoReportedBy": [
+          "TechCrunch",
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "Jason’s Takes on This Week’s 20VC x SaaStr: Pro Rata Fights, the First Real AI Price Drop, and Why $500M ARR Isn’t Safe Anymore",
+        "url": "https://www.saastr.com/jasons-takes-on-this-weeks-20vc-x-saastr-pro-rata-fights-the-first-real-ai-price-drop-and-why-500m-arr-isnt-safe-anymore/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-18T14:10:54.000Z",
+        "alsoReportedBy": [
+          "SaaStr"
+        ]
+      },
+      {
+        "title": "Anthropic says it’s committing 5% of its shares to a ‘public benefit fund’",
+        "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-18T20:37:40.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "No agenda, no rush, no leaving San Francisco: Benchmark’s partners on investing in a frenzied market",
+        "url": "https://techcrunch.com/2026/10/18/no-agenda-no-rush-no-leaving-san-francisco-benchmarks-partners-on-investing-in-a-frenzied-market/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-18T21:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Hybrid Reasoning Agents: 35–55% fewer tokens and up to 2.6× faster inference",
+        "url": "https://arxiv.org/abs/2610.18861",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-18T20:48:14.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "買ったゲームを「所有」できるように--米議員、サーバー停止後のプレイ守る法案構想",
+        "url": "https://japan.cnet.com/article/35253689/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-18T21:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "PalmOS Lemmings",
+        "url": "https://github.com/ardiri/palmos-lemmings",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-18T17:56:59.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "日本語の業務データが、そのまま日本語のオントロジーに。Context Ontology Accelerator v0.3.6 の日本語対応",
+        "url": "https://zenn.dev/aws_japan/articles/context-ontology-accelerator-multilingual",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-18T12:27:12.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Namecheap just seized and disabled all my domains",
+        "url": "https://www.reddit.com/r/sysadmin/comments/1x8cycd/namecheap_just_seized_and_disabled_all_my_domains/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-18T16:56:56.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "アップル iPhone Duo、「並外れた予約需要」。すでに出荷予定は2027年1月下旬以降、高額転売も | テクノエッジ TechnoEdge",
+        "url": "https://www.techno-edge.net/article/2026/10/18/5603.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-18T11:33:45.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "セガ「ショーグン2」改訂版、品質不足で販売停止 Steam評価は「圧倒的に不評」",
+        "url": "https://japan.cnet.com/article/35253673/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-18T09:03:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "llm",
+      "term": "LLM（大規模言語モデル）",
+      "reading": "エルエルエム",
+      "category": "AI",
+      "level": 1,
+      "definition": "大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。",
+      "interview": "「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 848
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 189
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 674
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 710
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 854
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 373
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 2399
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 674
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 442
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 465
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1674
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 619
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 196,
+    "eligible": 54
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 68.94
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "不正アクセス急増背景に“中国製LLM”台頭、AIが自動で偵察→侵入→情報奪取「情報漏れていない人の方が珍しい」専門家が警鐘、対策は?（テレビ高知） - Yahoo!ニュース",
+      "startSec": 68.94,
+      "endSec": 124.6
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "「AI画像」と「本物の写真」、いずれ科学的にも判別困難に--OpenAI担当者が警告",
+      "startSec": 124.6,
+      "endSec": 161.76
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "マイクロソフト、.NETのツールチェーンマネージャ「dotnetup」プレビュー公開。複数バージョンの.NET環境を管理可能",
+      "startSec": 161.76,
+      "endSec": 197.35
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "「11回止めたのに本番DBが消えた」 AIエージェント“6つの暴走”と、人間の承認を増やしても防げない理由",
+      "startSec": 197.35,
+      "endSec": 236.97
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "祝・連載再開！ 「キャプテン翼」大好きマンガ家による最新家庭用ゲーム“魂のプレゼン”",
+      "startSec": 236.97,
+      "endSec": 272.42
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 272.42,
+      "endSec": 382.13
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 382.13,
+      "endSec": 396.32
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 396.32,
+      "endSec": 521.31
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 521.31,
+      "endSec": 531.79
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 25525804,
+    "durationSec": 531.79
+  }
+}

@@ -1,0 +1,545 @@
+{
+  "id": "2026-10-23",
+  "createdAt": "2026-10-23T22:27:14.241Z",
+  "dateLabel": "10月23日（金）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.6,
+  "generator": "template",
+  "title": "10月23日（金） パナソニックHD、利用禁止の生成AIに従業員らの情報送出 33万人分 - 日本経済新聞 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月23日（金）のテックニュースをお届けします。今日の見出しは5本です。1つ目、パナソニックHD、利用禁止の生成AIに従業員らの情報送出 33万人分 - 日本経済新聞。2つ目、タイムズカー、3000円の見舞金支払いへ 免許証画像漏えいの146万件対象 55億円の特損計上。3つ目、チームみらい安野貴博党首ら「サイバー攻撃から国民守る」緊急提言、デジ庁に提出 「AIにはAIを」。4つ目、PLAUDE、eSIMイヤホン「Plaude One」日本発売へ AIが耳に常駐 スマホ不要。5つ目、Agent cloud startup Daytona hits $1B valuation backed by FirstMark and a who’s who of angels。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "パナソニックHD、利用禁止の生成AIに従業員らの情報送出 33万人分 - 日本経済新聞",
+      "body": "1本目。はてなブックマーク テクノロジーから、パナソニックHD、利用禁止の生成AIに従業員らの情報送出 33万人分 - 日本経済新聞。パナソニックホールディングス（HD）は23日、社内で利用が禁止されている外部の生成AI（人工知能）サービスに同社グループの従業員やその家族らの個人情報約33万人分が送出されたと発表した。不正アクセスではなく、特定の従業員が社内ルールに反し情報を生成AIにアップロードしたことによるものだという。子会社と人事...このニュースはITmedia NEWSとCNET Japanでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "パナソニックHD、利用禁止の生成AIに従業員らの情報送出 33万人分 - 日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOUF237Z60T21C26A0000000/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-23T10:56:07.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS",
+            "CNET Japan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "タイムズカー、3000円の見舞金支払いへ 免許証画像漏えいの146万件対象 55億円の特損計上",
+      "body": "2本目。ITmedia NEWSから、タイムズカー、3000円の見舞金支払いへ 免許証画像漏えいの146万件対象 55億円の特損計上。パーク24は10月23日、グループ会社のタイムズモビリティ（東京都品川区）が運営するカーシェアリングサービス「タイムズカー」で9月に発覚した個人情報漏えいを巡り、一部利用者に3000円相当の見舞金を渡すと発表した。このニュースはCNET Japanでも同時に取り上げられています。それだけ注目度が高い話題です。日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "タイムズカー、3000円の見舞金支払いへ 免許証画像漏えいの146万件対象 55億円の特損計上",
+          "url": "https://www.itmedia.co.jp/news/article/2610/23/2000002558/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-23T10:05:39.000Z",
+          "alsoReportedBy": [
+            "CNET Japan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "チームみらい安野貴博党首ら「サイバー攻撃から国民守る」緊急提言、デジ庁に提出 「AIにはAIを」",
+      "body": "3本目。ITmedia AI+から、チームみらい安野貴博党首ら「サイバー攻撃から国民守る」緊急提言、デジ庁に提出 「AIにはAIを」。チームみらいの安野貴博党首らは、AI活用による防御力強化や攻撃の実態把握、情報漏えい被害発生後の措置などをまとめた緊急提言をデジタル庁に提出した。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "チームみらい安野貴博党首ら「サイバー攻撃から国民守る」緊急提言、デジ庁に提出 「AIにはAIを」",
+          "url": "https://www.itmedia.co.jp/aiplus/article/2610/23/2000002563/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-23T13:56:59.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "PLAUDE、eSIMイヤホン「Plaude One」日本発売へ AIが耳に常駐 スマホ不要",
+      "body": "4本目。CNET Japanから、PLAUDE、eSIMイヤホン「Plaude One」日本発売へ AIが耳に常駐 スマホ不要。PLAUDは10月21日、イヤホン型のAIデバイス「Plaud One」を2026年内に日本で発売すると発表した。価格は4万4000円。充電ケースにeSIMを内蔵し、スマートフォンがなくても録音データのアップロードやAIエージェントの呼び出しができる。日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "PLAUDE、eSIMイヤホン「Plaude One」日本発売へ AIが耳に常駐 スマホ不要",
+          "url": "https://japan.cnet.com/article/35253844/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-23T03:10:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Agent cloud startup Daytona hits $1B valuation backed by FirstMark and a who’s who of angels",
+      "body": "5本目。TechCrunchから、Agent cloud startup Daytona hits $1B valuation backed by FirstMark and a who’s who of angels。SaaSの話は、機能そのものより「誰の、どの業務を、いくらで置き換えるのか」で見ると輪郭がはっきりします。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Agent cloud startup Daytona hits $1B valuation backed by FirstMark and a who’s who of angels",
+          "url": "https://techcrunch.com/2026/10/23/agent-cloud-startup-daytona-hits-1b-valuation-backed-by-firstmark-and-a-whos-who-of-angels/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-23T16:26:29.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、バリュエーション、読み方はバリュエーション。企業の値段のことです。調達時に「時価総額いくらとして、何%の株を渡すか」で決まります。調達額そのものより、バリュエーションと調達額の比率のほうが、その会社の勢いを表します。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。最後に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。未経験からの転職で効くのは、知識の量より「業界の話題に自分の言葉で反応できること」です。毎朝5分の積み重ねが、そのまま面接の地力になります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、From Toast to Bessemer: Who founders will hear from at TechCrunch Founder Summit 2026。TechCrunchから、VCs, Superhuman Mail founder share red flags about product-market fit。Hacker News フロントページから、Rune 1.3: adds TypeScript, a Helix editor, Kitty graphics and OSC-7501。SaaStrから、The New “Ask Your Developer” Is Ask Your Agent. And It’s The Marketing Battle You Have to Win Now。Hacker News フロントページから、Now Google says it might use your Gmail and Google Photos data to target ads。はてなブックマーク テクノロジーから、AIにNintendo Switch 2を操作させて脱獄に成功、Codexが脆弱性を発見してゲームの改造まで実現。OpenAI Newsから、Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)。はてなブックマーク テクノロジーから、PHP脆弱性「サイト停止500件超」 ソフトバンクは緊急速報配信停止 - 日本経済新聞。SaaStrから、The Double Hockey Stick: Why 1% of Your Users Now Drive 75% of Your AI Costs, and What Figma, Clay, and Higgsfield Are Doing About It。Hacker News フロントページから、CVE Tracker。OpenAI Newsから、Securing our frontier model training environment。ITmedia AI+から、中国系攻撃者がAIエージェントで攻撃を自動化、「ConnectWise」のサプライチェーン攻撃に関与 Microsoftが警告。以上です。",
+      "refs": [
+        {
+          "title": "From Toast to Bessemer: Who founders will hear from at TechCrunch Founder Summit 2026",
+          "url": "https://techcrunch.com/2026/10/23/from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-founder-summit-2026/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-23T19:06:23.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "VCs, Superhuman Mail founder share red flags about product-market fit",
+          "url": "https://techcrunch.com/2026/10/23/vcs-superhuman-mail-founder-share-red-flags-about-product-market-fit/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-23T20:57:13.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Rune 1.3: adds TypeScript, a Helix editor, Kitty graphics and OSC-7501",
+          "url": "https://rune.build/blog/rune-1-3-release",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-23T19:42:01.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "The New “Ask Your Developer” Is Ask Your Agent. And It’s The Marketing Battle You Have to Win Now",
+          "url": "https://www.saastr.com/the-new-ask-your-developer-is-ask-your-agent/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-23T14:09:23.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+          "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-23T19:34:15.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AIにNintendo Switch 2を操作させて脱獄に成功、Codexが脆弱性を発見してゲームの改造まで実現",
+          "url": "https://gigazine.net/news/20261023-nintendo-switch-2-jailbreak/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-23T11:06:18.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+          "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-10-23T17:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "PHP脆弱性「サイト停止500件超」 ソフトバンクは緊急速報配信停止 - 日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOUC2315K0T21C26A0000000/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-23T11:19:05.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "The Double Hockey Stick: Why 1% of Your Users Now Drive 75% of Your AI Costs, and What Figma, Clay, and Higgsfield Are Doing About It",
+          "url": "https://www.saastr.com/the-double-hockey-stick-why-1-of-your-users-now-drive-75-of-your-ai-costs-and-what-figma-clay-and-higgsfield-are-doing-about-it/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-23T11:00:41.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "CVE Tracker",
+          "url": "https://cve.0xosprey.com/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-23T21:21:47.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Securing our frontier model training environment",
+          "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-10-23T10:00:00.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        },
+        {
+          "title": "中国系攻撃者がAIエージェントで攻撃を自動化、「ConnectWise」のサプライチェーン攻撃に関与 Microsoftが警告",
+          "url": "https://www.itmedia.co.jp/news/article/2610/23/2000002531/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-22T22:45:34.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "パナソニックHD、利用禁止の生成AIに従業員らの情報送出 33万人分 - 日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZQOUF237Z60T21C26A0000000/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-23T10:56:07.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS",
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "タイムズカー、3000円の見舞金支払いへ 免許証画像漏えいの146万件対象 55億円の特損計上",
+        "url": "https://www.itmedia.co.jp/news/article/2610/23/2000002558/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-23T10:05:39.000Z",
+        "alsoReportedBy": [
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "チームみらい安野貴博党首ら「サイバー攻撃から国民守る」緊急提言、デジ庁に提出 「AIにはAIを」",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2610/23/2000002563/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-23T13:56:59.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "PLAUDE、eSIMイヤホン「Plaude One」日本発売へ AIが耳に常駐 スマホ不要",
+        "url": "https://japan.cnet.com/article/35253844/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-23T03:10:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Agent cloud startup Daytona hits $1B valuation backed by FirstMark and a who’s who of angels",
+        "url": "https://techcrunch.com/2026/10/23/agent-cloud-startup-daytona-hits-1b-valuation-backed-by-firstmark-and-a-whos-who-of-angels/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-23T16:26:29.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "From Toast to Bessemer: Who founders will hear from at TechCrunch Founder Summit 2026",
+        "url": "https://techcrunch.com/2026/10/23/from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-founder-summit-2026/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-23T19:06:23.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "VCs, Superhuman Mail founder share red flags about product-market fit",
+        "url": "https://techcrunch.com/2026/10/23/vcs-superhuman-mail-founder-share-red-flags-about-product-market-fit/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-23T20:57:13.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Rune 1.3: adds TypeScript, a Helix editor, Kitty graphics and OSC-7501",
+        "url": "https://rune.build/blog/rune-1-3-release",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-23T19:42:01.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "The New “Ask Your Developer” Is Ask Your Agent. And It’s The Marketing Battle You Have to Win Now",
+        "url": "https://www.saastr.com/the-new-ask-your-developer-is-ask-your-agent/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-23T14:09:23.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+        "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-23T19:34:15.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AIにNintendo Switch 2を操作させて脱獄に成功、Codexが脆弱性を発見してゲームの改造まで実現",
+        "url": "https://gigazine.net/news/20261023-nintendo-switch-2-jailbreak/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-23T11:06:18.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+        "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-10-23T17:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "PHP脆弱性「サイト停止500件超」 ソフトバンクは緊急速報配信停止 - 日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZQOUC2315K0T21C26A0000000/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-23T11:19:05.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "The Double Hockey Stick: Why 1% of Your Users Now Drive 75% of Your AI Costs, and What Figma, Clay, and Higgsfield Are Doing About It",
+        "url": "https://www.saastr.com/the-double-hockey-stick-why-1-of-your-users-now-drive-75-of-your-ai-costs-and-what-figma-clay-and-higgsfield-are-doing-about-it/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-23T11:00:41.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "CVE Tracker",
+        "url": "https://cve.0xosprey.com/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-23T21:21:47.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Securing our frontier model training environment",
+        "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-10-23T10:00:00.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "中国系攻撃者がAIエージェントで攻撃を自動化、「ConnectWise」のサプライチェーン攻撃に関与 Microsoftが警告",
+        "url": "https://www.itmedia.co.jp/news/article/2610/23/2000002531/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-22T22:45:34.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "valuation",
+      "term": "バリュエーション",
+      "reading": "バリュエーション",
+      "category": "スタートアップ",
+      "level": 2,
+      "definition": "企業の値段のことです。調達時に「時価総額いくらとして、何%の株を渡すか」で決まります。",
+      "interview": "調達額そのものより、バリュエーションと調達額の比率のほうが、その会社の勢いを表します。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 621
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 181
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 723
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 758
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 616
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 370
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1099
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 678
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 411
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 452
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 599
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 669
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 195,
+    "eligible": 115
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}

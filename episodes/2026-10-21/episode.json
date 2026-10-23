@@ -1,0 +1,640 @@
+{
+  "id": "2026-10-21",
+  "createdAt": "2026-10-21T22:34:05.583Z",
+  "dateLabel": "10月21日（水）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.2,
+  "generator": "template",
+  "title": "10月21日（水） 旧世代NVIDIAを循環利用、クラウド接続の「自社専用AI基盤」を1GPUから提供 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月21日（水）のテックニュースをお届けします。今日の見出しは5本です。1つ目、旧世代NVIDIAを循環利用、クラウド接続の「自社専用AI基盤」を1GPUから提供。2つ目、PHPの「緊急」レベルの脆弱性、開発元が修正バージョン公開 「直ちにアップデートを」。3つ目、Cloudflare、TypeScriptをRustに移植した「tsrs」を発表。TypeScript 7より最大で70％少ないメモリで8倍速。今後、LSPなどTypeScriptの全機能をサポート予定。4つ目、高市総理「大至急、PHPパッチ適用を」Xで異例の要請 エンジニアは評価「経営層に伝わる」。5つ目、Year-old AI lab Flapping Airplanes raises $1B at a $6B valuation。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "旧世代NVIDIAを循環利用、クラウド接続の「自社専用AI基盤」を1GPUから提供",
+      "body": "1本目。ITmedia AI+から、旧世代NVIDIAを循環利用、クラウド接続の「自社専用AI基盤」を1GPUから提供。エクストリームーDら3社は、中古GPUを活用したAIインフラサービス「Raplase RCA」を開始した。最短即日かつ1GPUから定額利用でき、柔軟な構成変更にも対応する。機密データを扱う製造業が求める「プライベートAI」を低コストで実現する。クラウド基盤の話は、その上で動くサービス全部に影響します。地味ですが土台の話です。",
+      "refs": [
+        {
+          "title": "旧世代NVIDIAを循環利用、クラウド接続の「自社専用AI基盤」を1GPUから提供",
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2610/22/news039.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-21T21:45:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "PHPの「緊急」レベルの脆弱性、開発元が修正バージョン公開 「直ちにアップデートを」",
+      "body": "2本目。はてなブックマーク テクノロジーから、PHPの「緊急」レベルの脆弱性、開発元が修正バージョン公開 「直ちにアップデートを」。プログラミング言語「PHP」開発プロジェクトは10月21日（協定世界時）、「緊急」レベルの脆弱性2件を修正したPHP 8.5.12／8.4.27／8.3.36／8.2.35を公開したと発表した。20日に予告していたセキュリティアップデートに関するもので、攻撃者が遠隔で任意のコードを実行できてしまう脆弱性などを修正する。「全てのPHPユー...このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。プロダクトの変化は、ユーザーの不満がどこにあったかを教えてくれます。",
+      "refs": [
+        {
+          "title": "PHPの「緊急」レベルの脆弱性、開発元が修正バージョン公開 「直ちにアップデートを」",
+          "url": "https://www.itmedia.co.jp/news/article/2610/22/2000002480/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-21T16:04:10.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Cloudflare、TypeScriptをRustに移植した「tsrs」を発表。TypeScript 7より最大で70％少ないメモリで8倍速。今後、LSPなどTypeScriptの全機能をサポート予定",
+      "body": "3本目。Publickeyから、Cloudflare、TypeScriptをRustに移植した「tsrs」を発表。TypeScript 7より最大で70％少ないメモリで8倍速。今後、LSPなどTypeScriptの全機能をサポート予定。Cloudflareは、TypeScriptをRustに移植した「tsrs」を発表しました。 下記は、Cloudflareに買収されたVoidZeroによるtsrsに関するポストです。VoidZeroもこのtsrsの開発に関わっています。 ...開発者向けの話題は、技術職以外でも「現場が何を楽に感じるか」を知る手がかりになります。",
+      "refs": [
+        {
+          "title": "Cloudflare、TypeScriptをRustに移植した「tsrs」を発表。TypeScript 7より最大で70％少ないメモリで8倍速。今後、LSPなどTypeScriptの全機能をサポート予定",
+          "url": "https://www.publickey1.jp/blog/26/cloudflaretypescriptrusttsrstypescript_7708lsptypescript.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-10-21T15:42:36.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "高市総理「大至急、PHPパッチ適用を」Xで異例の要請 エンジニアは評価「経営層に伝わる」",
+      "body": "4本目。ITmedia NEWSから、高市総理「大至急、PHPパッチ適用を」Xで異例の要請 エンジニアは評価「経営層に伝わる」。首相が個別のソフトウェア脆弱性について、Xで直接対応を呼び掛けるのは異例。エンジニアからは「総理が発信したことにより、経営層にもリスクが認知される」など一定の評価が出ている。事故のニュースは、裏返すと「何を備えていれば防げたか」の教材になります。",
+      "refs": [
+        {
+          "title": "高市総理「大至急、PHPパッチ適用を」Xで異例の要請 エンジニアは評価「経営層に伝わる」",
+          "url": "https://www.itmedia.co.jp/news/article/2610/22/2000002483/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-21T21:31:02.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Year-old AI lab Flapping Airplanes raises $1B at a $6B valuation",
+      "body": "5本目。TechCrunchから、Year-old AI lab Flapping Airplanes raises $1B at a $6B valuation。資金調達のニュースは、その会社が次の1、2年で採用を増やすサインでもあります。転職先候補として覚えておく価値があります。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Year-old AI lab Flapping Airplanes raises $1B at a $6B valuation",
+          "url": "https://techcrunch.com/2026/10/21/year-old-ai-lab-flapping-airplanes-raises-1b-at-a-6b-valuation/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-21T20:57:40.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。シード、シリーズA・B・C、読み方はシード、シリーズエー。スタートアップの資金調達の段階です。シードは製品を作り始める頃、シリーズAはPMFが見え始めた頃、BやCは営業や採用で一気に広げる段階を指します。段階ごとに社内の整い具合が全く違います。「整っていない環境を面白がれるか」は自己分析の材料になります。次に、LLM、大規模言語モデル、読み方はエルエルエム。大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。次に、バリュエーション、読み方はバリュエーション。企業の値段のことです。調達時に「時価総額いくらとして、何%の株を渡すか」で決まります。調達額そのものより、バリュエーションと調達額の比率のほうが、その会社の勢いを表します。最後に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。職務経歴書は、前職の業務をそのまま書くより「どの課題を、どう測って、どう改善したか」に翻訳すると、業界が違っても伝わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Blacksmith hits unicorn valuation after Sequoia leads Series C。TechCrunchから、Legal AI startup Legora raises $550M Series E at $8.8B valuation。ITmedia AI+から、PHPの脆弱性、OpenAIのAIで発見 「同様の発見、今後数カ月で急増」。Hacker News フロントページから、Claude Duet。Hacker News フロントページから、Oracle Security Alert Advisory – CVE-2026-91403。SaaStrから、Meta’s Muse and Our AI VP of Revenue 10K Built Their Own ‘Secret’ Mailbox to Work Together. Then They Came Up With a Safe Word.Hacker News フロントページから、AWS rates PHP RCE as Important so Amazon Linux 2023 patch may take 20 days。はてなブックマーク テクノロジーから、PHPの重大脆弱性「PHP2Shell」はセキュリティ企業のCalifとWizがAIを用いて発見しOpenAIの枠組みを使って対策したことが判明。はてなブックマーク テクノロジーから、Patch the Planet — OpenAI。OpenAI Newsから、OpenAI models are coming to Google Cloud。ITmedia AI+から、AIに200万円渡してネットショップを1年運営させてみた──Alibabaの研究者らがシミュレーション 資産14倍の例も。OpenAI Newsから、Broad access through consistent standards。以上です。",
+      "refs": [
+        {
+          "title": "Blacksmith hits unicorn valuation after Sequoia leads Series C",
+          "url": "https://techcrunch.com/2026/10/21/blacksmith-hits-unicorn-valuation-after-sequoia-leads-series-c/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-21T17:18:27.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Legal AI startup Legora raises $550M Series E at $8.8B valuation",
+          "url": "https://techcrunch.com/2026/10/21/legal-ai-startup-legora-raises-550m-series-e-at-8-8b-valuation/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-21T18:51:56.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "PHPの脆弱性、OpenAIのAIで発見 「同様の発見、今後数カ月で急増」",
+          "url": "https://www.itmedia.co.jp/aiplus/article/2610/22/2000002482/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-21T16:12:28.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Claude Duet",
+          "url": "https://claude.com/resources/articles/claude-duet",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-21T19:40:18.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        },
+        {
+          "title": "Oracle Security Alert Advisory – CVE-2026-91403",
+          "url": "https://www.oracle.com/security-alerts/alert-cve-2026-91403.html",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-21T22:17:19.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Meta’s Muse and Our AI VP of Revenue 10K Built Their Own ‘Secret’ Mailbox to Work Together. Then They Came Up With a Safe Word.",
+          "url": "https://www.saastr.com/metas-muse-and-our-ai-vp-of-revenue-10k-built-their-own-secret-mailbox-to-work-together-then-they-came-up-with-a-safe-word/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-21T14:10:45.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AWS rates PHP RCE as Important so Amazon Linux 2023 patch may take 20 days",
+          "url": "https://github.com/amazonlinux/amazon-linux-2023/issues/1148",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-21T21:12:59.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "PHPの重大脆弱性「PHP2Shell」はセキュリティ企業のCalifとWizがAIを用いて発見しOpenAIの枠組みを使って対策したことが判明",
+          "url": "https://gigazine.net/news/20261022-php2shell-wiz-openai-calif/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-21T15:19:11.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Patch the Planet — OpenAI",
+          "url": "https://patchtheplanet.org/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-21T17:03:55.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "OpenAI models are coming to Google Cloud",
+          "url": "https://openai.com/index/openai-models-google-cloud",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-10-21T12:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AIに200万円渡してネットショップを1年運営させてみた──Alibabaの研究者らがシミュレーション 資産14倍の例も",
+          "url": "https://www.itmedia.co.jp/news/article/2610/21/2000002421/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-21T03:00:00.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "Broad access through consistent standards",
+          "url": "https://openai.com/index/broad-access-through-consistent-standards",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-10-21T21:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "旧世代NVIDIAを循環利用、クラウド接続の「自社専用AI基盤」を1GPUから提供",
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2610/22/news039.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-21T21:45:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "PHPの「緊急」レベルの脆弱性、開発元が修正バージョン公開 「直ちにアップデートを」",
+        "url": "https://www.itmedia.co.jp/news/article/2610/22/2000002480/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-21T16:04:10.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Cloudflare、TypeScriptをRustに移植した「tsrs」を発表。TypeScript 7より最大で70％少ないメモリで8倍速。今後、LSPなどTypeScriptの全機能をサポート予定",
+        "url": "https://www.publickey1.jp/blog/26/cloudflaretypescriptrusttsrstypescript_7708lsptypescript.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-10-21T15:42:36.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "高市総理「大至急、PHPパッチ適用を」Xで異例の要請 エンジニアは評価「経営層に伝わる」",
+        "url": "https://www.itmedia.co.jp/news/article/2610/22/2000002483/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-21T21:31:02.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Year-old AI lab Flapping Airplanes raises $1B at a $6B valuation",
+        "url": "https://techcrunch.com/2026/10/21/year-old-ai-lab-flapping-airplanes-raises-1b-at-a-6b-valuation/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-21T20:57:40.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Blacksmith hits unicorn valuation after Sequoia leads Series C",
+        "url": "https://techcrunch.com/2026/10/21/blacksmith-hits-unicorn-valuation-after-sequoia-leads-series-c/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-21T17:18:27.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Legal AI startup Legora raises $550M Series E at $8.8B valuation",
+        "url": "https://techcrunch.com/2026/10/21/legal-ai-startup-legora-raises-550m-series-e-at-8-8b-valuation/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-21T18:51:56.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "PHPの脆弱性、OpenAIのAIで発見 「同様の発見、今後数カ月で急増」",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2610/22/2000002482/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-21T16:12:28.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Claude Duet",
+        "url": "https://claude.com/resources/articles/claude-duet",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-21T19:40:18.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "Oracle Security Alert Advisory – CVE-2026-91403",
+        "url": "https://www.oracle.com/security-alerts/alert-cve-2026-91403.html",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-21T22:17:19.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Meta’s Muse and Our AI VP of Revenue 10K Built Their Own ‘Secret’ Mailbox to Work Together. Then They Came Up With a Safe Word.",
+        "url": "https://www.saastr.com/metas-muse-and-our-ai-vp-of-revenue-10k-built-their-own-secret-mailbox-to-work-together-then-they-came-up-with-a-safe-word/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-21T14:10:45.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AWS rates PHP RCE as Important so Amazon Linux 2023 patch may take 20 days",
+        "url": "https://github.com/amazonlinux/amazon-linux-2023/issues/1148",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-21T21:12:59.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "PHPの重大脆弱性「PHP2Shell」はセキュリティ企業のCalifとWizがAIを用いて発見しOpenAIの枠組みを使って対策したことが判明",
+        "url": "https://gigazine.net/news/20261022-php2shell-wiz-openai-calif/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-21T15:19:11.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Patch the Planet — OpenAI",
+        "url": "https://patchtheplanet.org/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-21T17:03:55.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAI models are coming to Google Cloud",
+        "url": "https://openai.com/index/openai-models-google-cloud",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-10-21T12:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AIに200万円渡してネットショップを1年運営させてみた──Alibabaの研究者らがシミュレーション 資産14倍の例も",
+        "url": "https://www.itmedia.co.jp/news/article/2610/21/2000002421/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-21T03:00:00.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Broad access through consistent standards",
+        "url": "https://openai.com/index/broad-access-through-consistent-standards",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-10-21T21:00:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "series",
+      "term": "シード / シリーズA・B・C",
+      "reading": "シード、シリーズエー",
+      "category": "スタートアップ",
+      "level": 1,
+      "definition": "スタートアップの資金調達の段階です。シードは製品を作り始める頃、シリーズAはPMFが見え始めた頃、BやCは営業や採用で一気に広げる段階を指します。",
+      "interview": "段階ごとに社内の整い具合が全く違います。「整っていない環境を面白がれるか」は自己分析の材料になります。"
+    },
+    {
+      "id": "llm",
+      "term": "LLM（大規模言語モデル）",
+      "reading": "エルエルエム",
+      "category": "AI",
+      "level": 1,
+      "definition": "大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。",
+      "interview": "「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。"
+    },
+    {
+      "id": "valuation",
+      "term": "バリュエーション",
+      "reading": "バリュエーション",
+      "category": "スタートアップ",
+      "level": 2,
+      "definition": "企業の値段のことです。調達時に「時価総額いくらとして、何%の株を渡すか」で決まります。",
+      "interview": "調達額そのものより、バリュエーションと調達額の比率のほうが、その会社の勢いを表します。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 709
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 181
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 774
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 762
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 819
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 235
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": false,
+      "error": "フィードとして解釈できる項目が 0 件",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+          "error": "フィードとして解釈できる項目が 0 件"
+        },
+        {
+          "url": "https://japan.cnet.com/rss/index.rdf",
+          "error": "フィードとして解釈できる項目が 0 件"
+        },
+        {
+          "url": "https://d1xqizffvflffl.cloudfront.net/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://d1xqizffvflffl.cloudfront.net/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://d1xqizffvflffl.cloudfront.net/rss.xml",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://d1xqizffvflffl.cloudfront.net/atom.xml",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 4533
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 726
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 449
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 492
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1744
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 718
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 9,
+    "fetched": 180,
+    "unique": 169,
+    "eligible": 109
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 65.01
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "旧世代NVIDIAを循環利用、クラウド接続の「自社専用AI基盤」を1GPUから提供",
+      "startSec": 65.01,
+      "endSec": 106.14
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "PHPの「緊急」レベルの脆弱性、開発元が修正バージョン公開 「直ちにアップデートを」",
+      "startSec": 106.14,
+      "endSec": 163.82
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Cloudflare、TypeScriptをRustに移植した「tsrs」を発表。TypeScript 7より最大で70％少ないメモリで8倍速。今後、LSPなどTypeScriptの全機能をサポート予定",
+      "startSec": 163.82,
+      "endSec": 205.25
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "高市総理「大至急、PHPパッチ適用を」Xで異例の要請 エンジニアは評価「経営層に伝わる」",
+      "startSec": 205.25,
+      "endSec": 239.23
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Year-old AI lab Flapping Airplanes raises $1B at a $6B valuation",
+      "startSec": 239.23,
+      "endSec": 276.14
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 276.14,
+      "endSec": 382.66
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 382.66,
+      "endSec": 395.93
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 395.93,
+      "endSec": 510.86
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 510.86,
+      "endSec": 521.33
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 25024044,
+    "durationSec": 521.33
+  }
+}

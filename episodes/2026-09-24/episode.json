@@ -1,0 +1,451 @@
+{
+  "id": "2026-09-24",
+  "createdAt": "2026-09-24T22:35:03.338Z",
+  "dateLabel": "9月24日（木）",
+  "durationMin": 10,
+  "estimatedMinutes": 6.4,
+  "generator": "template",
+  "title": "9月24日（木） 日本発スタートアップのエッジAIチップがNVIDIA超え、AI処理性能は3.36PFLOPS ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。9月24日（木）のテックニュースをお届けします。今日の見出しは3本です。1つ目、日本発スタートアップのエッジAIチップがNVIDIA超え、AI処理性能は3.36PFLOPS。2つ目、Meet the next wave of VCs judging Startup Battlefield 200 at TechCrunch Disrupt 2026。3つ目、Go言語で書かれた高速なIDE「Rune」、オープンソースで公開。ターミナルとコマンドプロンプト中心の開発環境、複数リモートノードをローカルのように操作可能。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "日本発スタートアップのエッジAIチップがNVIDIA超え、AI処理性能は3.36PFLOPS",
+      "body": "1本目。ITmedia AI+から、日本発スタートアップのエッジAIチップがNVIDIA超え、AI処理性能は3.36PFLOPS。AIアクセラレータを手掛ける日本発スタートアップのEdgeCortix（エッジコーティックス）は、最大3.36PFLOPSのAI処理性能を発揮するフィジカルAI向けの次世代スケーラブルAIチップレットプラットフォーム「RAIDEN」を発表した。スタートアップの動きは、業界がこれから向かう方向の先行指標になります。",
+      "refs": [
+        {
+          "title": "日本発スタートアップのエッジAIチップがNVIDIA超え、AI処理性能は3.36PFLOPS",
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2609/25/news063.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-09-24T21:45:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Meet the next wave of VCs judging Startup Battlefield 200 at TechCrunch Disrupt 2026",
+      "body": "2本目。TechCrunchから、Meet the next wave of VCs judging Startup Battlefield 200 at TechCrunch Disrupt 2026。このニュースはTechCrunchでも同時に取り上げられています。それだけ注目度が高い話題です。小さい会社の挑戦は、数年後に大手が追随することが多い領域です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Meet the next wave of VCs judging Startup Battlefield 200 at TechCrunch Disrupt 2026",
+          "url": "https://techcrunch.com/2026/09/24/meet-the-next-wave-of-vcs-judging-startup-battlefield-200-at-techcrunch-disrupt-2026/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-24T16:03:36.000Z",
+          "alsoReportedBy": [
+            "TechCrunch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Go言語で書かれた高速なIDE「Rune」、オープンソースで公開。ターミナルとコマンドプロンプト中心の開発環境、複数リモートノードをローカルのように操作可能",
+      "body": "3本目。Publickeyから、Go言語で書かれた高速なIDE「Rune」、オープンソースで公開。ターミナルとコマンドプロンプト中心の開発環境、複数リモートノードをローカルのように操作可能。開発ツールベンダのUnstablebuildは、Go言語製のIDE「Rune」をオープンソースで公開したことを発表しました。 Runeの画面 RuneはGo言語によるネイティブアプリケーションとして提供される高速なIDEです。GPUによる描...このニュースははてなブックマーク テクノロジーでも同時に取り上げられています。それだけ注目度が高い話題です。開発者向けの話題は、技術職以外でも「現場が何を楽に感じるか」を知る手がかりになります。",
+      "refs": [
+        {
+          "title": "Go言語で書かれた高速なIDE「Rune」、オープンソースで公開。ターミナルとコマンドプロンプト中心の開発環境、複数リモートノードをローカルのように操作可能",
+          "url": "https://www.publickey1.jp/blog/26/goiderune.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-09-24T15:45:08.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。最後に、MVP、読み方はエムブイピー。仮説を検証できる最小限のプロダクトです。全部作ってから出すのではなく、いちばん確かめたい一点だけ作って世に出します。完璧を待たずに小さく出して学ぶ、という進め方そのものです。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。求人票を見るときは、事業フェーズを先に確認してみてください。資金調達直後なのか、黒字化を目指している段階なのかで、求められる動き方がまるで違います。",
+      "refs": []
+    },
+    {
+      "id": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Databricks buys Row Zero and is scouting for more startups to acquire。SaaStrから、Stripe’s AI CRO on the Fastest-Growing AI Companies: 175% Growth, 48% of Revenue From Outside the Home Market, and Agents About to Read More Stripe Docs Than Human。TechCrunchから、Google tests letting Gemini call businesses for you。Hacker News フロントページから、Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design。CNET Japanから、クラウドAI全盛なのに、なぜスマホ本体にもAI処理性能が必要なのか--クアルコムの回答は。CNET Japanから、Meta、たまごっちのようなAIエージェント端末「Muse Charm」。以上です。",
+      "refs": [
+        {
+          "title": "Databricks buys Row Zero and is scouting for more startups to acquire",
+          "url": "https://techcrunch.com/2026/09/24/databricks-buys-row-zero-and-is-scouting-for-more-startups-to-acquire/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-24T17:07:55.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Stripe’s AI CRO on the Fastest-Growing AI Companies: 175% Growth, 48% of Revenue From Outside the Home Market, and Agents About to Read More Stripe Docs Than Human",
+          "url": "https://www.saastr.com/stripes-ai-cro-on-the-fastest-growing-ai-companies-175-growth-48-of-revenue-from-outside-the-home-market-and-agents-about-to-read-more-stripe-docs-than-human/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-09-24T14:10:05.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Google tests letting Gemini call businesses for you",
+          "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-09-24T16:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
+          "url": "https://github.com/devdotfast/whiteboard",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-09-24T17:21:36.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "クラウドAI全盛なのに、なぜスマホ本体にもAI処理性能が必要なのか--クアルコムの回答は",
+          "url": "https://japan.cnet.com/article/35252935/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-09-24T22:10:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Meta、たまごっちのようなAIエージェント端末「Muse Charm」",
+          "url": "https://japan.cnet.com/article/35252936/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-09-24T18:40:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "日本発スタートアップのエッジAIチップがNVIDIA超え、AI処理性能は3.36PFLOPS",
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2609/25/news063.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-09-24T21:45:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Meet the next wave of VCs judging Startup Battlefield 200 at TechCrunch Disrupt 2026",
+        "url": "https://techcrunch.com/2026/09/24/meet-the-next-wave-of-vcs-judging-startup-battlefield-200-at-techcrunch-disrupt-2026/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-24T16:03:36.000Z",
+        "alsoReportedBy": [
+          "TechCrunch"
+        ]
+      },
+      {
+        "title": "Go言語で書かれた高速なIDE「Rune」、オープンソースで公開。ターミナルとコマンドプロンプト中心の開発環境、複数リモートノードをローカルのように操作可能",
+        "url": "https://www.publickey1.jp/blog/26/goiderune.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-09-24T15:45:08.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Databricks buys Row Zero and is scouting for more startups to acquire",
+        "url": "https://techcrunch.com/2026/09/24/databricks-buys-row-zero-and-is-scouting-for-more-startups-to-acquire/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-24T17:07:55.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Stripe’s AI CRO on the Fastest-Growing AI Companies: 175% Growth, 48% of Revenue From Outside the Home Market, and Agents About to Read More Stripe Docs Than Human",
+        "url": "https://www.saastr.com/stripes-ai-cro-on-the-fastest-growing-ai-companies-175-growth-48-of-revenue-from-outside-the-home-market-and-agents-about-to-read-more-stripe-docs-than-human/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-09-24T14:10:05.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Google tests letting Gemini call businesses for you",
+        "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-09-24T16:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
+        "url": "https://github.com/devdotfast/whiteboard",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-09-24T17:21:36.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "クラウドAI全盛なのに、なぜスマホ本体にもAI処理性能が必要なのか--クアルコムの回答は",
+        "url": "https://japan.cnet.com/article/35252935/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-09-24T22:10:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Meta、たまごっちのようなAIエージェント端末「Muse Charm」",
+        "url": "https://japan.cnet.com/article/35252936/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-09-24T18:40:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "mvp",
+      "term": "MVP",
+      "reading": "エムブイピー",
+      "category": "プロダクト",
+      "level": 1,
+      "definition": "仮説を検証できる最小限のプロダクトです。全部作ってから出すのではなく、いちばん確かめたい一点だけ作って世に出します。",
+      "interview": "完璧を待たずに小さく出して学ぶ、という進め方そのものです。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 816
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 288
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 452
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 492
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 768
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 764
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1493
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 485
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 305
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 289
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 875
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 395
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 192,
+    "eligible": 116
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 42.95
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "日本発スタートアップのエッジAIチップがNVIDIA超え、AI処理性能は3.36PFLOPS",
+      "startSec": 42.95,
+      "endSec": 80.59
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Meet the next wave of VCs judging Startup Battlefield 200 at TechCrunch Disrupt 2026",
+      "startSec": 80.59,
+      "endSec": 111.83
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Go言語で書かれた高速なIDE「Rune」、オープンソースで公開。ターミナルとコマンドプロンプト中心の開発環境、複数リモートノードをローカルのように操作可能",
+      "startSec": 111.83,
+      "endSec": 161.33
+    },
+    {
+      "segmentId": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 161.33,
+      "endSec": 213.38
+    },
+    {
+      "segmentId": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 213.38,
+      "endSec": 227.56
+    },
+    {
+      "segmentId": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 227.56,
+      "endSec": 294.22
+    },
+    {
+      "segmentId": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 294.22,
+      "endSec": 304.69
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 14625324,
+    "durationSec": 304.69
+  }
+}
