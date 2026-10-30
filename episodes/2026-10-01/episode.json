@@ -1,0 +1,447 @@
+{
+  "id": "2026-10-01",
+  "createdAt": "2026-10-01T23:17:18.249Z",
+  "dateLabel": "10月1日（木）",
+  "durationMin": 10,
+  "estimatedMinutes": 6.8,
+  "generator": "template",
+  "title": "10月1日（木） ChatGPTにAIでバーチャル試着機能とカメラでの書類スキャン→PDF化機能 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月1日（木）のテックニュースをお届けします。今日の見出しは3本です。1つ目、ChatGPTにAIでバーチャル試着機能とカメラでの書類スキャン→PDF化機能。2つ目、Kevin Mandia’s new ‘agent swarm’ security startup Armadin raises $255.5M at $2.5B valuation。3つ目、Google Cloud、ローカルマシンにインストールできる大規模分散型マルチモデルDB「Spanner Omni」正式版リリースを発表。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "ChatGPTにAIでバーチャル試着機能とカメラでの書類スキャン→PDF化機能",
+      "body": "1本目。ITmedia AI+から、ChatGPTにAIでバーチャル試着機能とカメラでの書類スキャン→PDF化機能。OpenAIは、ChatGPTにバーチャル試着やお気に入り保存などの新機能を追加した。商品情報カードから自身の写真を使って服やアクセサリーを着用した姿を生成できる。気になった商品の整理機能も備える。また、iOSアプリに、連続撮影した書類を自動で1つのPDFにまとめて送信できるスキャン機能も導入した。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "ChatGPTにAIでバーチャル試着機能とカメラでの書類スキャン→PDF化機能",
+          "url": "https://www.itmedia.co.jp/news/article/2610/02/2000001945/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-01T22:17:12.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Kevin Mandia’s new ‘agent swarm’ security startup Armadin raises $255.5M at $2.5B valuation",
+      "body": "2本目。TechCrunchから、Kevin Mandia’s new ‘agent swarm’ security startup Armadin raises $255.5M at $2.5B valuation。小さい会社の挑戦は、数年後に大手が追随することが多い領域です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Kevin Mandia’s new ‘agent swarm’ security startup Armadin raises $255.5M at $2.5B valuation",
+          "url": "https://techcrunch.com/2026/10/01/kevin-mandias-new-agent-swarm-security-startup-armadin-raises-255-5m-at-2-5b-valuation/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-01T21:55:22.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Google Cloud、ローカルマシンにインストールできる大規模分散型マルチモデルDB「Spanner Omni」正式版リリースを発表",
+      "body": "3本目。Publickeyから、Google Cloud、ローカルマシンにインストールできる大規模分散型マルチモデルDB「Spanner Omni」正式版リリースを発表。Google Cloudは、大規模分散データベースとしてリレーショナルモデルだけでなくグラフ型やキーバリュー型、ベクトル検索、テキスト検索などのマルチモデルに対応したデータベースソフトウェア「Spanner Omni」の正式版リリースを発表...クラウド基盤の話は、その上で動くサービス全部に影響します。地味ですが土台の話です。",
+      "refs": [
+        {
+          "title": "Google Cloud、ローカルマシンにインストールできる大規模分散型マルチモデルDB「Spanner Omni」正式版リリースを発表",
+          "url": "https://www.publickey1.jp/blog/26/google_clouddbspanner_omni.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-10-01T18:28:43.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。バーンレート、ランウェイ、読み方はバーンレート、ランウェイ。バーンレートは月にいくら現金が減るか、ランウェイはその調子であと何か月もつかです。ランウェイ12か月を切ると、次の資金調達が現実的な課題になります。転職先を選ぶときに、直近の調達時期を見てランウェイを逆算する、という視点は持っておいて損がありません。最後に、AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。志望動機は「業界が伸びているから」だけだと弱くなります。どのニュースを見て何を面白いと思ったのか、具体的な一本があると説得力が変わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。SaaStrから、20VC x SaaStr: Anthropic’s S-1 Leaks, Instinct Hits $10 Billion in 33 Days, AMD Buys World Labs, and Meta Poaches MongoDB’s CEO。Hacker News フロントページから、Show HN: Rhun, an open-source code editor written in assembly。TechCrunchから、ChatGPT can now virtually try on clothes for you。SaaStrから、The 10 Most Important Learnings From a16z’s Latest State of Markets: Horizontal B2B Trades at 2.7x Revenue, New Startups Are Growing 500%+, and 55% of Unicorns Have Under 2 Years of Runway。TechCrunchから、Shopify debuts Canvas, a way to build online stores by chatting with AI。ITmedia AI+から、「Claude」3倍高速化の裏で、Anthropic開発者が「あえてしなかったこと」：899th Lap。以上です。",
+      "refs": [
+        {
+          "title": "20VC x SaaStr: Anthropic’s S-1 Leaks, Instinct Hits $10 Billion in 33 Days, AMD Buys World Labs, and Meta Poaches MongoDB’s CEO",
+          "url": "https://www.saastr.com/20vc-x-saastr-anthropics-s-1-leaks-instinct-hits-10-billion-in-33-days-amd-buys-world-labs-and-meta-poaches-mongodbs-ceo/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-01T16:01:10.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Show HN: Rhun, an open-source code editor written in assembly",
+          "url": "https://rhun.app/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-01T20:32:18.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "ChatGPT can now virtually try on clothes for you",
+          "url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-01T19:21:53.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "The 10 Most Important Learnings From a16z’s Latest State of Markets: Horizontal B2B Trades at 2.7x Revenue, New Startups Are Growing 500%+, and 55% of Unicorns Have Under 2 Years of Runway",
+          "url": "https://www.saastr.com/the-10-most-important-learnings-from-a16zs-latest-state-of-markets-horizontal-b2b-trades-at-2-7x-revenue-new-startups-are-growing-500-and-55-of-unicorns-have-under-2-years-of-runway/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-01T14:10:59.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Shopify debuts Canvas, a way to build online stores by chatting with AI",
+          "url": "https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-01T16:44:35.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「Claude」3倍高速化の裏で、Anthropic開発者が「あえてしなかったこと」：899th Lap",
+          "url": "https://kn.itmedia.co.jp/kn/article/2610/02/2000001932/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-01T22:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "ChatGPTにAIでバーチャル試着機能とカメラでの書類スキャン→PDF化機能",
+        "url": "https://www.itmedia.co.jp/news/article/2610/02/2000001945/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-01T22:17:12.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Kevin Mandia’s new ‘agent swarm’ security startup Armadin raises $255.5M at $2.5B valuation",
+        "url": "https://techcrunch.com/2026/10/01/kevin-mandias-new-agent-swarm-security-startup-armadin-raises-255-5m-at-2-5b-valuation/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-01T21:55:22.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Google Cloud、ローカルマシンにインストールできる大規模分散型マルチモデルDB「Spanner Omni」正式版リリースを発表",
+        "url": "https://www.publickey1.jp/blog/26/google_clouddbspanner_omni.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-10-01T18:28:43.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "20VC x SaaStr: Anthropic’s S-1 Leaks, Instinct Hits $10 Billion in 33 Days, AMD Buys World Labs, and Meta Poaches MongoDB’s CEO",
+        "url": "https://www.saastr.com/20vc-x-saastr-anthropics-s-1-leaks-instinct-hits-10-billion-in-33-days-amd-buys-world-labs-and-meta-poaches-mongodbs-ceo/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-01T16:01:10.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Show HN: Rhun, an open-source code editor written in assembly",
+        "url": "https://rhun.app/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-01T20:32:18.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ChatGPT can now virtually try on clothes for you",
+        "url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-01T19:21:53.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "The 10 Most Important Learnings From a16z’s Latest State of Markets: Horizontal B2B Trades at 2.7x Revenue, New Startups Are Growing 500%+, and 55% of Unicorns Have Under 2 Years of Runway",
+        "url": "https://www.saastr.com/the-10-most-important-learnings-from-a16zs-latest-state-of-markets-horizontal-b2b-trades-at-2-7x-revenue-new-startups-are-growing-500-and-55-of-unicorns-have-under-2-years-of-runway/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-01T14:10:59.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Shopify debuts Canvas, a way to build online stores by chatting with AI",
+        "url": "https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-01T16:44:35.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「Claude」3倍高速化の裏で、Anthropic開発者が「あえてしなかったこと」：899th Lap",
+        "url": "https://kn.itmedia.co.jp/kn/article/2610/02/2000001932/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-01T22:00:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "burn-runway",
+      "term": "バーンレート / ランウェイ",
+      "reading": "バーンレート、ランウェイ",
+      "category": "スタートアップ",
+      "level": 2,
+      "definition": "バーンレートは月にいくら現金が減るか、ランウェイはその調子であと何か月もつかです。ランウェイ12か月を切ると、次の資金調達が現実的な課題になります。",
+      "interview": "転職先を選ぶときに、直近の調達時期を見てランウェイを逆算する、という視点は持っておいて損がありません。"
+    },
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 623
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 380
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 874
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 785
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 794
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 292
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1412
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 767
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 499
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 548
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 2827
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 694
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 195,
+    "eligible": 117
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 39.63
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "ChatGPTにAIでバーチャル試着機能とカメラでの書類スキャン→PDF化機能",
+      "startSec": 39.63,
+      "endSec": 90.14
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Kevin Mandia’s new ‘agent swarm’ security startup Armadin raises $255.5M at $2.5B valuation",
+      "startSec": 90.14,
+      "endSec": 117.03
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Google Cloud、ローカルマシンにインストールできる大規模分散型マルチモデルDB「Spanner Omni」正式版リリースを発表",
+      "startSec": 117.03,
+      "endSec": 153.29
+    },
+    {
+      "segmentId": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 153.29,
+      "endSec": 213.93
+    },
+    {
+      "segmentId": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 213.93,
+      "endSec": 227.21
+    },
+    {
+      "segmentId": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 227.21,
+      "endSec": 311.82
+    },
+    {
+      "segmentId": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 311.82,
+      "endSec": 322.29
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 15470124,
+    "durationSec": 322.29
+  }
+}

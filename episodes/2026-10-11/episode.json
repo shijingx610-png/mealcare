@@ -1,0 +1,442 @@
+{
+  "id": "2026-10-11",
+  "createdAt": "2026-10-11T23:02:13.835Z",
+  "dateLabel": "10月11日（日）",
+  "durationMin": 10,
+  "estimatedMinutes": 7.2,
+  "generator": "template",
+  "title": "10月11日（日） 「AIに指示するだけでひとりでそこそこのゲームが作れてしまいます」ゲームクリエイター・堀井雄二氏がAIを使い30分ほどでゲームを作成し、様々な反応が寄せられる ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月11日（日）のテックニュースをお届けします。今日の見出しは3本です。1つ目、「AIに指示するだけでひとりでそこそこのゲームが作れてしまいます」ゲームクリエイター・堀井雄二氏がAIを使い30分ほどでゲームを作成し、様々な反応が寄せられる。2つ目、Will the HomeView be Apple’s first smart home success?。3つ目、Jason’s Takes on This Week’s 20VC: Loyalty Changed for Good, Agents Now Pick Your Vendors, and When to Take the $2 Billion。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "「AIに指示するだけでひとりでそこそこのゲームが作れてしまいます」ゲームクリエイター・堀井雄二氏がAIを使い30分ほどでゲームを作成し、様々な反応が寄せられる",
+      "body": "1本目。はてなブックマーク テクノロジーから、「AIに指示するだけでひとりでそこそこのゲームが作れてしまいます」ゲームクリエイター・堀井雄二氏がAIを使い30分ほどでゲームを作成し、様々な反応が寄せられる。堀井雄二 @YujiHorii その昔、PCで『ポートピア連続殺人事件』を作った時は、自分で物語を考え、絵も描いて、プログラムもして、ひとりでゲームを作りました。そして今、ＡＩを使えば、絵を描けなくても、プログラムしなくても、ＡＩに指図するだけで、ひとりで、そこそこのゲームを作れてしまいます。ホントびっくりで...AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。採用や働き方のニュースは、そのまま自分の選択肢の話です。",
+      "refs": [
+        {
+          "title": "「AIに指示するだけでひとりでそこそこのゲームが作れてしまいます」ゲームクリエイター・堀井雄二氏がAIを使い30分ほどでゲームを作成し、様々な反応が寄せられる",
+          "url": "https://togetter.com/li/2756939",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-11T12:39:51.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Will the HomeView be Apple’s first smart home success?",
+      "body": "2本目。TechCrunchから、Will the HomeView be Apple’s first smart home success?AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。プロダクトの変化は、ユーザーの不満がどこにあったかを教えてくれます。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Will the HomeView be Apple’s first smart home success?",
+          "url": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-11T21:14:40.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Jason’s Takes on This Week’s 20VC: Loyalty Changed for Good, Agents Now Pick Your Vendors, and When to Take the $2 Billion",
+      "body": "3本目。SaaStrから、Jason’s Takes on This Week’s 20VC: Loyalty Changed for Good, Agents Now Pick Your Vendors, and When to Take the $2 Billion。現場の人が何に反応したかは、公式発表からは読み取れない温度感を含んでいます。SaaSの話は、機能そのものより「誰の、どの業務を、いくらで置き換えるのか」で見ると輪郭がはっきりします。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Jason’s Takes on This Week’s 20VC: Loyalty Changed for Good, Agents Now Pick Your Vendors, and When to Take the $2 Billion",
+          "url": "https://www.saastr.com/jasons-takes-on-this-weeks-20vc-loyalty-changed-for-good-agents-now-pick-your-vendors-and-when-to-take-the-2-billion/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-11T15:09:14.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。次に、チャーンレート、読み方はチャーンレート。解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。最後に、LTV、読み方はエルティーブイ。顧客生涯価値。1人の顧客が取引を始めてから終わるまでに、合計でいくら払ってくれるかの見込み額です。LTVは「長く使ってもらえるか」の裏返し。プロダクトの良さを金額に翻訳した数字だと考えると腹落ちします。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。未経験からの転職で効くのは、知識の量より「業界の話題に自分の言葉で反応できること」です。毎朝5分の積み重ねが、そのまま面接の地力になります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Can the AI industry persuade data center opponents by getting rid of NDAs?TechCrunchから、Aaron Sorkin’s ‘Social Reckoning’ is off to a weak start。はてなブックマーク テクノロジーから、AIで浮いた時間を「もっと作る」に使っていませんか。はじめに 株式会社アイデアログで取締役CTOをしている松川です。はてなブックマーク テクノロジーから、GPU不要で驚きの精度。リアルタイム多言語文字起こしツール「hayamimi」使ってみましたー。｜ゆいまる‐IT界隈以外でAIを使いまくる2005年生まれ。日本の開発者さんっぽいリポジトリだーと思ってみたら、物凄い高性能な文字起こしツールでした。以上です。",
+      "refs": [
+        {
+          "title": "Can the AI industry persuade data center opponents by getting rid of NDAs?",
+          "url": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-11T16:52:33.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Aaron Sorkin’s ‘Social Reckoning’ is off to a weak start",
+          "url": "https://techcrunch.com/2026/10/11/aaron-sorkins-social-reckoning-is-off-to-a-weak-start/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-11T20:51:47.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AIで浮いた時間を「もっと作る」に使っていませんか",
+          "url": "https://zenn.dev/idealog/articles/a3e9cf4299b1cf",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-11T08:27:53.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "GPU不要で驚きの精度。リアルタイム多言語文字起こしツール「hayamimi」使ってみましたー。｜ゆいまる‐IT界隈以外でAIを使いまくる2005年生まれ",
+          "url": "https://note.com/humble_bobcat51/n/n64602c64db6c",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-11T08:37:11.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "「AIに指示するだけでひとりでそこそこのゲームが作れてしまいます」ゲームクリエイター・堀井雄二氏がAIを使い30分ほどでゲームを作成し、様々な反応が寄せられる",
+        "url": "https://togetter.com/li/2756939",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-11T12:39:51.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Will the HomeView be Apple’s first smart home success?",
+        "url": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-11T21:14:40.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Jason’s Takes on This Week’s 20VC: Loyalty Changed for Good, Agents Now Pick Your Vendors, and When to Take the $2 Billion",
+        "url": "https://www.saastr.com/jasons-takes-on-this-weeks-20vc-loyalty-changed-for-good-agents-now-pick-your-vendors-and-when-to-take-the-2-billion/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-11T15:09:14.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Can the AI industry persuade data center opponents by getting rid of NDAs?",
+        "url": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-11T16:52:33.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Aaron Sorkin’s ‘Social Reckoning’ is off to a weak start",
+        "url": "https://techcrunch.com/2026/10/11/aaron-sorkins-social-reckoning-is-off-to-a-weak-start/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-11T20:51:47.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AIで浮いた時間を「もっと作る」に使っていませんか",
+        "url": "https://zenn.dev/idealog/articles/a3e9cf4299b1cf",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-11T08:27:53.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "GPU不要で驚きの精度。リアルタイム多言語文字起こしツール「hayamimi」使ってみましたー。｜ゆいまる‐IT界隈以外でAIを使いまくる2005年生まれ",
+        "url": "https://note.com/humble_bobcat51/n/n64602c64db6c",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-11T08:37:11.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    },
+    {
+      "id": "churn",
+      "term": "チャーンレート",
+      "reading": "チャーンレート",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。",
+      "interview": "「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。"
+    },
+    {
+      "id": "ltv",
+      "term": "LTV",
+      "reading": "エルティーブイ",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "顧客生涯価値。1人の顧客が取引を始めてから終わるまでに、合計でいくら払ってくれるかの見込み額です。",
+      "interview": "LTVは「長く使ってもらえるか」の裏返し。プロダクトの良さを金額に翻訳した数字だと考えると腹落ちします。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 651
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 194
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1079
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 1168
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 743
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 544
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1468
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 1167
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 492
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 621
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": false,
+      "error": "fetch failed",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://hnrss.org/frontpage",
+          "error": "fetch failed"
+        },
+        {
+          "url": "https://news.ycombinator.com/rss",
+          "error": "HTTP 419"
+        }
+      ],
+      "elapsedMs": 10893
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1136
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 9,
+    "fetched": 185,
+    "unique": 176,
+    "eligible": 30
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 44.07
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "「AIに指示するだけでひとりでそこそこのゲームが作れてしまいます」ゲームクリエイター・堀井雄二氏がAIを使い30分ほどでゲームを作成し、様々な反応が寄せられる",
+      "startSec": 44.07,
+      "endSec": 102.73
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Will the HomeView be Apple’s first smart home success?",
+      "startSec": 102.73,
+      "endSec": 130.95
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Jason’s Takes on This Week’s 20VC: Loyalty Changed for Good, Agents Now Pick Your Vendors, and When to Take the $2 Billion",
+      "startSec": 130.95,
+      "endSec": 170.27
+    },
+    {
+      "segmentId": "glossary-4",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 170.27,
+      "endSec": 277.86
+    },
+    {
+      "segmentId": "career-5",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 277.86,
+      "endSec": 292.5
+    },
+    {
+      "segmentId": "roundup-6",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 292.5,
+      "endSec": 348.91
+    },
+    {
+      "segmentId": "closing-7",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 348.91,
+      "endSec": 359.38
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 17250348,
+    "durationSec": 359.38
+  }
+}

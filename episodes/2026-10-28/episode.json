@@ -1,0 +1,551 @@
+{
+  "id": "2026-10-28",
+  "createdAt": "2026-10-28T23:22:36.974Z",
+  "dateLabel": "10月28日（水）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.8,
+  "generator": "template",
+  "title": "10月28日（水） Apple、初のタッチ対応「MacBook Pro」発表 新型OLED搭載、国内価格は49万9800円から ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月28日（水）のテックニュースをお届けします。今日の見出しは5本です。1つ目、Apple、初のタッチ対応「MacBook Pro」発表 新型OLED搭載、国内価格は49万9800円から。2つ目、Google、「Gemini 4 Carbon」発表 「Argon」公開から2週間、サイバー防御能力などを強化。3つ目、オラクル、社員が業務アプリをAIで自動作成、Oracle Cloud上で共有できる「Oracle App Composer」発表。Oracle AI World 2026。4つ目、アップル、「Keynote」などを「ChatGPT」などの外部AIで操作可能に。5つ目、NEC、委託先の情報漏えいで謝罪 「セキュリティ事業を手掛ける企業として反省」。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Apple、初のタッチ対応「MacBook Pro」発表 新型OLED搭載、国内価格は49万9800円から",
+      "body": "1本目。はてなブックマーク テクノロジーから、Apple、初のタッチ対応「MacBook Pro」発表 新型OLED搭載、国内価格は49万9800円から。米Appleは10月28日（現地時間）、Macとして初めてタッチ操作に対応した新型「MacBook Pro」を発表した。新開発の「PROLED XDRディスプレイ」を搭載し、14インチと16インチの2モデルを用意する。日本では29日から予約を受け付け、11月6日に発売する。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "Apple、初のタッチ対応「MacBook Pro」発表 新型OLED搭載、国内価格は49万9800円から",
+          "url": "https://www.itmedia.co.jp/news/article/2610/29/2000002689/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-28T22:02:19.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Google、「Gemini 4 Carbon」発表 「Argon」公開から2週間、サイバー防御能力などを強化",
+      "body": "2本目。ITmedia AI+から、Google、「Gemini 4 Carbon」発表 「Argon」公開から2週間、サイバー防御能力などを強化。Googleは、フロンティアAIモデル「Gemini 4 Carbon」を発表した。サイバーセキュリティや長時間に及ぶ自律作業能力を強化し、ベンチマーク首位を獲得。ハルシネーションや不正操作への耐性も向上させた。まず一部のサイバー防御組織に限定提供し、順次公開範囲を広げる方針だ。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "Google、「Gemini 4 Carbon」発表 「Argon」公開から2週間、サイバー防御能力などを強化",
+          "url": "https://www.itmedia.co.jp/news/article/2610/29/2000002690/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-28T22:13:47.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "オラクル、社員が業務アプリをAIで自動作成、Oracle Cloud上で共有できる「Oracle App Composer」発表。Oracle AI World 2026",
+      "body": "3本目。Publickeyから、オラクル、社員が業務アプリをAIで自動作成、Oracle Cloud上で共有できる「Oracle App Composer」発表。Oracle AI World 2026。オラクルは、社員が業務アプリをAIで自動的に生成しOracle Cloudにデプロイして利用できる「Oracle App Composer」を、米国ラスベガスで開催中の年次イベント「Oracle AI World 2026」で発表しました。...身近なサービスの変化は、ユーザー目線の実感を持って語れる貴重な題材です。",
+      "refs": [
+        {
+          "title": "オラクル、社員が業務アプリをAIで自動作成、Oracle Cloud上で共有できる「Oracle App Composer」発表。Oracle AI World 2026",
+          "url": "https://www.publickey1.jp/blog/26/aioracle_cloudoracle_app_composeroracle_ai_world_2026.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-10-28T15:39:53.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "アップル、「Keynote」などを「ChatGPT」などの外部AIで操作可能に",
+      "body": "4本目。CNET Japanから、アップル、「Keynote」などを「ChatGPT」などの外部AIで操作可能に。Appleは10月27日（現地時間）、プレゼンテーション作成アプリ「Keynote」、文書作成アプリ「Pages」、表計算アプリ「Numbers」のMac版に、外部のAIが内容を読み取り、編集や操作を行える機能を追加すると発表した。11月にベータ版として提供する予定。プロダクトの変化は、ユーザーの不満がどこにあったかを教えてくれます。",
+      "refs": [
+        {
+          "title": "アップル、「Keynote」などを「ChatGPT」などの外部AIで操作可能に",
+          "url": "https://japan.cnet.com/article/35254116/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-28T20:05:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "NEC、委託先の情報漏えいで謝罪 「セキュリティ事業を手掛ける企業として反省」",
+      "body": "5本目。ITmedia NEWSから、NEC、委託先の情報漏えいで謝罪 「セキュリティ事業を手掛ける企業として反省」。NECの雨宮邦和副社長兼CFOは、10月28日の第2四半期決算説明会で、委託先を経由したセキュリティインシデントについて謝罪した。AIやIT、ネットワークまで含めたセキュリティの支援を、DX事業「BluStellar」のメニューとして提供していく方針も示した。セキュリティの話題は、企業がSaaSを選ぶときの判断基準に直結します。",
+      "refs": [
+        {
+          "title": "NEC、委託先の情報漏えいで謝罪 「セキュリティ事業を手掛ける企業として反省」",
+          "url": "https://www.itmedia.co.jp/news/article/2610/28/2000002686/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-28T11:32:12.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、DX、読み方はディーエックス。デジタル技術で事業のやり方そのものを作り変えることです。紙をPDFにするのは電子化で、業務の流れごと作り直して初めてDXと呼びます。言葉が広く使われすぎて意味が薄れています。「具体的に何がどう変わったか」まで聞ける人が信頼されます。次に、バリュエーション、読み方はバリュエーション。企業の値段のことです。調達時に「時価総額いくらとして、何%の株を渡すか」で決まります。調達額そのものより、バリュエーションと調達額の比率のほうが、その会社の勢いを表します。最後に、TAM、SAM、SOM、読み方はタム、サム、ソム。市場規模を3段階で見る枠組みです。TAMは理論上の最大市場、SAMはそのうち自社が狙える範囲、SOMは現実的に取れる範囲を指します。「この会社はどこまで伸びうるか」を自分で見積もる道具になります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。カジュアル面談では、今日のニュースを一つ持っていくだけで会話が動きます。「これ見たんですが、御社ではどう捉えていますか」は、準備している人にしか出せない質問です。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Microsoft recorded $10 billion in revenue from OpenAI。TechCrunchから、Upwind raises $400M after walking away from Datadog acquisition offer。TechCrunchから、Microsoft just shared Azure’s actual revenue in dollars: $33.2 billion。はてなブックマーク テクノロジーから、Gemini 4 Carbon: our next frontier model。ITmedia AI+から、AI導入から成果創出へ デル・テクノロジーズ新社長が示す日本市場の事業戦略。SaaStrから、Databricks CRO Ron Gabrisko: 5 Interesting Learnings on Selling at a $190B AI Company: Flat SDR Headcount, 6-10% Reply Rates, and Free Seats That Unlocked Consumption。ITmedia AI+から、月末に「600行の承認作業」が集中……「紙とハンコ」「現金手渡し」の経費申請を変えた、老舗メーカーの経理DX。属人化しがちな経理業務。OpenAI Newsから、OpenAI and ServiceNow expand partnership across enterprise workflows。はてなブックマーク テクノロジーから、アマゾン「Alexa+」、提供開始 月額3000円でプライム会員は無料。アマゾン「Alexa+」、提供開始 月額3000円でプライム会員は無料。CNET Japanから、Google、十字キーで歩き回れる「仮想世界」を音や会話付きで生成する「Genie 4」公開。CNET Japanから、タッチ対応「MacBook Pro」正式発表 光るリンゴマーク復活。SaaStrから、10 Months Into AI for GTM That Actually Works: The CRO Matters More Than Ever. Every Other GTM Role Is in Flux.以上です。",
+      "refs": [
+        {
+          "title": "Microsoft recorded $10 billion in revenue from OpenAI",
+          "url": "https://techcrunch.com/2026/10/28/microsoft-recorded-10-billion-in-revenue-from-openai/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-28T21:34:30.000Z",
+          "alsoReportedBy": [
+            "TechCrunch"
+          ]
+        },
+        {
+          "title": "Upwind raises $400M after walking away from Datadog acquisition offer",
+          "url": "https://techcrunch.com/2026/10/28/upwind-raises-400m-after-walking-away-from-datadog-acquisition-offer/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-28T23:15:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Microsoft just shared Azure’s actual revenue in dollars: $33.2 billion",
+          "url": "https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-28T21:58:32.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Gemini 4 Carbon: our next frontier model",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-28T17:53:40.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        },
+        {
+          "title": "AI導入から成果創出へ デル・テクノロジーズ新社長が示す日本市場の事業戦略",
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2610/29/news032.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-28T21:30:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Databricks CRO Ron Gabrisko: 5 Interesting Learnings on Selling at a $190B AI Company: Flat SDR Headcount, 6-10% Reply Rates, and Free Seats That Unlocked Consumption",
+          "url": "https://www.saastr.com/databricks-cro-ron-gabrisko-5-interesting-learnings-on-selling-at-a-200b-ai-company-flat-sdr-headcount-6-10-reply-rates-and-free-seats-that-unlocked-consumption/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-28T15:52:32.000Z",
+          "alsoReportedBy": [
+            "SaaStr"
+          ]
+        },
+        {
+          "title": "月末に「600行の承認作業」が集中……「紙とハンコ」「現金手渡し」の経費申請を変えた、老舗メーカーの経理DX",
+          "url": "https://www.itmedia.co.jp/business/articles/2610/29/news033.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-28T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+          "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-10-28T13:15:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "アマゾン「Alexa+」、提供開始 月額3000円でプライム会員は無料",
+          "url": "https://k-tai.watch.impress.co.jp/docs/news/2151993.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-28T15:12:18.000Z",
+          "alsoReportedBy": [
+            "CNET Japan"
+          ]
+        },
+        {
+          "title": "Google、十字キーで歩き回れる「仮想世界」を音や会話付きで生成する「Genie 4」公開",
+          "url": "https://japan.cnet.com/article/35254115/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-28T21:05:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "タッチ対応「MacBook Pro」正式発表 光るリンゴマーク復活",
+          "url": "https://japan.cnet.com/article/35254121/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-28T18:06:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "10 Months Into AI for GTM That Actually Works: The CRO Matters More Than Ever. Every Other GTM Role Is in Flux.",
+          "url": "https://www.saastr.com/10-months-into-ai-for-gtm-that-actually-works-the-cro-matters-more-than-ever-every-other-gtm-role-is-in-flux/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-28T14:00:14.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "Apple、初のタッチ対応「MacBook Pro」発表 新型OLED搭載、国内価格は49万9800円から",
+        "url": "https://www.itmedia.co.jp/news/article/2610/29/2000002689/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-28T22:02:19.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Google、「Gemini 4 Carbon」発表 「Argon」公開から2週間、サイバー防御能力などを強化",
+        "url": "https://www.itmedia.co.jp/news/article/2610/29/2000002690/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-28T22:13:47.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "オラクル、社員が業務アプリをAIで自動作成、Oracle Cloud上で共有できる「Oracle App Composer」発表。Oracle AI World 2026",
+        "url": "https://www.publickey1.jp/blog/26/aioracle_cloudoracle_app_composeroracle_ai_world_2026.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-10-28T15:39:53.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "アップル、「Keynote」などを「ChatGPT」などの外部AIで操作可能に",
+        "url": "https://japan.cnet.com/article/35254116/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-28T20:05:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "NEC、委託先の情報漏えいで謝罪 「セキュリティ事業を手掛ける企業として反省」",
+        "url": "https://www.itmedia.co.jp/news/article/2610/28/2000002686/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-28T11:32:12.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Microsoft recorded $10 billion in revenue from OpenAI",
+        "url": "https://techcrunch.com/2026/10/28/microsoft-recorded-10-billion-in-revenue-from-openai/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-28T21:34:30.000Z",
+        "alsoReportedBy": [
+          "TechCrunch"
+        ]
+      },
+      {
+        "title": "Upwind raises $400M after walking away from Datadog acquisition offer",
+        "url": "https://techcrunch.com/2026/10/28/upwind-raises-400m-after-walking-away-from-datadog-acquisition-offer/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-28T23:15:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Microsoft just shared Azure’s actual revenue in dollars: $33.2 billion",
+        "url": "https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-28T21:58:32.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Gemini 4 Carbon: our next frontier model",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-28T17:53:40.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "AI導入から成果創出へ デル・テクノロジーズ新社長が示す日本市場の事業戦略",
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2610/29/news032.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-28T21:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Databricks CRO Ron Gabrisko: 5 Interesting Learnings on Selling at a $190B AI Company: Flat SDR Headcount, 6-10% Reply Rates, and Free Seats That Unlocked Consumption",
+        "url": "https://www.saastr.com/databricks-cro-ron-gabrisko-5-interesting-learnings-on-selling-at-a-200b-ai-company-flat-sdr-headcount-6-10-reply-rates-and-free-seats-that-unlocked-consumption/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-28T15:52:32.000Z",
+        "alsoReportedBy": [
+          "SaaStr"
+        ]
+      },
+      {
+        "title": "月末に「600行の承認作業」が集中……「紙とハンコ」「現金手渡し」の経費申請を変えた、老舗メーカーの経理DX",
+        "url": "https://www.itmedia.co.jp/business/articles/2610/29/news033.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-28T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+        "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-10-28T13:15:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "アマゾン「Alexa+」、提供開始 月額3000円でプライム会員は無料",
+        "url": "https://k-tai.watch.impress.co.jp/docs/news/2151993.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-28T15:12:18.000Z",
+        "alsoReportedBy": [
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "Google、十字キーで歩き回れる「仮想世界」を音や会話付きで生成する「Genie 4」公開",
+        "url": "https://japan.cnet.com/article/35254115/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-28T21:05:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "タッチ対応「MacBook Pro」正式発表 光るリンゴマーク復活",
+        "url": "https://japan.cnet.com/article/35254121/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-28T18:06:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "10 Months Into AI for GTM That Actually Works: The CRO Matters More Than Ever. Every Other GTM Role Is in Flux.",
+        "url": "https://www.saastr.com/10-months-into-ai-for-gtm-that-actually-works-the-cro-matters-more-than-ever-every-other-gtm-role-is-in-flux/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-28T14:00:14.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "dx",
+      "term": "DX",
+      "reading": "ディーエックス",
+      "category": "国内IT",
+      "level": 1,
+      "definition": "デジタル技術で事業のやり方そのものを作り変えることです。紙をPDFにするのは電子化で、業務の流れごと作り直して初めてDXと呼びます。",
+      "interview": "言葉が広く使われすぎて意味が薄れています。「具体的に何がどう変わったか」まで聞ける人が信頼されます。"
+    },
+    {
+      "id": "valuation",
+      "term": "バリュエーション",
+      "reading": "バリュエーション",
+      "category": "スタートアップ",
+      "level": 2,
+      "definition": "企業の値段のことです。調達時に「時価総額いくらとして、何%の株を渡すか」で決まります。",
+      "interview": "調達額そのものより、バリュエーションと調達額の比率のほうが、その会社の勢いを表します。"
+    },
+    {
+      "id": "tam",
+      "term": "TAM / SAM / SOM",
+      "reading": "タム、サム、ソム",
+      "category": "事業モデル",
+      "level": 3,
+      "definition": "市場規模を3段階で見る枠組みです。TAMは理論上の最大市場、SAMはそのうち自社が狙える範囲、SOMは現実的に取れる範囲を指します。",
+      "interview": "「この会社はどこまで伸びうるか」を自分で見積もる道具になります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 737
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 158
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 870
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 934
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 705
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 534
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1361
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 955
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 548
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 603
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 953
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 984
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 186,
+    "eligible": 120
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}

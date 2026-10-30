@@ -1,0 +1,619 @@
+{
+  "id": "2026-10-15",
+  "createdAt": "2026-10-15T22:32:59.349Z",
+  "dateLabel": "10月15日（木）",
+  "durationMin": 10,
+  "estimatedMinutes": 11.2,
+  "generator": "template",
+  "title": "10月15日（木） AnthropicのBun、TypeScript 7よりも3倍以上高速なTypeScript型チェッカーを搭載。Bunの新バージョン1.4.3で ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月15日（木）のテックニュースをお届けします。今日の見出しは5本です。1つ目、AnthropicのBun、TypeScript 7よりも3倍以上高速なTypeScript型チェッカーを搭載。Bunの新バージョン1.4.3で。2つ目、相次ぐサイバー攻撃に「AI悪用の可能性」……初来日のAnthropic共同創業者が言及 悪用どう抑止。3つ目、Microsoft、3つの国際的な犯罪ネットサービスを解体へ 日本狙った詐欺がきっかけ。4つ目、コンタクトレンズ型ディスプレイの開発進む--視界に文字が浮かぶ 7年後の発売めざす（CEATEC 2026）。5つ目、数学の記述式答案、AIが30秒で採点 DeNA、大学受験生向けアプリ公開。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "AnthropicのBun、TypeScript 7よりも3倍以上高速なTypeScript型チェッカーを搭載。Bunの新バージョン1.4.3で",
+      "body": "1本目。Publickeyから、AnthropicのBun、TypeScript 7よりも3倍以上高速なTypeScript型チェッカーを搭載。Bunの新バージョン1.4.3で。Anthropicが開発しているJavaScriptランタイム「Bun」は、10月10日付けで新バージョン「Bun v1.4.3」がリリースされました。 Bun v1.4.3の最大の特徴として示されたのが、Go言語で実装されたTypeScr...開発者向けの話題は、技術職以外でも「現場が何を楽に感じるか」を知る手がかりになります。",
+      "refs": [
+        {
+          "title": "AnthropicのBun、TypeScript 7よりも3倍以上高速なTypeScript型チェッカーを搭載。Bunの新バージョン1.4.3で",
+          "url": "https://www.publickey1.jp/blog/26/anthropicbuntypescript_73typescriptbun143.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-10-15T15:21:12.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "相次ぐサイバー攻撃に「AI悪用の可能性」……初来日のAnthropic共同創業者が言及 悪用どう抑止",
+      "body": "2本目。ITmedia AI+から、相次ぐサイバー攻撃に「AI悪用の可能性」……初来日のAnthropic共同創業者が言及 悪用どう抑止。「おそらく、AIツールが使われている可能性はあるだろうと推測している」──米Anthropicの共同創業者のジャック・クラーク氏が初来日し、同社の日本法人が10月14日に開いたメディア説明会に登壇した。講演では、報道陣の質問に答える形でサイバー攻撃とAIの関係性についても言及する一幕も。悪用の抑止に向けて同社がどう取り組むか、現在の方針も説明した。このニュースはITmedia AI+とITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "相次ぐサイバー攻撃に「AI悪用の可能性」……初来日のAnthropic共同創業者が言及 悪用どう抑止",
+          "url": "https://www.itmedia.co.jp/news/article/2610/15/2000002286/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-15T01:55:34.000Z",
+          "alsoReportedBy": [
+            "ITmedia AI+",
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Microsoft、3つの国際的な犯罪ネットサービスを解体へ 日本狙った詐欺がきっかけ",
+      "body": "3本目。はてなブックマーク テクノロジーから、Microsoft、3つの国際的な犯罪ネットサービスを解体へ 日本狙った詐欺がきっかけ。米Microsoftは10月14日、国際的な非営利団体Health-ISACと共同で、フィッシング詐欺に使うアカウントやWebサイトなどを提供する3つの犯罪支援サービスの解体に着手したと発表した。日本を狙った詐欺に関する警察庁からの情報提供をきっかけに調査を進め、米裁判所の命令に基づくドメインの差し押さえなどを実施したとい...このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "Microsoft、3つの国際的な犯罪ネットサービスを解体へ 日本狙った詐欺がきっかけ",
+          "url": "https://www.itmedia.co.jp/news/article/2610/15/2000002299/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-15T08:58:29.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "コンタクトレンズ型ディスプレイの開発進む--視界に文字が浮かぶ 7年後の発売めざす（CEATEC 2026）",
+      "body": "4本目。CNET Japanから、コンタクトレンズ型ディスプレイの開発進む--視界に文字が浮かぶ 7年後の発売めざす（CEATEC 2026）。目にはめたコンタクトレンズで映像を見る——そんなSFのような技術が現実に近づいている。東京農工大学を中心とする研究グループは、ホログラムの原理を応用してピント問題を解決し、レーザーや液晶素子、無線給電アンテナを厚さ0.25mm以下のレンズに統合する開発を進めている。CEATEC 2026でその現状を公開した。日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "コンタクトレンズ型ディスプレイの開発進む--視界に文字が浮かぶ 7年後の発売めざす（CEATEC 2026）",
+          "url": "https://japan.cnet.com/article/35253592/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-15T22:06:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "数学の記述式答案、AIが30秒で採点 DeNA、大学受験生向けアプリ公開",
+      "body": "5本目。ITmedia NEWSから、数学の記述式答案、AIが30秒で採点 DeNA、大学受験生向けアプリ公開。数学の記述答案は対策や添削指導を受けられる環境は住む場所や家庭の経済状況に左右されやすいと同社は指摘。受験生の不安を解消し、毎日の学習に伴走することを目指す。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "数学の記述式答案、AIが30秒で採点 DeNA、大学受験生向けアプリ公開",
+          "url": "https://www.itmedia.co.jp/news/article/2610/15/2000002298/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-15T06:29:31.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。最後に、バリュエーション、読み方はバリュエーション。企業の値段のことです。調達時に「時価総額いくらとして、何%の株を渡すか」で決まります。調達額そのものより、バリュエーションと調達額の比率のほうが、その会社の勢いを表します。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。職務経歴書は、前職の業務をそのまま書くより「どの課題を、どう測って、どう改善したか」に翻訳すると、業界が違っても伝わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。SaaStrから、Meta Ships Muse Wonder, Jev Raises $870M 24 Days After Launch, and Anthropic Cuts Haiku 90%: The Top Takeaways From This Week’s 20VC x SaaStr。TechCrunchから、Meta launches an open-weight AI model that runs on Macs。TechCrunchから、Ramp reaches $60B valuation as it pushes deeper into AI。TechCrunchから、Last chance to save up to $200 on your TechCrunch Founder Summit pass: Early booking ends October 16。Hacker News フロントページから、Call Center Jobs Are Declining, but 14,000 Calls Show Humans Still Outperform AI。SaaStrから、5 Interesting Learnings from Bending Spoons at $2.8 Billion in Revenue: 126% Growth, 3% Organic Growth, and $1.08 Billion of ARR Bought in 37 Days。Hacker News フロントページから、Muse Spark Open。Hacker News フロントページから、Show HN: Proa – A Rust web framework with fast SSR and multi-target rendering。OpenAI Newsから、Bringing GPT-Rosalind to academic research labs。はてなブックマーク テクノロジーから、連続不正アクセス事案の攻撃手法に関する調査 - JPCERT/CC Eyes。ITmedia AI+から、「YouTube Music」、生成AIで作られた楽曲にラベル表示。ITmedia AI+から、国内WebサイトへのAIエージェント攻撃を観測 「8時間弱」続いた攻撃の推移を公開 国内セキュリティベンダー。ビットフォレストが、日本企業のWebサイトへのAIエージェントによる攻撃を観測したと報告。以上です。",
+      "refs": [
+        {
+          "title": "Meta Ships Muse Wonder, Jev Raises $870M 24 Days After Launch, and Anthropic Cuts Haiku 90%: The Top Takeaways From This Week’s 20VC x SaaStr",
+          "url": "https://www.saastr.com/meta-ships-muse-wonder-jev-raises-870m-24-days-after-launch-and-anthropic-cuts-haiku-90-the-top-takeaways-from-this-weeks-20vc-x-saastr/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-15T16:32:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Meta launches an open-weight AI model that runs on Macs",
+          "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-15T20:04:53.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Ramp reaches $60B valuation as it pushes deeper into AI",
+          "url": "https://techcrunch.com/2026/10/15/ramp-reaches-60b-valuation-as-it-pushes-deeper-into-ai/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-15T14:47:09.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Last chance to save up to $200 on your TechCrunch Founder Summit pass: Early booking ends October 16",
+          "url": "https://techcrunch.com/2026/10/15/last-chance-to-save-up-to-200-on-techcrunch-founder-summit-early-booking-ends-oct-16/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-15T18:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Call Center Jobs Are Declining, but 14,000 Calls Show Humans Still Outperform AI",
+          "url": "https://boldagents.co/blog/call-center-jobs-declining-14000-calls-humans-outperform-ai",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-15T22:11:24.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "5 Interesting Learnings from Bending Spoons at $2.8 Billion in Revenue: 126% Growth, 3% Organic Growth, and $1.08 Billion of ARR Bought in 37 Days",
+          "url": "https://www.saastr.com/5-interesting-learnings-from-bending-spoons-at-2-8-billion-in-revenue-126-growth-3-organic-growth-and-1-08-billion-of-arr-bought-in-37-days/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-15T14:10:23.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Muse Spark Open",
+          "url": "https://research.meta.ai/blog/muse-spark-open",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-15T17:47:39.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Show HN: Proa – A Rust web framework with fast SSR and multi-target rendering",
+          "url": "https://proa.so/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-15T15:52:08.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Bringing GPT-Rosalind to academic research labs",
+          "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-10-15T19:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "連続不正アクセス事案の攻撃手法に関する調査 - JPCERT/CC Eyes",
+          "url": "https://blogs.jpcert.or.jp/ja/2026/10/web_api_attacks.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-15T08:02:36.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「YouTube Music」、生成AIで作られた楽曲にラベル表示",
+          "url": "https://www.itmedia.co.jp/news/article/2610/15/2000002287/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-15T01:27:38.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS",
+            "CNET Japan"
+          ]
+        },
+        {
+          "title": "国内WebサイトへのAIエージェント攻撃を観測 「8時間弱」続いた攻撃の推移を公開 国内セキュリティベンダー",
+          "url": "https://www.itmedia.co.jp/aiplus/article/2610/15/2000002284/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-15T05:39:29.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "AnthropicのBun、TypeScript 7よりも3倍以上高速なTypeScript型チェッカーを搭載。Bunの新バージョン1.4.3で",
+        "url": "https://www.publickey1.jp/blog/26/anthropicbuntypescript_73typescriptbun143.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-10-15T15:21:12.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "相次ぐサイバー攻撃に「AI悪用の可能性」……初来日のAnthropic共同創業者が言及 悪用どう抑止",
+        "url": "https://www.itmedia.co.jp/news/article/2610/15/2000002286/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-15T01:55:34.000Z",
+        "alsoReportedBy": [
+          "ITmedia AI+",
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Microsoft、3つの国際的な犯罪ネットサービスを解体へ 日本狙った詐欺がきっかけ",
+        "url": "https://www.itmedia.co.jp/news/article/2610/15/2000002299/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-15T08:58:29.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "コンタクトレンズ型ディスプレイの開発進む--視界に文字が浮かぶ 7年後の発売めざす（CEATEC 2026）",
+        "url": "https://japan.cnet.com/article/35253592/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-15T22:06:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "数学の記述式答案、AIが30秒で採点 DeNA、大学受験生向けアプリ公開",
+        "url": "https://www.itmedia.co.jp/news/article/2610/15/2000002298/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-15T06:29:31.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Meta Ships Muse Wonder, Jev Raises $870M 24 Days After Launch, and Anthropic Cuts Haiku 90%: The Top Takeaways From This Week’s 20VC x SaaStr",
+        "url": "https://www.saastr.com/meta-ships-muse-wonder-jev-raises-870m-24-days-after-launch-and-anthropic-cuts-haiku-90-the-top-takeaways-from-this-weeks-20vc-x-saastr/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-15T16:32:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Meta launches an open-weight AI model that runs on Macs",
+        "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-15T20:04:53.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Ramp reaches $60B valuation as it pushes deeper into AI",
+        "url": "https://techcrunch.com/2026/10/15/ramp-reaches-60b-valuation-as-it-pushes-deeper-into-ai/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-15T14:47:09.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Last chance to save up to $200 on your TechCrunch Founder Summit pass: Early booking ends October 16",
+        "url": "https://techcrunch.com/2026/10/15/last-chance-to-save-up-to-200-on-techcrunch-founder-summit-early-booking-ends-oct-16/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-15T18:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Call Center Jobs Are Declining, but 14,000 Calls Show Humans Still Outperform AI",
+        "url": "https://boldagents.co/blog/call-center-jobs-declining-14000-calls-humans-outperform-ai",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-15T22:11:24.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "5 Interesting Learnings from Bending Spoons at $2.8 Billion in Revenue: 126% Growth, 3% Organic Growth, and $1.08 Billion of ARR Bought in 37 Days",
+        "url": "https://www.saastr.com/5-interesting-learnings-from-bending-spoons-at-2-8-billion-in-revenue-126-growth-3-organic-growth-and-1-08-billion-of-arr-bought-in-37-days/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-15T14:10:23.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Muse Spark Open",
+        "url": "https://research.meta.ai/blog/muse-spark-open",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-15T17:47:39.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Show HN: Proa – A Rust web framework with fast SSR and multi-target rendering",
+        "url": "https://proa.so/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-15T15:52:08.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Bringing GPT-Rosalind to academic research labs",
+        "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-10-15T19:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "連続不正アクセス事案の攻撃手法に関する調査 - JPCERT/CC Eyes",
+        "url": "https://blogs.jpcert.or.jp/ja/2026/10/web_api_attacks.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-15T08:02:36.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「YouTube Music」、生成AIで作られた楽曲にラベル表示",
+        "url": "https://www.itmedia.co.jp/news/article/2610/15/2000002287/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-15T01:27:38.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS",
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "国内WebサイトへのAIエージェント攻撃を観測 「8時間弱」続いた攻撃の推移を公開 国内セキュリティベンダー",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2610/15/2000002284/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-15T05:39:29.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "valuation",
+      "term": "バリュエーション",
+      "reading": "バリュエーション",
+      "category": "スタートアップ",
+      "level": 2,
+      "definition": "企業の値段のことです。調達時に「時価総額いくらとして、何%の株を渡すか」で決まります。",
+      "interview": "調達額そのものより、バリュエーションと調達額の比率のほうが、その会社の勢いを表します。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 674
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 202
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 835
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 785
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 746
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 514
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1245
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 827
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 646
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 440
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 7774
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 687
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 192,
+    "eligible": 102
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 59.01
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "AnthropicのBun、TypeScript 7よりも3倍以上高速なTypeScript型チェッカーを搭載。Bunの新バージョン1.4.3で",
+      "startSec": 59.01,
+      "endSec": 99.53
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "相次ぐサイバー攻撃に「AI悪用の可能性」……初来日のAnthropic共同創業者が言及 悪用どう抑止",
+      "startSec": 99.53,
+      "endSec": 158.35
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Microsoft、3つの国際的な犯罪ネットサービスを解体へ 日本狙った詐欺がきっかけ",
+      "startSec": 158.35,
+      "endSec": 208.77
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "コンタクトレンズ型ディスプレイの開発進む--視界に文字が浮かぶ 7年後の発売めざす（CEATEC 2026）",
+      "startSec": 208.77,
+      "endSec": 254.6
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "数学の記述式答案、AIが30秒で採点 DeNA、大学受験生向けアプリ公開",
+      "startSec": 254.6,
+      "endSec": 286.21
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 286.21,
+      "endSec": 392.46
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 392.46,
+      "endSec": 405.73
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 405.73,
+      "endSec": 546.44
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 546.44,
+      "endSec": 556.92
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 26732076,
+    "durationSec": 556.92
+  }
+}
