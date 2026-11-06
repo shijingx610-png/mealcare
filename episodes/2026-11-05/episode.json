@@ -1,0 +1,621 @@
+{
+  "id": "2026-11-05",
+  "createdAt": "2026-11-05T00:28:18.510Z",
+  "dateLabel": "11月5日（木）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.3,
+  "generator": "template",
+  "title": "11月5日（木） AIデータセンター建設にブレーキ テキサス州で反対派勝利、全米に波及 - 日本経済新聞 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月5日（木）のテックニュースをお届けします。今日の見出しは5本です。1つ目、AIデータセンター建設にブレーキ テキサス州で反対派勝利、全米に波及 - 日本経済新聞。2つ目、クラウドインフラのシェア、AWSが26％に後退、Google Cloudは16％に上昇。クラウドインフラ市場全体は過去最大の高成長率へ。2026年第3四半期、Synergy Research。3つ目、深刻な「中国依存」を脱せるか 老舗問屋が動いた「空気を使った肥料づくり」とAI農業とは？。4つ目、Canva、創業13年で「最も困難な局面」 従業員22%に影響する組織再編を発表。5つ目、米中間選挙で民主党が上下両院を奪還 AI規制強化に現実味、IT大手の株価は上昇。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "AIデータセンター建設にブレーキ テキサス州で反対派勝利、全米に波及 - 日本経済新聞",
+      "body": "1本目。はてなブックマーク テクノロジーから、AIデータセンター建設にブレーキ テキサス州で反対派勝利、全米に波及 - 日本経済新聞。【米南部テキサス州オースティン=大平祐嗣】米国最大のデータセンター建設計画地である南部テキサス州の中間選挙で民主党が大勝した。民主の次期知事は法整備が整うまで建設禁止を明言する。延期の動きは他州にも波及し、米国の人工知能（AI）インフラ投資全体に急ブレーキがかかる見通しだ。「州民を優先し保護する法律...AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "AIデータセンター建設にブレーキ テキサス州で反対派勝利、全米に波及 - 日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOGN04BNW0U6A101C2000000/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-04T22:48:51.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "クラウドインフラのシェア、AWSが26％に後退、Google Cloudは16％に上昇。クラウドインフラ市場全体は過去最大の高成長率へ。2026年第3四半期、Synergy Research",
+      "body": "2本目。Publickeyから、クラウドインフラのシェア、AWSが26％に後退、Google Cloudは16％に上昇。クラウドインフラ市場全体は過去最大の高成長率へ。2026年第3四半期、Synergy Research。調査会社のSynergy Research Groupは、グローバルにおける2026年第3四半期のクラウドインフラの市場状況について調査結果を発表しました。 クラウドインフラとは、IaaS、PaaS、ホステッドプライベートクラウドを合わせた...このニュースははてなブックマーク テクノロジーでも同時に取り上げられています。それだけ注目度が高い話題です。インフラのニュースは、コスト構造の変化として効いてくることが多い領域です。",
+      "refs": [
+        {
+          "title": "クラウドインフラのシェア、AWSが26％に後退、Google Cloudは16％に上昇。クラウドインフラ市場全体は過去最大の高成長率へ。2026年第3四半期、Synergy Research",
+          "url": "https://www.publickey1.jp/blog/26/aws26google_cloud1620263synergy_research.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-04T15:23:21.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "深刻な「中国依存」を脱せるか 老舗問屋が動いた「空気を使った肥料づくり」とAI農業とは？",
+      "body": "3本目。ITmedia AI+から、深刻な「中国依存」を脱せるか 老舗問屋が動いた「空気を使った肥料づくり」とAI農業とは？中国が輸出の蛇口を少し締めるだけで、日本の田畑からみずみずしい作物が消え失せかねない──。化学肥料原料のほぼ全量を海外に握られた日本の農業。この食料安全保障の急所に立ち向かうのは、売上高500億円を誇る「100年続く資材問屋」だ。湯気立つ牛ふんにプラズマを当てて空気から肥料を錬成し、熟練農家の「30年の眼」をAIに移植する。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "深刻な「中国依存」を脱せるか 老舗問屋が動いた「空気を使った肥料づくり」とAI農業とは？",
+          "url": "https://www.itmedia.co.jp/business/articles/2611/05/news019.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-04T22:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "Canva、創業13年で「最も困難な局面」 従業員22%に影響する組織再編を発表",
+      "body": "4本目。CNET Japanから、Canva、創業13年で「最も困難な局面」 従業員22%に影響する組織再編を発表。Canvaは11月4日（日本時間）、組織再編により全従業員の22％に当たる1271人が影響を受けると公表した。1271人には、配置転換や転居を求められる従業員と、退職する従業員が含まれる。退職者の人数は明らかにしていない。小さい会社の挑戦は、数年後に大手が追随することが多い領域です。",
+      "refs": [
+        {
+          "title": "Canva、創業13年で「最も困難な局面」 従業員22%に影響する組織再編を発表",
+          "url": "https://japan.cnet.com/article/35254393/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-04T23:10:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "米中間選挙で民主党が上下両院を奪還 AI規制強化に現実味、IT大手の株価は上昇",
+      "body": "5本目。ITmedia NEWSから、米中間選挙で民主党が上下両院を奪還 AI規制強化に現実味、IT大手の株価は上昇。米中間選挙で民主党が上下両院の過半数を獲得し、トランプ政権のIT政策に影響が及ぶ見通しだ。CNBCなどによると、民主党はAI企業への監視を強める方針で、各自治体でデータセンター建設を制限する動きも強まっている。一方、既存設備の優位性からAmazonやMetaなどの大手IT株は上昇した。大手の動きは、業界全体のルールが変わる合図になることがあります。",
+      "refs": [
+        {
+          "title": "米中間選挙で民主党が上下両院を奪還 AI規制強化に現実味、IT大手の株価は上昇",
+          "url": "https://www.itmedia.co.jp/news/article/2611/05/2000002888/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-04T22:11:20.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、SaaS、PaaS、IaaS、読み方はサース、パース、イアース。クラウドの提供範囲の違いです。SaaSは完成したソフトをそのまま使う形、PaaSはアプリを作る土台まで借りる形、IaaSはサーバーそのものを借りる形を指します。料理に例えるなら、SaaSは出来上がった定食、PaaSはキッチン付きの部屋、IaaSは更地です。次に、API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。最後に、トークン、読み方はトークン。AIが文章を扱うときの最小単位です。日本語ならおおむね1文字が1トークン前後。AIの利用料金はこのトークン数で決まります。AI企業の原価構造はトークン単価。値下げのニュースが業界に効く理由がここにあります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。求人票を見るときは、事業フェーズを先に確認してみてください。資金調達直後なのか、黒字化を目指している段階なのかで、求められる動き方がまるで違います。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。ITmedia AI+から、GPT-6モデルはAstra、Sol、それともLuna？ OpenAIが教える、Codex爆速開発の鉄則。TechCrunchから、Meta acquires AI coding startup Conductor。TechCrunchから、Nothing CEO says company’s mysterious AI-first device is dropping next month。ITmedia AI+から、GitHub、「Copilot Fusion」正式リリース タスクに応じて最適なAIモデル選択、高性能・低コスト両立。TechCrunchから、Almost no one uses AI agents to book their Uber, company says。Publickeyから、GitHubで最も使われている言語は2年連続TypeScript、プルリクの増加率はRust。急成長したOSSはCC Switch、Omarchyなど。GitHub Octoverse 2026。Publickeyから、「GitHub Copilot Dreaming」発表。作業を振り返ってパーソナルメモリやガイダンスをバックグラウンドで整理、アップデート。GitHub Universe 2026。OpenAI Newsから、OpenAI to acquire Pierre Computer Company, Inc.はてなブックマーク テクノロジーから、macOSには単語が冒涜的かどうかを識別する仕組みがある。CNET Japanから、マツダ、クルマの「顔」をAIで設計 OpenAIと共同研究、空気抵抗とデザインの両立探る。Hacker News フロントページから、Launch HN: Kino AI (YC S23) – AI media manager and video editor。はてなブックマーク テクノロジーから、AIと「聖杯」は似ている。以上です。",
+      "refs": [
+        {
+          "title": "GPT-6モデルはAstra、Sol、それともLuna？ OpenAIが教える、Codex爆速開発の鉄則",
+          "url": "https://kn.itmedia.co.jp/kn/article/2611/05/2000002770/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-04T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Meta acquires AI coding startup Conductor",
+          "url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-04T21:10:56.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Nothing CEO says company’s mysterious AI-first device is dropping next month",
+          "url": "https://techcrunch.com/2026/11/04/nothing-ceo-says-companys-mysterious-ai-first-device-is-dropping-next-month/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-04T22:13:16.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "GitHub、「Copilot Fusion」正式リリース タスクに応じて最適なAIモデル選択、高性能・低コスト両立",
+          "url": "https://www.itmedia.co.jp/news/article/2611/04/2000002869/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-04T04:13:20.000Z",
+          "alsoReportedBy": [
+            "Publickey",
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "Almost no one uses AI agents to book their Uber, company says",
+          "url": "https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-04T21:56:01.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "GitHubで最も使われている言語は2年連続TypeScript、プルリクの増加率はRust。急成長したOSSはCC Switch、Omarchyなど。GitHub Octoverse 2026",
+          "url": "https://www.publickey1.jp/blog/26/github2typescriptrustosscc_switchomarchygithub_octoverse_2026.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-04T15:18:02.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        },
+        {
+          "title": "「GitHub Copilot Dreaming」発表。作業を振り返ってパーソナルメモリやガイダンスをバックグラウンドで整理、アップデート。GitHub Universe 2026",
+          "url": "https://www.publickey1.jp/blog/26/github_copilot_dreaminggithub_universe_2026.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-04T15:15:49.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+          "url": "https://openai.com/index/openai-to-acquire-pierre",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-11-04T14:30:00.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        },
+        {
+          "title": "macOSには単語が冒涜的かどうかを識別する仕組みがある",
+          "url": "https://gigazine.net/news/20261105-macos-vulgar-word-flags/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-04T22:24:31.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "マツダ、クルマの「顔」をAIで設計 OpenAIと共同研究、空気抵抗とデザインの両立探る",
+          "url": "https://japan.cnet.com/article/35254397/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-04T22:20:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Launch HN: Kino AI (YC S23) – AI media manager and video editor",
+          "url": "https://news.ycombinator.com/item?id=50368804",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-04T17:31:53.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AIと「聖杯」は似ている。",
+          "url": "https://blog.tinect.jp/?p=91573",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-04T23:22:25.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "AIデータセンター建設にブレーキ テキサス州で反対派勝利、全米に波及 - 日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZQOGN04BNW0U6A101C2000000/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-04T22:48:51.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "クラウドインフラのシェア、AWSが26％に後退、Google Cloudは16％に上昇。クラウドインフラ市場全体は過去最大の高成長率へ。2026年第3四半期、Synergy Research",
+        "url": "https://www.publickey1.jp/blog/26/aws26google_cloud1620263synergy_research.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-04T15:23:21.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "深刻な「中国依存」を脱せるか 老舗問屋が動いた「空気を使った肥料づくり」とAI農業とは？",
+        "url": "https://www.itmedia.co.jp/business/articles/2611/05/news019.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-04T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Canva、創業13年で「最も困難な局面」 従業員22%に影響する組織再編を発表",
+        "url": "https://japan.cnet.com/article/35254393/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-04T23:10:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "米中間選挙で民主党が上下両院を奪還 AI規制強化に現実味、IT大手の株価は上昇",
+        "url": "https://www.itmedia.co.jp/news/article/2611/05/2000002888/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-04T22:11:20.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "GPT-6モデルはAstra、Sol、それともLuna？ OpenAIが教える、Codex爆速開発の鉄則",
+        "url": "https://kn.itmedia.co.jp/kn/article/2611/05/2000002770/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-04T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Meta acquires AI coding startup Conductor",
+        "url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-04T21:10:56.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Nothing CEO says company’s mysterious AI-first device is dropping next month",
+        "url": "https://techcrunch.com/2026/11/04/nothing-ceo-says-companys-mysterious-ai-first-device-is-dropping-next-month/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-04T22:13:16.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "GitHub、「Copilot Fusion」正式リリース タスクに応じて最適なAIモデル選択、高性能・低コスト両立",
+        "url": "https://www.itmedia.co.jp/news/article/2611/04/2000002869/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-04T04:13:20.000Z",
+        "alsoReportedBy": [
+          "Publickey",
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Almost no one uses AI agents to book their Uber, company says",
+        "url": "https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-04T21:56:01.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "GitHubで最も使われている言語は2年連続TypeScript、プルリクの増加率はRust。急成長したOSSはCC Switch、Omarchyなど。GitHub Octoverse 2026",
+        "url": "https://www.publickey1.jp/blog/26/github2typescriptrustosscc_switchomarchygithub_octoverse_2026.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-04T15:18:02.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "「GitHub Copilot Dreaming」発表。作業を振り返ってパーソナルメモリやガイダンスをバックグラウンドで整理、アップデート。GitHub Universe 2026",
+        "url": "https://www.publickey1.jp/blog/26/github_copilot_dreaminggithub_universe_2026.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-04T15:15:49.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+        "url": "https://openai.com/index/openai-to-acquire-pierre",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-11-04T14:30:00.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "macOSには単語が冒涜的かどうかを識別する仕組みがある",
+        "url": "https://gigazine.net/news/20261105-macos-vulgar-word-flags/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-04T22:24:31.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "マツダ、クルマの「顔」をAIで設計 OpenAIと共同研究、空気抵抗とデザインの両立探る",
+        "url": "https://japan.cnet.com/article/35254397/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-04T22:20:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Launch HN: Kino AI (YC S23) – AI media manager and video editor",
+        "url": "https://news.ycombinator.com/item?id=50368804",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-04T17:31:53.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AIと「聖杯」は似ている。",
+        "url": "https://blog.tinect.jp/?p=91573",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-04T23:22:25.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "saas-paas-iaas",
+      "term": "SaaS / PaaS / IaaS",
+      "reading": "サース、パース、イアース",
+      "category": "クラウド",
+      "level": 1,
+      "definition": "クラウドの提供範囲の違いです。SaaSは完成したソフトをそのまま使う形、PaaSはアプリを作る土台まで借りる形、IaaSはサーバーそのものを借りる形を指します。",
+      "interview": "料理に例えるなら、SaaSは出来上がった定食、PaaSはキッチン付きの部屋、IaaSは更地です。"
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "token",
+      "term": "トークン",
+      "reading": "トークン",
+      "category": "AI",
+      "level": 2,
+      "definition": "AIが文章を扱うときの最小単位です。日本語ならおおむね1文字が1トークン前後。AIの利用料金はこのトークン数で決まります。",
+      "interview": "AI企業の原価構造はトークン単価。値下げのニュースが業界に効く理由がここにあります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 713
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 181
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 762
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 784
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 816
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 364
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1411
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 747
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 445
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 473
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 2663
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 647
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 191,
+    "eligible": 123
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 66.21
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "AIデータセンター建設にブレーキ テキサス州で反対派勝利、全米に波及 - 日本経済新聞",
+      "startSec": 66.21,
+      "endSec": 115.63
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "クラウドインフラのシェア、AWSが26％に後退、Google Cloudは16％に上昇。クラウドインフラ市場全体は過去最大の高成長率へ。2026年第3四半期、Synergy Research",
+      "startSec": 115.63,
+      "endSec": 164.78
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "深刻な「中国依存」を脱せるか 老舗問屋が動いた「空気を使った肥料づくり」とAI農業とは？",
+      "startSec": 164.78,
+      "endSec": 212.78
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "Canva、創業13年で「最も困難な局面」 従業員22%に影響する組織再編を発表",
+      "startSec": 212.78,
+      "endSec": 252.92
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "米中間選挙で民主党が上下両院を奪還 AI規制強化に現実味、IT大手の株価は上昇",
+      "startSec": 252.92,
+      "endSec": 294.84
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 294.84,
+      "endSec": 402.11
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 402.11,
+      "endSec": 416.3
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 416.3,
+      "endSec": 539.45
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 539.45,
+      "endSec": 549.92
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 26396204,
+    "durationSec": 549.92
+  }
+}

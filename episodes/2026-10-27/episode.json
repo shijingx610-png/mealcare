@@ -1,0 +1,539 @@
+{
+  "id": "2026-10-27",
+  "createdAt": "2026-10-27T23:02:32.087Z",
+  "dateLabel": "10月27日（火）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.7,
+  "generator": "template",
+  "title": "10月27日（火） Google DeepMind、ワールドモデル「Genie 4」発表 音声や会話もリアルタイム生成、Geminiと連携 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月27日（火）のテックニュースをお届けします。今日の見出しは5本です。1つ目、Google DeepMind、ワールドモデル「Genie 4」発表 音声や会話もリアルタイム生成、Geminiと連携。2つ目、Oracle CloudがGoogle TPU導入を発表、2027年に提供を開始。Oracle AI World 2026。3つ目、M6搭載「MacBook Pro」発表、33万9800円から グラフィックス性能3割増、11月6日発売。4つ目、GMO、不正アクセス実行犯の手がかりに懸賞金 1億5000万円規模。5つ目、専門AIで肌カウンセリング、ファンケルが新サービス チャットと顔画像解析で。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Google DeepMind、ワールドモデル「Genie 4」発表 音声や会話もリアルタイム生成、Geminiと連携",
+      "body": "1本目。ITmedia AI+から、Google DeepMind、ワールドモデル「Genie 4」発表 音声や会話もリアルタイム生成、Geminiと連携。Google DeepMindは、対話型の仮想世界をリアルタイム生成するAI「Genie 4」を発表した。映像品質や物理演算が向上し、環境音や会話音声の同時生成に対応。人物の自然な動作やテキストによる環境操作が可能となった。まずは研究プレビューとして提供し、順次「Google AI Ultra」加入者等へ展開する。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "Google DeepMind、ワールドモデル「Genie 4」発表 音声や会話もリアルタイム生成、Geminiと連携",
+          "url": "https://www.itmedia.co.jp/news/article/2610/28/2000002648/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-27T21:53:37.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Oracle CloudがGoogle TPU導入を発表、2027年に提供を開始。Oracle AI World 2026",
+      "body": "2本目。Publickeyから、Oracle CloudがGoogle TPU導入を発表、2027年に提供を開始。Oracle AI World 2026。オラクルはGoogleが開発しているAI専用チップのGoogle TPUをOracle Cloud Infrastructure（以下、Oracle Cloud）に導入し、2027年からGoogle TPUのサービスを提供開始すると発表しま...インフラのニュースは、コスト構造の変化として効いてくることが多い領域です。",
+      "refs": [
+        {
+          "title": "Oracle CloudがGoogle TPU導入を発表、2027年に提供を開始。Oracle AI World 2026",
+          "url": "https://www.publickey1.jp/blog/26/oracle_cloudgoogle_tpu2027oracle_ai_world_2026.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-10-27T16:33:51.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "M6搭載「MacBook Pro」発表、33万9800円から グラフィックス性能3割増、11月6日発売",
+      "body": "3本目。CNET Japanから、M6搭載「MacBook Pro」発表、33万9800円から グラフィックス性能3割増、11月6日発売。アップルは10月27日（米国時間）、新型チップ「M6」を搭載した14インチの「MacBook Pro」を発表した。従来のM5搭載モデルと比べてグラフィックスやAIの処理性能を高め、新たにWi-Fi 7に対応する。日本での価格は33万9800円（税込）から。10月29日に予約受付を開始し、11月6日に発売する。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "M6搭載「MacBook Pro」発表、33万9800円から グラフィックス性能3割増、11月6日発売",
+          "url": "https://japan.cnet.com/article/35254049/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-27T21:25:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "GMO、不正アクセス実行犯の手がかりに懸賞金 1億5000万円規模",
+      "body": "4本目。はてなブックマーク テクノロジーから、GMO、不正アクセス実行犯の手がかりに懸賞金 1億5000万円規模。GMOインターネットグループは10月27日、傘下のGMOインターネットが提供するFX自動売買用VPS「お名前.com デスクトップクラウド」への不正アクセスを巡り、事態を解明する情報に総額100万ドル（約1億5000万円）を支払う懸賞金制度を始めると発表した。28日正午から専用窓口で情報提供を受け付ける。 国内外の法人・個人か...このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "GMO、不正アクセス実行犯の手がかりに懸賞金 1億5000万円規模",
+          "url": "https://www.itmedia.co.jp/news/article/2610/27/2000002642/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-27T11:23:36.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "専門AIで肌カウンセリング、ファンケルが新サービス チャットと顔画像解析で",
+      "body": "5本目。ITmedia NEWSから、専門AIで肌カウンセリング、ファンケルが新サービス チャットと顔画像解析で。ファンケルは10月27日、肌専門の人工知能（AI）を使った肌のカウンセリングサービスを始めた。スマートフォンなどで、同社の公式アプリから無料で利用できる。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "専門AIで肌カウンセリング、ファンケルが新サービス チャットと顔画像解析で",
+          "url": "https://www.itmedia.co.jp/news/article/2610/27/2000002629/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-27T07:24:32.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。LLM、大規模言語モデル、読み方はエルエルエム。大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。最後に、チャーンレート、読み方はチャーンレート。解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。職務経歴書は、前職の業務をそのまま書くより「どの課題を、どう測って、どう改善したか」に翻訳すると、業界が違っても伝わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。ITmedia AI+から、「AIデータセンター」どこに作る？ 工場跡地、廃校、洋上、宇宙――ユニークな立地戦略の狙いは。国内で「AIデータセンター」の建設が相次いでいる。TechCrunchから、Who’s really in charge at Anthropic after the IPO?ITmedia AI+から、日本取引所、金融市場の取引システム運用監視にAIを導入 精度97％を実現した方法。システムの複雑化に伴い、障害対応の属人化が深刻化している。TechCrunchから、Guidewire buys Hyperexponential for $1.7B in cash。TechCrunchから、From 8VC to Benchmark, here’s what’s hiding in October SEC filings。Publickeyから、JavaScriptランタイムの「Bun」がPrettier互換で300倍以上高速なフォーマッタに。Prettier設定ファイルもそのまま利用可能。SaaStrから、Sumble: Why 80% Accurate Data Turns Into 33% Accurate Data by the Time Your Agent Uses It, and How Nooks Found 700 Accounts It Didn’t Know About。Hacker News フロントページから、Survival LLM: AI assistant and emergency library that runs on your own computer。OpenAI Newsから、Retell uses OpenAI models to help power 100M monthly calls。Hacker News フロントページから、Early progress on accelerating drug development with Claude。はてなブックマーク テクノロジーから、公開された情報と氏名など同一の人物、ＧＭＯクラウドサービスの利用「一度もない」。CNET Japanから、国産AI「PLaMo」にディープリサーチ機能 出典付きレポートを自動作成--PFNが発表。以上です。",
+      "refs": [
+        {
+          "title": "「AIデータセンター」どこに作る？ 工場跡地、廃校、洋上、宇宙――ユニークな立地戦略の狙いは",
+          "url": "https://www.itmedia.co.jp/business/articles/2610/28/news039.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-27T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Who’s really in charge at Anthropic after the IPO?",
+          "url": "https://techcrunch.com/2026/10/27/whos-really-in-charge-at-anthropic-after-the-ipo/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-27T21:38:28.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "日本取引所、金融市場の取引システム運用監視にAIを導入 精度97％を実現した方法",
+          "url": "https://kn.itmedia.co.jp/kn/article/2610/28/2000002621/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-27T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Guidewire buys Hyperexponential for $1.7B in cash",
+          "url": "https://techcrunch.com/2026/10/27/guidewire-buys-hyperexponential-for-1-7b-in-cash/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-27T22:26:03.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "From 8VC to Benchmark, here’s what’s hiding in October SEC filings",
+          "url": "https://techcrunch.com/2026/10/27/from-8vc-to-benchmark-heres-whats-hiding-in-october-sec-filings/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-27T22:17:18.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "JavaScriptランタイムの「Bun」がPrettier互換で300倍以上高速なフォーマッタに。Prettier設定ファイルもそのまま利用可能",
+          "url": "https://www.publickey1.jp/blog/26/javascriptbunprettier300prettier.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-10-27T15:27:52.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Sumble: Why 80% Accurate Data Turns Into 33% Accurate Data by the Time Your Agent Uses It, and How Nooks Found 700 Accounts It Didn’t Know About",
+          "url": "https://www.saastr.com/sumble-why-80-accurate-data-turns-into-33-accurate-data-by-the-time-your-agent-uses-it-and-how-nooks-found-700-accounts-it-didnt-know-about/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-27T11:00:17.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+          "url": "https://www.brangus.io/survival-llm",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-27T19:55:06.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Retell uses OpenAI models to help power 100M monthly calls",
+          "url": "https://openai.com/index/retell-ai",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-10-27T15:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Early progress on accelerating drug development with Claude",
+          "url": "https://www.anthropic.com/research/early-progress-drug-development",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-27T20:50:42.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "公開された情報と氏名など同一の人物、ＧＭＯクラウドサービスの利用「一度もない」",
+          "url": "https://www.yomiuri.co.jp/national/20261027-GYT1T00367/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-27T13:11:05.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        },
+        {
+          "title": "国産AI「PLaMo」にディープリサーチ機能 出典付きレポートを自動作成--PFNが発表",
+          "url": "https://japan.cnet.com/article/35254051/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-27T21:20:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "Google DeepMind、ワールドモデル「Genie 4」発表 音声や会話もリアルタイム生成、Geminiと連携",
+        "url": "https://www.itmedia.co.jp/news/article/2610/28/2000002648/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-27T21:53:37.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Oracle CloudがGoogle TPU導入を発表、2027年に提供を開始。Oracle AI World 2026",
+        "url": "https://www.publickey1.jp/blog/26/oracle_cloudgoogle_tpu2027oracle_ai_world_2026.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-10-27T16:33:51.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "M6搭載「MacBook Pro」発表、33万9800円から グラフィックス性能3割増、11月6日発売",
+        "url": "https://japan.cnet.com/article/35254049/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-27T21:25:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "GMO、不正アクセス実行犯の手がかりに懸賞金 1億5000万円規模",
+        "url": "https://www.itmedia.co.jp/news/article/2610/27/2000002642/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-27T11:23:36.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "専門AIで肌カウンセリング、ファンケルが新サービス チャットと顔画像解析で",
+        "url": "https://www.itmedia.co.jp/news/article/2610/27/2000002629/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-27T07:24:32.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "「AIデータセンター」どこに作る？ 工場跡地、廃校、洋上、宇宙――ユニークな立地戦略の狙いは",
+        "url": "https://www.itmedia.co.jp/business/articles/2610/28/news039.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-27T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Who’s really in charge at Anthropic after the IPO?",
+        "url": "https://techcrunch.com/2026/10/27/whos-really-in-charge-at-anthropic-after-the-ipo/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-27T21:38:28.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "日本取引所、金融市場の取引システム運用監視にAIを導入 精度97％を実現した方法",
+        "url": "https://kn.itmedia.co.jp/kn/article/2610/28/2000002621/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-27T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Guidewire buys Hyperexponential for $1.7B in cash",
+        "url": "https://techcrunch.com/2026/10/27/guidewire-buys-hyperexponential-for-1-7b-in-cash/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-27T22:26:03.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "From 8VC to Benchmark, here’s what’s hiding in October SEC filings",
+        "url": "https://techcrunch.com/2026/10/27/from-8vc-to-benchmark-heres-whats-hiding-in-october-sec-filings/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-27T22:17:18.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "JavaScriptランタイムの「Bun」がPrettier互換で300倍以上高速なフォーマッタに。Prettier設定ファイルもそのまま利用可能",
+        "url": "https://www.publickey1.jp/blog/26/javascriptbunprettier300prettier.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-10-27T15:27:52.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Sumble: Why 80% Accurate Data Turns Into 33% Accurate Data by the Time Your Agent Uses It, and How Nooks Found 700 Accounts It Didn’t Know About",
+        "url": "https://www.saastr.com/sumble-why-80-accurate-data-turns-into-33-accurate-data-by-the-time-your-agent-uses-it-and-how-nooks-found-700-accounts-it-didnt-know-about/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-27T11:00:17.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+        "url": "https://www.brangus.io/survival-llm",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-27T19:55:06.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Retell uses OpenAI models to help power 100M monthly calls",
+        "url": "https://openai.com/index/retell-ai",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-10-27T15:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Early progress on accelerating drug development with Claude",
+        "url": "https://www.anthropic.com/research/early-progress-drug-development",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-27T20:50:42.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "公開された情報と氏名など同一の人物、ＧＭＯクラウドサービスの利用「一度もない」",
+        "url": "https://www.yomiuri.co.jp/national/20261027-GYT1T00367/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-27T13:11:05.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "国産AI「PLaMo」にディープリサーチ機能 出典付きレポートを自動作成--PFNが発表",
+        "url": "https://japan.cnet.com/article/35254051/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-27T21:20:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "llm",
+      "term": "LLM（大規模言語モデル）",
+      "reading": "エルエルエム",
+      "category": "AI",
+      "level": 1,
+      "definition": "大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。",
+      "interview": "「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    },
+    {
+      "id": "churn",
+      "term": "チャーンレート",
+      "reading": "チャーンレート",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。",
+      "interview": "「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 667
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 214
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 911
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 897
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 765
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 551
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1302
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 862
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 757
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 493
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 674
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 734
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 198,
+    "eligible": 133
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}

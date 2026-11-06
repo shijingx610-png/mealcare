@@ -1,0 +1,625 @@
+{
+  "id": "2026-10-13",
+  "createdAt": "2026-10-13T23:21:36.404Z",
+  "dateLabel": "10月13日（火）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.9,
+  "generator": "template",
+  "title": "10月13日（火） OpenAI従業員、役員会議室に録音装置を仕掛けた疑いでFBIが逮捕 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月13日（火）のテックニュースをお届けします。今日の見出しは5本です。1つ目、OpenAI従業員、役員会議室に録音装置を仕掛けた疑いでFBIが逮捕。2つ目、Appleが初のスマートディスプレイ「HomeView」発表、7インチ画面で約5万円。3つ目、米Getty Imagesが破産申請へ AI画像の台頭で経営悪化、「報道写真」軸に年内の再建目指す。4つ目、Apple、「Welcome home」イベントで発表されたことまとめ 日本でも2製品予約開始。5つ目、Webアプリフレームワークの「SvelteKit 3」正式リリース。設定をViteに集約、型安全やエラー処理の改善など。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "OpenAI従業員、役員会議室に録音装置を仕掛けた疑いでFBIが逮捕",
+      "body": "1本目。ITmedia AI+から、OpenAI従業員、役員会議室に録音装置を仕掛けた疑いでFBIが逮捕。OpenAIは、役員会議室のテレビ裏に隠されていた盗聴用録音装置を発見し、設置したエンジニアの男を特定してFBIに通報した。司法省は会話を傍受した疑いなどで男を逮捕・訴追した。FBIや情報機関は、SI（旧AI）技術を守る防諜任務の重要性を強調した。このニュースははてなブックマーク テクノロジーとITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "OpenAI従業員、役員会議室に録音装置を仕掛けた疑いでFBIが逮捕",
+          "url": "https://www.itmedia.co.jp/news/article/2610/14/2000002236/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-13T22:17:56.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー",
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Appleが初のスマートディスプレイ「HomeView」発表、7インチ画面で約5万円",
+      "body": "2本目。CNET Japanから、Appleが初のスマートディスプレイ「HomeView」発表、7インチ画面で約5万円。米Appleは10月13日（現地時間）、同社初のスマートディスプレイ「HomeView」を発表した。7インチの正方形画面を備え、顔認識によって家族一人ひとりに合わせた情報を表示できる。価格は299ドルで、11月13日に発売する。日本での発売は発表されていない。日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "Appleが初のスマートディスプレイ「HomeView」発表、7インチ画面で約5万円",
+          "url": "https://japan.cnet.com/article/35253511/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-13T22:44:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "米Getty Imagesが破産申請へ AI画像の台頭で経営悪化、「報道写真」軸に年内の再建目指す",
+      "body": "3本目。はてなブックマーク テクノロジーから、米Getty Imagesが破産申請へ AI画像の台頭で経営悪化、「報道写真」軸に年内の再建目指す。再建後は、創業家のゲッティ家と米投資会社Koch Equity Developmentの関連会社が株式を100％保有する。両者は最大5億3300万ドルを新たに出資するほか、債権者も金利負担の軽減や返済期限の延長などに応じた。 Getty Imagesを巡っては、競合の米Shutterstockとの合併が破談になったばかりだった。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。資金調達のニュースは、その会社が次の1、2年で採用を増やすサインでもあります。転職先候補として覚えておく価値があります。",
+      "refs": [
+        {
+          "title": "米Getty Imagesが破産申請へ AI画像の台頭で経営悪化、「報道写真」軸に年内の再建目指す",
+          "url": "https://www.itmedia.co.jp/news/article/2610/13/2000002234/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-13T14:03:48.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "Apple、「Welcome home」イベントで発表されたことまとめ 日本でも2製品予約開始",
+      "body": "4本目。ITmedia NEWSから、Apple、「Welcome home」イベントで発表されたことまとめ 日本でも2製品予約開始。Appleはスマートホーム関連の新製品を発表した。7インチのディスプレイと「Siri AI」を搭載する「HomeView」のほか、「A19」搭載「Apple TV 4K」、音に同期して発光する「HomePod mini 2」、LGらと共同開発したスマートホーム製品群を公開。日本でも一部製品を順次発売する。プロダクトの変化は、ユーザーの不満がどこにあったかを教えてくれます。",
+      "refs": [
+        {
+          "title": "Apple、「Welcome home」イベントで発表されたことまとめ 日本でも2製品予約開始",
+          "url": "https://www.itmedia.co.jp/news/article/2610/14/2000002235/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-13T21:32:26.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Webアプリフレームワークの「SvelteKit 3」正式リリース。設定をViteに集約、型安全やエラー処理の改善など",
+      "body": "5本目。Publickeyから、Webアプリフレームワークの「SvelteKit 3」正式リリース。設定をViteに集約、型安全やエラー処理の改善など。Webアプリケーションフレームワーク「SvelteKit 3」正式版がリリースされました。 SvelteKitは、Web UIフレームワークの「Svelte」とビルドツールの「Vite」を基盤とし、ルーティング、サーバサイドレンダリング（S...身近なサービスの変化は、ユーザー目線の実感を持って語れる貴重な題材です。",
+      "refs": [
+        {
+          "title": "Webアプリフレームワークの「SvelteKit 3」正式リリース。設定をViteに集約、型安全やエラー処理の改善など",
+          "url": "https://www.publickey1.jp/blog/26/websveltekit_3vite.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-10-13T15:26:33.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。次に、トークン、読み方はトークン。AIが文章を扱うときの最小単位です。日本語ならおおむね1文字が1トークン前後。AIの利用料金はこのトークン数で決まります。AI企業の原価構造はトークン単価。値下げのニュースが業界に効く理由がここにあります。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。最後に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。志望動機は「業界が伸びているから」だけだと弱くなります。どのニュースを見て何を面白いと思ったのか、具体的な一本があると説得力が変わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。ITmedia AI+から、オムロンはAIを現場の価値に変える 米IPC企業買収で「設備最適化」へ拡張。オムロンは、米国の産業用PCメーカーであるOnLogicを完全子会社化すると発表。TechCrunchから、Judge orders OpenAI to turn over hiring records in Apple trade secrets case。TechCrunchから、Science Corporation implants its vision-restoring chip in its first Stargardt disease patient。TechCrunchから、Industrial Next wants factory robots to switch tasks in minutes, not weeks。ITmedia AI+から、国産AI「Sarashina」が無料で試せるWebサイト、ソフトバンク子会社が公開 6つのAIモデルが呼び出せるAPIも。はてなブックマーク テクノロジーから、「Gemini 4 Argon」が一般提供開始 ～満を持して登場した最強の「Gemini」モデル／「Gemini」アプリでは「Google AI Pro/Ultra」の契約者が利用可能。Hacker News フロントページから、Physical Intelligence API Beta: Frontier Models for Every Robot。Google AI ブログから、Gemini 4 Argon: Built to solve your hardest problems。Hacker News フロントページから、PostEra (YC W20) Is Hiring AI Researchers for Drug Discovery。Hacker News フロントページから、Show HN: Parsimony – an open-source benchmark for how much code AI models add。ITmedia NEWSから、JR東海、ECサイトの顧客情報約1.5件漏えいか IDCFへの不正アクセスで「閲覧された可能性を否定できない」。はてなブックマーク テクノロジーから、キャッシュレスサービス「IDARE」、約13万人の個人情報漏えい 残高や取引履歴なども。以上です。",
+      "refs": [
+        {
+          "title": "オムロンはAIを現場の価値に変える 米IPC企業買収で「設備最適化」へ拡張",
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2610/14/news032.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-13T21:30:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Judge orders OpenAI to turn over hiring records in Apple trade secrets case",
+          "url": "https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-13T20:36:44.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Science Corporation implants its vision-restoring chip in its first Stargardt disease patient",
+          "url": "https://techcrunch.com/2026/10/13/science-corporation-implants-its-vision-restoring-chip-in-its-first-stargardt-disease-patient/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-13T23:13:31.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Industrial Next wants factory robots to switch tasks in minutes, not weeks",
+          "url": "https://techcrunch.com/2026/10/13/industrial-next-wants-factory-robots-to-switch-tasks-in-minutes-not-weeks/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-13T23:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "国産AI「Sarashina」が無料で試せるWebサイト、ソフトバンク子会社が公開 6つのAIモデルが呼び出せるAPIも",
+          "url": "https://www.itmedia.co.jp/news/article/2610/13/2000002224/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-13T09:24:12.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "「Gemini 4 Argon」が一般提供開始 ～満を持して登場した最強の「Gemini」モデル／「Gemini」アプリでは「Google AI Pro/Ultra」の契約者が利用可能",
+          "url": "https://forest.watch.impress.co.jp/docs/news/2147842.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-13T17:22:11.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Physical Intelligence API Beta: Frontier Models for Every Robot",
+          "url": "https://www.pi.website/blog/api-beta",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-13T21:55:25.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Gemini 4 Argon: Built to solve your hardest problems",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+          "sourceName": "Google AI ブログ",
+          "publishedAt": "2026-10-13T16:00:00.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        },
+        {
+          "title": "PostEra (YC W20) Is Hiring AI Researchers for Drug Discovery",
+          "url": "https://jobs.lever.co/postera/c7d50a36-db0a-4574-bfe4-8700b74a22c0",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-13T21:01:12.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Show HN: Parsimony – an open-source benchmark for how much code AI models add",
+          "url": "https://parsimony.lasu.dev/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-13T19:50:31.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "JR東海、ECサイトの顧客情報約1.5件漏えいか IDCFへの不正アクセスで「閲覧された可能性を否定できない」",
+          "url": "https://www.itmedia.co.jp/news/article/2610/14/2000002237/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-13T22:20:54.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "キャッシュレスサービス「IDARE」、約13万人の個人情報漏えい 残高や取引履歴なども",
+          "url": "https://www.itmedia.co.jp/news/article/2610/13/2000002233/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-13T13:34:54.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "OpenAI従業員、役員会議室に録音装置を仕掛けた疑いでFBIが逮捕",
+        "url": "https://www.itmedia.co.jp/news/article/2610/14/2000002236/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-13T22:17:56.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー",
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Appleが初のスマートディスプレイ「HomeView」発表、7インチ画面で約5万円",
+        "url": "https://japan.cnet.com/article/35253511/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-13T22:44:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "米Getty Imagesが破産申請へ AI画像の台頭で経営悪化、「報道写真」軸に年内の再建目指す",
+        "url": "https://www.itmedia.co.jp/news/article/2610/13/2000002234/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-13T14:03:48.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Apple、「Welcome home」イベントで発表されたことまとめ 日本でも2製品予約開始",
+        "url": "https://www.itmedia.co.jp/news/article/2610/14/2000002235/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-13T21:32:26.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Webアプリフレームワークの「SvelteKit 3」正式リリース。設定をViteに集約、型安全やエラー処理の改善など",
+        "url": "https://www.publickey1.jp/blog/26/websveltekit_3vite.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-10-13T15:26:33.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "オムロンはAIを現場の価値に変える 米IPC企業買収で「設備最適化」へ拡張",
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2610/14/news032.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-13T21:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Judge orders OpenAI to turn over hiring records in Apple trade secrets case",
+        "url": "https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-13T20:36:44.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Science Corporation implants its vision-restoring chip in its first Stargardt disease patient",
+        "url": "https://techcrunch.com/2026/10/13/science-corporation-implants-its-vision-restoring-chip-in-its-first-stargardt-disease-patient/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-13T23:13:31.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Industrial Next wants factory robots to switch tasks in minutes, not weeks",
+        "url": "https://techcrunch.com/2026/10/13/industrial-next-wants-factory-robots-to-switch-tasks-in-minutes-not-weeks/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-13T23:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "国産AI「Sarashina」が無料で試せるWebサイト、ソフトバンク子会社が公開 6つのAIモデルが呼び出せるAPIも",
+        "url": "https://www.itmedia.co.jp/news/article/2610/13/2000002224/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-13T09:24:12.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "「Gemini 4 Argon」が一般提供開始 ～満を持して登場した最強の「Gemini」モデル／「Gemini」アプリでは「Google AI Pro/Ultra」の契約者が利用可能",
+        "url": "https://forest.watch.impress.co.jp/docs/news/2147842.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-13T17:22:11.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Physical Intelligence API Beta: Frontier Models for Every Robot",
+        "url": "https://www.pi.website/blog/api-beta",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-13T21:55:25.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Gemini 4 Argon: Built to solve your hardest problems",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+        "sourceName": "Google AI ブログ",
+        "publishedAt": "2026-10-13T16:00:00.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "PostEra (YC W20) Is Hiring AI Researchers for Drug Discovery",
+        "url": "https://jobs.lever.co/postera/c7d50a36-db0a-4574-bfe4-8700b74a22c0",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-13T21:01:12.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Show HN: Parsimony – an open-source benchmark for how much code AI models add",
+        "url": "https://parsimony.lasu.dev/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-13T19:50:31.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "JR東海、ECサイトの顧客情報約1.5件漏えいか IDCFへの不正アクセスで「閲覧された可能性を否定できない」",
+        "url": "https://www.itmedia.co.jp/news/article/2610/14/2000002237/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-13T22:20:54.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "キャッシュレスサービス「IDARE」、約13万人の個人情報漏えい 残高や取引履歴なども",
+        "url": "https://www.itmedia.co.jp/news/article/2610/13/2000002233/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-13T13:34:54.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "token",
+      "term": "トークン",
+      "reading": "トークン",
+      "category": "AI",
+      "level": 2,
+      "definition": "AIが文章を扱うときの最小単位です。日本語ならおおむね1文字が1トークン前後。AIの利用料金はこのトークン数で決まります。",
+      "interview": "AI企業の原価構造はトークン単価。値下げのニュースが業界に効く理由がここにあります。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 620
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 169
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1063
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 999
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 614
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 530
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1475
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 1068
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 393
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 473
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 4112
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1116
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 187,
+    "eligible": 98
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 54.79
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "OpenAI従業員、役員会議室に録音装置を仕掛けた疑いでFBIが逮捕",
+      "startSec": 54.79,
+      "endSec": 107.22
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Appleが初のスマートディスプレイ「HomeView」発表、7インチ画面で約5万円",
+      "startSec": 107.22,
+      "endSec": 147.19
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "米Getty Imagesが破産申請へ AI画像の台頭で経営悪化、「報道写真」軸に年内の再建目指す",
+      "startSec": 147.19,
+      "endSec": 201.86
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "Apple、「Welcome home」イベントで発表されたことまとめ 日本でも2製品予約開始",
+      "startSec": 201.86,
+      "endSec": 242.87
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Webアプリフレームワークの「SvelteKit 3」正式リリース。設定をViteに集約、型安全やエラー処理の改善など",
+      "startSec": 242.87,
+      "endSec": 280.52
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 280.52,
+      "endSec": 386.31
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 386.31,
+      "endSec": 399.59
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 399.59,
+      "endSec": 537.86
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 537.86,
+      "endSec": 548.33
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 26319916,
+    "durationSec": 548.33
+  }
+}

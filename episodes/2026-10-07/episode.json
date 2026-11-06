@@ -1,0 +1,617 @@
+{
+  "id": "2026-10-07",
+  "createdAt": "2026-10-07T23:39:19.186Z",
+  "dateLabel": "10月7日（水）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.7,
+  "generator": "template",
+  "title": "10月7日（水） Anthropic、「Claude Haiku 5.5」のAPI料金を「Haiku 4.5」の10分の1に 「Sonnet 5.5」のキャッシュ読み込み料金は半額に ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月7日（水）のテックニュースをお届けします。今日の見出しは5本です。1つ目、Anthropic、「Claude Haiku 5.5」のAPI料金を「Haiku 4.5」の10分の1に 「Sonnet 5.5」のキャッシュ読み込み料金は半額に。2つ目、【開催報告 & 資料公開】Claude Mythos 時代の AWS セキュリティ対策 ～ AWS Security Agent ご紹介 ～ | Amazon Web Services。3つ目、Google、AI生成コンテンツの「透かし」検出ツールを一般公開 SynthIDが対象。4つ目、AWS、DuckDBをAurora PostgreSQLに統合。ETL不要で直接データレイクを読み取り可能にしたと発表。5つ目、ニッスイ子会社で入出荷停止 IDCFクラウド影響か 委託先データセンターに不正アクセス。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Anthropic、「Claude Haiku 5.5」のAPI料金を「Haiku 4.5」の10分の1に 「Sonnet 5.5」のキャッシュ読み込み料金は半額に",
+      "body": "1本目。ITmedia AI+から、Anthropic、「Claude Haiku 5.5」のAPI料金を「Haiku 4.5」の10分の1に 「Sonnet 5.5」のキャッシュ読み込み料金は半額に。Anthropicは、小型AI「Claude Haiku 5.5」のAPI提供を開始した。料金は10万トークン以下で前世代の10分の1になり、平均利用コストは約75％下がる。effort設定への初対応やSDKへのブラウザおよびコンピュータ使用ツールセット追加のほか、Sonnet 5.5のキャッシュ料金半額も行われた。このニュースはITmedia AI+とITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "Anthropic、「Claude Haiku 5.5」のAPI料金を「Haiku 4.5」の10分の1に 「Sonnet 5.5」のキャッシュ読み込み料金は半額に",
+          "url": "https://www.itmedia.co.jp/aiplus/article/2610/08/2000002114/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-07T23:20:36.000Z",
+          "alsoReportedBy": [
+            "ITmedia AI+",
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "【開催報告 & 資料公開】Claude Mythos 時代の AWS セキュリティ対策 ～ AWS Security Agent ご紹介 ～ | Amazon Web Services",
+      "body": "2本目。はてなブックマーク テクノロジーから、【開催報告 & 資料公開】Claude Mythos 時代の AWS セキュリティ対策 ～ AWS Security Agent ご紹介 ～ | Amazon Web Services。Amazon Web Services ブログ 【開催報告 & 資料公開】Claude Mythos 時代の AWS セキュリティ対策 ～ AWS Security Agent ご紹介 ～ こんにちは。アマゾン ウェブ サービス ジャパン合同会社 パートナーソリューションアーキテクトの深井宣之です。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "【開催報告 & 資料公開】Claude Mythos 時代の AWS セキュリティ対策 ～ AWS Security Agent ご紹介 ～ | Amazon Web Services",
+          "url": "https://aws.amazon.com/jp/blogs/news/aws-jpps-seminar-2026-july/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-07T14:49:53.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Google、AI生成コンテンツの「透かし」検出ツールを一般公開 SynthIDが対象",
+      "body": "3本目。CNET Japanから、Google、AI生成コンテンツの「透かし」検出ツールを一般公開 SynthIDが対象。Googleは10月7日（米国時間）、画像や動画、音声に埋め込まれた電子透かし「SynthID」を検出するツール「SynthID Detector」を一般公開した。ファイルをアップロードすると、AIで生成・編集されたことを示す透かしの有無を確認できる。日本を含む全世界で英語版を利用できる。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "Google、AI生成コンテンツの「透かし」検出ツールを一般公開 SynthIDが対象",
+          "url": "https://japan.cnet.com/article/35253339/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-07T22:10:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "AWS、DuckDBをAurora PostgreSQLに統合。ETL不要で直接データレイクを読み取り可能にしたと発表",
+      "body": "4本目。Publickeyから、AWS、DuckDBをAurora PostgreSQLに統合。ETL不要で直接データレイクを読み取り可能にしたと発表。Amazon Web Services（AWS）は、Amazon Aurora PostgreSQLにDuckDBを統合し、Apache Icebergなどで構築したデータレイクのデータを直接読み取って処理できるようになったことを発表しまし...インフラのニュースは、コスト構造の変化として効いてくることが多い領域です。",
+      "refs": [
+        {
+          "title": "AWS、DuckDBをAurora PostgreSQLに統合。ETL不要で直接データレイクを読み取り可能にしたと発表",
+          "url": "https://www.publickey1.jp/blog/26/awsduckdbaurora_postgresqletl.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-10-07T15:59:06.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "ニッスイ子会社で入出荷停止 IDCFクラウド影響か 委託先データセンターに不正アクセス",
+      "body": "5本目。ITmedia NEWSから、ニッスイ子会社で入出荷停止 IDCFクラウド影響か 委託先データセンターに不正アクセス。報道によると日水物流は、IDCフロンティアのサービスを利用しているという。クラウド基盤の話は、その上で動くサービス全部に影響します。地味ですが土台の話です。セキュリティの話題は、企業がSaaSを選ぶときの判断基準に直結します。",
+      "refs": [
+        {
+          "title": "ニッスイ子会社で入出荷停止 IDCFクラウド影響か 委託先データセンターに不正アクセス",
+          "url": "https://www.itmedia.co.jp/news/article/2610/08/2000002113/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-07T22:49:02.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。次に、シード、シリーズA・B・C、読み方はシード、シリーズエー。スタートアップの資金調達の段階です。シードは製品を作り始める頃、シリーズAはPMFが見え始めた頃、BやCは営業や採用で一気に広げる段階を指します。段階ごとに社内の整い具合が全く違います。「整っていない環境を面白がれるか」は自己分析の材料になります。最後に、SDK、読み方はエスディーケー。ある機能を自分のアプリに組み込むための道具一式です。APIを使いやすく包んだもの、と捉えておけば実務では困りません。APIが「窓口」なら、SDKは「窓口に行くための定期券と地図」です。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。志望動機は「業界が伸びているから」だけだと弱くなります。どのニュースを見て何を面白いと思ったのか、具体的な一本があると説得力が変わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Nous Research confirms it hit $1.5B valuation, launches AI agents for business users。ITmedia AI+から、NVIDIA「RTX Spark」搭載のノートPC「Surface Laptop Ultra」発売 価格は51万3480円から。TechCrunchから、Robot data startup Mecka AI nabs $60M from Sequoia。ITmedia AI+から、社内9部門、62体のエージェントをどう運用？ 「AI社員」が働く企業の実例。AIエージェントが実際に企業の業務を担うようになると、仕事はどのように回るのか。TechCrunchから、Microsoft releases new Nvidia-chip AI PCs with revamped Windows 11。Hacker News フロントページから、Meta and Microsoft take steps to reduce employee usage of Claude AI。はてなブックマーク テクノロジーから、IDCFクラウドへのランサムウェア攻撃についてまとめてみた - piyolog。はてなブックマーク テクノロジーから、IDCFクラウドへのランサム攻撃、495の企業・自治体に影響 一部には「復元難しい」との通達も。Hacker News フロントページから、Docker Agent。SaaStrから、We Run Monaco, Agentforce and Artisan for Outbound. Why We Still Also Built Our Own “AI ABM” Tool for Our Top Accounts。Hacker News フロントページから、Claude Haiku 5.5。ITmedia NEWSから、IDCFクラウドへの不正アクセス、ランサムウェア攻撃と明らかに 運営会社が回答。以上です。",
+      "refs": [
+        {
+          "title": "Nous Research confirms it hit $1.5B valuation, launches AI agents for business users",
+          "url": "https://techcrunch.com/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-07T20:48:45.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "NVIDIA「RTX Spark」搭載のノートPC「Surface Laptop Ultra」発売 価格は51万3480円から",
+          "url": "https://www.itmedia.co.jp/aiplus/article/2610/08/2000002110/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-07T19:35:52.000Z",
+          "alsoReportedBy": [
+            "CNET Japan"
+          ]
+        },
+        {
+          "title": "Robot data startup Mecka AI nabs $60M from Sequoia",
+          "url": "https://techcrunch.com/2026/10/07/robot-data-startup-mecka-ai-nabs-60m-from-sequoia/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-07T23:36:57.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "社内9部門、62体のエージェントをどう運用？ 「AI社員」が働く企業の実例",
+          "url": "https://atmarkit.itmedia.co.jp/ait/articles/2610/08/news018.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-07T23:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Microsoft releases new Nvidia-chip AI PCs with revamped Windows 11",
+          "url": "https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-07T20:22:37.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
+          "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-07T18:49:40.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "IDCFクラウドへのランサムウェア攻撃についてまとめてみた - piyolog",
+          "url": "https://piyolog.hatenadiary.jp/entry/2026/10/08/070606",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-07T22:19:57.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "IDCFクラウドへのランサム攻撃、495の企業・自治体に影響 一部には「復元難しい」との通達も",
+          "url": "https://www.itmedia.co.jp/news/article/2610/07/2000002107/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-07T14:11:42.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "Docker Agent",
+          "url": "https://github.com/docker/docker-agent",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-07T17:48:38.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "We Run Monaco, Agentforce and Artisan for Outbound. Why We Still Also Built Our Own “AI ABM” Tool for Our Top Accounts",
+          "url": "https://www.saastr.com/we-run-monaco-agentforce-and-artisan-for-outbound-we-still-built-our-own-ai-abm-tool-for-our-top-accounts/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-07T14:10:46.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Claude Haiku 5.5",
+          "url": "https://www.anthropic.com/claude-haiku-5-5",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-07T18:01:32.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "IDCFクラウドへの不正アクセス、ランサムウェア攻撃と明らかに 運営会社が回答",
+          "url": "https://www.itmedia.co.jp/news/article/2610/07/2000002106/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-07T11:08:01.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "Anthropic、「Claude Haiku 5.5」のAPI料金を「Haiku 4.5」の10分の1に 「Sonnet 5.5」のキャッシュ読み込み料金は半額に",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2610/08/2000002114/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-07T23:20:36.000Z",
+        "alsoReportedBy": [
+          "ITmedia AI+",
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "【開催報告 & 資料公開】Claude Mythos 時代の AWS セキュリティ対策 ～ AWS Security Agent ご紹介 ～ | Amazon Web Services",
+        "url": "https://aws.amazon.com/jp/blogs/news/aws-jpps-seminar-2026-july/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-07T14:49:53.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Google、AI生成コンテンツの「透かし」検出ツールを一般公開 SynthIDが対象",
+        "url": "https://japan.cnet.com/article/35253339/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-07T22:10:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AWS、DuckDBをAurora PostgreSQLに統合。ETL不要で直接データレイクを読み取り可能にしたと発表",
+        "url": "https://www.publickey1.jp/blog/26/awsduckdbaurora_postgresqletl.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-10-07T15:59:06.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ニッスイ子会社で入出荷停止 IDCFクラウド影響か 委託先データセンターに不正アクセス",
+        "url": "https://www.itmedia.co.jp/news/article/2610/08/2000002113/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-07T22:49:02.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Nous Research confirms it hit $1.5B valuation, launches AI agents for business users",
+        "url": "https://techcrunch.com/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-07T20:48:45.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "NVIDIA「RTX Spark」搭載のノートPC「Surface Laptop Ultra」発売 価格は51万3480円から",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2610/08/2000002110/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-07T19:35:52.000Z",
+        "alsoReportedBy": [
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "Robot data startup Mecka AI nabs $60M from Sequoia",
+        "url": "https://techcrunch.com/2026/10/07/robot-data-startup-mecka-ai-nabs-60m-from-sequoia/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-07T23:36:57.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "社内9部門、62体のエージェントをどう運用？ 「AI社員」が働く企業の実例",
+        "url": "https://atmarkit.itmedia.co.jp/ait/articles/2610/08/news018.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-07T23:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Microsoft releases new Nvidia-chip AI PCs with revamped Windows 11",
+        "url": "https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-07T20:22:37.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
+        "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-07T18:49:40.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "IDCFクラウドへのランサムウェア攻撃についてまとめてみた - piyolog",
+        "url": "https://piyolog.hatenadiary.jp/entry/2026/10/08/070606",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-07T22:19:57.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "IDCFクラウドへのランサム攻撃、495の企業・自治体に影響 一部には「復元難しい」との通達も",
+        "url": "https://www.itmedia.co.jp/news/article/2610/07/2000002107/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-07T14:11:42.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Docker Agent",
+        "url": "https://github.com/docker/docker-agent",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-07T17:48:38.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "We Run Monaco, Agentforce and Artisan for Outbound. Why We Still Also Built Our Own “AI ABM” Tool for Our Top Accounts",
+        "url": "https://www.saastr.com/we-run-monaco-agentforce-and-artisan-for-outbound-we-still-built-our-own-ai-abm-tool-for-our-top-accounts/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-07T14:10:46.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Claude Haiku 5.5",
+        "url": "https://www.anthropic.com/claude-haiku-5-5",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-07T18:01:32.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "IDCFクラウドへの不正アクセス、ランサムウェア攻撃と明らかに 運営会社が回答",
+        "url": "https://www.itmedia.co.jp/news/article/2610/07/2000002106/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-07T11:08:01.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "series",
+      "term": "シード / シリーズA・B・C",
+      "reading": "シード、シリーズエー",
+      "category": "スタートアップ",
+      "level": 1,
+      "definition": "スタートアップの資金調達の段階です。シードは製品を作り始める頃、シリーズAはPMFが見え始めた頃、BやCは営業や採用で一気に広げる段階を指します。",
+      "interview": "段階ごとに社内の整い具合が全く違います。「整っていない環境を面白がれるか」は自己分析の材料になります。"
+    },
+    {
+      "id": "sdk",
+      "term": "SDK",
+      "reading": "エスディーケー",
+      "category": "技術",
+      "level": 2,
+      "definition": "ある機能を自分のアプリに組み込むための道具一式です。APIを使いやすく包んだもの、と捉えておけば実務では困りません。",
+      "interview": "APIが「窓口」なら、SDKは「窓口に行くための定期券と地図」です。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 630
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 187
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 869
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 844
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 598
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 361
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 965
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 827
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 535
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 632
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1126
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 818
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 188,
+    "eligible": 114
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 67.04
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Anthropic、「Claude Haiku 5.5」のAPI料金を「Haiku 4.5」の10分の1に 「Sonnet 5.5」のキャッシュ読み込み料金は半額に",
+      "startSec": 67.04,
+      "endSec": 126.62
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "【開催報告 & 資料公開】Claude Mythos 時代の AWS セキュリティ対策 ～ AWS Security Agent ご紹介 ～ | Amazon Web Services",
+      "startSec": 126.62,
+      "endSec": 177.06
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Google、AI生成コンテンツの「透かし」検出ツールを一般公開 SynthIDが対象",
+      "startSec": 177.06,
+      "endSec": 218.33
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "AWS、DuckDBをAurora PostgreSQLに統合。ETL不要で直接データレイクを読み取り可能にしたと発表",
+      "startSec": 218.33,
+      "endSec": 252.37
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "ニッスイ子会社で入出荷停止 IDCFクラウド影響か 委託先データセンターに不正アクセス",
+      "startSec": 252.37,
+      "endSec": 281.24
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 281.24,
+      "endSec": 389.94
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 389.94,
+      "endSec": 403.22
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 403.22,
+      "endSec": 525.87
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 525.87,
+      "endSec": 536.34
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 25744428,
+    "durationSec": 536.34
+  }
+}

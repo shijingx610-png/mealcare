@@ -1,0 +1,539 @@
+{
+  "id": "2026-11-01",
+  "createdAt": "2026-11-01T22:57:51.915Z",
+  "dateLabel": "11月1日（日）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.5,
+  "generator": "template",
+  "title": "11月1日（日） GitHub、「Copilot Fusion」正式リリース。タスクに応じて最適なAIモデル選択で高性能かつ低コストに。GitHub Universe 2026 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月1日（日）のテックニュースをお届けします。今日の見出しは5本です。1つ目、GitHub、「Copilot Fusion」正式リリース。タスクに応じて最適なAIモデル選択で高性能かつ低コストに。GitHub Universe 2026。2つ目、オラクルの機能がChatGPTで利用可能に 複数システムをまたぐ業務をAIで自動化。3つ目、robots.txtで「クロールはいいけど、AIの学習には使わないで」を明示可能に OpenAIやGoogleら。4つ目、米Microsoftはなぜ最大6万人に早期退職を打診するのか？ 決算資料から読み解く巨額AI投資の“台所事情”。5つ目、OpenAI might rebrand its data centers as ‘AI compute campuses’。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "GitHub、「Copilot Fusion」正式リリース。タスクに応じて最適なAIモデル選択で高性能かつ低コストに。GitHub Universe 2026",
+      "body": "1本目。Publickeyから、GitHub、「Copilot Fusion」正式リリース。タスクに応じて最適なAIモデル選択で高性能かつ低コストに。GitHub Universe 2026。GitHubは、米サンフランシスコで10月28日と29日の2日間開催した年次イベント「GitHub Universe 2026」で、新機能「GitHub Copilot Fusion」の正式リリースを発表しました。 Copilot Fusi...このニュースははてなブックマーク テクノロジーでも同時に取り上げられています。それだけ注目度が高い話題です。新機能のニュースは、競合がどこを脅威だと思っているかの裏返しでもあります。",
+      "refs": [
+        {
+          "title": "GitHub、「Copilot Fusion」正式リリース。タスクに応じて最適なAIモデル選択で高性能かつ低コストに。GitHub Universe 2026",
+          "url": "https://www.publickey1.jp/blog/26/githubcopilot_fusionaigithub_universe_2026.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-02T14:36:38.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "オラクルの機能がChatGPTで利用可能に 複数システムをまたぐ業務をAIで自動化",
+      "body": "2本目。ITmedia AI+から、オラクルの機能がChatGPTで利用可能に 複数システムをまたぐ業務をAIで自動化。オラクルがOpenAIとの協業を拡大し、ChatGPTやCodex、AI技術を活用し、業務の効率化・実行からソフトウェアの脆弱性の検出、アプリケーション開発まで幅広く支援する。小規模企業には年間1万2000ドル分のクラウド利用枠を含むプランを提供する。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "オラクルの機能がChatGPTで利用可能に 複数システムをまたぐ業務をAIで自動化",
+          "url": "https://kn.itmedia.co.jp/kn/article/2611/02/2000002740/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-01T22:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "robots.txtで「クロールはいいけど、AIの学習には使わないで」を明示可能に OpenAIやGoogleら",
+      "body": "3本目。CNET Japanから、robots.txtで「クロールはいいけど、AIの学習には使わないで」を明示可能に OpenAIやGoogleら。米OpenAI、米Google、米Microsoftは10月30日（現地時間）、生成AIの学習に関するサイト運営者の意向を伝える共通設定に対応する方針をそれぞれ発表した。運営者は「学習に使わないでほしい」という意思を、対応する複数のAI企業に一度に伝えられるようになる。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "robots.txtで「クロールはいいけど、AIの学習には使わないで」を明示可能に OpenAIやGoogleら",
+          "url": "https://japan.cnet.com/article/35254264/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-01T22:40:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "米Microsoftはなぜ最大6万人に早期退職を打診するのか？ 決算資料から読み解く巨額AI投資の“台所事情”",
+      "body": "4本目。はてなブックマーク テクノロジーから、米Microsoftはなぜ最大6万人に早期退職を打診するのか？ 決算資料から読み解く巨額AI投資の“台所事情”。米Microsoftはなぜ最大6万人に早期退職を打診するのか？ 決算資料から読み解く巨額AI投資の“台所事情”：Windowsフロントライン（1/3 ページ） Microsoftは10月26日（米国時間）、「Voluntary Exit Offer（VEO）」を従業員に通知した。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "米Microsoftはなぜ最大6万人に早期退職を打診するのか？ 決算資料から読み解く巨額AI投資の“台所事情”",
+          "url": "https://www.itmedia.co.jp/pcuser/articles/2611/02/news029.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-01T21:24:27.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
+      "body": "5本目。TechCrunchから、OpenAI might rebrand its data centers as ‘AI compute campuses’。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。スタートアップの動きは、業界がこれから向かう方向の先行指標になります。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
+          "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-01T21:55:23.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。次に、AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。最後に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。知らない用語が出てきたら、その場で調べるより一度メモして夜にまとめて潰すほうが続きます。完璧に理解しようとしないことが、続けるコツです。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。ITmedia AI+から、Anthropic、「Claude」の「Max 20x」を「Ultra」に名称変更 月200ドルで5時間ごとの利用制限を撤廃。ITmedia AI+から、キオクシア「設備投資を急がねば……」 2027年分は完売、メモリ供給追い付くか。半導体メモリ大手のキオクシアは、2027年の生産能力が全て“完売”だと明かした。SaaStrから、Jason’s Takes on This Week’s 20VC: Anthropic’s S-1, Microsoft’s 27% Buyout, and My 100-Day Rule。SaaStrから、Our Core Vendor Was Down for 24 Hours. Our AI Agent Replaced Them Before They Came Back Up.TechCrunchから、AI can make tech CEOs’ lives easier. What about everyone else?TechCrunchから、TechCrunch Mobility: A new, bigger AV boom is here。はてなブックマーク テクノロジーから、いまのダークウェブでは二段階認証も無力化する「ブラウザのクローンデータ」が売買されており、その対策にはブラウザを使い分けることが有効らしい。Hacker News フロントページから、Ask HN: Which TV do you recommend for privacy?はてなブックマーク テクノロジーから、HonoがPRを閉じた理由。Hacker News フロントページから、John Leeson (the voice of K9) has died。Hacker News フロントページから、Show HN: HackerBooks – HackerTube, but for books mentioned on HN。CNET Japanから、Claude、月額200ドルの「Ultra」で5時間制限撤廃 週間上限は維持。以上です。",
+      "refs": [
+        {
+          "title": "Anthropic、「Claude」の「Max 20x」を「Ultra」に名称変更 月200ドルで5時間ごとの利用制限を撤廃",
+          "url": "https://www.itmedia.co.jp/news/article/2611/02/2000002777/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-01T22:00:23.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "キオクシア「設備投資を急がねば……」 2027年分は完売、メモリ供給追い付くか",
+          "url": "https://www.itmedia.co.jp/business/articles/2611/02/news031.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-01T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Jason’s Takes on This Week’s 20VC: Anthropic’s S-1, Microsoft’s 27% Buyout, and My 100-Day Rule",
+          "url": "https://www.saastr.com/jasons-takes-on-this-weeks-20vc-anthropics-s-1-microsofts-27-buyout-and-my-100-day-rule/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-01T17:00:37.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Our Core Vendor Was Down for 24 Hours. Our AI Agent Replaced Them Before They Came Back Up.",
+          "url": "https://www.saastr.com/our-core-vendor-was-down-for-24-hours-our-ai-agent-replaced-them-before-they-came-back-up/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-01T15:10:35.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AI can make tech CEOs’ lives easier. What about everyone else?",
+          "url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-01T20:57:58.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "TechCrunch Mobility: A new, bigger AV boom is here",
+          "url": "https://techcrunch.com/2026/11/01/techcrunch-mobility-a-new-bigger-av-boom-is-here/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-01T17:04:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "いまのダークウェブでは二段階認証も無力化する「ブラウザのクローンデータ」が売買されており、その対策にはブラウザを使い分けることが有効らしい",
+          "url": "https://togetter.com/li/2765521",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-01T12:12:19.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        },
+        {
+          "title": "Ask HN: Which TV do you recommend for privacy?",
+          "url": "https://news.ycombinator.com/item?id=50328896",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-01T19:35:27.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "HonoがPRを閉じた理由",
+          "url": "https://slides.yusu.ke/foss4g-2026",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-01T11:35:27.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "John Leeson (the voice of K9) has died",
+          "url": "https://www.doctorwhonews.net/2026/11/john_leeson_1943_2026.html",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-01T20:48:04.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
+          "url": "https://hackerbooks.org",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-01T15:58:28.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Claude、月額200ドルの「Ultra」で5時間制限撤廃 週間上限は維持",
+          "url": "https://japan.cnet.com/article/35254252/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-31T23:10:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "GitHub、「Copilot Fusion」正式リリース。タスクに応じて最適なAIモデル選択で高性能かつ低コストに。GitHub Universe 2026",
+        "url": "https://www.publickey1.jp/blog/26/githubcopilot_fusionaigithub_universe_2026.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-02T14:36:38.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "オラクルの機能がChatGPTで利用可能に 複数システムをまたぐ業務をAIで自動化",
+        "url": "https://kn.itmedia.co.jp/kn/article/2611/02/2000002740/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-01T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "robots.txtで「クロールはいいけど、AIの学習には使わないで」を明示可能に OpenAIやGoogleら",
+        "url": "https://japan.cnet.com/article/35254264/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-01T22:40:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "米Microsoftはなぜ最大6万人に早期退職を打診するのか？ 決算資料から読み解く巨額AI投資の“台所事情”",
+        "url": "https://www.itmedia.co.jp/pcuser/articles/2611/02/news029.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-01T21:24:27.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
+        "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-01T21:55:23.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Anthropic、「Claude」の「Max 20x」を「Ultra」に名称変更 月200ドルで5時間ごとの利用制限を撤廃",
+        "url": "https://www.itmedia.co.jp/news/article/2611/02/2000002777/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-01T22:00:23.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "キオクシア「設備投資を急がねば……」 2027年分は完売、メモリ供給追い付くか",
+        "url": "https://www.itmedia.co.jp/business/articles/2611/02/news031.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-01T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Jason’s Takes on This Week’s 20VC: Anthropic’s S-1, Microsoft’s 27% Buyout, and My 100-Day Rule",
+        "url": "https://www.saastr.com/jasons-takes-on-this-weeks-20vc-anthropics-s-1-microsofts-27-buyout-and-my-100-day-rule/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-01T17:00:37.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Our Core Vendor Was Down for 24 Hours. Our AI Agent Replaced Them Before They Came Back Up.",
+        "url": "https://www.saastr.com/our-core-vendor-was-down-for-24-hours-our-ai-agent-replaced-them-before-they-came-back-up/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-01T15:10:35.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AI can make tech CEOs’ lives easier. What about everyone else?",
+        "url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-01T20:57:58.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "TechCrunch Mobility: A new, bigger AV boom is here",
+        "url": "https://techcrunch.com/2026/11/01/techcrunch-mobility-a-new-bigger-av-boom-is-here/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-01T17:04:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "いまのダークウェブでは二段階認証も無力化する「ブラウザのクローンデータ」が売買されており、その対策にはブラウザを使い分けることが有効らしい",
+        "url": "https://togetter.com/li/2765521",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-01T12:12:19.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "Ask HN: Which TV do you recommend for privacy?",
+        "url": "https://news.ycombinator.com/item?id=50328896",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-01T19:35:27.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "HonoがPRを閉じた理由",
+        "url": "https://slides.yusu.ke/foss4g-2026",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-01T11:35:27.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "John Leeson (the voice of K9) has died",
+        "url": "https://www.doctorwhonews.net/2026/11/john_leeson_1943_2026.html",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-01T20:48:04.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
+        "url": "https://hackerbooks.org",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-01T15:58:28.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Claude、月額200ドルの「Ultra」で5時間制限撤廃 週間上限は維持",
+        "url": "https://japan.cnet.com/article/35254252/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-31T23:10:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 749
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 561
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 757
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 761
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 781
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 322
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1423
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 742
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 422
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 451
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 4737
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 648
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 196,
+    "eligible": 57
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}

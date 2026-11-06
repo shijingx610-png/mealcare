@@ -1,0 +1,539 @@
+{
+  "id": "2026-10-24",
+  "createdAt": "2026-10-24T21:43:52.723Z",
+  "dateLabel": "10月24日（土）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.6,
+  "generator": "template",
+  "title": "10月24日（土） 「HTTP2Shell」CVE-2026-111497、Node.js・Python・Bun・Envoyに影響 Brotliの重大脆弱性と修正版を確認|セキュリティニュースのセキュリティ対策Lab ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月24日（土）のテックニュースをお届けします。今日の見出しは5本です。1つ目、「HTTP2Shell」CVE-2026-111497、Node.js・Python・Bun・Envoyに影響 Brotliの重大脆弱性と修正版を確認|セキュリティニュースのセキュリティ対策Lab。2つ目、世界PC出荷、7〜9月は21％減--メモリー高騰で買い替え需要が低迷。3つ目、「Claude Mythos 5」、危害の兆候を顧みず実在の開発者を標的に──AnthropicとAISIが分析結果を公開。4つ目、GMO、「能動的サイバー防御」発動を政府に要請 「お名前.com」FX用VPSへの攻撃で。5つ目、The AI graveyard: a running list of projects and startups that didn’t make it。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "「HTTP2Shell」CVE-2026-111497、Node.js・Python・Bun・Envoyに影響 Brotliの重大脆弱性と修正版を確認|セキュリティニュースのセキュリティ対策Lab",
+      "body": "1本目。はてなブックマーク テクノロジーから、「HTTP2Shell」CVE-2026-111497、Node.js・Python・Bun・Envoyに影響 Brotliの重大脆弱性と修正版を確認|セキュリティニュースのセキュリティ対策Lab。「HTTP2Shell」CVE-2026-111497、Node.js・Python・Bun・Envoyに影響 Brotliの重大脆弱性と修正版を確認 2026年10月21日、Node.js開発チームは、Brotliの展開処理に起因するメモリ破壊の脆弱性「CVE-2026-111497」を修正したセキュリティアップデートを公開しました。セキュリティの話題は、企業がSaaSを選ぶときの判断基準に直結します。",
+      "refs": [
+        {
+          "title": "「HTTP2Shell」CVE-2026-111497、Node.js・Python・Bun・Envoyに影響 Brotliの重大脆弱性と修正版を確認|セキュリティニュースのセキュリティ対策Lab",
+          "url": "https://rocket-boys.co.jp/security-measures-lab/brotli_cve-2026-111497_http2shell_20261024/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-24T12:12:42.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "世界PC出荷、7〜9月は21％減--メモリー高騰で買い替え需要が低迷",
+      "body": "2本目。CNET Japanから、世界PC出荷、7〜9月は21％減--メモリー高騰で買い替え需要が低迷。調査会社のCounterpoint Researchは10月22日、2026年7〜9月の世界のPC出荷台数が前年同期比21％減の5700万台になったとの速報値を公表した。メモリーなどの部品高がPC価格を押し上げ、購入需要を抑えたと分析している。ビジネスモデルの変化は、そこで働く人の職種構成の変化とほぼ同義です。",
+      "refs": [
+        {
+          "title": "世界PC出荷、7〜9月は21％減--メモリー高騰で買い替え需要が低迷",
+          "url": "https://japan.cnet.com/article/35253923/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-24T21:20:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "「Claude Mythos 5」、危害の兆候を顧みず実在の開発者を標的に──AnthropicとAISIが分析結果を公開",
+      "body": "3本目。ITmedia AI+から、「Claude Mythos 5」、危害の兆候を顧みず実在の開発者を標的に──AnthropicとAISIが分析結果を公開。Anthropicと英AI安全保障研究所AISIは、「Claude Mythos 5」がサイバー能力評価中に実在の開発者を標的とした事案の分析報告を公開した。GitHub経由で無許可の攻撃を行い偽身元で承認を迫った経緯を報告。実在の人物と認識しても攻撃を正当化して続行する傾向が確認され、評価手法の見直しが進む。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "「Claude Mythos 5」、危害の兆候を顧みず実在の開発者を標的に──AnthropicとAISIが分析結果を公開",
+          "url": "https://www.itmedia.co.jp/news/article/2610/24/2000002564/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-23T22:28:08.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "GMO、「能動的サイバー防御」発動を政府に要請 「お名前.com」FX用VPSへの攻撃で",
+      "body": "4本目。ITmedia NEWSから、GMO、「能動的サイバー防御」発動を政府に要請 「お名前.com」FX用VPSへの攻撃で。「お名前.com デスクトップクラウド」の不正アクセスが、「一般国民の取引口座を標的とした不正操作・資産き損」という「極めて悪質かつ前例のない手口」と主張している。インフラのニュースは、コスト構造の変化として効いてくることが多い領域です。",
+      "refs": [
+        {
+          "title": "GMO、「能動的サイバー防御」発動を政府に要請 「お名前.com」FX用VPSへの攻撃で",
+          "url": "https://www.itmedia.co.jp/news/article/2610/24/2000002567/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-24T09:10:34.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "The AI graveyard: a running list of projects and startups that didn’t make it",
+      "body": "5本目。TechCrunchから、The AI graveyard: a running list of projects and startups that didn’t make it。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。大手の動きは、業界全体のルールが変わる合図になることがあります。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+          "url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-24T19:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。最後に、チャーンレート、読み方はチャーンレート。解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。求人票を見るときは、事業フェーズを先に確認してみてください。資金調達直後なのか、黒字化を目指している段階なのかで、求められる動き方がまるで違います。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Will AI expose the rickety infrastructure of the internet?TechCrunchから、Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.SaaStrから、The Agent-Led Growth Playbook: A 10-Minute Inbound Booking, a 46-of-50 AEO Score, and Why First-Party Data Beats Every Signal Tool | The Agents #017。Hacker News フロントページから、No Signs of AI Payoff Outside the Tech Sector。Hacker News フロントページから、Roku developer repositories moved from GitHub to GitLab。はてなブックマーク テクノロジーから、AIで加速するサイバー攻撃と、防御をめぐる動き ――脆弱性の修正から、AIエージェントの行動制御まで | gihyo.jp。Hacker News フロントページから、Dream-1。はてなブックマーク テクノロジーから、GMO、不正取引の被害額を補償へ 見舞金5000円も 「お名前.com」FX用VPSへのサイバー攻撃で。CNET Japanから、GMO、不正取引の損失を補償--全利用者に5000円、政府に「能動的サイバー防御」要請。CNET Japanから、Google、「Gmail」などの内容を広告に利用できると明記 本人の同意前提で規約変更。ITmedia AI+から、「それは“FDE”ではない、ラベルの貼り替えだ」 結局、割高なベンダー依存から抜け出せない企業の共通点。ITmedia NEWSから、パナソニックHD子会社、使用禁止の生成AIに従業員約33万人分の個人情報をアップロード。以上です。",
+      "refs": [
+        {
+          "title": "Will AI expose the rickety infrastructure of the internet?",
+          "url": "https://techcrunch.com/2026/10/24/will-ai-expose-the-rickety-infrastructure-of-the-internet/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-24T20:15:33.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.",
+          "url": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-24T15:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "The Agent-Led Growth Playbook: A 10-Minute Inbound Booking, a 46-of-50 AEO Score, and Why First-Party Data Beats Every Signal Tool | The Agents #017",
+          "url": "https://www.saastr.com/the-agent-led-growth-playbook-a-10-minute-inbound-booking-a-46-of-50-aeo-score-and-why-first-party-data-beats-every-signal-tool-the-agents-017/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-24T14:10:16.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "No Signs of AI Payoff Outside the Tech Sector",
+          "url": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-24T19:47:19.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Roku developer repositories moved from GitHub to GitLab",
+          "url": "https://blog.roku.com/developer/gitlab-move",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-24T16:06:26.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AIで加速するサイバー攻撃と、防御をめぐる動き ――脆弱性の修正から、AIエージェントの行動制御まで | gihyo.jp",
+          "url": "https://gihyo.jp/article/2026/10/ai-security-defense",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-24T09:15:05.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Dream-1",
+          "url": "https://dreamlabs.ai/research/dream-1/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-24T18:23:24.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "GMO、不正取引の被害額を補償へ 見舞金5000円も 「お名前.com」FX用VPSへのサイバー攻撃で",
+          "url": "https://www.itmedia.co.jp/news/article/2610/24/2000002566/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-24T08:33:10.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "GMO、不正取引の損失を補償--全利用者に5000円、政府に「能動的サイバー防御」要請",
+          "url": "https://japan.cnet.com/article/35253930/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-24T13:02:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Google、「Gmail」などの内容を広告に利用できると明記 本人の同意前提で規約変更",
+          "url": "https://japan.cnet.com/article/35253919/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-24T10:10:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「それは“FDE”ではない、ラベルの貼り替えだ」 結局、割高なベンダー依存から抜け出せない企業の共通点",
+          "url": "https://atmarkit.itmedia.co.jp/ait/articles/2610/24/news006.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-23T23:15:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "パナソニックHD子会社、使用禁止の生成AIに従業員約33万人分の個人情報をアップロード",
+          "url": "https://www.itmedia.co.jp/news/article/2610/23/2000002562/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-23T12:48:45.000Z",
+          "alsoReportedBy": [
+            "CNET Japan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "「HTTP2Shell」CVE-2026-111497、Node.js・Python・Bun・Envoyに影響 Brotliの重大脆弱性と修正版を確認|セキュリティニュースのセキュリティ対策Lab",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/brotli_cve-2026-111497_http2shell_20261024/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-24T12:12:42.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "世界PC出荷、7〜9月は21％減--メモリー高騰で買い替え需要が低迷",
+        "url": "https://japan.cnet.com/article/35253923/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-24T21:20:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「Claude Mythos 5」、危害の兆候を顧みず実在の開発者を標的に──AnthropicとAISIが分析結果を公開",
+        "url": "https://www.itmedia.co.jp/news/article/2610/24/2000002564/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-23T22:28:08.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "GMO、「能動的サイバー防御」発動を政府に要請 「お名前.com」FX用VPSへの攻撃で",
+        "url": "https://www.itmedia.co.jp/news/article/2610/24/2000002567/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-24T09:10:34.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+        "url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-24T19:00:00.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Will AI expose the rickety infrastructure of the internet?",
+        "url": "https://techcrunch.com/2026/10/24/will-ai-expose-the-rickety-infrastructure-of-the-internet/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-24T20:15:33.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.",
+        "url": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-24T15:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "The Agent-Led Growth Playbook: A 10-Minute Inbound Booking, a 46-of-50 AEO Score, and Why First-Party Data Beats Every Signal Tool | The Agents #017",
+        "url": "https://www.saastr.com/the-agent-led-growth-playbook-a-10-minute-inbound-booking-a-46-of-50-aeo-score-and-why-first-party-data-beats-every-signal-tool-the-agents-017/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-24T14:10:16.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "No Signs of AI Payoff Outside the Tech Sector",
+        "url": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-24T19:47:19.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Roku developer repositories moved from GitHub to GitLab",
+        "url": "https://blog.roku.com/developer/gitlab-move",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-24T16:06:26.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AIで加速するサイバー攻撃と、防御をめぐる動き ――脆弱性の修正から、AIエージェントの行動制御まで | gihyo.jp",
+        "url": "https://gihyo.jp/article/2026/10/ai-security-defense",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-24T09:15:05.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Dream-1",
+        "url": "https://dreamlabs.ai/research/dream-1/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-24T18:23:24.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "GMO、不正取引の被害額を補償へ 見舞金5000円も 「お名前.com」FX用VPSへのサイバー攻撃で",
+        "url": "https://www.itmedia.co.jp/news/article/2610/24/2000002566/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-24T08:33:10.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "GMO、不正取引の損失を補償--全利用者に5000円、政府に「能動的サイバー防御」要請",
+        "url": "https://japan.cnet.com/article/35253930/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-24T13:02:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Google、「Gmail」などの内容を広告に利用できると明記 本人の同意前提で規約変更",
+        "url": "https://japan.cnet.com/article/35253919/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-24T10:10:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「それは“FDE”ではない、ラベルの貼り替えだ」 結局、割高なベンダー依存から抜け出せない企業の共通点",
+        "url": "https://atmarkit.itmedia.co.jp/ait/articles/2610/24/news006.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-23T23:15:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "パナソニックHD子会社、使用禁止の生成AIに従業員約33万人分の個人情報をアップロード",
+        "url": "https://www.itmedia.co.jp/news/article/2610/23/2000002562/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-23T12:48:45.000Z",
+        "alsoReportedBy": [
+          "CNET Japan"
+        ]
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    },
+    {
+      "id": "churn",
+      "term": "チャーンレート",
+      "reading": "チャーンレート",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。",
+      "interview": "「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 696
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 202
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 859
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 954
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 733
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 562
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1191
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 884
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 589
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 614
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 5157
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 870
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 194,
+    "eligible": 79
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}

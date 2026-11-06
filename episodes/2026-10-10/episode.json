@@ -1,0 +1,609 @@
+{
+  "id": "2026-10-10",
+  "createdAt": "2026-10-10T22:45:59.612Z",
+  "dateLabel": "10月10日（土）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.7,
+  "generator": "template",
+  "title": "10月10日（土） 新作映画「バイオハザード」公開で原作ゲームも大盛り上がり？ 劇場でマンガ家が頷いた、その理由とは ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月10日（土）のテックニュースをお届けします。今日の見出しは5本です。1つ目、新作映画「バイオハザード」公開で原作ゲームも大盛り上がり？ 劇場でマンガ家が頷いた、その理由とは。2つ目、国内で相次ぐ不正アクセスに対する注意喚起についてまとめてみた - piyolog。3つ目、OpenAI、安全性研究者3人を解雇 本人らは「安全性を優先したため」と主張、同社は「機密情報の扱いに関する規定違反」と説明。4つ目、止まらない不正アクセス ローソン215万件、ココナラやSansanでも情報漏えい。5つ目、Apple discloses deal to hire team and license tech from personalized podcast startup Huxe。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "新作映画「バイオハザード」公開で原作ゲームも大盛り上がり？ 劇場でマンガ家が頷いた、その理由とは",
+      "body": "1本目。ITmedia NEWSから、新作映画「バイオハザード」公開で原作ゲームも大盛り上がり？ 劇場でマンガ家が頷いた、その理由とは。日本でも公開された「バイオハザード」の新作映画。海外では公開3日で興行収入が約6000万ドル（約95億円）を超え、原作であるゲームシリーズの販売にも影響したようです。ボクも見てきました。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "新作映画「バイオハザード」公開で原作ゲームも大盛り上がり？ 劇場でマンガ家が頷いた、その理由とは",
+          "url": "https://www.itmedia.co.jp/news/article/2610/11/2000002191/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-10T22:15:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "国内で相次ぐ不正アクセスに対する注意喚起についてまとめてみた - piyolog",
+      "body": "2本目。はてなブックマーク テクノロジーから、国内で相次ぐ不正アクセスに対する注意喚起についてまとめてみた - piyolog。2026年10月7日から9日にかけて、個人情報保護委員会、JPCERT/CC、国家サイバー統括室、IPAなどの各機関が、国内組織で相次ぐ不正アクセスによる個人情報の漏えいを受けた注意喚起を公表しました。ここでは関連する情報をまとめます。 BIツールや従業員向けシステムも被害に JPCERT/CCは10月8日に公開した注意喚起で、「2...事故のニュースは、裏返すと「何を備えていれば防げたか」の教材になります。",
+      "refs": [
+        {
+          "title": "国内で相次ぐ不正アクセスに対する注意喚起についてまとめてみた - piyolog",
+          "url": "https://piyolog.hatenadiary.jp/entry/2026/10/11/004353",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-10T15:48:52.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "OpenAI、安全性研究者3人を解雇 本人らは「安全性を優先したため」と主張、同社は「機密情報の扱いに関する規定違反」と説明",
+      "body": "3本目。ITmedia AI+から、OpenAI、安全性研究者3人を解雇 本人らは「安全性を優先したため」と主張、同社は「機密情報の扱いに関する規定違反」と説明。OpenAIで安全性研究に携わっていた研究者3人が、突然解雇されたと公表し、書面での理由開示や外部監査の受け入れ維持を求める書簡を公開した。これに対しOpenAIは、機密情報規定への重大な違反が社内調査で判明したためと説明し、安全性の懸念表明を理由とした解雇ではないと反論している。このニュースははてなブックマーク テクノロジーとITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "OpenAI、安全性研究者3人を解雇 本人らは「安全性を優先したため」と主張、同社は「機密情報の扱いに関する規定違反」と説明",
+          "url": "https://www.itmedia.co.jp/news/article/2610/10/2000002189/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-09T23:28:02.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー",
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "止まらない不正アクセス ローソン215万件、ココナラやSansanでも情報漏えい",
+      "body": "4本目。CNET Japanから、止まらない不正アクセス ローソン215万件、ココナラやSansanでも情報漏えい。国内企業への不正アクセスによる個人情報の漏えいが相次いでいる。10月8〜9日には、ローソンやココナラ、Sansan、LINEヤフーなどが相次いで被害を公表した。ローソンでは約215万件の顧客情報が漏えいしたほか、複数の企業が利用する外部サービスへの攻撃が、各社に波及する事態も起きている。日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "止まらない不正アクセス ローソン215万件、ココナラやSansanでも情報漏えい",
+          "url": "https://japan.cnet.com/article/35253437/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-09T23:37:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Apple discloses deal to hire team and license tech from personalized podcast startup Huxe",
+      "body": "5本目。TechCrunchから、Apple discloses deal to hire team and license tech from personalized podcast startup Huxe。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Apple discloses deal to hire team and license tech from personalized podcast startup Huxe",
+          "url": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-10T19:50:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。最後に、チャーンレート、読み方はチャーンレート。解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。カジュアル面談では、今日のニュースを一つ持っていくだけで会話が動きます。「これ見たんですが、御社ではどう捉えていますか」は、準備している人にしか出せない質問です。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。SaaStrから、Atlassian’s Head of AI: We Bolted AI Onto 20+ Apps, Almost Didn’t Ship Chat, and Flipped Our Hiring Toward Juniors。TechCrunchから、Microsoft’s Satya Nadella says AI models need an ‘emergency brake’。Hacker News フロントページから、Nvidia in talks to acquire US 'open' model startup Reflection AI。Hacker News フロントページから、Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks。TechCrunchから、Cloudflare acquires Deno to improve its Workers programming model。SaaStrから、SaaStr AI App of the Week: Remote. The $300M Payroll Platform Your AI Agent Can Run。はてなブックマーク テクノロジーから、アンソロピックのAI、米警察に虚偽の情報提供 不正にビザ申請も - 日本経済新聞。Hacker News フロントページから、A city-building game in which the city would prefer you didn't。はてなブックマーク テクノロジーから、音声合成に日本語を正しく読んでもらう話 〜高低アクセントからG2Pまで〜 【前編】。株式会社 松尾研究所で働いている栗原です。ITmedia NEWSから、「コミューン」不正アクセスでLINEヤフー、Sansan、パナソニックでも会員情報漏えいの可能性。CNET Japanから、今後10年で「Suica」に起こること--「交通系IC」から「ID」へ（鈴木淳也）。ITmedia NEWSから、「お前たちのクラウドはわれわれのもの」 IDCFクラウドの管理画面に出た攻撃者のメッセージ 内容に運営元は。以上です。",
+      "refs": [
+        {
+          "title": "Atlassian’s Head of AI: We Bolted AI Onto 20+ Apps, Almost Didn’t Ship Chat, and Flipped Our Hiring Toward Juniors",
+          "url": "https://www.saastr.com/atlassians-head-of-ai-we-bolted-ai-onto-20-apps-almost-didnt-ship-chat-and-flipped-our-hiring-toward-juniors/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-10T14:10:55.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
+          "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-10T21:47:51.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Nvidia in talks to acquire US 'open' model startup Reflection AI",
+          "url": "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-10T18:48:35.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks",
+          "url": "https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-bing-redirects-to-push-claude-clickfix-attacks/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-10T21:19:42.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Cloudflare acquires Deno to improve its Workers programming model",
+          "url": "https://techcrunch.com/2026/10/10/cloudflare-acquires-deno-to-improve-its-workers-programming-model/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-10T16:25:42.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "SaaStr AI App of the Week: Remote. The $300M Payroll Platform Your AI Agent Can Run",
+          "url": "https://www.saastr.com/saastr-ai-app-of-the-week-remote-the-300m-payroll-platform-your-ai-agent-can-run/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-10T10:00:38.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "アンソロピックのAI、米警察に虚偽の情報提供 不正にビザ申請も - 日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOGN101I30Q6A011C2000000/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-10T10:08:49.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "A city-building game in which the city would prefer you didn't",
+          "url": "https://housing.over.pizza/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-10T20:31:50.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "音声合成に日本語を正しく読んでもらう話 〜高低アクセントからG2Pまで〜 【前編】",
+          "url": "https://zenn.dev/mkj/articles/speech-tts-japanese-2026",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-10T13:59:47.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「コミューン」不正アクセスでLINEヤフー、Sansan、パナソニックでも会員情報漏えいの可能性",
+          "url": "https://www.itmedia.co.jp/news/article/2610/10/2000002190/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-10T00:02:14.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "今後10年で「Suica」に起こること--「交通系IC」から「ID」へ（鈴木淳也）",
+          "url": "https://japan.cnet.com/article/35253427/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-10T00:10:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「お前たちのクラウドはわれわれのもの」 IDCFクラウドの管理画面に出た攻撃者のメッセージ 内容に運営元は",
+          "url": "https://www.itmedia.co.jp/news/article/2610/09/2000002184/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-10T03:38:24.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "新作映画「バイオハザード」公開で原作ゲームも大盛り上がり？ 劇場でマンガ家が頷いた、その理由とは",
+        "url": "https://www.itmedia.co.jp/news/article/2610/11/2000002191/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-10T22:15:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "国内で相次ぐ不正アクセスに対する注意喚起についてまとめてみた - piyolog",
+        "url": "https://piyolog.hatenadiary.jp/entry/2026/10/11/004353",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-10T15:48:52.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAI、安全性研究者3人を解雇 本人らは「安全性を優先したため」と主張、同社は「機密情報の扱いに関する規定違反」と説明",
+        "url": "https://www.itmedia.co.jp/news/article/2610/10/2000002189/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-09T23:28:02.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー",
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "止まらない不正アクセス ローソン215万件、ココナラやSansanでも情報漏えい",
+        "url": "https://japan.cnet.com/article/35253437/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-09T23:37:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Apple discloses deal to hire team and license tech from personalized podcast startup Huxe",
+        "url": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-10T19:50:00.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Atlassian’s Head of AI: We Bolted AI Onto 20+ Apps, Almost Didn’t Ship Chat, and Flipped Our Hiring Toward Juniors",
+        "url": "https://www.saastr.com/atlassians-head-of-ai-we-bolted-ai-onto-20-apps-almost-didnt-ship-chat-and-flipped-our-hiring-toward-juniors/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-10T14:10:55.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
+        "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-10T21:47:51.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Nvidia in talks to acquire US 'open' model startup Reflection AI",
+        "url": "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-10T18:48:35.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-bing-redirects-to-push-claude-clickfix-attacks/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-10T21:19:42.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Cloudflare acquires Deno to improve its Workers programming model",
+        "url": "https://techcrunch.com/2026/10/10/cloudflare-acquires-deno-to-improve-its-workers-programming-model/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-10T16:25:42.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "SaaStr AI App of the Week: Remote. The $300M Payroll Platform Your AI Agent Can Run",
+        "url": "https://www.saastr.com/saastr-ai-app-of-the-week-remote-the-300m-payroll-platform-your-ai-agent-can-run/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-10T10:00:38.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "アンソロピックのAI、米警察に虚偽の情報提供 不正にビザ申請も - 日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZQOGN101I30Q6A011C2000000/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-10T10:08:49.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "A city-building game in which the city would prefer you didn't",
+        "url": "https://housing.over.pizza/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-10T20:31:50.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "音声合成に日本語を正しく読んでもらう話 〜高低アクセントからG2Pまで〜 【前編】",
+        "url": "https://zenn.dev/mkj/articles/speech-tts-japanese-2026",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-10T13:59:47.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「コミューン」不正アクセスでLINEヤフー、Sansan、パナソニックでも会員情報漏えいの可能性",
+        "url": "https://www.itmedia.co.jp/news/article/2610/10/2000002190/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-10T00:02:14.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "今後10年で「Suica」に起こること--「交通系IC」から「ID」へ（鈴木淳也）",
+        "url": "https://japan.cnet.com/article/35253427/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-10T00:10:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「お前たちのクラウドはわれわれのもの」 IDCFクラウドの管理画面に出た攻撃者のメッセージ 内容に運営元は",
+        "url": "https://www.itmedia.co.jp/news/article/2610/09/2000002184/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-10T03:38:24.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    },
+    {
+      "id": "churn",
+      "term": "チャーンレート",
+      "reading": "チャーンレート",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。",
+      "interview": "「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 516
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 139
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1062
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 1066
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 586
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 426
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 2002
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 1008
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 553
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 637
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1125
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 973
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 195,
+    "eligible": 68
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 56.25
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "新作映画「バイオハザード」公開で原作ゲームも大盛り上がり？ 劇場でマンガ家が頷いた、その理由とは",
+      "startSec": 56.25,
+      "endSec": 91.32
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "国内で相次ぐ不正アクセスに対する注意喚起についてまとめてみた - piyolog",
+      "startSec": 91.32,
+      "endSec": 139.07
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "OpenAI、安全性研究者3人を解雇 本人らは「安全性を優先したため」と主張、同社は「機密情報の扱いに関する規定違反」と説明",
+      "startSec": 139.07,
+      "endSec": 197.93
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "止まらない不正アクセス ローソン215万件、ココナラやSansanでも情報漏えい",
+      "startSec": 197.93,
+      "endSec": 237.95
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Apple discloses deal to hire team and license tech from personalized podcast startup Huxe",
+      "startSec": 237.95,
+      "endSec": 265.31
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 265.31,
+      "endSec": 378.66
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 378.66,
+      "endSec": 393.01
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 393.01,
+      "endSec": 522.57
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 522.57,
+      "endSec": 533.05
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 25586220,
+    "durationSec": 533.05
+  }
+}

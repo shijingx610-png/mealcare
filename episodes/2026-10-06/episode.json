@@ -1,0 +1,615 @@
+{
+  "id": "2026-10-06",
+  "createdAt": "2026-10-06T23:10:12.718Z",
+  "dateLabel": "10月6日（火）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.6,
+  "generator": "template",
+  "title": "10月6日（火） 2026年のAI開発最前線――「AIによるAI開発」から今後は再帰的自己改善「RSI」へ ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月6日（火）のテックニュースをお届けします。今日の見出しは5本です。1つ目、2026年のAI開発最前線――「AIによるAI開発」から今後は再帰的自己改善「RSI」へ。2つ目、Google、原発大手Constellationと20年の電力購入契約 「他の電力利用者に負担なし」。3つ目、FDE（フォワードデプロイドエンジニアリング）によって開発されたAIエージェントの7割は使われず、FDEの名前で単なるコンサルティングが販売されるようになる危険が高まるとガートナーが予測。4つ目、出版取次の日販、米AI企業への書籍販売を認める 業界団体に回答：朝日新聞。5つ目、郵便局で冷凍宅配食を販売 物販拡充で--日本郵便。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "2026年のAI開発最前線――「AIによるAI開発」から今後は再帰的自己改善「RSI」へ",
+      "body": "1本目。ITmedia AI+から、2026年のAI開発最前線――「AIによるAI開発」から今後は再帰的自己改善「RSI」へ。ELYZAは、再帰的自己改善（RSI）の研究開発を推進する「ELYZA RSI Research」を立ち上げたと発表した。併せて、自律研究基盤を用いた音声対話AIエージェント「ELYZA Voice Agent」やフィジカルAIに関する取り組みについても紹介した。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "2026年のAI開発最前線――「AIによるAI開発」から今後は再帰的自己改善「RSI」へ",
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2610/07/news019.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-06T22:30:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Google、原発大手Constellationと20年の電力購入契約 「他の電力利用者に負担なし」",
+      "body": "2本目。ITmedia NEWSから、Google、原発大手Constellationと20年の電力購入契約 「他の電力利用者に負担なし」。Googleと原発大手Constellation Energyは、既存の原発11基の出力増強により送電網に890MWを追加する20年間の電力契約を締結した。AI拡大に伴う電力需要を支える狙いで、他利用者にコスト負担をかけない枠組みを採用する。あわせて原発運用へのGemini導入など技術提携も拡大する。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "Google、原発大手Constellationと20年の電力購入契約 「他の電力利用者に負担なし」",
+          "url": "https://www.itmedia.co.jp/news/article/2610/07/2000002068/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-06T21:55:42.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "FDE（フォワードデプロイドエンジニアリング）によって開発されたAIエージェントの7割は使われず、FDEの名前で単なるコンサルティングが販売されるようになる危険が高まるとガートナーが予測",
+      "body": "3本目。Publickeyから、FDE（フォワードデプロイドエンジニアリング）によって開発されたAIエージェントの7割は使われず、FDEの名前で単なるコンサルティングが販売されるようになる危険が高まるとガートナーが予測。米調査会社のガートナーは、ベンダーのFDE（フォワードデプロイドエンジニアあるいはフォワードデプロイドエンジニアリング）によって開発されたAIエージェントの70％が2028年までに企業に使われずに放棄されるだろう（Gartner Predi...このニュースははてなブックマーク テクノロジーでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "FDE（フォワードデプロイドエンジニアリング）によって開発されたAIエージェントの7割は使われず、FDEの名前で単なるコンサルティングが販売されるようになる危険が高まるとガートナーが予測",
+          "url": "https://www.publickey1.jp/blog/26/fdeai7fde.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-10-06T15:43:31.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "出版取次の日販、米AI企業への書籍販売を認める 業界団体に回答：朝日新聞",
+      "body": "4本目。はてなブックマーク テクノロジーから、出版取次の日販、米AI企業への書籍販売を認める 業界団体に回答：朝日新聞。出版取次大手の日販グループホールディングスが米AI（人工知能）開発企業に書籍を販売していた疑いをめぐり、事実確認を求めていた日本書籍出版協会（書協）に対して、日販側が販売した事実を認めたことが6日、…。このニュースははてなブックマーク テクノロジーでも同時に取り上げられています。それだけ注目度が高い話題です。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "出版取次の日販、米AI企業への書籍販売を認める 業界団体に回答：朝日新聞",
+          "url": "https://www.asahi.com/sp/articles/ASVB63TSFVB6UCVL02YM.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-06T14:01:10.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "郵便局で冷凍宅配食を販売 物販拡充で--日本郵便",
+      "body": "5本目。CNET Japanから、郵便局で冷凍宅配食を販売 物販拡充で--日本郵便。日本郵便は10月2日、クラダシと共同で展開する冷凍宅配食「post chef（ポストシェフ）」の提供を10月8日に始めると発表した。郵便局の窓口にあるタブレット端末から注文でき、商品は冷凍便で届く。郵便局のネットショップや電話でも注文を受け付ける。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "郵便局で冷凍宅配食を販売 物販拡充で--日本郵便",
+          "url": "https://japan.cnet.com/article/35253292/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-06T22:45:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。最後に、LLM、大規模言語モデル、読み方はエルエルエム。大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。求人票を見るときは、事業フェーズを先に確認してみてください。資金調達直後なのか、黒字化を目指している段階なのかで、求められる動き方がまるで違います。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、AI computing startup Lambda to raise $4B ahead of planned IPO。TechCrunchから、Ex-Ramp engineers raise $20M for platform Melius after scrapping their first product。TechCrunchから、Mirror Particle is building a ‘world model’ of human behavior。ITmedia AI+から、「AIの多少の悪影響は許容すべき」 OpenAIアルトマン氏、“AIが暴走”してなおAnthropicと主張がズレる訳。OpenAI Newsから、Atlassian and OpenAI expand partnership to turn enterprise knowledge into action。ITmedia AI+から、AI時代のOTセキュリティ、「盾と矛」勝つのはどちらか？Hacker News フロントページから、Ask HN: How would you feel if we nationalized Google?Hacker News フロントページから、Decisions API is in public beta。OpenAI Newsから、Sharing AI progress in mathematics。はてなブックマーク テクノロジーから、サイバー攻撃で企業・団体の情報漏えい被害最多、今年５００件超・すでに過去２年に並ぶ…ＡＩ使い弱点探索か。SaaStrから、How Much of Your Customer Support Can AI Really Resolve? The Best Get About 70%. The Median Is 48%. Here’s the Real Data From 13 Vendors。Publickeyから、マイクロソフト、VS CodeにAIモデルのオーケストレーションで高品質低コストなAIを実現する「HydraFusion」をプレビュー実装。以上です。",
+      "refs": [
+        {
+          "title": "AI computing startup Lambda to raise $4B ahead of planned IPO",
+          "url": "https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-06T20:00:30.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Ex-Ramp engineers raise $20M for platform Melius after scrapping their first product",
+          "url": "https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-06T22:34:03.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Mirror Particle is building a ‘world model’ of human behavior",
+          "url": "https://techcrunch.com/2026/10/06/mirror-particle-is-building-a-world-model-of-human-behavior/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-06T16:35:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「AIの多少の悪影響は許容すべき」 OpenAIアルトマン氏、“AIが暴走”してなおAnthropicと主張がズレる訳",
+          "url": "https://www.itmedia.co.jp/business/articles/2610/07/news042.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-06T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+          "url": "https://openai.com/index/atlassian-partnership",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-10-06T16:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AI時代のOTセキュリティ、「盾と矛」勝つのはどちらか？",
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2610/07/news040.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-06T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Ask HN: How would you feel if we nationalized Google?",
+          "url": "https://news.ycombinator.com/item?id=49985180",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-06T22:41:11.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Decisions API is in public beta",
+          "url": "https://developers.openai.com/api/docs/guides/decisions",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-06T20:57:25.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Sharing AI progress in mathematics",
+          "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-10-06T12:00:00.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        },
+        {
+          "title": "サイバー攻撃で企業・団体の情報漏えい被害最多、今年５００件超・すでに過去２年に並ぶ…ＡＩ使い弱点探索か",
+          "url": "https://www.yomiuri.co.jp/national/20261006-GYT1T00373/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-06T20:11:53.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "How Much of Your Customer Support Can AI Really Resolve? The Best Get About 70%. The Median Is 48%. Here’s the Real Data From 13 Vendors",
+          "url": "https://www.saastr.com/how-much-of-your-customer-support-can-ai-really-resolve-the-best-get-about-70-the-median-is-48-heres-the-real-data-from-13-vendors/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-06T14:10:55.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "マイクロソフト、VS CodeにAIモデルのオーケストレーションで高品質低コストなAIを実現する「HydraFusion」をプレビュー実装",
+          "url": "https://www.publickey1.jp/blog/26/vs_codeaiaihydrafusion.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-10-06T15:47:53.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "2026年のAI開発最前線――「AIによるAI開発」から今後は再帰的自己改善「RSI」へ",
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2610/07/news019.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-06T22:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Google、原発大手Constellationと20年の電力購入契約 「他の電力利用者に負担なし」",
+        "url": "https://www.itmedia.co.jp/news/article/2610/07/2000002068/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-06T21:55:42.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "FDE（フォワードデプロイドエンジニアリング）によって開発されたAIエージェントの7割は使われず、FDEの名前で単なるコンサルティングが販売されるようになる危険が高まるとガートナーが予測",
+        "url": "https://www.publickey1.jp/blog/26/fdeai7fde.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-10-06T15:43:31.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "出版取次の日販、米AI企業への書籍販売を認める 業界団体に回答：朝日新聞",
+        "url": "https://www.asahi.com/sp/articles/ASVB63TSFVB6UCVL02YM.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-06T14:01:10.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "郵便局で冷凍宅配食を販売 物販拡充で--日本郵便",
+        "url": "https://japan.cnet.com/article/35253292/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-06T22:45:00.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "AI computing startup Lambda to raise $4B ahead of planned IPO",
+        "url": "https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-06T20:00:30.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Ex-Ramp engineers raise $20M for platform Melius after scrapping their first product",
+        "url": "https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-06T22:34:03.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Mirror Particle is building a ‘world model’ of human behavior",
+        "url": "https://techcrunch.com/2026/10/06/mirror-particle-is-building-a-world-model-of-human-behavior/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-06T16:35:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「AIの多少の悪影響は許容すべき」 OpenAIアルトマン氏、“AIが暴走”してなおAnthropicと主張がズレる訳",
+        "url": "https://www.itmedia.co.jp/business/articles/2610/07/news042.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-06T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+        "url": "https://openai.com/index/atlassian-partnership",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-10-06T16:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AI時代のOTセキュリティ、「盾と矛」勝つのはどちらか？",
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2610/07/news040.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-06T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Ask HN: How would you feel if we nationalized Google?",
+        "url": "https://news.ycombinator.com/item?id=49985180",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-06T22:41:11.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Decisions API is in public beta",
+        "url": "https://developers.openai.com/api/docs/guides/decisions",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-06T20:57:25.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Sharing AI progress in mathematics",
+        "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-10-06T12:00:00.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "サイバー攻撃で企業・団体の情報漏えい被害最多、今年５００件超・すでに過去２年に並ぶ…ＡＩ使い弱点探索か",
+        "url": "https://www.yomiuri.co.jp/national/20261006-GYT1T00373/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-06T20:11:53.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "How Much of Your Customer Support Can AI Really Resolve? The Best Get About 70%. The Median Is 48%. Here’s the Real Data From 13 Vendors",
+        "url": "https://www.saastr.com/how-much-of-your-customer-support-can-ai-really-resolve-the-best-get-about-70-the-median-is-48-heres-the-real-data-from-13-vendors/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-06T14:10:55.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "マイクロソフト、VS CodeにAIモデルのオーケストレーションで高品質低コストなAIを実現する「HydraFusion」をプレビュー実装",
+        "url": "https://www.publickey1.jp/blog/26/vs_codeaiaihydrafusion.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-10-06T15:47:53.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "llm",
+      "term": "LLM（大規模言語モデル）",
+      "reading": "エルエルエム",
+      "category": "AI",
+      "level": 1,
+      "definition": "大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。",
+      "interview": "「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 791
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 249
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 614
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 646
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 768
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 447
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1380
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 645
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 339
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 339
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 538
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 551
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 193,
+    "eligible": 107
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 62.18
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "2026年のAI開発最前線――「AIによるAI開発」から今後は再帰的自己改善「RSI」へ",
+      "startSec": 62.18,
+      "endSec": 109.16
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Google、原発大手Constellationと20年の電力購入契約 「他の電力利用者に負担なし」",
+      "startSec": 109.16,
+      "endSec": 153.41
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "FDE（フォワードデプロイドエンジニアリング）によって開発されたAIエージェントの7割は使われず、FDEの名前で単なるコンサルティングが販売されるようになる危険が高まるとガートナーが予測",
+      "startSec": 153.41,
+      "endSec": 205.64
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "出版取次の日販、米AI企業への書籍販売を認める 業界団体に回答：朝日新聞",
+      "startSec": 205.64,
+      "endSec": 253.3
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "郵便局で冷凍宅配食を販売 物販拡充で--日本郵便",
+      "startSec": 253.3,
+      "endSec": 290.31
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 290.31,
+      "endSec": 398.87
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 398.87,
+      "endSec": 413.06
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 413.06,
+      "endSec": 532.57
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 532.57,
+      "endSec": 543.04
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 26065964,
+    "durationSec": 543.04
+  }
+}
