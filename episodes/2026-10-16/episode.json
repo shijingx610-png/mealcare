@@ -1,0 +1,615 @@
+{
+  "id": "2026-10-16",
+  "createdAt": "2026-10-16T22:10:26.247Z",
+  "dateLabel": "10月16日（金）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.8,
+  "generator": "template",
+  "title": "10月16日（金） Microsoft、社内エンジニア数万人を対象に「Claude Code」「Copilot CLI」導入の影響を分析 生産性どう変わる ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月16日（金）のテックニュースをお届けします。今日の見出しは5本です。1つ目、Microsoft、社内エンジニア数万人を対象に「Claude Code」「Copilot CLI」導入の影響を分析 生産性どう変わる。2つ目、Windows PC向けNVIDIA製SoC「RTX Spark」の正体が明らかに。Microsoftと共同でゲームへの対応も進める。3つ目、任天堂、「スイッチ2」の本体修理費を値上げ CPU基板は9900円増、11月16日到着分から。4つ目、日経新聞、不正アクセスで183万件の個人情報流出 開発用クラウドの認証情報盗まれ。5つ目、Replit is no longer working with Anthropic, CEO says。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Microsoft、社内エンジニア数万人を対象に「Claude Code」「Copilot CLI」導入の影響を分析 生産性どう変わる",
+      "body": "1本目。ITmedia AI+から、Microsoft、社内エンジニア数万人を対象に「Claude Code」「Copilot CLI」導入の影響を分析 生産性どう変わる。米Microsoftに所属する研究者らが発表した論文「Adoption and Impact of Command-Line AI Coding Agents: A Study of Microsoft’s Early 2026 Rollout of Claude Code and GitHub Copilot CLI」は、社内の数万人のソフトウェアエンジニ…このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "Microsoft、社内エンジニア数万人を対象に「Claude Code」「Copilot CLI」導入の影響を分析 生産性どう変わる",
+          "url": "https://www.itmedia.co.jp/news/article/2610/16/2000002277/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-16T03:00:00.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Windows PC向けNVIDIA製SoC「RTX Spark」の正体が明らかに。Microsoftと共同でゲームへの対応も進める",
+      "body": "2本目。はてなブックマーク テクノロジーから、Windows PC向けNVIDIA製SoC「RTX Spark」の正体が明らかに。Microsoftと共同でゲームへの対応も進める。Windows PC向けNVIDIA製SoC「RTX Spark」の正体が明らかに。Microsoftと共同でゲームへの対応も進める ライター：西川善司 去る北米時間2026年10月7日，NVIDIA製のSoC（System on a Chip）「NVIDIA RTX Spark」搭載PCが，MicrosoftやASUSTeK Computer，MSIなどか…巨大企業の判断は、取引先や下流のサービスにそのまま波及します。",
+      "refs": [
+        {
+          "title": "Windows PC向けNVIDIA製SoC「RTX Spark」の正体が明らかに。Microsoftと共同でゲームへの対応も進める",
+          "url": "https://www.4gamer.net/games/050/G105051/20261015021/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-16T19:27:09.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "任天堂、「スイッチ2」の本体修理費を値上げ CPU基板は9900円増、11月16日到着分から",
+      "body": "3本目。CNET Japanから、任天堂、「スイッチ2」の本体修理費を値上げ CPU基板は9900円増、11月16日到着分から。任天堂は、「Nintendo Switch 2」と「Nintendo Switch」本体の修理料金を、2026年11月16日以降に同社へ到着する修理品から引き上げる。修理部品の価格高騰が理由で、Switch 2のCPU基板の修理参考価格は2万7500円から3万7400円になる。事業の話は、数字の背景にある意思決定を想像すると理解が深まります。",
+      "refs": [
+        {
+          "title": "任天堂、「スイッチ2」の本体修理費を値上げ CPU基板は9900円増、11月16日到着分から",
+          "url": "https://japan.cnet.com/article/35253655/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-16T09:48:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "日経新聞、不正アクセスで183万件の個人情報流出 開発用クラウドの認証情報盗まれ",
+      "body": "4本目。ITmedia NEWSから、日経新聞、不正アクセスで183万件の個人情報流出 開発用クラウドの認証情報盗まれ。開発用クラウドにアクセスするための認証情報が何らかの方法で盗まれたという。事故のニュースは、裏返すと「何を備えていれば防げたか」の教材になります。日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "日経新聞、不正アクセスで183万件の個人情報流出 開発用クラウドの認証情報盗まれ",
+          "url": "https://www.itmedia.co.jp/news/article/2610/16/2000002337/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-16T07:56:50.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Replit is no longer working with Anthropic, CEO says",
+      "body": "5本目。TechCrunchから、Replit is no longer working with Anthropic, CEO says。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。事業の話は、数字の背景にある意思決定を想像すると理解が深まります。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Replit is no longer working with Anthropic, CEO says",
+          "url": "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-16T21:22:28.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。最後に、チャーンレート、読み方はチャーンレート。解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。カジュアル面談では、今日のニュースを一つ持っていくだけで会話が動きます。「これ見たんですが、御社ではどう捉えていますか」は、準備している人にしか出せない質問です。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。SaaStrから、Going Headless: Claudeforce vs. Replit vs. Lovable, Agents Picking Our Vendors, and Two of Our Agents Built Their Own Inbox to Talk Behind Our Back: The Agents #016。SaaStrから、G2’s 2026 AI Agents Report: Only 9% of Buyers Think Seat Pricing Is Fair, 57% Want Usage-Based, and 74% Will Shop You at Renewal。TechCrunchから、An Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet。TechCrunchから、India becomes the latest country to report rogue AI agent activity。Hacker News フロントページから、How the Claude Code team does code review。Hacker News フロントページから、FLUX 3 Image Klein。Hacker News フロントページから、Anthropic assigned highest junk credit rating in June。はてなブックマーク テクノロジーから、AIエージェントの危険な操作を別のAIが検出してブロックする「Armor」をOpenRouterがリリース。はてなブックマーク テクノロジーから、タイムズカー、退会後も7年間保管していた免許証画像を全削除へ 約660万アカウント分の漏えい受け。ITmedia AI+から、TSMCが純利益68.7％増で最高益更新 魏会長「需要は極めて堅調」。ITmedia AI+から、不正アクセス多発、Gartnerが日本企業に「7つのアクション」を緊急提言。不正アクセスが相次ぐ中、日本企業が講じるべき対策とは。CNET Japanから、ドコモ、16日昼の緊急地震速報を配信できず システム不具合。以上です。",
+      "refs": [
+        {
+          "title": "Going Headless: Claudeforce vs. Replit vs. Lovable, Agents Picking Our Vendors, and Two of Our Agents Built Their Own Inbox to Talk Behind Our Back: The Agents #016",
+          "url": "https://www.saastr.com/going-headless-claudeforce-vs-replit-vs-lovable-agents-picking-our-vendors-and-two-of-our-agents-built-their-own-inbox-to-talk-behind-our-back-the-agents-016/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-16T16:24:58.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "G2’s 2026 AI Agents Report: Only 9% of Buyers Think Seat Pricing Is Fair, 57% Want Usage-Based, and 74% Will Shop You at Renewal",
+          "url": "https://www.saastr.com/g2s-2026-ai-agents-report-only-9-of-buyers-think-seat-pricing-is-fair-57-want-usage-based-and-74-will-shop-you-at-renewal/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-16T14:10:24.000Z",
+          "alsoReportedBy": [
+            "SaaStr"
+          ]
+        },
+        {
+          "title": "An Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet",
+          "url": "https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-16T16:30:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "India becomes the latest country to report rogue AI agent activity",
+          "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-16T17:52:24.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "How the Claude Code team does code review",
+          "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-16T19:04:47.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "FLUX 3 Image Klein",
+          "url": "https://bfl.ai/blog/flux-3-image-klein",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-16T19:47:13.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Anthropic assigned highest junk credit rating in June",
+          "url": "https://www.ft.com/content/5a310aee-f555-4266-874c-b1b4db20186d",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-16T18:11:42.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AIエージェントの危険な操作を別のAIが検出してブロックする「Armor」をOpenRouterがリリース",
+          "url": "https://gigazine.net/news/20261016-openrouter-armor/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-16T10:25:01.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "タイムズカー、退会後も7年間保管していた免許証画像を全削除へ 約660万アカウント分の漏えい受け",
+          "url": "https://www.itmedia.co.jp/news/article/2610/16/2000002346/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-16T10:18:39.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "TSMCが純利益68.7％増で最高益更新 魏会長「需要は極めて堅調」",
+          "url": "https://www.itmedia.co.jp/business/articles/2610/16/news052.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-16T01:30:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "不正アクセス多発、Gartnerが日本企業に「7つのアクション」を緊急提言",
+          "url": "https://www.itmedia.co.jp/enterprise/articles/2610/16/news048.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-16T05:20:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "ドコモ、16日昼の緊急地震速報を配信できず システム不具合",
+          "url": "https://japan.cnet.com/article/35253659/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-16T12:05:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "Microsoft、社内エンジニア数万人を対象に「Claude Code」「Copilot CLI」導入の影響を分析 生産性どう変わる",
+        "url": "https://www.itmedia.co.jp/news/article/2610/16/2000002277/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-16T03:00:00.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Windows PC向けNVIDIA製SoC「RTX Spark」の正体が明らかに。Microsoftと共同でゲームへの対応も進める",
+        "url": "https://www.4gamer.net/games/050/G105051/20261015021/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-16T19:27:09.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "任天堂、「スイッチ2」の本体修理費を値上げ CPU基板は9900円増、11月16日到着分から",
+        "url": "https://japan.cnet.com/article/35253655/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-16T09:48:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "日経新聞、不正アクセスで183万件の個人情報流出 開発用クラウドの認証情報盗まれ",
+        "url": "https://www.itmedia.co.jp/news/article/2610/16/2000002337/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-16T07:56:50.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Replit is no longer working with Anthropic, CEO says",
+        "url": "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-16T21:22:28.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Going Headless: Claudeforce vs. Replit vs. Lovable, Agents Picking Our Vendors, and Two of Our Agents Built Their Own Inbox to Talk Behind Our Back: The Agents #016",
+        "url": "https://www.saastr.com/going-headless-claudeforce-vs-replit-vs-lovable-agents-picking-our-vendors-and-two-of-our-agents-built-their-own-inbox-to-talk-behind-our-back-the-agents-016/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-16T16:24:58.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "G2’s 2026 AI Agents Report: Only 9% of Buyers Think Seat Pricing Is Fair, 57% Want Usage-Based, and 74% Will Shop You at Renewal",
+        "url": "https://www.saastr.com/g2s-2026-ai-agents-report-only-9-of-buyers-think-seat-pricing-is-fair-57-want-usage-based-and-74-will-shop-you-at-renewal/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-16T14:10:24.000Z",
+        "alsoReportedBy": [
+          "SaaStr"
+        ]
+      },
+      {
+        "title": "An Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet",
+        "url": "https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-16T16:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "India becomes the latest country to report rogue AI agent activity",
+        "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-16T17:52:24.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "How the Claude Code team does code review",
+        "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-16T19:04:47.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "FLUX 3 Image Klein",
+        "url": "https://bfl.ai/blog/flux-3-image-klein",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-16T19:47:13.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Anthropic assigned highest junk credit rating in June",
+        "url": "https://www.ft.com/content/5a310aee-f555-4266-874c-b1b4db20186d",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-16T18:11:42.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AIエージェントの危険な操作を別のAIが検出してブロックする「Armor」をOpenRouterがリリース",
+        "url": "https://gigazine.net/news/20261016-openrouter-armor/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-16T10:25:01.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "タイムズカー、退会後も7年間保管していた免許証画像を全削除へ 約660万アカウント分の漏えい受け",
+        "url": "https://www.itmedia.co.jp/news/article/2610/16/2000002346/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-16T10:18:39.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "TSMCが純利益68.7％増で最高益更新 魏会長「需要は極めて堅調」",
+        "url": "https://www.itmedia.co.jp/business/articles/2610/16/news052.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-16T01:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "不正アクセス多発、Gartnerが日本企業に「7つのアクション」を緊急提言",
+        "url": "https://www.itmedia.co.jp/enterprise/articles/2610/16/news048.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-16T05:20:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ドコモ、16日昼の緊急地震速報を配信できず システム不具合",
+        "url": "https://japan.cnet.com/article/35253659/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-16T12:05:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    },
+    {
+      "id": "churn",
+      "term": "チャーンレート",
+      "reading": "チャーンレート",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。",
+      "interview": "「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 768
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 202
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 751
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 804
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 761
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 408
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1716
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 740
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 365
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 368
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 3765
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 700
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 197,
+    "eligible": 117
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 59.9
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Microsoft、社内エンジニア数万人を対象に「Claude Code」「Copilot CLI」導入の影響を分析 生産性どう変わる",
+      "startSec": 59.9,
+      "endSec": 111.88
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Windows PC向けNVIDIA製SoC「RTX Spark」の正体が明らかに。Microsoftと共同でゲームへの対応も進める",
+      "startSec": 111.88,
+      "endSec": 160.57
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "任天堂、「スイッチ2」の本体修理費を値上げ CPU基板は9900円増、11月16日到着分から",
+      "startSec": 160.57,
+      "endSec": 204.49
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "日経新聞、不正アクセスで183万件の個人情報流出 開発用クラウドの認証情報盗まれ",
+      "startSec": 204.49,
+      "endSec": 234.71
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Replit is no longer working with Anthropic, CEO says",
+      "startSec": 234.71,
+      "endSec": 265.29
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 265.29,
+      "endSec": 378.61
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 378.61,
+      "endSec": 392.97
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 392.97,
+      "endSec": 532.32
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 532.32,
+      "endSec": 542.79
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 26054188,
+    "durationSec": 542.79
+  }
+}

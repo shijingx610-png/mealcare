@@ -1,0 +1,527 @@
+{
+  "id": "2026-10-31",
+  "createdAt": "2026-10-31T22:39:09.185Z",
+  "dateLabel": "10月31日（土）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.8,
+  "generator": "template",
+  "title": "10月31日（土） 富士フイルム、「磁気テープ」5倍増産へ100億円投資--「ランサムウェア耐性が注目」と同社 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月31日（土）のテックニュースをお届けします。今日の見出しは5本です。1つ目、富士フイルム、「磁気テープ」5倍増産へ100億円投資--「ランサムウェア耐性が注目」と同社。2つ目、OpenAI アルトマンCEO「PCに大量のRAMを搭載するのは問題」と発言。ローカルAIより「クラウドで24時間活用すべき」との考え語る | テクノエッジ TechnoEdge。3つ目、AIの「費用対効果が分からない」問題、解決へ？ Claude Enterprise搭載の「3つの新機能」。4つ目、総務省、GMO攻撃者サイトの「ブロッキング」を通信各社に要請 報道。5つ目、4 days left: How TechCrunch Founder Summit helps you make more useful connections to scale。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "富士フイルム、「磁気テープ」5倍増産へ100億円投資--「ランサムウェア耐性が注目」と同社",
+      "body": "1本目。CNET Japanから、富士フイルム、「磁気テープ」5倍増産へ100億円投資--「ランサムウェア耐性が注目」と同社。富士フイルムは10月29日、データ保存用磁気テープの生産体制に約100億円を投資し、生産能力を出荷容量ベースで2025年度の約5倍に増やすと発表した。生成AIの普及に伴うデータの長期保存需要の増加に対応する。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "富士フイルム、「磁気テープ」5倍増産へ100億円投資--「ランサムウェア耐性が注目」と同社",
+          "url": "https://japan.cnet.com/article/35254254/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-31T21:40:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "OpenAI アルトマンCEO「PCに大量のRAMを搭載するのは問題」と発言。ローカルAIより「クラウドで24時間活用すべき」との考え語る | テクノエッジ TechnoEdge",
+      "body": "2本目。はてなブックマーク テクノロジーから、OpenAI アルトマンCEO「PCに大量のRAMを搭載するのは問題」と発言。ローカルAIより「クラウドで24時間活用すべき」との考え語る | テクノエッジ TechnoEdge。ガジェット全般、サイエンス、宇宙、音楽、モータースポーツetc... 電気・ネットワーク技術者。実績媒体Engadget日本版, Autoblog日本版, Forbes JAPAN他 OpenAIのサム・アルトマンCEOは、米決済大手Stripeの共同創業者ジョン・コリソン氏のポッドキャスト番組に出演した際に「個人のPCに大量のDRAMを保有させることには.…AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "OpenAI アルトマンCEO「PCに大量のRAMを搭載するのは問題」と発言。ローカルAIより「クラウドで24時間活用すべき」との考え語る | テクノエッジ TechnoEdge",
+          "url": "https://www.techno-edge.net/article/2026/10/31/5657.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-31T07:41:11.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "AIの「費用対効果が分からない」問題、解決へ？ Claude Enterprise搭載の「3つの新機能」",
+      "body": "3本目。ITmedia AI+から、AIの「費用対効果が分からない」問題、解決へ？ Claude Enterprise搭載の「3つの新機能」。AI導入が進む中で、IT部門は費用対効果を厳しく問われる局面に入っている。Anthropicが企業向けプラン「Claude Enterprise」に追加した新機能は、その説明材料になるか。利用状況の可視化から予算の配分まで、3つの機能の中身とは。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "AIの「費用対効果が分からない」問題、解決へ？ Claude Enterprise搭載の「3つの新機能」",
+          "url": "https://www.itmedia.co.jp/enterprise/articles/2610/31/news009.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-31T00:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "総務省、GMO攻撃者サイトの「ブロッキング」を通信各社に要請 報道",
+      "body": "4本目。ITmedia NEWSから、総務省、GMO攻撃者サイトの「ブロッキング」を通信各社に要請 報道。総務省が10月27日付で、GMOインターネットへの不正アクセス問題を巡り、攻撃者のものとみられるWebサイトの「ブロッキング」を通信事業者に要請していたことが、朝日新聞や読売新聞などの報道で分かった。日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "総務省、GMO攻撃者サイトの「ブロッキング」を通信各社に要請 報道",
+          "url": "https://www.itmedia.co.jp/news/article/2610/30/2000002765/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-31T10:02:50.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "4 days left: How TechCrunch Founder Summit helps you make more useful connections to scale",
+      "body": "5本目。TechCrunchから、4 days left: How TechCrunch Founder Summit helps you make more useful connections to scale。スタートアップの動きは、業界がこれから向かう方向の先行指標になります。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "4 days left: How TechCrunch Founder Summit helps you make more useful connections to scale",
+          "url": "https://techcrunch.com/2026/10/31/4-days-left-how-techcrunch-founder-summit-helps-you-make-more-useful-connections-to-scale/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-31T21:36:07.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、チャーンレート、読み方はチャーンレート。解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。次に、SaaS、PaaS、IaaS、読み方はサース、パース、イアース。クラウドの提供範囲の違いです。SaaSは完成したソフトをそのまま使う形、PaaSはアプリを作る土台まで借りる形、IaaSはサーバーそのものを借りる形を指します。料理に例えるなら、SaaSは出来上がった定食、PaaSはキッチン付きの部屋、IaaSは更地です。最後に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。志望動機は「業界が伸びているから」だけだと弱くなります。どのニュースを見て何を面白いと思ったのか、具体的な一本があると説得力が変わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’。TechCrunchから、Judge allows NAACP lawsuit over xAI data center pollution to move forward。SaaStrから、SaaS Isn’t Dead. Old SaaS Is Dead: Sierra Adds $150M ARR in One Quarter While ServiceNow Drops 27% in a Day。Hacker News フロントページから、Anthropic blocks users for anything touching training larger models。CNET Japanから、楽天証券、顧客情報流出の可能性 NTTデータ委託先不正アクセスで。CNET Japanから、「AIを使える職員に仕事が集中」--政府の生成AI調査に負担増の声も。Hacker News フロントページから、Show HN: A USB-C LTE modem that gives my computer a phone line。Hacker News フロントページから、Show HN: NES Contra (1987) port (ASM –> C and then C –> WebAssembly)。はてなブックマーク テクノロジーから、メモリ買い占める側が発言。アルトマンCEO「個人PCのメモリは使われてない、ひどい配分なのでクラウドに集約すべき」 - すまほん!!すまほん!! » AI・人工知能 » メモリ買い占める側が発言。はてなブックマーク テクノロジーから、3 人それぞれの Claude Code を Slack でつないで ISUCON2026 に参加した（207,039 点）。ITmedia AI+から、キオクシア中間決算「過去最高」連呼 純利益2.2兆円、初の配当実施 AI需要で「成長さらに加速」。キオクシアHDは、2027年3月期の中間決算を発表した。SaaStrから、Annual Contracts: Maybe Not All They Are Cracked Up To Be。以上です。",
+      "refs": [
+        {
+          "title": "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’",
+          "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-31T21:41:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
+          "url": "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-31T21:17:03.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "SaaS Isn’t Dead. Old SaaS Is Dead: Sierra Adds $150M ARR in One Quarter While ServiceNow Drops 27% in a Day",
+          "url": "https://www.saastr.com/saas-isnt-dead-old-saas-is-dead-sierra-adds-150m-arr-in-one-quarter-while-servicenow-drops-27-in-a-day/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-31T14:00:18.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Anthropic blocks users for anything touching training larger models",
+          "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-31T19:39:19.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "楽天証券、顧客情報流出の可能性 NTTデータ委託先不正アクセスで",
+          "url": "https://japan.cnet.com/article/35254251/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-31T20:20:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「AIを使える職員に仕事が集中」--政府の生成AI調査に負担増の声も",
+          "url": "https://japan.cnet.com/article/35254236/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-31T20:10:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Show HN: A USB-C LTE modem that gives my computer a phone line",
+          "url": "https://github.com/Koppar-AI/koppar-lte-modem",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-31T15:56:41.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Show HN: NES Contra (1987) port (ASM –> C and then C –> WebAssembly)",
+          "url": "https://epoyraz.github.io/nes-contra-us/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-31T19:18:48.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "メモリ買い占める側が発言。アルトマンCEO「個人PCのメモリは使われてない、ひどい配分なのでクラウドに集約すべき」 - すまほん!!",
+          "url": "https://smhn.info/202610-sam-altman-pc-dram-quite-terrible-cloud",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-31T09:02:55.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "3 人それぞれの Claude Code を Slack でつないで ISUCON2026 に参加した（207,039 点）",
+          "url": "https://zenn.dev/kauche/articles/f3736c660aab77",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-31T15:02:52.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "キオクシア中間決算「過去最高」連呼 純利益2.2兆円、初の配当実施 AI需要で「成長さらに加速」",
+          "url": "https://www.itmedia.co.jp/business/articles/2610/30/news090.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-30T12:45:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Annual Contracts: Maybe Not All They Are Cracked Up To Be",
+          "url": "https://www.saastr.com/annual-contracts-maybe-not-all-they-are-cracked-up-to-be/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-30T12:10:51.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "富士フイルム、「磁気テープ」5倍増産へ100億円投資--「ランサムウェア耐性が注目」と同社",
+        "url": "https://japan.cnet.com/article/35254254/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-31T21:40:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAI アルトマンCEO「PCに大量のRAMを搭載するのは問題」と発言。ローカルAIより「クラウドで24時間活用すべき」との考え語る | テクノエッジ TechnoEdge",
+        "url": "https://www.techno-edge.net/article/2026/10/31/5657.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-31T07:41:11.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AIの「費用対効果が分からない」問題、解決へ？ Claude Enterprise搭載の「3つの新機能」",
+        "url": "https://www.itmedia.co.jp/enterprise/articles/2610/31/news009.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-31T00:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "総務省、GMO攻撃者サイトの「ブロッキング」を通信各社に要請 報道",
+        "url": "https://www.itmedia.co.jp/news/article/2610/30/2000002765/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-31T10:02:50.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "4 days left: How TechCrunch Founder Summit helps you make more useful connections to scale",
+        "url": "https://techcrunch.com/2026/10/31/4-days-left-how-techcrunch-founder-summit-helps-you-make-more-useful-connections-to-scale/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-31T21:36:07.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’",
+        "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-31T21:41:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
+        "url": "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-31T21:17:03.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "SaaS Isn’t Dead. Old SaaS Is Dead: Sierra Adds $150M ARR in One Quarter While ServiceNow Drops 27% in a Day",
+        "url": "https://www.saastr.com/saas-isnt-dead-old-saas-is-dead-sierra-adds-150m-arr-in-one-quarter-while-servicenow-drops-27-in-a-day/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-31T14:00:18.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Anthropic blocks users for anything touching training larger models",
+        "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-31T19:39:19.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "楽天証券、顧客情報流出の可能性 NTTデータ委託先不正アクセスで",
+        "url": "https://japan.cnet.com/article/35254251/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-31T20:20:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「AIを使える職員に仕事が集中」--政府の生成AI調査に負担増の声も",
+        "url": "https://japan.cnet.com/article/35254236/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-31T20:10:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Show HN: A USB-C LTE modem that gives my computer a phone line",
+        "url": "https://github.com/Koppar-AI/koppar-lte-modem",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-31T15:56:41.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Show HN: NES Contra (1987) port (ASM –> C and then C –> WebAssembly)",
+        "url": "https://epoyraz.github.io/nes-contra-us/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-31T19:18:48.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "メモリ買い占める側が発言。アルトマンCEO「個人PCのメモリは使われてない、ひどい配分なのでクラウドに集約すべき」 - すまほん!!",
+        "url": "https://smhn.info/202610-sam-altman-pc-dram-quite-terrible-cloud",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-31T09:02:55.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "3 人それぞれの Claude Code を Slack でつないで ISUCON2026 に参加した（207,039 点）",
+        "url": "https://zenn.dev/kauche/articles/f3736c660aab77",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-31T15:02:52.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "キオクシア中間決算「過去最高」連呼 純利益2.2兆円、初の配当実施 AI需要で「成長さらに加速」",
+        "url": "https://www.itmedia.co.jp/business/articles/2610/30/news090.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-30T12:45:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Annual Contracts: Maybe Not All They Are Cracked Up To Be",
+        "url": "https://www.saastr.com/annual-contracts-maybe-not-all-they-are-cracked-up-to-be/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-30T12:10:51.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "churn",
+      "term": "チャーンレート",
+      "reading": "チャーンレート",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。",
+      "interview": "「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。"
+    },
+    {
+      "id": "saas-paas-iaas",
+      "term": "SaaS / PaaS / IaaS",
+      "reading": "サース、パース、イアース",
+      "category": "クラウド",
+      "level": 1,
+      "definition": "クラウドの提供範囲の違いです。SaaSは完成したソフトをそのまま使う形、PaaSはアプリを作る土台まで借りる形、IaaSはサーバーそのものを借りる形を指します。",
+      "interview": "料理に例えるなら、SaaSは出来上がった定食、PaaSはキッチン付きの部屋、IaaSは更地です。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 620
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 219
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 708
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 726
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 587
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 221
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1071
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 687
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 361
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 366
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 2814
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 721
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 201,
+    "eligible": 72
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}

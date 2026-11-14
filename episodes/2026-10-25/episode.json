@@ -1,0 +1,603 @@
+{
+  "id": "2026-10-25",
+  "createdAt": "2026-10-25T21:57:59.120Z",
+  "dateLabel": "10月25日（日）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.8,
+  "generator": "template",
+  "title": "10月25日（日） LINEでセブンの商品を注文、店頭受け取りや予約も 「7NOW」全機能に対応 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月25日（日）のテックニュースをお届けします。今日の見出しは5本です。1つ目、LINEでセブンの商品を注文、店頭受け取りや予約も 「7NOW」全機能に対応。2つ目、タイムズカーの情報漏洩で運転免許の画像等の流出が確認できたら3,000円の見舞金を支払うと発表したが、その確認のために個人情報を再入力させる罠がある。3つ目、「DuckDB 2.0 LTS」正式リリース。Quackプロトコルによるクライアント/サーバ機能や非同期処理による高速化など。4つ目、「5年でバッテリーが使い物にならなくなる」は本当か テスラ「モデル3」5年目点検で分かったこと。5つ目、OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "LINEでセブンの商品を注文、店頭受け取りや予約も 「7NOW」全機能に対応",
+      "body": "1本目。CNET Japanから、LINEでセブンの商品を注文、店頭受け取りや予約も 「7NOW」全機能に対応。セブン‐イレブンの商品をLINEで注文し、店頭で受け取ったり、クリスマスケーキやおせちを予約したりできるようになった。セブン‐イレブン・ジャパンとLINEヤフーは10月22日、買い物サービス「7NOW」の全機能を「LINEミニアプリ」で利用できるようにしたと発表した。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "LINEでセブンの商品を注文、店頭受け取りや予約も 「7NOW」全機能に対応",
+          "url": "https://japan.cnet.com/article/35253946/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-25T20:40:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "タイムズカーの情報漏洩で運転免許の画像等の流出が確認できたら3,000円の見舞金を支払うと発表したが、その確認のために個人情報を再入力させる罠がある",
+      "body": "2本目。はてなブックマーク テクノロジーから、タイムズカーの情報漏洩で運転免許の画像等の流出が確認できたら3,000円の見舞金を支払うと発表したが、その確認のために個人情報を再入力させる罠がある。「タイムズカーWebシステム」への不正アクセスによる個人情報漏えいに関するご報告と今後の対応について（第5報） | カーシェアリングのタイムズカー（旧：タイムズカーシェア） カーシェアリングのTimes CAR（タイムズカー）の新着情報（お知らせ）「「タイムズカーWebシステム」への不正アクセスによる個人情報漏えい...事故のニュースは、裏返すと「何を備えていれば防げたか」の教材になります。",
+      "refs": [
+        {
+          "title": "タイムズカーの情報漏洩で運転免許の画像等の流出が確認できたら3,000円の見舞金を支払うと発表したが、その確認のために個人情報を再入力させる罠がある",
+          "url": "https://togetter.com/li/2762708",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-25T12:14:19.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "「DuckDB 2.0 LTS」正式リリース。Quackプロトコルによるクライアント/サーバ機能や非同期処理による高速化など",
+      "body": "3本目。Publickeyから、「DuckDB 2.0 LTS」正式リリース。Quackプロトコルによるクライアント/サーバ機能や非同期処理による高速化など。DuckDB Foundationは、シングルバイナリで高速なデータ分析を実現するOLAP型データベース「DuckDB 2.0 LTS」（コード名：Cinnamon Teal）の正式リリースを発表しました。 Announcing Duck...新機能のニュースは、競合がどこを脅威だと思っているかの裏返しでもあります。",
+      "refs": [
+        {
+          "title": "「DuckDB 2.0 LTS」正式リリース。Quackプロトコルによるクライアント/サーバ機能や非同期処理による高速化など",
+          "url": "https://www.publickey1.jp/blog/26/duckdb_20_ltsquack.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-10-25T15:44:47.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "「5年でバッテリーが使い物にならなくなる」は本当か テスラ「モデル3」5年目点検で分かったこと",
+      "body": "4本目。ITmedia NEWSから、「5年でバッテリーが使い物にならなくなる」は本当か テスラ「モデル3」5年目点検で分かったこと。納車から5年、4万km余りを走った筆者のTesla「Model 3」が2回目の車検を迎えました。ユーザー車検に臨む前に点検整備を受けたところ、バッテリーの状態や維持費に具体的な数字が出ました。欧州車を30年乗り継ぎ、トラブルと出費に身構えてきた筆者には、同じ距離を走った前の愛車との違いが際立って見えます。アプリを軸に進む点検の流れと併せてお伝えします。巨大企業の判断は、取引先や下流のサービスにそのまま波及します。",
+      "refs": [
+        {
+          "title": "「5年でバッテリーが使い物にならなくなる」は本当か テスラ「モデル3」5年目点検で分かったこと",
+          "url": "https://www.itmedia.co.jp/news/article/2610/25/2000002569/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-25T11:37:30.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+      "body": "5本目。Hacker News フロントページから、OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+          "url": "https://minimaxir.com/2026/10/cheap-llms/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-25T21:11:31.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、LLM、大規模言語モデル、読み方はエルエルエム。大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。次に、AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。最後に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。志望動機は「業界が伸びているから」だけだと弱くなります。どのニュースを見て何を面白いと思ったのか、具体的な一本があると説得力が変わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Grok releases the first seven minutes of its AI-generated ‘Odyssey’。SaaStrから、Jason’s Takes on This Week’s 20VC: Meet 100 VCs, None-and-Done Beats One-and-Done, and Build-to-Prod Is Where I’d Make 10 Bets。SaaStrから、Your Top Job For 2027: Hire 1-2 Execs Who Can Take the Load, Not Just Do the Work。TechCrunchから、AI delivers ‘zero financial payoff’ to most companies, Apollo economist says。SaaStrから、Half Your CRM Data Is Wrong: AI Prospecting in a World of 49% Exec Turnover。Hacker News フロントページから、Gheist campaign plants secret-dumping workflows using stolen GitHub tokens。TechCrunchから、TechCrunch Mobility: Blue-green is the color of autonomy。Hacker News フロントページから、Where the Romans Fought (interactive map)。はてなブックマーク テクノロジーから、「山の木の実ぜんぶ乗せフルーツタルト」を作った動画をアップしたら、「サムネがAIっぽい」と批判されてしまった「知らないものはAIに見える時代になった？」。野草研究所 @wild_grasses このサムネを『生成AI使うな！はてなブックマーク テクノロジーから、ソフトウェアの脆弱性情報をいち早く入手する - CVE・CISA KEV・JPCERT/CC・OSV｜npaka。CNET Japanから、背面3カメラがすべて2億画素、OPPO「Find X10 Pro Max」海外発表。CNET Japanから、AIも「自分の間違い」を認められない？ Claude Mythos 5、攻撃を正当化し続行。以上です。",
+      "refs": [
+        {
+          "title": "Grok releases the first seven minutes of its AI-generated ‘Odyssey’",
+          "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-25T21:31:16.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Jason’s Takes on This Week’s 20VC: Meet 100 VCs, None-and-Done Beats One-and-Done, and Build-to-Prod Is Where I’d Make 10 Bets",
+          "url": "https://www.saastr.com/jasons-takes-on-this-weeks-20vc-meet-100-vcs-none-and-done-beats-one-and-done-and-build-to-prod-is-where-id-make-10-bets/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-25T16:00:33.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Your Top Job For 2027: Hire 1-2 Execs Who Can Take the Load, Not Just Do the Work",
+          "url": "https://www.saastr.com/your-top-job-for-2027-hire-1-2-execs-who-can-take-the-load-not-just-do-the-work/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-25T14:10:24.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AI delivers ‘zero financial payoff’ to most companies, Apollo economist says",
+          "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-25T16:57:32.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Half Your CRM Data Is Wrong: AI Prospecting in a World of 49% Exec Turnover",
+          "url": "https://www.saastr.com/half-your-crm-is-wrong-ai-prospecting-in-a-world-of-49-exec-turnover/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-25T11:00:12.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Gheist campaign plants secret-dumping workflows using stolen GitHub tokens",
+          "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-25T19:10:36.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "TechCrunch Mobility: Blue-green is the color of autonomy",
+          "url": "https://techcrunch.com/2026/10/25/techcrunch-mobility-blue-green-is-the-color-of-autonomy/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-25T16:05:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Where the Romans Fought (interactive map)",
+          "url": "https://iosiflazaridis.github.io/battles-of-the-romans/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-25T18:58:14.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「山の木の実ぜんぶ乗せフルーツタルト」を作った動画をアップしたら、「サムネがAIっぽい」と批判されてしまった「知らないものはAIに見える時代になった？」",
+          "url": "https://togetter.com/li/2762761",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-25T14:19:47.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "ソフトウェアの脆弱性情報をいち早く入手する - CVE・CISA KEV・JPCERT/CC・OSV｜npaka",
+          "url": "https://note.com/npaka/n/na5ad6472d68c",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-25T12:07:57.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "背面3カメラがすべて2億画素、OPPO「Find X10 Pro Max」海外発表",
+          "url": "https://japan.cnet.com/article/35253934/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-25T11:10:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AIも「自分の間違い」を認められない？ Claude Mythos 5、攻撃を正当化し続行",
+          "url": "https://japan.cnet.com/article/35253932/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-25T02:33:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "LINEでセブンの商品を注文、店頭受け取りや予約も 「7NOW」全機能に対応",
+        "url": "https://japan.cnet.com/article/35253946/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-25T20:40:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "タイムズカーの情報漏洩で運転免許の画像等の流出が確認できたら3,000円の見舞金を支払うと発表したが、その確認のために個人情報を再入力させる罠がある",
+        "url": "https://togetter.com/li/2762708",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-25T12:14:19.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「DuckDB 2.0 LTS」正式リリース。Quackプロトコルによるクライアント/サーバ機能や非同期処理による高速化など",
+        "url": "https://www.publickey1.jp/blog/26/duckdb_20_ltsquack.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-10-25T15:44:47.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「5年でバッテリーが使い物にならなくなる」は本当か テスラ「モデル3」5年目点検で分かったこと",
+        "url": "https://www.itmedia.co.jp/news/article/2610/25/2000002569/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-25T11:37:30.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+        "url": "https://minimaxir.com/2026/10/cheap-llms/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-25T21:11:31.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Grok releases the first seven minutes of its AI-generated ‘Odyssey’",
+        "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-25T21:31:16.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Jason’s Takes on This Week’s 20VC: Meet 100 VCs, None-and-Done Beats One-and-Done, and Build-to-Prod Is Where I’d Make 10 Bets",
+        "url": "https://www.saastr.com/jasons-takes-on-this-weeks-20vc-meet-100-vcs-none-and-done-beats-one-and-done-and-build-to-prod-is-where-id-make-10-bets/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-25T16:00:33.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Your Top Job For 2027: Hire 1-2 Execs Who Can Take the Load, Not Just Do the Work",
+        "url": "https://www.saastr.com/your-top-job-for-2027-hire-1-2-execs-who-can-take-the-load-not-just-do-the-work/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-25T14:10:24.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AI delivers ‘zero financial payoff’ to most companies, Apollo economist says",
+        "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-25T16:57:32.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Half Your CRM Data Is Wrong: AI Prospecting in a World of 49% Exec Turnover",
+        "url": "https://www.saastr.com/half-your-crm-is-wrong-ai-prospecting-in-a-world-of-49-exec-turnover/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-25T11:00:12.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Gheist campaign plants secret-dumping workflows using stolen GitHub tokens",
+        "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-25T19:10:36.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "TechCrunch Mobility: Blue-green is the color of autonomy",
+        "url": "https://techcrunch.com/2026/10/25/techcrunch-mobility-blue-green-is-the-color-of-autonomy/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-25T16:05:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Where the Romans Fought (interactive map)",
+        "url": "https://iosiflazaridis.github.io/battles-of-the-romans/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-25T18:58:14.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「山の木の実ぜんぶ乗せフルーツタルト」を作った動画をアップしたら、「サムネがAIっぽい」と批判されてしまった「知らないものはAIに見える時代になった？」",
+        "url": "https://togetter.com/li/2762761",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-25T14:19:47.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ソフトウェアの脆弱性情報をいち早く入手する - CVE・CISA KEV・JPCERT/CC・OSV｜npaka",
+        "url": "https://note.com/npaka/n/na5ad6472d68c",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-25T12:07:57.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "背面3カメラがすべて2億画素、OPPO「Find X10 Pro Max」海外発表",
+        "url": "https://japan.cnet.com/article/35253934/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-25T11:10:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AIも「自分の間違い」を認められない？ Claude Mythos 5、攻撃を正当化し続行",
+        "url": "https://japan.cnet.com/article/35253932/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-25T02:33:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "llm",
+      "term": "LLM（大規模言語モデル）",
+      "reading": "エルエルエム",
+      "category": "AI",
+      "level": 1,
+      "definition": "大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。",
+      "interview": "「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。"
+    },
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 714
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 184
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 723
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 807
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 821
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 525
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1300
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 701
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 478
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 432
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1697
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 670
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 200,
+    "eligible": 70
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 62.98
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "LINEでセブンの商品を注文、店頭受け取りや予約も 「7NOW」全機能に対応",
+      "startSec": 62.98,
+      "endSec": 101.07
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "タイムズカーの情報漏洩で運転免許の画像等の流出が確認できたら3,000円の見舞金を支払うと発表したが、その確認のために個人情報を再入力させる罠がある",
+      "startSec": 101.07,
+      "endSec": 148.52
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "「DuckDB 2.0 LTS」正式リリース。Quackプロトコルによるクライアント/サーバ機能や非同期処理による高速化など",
+      "startSec": 148.52,
+      "endSec": 185.78
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "「5年でバッテリーが使い物にならなくなる」は本当か テスラ「モデル3」5年目点検で分かったこと",
+      "startSec": 185.78,
+      "endSec": 231.69
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+      "startSec": 231.69,
+      "endSec": 262.3
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 262.3,
+      "endSec": 372.03
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 372.03,
+      "endSec": 385.31
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 385.31,
+      "endSec": 530.84
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 530.84,
+      "endSec": 541.31
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 25983020,
+    "durationSec": 541.31
+  }
+}

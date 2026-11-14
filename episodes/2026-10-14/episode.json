@@ -1,0 +1,613 @@
+{
+  "id": "2026-10-14",
+  "createdAt": "2026-10-14T22:27:07.677Z",
+  "dateLabel": "10月14日（水）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.8,
+  "generator": "template",
+  "title": "10月14日（水） みずほが数千人をAI開発者に転換 事務や営業、日本企業の働き方転機 - 日本経済新聞 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月14日（水）のテックニュースをお届けします。今日の見出しは5本です。1つ目、みずほが数千人をAI開発者に転換 事務や営業、日本企業の働き方転機 - 日本経済新聞。2つ目、Googleの新モデル「Gemini 4 Argon」一般提供開始 使えるプラン、価格。3つ目、Windows上でAIエージェントの実行を安全に隔離する「Microsoft Execution Containers」（MXC）正式リリース。ファイルやネットワークなどの境界を柔軟にカスタマイズ。4つ目、小中学校の校務に“自前運用”の国産LLM NTT西と茨木市が全国初の実証。5つ目、サイゼリヤ、ついに値上げ ミラノ風ドリアは300→320円 100円ワインは据え置き。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "みずほが数千人をAI開発者に転換 事務や営業、日本企業の働き方転機 - 日本経済新聞",
+      "body": "1本目。はてなブックマーク テクノロジーから、みずほが数千人をAI開発者に転換 事務や営業、日本企業の働き方転機 - 日本経済新聞。みずほフィナンシャルグループは営業や事務の社員を人工知能（AI）の開発人材に転換する。5万人の全社員から順次選び、10年後に数千人規模への拡大を目指す。金融サービスや社内業務のAIシステムを作る。既存部門を減らし、競争力の要であるAI分野に集中する体制を整える。銀行など金融機関の社員はホワイトカラーの象徴...AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "みずほが数千人をAI開発者に転換 事務や営業、日本企業の働き方転機 - 日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOUB0722M0X01C26A0000000/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-14T19:37:56.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Googleの新モデル「Gemini 4 Argon」一般提供開始 使えるプラン、価格",
+      "body": "2本目。ITmedia AI+から、Googleの新モデル「Gemini 4 Argon」一般提供開始 使えるプラン、価格。Googleは同社最先端のモデル「Gemini 4 Argon」の一般提供を開始した。Geminiアプリや検索のAIモード、Google Antigravity、APIなどで利用できる。このニュースはITmedia NEWSとCNET Japanでも同時に取り上げられています。それだけ注目度が高い話題です。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "Googleの新モデル「Gemini 4 Argon」一般提供開始 使えるプラン、価格",
+          "url": "https://www.itmedia.co.jp/aiplus/article/2610/14/2000002241/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-14T05:06:36.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS",
+            "CNET Japan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Windows上でAIエージェントの実行を安全に隔離する「Microsoft Execution Containers」（MXC）正式リリース。ファイルやネットワークなどの境界を柔軟にカスタマイズ",
+      "body": "3本目。Publickeyから、Windows上でAIエージェントの実行を安全に隔離する「Microsoft Execution Containers」（MXC）正式リリース。ファイルやネットワークなどの境界を柔軟にカスタマイズ。マイクロソフトはWindows 11上でAIエージェントを安全に動かすための隔離環境「Microsoft Execution Containers」（以下、MXC）の正式リリースを発表しました。 MXC is now GA on Windo...新機能のニュースは、競合がどこを脅威だと思っているかの裏返しでもあります。",
+      "refs": [
+        {
+          "title": "Windows上でAIエージェントの実行を安全に隔離する「Microsoft Execution Containers」（MXC）正式リリース。ファイルやネットワークなどの境界を柔軟にカスタマイズ",
+          "url": "https://www.publickey1.jp/blog/26/windowsaimicrosoft_execution_containersmxc.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-10-14T15:57:19.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "小中学校の校務に“自前運用”の国産LLM NTT西と茨木市が全国初の実証",
+      "body": "4本目。ITmedia NEWSから、小中学校の校務に“自前運用”の国産LLM NTT西と茨木市が全国初の実証。NTT西日本と大阪府茨木市は10月13日、NTTが開発した大規模言語モデル（LLM）「tsuzumi 2」を使い、教職員の文書業務を支援する実証を始めたと発表した。対象は市立小中学校の一部。校務文書の検索や要約、作成にAIアプリケーションを活用し、業務効率化の効果、安全性、操作性を検証する。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "小中学校の校務に“自前運用”の国産LLM NTT西と茨木市が全国初の実証",
+          "url": "https://www.itmedia.co.jp/news/article/2610/14/2000002276/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-14T09:37:59.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "サイゼリヤ、ついに値上げ ミラノ風ドリアは300→320円 100円ワインは据え置き",
+      "body": "5本目。CNET Japanから、サイゼリヤ、ついに値上げ ミラノ風ドリアは300→320円 100円ワインは据え置き。サイゼリヤは10月14日、メニュー全般の価格を10月29日に改定すると発表した。値上げ幅は平均6％で、300円（税込、以下同）の「ミラノ風ドリア」は320円に、400円のメニューは420〜430円にそれぞれ改定する。一方でフレッシュワインの価格は据え置く。事業の話は、数字の背景にある意思決定を想像すると理解が深まります。",
+      "refs": [
+        {
+          "title": "サイゼリヤ、ついに値上げ ミラノ風ドリアは300→320円 100円ワインは据え置き",
+          "url": "https://japan.cnet.com/article/35253547/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-14T08:55:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、LLM、大規模言語モデル、読み方はエルエルエム。大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。次に、DevOps、SRE、読み方はデブオプス、エスアールイー。作る人と運用する人を分けず、一体で回す考え方がDevOpsです。SREはそれを職種にしたもので、サービスが落ちない仕組みづくりを専門に担います。「落ちないこと」を人の頑張りではなく仕組みで担保する、という発想が根っこにあります。最後に、API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。知らない用語が出てきたら、その場で調べるより一度メモして夜にまとめて潰すほうが続きます。完璧に理解しようとしないことが、続けるコツです。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、CedarDB wants one database to handle both transactions and analytics, as AI agents raise the stakes。TechCrunchから、Ambani’s Jio seeks to raise $3.2B in what could be India’s biggest IPO。ITmedia AI+から、IFS最大イベントで新産業用AI発表 対話と自律実行で「眠る40％」を解き放つ。TechCrunchから、Flock CEO says its microphones detect ‘just gunshots’ — its website says different。ITmedia AI+から、デジハリ大、「Claude」を全学導入へ──国内初、“回数気にせず”使い放題に。Hacker News フロントページから、Show HN: Petal, open-source CoScreen/ScreenHero finally free。Hacker News フロントページから、Neckbeard – A DevOps/platform/SRE plugin for your agent。Hacker News フロントページから、We’re releasing Jev 1.14.0 along with experimental features for dreamers。OpenAI Newsから、Amp puts AI agents to work beyond code with OpenAI models。はてなブックマーク テクノロジーから、GoogleのEmbeddingGemma 2を音声認識モデルに変換した「Embedding Gemma Transcribe」、オフライン環境のMacなら15分の音声をわずか約3秒で爆速文字起こし可能。音声をテキストに変換する文字起こしには一般的に音声認識専用のAIモデルが使われます。はてなブックマーク テクノロジーから、AIエージェントによるウェブサイトへの攻撃の注意喚起。SaaStrから、Want to Steal a Customer From a Competitor? Ask Them What It Would Really Take。以上です。",
+      "refs": [
+        {
+          "title": "CedarDB wants one database to handle both transactions and analytics, as AI agents raise the stakes",
+          "url": "https://techcrunch.com/2026/10/14/cedardb-wants-one-database-to-handle-both-transactions-and-analytics-as-ai-agents-raise-the-stakes/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-14T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Ambani’s Jio seeks to raise $3.2B in what could be India’s biggest IPO",
+          "url": "https://techcrunch.com/2026/10/14/ambanis-jio-seeks-to-raise-3-2b-in-what-could-be-indias-biggest-ipo/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-14T21:48:20.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "IFS最大イベントで新産業用AI発表 対話と自律実行で「眠る40％」を解き放つ",
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2610/15/news017.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-14T21:30:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Flock CEO says its microphones detect ‘just gunshots’ — its website says different",
+          "url": "https://techcrunch.com/2026/10/14/flock-ceo-says-its-microphones-detect-just-gunshots-its-website-says-different/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-14T21:30:33.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "デジハリ大、「Claude」を全学導入へ──国内初、“回数気にせず”使い放題に",
+          "url": "https://www.itmedia.co.jp/news/article/2610/14/2000002278/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-14T10:43:31.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free",
+          "url": "https://petal.live/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-14T18:23:14.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Neckbeard – A DevOps/platform/SRE plugin for your agent",
+          "url": "https://github.com/bealesh/neckbeard",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-14T17:45:34.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
+          "url": "https://typesafe.ai/blog/jev-1-14",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-14T21:11:03.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Amp puts AI agents to work beyond code with OpenAI models",
+          "url": "https://openai.com/index/amp-beyond-coding",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-10-14T12:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "GoogleのEmbeddingGemma 2を音声認識モデルに変換した「Embedding Gemma Transcribe」、オフライン環境のMacなら15分の音声をわずか約3秒で爆速文字起こし可能",
+          "url": "https://gigazine.net/news/20261014-embetting-gemma-transcribe/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-14T13:13:34.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AIエージェントによるウェブサイトへの攻撃の注意喚起",
+          "url": "https://www.scutum.jp/information/waf_tech_blog/2026/10/waf-blog-085.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-14T08:44:43.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Want to Steal a Customer From a Competitor? Ask Them What It Would Really Take",
+          "url": "https://www.saastr.com/want-to-steal-a-customer-from-a-competitor-ask-them-what-it-would-take/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-14T14:10:57.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "みずほが数千人をAI開発者に転換 事務や営業、日本企業の働き方転機 - 日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZQOUB0722M0X01C26A0000000/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-14T19:37:56.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Googleの新モデル「Gemini 4 Argon」一般提供開始 使えるプラン、価格",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2610/14/2000002241/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-14T05:06:36.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS",
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "Windows上でAIエージェントの実行を安全に隔離する「Microsoft Execution Containers」（MXC）正式リリース。ファイルやネットワークなどの境界を柔軟にカスタマイズ",
+        "url": "https://www.publickey1.jp/blog/26/windowsaimicrosoft_execution_containersmxc.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-10-14T15:57:19.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "小中学校の校務に“自前運用”の国産LLM NTT西と茨木市が全国初の実証",
+        "url": "https://www.itmedia.co.jp/news/article/2610/14/2000002276/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-14T09:37:59.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "サイゼリヤ、ついに値上げ ミラノ風ドリアは300→320円 100円ワインは据え置き",
+        "url": "https://japan.cnet.com/article/35253547/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-14T08:55:00.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "CedarDB wants one database to handle both transactions and analytics, as AI agents raise the stakes",
+        "url": "https://techcrunch.com/2026/10/14/cedardb-wants-one-database-to-handle-both-transactions-and-analytics-as-ai-agents-raise-the-stakes/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-14T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Ambani’s Jio seeks to raise $3.2B in what could be India’s biggest IPO",
+        "url": "https://techcrunch.com/2026/10/14/ambanis-jio-seeks-to-raise-3-2b-in-what-could-be-indias-biggest-ipo/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-14T21:48:20.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "IFS最大イベントで新産業用AI発表 対話と自律実行で「眠る40％」を解き放つ",
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2610/15/news017.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-14T21:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Flock CEO says its microphones detect ‘just gunshots’ — its website says different",
+        "url": "https://techcrunch.com/2026/10/14/flock-ceo-says-its-microphones-detect-just-gunshots-its-website-says-different/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-14T21:30:33.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "デジハリ大、「Claude」を全学導入へ──国内初、“回数気にせず”使い放題に",
+        "url": "https://www.itmedia.co.jp/news/article/2610/14/2000002278/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-14T10:43:31.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free",
+        "url": "https://petal.live/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-14T18:23:14.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Neckbeard – A DevOps/platform/SRE plugin for your agent",
+        "url": "https://github.com/bealesh/neckbeard",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-14T17:45:34.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
+        "url": "https://typesafe.ai/blog/jev-1-14",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-14T21:11:03.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Amp puts AI agents to work beyond code with OpenAI models",
+        "url": "https://openai.com/index/amp-beyond-coding",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-10-14T12:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "GoogleのEmbeddingGemma 2を音声認識モデルに変換した「Embedding Gemma Transcribe」、オフライン環境のMacなら15分の音声をわずか約3秒で爆速文字起こし可能",
+        "url": "https://gigazine.net/news/20261014-embetting-gemma-transcribe/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-14T13:13:34.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AIエージェントによるウェブサイトへの攻撃の注意喚起",
+        "url": "https://www.scutum.jp/information/waf_tech_blog/2026/10/waf-blog-085.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-14T08:44:43.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Want to Steal a Customer From a Competitor? Ask Them What It Would Really Take",
+        "url": "https://www.saastr.com/want-to-steal-a-customer-from-a-competitor-ask-them-what-it-would-take/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-14T14:10:57.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "llm",
+      "term": "LLM（大規模言語モデル）",
+      "reading": "エルエルエム",
+      "category": "AI",
+      "level": 1,
+      "definition": "大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。",
+      "interview": "「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。"
+    },
+    {
+      "id": "devops-sre",
+      "term": "DevOps / SRE",
+      "reading": "デブオプス、エスアールイー",
+      "category": "職種",
+      "level": 2,
+      "definition": "作る人と運用する人を分けず、一体で回す考え方がDevOpsです。SREはそれを職種にしたもので、サービスが落ちない仕組みづくりを専門に担います。",
+      "interview": "「落ちないこと」を人の頑張りではなく仕組みで担保する、という発想が根っこにあります。"
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 875
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 182
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 942
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 911
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 804
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 462
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1608
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 928
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 442
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 558
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 2801
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 860
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 195,
+    "eligible": 104
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 61.85
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "みずほが数千人をAI開発者に転換 事務や営業、日本企業の働き方転機 - 日本経済新聞",
+      "startSec": 61.85,
+      "endSec": 111.64
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Googleの新モデル「Gemini 4 Argon」一般提供開始 使えるプラン、価格",
+      "startSec": 111.64,
+      "endSec": 153.75
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Windows上でAIエージェントの実行を安全に隔離する「Microsoft Execution Containers」（MXC）正式リリース。ファイルやネットワークなどの境界を柔軟にカスタマイズ",
+      "startSec": 153.75,
+      "endSec": 193.5
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "小中学校の校務に“自前運用”の国産LLM NTT西と茨木市が全国初の実証",
+      "startSec": 193.5,
+      "endSec": 241.73
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "サイゼリヤ、ついに値上げ ミラノ風ドリアは300→320円 100円ワインは据え置き",
+      "startSec": 241.73,
+      "endSec": 284.21
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 284.21,
+      "endSec": 388.35
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 388.35,
+      "endSec": 400.69
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 400.69,
+      "endSec": 532.54
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 532.54,
+      "endSec": 543.02
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 26064940,
+    "durationSec": 543.02
+  }
+}

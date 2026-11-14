@@ -1,0 +1,579 @@
+{
+  "id": "2026-11-07",
+  "createdAt": "2026-11-07T22:52:39.976Z",
+  "dateLabel": "11月7日（土）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.3,
+  "generator": "template",
+  "title": "11月7日（土） Claudeの性能向上ペース、約2倍に加速--「AIを使ってAIを開発」が要因か ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月7日（土）のテックニュースをお届けします。今日の見出しは5本です。1つ目、Claudeの性能向上ペース、約2倍に加速--「AIを使ってAIを開発」が要因か。2つ目、Cloudflare Zero Wire × GitHub Actions × Claude で公開サーバーの脆弱性チェックを自動化。3つ目、After the midterms, things are looking rocky for Elon Musk and data centers。4つ目、SaaStr AI App of the Week: Base44. One Founder, Zero Funding, $80 Million From Wix in 6 Months. Now at $200 Million ARR.。5つ目、Show HN: Where Were We。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Claudeの性能向上ペース、約2倍に加速--「AIを使ってAIを開発」が要因か",
+      "body": "1本目。CNET Japanから、Claudeの性能向上ペース、約2倍に加速--「AIを使ってAIを開発」が要因か。AnthropicのAIモデルは、正解を判定しやすい課題での性能向上が、従来の約2倍のペースに速まった可能性がある。AIの能力やリスクを研究するMETRが11月5日、調査報告書を公開した。METRは、性能向上が加速した主な要因はAIを使った研究開発にあるとみるが、推定には大きな不確実性があるとしている。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "Claudeの性能向上ペース、約2倍に加速--「AIを使ってAIを開発」が要因か",
+          "url": "https://japan.cnet.com/article/35254548/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-07T22:24:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Cloudflare Zero Wire × GitHub Actions × Claude で公開サーバーの脆弱性チェックを自動化",
+      "body": "2本目。はてなブックマーク テクノロジーから、Cloudflare Zero Wire × GitHub Actions × Claude で公開サーバーの脆弱性チェックを自動化。はじめに 2026年11月、Cloudflare Radar に Zero Wire という脆弱性インテリジェンスのフィードが公開されました。全 CVE を網羅するのではなく、Web アプリやランタイム、インターネットに公開されたサービスなど「外向きのソフトウェアの重大な CVE」に絞って、ニュースのように読めるブリーフィングを出してくれるも...事故のニュースは、裏返すと「何を備えていれば防げたか」の教材になります。",
+      "refs": [
+        {
+          "title": "Cloudflare Zero Wire × GitHub Actions × Claude で公開サーバーの脆弱性チェックを自動化",
+          "url": "https://zenn.dev/tomipetit/articles/zero-wire-github-actions",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-07T13:18:14.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "After the midterms, things are looking rocky for Elon Musk and data centers",
+      "body": "3本目。TechCrunchから、After the midterms, things are looking rocky for Elon Musk and data centers。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。スタートアップの動きは、業界がこれから向かう方向の先行指標になります。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "After the midterms, things are looking rocky for Elon Musk and data centers",
+          "url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-07T22:07:22.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "SaaStr AI App of the Week: Base44. One Founder, Zero Funding, $80 Million From Wix in 6 Months. Now at $200 Million ARR.",
+      "body": "4本目。SaaStrから、SaaStr AI App of the Week: Base44. One Founder, Zero Funding, $80 Million From Wix in 6 Months. Now at $200 Million ARR.数字が語られるときは、その数字が良いのか悪いのかの基準まで一緒に覚えておくと使えます。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "SaaStr AI App of the Week: Base44. One Founder, Zero Funding, $80 Million From Wix in 6 Months. Now at $200 Million ARR.",
+          "url": "https://www.saastr.com/saastr-ai-app-of-the-week-base44-one-founder-zero-funding-80-million-from-wix-in-6-months-now-at-200-million-arr/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-07T12:00:44.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Show HN: Where Were We",
+      "body": "5本目。Hacker News フロントページから、Show HN: Where Were We。身近なサービスの変化は、ユーザー目線の実感を持って語れる貴重な題材です。スタートアップの動きは、業界がこれから向かう方向の先行指標になります。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Show HN: Where Were We",
+          "url": "https://wherewerewe.app/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-07T21:08:35.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。次に、チャーンレート、読み方はチャーンレート。解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。最後に、LTV、読み方はエルティーブイ。顧客生涯価値。1人の顧客が取引を始めてから終わるまでに、合計でいくら払ってくれるかの見込み額です。LTVは「長く使ってもらえるか」の裏返し。プロダクトの良さを金額に翻訳した数字だと考えると腹落ちします。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。知らない用語が出てきたら、その場で調べるより一度メモして夜にまとめて潰すほうが続きます。完璧に理解しようとしないことが、続けるコツです。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo。Hacker News フロントページから、The end of Microsoft Research's AI Frontiers group。Hacker News フロントページから、GeoWorks, Microsoft Windows' Upstart '90s Competitor (2016)。TechCrunchから、Binance CFO is leaving to ‘pursue a new venture’ after $6.3 billion hack。SaaStrから、Gartner Sees Software Growing 14.6% to $1.68 Trillion in 2027: Models at 117%, AI App Platforms at 39%, and Price Increases Doing a Lot of the Work。はてなブックマーク テクノロジーから、AI時代に求められる優秀なTechLeadの振る舞い - pospomeのプログラミング日記。SaaStrから、A Critical App We Pay For Went Down for 2 Days. They Never Offered a Credit. I Won’t Forget.はてなブックマーク テクノロジーから、桜井政博氏、生成AIへの考えかたを示す。「いまのところは使っていない」し、「どこかへの搾取になってはいけない」。一方で現在の“大変すぎるゲーム開発”への懸念も【ファミ通40周年フェス】 | ゲーム・エンタメ最新情報のファミ通.com。CNET Japanから、Google、脆弱性修正AI「CodeMender」を強化 Gemini 4 Argonなど複数AIモデルを使用。CNET Japanから、KDDI、newmoと資本業務提携--2028年に堺市で自動運転タクシー商用化へ。以上です。",
+      "refs": [
+        {
+          "title": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo",
+          "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-07T21:17:08.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "The end of Microsoft Research's AI Frontiers group",
+          "url": "https://hunch.net/?p=13764006",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-07T18:02:17.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "GeoWorks, Microsoft Windows' Upstart '90s Competitor (2016)",
+          "url": "https://www.atlasobscura.com/articles/the-history-of-geoworks-microsoft-windows-upstart-90s-competitor",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-07T17:54:56.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Binance CFO is leaving to ‘pursue a new venture’ after $6.3 billion hack",
+          "url": "https://techcrunch.com/2026/11/07/binance-cfo-is-leaving-to-pursue-a-new-venture-after-6-3-billion-hack/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-07T17:24:07.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Gartner Sees Software Growing 14.6% to $1.68 Trillion in 2027: Models at 117%, AI App Platforms at 39%, and Price Increases Doing a Lot of the Work",
+          "url": "https://www.saastr.com/gartner-sees-software-growing-14-6-to-1-68-trillion-in-2027-models-at-117-ai-app-platforms-at-39-and-price-increases-doing-a-lot-of-the-work/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-07T13:00:54.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AI時代に求められる優秀なTechLeadの振る舞い - pospomeのプログラミング日記",
+          "url": "https://www.pospome.work/entry/2026/11/07/192125",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-07T10:23:56.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        },
+        {
+          "title": "A Critical App We Pay For Went Down for 2 Days. They Never Offered a Credit. I Won’t Forget.",
+          "url": "https://www.saastr.com/a-critical-app-we-pay-for-went-down-for-2-days-they-never-offered-a-credit-i-wont-forget/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-07T15:00:06.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "桜井政博氏、生成AIへの考えかたを示す。「いまのところは使っていない」し、「どこかへの搾取になってはいけない」。一方で現在の“大変すぎるゲーム開発”への懸念も【ファミ通40周年フェス】 | ゲーム・エンタメ最新情報のファミ通.com",
+          "url": "https://www.famitsu.com/article/202611/93352",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-07T09:49:08.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Google、脆弱性修正AI「CodeMender」を強化 Gemini 4 Argonなど複数AIモデルを使用",
+          "url": "https://japan.cnet.com/article/35254533/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-07T00:10:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "KDDI、newmoと資本業務提携--2028年に堺市で自動運転タクシー商用化へ",
+          "url": "https://japan.cnet.com/article/35254521/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-06T20:55:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "Claudeの性能向上ペース、約2倍に加速--「AIを使ってAIを開発」が要因か",
+        "url": "https://japan.cnet.com/article/35254548/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-07T22:24:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Cloudflare Zero Wire × GitHub Actions × Claude で公開サーバーの脆弱性チェックを自動化",
+        "url": "https://zenn.dev/tomipetit/articles/zero-wire-github-actions",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-07T13:18:14.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "After the midterms, things are looking rocky for Elon Musk and data centers",
+        "url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-07T22:07:22.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "SaaStr AI App of the Week: Base44. One Founder, Zero Funding, $80 Million From Wix in 6 Months. Now at $200 Million ARR.",
+        "url": "https://www.saastr.com/saastr-ai-app-of-the-week-base44-one-founder-zero-funding-80-million-from-wix-in-6-months-now-at-200-million-arr/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-07T12:00:44.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Show HN: Where Were We",
+        "url": "https://wherewerewe.app/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-07T21:08:35.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo",
+        "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-07T21:17:08.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "The end of Microsoft Research's AI Frontiers group",
+        "url": "https://hunch.net/?p=13764006",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-07T18:02:17.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "GeoWorks, Microsoft Windows' Upstart '90s Competitor (2016)",
+        "url": "https://www.atlasobscura.com/articles/the-history-of-geoworks-microsoft-windows-upstart-90s-competitor",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-07T17:54:56.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Binance CFO is leaving to ‘pursue a new venture’ after $6.3 billion hack",
+        "url": "https://techcrunch.com/2026/11/07/binance-cfo-is-leaving-to-pursue-a-new-venture-after-6-3-billion-hack/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-07T17:24:07.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Gartner Sees Software Growing 14.6% to $1.68 Trillion in 2027: Models at 117%, AI App Platforms at 39%, and Price Increases Doing a Lot of the Work",
+        "url": "https://www.saastr.com/gartner-sees-software-growing-14-6-to-1-68-trillion-in-2027-models-at-117-ai-app-platforms-at-39-and-price-increases-doing-a-lot-of-the-work/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-07T13:00:54.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AI時代に求められる優秀なTechLeadの振る舞い - pospomeのプログラミング日記",
+        "url": "https://www.pospome.work/entry/2026/11/07/192125",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-07T10:23:56.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "A Critical App We Pay For Went Down for 2 Days. They Never Offered a Credit. I Won’t Forget.",
+        "url": "https://www.saastr.com/a-critical-app-we-pay-for-went-down-for-2-days-they-never-offered-a-credit-i-wont-forget/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-07T15:00:06.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "桜井政博氏、生成AIへの考えかたを示す。「いまのところは使っていない」し、「どこかへの搾取になってはいけない」。一方で現在の“大変すぎるゲーム開発”への懸念も【ファミ通40周年フェス】 | ゲーム・エンタメ最新情報のファミ通.com",
+        "url": "https://www.famitsu.com/article/202611/93352",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-07T09:49:08.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Google、脆弱性修正AI「CodeMender」を強化 Gemini 4 Argonなど複数AIモデルを使用",
+        "url": "https://japan.cnet.com/article/35254533/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-07T00:10:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "KDDI、newmoと資本業務提携--2028年に堺市で自動運転タクシー商用化へ",
+        "url": "https://japan.cnet.com/article/35254521/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-06T20:55:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    },
+    {
+      "id": "churn",
+      "term": "チャーンレート",
+      "reading": "チャーンレート",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。",
+      "interview": "「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。"
+    },
+    {
+      "id": "ltv",
+      "term": "LTV",
+      "reading": "エルティーブイ",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "顧客生涯価値。1人の顧客が取引を始めてから終わるまでに、合計でいくら払ってくれるかの見込み額です。",
+      "interview": "LTVは「長く使ってもらえるか」の裏返し。プロダクトの良さを金額に翻訳した数字だと考えると腹落ちします。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 651
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 178
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 714
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 593
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 610
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 362
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1107
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 594
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 374
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 396
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 5936
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 522
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 194,
+    "eligible": 69
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 56.45
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Claudeの性能向上ペース、約2倍に加速--「AIを使ってAIを開発」が要因か",
+      "startSec": 56.45,
+      "endSec": 104.25
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Cloudflare Zero Wire × GitHub Actions × Claude で公開サーバーの脆弱性チェックを自動化",
+      "startSec": 104.25,
+      "endSec": 151.67
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "After the midterms, things are looking rocky for Elon Musk and data centers",
+      "startSec": 151.67,
+      "endSec": 183.3
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "SaaStr AI App of the Week: Base44. One Founder, Zero Funding, $80 Million From Wix in 6 Months. Now at $200 Million ARR.",
+      "startSec": 183.3,
+      "endSec": 215.5
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Show HN: Where Were We",
+      "startSec": 215.5,
+      "endSec": 241.97
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 241.97,
+      "endSec": 349.56
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 349.56,
+      "endSec": 361.9
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 361.9,
+      "endSec": 494.19
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 494.19,
+      "endSec": 504.66
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 24223788,
+    "durationSec": 504.66
+  }
+}

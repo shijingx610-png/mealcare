@@ -1,0 +1,607 @@
+{
+  "id": "2026-11-06",
+  "createdAt": "2026-11-06T23:46:53.085Z",
+  "dateLabel": "11月6日（金）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.1,
+  "generator": "template",
+  "title": "11月6日（金） AIネオクラウド「8割消滅」予測 債務膨張、民主旋風が追い打ち - 日本経済新聞 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月6日（金）のテックニュースをお届けします。今日の見出しは5本です。1つ目、AIネオクラウド「8割消滅」予測 債務膨張、民主旋風が追い打ち - 日本経済新聞。2つ目、「ChatGPTの回答にリンクがない＝見られていない」 実は違うAIの情報収集。3つ目、政府、サイバー緊急対策に約100億円 基幹インフラの攻撃情報は同日中の集約目指す。4つ目、ロート製薬、約280万人分の個人情報漏えい 9715件は通話音声データとクレカ情報が流出。5つ目、OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "AIネオクラウド「8割消滅」予測 債務膨張、民主旋風が追い打ち - 日本経済新聞",
+      "body": "1本目。はてなブックマーク テクノロジーから、AIネオクラウド「8割消滅」予測 債務膨張、民主旋風が追い打ち - 日本経済新聞。【シリコンバレー=伴正春】AI（人工知能）データセンターを手がける新興企業に懸念が強まっている。「ネオクラウド」などと呼ばれる米上場6社の負債は1年で8倍となった。米中間選挙で民主党が躍進し、建設延期で資金回収が遅れれば、信用不安が広がる恐れがある。決算、中間選挙に関する質問相次ぐ「進行中のプロジェク...AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "AIネオクラウド「8割消滅」予測 債務膨張、民主旋風が追い打ち - 日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOGN060JD0W6A101C2000000/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-06T22:57:15.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "「ChatGPTの回答にリンクがない＝見られていない」 実は違うAIの情報収集",
+      "body": "2本目。ITmedia AI+から、「ChatGPTの回答にリンクがない＝見られていない」 実は違うAIの情報収集。ChatGPTやClaudeなどの生成AIに自社サイトが引用されていない場合、AIに情報を参照されていないと考えがちだ。だが、回答に表示されるリンクだけでは、AIがどのWebサイトを参考にしたのか分からない。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "「ChatGPTの回答にリンクがない＝見られていない」 実は違うAIの情報収集",
+          "url": "https://kn.itmedia.co.jp/kn/article/2611/07/2000002948/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-06T22:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "政府、サイバー緊急対策に約100億円 基幹インフラの攻撃情報は同日中の集約目指す",
+      "body": "3本目。CNET Japanから、政府、サイバー緊急対策に約100億円 基幹インフラの攻撃情報は同日中の集約目指す。政府は11月6日、相次ぐサイバー攻撃を受け、被害者支援や情報収集の強化などを盛り込んだ「サイバーセキュリティ緊急対策パッケージ」を決定した。同日の閣議では、緊急対策に充てる約100億円の予備費の使用も決めた。高市早苗首相は関係閣僚会議で、基幹インフラ事業者がサイバー攻撃を受けた際の情報を、遅くとも同日中に国家サイバー統括室へ集約するよう指示した。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "政府、サイバー緊急対策に約100億円 基幹インフラの攻撃情報は同日中の集約目指す",
+          "url": "https://japan.cnet.com/article/35254531/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-06T23:05:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "ロート製薬、約280万人分の個人情報漏えい 9715件は通話音声データとクレカ情報が流出",
+      "body": "4本目。ITmedia NEWSから、ロート製薬、約280万人分の個人情報漏えい 9715件は通話音声データとクレカ情報が流出。11月6日、ロート製薬は9月11日に公表した通信販売システムへの不正アクセスについて、顧客279万7545人分の個人情報が漏えいしたと発表した。調査の結果、9715人分のクレジットカード情報も不正に取得されていたことが分かったという。事故のニュースは、裏返すと「何を備えていれば防げたか」の教材になります。",
+      "refs": [
+        {
+          "title": "ロート製薬、約280万人分の個人情報漏えい 9715件は通話音声データとクレカ情報が流出",
+          "url": "https://www.itmedia.co.jp/news/article/2611/06/2000002984/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-06T10:31:25.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
+      "body": "5本目。TechCrunchから、OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。資金調達のニュースは、その会社が次の1、2年で採用を増やすサインでもあります。転職先候補として覚えておく価値があります。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
+          "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-06T22:53:46.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。次に、バリュエーション、読み方はバリュエーション。企業の値段のことです。調達時に「時価総額いくらとして、何%の株を渡すか」で決まります。調達額そのものより、バリュエーションと調達額の比率のほうが、その会社の勢いを表します。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。最後に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。志望動機は「業界が伸びているから」だけだと弱くなります。どのニュースを見て何を面白いと思ったのか、具体的な一本があると説得力が変わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Ramp data shows AI spending stalling just as Anthropic nears its IPO。TechCrunchから、Meta introduces Spaces, a new way to collaborate with your Muse agent。Hacker News フロントページから、Google has acquired Crusoe's data center site in southeast Wyoming。ITmedia AI+から、AI面接を導入したのに、応募者情報は手入力？ 採用現場の「二度手間」を解消へ。Hacker News フロントページから、ChatGPT silently passes data between connectors and the bounty wants an ID card。はてなブックマーク テクノロジーから、「お値打ちAI銘柄」太陽誘電が逆行高 悲観一色に差す光明 - 日本経済新聞。Hacker News フロントページから、Anthropic IPO buyers see valuation as low as $1.1T。SaaStrから、Top 5 Learnings from Vercel’s COO: 10 SDRs Down to 1, a $5K-a-Year Lead Agent, and 93% of Support Cases Handled by AI。はてなブックマーク テクノロジーから、セキュリティ啓発団体に不正アクセス 個人情報最大1.5万件漏えいか。ITmedia AI+から、AIで営業は効率化した、でもなぜ売れない？ 成果を出す人が大切にしていること。AIで提案書の作成や情報収集は効率化できても、それだけで営業成績は上がるのか。CNET Japanから、米民主党の勝利で巨大テック規制か 焦点はプライバシーとデータセンター。今週の米中間選挙で、民主党は上下両院の多数派を奪還した。CNET Japanから、無印良品ネットストアを一時停止 セキュリティ強化が理由。以上です。",
+      "refs": [
+        {
+          "title": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+          "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-06T15:54:47.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
+          "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-06T18:44:20.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Google has acquired Crusoe's data center site in southeast Wyoming",
+          "url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-06T20:09:14.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AI面接を導入したのに、応募者情報は手入力？ 採用現場の「二度手間」を解消へ",
+          "url": "https://kn.itmedia.co.jp/kn/article/2611/07/2000002951/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-06T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "ChatGPT silently passes data between connectors and the bounty wants an ID card",
+          "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-06T22:50:43.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「お値打ちAI銘柄」太陽誘電が逆行高 悲観一色に差す光明 - 日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOUB064NX0W6A101C2000000/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-06T09:39:24.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Anthropic IPO buyers see valuation as low as $1.1T",
+          "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-06T16:54:36.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Top 5 Learnings from Vercel’s COO: 10 SDRs Down to 1, a $5K-a-Year Lead Agent, and 93% of Support Cases Handled by AI",
+          "url": "https://www.saastr.com/top-5-learnings-from-vercels-coo-10-sdrs-down-to-1-a-5k-a-year-lead-agent-and-93-of-support-cases-handled-by-ai/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-06T15:00:25.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "セキュリティ啓発団体に不正アクセス 個人情報最大1.5万件漏えいか",
+          "url": "https://www.itmedia.co.jp/news/article/2611/06/2000002978/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-06T08:41:42.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "AIで営業は効率化した、でもなぜ売れない？ 成果を出す人が大切にしていること",
+          "url": "https://kn.itmedia.co.jp/kn/article/2611/07/2000002945/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-06T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "米民主党の勝利で巨大テック規制か 焦点はプライバシーとデータセンター",
+          "url": "https://japan.cnet.com/article/35254527/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-06T21:26:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "無印良品ネットストアを一時停止 セキュリティ強化が理由",
+          "url": "https://japan.cnet.com/article/35254529/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-06T23:20:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "AIネオクラウド「8割消滅」予測 債務膨張、民主旋風が追い打ち - 日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZQOGN060JD0W6A101C2000000/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-06T22:57:15.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「ChatGPTの回答にリンクがない＝見られていない」 実は違うAIの情報収集",
+        "url": "https://kn.itmedia.co.jp/kn/article/2611/07/2000002948/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-06T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "政府、サイバー緊急対策に約100億円 基幹インフラの攻撃情報は同日中の集約目指す",
+        "url": "https://japan.cnet.com/article/35254531/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-06T23:05:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ロート製薬、約280万人分の個人情報漏えい 9715件は通話音声データとクレカ情報が流出",
+        "url": "https://www.itmedia.co.jp/news/article/2611/06/2000002984/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-06T10:31:25.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
+        "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-06T22:53:46.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+        "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-06T15:54:47.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
+        "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-06T18:44:20.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Google has acquired Crusoe's data center site in southeast Wyoming",
+        "url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-06T20:09:14.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AI面接を導入したのに、応募者情報は手入力？ 採用現場の「二度手間」を解消へ",
+        "url": "https://kn.itmedia.co.jp/kn/article/2611/07/2000002951/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-06T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ChatGPT silently passes data between connectors and the bounty wants an ID card",
+        "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-06T22:50:43.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「お値打ちAI銘柄」太陽誘電が逆行高 悲観一色に差す光明 - 日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZQOUB064NX0W6A101C2000000/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-06T09:39:24.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Anthropic IPO buyers see valuation as low as $1.1T",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-06T16:54:36.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Top 5 Learnings from Vercel’s COO: 10 SDRs Down to 1, a $5K-a-Year Lead Agent, and 93% of Support Cases Handled by AI",
+        "url": "https://www.saastr.com/top-5-learnings-from-vercels-coo-10-sdrs-down-to-1-a-5k-a-year-lead-agent-and-93-of-support-cases-handled-by-ai/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-06T15:00:25.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "セキュリティ啓発団体に不正アクセス 個人情報最大1.5万件漏えいか",
+        "url": "https://www.itmedia.co.jp/news/article/2611/06/2000002978/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-06T08:41:42.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "AIで営業は効率化した、でもなぜ売れない？ 成果を出す人が大切にしていること",
+        "url": "https://kn.itmedia.co.jp/kn/article/2611/07/2000002945/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-06T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "米民主党の勝利で巨大テック規制か 焦点はプライバシーとデータセンター",
+        "url": "https://japan.cnet.com/article/35254527/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-06T21:26:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "無印良品ネットストアを一時停止 セキュリティ強化が理由",
+        "url": "https://japan.cnet.com/article/35254529/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-06T23:20:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "valuation",
+      "term": "バリュエーション",
+      "reading": "バリュエーション",
+      "category": "スタートアップ",
+      "level": 2,
+      "definition": "企業の値段のことです。調達時に「時価総額いくらとして、何%の株を渡すか」で決まります。",
+      "interview": "調達額そのものより、バリュエーションと調達額の比率のほうが、その会社の勢いを表します。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 641
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 544
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 646
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 669
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 679
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 392
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1168
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 669
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 332
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 374
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1579
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 611
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 195,
+    "eligible": 123
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 57.32
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "AIネオクラウド「8割消滅」予測 債務膨張、民主旋風が追い打ち - 日本経済新聞",
+      "startSec": 57.32,
+      "endSec": 108.17
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "「ChatGPTの回答にリンクがない＝見られていない」 実は違うAIの情報収集",
+      "startSec": 108.17,
+      "endSec": 143.06
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "政府、サイバー緊急対策に約100億円 基幹インフラの攻撃情報は同日中の集約目指す",
+      "startSec": 143.06,
+      "endSec": 191.36
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "ロート製薬、約280万人分の個人情報漏えい 9715件は通話音声データとクレカ情報が流出",
+      "startSec": 191.36,
+      "endSec": 232.54
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
+      "startSec": 232.54,
+      "endSec": 270.85
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 270.85,
+      "endSec": 375.13
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 375.13,
+      "endSec": 388.41
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 388.41,
+      "endSec": 523.15
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 523.15,
+      "endSec": 533.62
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 25613868,
+    "durationSec": 533.62
+  }
+}

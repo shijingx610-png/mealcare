@@ -1,0 +1,611 @@
+{
+  "id": "2026-11-14",
+  "createdAt": "2026-11-14T00:25:35.324Z",
+  "dateLabel": "11月14日（土）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.8,
+  "generator": "template",
+  "title": "11月14日（土） 海の熱でAIデータセンターを動かす--トヨタ系VCも出資するDrogueの構想 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月14日（土）のテックニュースをお届けします。今日の見出しは5本です。1つ目、海の熱でAIデータセンターを動かす--トヨタ系VCも出資するDrogueの構想。2つ目、楽園追放 心のレゾナンス：12年ぶり続編の挑戦 3DCGの現在地、AIと人間らしさ 水島精二監督インタビュー - MANTANWEB（まんたんウェブ）。3つ目、NVIDIAをつくった男、ジェンスン・フアン “デニーズの皿洗い“から“AI時代の主役“へ、激動の半生。4つ目、相次ぐ情報漏えいでアナログ回帰？ ダイソー「パスワード管理ノート」が品薄に 一方でリスクも──IPAに聞いた。5つ目、Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "海の熱でAIデータセンターを動かす--トヨタ系VCも出資するDrogueの構想",
+      "body": "1本目。CNET Japanから、海の熱でAIデータセンターを動かす--トヨタ系VCも出資するDrogueの構想。海の熱で発電し、海水で冷却する。スタートアップのDrogueが、陸上の電力網に頼らない洋上のAIデータセンターを目指している。トヨタ自動車のベンチャーキャピタルであるToyota Venturesも、同社を出資先として紹介している。資金調達のニュースは、その会社が次の1、2年で採用を増やすサインでもあります。転職先候補として覚えておく価値があります。",
+      "refs": [
+        {
+          "title": "海の熱でAIデータセンターを動かす--トヨタ系VCも出資するDrogueの構想",
+          "url": "https://japan.cnet.com/article/35254874/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-13T23:10:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "楽園追放 心のレゾナンス：12年ぶり続編の挑戦 3DCGの現在地、AIと人間らしさ 水島精二監督インタビュー - MANTANWEB（まんたんウェブ）",
+      "body": "2本目。はてなブックマーク テクノロジーから、楽園追放 心のレゾナンス：12年ぶり続編の挑戦 3DCGの現在地、AIと人間らしさ 水島精二監督インタビュー - MANTANWEB（まんたんウェブ）。「楽園追放 -Expelled from Paradise-」は、ヒットが期待されていた作品というわけではなかった。公開された2014年、日本のアニメ業界は、手描きが主流で、フル3DCGアニメは受け入れられているとは言えなかった。3DCGでありながら手描きのような質感と表現を目指したセルルックという表現で制作され、3DCGならではのダイ...日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "楽園追放 心のレゾナンス：12年ぶり続編の挑戦 3DCGの現在地、AIと人間らしさ 水島精二監督インタビュー - MANTANWEB（まんたんウェブ）",
+          "url": "https://mantan-web.jp/article/20261112dog00m200059000a.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-13T22:02:09.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "NVIDIAをつくった男、ジェンスン・フアン “デニーズの皿洗い“から“AI時代の主役“へ、激動の半生",
+      "body": "3本目。ITmedia AI+から、NVIDIAをつくった男、ジェンスン・フアン “デニーズの皿洗い“から“AI時代の主役“へ、激動の半生。ダイナーの一角から、AI時代の主役「NVIDIA」を生み出したジェンスン・フアン氏。“皿洗い”から億万長者へと至った半生を振り返る。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "NVIDIAをつくった男、ジェンスン・フアン “デニーズの皿洗い“から“AI時代の主役“へ、激動の半生",
+          "url": "https://www.itmedia.co.jp/business/articles/2611/14/news008.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-13T22:30:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "相次ぐ情報漏えいでアナログ回帰？ ダイソー「パスワード管理ノート」が品薄に 一方でリスクも──IPAに聞いた",
+      "body": "4本目。ITmedia NEWSから、相次ぐ情報漏えいでアナログ回帰？ ダイソー「パスワード管理ノート」が品薄に 一方でリスクも──IPAに聞いた。大創産業（ダイソー）は11月11日、紙の「パスワード管理ノート」の売れ行きが10月末ごろから伸び、一時的に品薄になっているとITmedia NEWSの取材に答えた。IPAは紙での管理を否定しない一方、紙では防ぎにくいリスクへの対策として、多要素認証やパスキーの設定を勧めている。事故のニュースは、裏返すと「何を備えていれば防げたか」の教材になります。",
+      "refs": [
+        {
+          "title": "相次ぐ情報漏えいでアナログ回帰？ ダイソー「パスワード管理ノート」が品薄に 一方でリスクも──IPAに聞いた",
+          "url": "https://www.itmedia.co.jp/news/article/2611/14/2000003193/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-13T22:30:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+      "body": "5本目。TechCrunchから、Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say。スタートアップの動きは、業界がこれから向かう方向の先行指標になります。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+          "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-13T22:43:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、SaaS、PaaS、IaaS、読み方はサース、パース、イアース。クラウドの提供範囲の違いです。SaaSは完成したソフトをそのまま使う形、PaaSはアプリを作る土台まで借りる形、IaaSはサーバーそのものを借りる形を指します。料理に例えるなら、SaaSは出来上がった定食、PaaSはキッチン付きの部屋、IaaSは更地です。次に、API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。最後に、LLM、大規模言語モデル、読み方はエルエルエム。大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。職務経歴書は、前職の業務をそのまま書くより「どの課題を、どう測って、どう改善したか」に翻訳すると、業界が違っても伝わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、AI agent startup LangChain hits $3B valuation。CNET Japanから、Gemini、Google Walletと連携して家計を分析--サブスクの値上げも検出。SaaStrから、Jensen Resigns, Sequoia Pulls Back to the Bay, and Anthropic’s IPO Draws 6x Demand: The Top Takeaways from 20VC x SaaStr。CNET Japanから、ChatGPTが買い物の支払いまで代行、「Wallet」提供開始--購入ごとに本人認証。SaaStrから、5 Interesting Learnings from Palantir at $9.3 Billion Run-Rate: 96% Growth, 165% NRR, and U.S. Commercial Passing Government for the First Time。TechCrunchから、Amazon’s new Kindle Colorsoft is a premium e-reader with a premium price。Hacker News フロントページから、Autonomous (YC F25) is hiring MTS to build AI agents that manage your wealth。はてなブックマーク テクノロジーから、マイクロソフト 接続障害「広範囲にわたる復旧がみられる」 | NHKニュース。Hacker News フロントページから、FAA issues nationwide ground stop due to \"extraordinary circumstances\"。Hacker News フロントページから、Microsoft outage gives customers a crash course in dependence on Redmond。はてなブックマーク テクノロジーから、大阪でCopilotの初心者向け研修の講師をやる予定なのに障害で使えず…他のAIは使用禁止、代替ツールなし「お気の毒すぎる」「これは泣ける」→フル座学で研修を乗り切った。ITmedia AI+から、Googleの社内専用コーディングAI「GfG」、その全容 Geminiに社内データ1兆トークン学習させ開発 所要時間半減の業務も。以上です。",
+      "refs": [
+        {
+          "title": "AI agent startup LangChain hits $3B valuation",
+          "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-13T19:37:57.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Gemini、Google Walletと連携して家計を分析--サブスクの値上げも検出",
+          "url": "https://japan.cnet.com/article/35254868/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-13T21:40:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Jensen Resigns, Sequoia Pulls Back to the Bay, and Anthropic’s IPO Draws 6x Demand: The Top Takeaways from 20VC x SaaStr",
+          "url": "https://www.saastr.com/jensen-resigns-sequoia-pulls-back-to-the-bay-and-anthropics-ipo-draws-6x-demand-the-top-takeaways-from-20vc-x-saastr/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-13T17:25:27.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "ChatGPTが買い物の支払いまで代行、「Wallet」提供開始--購入ごとに本人認証",
+          "url": "https://japan.cnet.com/article/35254870/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-13T22:30:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "5 Interesting Learnings from Palantir at $9.3 Billion Run-Rate: 96% Growth, 165% NRR, and U.S. Commercial Passing Government for the First Time",
+          "url": "https://www.saastr.com/5-interesting-learnings-from-palantir-at-9-3-billion-run-rate-96-growth-165-nrr-and-u-s-commercial-passing-government-for-the-first-time/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-13T15:00:42.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Amazon’s new Kindle Colorsoft is a premium e-reader with a premium price",
+          "url": "https://techcrunch.com/2026/11/13/amazons-new-kindle-colorsoft-is-a-premium-e-reader-with-a-premium-price/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-13T23:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Autonomous (YC F25) is hiring MTS to build AI agents that manage your wealth",
+          "url": "https://atg.science/careers",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-13T21:01:11.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "マイクロソフト 接続障害「広範囲にわたる復旧がみられる」 | NHKニュース",
+          "url": "https://news.web.nhk/newsweb/na/nd-20261114de75755",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-13T21:47:23.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "FAA issues nationwide ground stop due to \"extraordinary circumstances\"",
+          "url": "https://www.axios.com/2026/11/13/faa-nationwide-ground-stop",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-13T21:08:49.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        },
+        {
+          "title": "Microsoft outage gives customers a crash course in dependence on Redmond",
+          "url": "https://www.theregister.com/saas/2026/11/13/microsoft-outage-gives-customers-a-crash-course-in-dependence-on-redmond/5309805",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-13T18:29:16.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "大阪でCopilotの初心者向け研修の講師をやる予定なのに障害で使えず…他のAIは使用禁止、代替ツールなし「お気の毒すぎる」「これは泣ける」→フル座学で研修を乗り切った",
+          "url": "https://togetter.com/li/2770072",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-13T13:27:39.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Googleの社内専用コーディングAI「GfG」、その全容 Geminiに社内データ1兆トークン学習させ開発 所要時間半減の業務も",
+          "url": "https://www.itmedia.co.jp/news/article/2611/13/2000003110/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-13T03:00:00.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "海の熱でAIデータセンターを動かす--トヨタ系VCも出資するDrogueの構想",
+        "url": "https://japan.cnet.com/article/35254874/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-13T23:10:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "楽園追放 心のレゾナンス：12年ぶり続編の挑戦 3DCGの現在地、AIと人間らしさ 水島精二監督インタビュー - MANTANWEB（まんたんウェブ）",
+        "url": "https://mantan-web.jp/article/20261112dog00m200059000a.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-13T22:02:09.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "NVIDIAをつくった男、ジェンスン・フアン “デニーズの皿洗い“から“AI時代の主役“へ、激動の半生",
+        "url": "https://www.itmedia.co.jp/business/articles/2611/14/news008.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-13T22:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "相次ぐ情報漏えいでアナログ回帰？ ダイソー「パスワード管理ノート」が品薄に 一方でリスクも──IPAに聞いた",
+        "url": "https://www.itmedia.co.jp/news/article/2611/14/2000003193/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-13T22:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+        "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-13T22:43:00.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "AI agent startup LangChain hits $3B valuation",
+        "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-13T19:37:57.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Gemini、Google Walletと連携して家計を分析--サブスクの値上げも検出",
+        "url": "https://japan.cnet.com/article/35254868/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-13T21:40:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Jensen Resigns, Sequoia Pulls Back to the Bay, and Anthropic’s IPO Draws 6x Demand: The Top Takeaways from 20VC x SaaStr",
+        "url": "https://www.saastr.com/jensen-resigns-sequoia-pulls-back-to-the-bay-and-anthropics-ipo-draws-6x-demand-the-top-takeaways-from-20vc-x-saastr/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-13T17:25:27.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ChatGPTが買い物の支払いまで代行、「Wallet」提供開始--購入ごとに本人認証",
+        "url": "https://japan.cnet.com/article/35254870/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-13T22:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "5 Interesting Learnings from Palantir at $9.3 Billion Run-Rate: 96% Growth, 165% NRR, and U.S. Commercial Passing Government for the First Time",
+        "url": "https://www.saastr.com/5-interesting-learnings-from-palantir-at-9-3-billion-run-rate-96-growth-165-nrr-and-u-s-commercial-passing-government-for-the-first-time/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-13T15:00:42.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Amazon’s new Kindle Colorsoft is a premium e-reader with a premium price",
+        "url": "https://techcrunch.com/2026/11/13/amazons-new-kindle-colorsoft-is-a-premium-e-reader-with-a-premium-price/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-13T23:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Autonomous (YC F25) is hiring MTS to build AI agents that manage your wealth",
+        "url": "https://atg.science/careers",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-13T21:01:11.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "マイクロソフト 接続障害「広範囲にわたる復旧がみられる」 | NHKニュース",
+        "url": "https://news.web.nhk/newsweb/na/nd-20261114de75755",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-13T21:47:23.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "FAA issues nationwide ground stop due to \"extraordinary circumstances\"",
+        "url": "https://www.axios.com/2026/11/13/faa-nationwide-ground-stop",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-13T21:08:49.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "Microsoft outage gives customers a crash course in dependence on Redmond",
+        "url": "https://www.theregister.com/saas/2026/11/13/microsoft-outage-gives-customers-a-crash-course-in-dependence-on-redmond/5309805",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-13T18:29:16.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "大阪でCopilotの初心者向け研修の講師をやる予定なのに障害で使えず…他のAIは使用禁止、代替ツールなし「お気の毒すぎる」「これは泣ける」→フル座学で研修を乗り切った",
+        "url": "https://togetter.com/li/2770072",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-13T13:27:39.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Googleの社内専用コーディングAI「GfG」、その全容 Geminiに社内データ1兆トークン学習させ開発 所要時間半減の業務も",
+        "url": "https://www.itmedia.co.jp/news/article/2611/13/2000003110/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-13T03:00:00.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "saas-paas-iaas",
+      "term": "SaaS / PaaS / IaaS",
+      "reading": "サース、パース、イアース",
+      "category": "クラウド",
+      "level": 1,
+      "definition": "クラウドの提供範囲の違いです。SaaSは完成したソフトをそのまま使う形、PaaSはアプリを作る土台まで借りる形、IaaSはサーバーそのものを借りる形を指します。",
+      "interview": "料理に例えるなら、SaaSは出来上がった定食、PaaSはキッチン付きの部屋、IaaSは更地です。"
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "llm",
+      "term": "LLM（大規模言語モデル）",
+      "reading": "エルエルエム",
+      "category": "AI",
+      "level": 1,
+      "definition": "大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。",
+      "interview": "「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 635
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 271
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 996
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 968
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 680
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 511
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1218
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 956
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 606
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 669
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 4315
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1057
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 192,
+    "eligible": 112
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 65.96
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "海の熱でAIデータセンターを動かす--トヨタ系VCも出資するDrogueの構想",
+      "startSec": 65.96,
+      "endSec": 102.36
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "楽園追放 心のレゾナンス：12年ぶり続編の挑戦 3DCGの現在地、AIと人間らしさ 水島精二監督インタビュー - MANTANWEB（まんたんウェブ）",
+      "startSec": 102.36,
+      "endSec": 155.75
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "NVIDIAをつくった男、ジェンスン・フアン “デニーズの皿洗い“から“AI時代の主役“へ、激動の半生",
+      "startSec": 155.75,
+      "endSec": 190.22
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "相次ぐ情報漏えいでアナログ回帰？ ダイソー「パスワード管理ノート」が品薄に 一方でリスクも──IPAに聞いた",
+      "startSec": 190.22,
+      "endSec": 233.39
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+      "startSec": 233.39,
+      "endSec": 266.71
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 266.71,
+      "endSec": 374.77
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 374.77,
+      "endSec": 388.04
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 388.04,
+      "endSec": 530.23
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 530.23,
+      "endSec": 540.7
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 25953836,
+    "durationSec": 540.7
+  }
+}

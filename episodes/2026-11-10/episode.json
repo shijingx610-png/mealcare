@@ -1,0 +1,555 @@
+{
+  "id": "2026-11-10",
+  "createdAt": "2026-11-10T02:20:06.142Z",
+  "dateLabel": "11月10日（火）",
+  "durationMin": 10,
+  "estimatedMinutes": 11.2,
+  "generator": "template",
+  "title": "11月10日（火） Anthropic、「Claude Fable 5.2」と「Claude Mythos 5.2」発表 API料金2割下げ、出力は最大30％高速化 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月10日（火）のテックニュースをお届けします。今日の見出しは5本です。1つ目、Anthropic、「Claude Fable 5.2」と「Claude Mythos 5.2」発表 API料金2割下げ、出力は最大30％高速化。2つ目、ソフトバンク社長「自社システムをGPT-6 Astraで診断したら3.5万件の追加脆弱性を発見」と明かす。3つ目、Google、Kubernetesで10倍高密度にAIエージェントを実行可能にする「Agent Sustrate」と「gVisor」、オープンソースとしてCNCFに寄贈と発表。4つ目、三井化学、JSRを1兆8400億円で買収 「国内トップクラスの半導体材料企業に」。5つ目、ソフトバンク宮川社長、30万〜50万円のスマホは「もうコンピュータ」 低価格機も値上げの可能性。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Anthropic、「Claude Fable 5.2」と「Claude Mythos 5.2」発表 API料金2割下げ、出力は最大30％高速化",
+      "body": "1本目。ITmedia AI+から、Anthropic、「Claude Fable 5.2」と「Claude Mythos 5.2」発表 API料金2割下げ、出力は最大30％高速化。Anthropicは、最上位AIモデルの新版「Claude Fable 5.2」および審査制の「Claude Mythos 5.2」を発表した。出力速度は最大30％向上し、API料金は2割値下げされている。長時間の複雑な推論やエージェント型コーディングに特化しており、同日より主要クラウドや各種アプリで提供が開始された。このニュースははてなブックマーク テクノロジーとITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "Anthropic、「Claude Fable 5.2」と「Claude Mythos 5.2」発表 API料金2割下げ、出力は最大30％高速化",
+          "url": "https://www.itmedia.co.jp/news/article/2611/10/2000003042/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-09T22:03:56.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー",
+            "ITmedia NEWS",
+            "CNET Japan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "ソフトバンク社長「自社システムをGPT-6 Astraで診断したら3.5万件の追加脆弱性を発見」と明かす",
+      "body": "2本目。はてなブックマーク テクノロジーから、ソフトバンク社長「自社システムをGPT-6 Astraで診断したら3.5万件の追加脆弱性を発見」と明かす。ソフトバンクの宮川潤一社長は11月9日の決算説明会で、子会社IDCフロンティアへのランサムウェア攻撃を謝罪し、AIを使ったサイバー攻撃への対応に追われている現状を明かした。自社システムを新しいAIモデルで再診断すると、新たに3万5000件の脆弱性が見つかったという。このニュースはCNET Japanでも同時に取り上げられています。それだけ注目度が高い話題です。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "ソフトバンク社長「自社システムをGPT-6 Astraで診断したら3.5万件の追加脆弱性を発見」と明かす",
+          "url": "https://japan.cnet.com/article/35254620/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-09T22:53:05.000Z",
+          "alsoReportedBy": [
+            "CNET Japan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Google、Kubernetesで10倍高密度にAIエージェントを実行可能にする「Agent Sustrate」と「gVisor」、オープンソースとしてCNCFに寄贈と発表",
+      "body": "3本目。Publickeyから、Google、Kubernetesで10倍高密度にAIエージェントを実行可能にする「Agent Sustrate」と「gVisor」、オープンソースとしてCNCFに寄贈と発表。Googleは、Kubernetes上にAIエージェントのための高効率な基盤を構築するためのオープンソースソフトウェア「Agent Substrate」と「gVisor」を、Linux Foundation傘下のCloud Native C...このニュースははてなブックマーク テクノロジーでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "Google、Kubernetesで10倍高密度にAIエージェントを実行可能にする「Agent Sustrate」と「gVisor」、オープンソースとしてCNCFに寄贈と発表",
+          "url": "https://www.publickey1.jp/blog/26/googlekubernetes10aiagent_sustrategvisorcncf.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-09T15:25:30.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "三井化学、JSRを1兆8400億円で買収 「国内トップクラスの半導体材料企業に」",
+      "body": "4本目。ITmedia NEWSから、三井化学、JSRを1兆8400億円で買収 「国内トップクラスの半導体材料企業に」。国内化学業界で過去最大規模のM＆Aとなる。このニュースはCNET Japanでも同時に取り上げられています。それだけ注目度が高い話題です。日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "三井化学、JSRを1兆8400億円で買収 「国内トップクラスの半導体材料企業に」",
+          "url": "https://www.itmedia.co.jp/news/article/2611/10/2000003045/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-10T00:28:51.000Z",
+          "alsoReportedBy": [
+            "CNET Japan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "ソフトバンク宮川社長、30万〜50万円のスマホは「もうコンピュータ」 低価格機も値上げの可能性",
+      "body": "5本目。CNET Japanから、ソフトバンク宮川社長、30万〜50万円のスマホは「もうコンピュータ」 低価格機も値上げの可能性。ソフトバンクの宮川潤一社長は11月9日の決算説明会で、30万〜50万円のスマートフォンについて「もう通信会社の端末の価格ではない。コンピュータだ」と述べた。メモリー価格の高騰が続くなか、来期以降はローエンド端末も値上げの方向になる可能性があるという。事業の話は、数字の背景にある意思決定を想像すると理解が深まります。",
+      "refs": [
+        {
+          "title": "ソフトバンク宮川社長、30万〜50万円のスマホは「もうコンピュータ」 低価格機も値上げの可能性",
+          "url": "https://japan.cnet.com/article/35254619/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-09T21:35:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。クラウドネイティブ、コンテナ、読み方はクラウドネイティブ、コンテナ。クラウド上で動かす前提で作られたシステムのことです。アプリを「コンテナ」という持ち運びやすい箱に入れ、必要な数だけ自動で増減させます。その箱を束ねる仕組みがKubernetesです。「オンプレからクラウドへ」という移行案件は国内にまだ大量にあります。DX文脈で必ず出てきます。次に、AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、SaaS、PaaS、IaaS、読み方はサース、パース、イアース。クラウドの提供範囲の違いです。SaaSは完成したソフトをそのまま使う形、PaaSはアプリを作る土台まで借りる形、IaaSはサーバーそのものを借りる形を指します。料理に例えるなら、SaaSは出来上がった定食、PaaSはキッチン付きの部屋、IaaSは更地です。最後に、API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。未経験からの転職で効くのは、知識の量より「業界の話題に自分の言葉で反応できること」です。毎朝5分の積み重ねが、そのまま面接の地力になります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。ITmedia AI+から、Meta、最小・低コストのAIモデル「Muse Ember」発表 「Muse Spark 1.3」に迫る性能を約17分の1のコストで。ITmedia AI+から、Google、第8世代TPUに「8tx」と「8i Max」を追加 機密データ処理と大規模AIエージェントに特化。TechCrunchから、Anthropic reportedly plans to move forward with IPO plans。Hacker News フロントページから、TPU 8tx and TPU 8i Max。TechCrunchから、Hotel giant Wyndham exposed customer data after app security lapse。TechCrunchから、Jensen Huang reportedly engaged a PR firm with a history of handling high-profile sex scandals a year ago。はてなブックマーク テクノロジーから、暴走は必要悪か、自由を謳歌するAI アンソロピックが気づいた｢感情｣ - 日本経済新聞。人工知能（AI）の暴走が止まらない。ITmedia NEWSから、「AI店長」、対人関係に苦戦 指摘が生かされずスタッフからの報告減少 PwCが“売店”で実験。PwCがAIに売店の経営判断を任せる実証実験を実施した。CNET Japanから、Instagram、AI年齢推定を世界に拡大 年齢を偽るティーンにも保護設定。SaaStrから、The New Normal in Revenue Per Employee: $237K Is the OldMedian, $655K Is the New Top Tier, and Six B2B Leaders Now Clear $1.5M。はてなブックマーク テクノロジーから、Krpano 360° の脆弱性 CVE-2020-24901 を悪用：検索結果を操作する大規模な XSS キャンペーン。CNET Japanから、Google検索の「AIモード」、日本で飲食店の空席検索に対応 複数サイトを横断。以上です。",
+      "refs": [
+        {
+          "title": "Meta、最小・低コストのAIモデル「Muse Ember」発表 「Muse Spark 1.3」に迫る性能を約17分の1のコストで",
+          "url": "https://www.itmedia.co.jp/news/article/2611/10/2000003044/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-10T00:06:40.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "Google、第8世代TPUに「8tx」と「8i Max」を追加 機密データ処理と大規模AIエージェントに特化",
+          "url": "https://www.itmedia.co.jp/news/article/2611/10/2000003043/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-09T22:26:48.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "Anthropic reportedly plans to move forward with IPO plans",
+          "url": "https://techcrunch.com/2026/11/09/anthropic-reportedly-plans-to-move-forward-with-ipo-plans/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-10T01:27:12.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "TPU 8tx and TPU 8i Max",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-09T21:56:57.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Hotel giant Wyndham exposed customer data after app security lapse",
+          "url": "https://techcrunch.com/2026/11/09/hotel-giant-wyndham-exposed-customer-data-after-app-security-lapse/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-09T23:03:46.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Jensen Huang reportedly engaged a PR firm with a history of handling high-profile sex scandals a year ago",
+          "url": "https://techcrunch.com/2026/11/09/jensen-huang-reportedly-engaged-a-pr-firm-with-a-history-of-handling-high-profile-sex-scandals-a-year-ago/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-09T23:28:37.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "暴走は必要悪か、自由を謳歌するAI アンソロピックが気づいた｢感情｣ - 日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOGN151Q50V11C26A0000000/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-09T22:45:22.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「AI店長」、対人関係に苦戦 指摘が生かされずスタッフからの報告減少 PwCが“売店”で実験",
+          "url": "https://www.itmedia.co.jp/news/article/2611/10/2000003040/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-09T23:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Instagram、AI年齢推定を世界に拡大 年齢を偽るティーンにも保護設定",
+          "url": "https://japan.cnet.com/article/35254636/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-10T01:40:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "The New Normal in Revenue Per Employee: $237K Is the OldMedian, $655K Is the New Top Tier, and Six B2B Leaders Now Clear $1.5M",
+          "url": "https://www.saastr.com/the-new-normal-in-revenue-per-employee-237k-is-the-median-655k-is-the-top-tier-and-six-b2b-leaders-now-clear-1-5m/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-09T15:00:02.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Krpano 360° の脆弱性 CVE-2020-24901 を悪用：検索結果を操作する大規模な XSS キャンペーン",
+          "url": "https://iototsecnews.jp/2025/02/28/over-350-high-profile-websites-hit-by-360xss-attack/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-09T18:48:54.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Google検索の「AIモード」、日本で飲食店の空席検索に対応 複数サイトを横断",
+          "url": "https://japan.cnet.com/article/35254622/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-09T23:30:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "Anthropic、「Claude Fable 5.2」と「Claude Mythos 5.2」発表 API料金2割下げ、出力は最大30％高速化",
+        "url": "https://www.itmedia.co.jp/news/article/2611/10/2000003042/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-09T22:03:56.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー",
+          "ITmedia NEWS",
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "ソフトバンク社長「自社システムをGPT-6 Astraで診断したら3.5万件の追加脆弱性を発見」と明かす",
+        "url": "https://japan.cnet.com/article/35254620/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-09T22:53:05.000Z",
+        "alsoReportedBy": [
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "Google、Kubernetesで10倍高密度にAIエージェントを実行可能にする「Agent Sustrate」と「gVisor」、オープンソースとしてCNCFに寄贈と発表",
+        "url": "https://www.publickey1.jp/blog/26/googlekubernetes10aiagent_sustrategvisorcncf.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-09T15:25:30.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "三井化学、JSRを1兆8400億円で買収 「国内トップクラスの半導体材料企業に」",
+        "url": "https://www.itmedia.co.jp/news/article/2611/10/2000003045/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-10T00:28:51.000Z",
+        "alsoReportedBy": [
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "ソフトバンク宮川社長、30万〜50万円のスマホは「もうコンピュータ」 低価格機も値上げの可能性",
+        "url": "https://japan.cnet.com/article/35254619/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-09T21:35:00.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Meta、最小・低コストのAIモデル「Muse Ember」発表 「Muse Spark 1.3」に迫る性能を約17分の1のコストで",
+        "url": "https://www.itmedia.co.jp/news/article/2611/10/2000003044/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-10T00:06:40.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Google、第8世代TPUに「8tx」と「8i Max」を追加 機密データ処理と大規模AIエージェントに特化",
+        "url": "https://www.itmedia.co.jp/news/article/2611/10/2000003043/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-09T22:26:48.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Anthropic reportedly plans to move forward with IPO plans",
+        "url": "https://techcrunch.com/2026/11/09/anthropic-reportedly-plans-to-move-forward-with-ipo-plans/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-10T01:27:12.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "TPU 8tx and TPU 8i Max",
+        "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-09T21:56:57.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Hotel giant Wyndham exposed customer data after app security lapse",
+        "url": "https://techcrunch.com/2026/11/09/hotel-giant-wyndham-exposed-customer-data-after-app-security-lapse/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-09T23:03:46.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Jensen Huang reportedly engaged a PR firm with a history of handling high-profile sex scandals a year ago",
+        "url": "https://techcrunch.com/2026/11/09/jensen-huang-reportedly-engaged-a-pr-firm-with-a-history-of-handling-high-profile-sex-scandals-a-year-ago/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-09T23:28:37.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "暴走は必要悪か、自由を謳歌するAI アンソロピックが気づいた｢感情｣ - 日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZQOGN151Q50V11C26A0000000/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-09T22:45:22.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「AI店長」、対人関係に苦戦 指摘が生かされずスタッフからの報告減少 PwCが“売店”で実験",
+        "url": "https://www.itmedia.co.jp/news/article/2611/10/2000003040/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-09T23:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Instagram、AI年齢推定を世界に拡大 年齢を偽るティーンにも保護設定",
+        "url": "https://japan.cnet.com/article/35254636/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-10T01:40:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "The New Normal in Revenue Per Employee: $237K Is the OldMedian, $655K Is the New Top Tier, and Six B2B Leaders Now Clear $1.5M",
+        "url": "https://www.saastr.com/the-new-normal-in-revenue-per-employee-237k-is-the-median-655k-is-the-top-tier-and-six-b2b-leaders-now-clear-1-5m/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-09T15:00:02.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Krpano 360° の脆弱性 CVE-2020-24901 を悪用：検索結果を操作する大規模な XSS キャンペーン",
+        "url": "https://iototsecnews.jp/2025/02/28/over-350-high-profile-websites-hit-by-360xss-attack/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-09T18:48:54.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Google検索の「AIモード」、日本で飲食店の空席検索に対応 複数サイトを横断",
+        "url": "https://japan.cnet.com/article/35254622/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-09T23:30:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "cloud-native",
+      "term": "クラウドネイティブ / コンテナ",
+      "reading": "クラウドネイティブ、コンテナ",
+      "category": "クラウド",
+      "level": 2,
+      "definition": "クラウド上で動かす前提で作られたシステムのことです。アプリを「コンテナ」という持ち運びやすい箱に入れ、必要な数だけ自動で増減させます。その箱を束ねる仕組みがKubernetesです。",
+      "interview": "「オンプレからクラウドへ」という移行案件は国内にまだ大量にあります。DX文脈で必ず出てきます。"
+    },
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "saas-paas-iaas",
+      "term": "SaaS / PaaS / IaaS",
+      "reading": "サース、パース、イアース",
+      "category": "クラウド",
+      "level": 1,
+      "definition": "クラウドの提供範囲の違いです。SaaSは完成したソフトをそのまま使う形、PaaSはアプリを作る土台まで借りる形、IaaSはサーバーそのものを借りる形を指します。",
+      "interview": "料理に例えるなら、SaaSは出来上がった定食、PaaSはキッチン付きの部屋、IaaSは更地です。"
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 679
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 194
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 852
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 770
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 679
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 398
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1621
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 772
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 431
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 480
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 3236
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 683
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 190,
+    "eligible": 125
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}
