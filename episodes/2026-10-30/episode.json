@@ -1,0 +1,611 @@
+{
+  "id": "2026-10-30",
+  "createdAt": "2026-10-30T23:04:47.623Z",
+  "dateLabel": "10月30日（金）",
+  "durationMin": 10,
+  "estimatedMinutes": 9.4,
+  "generator": "template",
+  "title": "10月30日（金） GMOがサイバー攻撃情報に異例の1.5億円懸賞金、AI時代の新防衛策となるのか ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月30日（金）のテックニュースをお届けします。今日の見出しは5本です。1つ目、GMOがサイバー攻撃情報に異例の1.5億円懸賞金、AI時代の新防衛策となるのか。2つ目、世界のメモリー大手、営業利益が初の米テック超え AI需要が急増 - 日本経済新聞。3つ目、グーグルのAI半導体、宇宙での動作を確認 「俳句」を生成したと発表。4つ目、Binanceの約1兆円流出、北朝鮮ハッカー集団「TraderTraitor」の犯行か。5つ目、Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, FT report says。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "GMOがサイバー攻撃情報に異例の1.5億円懸賞金、AI時代の新防衛策となるのか",
+      "body": "1本目。ITmedia AI+から、GMOがサイバー攻撃情報に異例の1.5億円懸賞金、AI時代の新防衛策となるのか。2026年10月26～30日に公開された記事の中から、MONOist編集部が厳選した今週の注目ニュースをお届けします。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "GMOがサイバー攻撃情報に異例の1.5億円懸賞金、AI時代の新防衛策となるのか",
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2610/31/news013.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-30T22:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "世界のメモリー大手、営業利益が初の米テック超え AI需要が急増 - 日本経済新聞",
+      "body": "2本目。はてなブックマーク テクノロジーから、世界のメモリー大手、営業利益が初の米テック超え AI需要が急増 - 日本経済新聞。米テック大手の巨額の人工知能（AI）投資により半導体企業の業績が急拡大している。世界のメモリー5社の2026年7〜9月期の営業利益と純利益は初めてテック大手を上回った。供給力を超えるメモリー需要の伸びが背景にある。メモリー各社は業績の先行きに強気な見方を示すが、利益の源泉であるテックの投資余力に対して市場...AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "世界のメモリー大手、営業利益が初の米テック超え AI需要が急増 - 日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOUB29BWD0Z21C26A0000000/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-30T17:14:52.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "グーグルのAI半導体、宇宙での動作を確認 「俳句」を生成したと発表",
+      "body": "3本目。CNET Japanから、グーグルのAI半導体、宇宙での動作を確認 「俳句」を生成したと発表。グーグルは10月30日、試作衛星に搭載したAI半導体「TPU」で生成AIを動かし、宇宙を題材にした俳句を生成したと発表した。宇宙でAIの計算基盤を構築する研究「Project Suncatcher」の一環で、データセンター向けTPUを使って軌道上でAIの応答を得たのは初めてという。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "グーグルのAI半導体、宇宙での動作を確認 「俳句」を生成したと発表",
+          "url": "https://japan.cnet.com/article/35254241/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-30T22:30:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "Binanceの約1兆円流出、北朝鮮ハッカー集団「TraderTraitor」の犯行か",
+      "body": "4本目。ITmedia NEWSから、Binanceの約1兆円流出、北朝鮮ハッカー集団「TraderTraitor」の犯行か。Binanceから約60億ドルの暗号資産が流出した事件で、TRM LabsとChainalysisは北朝鮮のサイバー集団「TraderTraitor」の関与を指摘した。過去最大規模の被害に対し、盗難資産の分散洗浄が進む一方、当局や発行元による迅速な資産凍結も進められている。日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "Binanceの約1兆円流出、北朝鮮ハッカー集団「TraderTraitor」の犯行か",
+          "url": "https://www.itmedia.co.jp/news/article/2610/31/2000002775/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-30T22:13:43.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, FT report says",
+      "body": "5本目。TechCrunchから、Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, FT report says。資金調達のニュースは、その会社が次の1、2年で採用を増やすサインでもあります。転職先候補として覚えておく価値があります。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, FT report says",
+          "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-30T21:52:03.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。LLM、大規模言語モデル、読み方はエルエルエム。大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。次に、AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。最後に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。求人票を見るときは、事業フェーズを先に確認してみてください。資金調達直後なのか、黒字化を目指している段階なのかで、求められる動き方がまるで違います。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Cracks are emerging in the AI spending boom。TechCrunchから、Ollie, a privacy-focused AI assistant, is shutting down。ITmedia AI+から、AIエージェントは「実運用」が主流に 「明確な成果」を得る企業の共通点は？ITmedia AI+から、Gemini Notebook、無料で数百冊の教科書にアクセス可能に 米国・インドの出版社提供 日本でも利用可。SaaStrから、The B2B Category the Markets “Hate” the Most Today: GTM。Hacker News フロントページから、Linode Security Incident。CNET Japanから、Xiaomi Smart Band 11、11月4日発売 7980円、睡眠の改善策を提案。Hacker News フロントページから、Sanstun: A sans-IO, parallel-friendly WireGuard implementation in Rust。はてなブックマーク テクノロジーから、Spotify、AIでカバー曲作成可能に 収益は原曲アーティストに還元 - 日本経済新聞。Hacker News フロントページから、The oldest ice disappears and the Stone Age emerges from it。はてなブックマーク テクノロジーから、文章のAIっぽさを抑えるプロンプト。CNET Japanから、トヨタ「bZ4X」が自動運転タクシーに Waymoと2027年に日本で試験へ。以上です。",
+      "refs": [
+        {
+          "title": "Cracks are emerging in the AI spending boom",
+          "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-30T21:17:40.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Ollie, a privacy-focused AI assistant, is shutting down",
+          "url": "https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-30T22:56:13.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AIエージェントは「実運用」が主流に 「明確な成果」を得る企業の共通点は？",
+          "url": "https://www.itmedia.co.jp/enterprise/articles/2610/31/news008.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-30T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Gemini Notebook、無料で数百冊の教科書にアクセス可能に 米国・インドの出版社提供 日本でも利用可",
+          "url": "https://www.itmedia.co.jp/aiplus/article/2610/30/2000002760/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-30T08:17:55.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        },
+        {
+          "title": "The B2B Category the Markets “Hate” the Most Today: GTM",
+          "url": "https://www.saastr.com/the-b2b-category-the-markets-hate-the-most-today-gtm/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-30T14:10:47.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Linode Security Incident",
+          "url": "https://status.linode.com/incidents/nt58zhx3pmgm",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-30T21:57:40.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        },
+        {
+          "title": "Xiaomi Smart Band 11、11月4日発売 7980円、睡眠の改善策を提案",
+          "url": "https://japan.cnet.com/article/35254215/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-30T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Sanstun: A sans-IO, parallel-friendly WireGuard implementation in Rust",
+          "url": "https://www.firezone.dev/blog/introducing-sanstun",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-30T21:30:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Spotify、AIでカバー曲作成可能に 収益は原曲アーティストに還元 - 日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOGR308WY0Q6A031C2000000/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-30T12:18:50.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "The oldest ice disappears and the Stone Age emerges from it",
+          "url": "https://www.sciencenorway.no/archaeology-climate-culture/the-oldest-ice-is-disappearing-the-stone-age-is-emerging-from-the-melting-ice/2713921",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-30T19:51:33.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "文章のAIっぽさを抑えるプロンプト",
+          "url": "https://imoz.jp/scraps/202610_humanizer.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-30T14:00:14.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "トヨタ「bZ4X」が自動運転タクシーに Waymoと2027年に日本で試験へ",
+          "url": "https://japan.cnet.com/article/35254242/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-30T22:10:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "GMOがサイバー攻撃情報に異例の1.5億円懸賞金、AI時代の新防衛策となるのか",
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2610/31/news013.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-30T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "世界のメモリー大手、営業利益が初の米テック超え AI需要が急増 - 日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZQOUB29BWD0Z21C26A0000000/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-30T17:14:52.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "グーグルのAI半導体、宇宙での動作を確認 「俳句」を生成したと発表",
+        "url": "https://japan.cnet.com/article/35254241/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-30T22:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Binanceの約1兆円流出、北朝鮮ハッカー集団「TraderTraitor」の犯行か",
+        "url": "https://www.itmedia.co.jp/news/article/2610/31/2000002775/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-30T22:13:43.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, FT report says",
+        "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-30T21:52:03.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Cracks are emerging in the AI spending boom",
+        "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-30T21:17:40.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Ollie, a privacy-focused AI assistant, is shutting down",
+        "url": "https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-30T22:56:13.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AIエージェントは「実運用」が主流に 「明確な成果」を得る企業の共通点は？",
+        "url": "https://www.itmedia.co.jp/enterprise/articles/2610/31/news008.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-30T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Gemini Notebook、無料で数百冊の教科書にアクセス可能に 米国・インドの出版社提供 日本でも利用可",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2610/30/2000002760/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-30T08:17:55.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "The B2B Category the Markets “Hate” the Most Today: GTM",
+        "url": "https://www.saastr.com/the-b2b-category-the-markets-hate-the-most-today-gtm/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-30T14:10:47.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Linode Security Incident",
+        "url": "https://status.linode.com/incidents/nt58zhx3pmgm",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-30T21:57:40.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "Xiaomi Smart Band 11、11月4日発売 7980円、睡眠の改善策を提案",
+        "url": "https://japan.cnet.com/article/35254215/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-30T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Sanstun: A sans-IO, parallel-friendly WireGuard implementation in Rust",
+        "url": "https://www.firezone.dev/blog/introducing-sanstun",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-30T21:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Spotify、AIでカバー曲作成可能に 収益は原曲アーティストに還元 - 日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZQOGR308WY0Q6A031C2000000/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-30T12:18:50.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "The oldest ice disappears and the Stone Age emerges from it",
+        "url": "https://www.sciencenorway.no/archaeology-climate-culture/the-oldest-ice-is-disappearing-the-stone-age-is-emerging-from-the-melting-ice/2713921",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-30T19:51:33.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "文章のAIっぽさを抑えるプロンプト",
+        "url": "https://imoz.jp/scraps/202610_humanizer.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-30T14:00:14.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "トヨタ「bZ4X」が自動運転タクシーに Waymoと2027年に日本で試験へ",
+        "url": "https://japan.cnet.com/article/35254242/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-30T22:10:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "llm",
+      "term": "LLM（大規模言語モデル）",
+      "reading": "エルエルエム",
+      "category": "AI",
+      "level": 1,
+      "definition": "大量の文章を学習して、次に来る言葉を予測するモデルです。ChatGPTやClaudeの中身にあたります。",
+      "interview": "「AIを使っています」だけでは差別化になりません。何の業務のどこに効いたかまで話せると強いです。"
+    },
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 496
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 234
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 772
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 649
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 600
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 401
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1875
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 680
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 498
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 514
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1849
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 652
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 198,
+    "eligible": 121
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 54.39
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "GMOがサイバー攻撃情報に異例の1.5億円懸賞金、AI時代の新防衛策となるのか",
+      "startSec": 54.39,
+      "endSec": 82.84
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "世界のメモリー大手、営業利益が初の米テック超え AI需要が急増 - 日本経済新聞",
+      "startSec": 82.84,
+      "endSec": 131.1
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "グーグルのAI半導体、宇宙での動作を確認 「俳句」を生成したと発表",
+      "startSec": 131.1,
+      "endSec": 175.11
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "Binanceの約1兆円流出、北朝鮮ハッカー集団「TraderTraitor」の犯行か",
+      "startSec": 175.11,
+      "endSec": 213.81
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, FT report says",
+      "startSec": 213.81,
+      "endSec": 244.07
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 244.07,
+      "endSec": 353.81
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 353.81,
+      "endSec": 368
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 368,
+      "endSec": 477
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 477,
+      "endSec": 487.48
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 23398956,
+    "durationSec": 487.48
+  }
+}

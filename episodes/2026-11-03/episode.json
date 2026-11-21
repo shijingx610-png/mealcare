@@ -1,0 +1,621 @@
+{
+  "id": "2026-11-03",
+  "createdAt": "2026-11-03T01:42:57.808Z",
+  "dateLabel": "11月3日（火）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.7,
+  "generator": "template",
+  "title": "11月3日（火） Anthropic、IPO申請書を修正 7?9月売上高は約170億ドル、インフラ契約額は約8954億ドル ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月3日（火）のテックニュースをお届けします。今日の見出しは5本です。1つ目、Anthropic、IPO申請書を修正 7?9月売上高は約170億ドル、インフラ契約額は約8954億ドル。2つ目、Apple、第4四半期として過去最高の増収増益 ターナスCEO初の決算「Siri AIはずっと望んでいたSiri」。3つ目、Meta Quest 2／Pro、新機能追加は2027年3月で終了 セキュリティ更新は27年末まで。4つ目、ノジマオンラインにて約700万人分の情報流出。氏名、住所、電話番号、ログインID・パスワードなど（GAME Watch） - Yahoo!ニュース。5つ目、Trajectory raises $45M to make AI model training accessible to nontechnical experts。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Anthropic、IPO申請書を修正 7?9月売上高は約170億ドル、インフラ契約額は約8954億ドル",
+      "body": "1本目。ITmedia AI+から、Anthropic、IPO申請書を修正 7?9月売上高は約170億ドル、インフラ契約額は約8954億ドル。Anthropicは、証券取引委員会（SEC）にIPOに向けた登録届出書の修正版を提出した。第3四半期の売上高は前年同期比約12.3倍の約169億ドルに拡大した一方、営業損益は赤字に転落。また、AI計算資源やインフラに関する将来の支出約束額が約8954億ドルに上ることも明らかにした。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "Anthropic、IPO申請書を修正 7?9月売上高は約170億ドル、インフラ契約額は約8954億ドル",
+          "url": "https://www.itmedia.co.jp/news/article/2611/03/2000002831/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-02T23:20:20.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Apple、第4四半期として過去最高の増収増益 ターナスCEO初の決算「Siri AIはずっと望んでいたSiri」",
+      "body": "2本目。ITmedia NEWSから、Apple、第4四半期として過去最高の増収増益 ターナスCEO初の決算「Siri AIはずっと望んでいたSiri」。Appleの7月?9月期決算は、売上高が前年同期比12％増、純利益も12％増となり、共に同四半期の過去最高を記録した。通期でも過去最高を更新した。新CEOのジョン・ターナス氏による初の会見で、折りたたみ型「iPhone Duo」やAI戦略「Siri AI」の進捗を報告。次期も増収を見込む。ビジネスモデルの変化は、そこで働く人の職種構成の変化とほぼ同義です。",
+      "refs": [
+        {
+          "title": "Apple、第4四半期として過去最高の増収増益 ターナスCEO初の決算「Siri AIはずっと望んでいたSiri」",
+          "url": "https://www.itmedia.co.jp/news/article/2611/03/2000002840/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-03T00:44:48.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Meta Quest 2／Pro、新機能追加は2027年3月で終了 セキュリティ更新は27年末まで",
+      "body": "3本目。CNET Japanから、Meta Quest 2／Pro、新機能追加は2027年3月で終了 セキュリティ更新は27年末まで。Metaは11月3日、VRヘッドセット「Meta Quest 2」と「Meta Quest Pro」の新機能を追加するOS更新を、2027年3月までに全端末に配信する最終版をもって終了すると発表した。セキュリティ更新と重大な不具合の修正は2027年末まで続け、購入済みのアプリやゲームも引き続き利用できるとしている。新機能のニュースは、競合がどこを脅威だと思っているかの裏返しでもあります。",
+      "refs": [
+        {
+          "title": "Meta Quest 2／Pro、新機能追加は2027年3月で終了 セキュリティ更新は27年末まで",
+          "url": "https://japan.cnet.com/article/35254299/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-03T01:10:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "ノジマオンラインにて約700万人分の情報流出。氏名、住所、電話番号、ログインID・パスワードなど（GAME Watch） - Yahoo!ニュース",
+      "body": "4本目。はてなブックマーク テクノロジーから、ノジマオンラインにて約700万人分の情報流出。氏名、住所、電話番号、ログインID・パスワードなど（GAME Watch） - Yahoo!ニュース。写真：GAME Watch（株式会社インプレス） ノジマは、同社ECサイト「ノジマオンライン」における不正アクセスに伴う個人情報漏えいに関するお知らせを公開した。 同社は、11月1日に発生した「ノジマオンライン」の会員管理システムに対する第三者による不正アクセスによって、同サイト及び中古スマホ買取サイトに登録さ...事故のニュースは、裏返すと「何を備えていれば防げたか」の教材になります。",
+      "refs": [
+        {
+          "title": "ノジマオンラインにて約700万人分の情報流出。氏名、住所、電話番号、ログインID・パスワードなど（GAME Watch） - Yahoo!ニュース",
+          "url": "https://news.yahoo.co.jp/articles/743e16ce8d8b3f48908d0248d48f4d15c913b90e",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-02T14:12:40.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Trajectory raises $45M to make AI model training accessible to nontechnical experts",
+      "body": "5本目。TechCrunchから、Trajectory raises $45M to make AI model training accessible to nontechnical experts。スタートアップの動きは、業界がこれから向かう方向の先行指標になります。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Trajectory raises $45M to make AI model training accessible to nontechnical experts",
+          "url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-02T23:13:53.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。最後に、チャーンレート、読み方はチャーンレート。解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。カジュアル面談では、今日のニュースを一つ持っていくだけで会話が動きます。「これ見たんですが、御社ではどう捉えていますか」は、準備している人にしか出せない質問です。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。ITmedia AI+から、Marvell、光通信技術のLumentumを約18兆円で買収 AIデータセンターの高速化に対応。Google AI ブログから、The latest AI news we announced in October 2026。TechCrunchから、Ukraine’s new pocket-sized gadget turns Russian drones’ cameras against them。TechCrunchから、Y Combinator’s Garry Tan uses AI agents so much, he spends up to $200K a year on tokens。Hacker News フロントページから、WorkOS reports security breach。Hacker News フロントページから、The SEC Should Block Anthropic's IPO to Protect the Public。CNET Japanから、エリクソンら、標準化前の「6G」を実演 ドローン追跡も。Hacker News フロントページから、Intel stock collapse worsens as $3.5T chip rout spreads。CNET Japanから、あなたのAndroid TV端末が「詐欺広告の道具」に？ 中国メーカーが不正ソフトを仕込んで販売 Googleが取引停止。SaaStrから、When Growth Slows, Folks Start Wanting to Do the Crappy Things. Fight It.はてなブックマーク テクノロジーから、楽天証券、顧客情報362件が漏えいか NTTデータ委託先に不正アクセス。はてなブックマーク テクノロジーから、冷凍庫にサイバー攻撃、食品溶け大量廃棄 欧州各地のスーパー - 日本経済新聞。以上です。",
+      "refs": [
+        {
+          "title": "Marvell、光通信技術のLumentumを約18兆円で買収 AIデータセンターの高速化に対応",
+          "url": "https://www.itmedia.co.jp/news/article/2611/03/2000002830/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-02T22:07:56.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "The latest AI news we announced in October 2026",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+          "sourceName": "Google AI ブログ",
+          "publishedAt": "2026-11-02T17:45:00.000Z",
+          "alsoReportedBy": [
+            "Google AI ブログ"
+          ]
+        },
+        {
+          "title": "Ukraine’s new pocket-sized gadget turns Russian drones’ cameras against them",
+          "url": "https://techcrunch.com/2026/11/02/ukraines-new-pocket-sized-gadget-turns-russian-drones-cameras-against-them/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-03T01:12:55.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Y Combinator’s Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
+          "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-03T00:35:52.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "WorkOS reports security breach",
+          "url": "https://news.ycombinator.com/item?id=50345712",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-02T23:30:59.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "The SEC Should Block Anthropic's IPO to Protect the Public",
+          "url": "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-02T22:30:47.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "エリクソンら、標準化前の「6G」を実演 ドローン追跡も",
+          "url": "https://japan.cnet.com/article/35254303/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-03T00:55:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Intel stock collapse worsens as $3.5T chip rout spreads",
+          "url": "https://finance.yahoo.com/markets/article/the-intel-stock-collapse-is-getting-worse--and-the-37-trillion-chip-rout-is-spreading-212154947.html",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-03T00:08:53.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "あなたのAndroid TV端末が「詐欺広告の道具」に？ 中国メーカーが不正ソフトを仕込んで販売 Googleが取引停止",
+          "url": "https://japan.cnet.com/article/35254298/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-02T23:10:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "When Growth Slows, Folks Start Wanting to Do the Crappy Things. Fight It.",
+          "url": "https://www.saastr.com/when-growth-slows-folks-start-wanting-to-do-the-crappy-things-fight-it/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-02T13:27:44.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "楽天証券、顧客情報362件が漏えいか NTTデータ委託先に不正アクセス",
+          "url": "https://www.itmedia.co.jp/news/article/2611/02/2000002785/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-02T03:53:35.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS",
+            "CNET Japan"
+          ]
+        },
+        {
+          "title": "冷凍庫にサイバー攻撃、食品溶け大量廃棄 欧州各地のスーパー - 日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOGN02B1R0S6A101C2000000/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-02T23:12:33.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "Anthropic、IPO申請書を修正 7?9月売上高は約170億ドル、インフラ契約額は約8954億ドル",
+        "url": "https://www.itmedia.co.jp/news/article/2611/03/2000002831/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-02T23:20:20.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Apple、第4四半期として過去最高の増収増益 ターナスCEO初の決算「Siri AIはずっと望んでいたSiri」",
+        "url": "https://www.itmedia.co.jp/news/article/2611/03/2000002840/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-03T00:44:48.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Meta Quest 2／Pro、新機能追加は2027年3月で終了 セキュリティ更新は27年末まで",
+        "url": "https://japan.cnet.com/article/35254299/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-03T01:10:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ノジマオンラインにて約700万人分の情報流出。氏名、住所、電話番号、ログインID・パスワードなど（GAME Watch） - Yahoo!ニュース",
+        "url": "https://news.yahoo.co.jp/articles/743e16ce8d8b3f48908d0248d48f4d15c913b90e",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-02T14:12:40.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Trajectory raises $45M to make AI model training accessible to nontechnical experts",
+        "url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-02T23:13:53.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Marvell、光通信技術のLumentumを約18兆円で買収 AIデータセンターの高速化に対応",
+        "url": "https://www.itmedia.co.jp/news/article/2611/03/2000002830/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-02T22:07:56.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "The latest AI news we announced in October 2026",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+        "sourceName": "Google AI ブログ",
+        "publishedAt": "2026-11-02T17:45:00.000Z",
+        "alsoReportedBy": [
+          "Google AI ブログ"
+        ]
+      },
+      {
+        "title": "Ukraine’s new pocket-sized gadget turns Russian drones’ cameras against them",
+        "url": "https://techcrunch.com/2026/11/02/ukraines-new-pocket-sized-gadget-turns-russian-drones-cameras-against-them/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-03T01:12:55.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Y Combinator’s Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
+        "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-03T00:35:52.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "WorkOS reports security breach",
+        "url": "https://news.ycombinator.com/item?id=50345712",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-02T23:30:59.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "The SEC Should Block Anthropic's IPO to Protect the Public",
+        "url": "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-02T22:30:47.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "エリクソンら、標準化前の「6G」を実演 ドローン追跡も",
+        "url": "https://japan.cnet.com/article/35254303/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-03T00:55:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Intel stock collapse worsens as $3.5T chip rout spreads",
+        "url": "https://finance.yahoo.com/markets/article/the-intel-stock-collapse-is-getting-worse--and-the-37-trillion-chip-rout-is-spreading-212154947.html",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-03T00:08:53.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "あなたのAndroid TV端末が「詐欺広告の道具」に？ 中国メーカーが不正ソフトを仕込んで販売 Googleが取引停止",
+        "url": "https://japan.cnet.com/article/35254298/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-02T23:10:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "When Growth Slows, Folks Start Wanting to Do the Crappy Things. Fight It.",
+        "url": "https://www.saastr.com/when-growth-slows-folks-start-wanting-to-do-the-crappy-things-fight-it/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-02T13:27:44.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "楽天証券、顧客情報362件が漏えいか NTTデータ委託先に不正アクセス",
+        "url": "https://www.itmedia.co.jp/news/article/2611/02/2000002785/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-02T03:53:35.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS",
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "冷凍庫にサイバー攻撃、食品溶け大量廃棄 欧州各地のスーパー - 日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZQOGN02B1R0S6A101C2000000/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-02T23:12:33.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    },
+    {
+      "id": "churn",
+      "term": "チャーンレート",
+      "reading": "チャーンレート",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。",
+      "interview": "「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 760
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 244
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 482
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 482
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 760
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 372
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1476
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 452
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 261
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 265
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 321
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 339
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 191,
+    "eligible": 101
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 64.68
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Anthropic、IPO申請書を修正 7?9月売上高は約170億ドル、インフラ契約額は約8954億ドル",
+      "startSec": 64.68,
+      "endSec": 123.84
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Apple、第4四半期として過去最高の増収増益 ターナスCEO初の決算「Siri AIはずっと望んでいたSiri」",
+      "startSec": 123.84,
+      "endSec": 169.64
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Meta Quest 2／Pro、新機能追加は2027年3月で終了 セキュリティ更新は27年末まで",
+      "startSec": 169.64,
+      "endSec": 214.85
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "ノジマオンラインにて約700万人分の情報流出。氏名、住所、電話番号、ログインID・パスワードなど（GAME Watch） - Yahoo!ニュース",
+      "startSec": 214.85,
+      "endSec": 263.5
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Trajectory raises $45M to make AI model training accessible to nontechnical experts",
+      "startSec": 263.5,
+      "endSec": 295.98
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 295.98,
+      "endSec": 406.19
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 406.19,
+      "endSec": 420.54
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 420.54,
+      "endSec": 536.67
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 536.67,
+      "endSec": 547.15
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 26263084,
+    "durationSec": 547.15
+  }
+}

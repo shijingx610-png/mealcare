@@ -1,0 +1,541 @@
+{
+  "id": "2026-11-21",
+  "createdAt": "2026-11-21T00:54:14.827Z",
+  "dateLabel": "11月21日（土）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.8,
+  "generator": "template",
+  "title": "11月21日（土） AIで成果を出す企業ほど「人を増やす」？ “通説”を否定する調査結果をIDCが発表 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月21日（土）のテックニュースをお届けします。今日の見出しは5本です。1つ目、AIで成果を出す企業ほど「人を増やす」？ “通説”を否定する調査結果をIDCが発表。2つ目、Claudeを使い「リーマン予想」を証明か Anthropic数学者が発表 Lean検証も通過、数学界が精査へ。3つ目、モダンな情シスは、AIエージェントを育て、任せ、圧倒的な生産性を生む｜kajinari | モダンな情シス。4つ目、デジ庁、政府機関向けファイル共有サービスで漏えいか 7月末から第三者がアクセス。5つ目、Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "AIで成果を出す企業ほど「人を増やす」？ “通説”を否定する調査結果をIDCが発表",
+      "body": "1本目。ITmedia AI+から、AIで成果を出す企業ほど「人を増やす」？ “通説”を否定する調査結果をIDCが発表。「AIが普及すれば企業の人員は減る」という通説と食い違う調査結果を、IDCが発表した。AI投資で高いROIを得ている組織ほど、今後の増員を見込む割合が高い。AIで成果を出す企業が人員を増やすのはなぜか。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "AIで成果を出す企業ほど「人を増やす」？ “通説”を否定する調査結果をIDCが発表",
+          "url": "https://www.itmedia.co.jp/enterprise/articles/2611/21/news003.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-21T00:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Claudeを使い「リーマン予想」を証明か Anthropic数学者が発表 Lean検証も通過、数学界が精査へ",
+      "body": "2本目。CNET Japanから、Claudeを使い「リーマン予想」を証明か Anthropic数学者が発表 Lean検証も通過、数学界が精査へ。米アンソロピックの数学者Levent Alpöge氏は11月20日、生成AI「Claude」と研究を進め、素数の分布に関わる難問「リーマン予想」の証明を見つけたとする声明を個人サイトで公開した。米マサチューセッツ工科大学（MIT）の研究者は、公開された証明コードが機械検証を通過したと報告した。追加の検証も続いている。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "Claudeを使い「リーマン予想」を証明か Anthropic数学者が発表 Lean検証も通過、数学界が精査へ",
+          "url": "https://japan.cnet.com/article/35255245/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-20T22:48:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "モダンな情シスは、AIエージェントを育て、任せ、圧倒的な生産性を生む｜kajinari | モダンな情シス",
+      "body": "3本目。はてなブックマーク テクノロジーから、モダンな情シスは、AIエージェントを育て、任せ、圧倒的な生産性を生む｜kajinari | モダンな情シス。おはようございます！こんにちは！おやすみなさい！NOTA で Corp IT（情シス）を担当している kajinari です。 この 1 年で、Corp IT の日々の運用作業のほとんどを Claude の Skill として定義しました。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "モダンな情シスは、AIエージェントを育て、任せ、圧倒的な生産性を生む｜kajinari | モダンな情シス",
+          "url": "https://note.com/kajinari/n/n19c73d819b14",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-20T15:27:05.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "デジ庁、政府機関向けファイル共有サービスで漏えいか 7月末から第三者がアクセス",
+      "body": "4本目。ITmedia NEWSから、デジ庁、政府機関向けファイル共有サービスで漏えいか 7月末から第三者がアクセス。デジタル庁は11月20日、政府共通の業務環境「GSS」のファイル共有サービスで、ファイルの一部が外部に漏えいした可能性があると発表した。7月30日から11月12日までの間、正規の共有相手先以外の者によるアクセスがあったことを確認したという。個人情報が含まれることも想定されるとして、個人情報保護委員会に報告した。プロダクトの変化は、ユーザーの不満がどこにあったかを教えてくれます。",
+      "refs": [
+        {
+          "title": "デジ庁、政府機関向けファイル共有サービスで漏えいか 7月末から第三者がアクセス",
+          "url": "https://www.itmedia.co.jp/news/article/2611/20/2000003381/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-20T12:18:07.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.",
+      "body": "5本目。TechCrunchから、Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.スタートアップの動きは、業界がこれから向かう方向の先行指標になります。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.",
+          "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-20T19:53:41.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。最後に、チャーンレート、読み方はチャーンレート。解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。カジュアル面談では、今日のニュースを一つ持っていくだけで会話が動きます。「これ見たんですが、御社ではどう捉えていますか」は、準備している人にしか出せない質問です。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。ITmedia AI+から、Microsoft、AIによるサイバー攻撃にAIエージェントで対抗する新サービス「Microsoft Perception」提供開始。TechCrunchから、Experts warn: Nearly everyone in AI is susceptible to a honey-trap scheme right now。Hacker News フロントページから、Show HN: OpenComputer – an open source alternative to Devin。SaaStrから、Intuit Sells Mailchimp for $3.68 Billion, 30 Cents on the Dollar: 2.9x Revenue, 0% Growth, and the Biggest Deal Yet for Bending Spoons。CNET Japanから、リクルート、個人情報2万1900件が漏えいのおそれ プレイドの「KARTE」不正アクセスで。TechCrunchから、AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too。Hacker News フロントページから、Google Workers Tell Their Employer Not to Punish Schools That Don't Want AI。Hacker News フロントページから、AI may have solved the most important problem in mathematics。CNET Japanから、「Google AI Ultra」のYouTube Premium、同居家族最大5人と共有可能に 日本も対象。SaaStrから、The Top 10 Things That Have Changed in Sales & GTM in the Age of AI. And 10 Things … That Really Haven’t。はてなブックマーク テクノロジーから、政府の内部資料流出か、基幹システムに不正アクセス デジタル庁発表：朝日新聞。はてなブックマーク テクノロジーから、1万円のシンセをAIで魔改造。電子楽器のファームウェア開放が始まった | ギズモード・ジャパン。以上です。",
+      "refs": [
+        {
+          "title": "Microsoft、AIによるサイバー攻撃にAIエージェントで対抗する新サービス「Microsoft Perception」提供開始",
+          "url": "https://www.itmedia.co.jp/news/article/2611/20/2000003368/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-20T04:29:35.000Z",
+          "alsoReportedBy": [
+            "Publickey",
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "Experts warn: Nearly everyone in AI is susceptible to a honey-trap scheme right now",
+          "url": "https://techcrunch.com/2026/11/20/experts-warn-nearly-everyone-in-ai-is-susceptible-to-a-honey-trap-scheme-right-now/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-20T20:58:29.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Show HN: OpenComputer – an open source alternative to Devin",
+          "url": "https://github.com/diggerhq/opencomputer",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-20T20:19:56.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Intuit Sells Mailchimp for $3.68 Billion, 30 Cents on the Dollar: 2.9x Revenue, 0% Growth, and the Biggest Deal Yet for Bending Spoons",
+          "url": "https://www.saastr.com/intuit-sells-mailchimp-for-3-68-billion-30-cents-on-the-dollar-2-9x-revenue-0-growth-and-the-biggest-deal-yet-for-bending-spoons/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-20T13:00:44.000Z",
+          "alsoReportedBy": [
+            "TechCrunch"
+          ]
+        },
+        {
+          "title": "リクルート、個人情報2万1900件が漏えいのおそれ プレイドの「KARTE」不正アクセスで",
+          "url": "https://japan.cnet.com/article/35255249/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-21T00:27:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too",
+          "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-20T19:32:08.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Google Workers Tell Their Employer Not to Punish Schools That Don't Want AI",
+          "url": "https://www.motherjones.com/politics/2026/11/google-alphabet-union-school-ai-protest-gemini-workers-petition/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-20T16:59:27.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AI may have solved the most important problem in mathematics",
+          "url": "https://www.economist.com/science-and-technology/2026/11/20/ai-may-have-solved-the-most-important-problem-in-mathematics",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-20T22:46:59.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「Google AI Ultra」のYouTube Premium、同居家族最大5人と共有可能に 日本も対象",
+          "url": "https://japan.cnet.com/article/35255226/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-20T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "The Top 10 Things That Have Changed in Sales & GTM in the Age of AI. And 10 Things … That Really Haven’t",
+          "url": "https://www.saastr.com/the-top-10-things-that-have-changed-in-sales-gtm-in-the-age-of-ai-and-10-things-that-really-havent/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-20T15:00:03.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "政府の内部資料流出か、基幹システムに不正アクセス デジタル庁発表：朝日新聞",
+          "url": "https://www.asahi.com/articles/ASVCN30WCVCNULFA01NM.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-20T09:31:39.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        },
+        {
+          "title": "1万円のシンセをAIで魔改造。電子楽器のファームウェア開放が始まった | ギズモード・ジャパン",
+          "url": "https://www.gizmodo.jp/article/0b0516f2-94f8-442e-bdae-2987f090be13/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-20T14:31:09.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "AIで成果を出す企業ほど「人を増やす」？ “通説”を否定する調査結果をIDCが発表",
+        "url": "https://www.itmedia.co.jp/enterprise/articles/2611/21/news003.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-21T00:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Claudeを使い「リーマン予想」を証明か Anthropic数学者が発表 Lean検証も通過、数学界が精査へ",
+        "url": "https://japan.cnet.com/article/35255245/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-20T22:48:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "モダンな情シスは、AIエージェントを育て、任せ、圧倒的な生産性を生む｜kajinari | モダンな情シス",
+        "url": "https://note.com/kajinari/n/n19c73d819b14",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-20T15:27:05.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "デジ庁、政府機関向けファイル共有サービスで漏えいか 7月末から第三者がアクセス",
+        "url": "https://www.itmedia.co.jp/news/article/2611/20/2000003381/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-20T12:18:07.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.",
+        "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-20T19:53:41.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Microsoft、AIによるサイバー攻撃にAIエージェントで対抗する新サービス「Microsoft Perception」提供開始",
+        "url": "https://www.itmedia.co.jp/news/article/2611/20/2000003368/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-20T04:29:35.000Z",
+        "alsoReportedBy": [
+          "Publickey",
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Experts warn: Nearly everyone in AI is susceptible to a honey-trap scheme right now",
+        "url": "https://techcrunch.com/2026/11/20/experts-warn-nearly-everyone-in-ai-is-susceptible-to-a-honey-trap-scheme-right-now/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-20T20:58:29.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Show HN: OpenComputer – an open source alternative to Devin",
+        "url": "https://github.com/diggerhq/opencomputer",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-20T20:19:56.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Intuit Sells Mailchimp for $3.68 Billion, 30 Cents on the Dollar: 2.9x Revenue, 0% Growth, and the Biggest Deal Yet for Bending Spoons",
+        "url": "https://www.saastr.com/intuit-sells-mailchimp-for-3-68-billion-30-cents-on-the-dollar-2-9x-revenue-0-growth-and-the-biggest-deal-yet-for-bending-spoons/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-20T13:00:44.000Z",
+        "alsoReportedBy": [
+          "TechCrunch"
+        ]
+      },
+      {
+        "title": "リクルート、個人情報2万1900件が漏えいのおそれ プレイドの「KARTE」不正アクセスで",
+        "url": "https://japan.cnet.com/article/35255249/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-21T00:27:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too",
+        "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-20T19:32:08.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Google Workers Tell Their Employer Not to Punish Schools That Don't Want AI",
+        "url": "https://www.motherjones.com/politics/2026/11/google-alphabet-union-school-ai-protest-gemini-workers-petition/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-20T16:59:27.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AI may have solved the most important problem in mathematics",
+        "url": "https://www.economist.com/science-and-technology/2026/11/20/ai-may-have-solved-the-most-important-problem-in-mathematics",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-20T22:46:59.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「Google AI Ultra」のYouTube Premium、同居家族最大5人と共有可能に 日本も対象",
+        "url": "https://japan.cnet.com/article/35255226/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-20T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "The Top 10 Things That Have Changed in Sales & GTM in the Age of AI. And 10 Things … That Really Haven’t",
+        "url": "https://www.saastr.com/the-top-10-things-that-have-changed-in-sales-gtm-in-the-age-of-ai-and-10-things-that-really-havent/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-20T15:00:03.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "政府の内部資料流出か、基幹システムに不正アクセス デジタル庁発表：朝日新聞",
+        "url": "https://www.asahi.com/articles/ASVCN30WCVCNULFA01NM.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-20T09:31:39.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "1万円のシンセをAIで魔改造。電子楽器のファームウェア開放が始まった | ギズモード・ジャパン",
+        "url": "https://www.gizmodo.jp/article/0b0516f2-94f8-442e-bdae-2987f090be13/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-20T14:31:09.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    },
+    {
+      "id": "churn",
+      "term": "チャーンレート",
+      "reading": "チャーンレート",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。",
+      "interview": "「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 762
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 216
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 616
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 541
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 705
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 435
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1189
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 517
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 340
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 366
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 510
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 448
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 199,
+    "eligible": 117
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}

@@ -1,0 +1,543 @@
+{
+  "id": "2026-11-17",
+  "createdAt": "2026-11-17T02:33:18.828Z",
+  "dateLabel": "11月17日（火）",
+  "durationMin": 10,
+  "estimatedMinutes": 11.3,
+  "generator": "template",
+  "title": "11月17日（火） OpenAI、児童性的虐待コンテンツ（CSAM）検出ツールを公開 ChatGPTで探すと24時間アカウント停止の警告も ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月17日（火）のテックニュースをお届けします。今日の見出しは5本です。1つ目、OpenAI、児童性的虐待コンテンツ（CSAM）検出ツールを公開 ChatGPTで探すと24時間アカウント停止の警告も。2つ目、「Microsoft 365」大規模障害、7月の修正で混入した不具合が原因 負荷増と容量減が重なり世界に波及。3つ目、OpenAI、AI生成の児童性的虐待画像も検出 新ツールを審査済み組織に無料提供。4つ目、NTTの島田明社長、宇宙光通信構想を発表 月面インフラや宇宙データセンターの整備も。5つ目、Node.jsとnpmをWebブラウザ上で実行可能にする「OpenVessel」、神戸ソフトがオープンソースで公開。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "OpenAI、児童性的虐待コンテンツ（CSAM）検出ツールを公開 ChatGPTで探すと24時間アカウント停止の警告も",
+      "body": "1本目。ITmedia AI+から、OpenAI、児童性的虐待コンテンツ（CSAM）検出ツールを公開 ChatGPTで探すと24時間アカウント停止の警告も。OpenAIは、児童性的虐待コンテンツ（CSAM）を検出するための新たな画像分類ツールを発表した。従来は検出が困難だった新規画像やAI生成画像も対象とし、審査を通過した組織へAPI経由で無償提供する。同時にChatGPT上でのCSAM検索行為に対し、アカウントを24時間停止する警告機能も導入した。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "OpenAI、児童性的虐待コンテンツ（CSAM）検出ツールを公開 ChatGPTで探すと24時間アカウント停止の警告も",
+          "url": "https://www.itmedia.co.jp/news/article/2611/17/2000003254/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-17T01:45:02.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "「Microsoft 365」大規模障害、7月の修正で混入した不具合が原因 負荷増と容量減が重なり世界に波及",
+      "body": "2本目。はてなブックマーク テクノロジーから、「Microsoft 365」大規模障害、7月の修正で混入した不具合が原因 負荷増と容量減が重なり世界に波及。米Microsoftは11月15日（現地時間）、12日に発生したMicrosoft 365の大規模障害について、暫定的なインシデントレポートを公表した。7月に適用した修正に潜んでいた不具合が、サーバの負荷増加と処理能力の低下によって表面化し、障害が世界規模に連鎖したという。 Copilot、AIエージェント、プラットフォーム担当エグゼ...このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "「Microsoft 365」大規模障害、7月の修正で混入した不具合が原因 負荷増と容量減が重なり世界に波及",
+          "url": "https://www.itmedia.co.jp/news/article/2611/17/2000003245/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-16T22:24:29.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "OpenAI、AI生成の児童性的虐待画像も検出 新ツールを審査済み組織に無料提供",
+      "body": "3本目。CNET Japanから、OpenAI、AI生成の児童性的虐待画像も検出 新ツールを審査済み組織に無料提供。OpenAIは11月16日、AI生成のものを含む児童性的虐待コンテンツ（CSAM）の可能性がある画像を検出する新ツールを発表した。審査を通過した組織にAPI経由で無料提供する。ChatGPTでも、こうしたコンテンツを探そうとする利用者への警告や、一時的な利用停止を導入する。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "OpenAI、AI生成の児童性的虐待画像も検出 新ツールを審査済み組織に無料提供",
+          "url": "https://japan.cnet.com/article/35254974/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-16T23:30:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "NTTの島田明社長、宇宙光通信構想を発表 月面インフラや宇宙データセンターの整備も",
+      "body": "4本目。ITmedia NEWSから、NTTの島田明社長、宇宙光通信構想を発表 月面インフラや宇宙データセンターの整備も。NTTの島田明社長は16日、都内で講演し、宇宙で光通信網を構築する構想を明らかにした。人工衛星同士や地上の通信施設を光信号でつなぎ、高速通信を実現する。宇宙データセンターや月の発電インフラの整備にも乗り出す。インフラのニュースは、コスト構造の変化として効いてくることが多い領域です。",
+      "refs": [
+        {
+          "title": "NTTの島田明社長、宇宙光通信構想を発表 月面インフラや宇宙データセンターの整備も",
+          "url": "https://www.itmedia.co.jp/news/article/2611/17/2000003252/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-17T01:30:57.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Node.jsとnpmをWebブラウザ上で実行可能にする「OpenVessel」、神戸ソフトがオープンソースで公開",
+      "body": "5本目。Publickeyから、Node.jsとnpmをWebブラウザ上で実行可能にする「OpenVessel」、神戸ソフトがオープンソースで公開。神戸ソフトは、Webブラウザ上でNode.jsとパッケージマネージャのnpm、AstroなどのNode.jsに対応したフレームワークなどが実行できる「OpenVessel」をオープンソースで公開しました。 OpenVesselは、Webブラ...このニュースははてなブックマーク テクノロジーでも同時に取り上げられています。それだけ注目度が高い話題です。開発者向けの話題は、技術職以外でも「現場が何を楽に感じるか」を知る手がかりになります。",
+      "refs": [
+        {
+          "title": "Node.jsとnpmをWebブラウザ上で実行可能にする「OpenVessel」、神戸ソフトがオープンソースで公開",
+          "url": "https://www.publickey1.jp/blog/26/nodejsnpmwebopenvessel.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-16T15:23:28.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。次に、シード、シリーズA・B・C、読み方はシード、シリーズエー。スタートアップの資金調達の段階です。シードは製品を作り始める頃、シリーズAはPMFが見え始めた頃、BやCは営業や採用で一気に広げる段階を指します。段階ごとに社内の整い具合が全く違います。「整っていない環境を面白がれるか」は自己分析の材料になります。最後に、クラウドネイティブ、コンテナ、読み方はクラウドネイティブ、コンテナ。クラウド上で動かす前提で作られたシステムのことです。アプリを「コンテナ」という持ち運びやすい箱に入れ、必要な数だけ自動で増減させます。その箱を束ねる仕組みがKubernetesです。「オンプレからクラウドへ」という移行案件は国内にまだ大量にあります。DX文脈で必ず出てきます。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。求人票を見るときは、事業フェーズを先に確認してみてください。資金調達直後なのか、黒字化を目指している段階なのかで、求められる動き方がまるで違います。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Cybersecurity AI startup Corma reaches $1B valuation in about 3 months。はてなブックマーク テクノロジーから、メルカリ×VercelのVPが実例をもとに、AI投資を語る。「AI Engineering Summit Tokyo 2026」追加登壇者を発表！ | ニュース | ファインディ株式会社(Findy Inc)。問い：AIに関する取り組みで、あなたが担っている役割を教えてください。TechCrunchから、Apple reveals new Mac security controls as AI agents raise privacy risks。はてなブックマーク テクノロジーから、GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold | Google Cloud Blog。ITmedia AI+から、大手自動車メーカーの検図工数を90％削減 AIが図面の重要な変更点を判別。Hacker News フロントページから、Optimizely Compromised, Served Malware on Zoom, GitLab。TechCrunchから、California state AG sues OpenAI over rogue agent incidents。ITmedia AI+から、ジェンスン・フアン氏復帰を求める公開書簡に18万人以上が署名 現役従業員9000人に加えてイーロン・マスク氏らも賛同。Publickeyから、軽量なマイクロVMでネイティブよりアプリを高速起動できる「Hyperlight-Unikraft」登場。ITmedia NEWSから、OpenAI、Apollo ResearchやMETRなど外部4団体を社内に迎える「埋め込み型」安全性評価を開始。ITmedia NEWSから、OpenAIをカリフォルニア州が提訴 「AIエージェントの制御を80回以上失った」。カリフォルニア州の司法長官は、OpenAIを提訴した。CNET Japanから、サムスン「Galaxy S27」に自律型AI搭載か 「Galaxy Claw」が電話やメッセージを代行。以上です。",
+      "refs": [
+        {
+          "title": "Cybersecurity AI startup Corma reaches $1B valuation in about 3 months",
+          "url": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-16T23:32:32.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "メルカリ×VercelのVPが実例をもとに、AI投資を語る。「AI Engineering Summit Tokyo 2026」追加登壇者を発表！ | ニュース | ファインディ株式会社(Findy Inc)",
+          "url": "https://findy.co.jp/4671/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-17T01:02:50.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Apple reveals new Mac security controls as AI agents raise privacy risks",
+          "url": "https://techcrunch.com/2026/11/16/apple-reveals-new-mac-security-controls-as-ai-agents-raise-privacy-risks/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-16T21:01:02.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold | Google Cloud Blog",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-16T21:39:31.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "大手自動車メーカーの検図工数を90％削減 AIが図面の重要な変更点を判別",
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2611/17/news014.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-17T00:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Optimizely Compromised, Served Malware on Zoom, GitLab",
+          "url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-16T23:00:34.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "California state AG sues OpenAI over rogue agent incidents",
+          "url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-16T20:07:13.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "ジェンスン・フアン氏復帰を求める公開書簡に18万人以上が署名 現役従業員9000人に加えてイーロン・マスク氏らも賛同",
+          "url": "https://www.itmedia.co.jp/aiplus/article/2611/17/2000003249/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-17T00:52:22.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "軽量なマイクロVMでネイティブよりアプリを高速起動できる「Hyperlight-Unikraft」登場",
+          "url": "https://www.publickey1.jp/blog/26/vmhyperlight-unikraft.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-16T18:30:31.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        },
+        {
+          "title": "OpenAI、Apollo ResearchやMETRなど外部4団体を社内に迎える「埋め込み型」安全性評価を開始",
+          "url": "https://www.itmedia.co.jp/news/article/2611/17/2000003248/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-17T00:03:15.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "OpenAIをカリフォルニア州が提訴 「AIエージェントの制御を80回以上失った」",
+          "url": "https://www.itmedia.co.jp/news/article/2611/17/2000003246/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-16T23:04:43.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "サムスン「Galaxy S27」に自律型AI搭載か 「Galaxy Claw」が電話やメッセージを代行",
+          "url": "https://japan.cnet.com/article/35254980/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-17T01:35:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "OpenAI、児童性的虐待コンテンツ（CSAM）検出ツールを公開 ChatGPTで探すと24時間アカウント停止の警告も",
+        "url": "https://www.itmedia.co.jp/news/article/2611/17/2000003254/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-17T01:45:02.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "「Microsoft 365」大規模障害、7月の修正で混入した不具合が原因 負荷増と容量減が重なり世界に波及",
+        "url": "https://www.itmedia.co.jp/news/article/2611/17/2000003245/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-16T22:24:29.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "OpenAI、AI生成の児童性的虐待画像も検出 新ツールを審査済み組織に無料提供",
+        "url": "https://japan.cnet.com/article/35254974/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-16T23:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "NTTの島田明社長、宇宙光通信構想を発表 月面インフラや宇宙データセンターの整備も",
+        "url": "https://www.itmedia.co.jp/news/article/2611/17/2000003252/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-17T01:30:57.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Node.jsとnpmをWebブラウザ上で実行可能にする「OpenVessel」、神戸ソフトがオープンソースで公開",
+        "url": "https://www.publickey1.jp/blog/26/nodejsnpmwebopenvessel.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-16T15:23:28.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Cybersecurity AI startup Corma reaches $1B valuation in about 3 months",
+        "url": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-16T23:32:32.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "メルカリ×VercelのVPが実例をもとに、AI投資を語る。「AI Engineering Summit Tokyo 2026」追加登壇者を発表！ | ニュース | ファインディ株式会社(Findy Inc)",
+        "url": "https://findy.co.jp/4671/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-17T01:02:50.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Apple reveals new Mac security controls as AI agents raise privacy risks",
+        "url": "https://techcrunch.com/2026/11/16/apple-reveals-new-mac-security-controls-as-ai-agents-raise-privacy-risks/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-16T21:01:02.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold | Google Cloud Blog",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-16T21:39:31.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "大手自動車メーカーの検図工数を90％削減 AIが図面の重要な変更点を判別",
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2611/17/news014.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-17T00:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Optimizely Compromised, Served Malware on Zoom, GitLab",
+        "url": "https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-16T23:00:34.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "California state AG sues OpenAI over rogue agent incidents",
+        "url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-16T20:07:13.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ジェンスン・フアン氏復帰を求める公開書簡に18万人以上が署名 現役従業員9000人に加えてイーロン・マスク氏らも賛同",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2611/17/2000003249/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-17T00:52:22.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "軽量なマイクロVMでネイティブよりアプリを高速起動できる「Hyperlight-Unikraft」登場",
+        "url": "https://www.publickey1.jp/blog/26/vmhyperlight-unikraft.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-16T18:30:31.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "OpenAI、Apollo ResearchやMETRなど外部4団体を社内に迎える「埋め込み型」安全性評価を開始",
+        "url": "https://www.itmedia.co.jp/news/article/2611/17/2000003248/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-17T00:03:15.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAIをカリフォルニア州が提訴 「AIエージェントの制御を80回以上失った」",
+        "url": "https://www.itmedia.co.jp/news/article/2611/17/2000003246/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-16T23:04:43.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "サムスン「Galaxy S27」に自律型AI搭載か 「Galaxy Claw」が電話やメッセージを代行",
+        "url": "https://japan.cnet.com/article/35254980/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-17T01:35:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "series",
+      "term": "シード / シリーズA・B・C",
+      "reading": "シード、シリーズエー",
+      "category": "スタートアップ",
+      "level": 1,
+      "definition": "スタートアップの資金調達の段階です。シードは製品を作り始める頃、シリーズAはPMFが見え始めた頃、BやCは営業や採用で一気に広げる段階を指します。",
+      "interview": "段階ごとに社内の整い具合が全く違います。「整っていない環境を面白がれるか」は自己分析の材料になります。"
+    },
+    {
+      "id": "cloud-native",
+      "term": "クラウドネイティブ / コンテナ",
+      "reading": "クラウドネイティブ、コンテナ",
+      "category": "クラウド",
+      "level": 2,
+      "definition": "クラウド上で動かす前提で作られたシステムのことです。アプリを「コンテナ」という持ち運びやすい箱に入れ、必要な数だけ自動で増減させます。その箱を束ねる仕組みがKubernetesです。",
+      "interview": "「オンプレからクラウドへ」という移行案件は国内にまだ大量にあります。DX文脈で必ず出てきます。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 714
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 165
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 423
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 450
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 809
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 383
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1827
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 398
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 259
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 282
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1349
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 364
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 192,
+    "eligible": 136
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}

@@ -1,0 +1,611 @@
+{
+  "id": "2026-10-20",
+  "createdAt": "2026-10-20T22:29:19.878Z",
+  "dateLabel": "10月20日（火）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.2,
+  "generator": "template",
+  "title": "10月20日（火） デジタル庁、政府職員18万人にAIエージェント環境を展開──「源内」で提供開始、独自の安全基準も ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。10月20日（火）のテックニュースをお届けします。今日の見出しは5本です。1つ目、デジタル庁、政府職員18万人にAIエージェント環境を展開──「源内」で提供開始、独自の安全基準も。2つ目、あなたの会社は、慌てて脆弱性検査にARTEXを使わなくていい｜Yusuke Kawabata（SaaS運営）。3つ目、Suicaのコード決済「teppay」、本人確認はマイナカードのみ 未確認だと使えない機能は？。4つ目、「Cloudflare OS」のマネージドサービス提供へ。GitHubとの接続やGmailとの連携強化など。5つ目、日本企業狙う不正アクセスにAI 攻撃者が自律型侵入テスト「ARTEX」を悪用 GMOイエラエ調査。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "デジタル庁、政府職員18万人にAIエージェント環境を展開──「源内」で提供開始、独自の安全基準も",
+      "body": "1本目。ITmedia AI+から、デジタル庁、政府職員18万人にAIエージェント環境を展開──「源内」で提供開始、独自の安全基準も。デジタル庁は10月20日、政府職員向けの生成AI利用環境「源内」で、職員が自らAIエージェントを作って動かせる環境を順次導入すると発表した。安全に使うためのルール「源内基準」も併せて公表した。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "デジタル庁、政府職員18万人にAIエージェント環境を展開──「源内」で提供開始、独自の安全基準も",
+          "url": "https://www.itmedia.co.jp/news/article/2610/20/2000002428/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-20T08:14:44.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "あなたの会社は、慌てて脆弱性検査にARTEXを使わなくていい｜Yusuke Kawabata（SaaS運営）",
+      "body": "2本目。はてなブックマーク テクノロジーから、あなたの会社は、慌てて脆弱性検査にARTEXを使わなくていい｜Yusuke Kawabata（SaaS運営）。前回、AIによる「自動化攻撃」に経営者はどのような対応をすればいいのかという話を書きました。おかげさまで多くの反響をいただいて私自身びっくりしました。 そして、本日はセキュリティ会社の調査で今回の大規模攻撃のいくつかはオープンソースのARTEXが使われていたことが判明したとニュースでにぎわっていました。 ...事故のニュースは、裏返すと「何を備えていれば防げたか」の教材になります。",
+      "refs": [
+        {
+          "title": "あなたの会社は、慌てて脆弱性検査にARTEXを使わなくていい｜Yusuke Kawabata（SaaS運営）",
+          "url": "https://note.com/uplucid/n/ncb9e3567ce2f",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-20T15:34:06.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Suicaのコード決済「teppay」、本人確認はマイナカードのみ 未確認だと使えない機能は？",
+      "body": "3本目。CNET Japanから、Suicaのコード決済「teppay」、本人確認はマイナカードのみ 未確認だと使えない機能は？JR東日本がモバイルSuicaアプリ内で10月20日から提供するコード決済サービス「teppay（テッペイ）」では、本人確認に使える書類はマイナンバーカードのみだ。公式FAQによると、署名用電子証明書を搭載したカードが必要で、運転免許証や在留カードなどは使えない。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "Suicaのコード決済「teppay」、本人確認はマイナカードのみ 未確認だと使えない機能は？",
+          "url": "https://japan.cnet.com/article/35253782/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-20T21:30:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "「Cloudflare OS」のマネージドサービス提供へ。GitHubとの接続やGmailとの連携強化など",
+      "body": "4本目。Publickeyから、「Cloudflare OS」のマネージドサービス提供へ。GitHubとの接続やGmailとの連携強化など。Cloudflareは、AIを活用した業務のためのプラットフォームとなる「Cloudflare OS」のマネージドサービスを発表しました。現在ウェイティングリストへの登録を募集しています。 AIを活用した業務アプリのプラットフォーム Clo...エンジニアが盛り上がる話題を知っておくと、社内で話が通じやすくなります。",
+      "refs": [
+        {
+          "title": "「Cloudflare OS」のマネージドサービス提供へ。GitHubとの接続やGmailとの連携強化など",
+          "url": "https://www.publickey1.jp/blog/26/cloudflare_osgithubgmail.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-10-20T15:10:05.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "日本企業狙う不正アクセスにAI 攻撃者が自律型侵入テスト「ARTEX」を悪用 GMOイエラエ調査",
+      "body": "5本目。ITmedia NEWSから、日本企業狙う不正アクセスにAI 攻撃者が自律型侵入テスト「ARTEX」を悪用 GMOイエラエ調査。相次ぐ不正アクセスの攻撃元の多くがAIであることを確認した――GMOサイバーセキュリティ byイエラエは10月19日、日本企業を狙った不正アクセスで、AIを使った侵入テストツール「ARTEX」の悪用を確認したと発表した。セキュリティの話題は、企業がSaaSを選ぶときの判断基準に直結します。",
+      "refs": [
+        {
+          "title": "日本企業狙う不正アクセスにAI 攻撃者が自律型侵入テスト「ARTEX」を悪用 GMOイエラエ調査",
+          "url": "https://www.itmedia.co.jp/news/article/2610/20/2000002423/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-10-20T08:16:45.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、SaaS、PaaS、IaaS、読み方はサース、パース、イアース。クラウドの提供範囲の違いです。SaaSは完成したソフトをそのまま使う形、PaaSはアプリを作る土台まで借りる形、IaaSはサーバーそのものを借りる形を指します。料理に例えるなら、SaaSは出来上がった定食、PaaSはキッチン付きの部屋、IaaSは更地です。次に、API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。最後に、RAG、読み方はラグ。AIに答えさせる前に、社内文書などから関係する資料を検索して渡す手法です。モデル自体を作り直さずに、自社の情報に基づいた回答をさせられます。国内の法人向けAI案件は、実態としてこのRAGがかなりの割合を占めています。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。知らない用語が出てきたら、その場で調べるより一度メモして夜にまとめて潰すほうが続きます。完璧に理解しようとしないことが、続けるコツです。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Anthropic’s cloud partnerships are getting messy。TechCrunchから、Hugging Face CEO warns that Netflix’s OpenAI hack documentary isn’t accurate。SaaStrから、5 Interesting Learnings from Braze at $910 Million in Revenue: A $5.66B Sale to Salesforce, 26% Growth, and Operating Expenses Up Just 6%。TechCrunchから、Google is bringing a more personal version of its Gemini AI assistant to your car。ITmedia AI+から、GMO、生成AIの「答えるだけ問題」を解消へ 社内ナレッジを業務フローにつなぐ。ITmedia AI+から、AIコーディングのAPIキーが狙われている OpenCodeのキー流出とインフォスティーラー「Aoki」から学ぶ対策。Hacker News フロントページから、Claude designed protein binders against scorpion neurotoxins。CNET Japanから、ChatGPTなど、不正ソフトウェアをユーザーに「推薦」--開発履歴や人気を偽装。Hacker News フロントページから、On AI writing。はてなブックマーク テクノロジーから、AIペネトレーションテスト基盤「Cairn」の公開パネルから見えた攻撃活動についてまとめてみた - piyolog。Hacker News フロントページから、Facebook Pages require paid subscription to post more than two links per month。はてなブックマーク テクノロジーから、Introducing tsrs: a Port of TypeScript to Rust。以上です。",
+      "refs": [
+        {
+          "title": "Anthropic’s cloud partnerships are getting messy",
+          "url": "https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-20T21:25:22.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Hugging Face CEO warns that Netflix’s OpenAI hack documentary isn’t accurate",
+          "url": "https://techcrunch.com/2026/10/20/hugging-face-ceo-warns-that-netflixs-openai-hack-documentary-isnt-accurate/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-20T22:24:02.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "5 Interesting Learnings from Braze at $910 Million in Revenue: A $5.66B Sale to Salesforce, 26% Growth, and Operating Expenses Up Just 6%",
+          "url": "https://www.saastr.com/5-interesting-learnings-from-braze-at-910-million-in-revenue-a-5-66b-sale-to-salesforce-26-growth-and-operating-expenses-up-just-6/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-10-20T14:00:23.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Google is bringing a more personal version of its Gemini AI assistant to your car",
+          "url": "https://techcrunch.com/2026/10/20/google-is-bringing-a-more-personal-version-of-its-gemini-ai-assistant-to-your-car/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-10-20T20:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "GMO、生成AIの「答えるだけ問題」を解消へ 社内ナレッジを業務フローにつなぐ",
+          "url": "https://kn.itmedia.co.jp/kn/article/2610/21/2000002373/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-20T21:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AIコーディングのAPIキーが狙われている OpenCodeのキー流出とインフォスティーラー「Aoki」から学ぶ対策",
+          "url": "https://atmarkit.itmedia.co.jp/ait/articles/2610/21/news011.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-10-20T20:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Claude designed protein binders against scorpion neurotoxins",
+          "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-20T17:48:29.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "ChatGPTなど、不正ソフトウェアをユーザーに「推薦」--開発履歴や人気を偽装",
+          "url": "https://japan.cnet.com/article/35253771/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-10-20T22:05:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "On AI writing",
+          "url": "https://www.bolkunov.com/p/on-ai-writing",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-20T19:55:11.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AIペネトレーションテスト基盤「Cairn」の公開パネルから見えた攻撃活動についてまとめてみた - piyolog",
+          "url": "https://piyolog.hatenadiary.jp/entry/2026/10/20/205855",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-20T12:01:49.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Facebook Pages require paid subscription to post more than two links per month",
+          "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-10-20T15:06:08.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Introducing tsrs: a Port of TypeScript to Rust",
+          "url": "https://blog.cloudflare.com/typescript-rust-port/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-10-20T13:09:28.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "デジタル庁、政府職員18万人にAIエージェント環境を展開──「源内」で提供開始、独自の安全基準も",
+        "url": "https://www.itmedia.co.jp/news/article/2610/20/2000002428/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-20T08:14:44.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "あなたの会社は、慌てて脆弱性検査にARTEXを使わなくていい｜Yusuke Kawabata（SaaS運営）",
+        "url": "https://note.com/uplucid/n/ncb9e3567ce2f",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-20T15:34:06.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Suicaのコード決済「teppay」、本人確認はマイナカードのみ 未確認だと使えない機能は？",
+        "url": "https://japan.cnet.com/article/35253782/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-20T21:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「Cloudflare OS」のマネージドサービス提供へ。GitHubとの接続やGmailとの連携強化など",
+        "url": "https://www.publickey1.jp/blog/26/cloudflare_osgithubgmail.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-10-20T15:10:05.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "日本企業狙う不正アクセスにAI 攻撃者が自律型侵入テスト「ARTEX」を悪用 GMOイエラエ調査",
+        "url": "https://www.itmedia.co.jp/news/article/2610/20/2000002423/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-10-20T08:16:45.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Anthropic’s cloud partnerships are getting messy",
+        "url": "https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-20T21:25:22.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Hugging Face CEO warns that Netflix’s OpenAI hack documentary isn’t accurate",
+        "url": "https://techcrunch.com/2026/10/20/hugging-face-ceo-warns-that-netflixs-openai-hack-documentary-isnt-accurate/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-20T22:24:02.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "5 Interesting Learnings from Braze at $910 Million in Revenue: A $5.66B Sale to Salesforce, 26% Growth, and Operating Expenses Up Just 6%",
+        "url": "https://www.saastr.com/5-interesting-learnings-from-braze-at-910-million-in-revenue-a-5-66b-sale-to-salesforce-26-growth-and-operating-expenses-up-just-6/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-10-20T14:00:23.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Google is bringing a more personal version of its Gemini AI assistant to your car",
+        "url": "https://techcrunch.com/2026/10/20/google-is-bringing-a-more-personal-version-of-its-gemini-ai-assistant-to-your-car/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-10-20T20:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "GMO、生成AIの「答えるだけ問題」を解消へ 社内ナレッジを業務フローにつなぐ",
+        "url": "https://kn.itmedia.co.jp/kn/article/2610/21/2000002373/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-20T21:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AIコーディングのAPIキーが狙われている OpenCodeのキー流出とインフォスティーラー「Aoki」から学ぶ対策",
+        "url": "https://atmarkit.itmedia.co.jp/ait/articles/2610/21/news011.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-10-20T20:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Claude designed protein binders against scorpion neurotoxins",
+        "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-20T17:48:29.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ChatGPTなど、不正ソフトウェアをユーザーに「推薦」--開発履歴や人気を偽装",
+        "url": "https://japan.cnet.com/article/35253771/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-10-20T22:05:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "On AI writing",
+        "url": "https://www.bolkunov.com/p/on-ai-writing",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-20T19:55:11.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AIペネトレーションテスト基盤「Cairn」の公開パネルから見えた攻撃活動についてまとめてみた - piyolog",
+        "url": "https://piyolog.hatenadiary.jp/entry/2026/10/20/205855",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-20T12:01:49.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Facebook Pages require paid subscription to post more than two links per month",
+        "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-10-20T15:06:08.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Introducing tsrs: a Port of TypeScript to Rust",
+        "url": "https://blog.cloudflare.com/typescript-rust-port/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-10-20T13:09:28.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "saas-paas-iaas",
+      "term": "SaaS / PaaS / IaaS",
+      "reading": "サース、パース、イアース",
+      "category": "クラウド",
+      "level": 1,
+      "definition": "クラウドの提供範囲の違いです。SaaSは完成したソフトをそのまま使う形、PaaSはアプリを作る土台まで借りる形、IaaSはサーバーそのものを借りる形を指します。",
+      "interview": "料理に例えるなら、SaaSは出来上がった定食、PaaSはキッチン付きの部屋、IaaSは更地です。"
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "rag",
+      "term": "RAG",
+      "reading": "ラグ",
+      "category": "AI",
+      "level": 2,
+      "definition": "AIに答えさせる前に、社内文書などから関係する資料を検索して渡す手法です。モデル自体を作り直さずに、自社の情報に基づいた回答をさせられます。",
+      "interview": "国内の法人向けAI案件は、実態としてこのRAGがかなりの割合を占めています。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 655
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 221
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 918
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 1023
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 632
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 462
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1207
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 968
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 619
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 609
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 7118
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 873
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 191,
+    "eligible": 114
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 58.6
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "デジタル庁、政府職員18万人にAIエージェント環境を展開──「源内」で提供開始、独自の安全基準も",
+      "startSec": 58.6,
+      "endSec": 105.98
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "あなたの会社は、慌てて脆弱性検査にARTEXを使わなくていい｜Yusuke Kawabata（SaaS運営）",
+      "startSec": 105.98,
+      "endSec": 149.44
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Suicaのコード決済「teppay」、本人確認はマイナカードのみ 未確認だと使えない機能は？",
+      "startSec": 149.44,
+      "endSec": 189.15
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "「Cloudflare OS」のマネージドサービス提供へ。GitHubとの接続やGmailとの連携強化など",
+      "startSec": 189.15,
+      "endSec": 221.82
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "日本企業狙う不正アクセスにAI 攻撃者が自律型侵入テスト「ARTEX」を悪用 GMOイエラエ調査",
+      "startSec": 221.82,
+      "endSec": 260.6
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 260.6,
+      "endSec": 369.81
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 369.81,
+      "endSec": 382.15
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 382.15,
+      "endSec": 500.84
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 500.84,
+      "endSec": 511.32
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 24543276,
+    "durationSec": 511.32
+  }
+}

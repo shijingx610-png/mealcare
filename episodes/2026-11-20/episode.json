@@ -1,0 +1,543 @@
+{
+  "id": "2026-11-20",
+  "createdAt": "2026-11-20T01:23:11.428Z",
+  "dateLabel": "11月20日（金）",
+  "durationMin": 10,
+  "estimatedMinutes": 11.6,
+  "generator": "template",
+  "title": "11月20日（金） SlackやTeamsで情シス問い合わせを自動化 Salesforceの新AI「Paige」とは ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月20日（金）のテックニュースをお届けします。今日の見出しは5本です。1つ目、SlackやTeamsで情シス問い合わせを自動化 Salesforceの新AI「Paige」とは。2つ目、湘南美容クリニックのSBC、162万人分の個人情報流出 パスワードは「暗号化せず保存していた」。3つ目、Google、宇宙AIデータセンター構想「Project Suncatcher」でベゾス氏のBlue Originと提携 2029年に衛星打ち上げへ。4つ目、Anthropic上場、初値34％高--AIで「科学100年分の進歩を今後10年で達成」とCEO。5つ目、マイクロソフト、クラウドやオンプレミスのデータベースを一元管理する「Database Hub」正式リリース。AIエージェントによる運用監視の自動化も。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "SlackやTeamsで情シス問い合わせを自動化 Salesforceの新AI「Paige」とは",
+      "body": "1本目。ITmedia AI+から、SlackやTeamsで情シス問い合わせを自動化 Salesforceの新AI「Paige」とは。セールスフォース・ジャパンは、実務対応済みのAIエージェント「Piper」「Fin」「Paige」の国内提供を開始すると発表した。一からの構築は不要で、PaigeはSlackやTeamsでの社内問い合わせ対応を自動化する。SaaSの話は、機能そのものより「誰の、どの業務を、いくらで置き換えるのか」で見ると輪郭がはっきりします。",
+      "refs": [
+        {
+          "title": "SlackやTeamsで情シス問い合わせを自動化 Salesforceの新AI「Paige」とは",
+          "url": "https://kn.itmedia.co.jp/kn/article/2611/20/2000003331/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-19T22:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "湘南美容クリニックのSBC、162万人分の個人情報流出 パスワードは「暗号化せず保存していた」",
+      "body": "2本目。はてなブックマーク テクノロジーから、湘南美容クリニックのSBC、162万人分の個人情報流出 パスワードは「暗号化せず保存していた」。湘南美容クリニックなどを展開するSBCメディカルグループは11月19日、グループの医療機関から委託を受けて保有するデータベースが不正アクセスを受け、氏名や住所、パスワードなどを含む顧客の個人情報162万4000人分などが不正に取得されたと発表した。流出したパスワードは「暗号化せずに保存していた」という。 外部の...このニュースははてなブックマーク テクノロジーとITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。事故のニュースは、裏返すと「何を備えていれば防げたか」の教材になります。",
+      "refs": [
+        {
+          "title": "湘南美容クリニックのSBC、162万人分の個人情報流出 パスワードは「暗号化せず保存していた」",
+          "url": "https://www.itmedia.co.jp/news/article/2611/20/2000003355/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-19T23:45:17.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー",
+            "ITmedia NEWS",
+            "CNET Japan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "Google、宇宙AIデータセンター構想「Project Suncatcher」でベゾス氏のBlue Originと提携 2029年に衛星打ち上げへ",
+      "body": "3本目。ITmedia NEWSから、Google、宇宙AIデータセンター構想「Project Suncatcher」でベゾス氏のBlue Originと提携 2029年に衛星打ち上げへ。Googleは、衛星軌道上にAIデータセンターを構築する「Project Suncatcher」でジェフ・ベゾス氏率いる米Blue Originと提携したと発表した。2029年第1四半期を目標に、大型ロケット「New Glenn」で衛星を太陽同期軌道へ打ち上げる。各衛星はデータセンターのラック1本分程度の計算能力を持つとしている。このニュースはCNET Japanでも同時に取り上げられています。それだけ注目度が高い話題です。新機能のニュースは、競合がどこを脅威だと思っているかの裏返しでもあります。",
+      "refs": [
+        {
+          "title": "Google、宇宙AIデータセンター構想「Project Suncatcher」でベゾス氏のBlue Originと提携 2029年に衛星打ち上げへ",
+          "url": "https://www.itmedia.co.jp/news/article/2611/20/2000003358/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-20T00:25:43.000Z",
+          "alsoReportedBy": [
+            "CNET Japan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "Anthropic上場、初値34％高--AIで「科学100年分の進歩を今後10年で達成」とCEO",
+      "body": "4本目。CNET Japanから、Anthropic上場、初値34％高--AIで「科学100年分の進歩を今後10年で達成」とCEO。生成AI「Claude」を手がける米Anthropicがナスダックに上場し、日本時間11月20日午前1時48分ごろに株式の取引が始まった。銘柄コードは「ANT」。初値は111.50ドルと、新規株式公開（IPO）の公開価格83ドルを約34％上回った。20日午前3時27分付の米CNETの記事によると、その後の取引では株価が94ドルまで下がったという。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "Anthropic上場、初値34％高--AIで「科学100年分の進歩を今後10年で達成」とCEO",
+          "url": "https://japan.cnet.com/article/35255175/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-19T21:20:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "マイクロソフト、クラウドやオンプレミスのデータベースを一元管理する「Database Hub」正式リリース。AIエージェントによる運用監視の自動化も",
+      "body": "5本目。Publickeyから、マイクロソフト、クラウドやオンプレミスのデータベースを一元管理する「Database Hub」正式リリース。AIエージェントによる運用監視の自動化も。マイクロソフトは日本時間11月18日未明に開幕した年次イベント「Microsoft Ignite 2026」で、Microsoft Azureやオンプレミス、他社クラウドにあるデータベースなど、管理者が権限を持つデータベースを自動的に一覧表...クラウド基盤の話は、その上で動くサービス全部に影響します。地味ですが土台の話です。",
+      "refs": [
+        {
+          "title": "マイクロソフト、クラウドやオンプレミスのデータベースを一元管理する「Database Hub」正式リリース。AIエージェントによる運用監視の自動化も",
+          "url": "https://www.publickey1.jp/blog/26/database_hubai.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-19T15:19:21.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、オンプレミス、読み方はオンプレミス。自社の建物やデータセンターに機材を置いて動かす形です。クラウドの対義語として使われます。金融や公共では今もオンプレが主流。「クラウドが当たり前」は業界によって全く違います。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。最後に、NRR、読み方はエヌアールアール。既存顧客だけを見たときに、売上が1年で何%になったかを示す数字です。解約で減った分と、追加購入で増えた分を差し引きします。100%を超えていれば、新規ゼロでも売上が伸びている状態です。NRRが120%という会社は、既存顧客が勝手に育つ構造を持っています。強いSaaSを見分ける最短の指標です。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。職務経歴書は、前職の業務をそのまま書くより「どの課題を、どう測って、どう改善したか」に翻訳すると、業界が違っても伝わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。ITmedia AI+から、Mac版「Gemini」にユーザーの代わりにアプリを操作する「computer use」機能追加 まず米国で。TechCrunchから、Anthropic rival says companies can (mostly) skip the pricey models。TechCrunchから、Apple may be developing its own AI agent that runs your Mac。ITmedia AI+から、Antigravityを他社AIから操作すると「垢BAN」？ 注意点をGoogle Cloud日本法人に聞いた。SaaStrから、20VC x SaaStr: Jensen Out at Nvidia, Anthropic’s $1.4 Trillion IPO, and HubSpot Brings Back Brian Halligan。TechCrunchから、Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO。ITmedia NEWSから、AnthropicがNasdaq上場、IPO調達額は史上最大の813億ドル 初値は公開価格を34％上回る。Anthropicは、Nasdaq市場に上場した（ティッカー：ANT）。SaaStrから、The Top 10 Metrics From Anthropic’s IPO for B2B Execs: $33 Billion in Nine Months, 900% NRR, and 12x More $100K Customers in a Year。CNET Japanから、OpenAIの「GPT-6.2 Astra」と「Sol」、初期テスターから辛口評価。CNET Japanから、Canva、生成AI機能をオフにできる新設定を導入。Hacker News フロントページから、Gemini 4 Neon is the new #1 on the Models Engineering Index。SaaStrから、KeyBanc’s 2026 AI x Software Survey: 24% Median ARR Growth, Only 6% at the Rule of 40, and 43% of Vendors Watching Customers Vibe Code Their Product。以上です。",
+      "refs": [
+        {
+          "title": "Mac版「Gemini」にユーザーの代わりにアプリを操作する「computer use」機能追加 まず米国で",
+          "url": "https://www.itmedia.co.jp/news/article/2611/20/2000003356/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-19T23:41:04.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "Anthropic rival says companies can (mostly) skip the pricey models",
+          "url": "https://techcrunch.com/2026/11/19/anthropic-rival-says-companies-can-mostly-skip-the-pricey-models/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-20T00:26:03.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Apple may be developing its own AI agent that runs your Mac",
+          "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-20T00:56:01.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Antigravityを他社AIから操作すると「垢BAN」？ 注意点をGoogle Cloud日本法人に聞いた",
+          "url": "https://www.itmedia.co.jp/aiplus/article/2611/20/2000003353/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-19T23:15:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "20VC x SaaStr: Jensen Out at Nvidia, Anthropic’s $1.4 Trillion IPO, and HubSpot Brings Back Brian Halligan",
+          "url": "https://www.saastr.com/20vc-x-saastr-jensen-out-at-nvidia-anthropics-1-4-trillion-ipo-and-hubspot-brings-back-brian-halligan/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-19T18:34:10.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-20T00:43:50.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AnthropicがNasdaq上場、IPO調達額は史上最大の813億ドル 初値は公開価格を34％上回る",
+          "url": "https://www.itmedia.co.jp/news/article/2611/20/2000003354/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-19T21:38:41.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "The Top 10 Metrics From Anthropic’s IPO for B2B Execs: $33 Billion in Nine Months, 900% NRR, and 12x More $100K Customers in a Year",
+          "url": "https://www.saastr.com/the-top-10-metrics-in-anthropics-s-1-for-b2b-execs-33-billion-in-nine-months-900-nrr-and-12x-more-100k-customers-in-a-year/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-19T15:00:26.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "OpenAIの「GPT-6.2 Astra」と「Sol」、初期テスターから辛口評価",
+          "url": "https://japan.cnet.com/article/35255189/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-20T00:15:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Canva、生成AI機能をオフにできる新設定を導入",
+          "url": "https://japan.cnet.com/article/35255191/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-20T00:50:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Gemini 4 Neon is the new #1 on the Models Engineering Index",
+          "url": "https://git-aarvin.github.io/mei/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-19T23:35:35.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "KeyBanc’s 2026 AI x Software Survey: 24% Median ARR Growth, Only 6% at the Rule of 40, and 43% of Vendors Watching Customers Vibe Code Their Product",
+          "url": "https://www.saastr.com/keybancs-2026-ai-x-software-survey-24-growth-only-6-at-the-rule-of-40-and-43-of-vendors-watching-customers-vibe-code-their-product/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-19T13:00:10.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "SlackやTeamsで情シス問い合わせを自動化 Salesforceの新AI「Paige」とは",
+        "url": "https://kn.itmedia.co.jp/kn/article/2611/20/2000003331/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-19T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "湘南美容クリニックのSBC、162万人分の個人情報流出 パスワードは「暗号化せず保存していた」",
+        "url": "https://www.itmedia.co.jp/news/article/2611/20/2000003355/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-19T23:45:17.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー",
+          "ITmedia NEWS",
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "Google、宇宙AIデータセンター構想「Project Suncatcher」でベゾス氏のBlue Originと提携 2029年に衛星打ち上げへ",
+        "url": "https://www.itmedia.co.jp/news/article/2611/20/2000003358/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-20T00:25:43.000Z",
+        "alsoReportedBy": [
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "Anthropic上場、初値34％高--AIで「科学100年分の進歩を今後10年で達成」とCEO",
+        "url": "https://japan.cnet.com/article/35255175/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-19T21:20:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "マイクロソフト、クラウドやオンプレミスのデータベースを一元管理する「Database Hub」正式リリース。AIエージェントによる運用監視の自動化も",
+        "url": "https://www.publickey1.jp/blog/26/database_hubai.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-19T15:19:21.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Mac版「Gemini」にユーザーの代わりにアプリを操作する「computer use」機能追加 まず米国で",
+        "url": "https://www.itmedia.co.jp/news/article/2611/20/2000003356/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-19T23:41:04.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "Anthropic rival says companies can (mostly) skip the pricey models",
+        "url": "https://techcrunch.com/2026/11/19/anthropic-rival-says-companies-can-mostly-skip-the-pricey-models/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-20T00:26:03.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Apple may be developing its own AI agent that runs your Mac",
+        "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-20T00:56:01.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Antigravityを他社AIから操作すると「垢BAN」？ 注意点をGoogle Cloud日本法人に聞いた",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2611/20/2000003353/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-19T23:15:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "20VC x SaaStr: Jensen Out at Nvidia, Anthropic’s $1.4 Trillion IPO, and HubSpot Brings Back Brian Halligan",
+        "url": "https://www.saastr.com/20vc-x-saastr-jensen-out-at-nvidia-anthropics-1-4-trillion-ipo-and-hubspot-brings-back-brian-halligan/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-19T18:34:10.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
+        "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-20T00:43:50.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AnthropicがNasdaq上場、IPO調達額は史上最大の813億ドル 初値は公開価格を34％上回る",
+        "url": "https://www.itmedia.co.jp/news/article/2611/20/2000003354/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-19T21:38:41.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "The Top 10 Metrics From Anthropic’s IPO for B2B Execs: $33 Billion in Nine Months, 900% NRR, and 12x More $100K Customers in a Year",
+        "url": "https://www.saastr.com/the-top-10-metrics-in-anthropics-s-1-for-b2b-execs-33-billion-in-nine-months-900-nrr-and-12x-more-100k-customers-in-a-year/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-19T15:00:26.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAIの「GPT-6.2 Astra」と「Sol」、初期テスターから辛口評価",
+        "url": "https://japan.cnet.com/article/35255189/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-20T00:15:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Canva、生成AI機能をオフにできる新設定を導入",
+        "url": "https://japan.cnet.com/article/35255191/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-20T00:50:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Gemini 4 Neon is the new #1 on the Models Engineering Index",
+        "url": "https://git-aarvin.github.io/mei/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-19T23:35:35.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "KeyBanc’s 2026 AI x Software Survey: 24% Median ARR Growth, Only 6% at the Rule of 40, and 43% of Vendors Watching Customers Vibe Code Their Product",
+        "url": "https://www.saastr.com/keybancs-2026-ai-x-software-survey-24-growth-only-6-at-the-rule-of-40-and-43-of-vendors-watching-customers-vibe-code-their-product/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-19T13:00:10.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "onpre",
+      "term": "オンプレミス",
+      "reading": "オンプレミス",
+      "category": "エンタープライズ",
+      "level": 1,
+      "definition": "自社の建物やデータセンターに機材を置いて動かす形です。クラウドの対義語として使われます。",
+      "interview": "金融や公共では今もオンプレが主流。「クラウドが当たり前」は業界によって全く違います。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "nrr",
+      "term": "NRR",
+      "reading": "エヌアールアール",
+      "category": "SaaS指標",
+      "level": 2,
+      "definition": "既存顧客だけを見たときに、売上が1年で何%になったかを示す数字です。解約で減った分と、追加購入で増えた分を差し引きします。100%を超えていれば、新規ゼロでも売上が伸びている状態です。",
+      "interview": "NRRが120%という会社は、既存顧客が勝手に育つ構造を持っています。強いSaaSを見分ける最短の指標です。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 832
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 217
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 811
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 704
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 807
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 502
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 2168
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 709
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 353
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 433
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 2687
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 657
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 194,
+    "eligible": 134
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}

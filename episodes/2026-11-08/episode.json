@@ -1,0 +1,533 @@
+{
+  "id": "2026-11-08",
+  "createdAt": "2026-11-08T23:00:30.230Z",
+  "dateLabel": "11月8日（日）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.2,
+  "generator": "template",
+  "title": "11月8日（日） コクヨが開発部門の「資料散乱」をAIでゼロに 「Notion」をどう使ったか？ ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月8日（日）のテックニュースをお届けします。今日の見出しは5本です。1つ目、コクヨが開発部門の「資料散乱」をAIでゼロに 「Notion」をどう使ったか？。2つ目、ターミナル用ライブラリ［Libghostty 1.0」リリース。Windows版マルチプレクサ「Rex」もまもなく登場予定。3つ目、GitHub - DIYgod/pinky: Let AI agents use your phone, with you in the loop.。4つ目、ドコモ、緊急停止していた「ahamo」サイトを再開--「安全性を確認」と同社。5つ目、Jason’s Takes on This Week’s 20VC: A 72% Cost Drop on Our Own App, the $100M Acquisition Bar, and DoorDash’s Third Competitor。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "コクヨが開発部門の「資料散乱」をAIでゼロに 「Notion」をどう使ったか？",
+      "body": "1本目。ITmedia AI+から、コクヨが開発部門の「資料散乱」をAIでゼロに 「Notion」をどう使ったか？社内に情報は蓄積されているのに、必要な資料が見つからない、十分に活用できない。こうした課題は開発組織でも起こりがちだ。コクヨはNotionとAIエージェントを組み合わせ、情報管理から文書レビューまでを効率化する仕組みづくりに取り組んだ。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "コクヨが開発部門の「資料散乱」をAIでゼロに 「Notion」をどう使ったか？",
+          "url": "https://kn.itmedia.co.jp/kn/article/2611/09/2000002973/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-08T21:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "ターミナル用ライブラリ［Libghostty 1.0」リリース。Windows版マルチプレクサ「Rex」もまもなく登場予定",
+      "body": "2本目。Publickeyから、ターミナル用ライブラリ［Libghostty 1.0」リリース。Windows版マルチプレクサ「Rex」もまもなく登場予定。ターミナルエミュレータ「Ghostty」のコア部分を汎用ライブラリ化した「Libghostty 1.0」正式版がリリースされました。 「Libghostty」は、HashiCorpの共同創業者であり、同社を退社後は個人開発者としてターミナル...エンジニアが盛り上がる話題を知っておくと、社内で話が通じやすくなります。",
+      "refs": [
+        {
+          "title": "ターミナル用ライブラリ［Libghostty 1.0」リリース。Windows版マルチプレクサ「Rex」もまもなく登場予定",
+          "url": "https://www.publickey1.jp/blog/26/libghostty_10windowsrex.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-08T15:09:07.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "GitHub - DIYgod/pinky: Let AI agents use your phone, with you in the loop.",
+      "body": "3本目。はてなブックマーク テクノロジーから、GitHub - DIYgod/pinky: Let AI agents use your phone, with you in the loop.Let any AI agent use your iPhone or Android phone, from macOS, Windows or Linux, with you in the loop.AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "GitHub - DIYgod/pinky: Let AI agents use your phone, with you in the loop.",
+          "url": "https://github.com/DIYgod/pinky",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-08T07:40:07.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "ドコモ、緊急停止していた「ahamo」サイトを再開--「安全性を確認」と同社",
+      "body": "4本目。CNET Japanから、ドコモ、緊急停止していた「ahamo」サイトを再開--「安全性を確認」と同社。NTTドコモは11月8日、緊急メンテナンスで一時停止していた「ahamo」のウェブサイトを再開したと発表した。予防的なセキュリティ対応として停止していたが、サイトの安全性を確認できたという。日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "ドコモ、緊急停止していた「ahamo」サイトを再開--「安全性を確認」と同社",
+          "url": "https://japan.cnet.com/article/35254569/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-08T09:03:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Jason’s Takes on This Week’s 20VC: A 72% Cost Drop on Our Own App, the $100M Acquisition Bar, and DoorDash’s Third Competitor",
+      "body": "5本目。SaaStrから、Jason’s Takes on This Week’s 20VC: A 72% Cost Drop on Our Own App, the $100M Acquisition Bar, and DoorDash’s Third Competitor。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Jason’s Takes on This Week’s 20VC: A 72% Cost Drop on Our Own App, the $100M Acquisition Bar, and DoorDash’s Third Competitor",
+          "url": "https://www.saastr.com/jasons-takes-on-this-weeks-20vc-a-72-cost-drop-on-our-own-app-the-100m-acquisition-bar-and-doordashs-third-competitor/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-08T17:00:28.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、SDK、読み方はエスディーケー。ある機能を自分のアプリに組み込むための道具一式です。APIを使いやすく包んだもの、と捉えておけば実務では困りません。APIが「窓口」なら、SDKは「窓口に行くための定期券と地図」です。次に、バリュエーション、読み方はバリュエーション。企業の値段のことです。調達時に「時価総額いくらとして、何%の株を渡すか」で決まります。調達額そのものより、バリュエーションと調達額の比率のほうが、その会社の勢いを表します。最後に、TAM、SAM、SOM、読み方はタム、サム、ソム。市場規模を3段階で見る枠組みです。TAMは理論上の最大市場、SAMはそのうち自社が狙える範囲、SOMは現実的に取れる範囲を指します。「この会社はどこまで伸びうるか」を自分で見積もる道具になります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。職務経歴書は、前職の業務をそのまま書くより「どの課題を、どう測って、どう改善したか」に翻訳すると、業界が違っても伝わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。SaaStrから、Why Your Revenues Often Only Sort of Matter When You Get Acquired by a Strategic. Even Though They Are Usually How a Deal is Priced。TechCrunchから、He arrested a hacker, then spent 18 months clearing his own name. Now he’s a cybersecurity VC.TechCrunchから、Nvidia will investigate CEO Jensen Huang’s relationship with possible Chinese spy。TechCrunchから、Sequoia partners reportedly blindsided when Roelof Botha joined SpaceX board。Hacker News フロントページから、How I Fight AI Brain Fry。Hacker News フロントページから、Nvidia CEO Jensen Huang's letter to staff about affair。ITmedia AI+から、“おいしい魚”を届けられないかも──スシロー、漁業の危機にどう挑む？ 富士通とタッグ、AIで「海を解剖」するワケ。スシロー、クロシオ水産、富士通などが手を組み、海洋テックを生かした養殖に挑戦している。ITmedia AI+から、「勝手に社外AIを使う」エース社員に困っています……どうすべき？Hacker News フロントページから、Nvidia Board of Directors Is Investigating Jensen Huang。Publickeyから、MCP仕様を完全にサポートしたMCP公式のRuby SDKが登場。「MCP SDK Tier 1」に到達と。はてなブックマーク テクノロジーから、日本ネットワークセキュリティ協会に不正アクセス 最大1.5万件の個人情報漏えいの恐れ。Publickeyから、Excelで帳票レイアウトを作成、CSVデータから簡単に単票や明細付きの帳票を生成できる「AS-DataReport」が新登場［PR］。以上です。",
+      "refs": [
+        {
+          "title": "Why Your Revenues Often Only Sort of Matter When You Get Acquired by a Strategic. Even Though They Are Usually How a Deal is Priced",
+          "url": "https://www.saastr.com/why-your-revenues-only-sort-of-matter-when-you-get-acquired-by-a-strategic-even-though-they-are-usually-how-a-deal-is-priced/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-08T15:10:32.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "He arrested a hacker, then spent 18 months clearing his own name. Now he’s a cybersecurity VC.",
+          "url": "https://techcrunch.com/2026/11/08/the-ex-secret-service-agent-who-flipped-a-hacker-is-now-raising-a-second-250m-cybersecurity-fund/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-08T17:30:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Nvidia will investigate CEO Jensen Huang’s relationship with possible Chinese spy",
+          "url": "https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-08T21:00:11.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Sequoia partners reportedly blindsided when Roelof Botha joined SpaceX board",
+          "url": "https://techcrunch.com/2026/11/08/sequoia-partners-reportedly-blindsided-when-roelof-botha-joined-spacex-board/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-08T19:51:30.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "How I Fight AI Brain Fry",
+          "url": "https://sergeykuhne.com/blog/fighting-ai-brain-fry",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-08T19:37:42.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+          "url": "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-affair-email-to-company",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-08T22:20:09.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "“おいしい魚”を届けられないかも──スシロー、漁業の危機にどう挑む？ 富士通とタッグ、AIで「海を解剖」するワケ",
+          "url": "https://www.itmedia.co.jp/business/articles/2611/09/news039.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-08T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「勝手に社外AIを使う」エース社員に困っています……どうすべき？",
+          "url": "https://www.itmedia.co.jp/business/articles/2611/09/news038.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-08T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Nvidia Board of Directors Is Investigating Jensen Huang",
+          "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-08T20:26:43.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "MCP仕様を完全にサポートしたMCP公式のRuby SDKが登場。「MCP SDK Tier 1」に到達と",
+          "url": "https://www.publickey1.jp/blog/26/mcpmcpruby_sdkmcp_sdk_tier_1.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-08T15:12:29.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "日本ネットワークセキュリティ協会に不正アクセス 最大1.5万件の個人情報漏えいの恐れ",
+          "url": "https://japan.cnet.com/article/35254549/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-07T23:01:33.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS",
+            "CNET Japan"
+          ]
+        },
+        {
+          "title": "Excelで帳票レイアウトを作成、CSVデータから簡単に単票や明細付きの帳票を生成できる「AS-DataReport」が新登場［PR］",
+          "url": "https://www.publickey1.jp/blog/26/excelcsvas-datareportpr.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-08T15:16:44.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "コクヨが開発部門の「資料散乱」をAIでゼロに 「Notion」をどう使ったか？",
+        "url": "https://kn.itmedia.co.jp/kn/article/2611/09/2000002973/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-08T21:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ターミナル用ライブラリ［Libghostty 1.0」リリース。Windows版マルチプレクサ「Rex」もまもなく登場予定",
+        "url": "https://www.publickey1.jp/blog/26/libghostty_10windowsrex.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-08T15:09:07.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "GitHub - DIYgod/pinky: Let AI agents use your phone, with you in the loop.",
+        "url": "https://github.com/DIYgod/pinky",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-08T07:40:07.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ドコモ、緊急停止していた「ahamo」サイトを再開--「安全性を確認」と同社",
+        "url": "https://japan.cnet.com/article/35254569/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-08T09:03:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Jason’s Takes on This Week’s 20VC: A 72% Cost Drop on Our Own App, the $100M Acquisition Bar, and DoorDash’s Third Competitor",
+        "url": "https://www.saastr.com/jasons-takes-on-this-weeks-20vc-a-72-cost-drop-on-our-own-app-the-100m-acquisition-bar-and-doordashs-third-competitor/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-08T17:00:28.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Why Your Revenues Often Only Sort of Matter When You Get Acquired by a Strategic. Even Though They Are Usually How a Deal is Priced",
+        "url": "https://www.saastr.com/why-your-revenues-only-sort-of-matter-when-you-get-acquired-by-a-strategic-even-though-they-are-usually-how-a-deal-is-priced/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-08T15:10:32.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "He arrested a hacker, then spent 18 months clearing his own name. Now he’s a cybersecurity VC.",
+        "url": "https://techcrunch.com/2026/11/08/the-ex-secret-service-agent-who-flipped-a-hacker-is-now-raising-a-second-250m-cybersecurity-fund/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-08T17:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Nvidia will investigate CEO Jensen Huang’s relationship with possible Chinese spy",
+        "url": "https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-08T21:00:11.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Sequoia partners reportedly blindsided when Roelof Botha joined SpaceX board",
+        "url": "https://techcrunch.com/2026/11/08/sequoia-partners-reportedly-blindsided-when-roelof-botha-joined-spacex-board/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-08T19:51:30.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "How I Fight AI Brain Fry",
+        "url": "https://sergeykuhne.com/blog/fighting-ai-brain-fry",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-08T19:37:42.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+        "url": "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-affair-email-to-company",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-08T22:20:09.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "“おいしい魚”を届けられないかも──スシロー、漁業の危機にどう挑む？ 富士通とタッグ、AIで「海を解剖」するワケ",
+        "url": "https://www.itmedia.co.jp/business/articles/2611/09/news039.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-08T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「勝手に社外AIを使う」エース社員に困っています……どうすべき？",
+        "url": "https://www.itmedia.co.jp/business/articles/2611/09/news038.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-08T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Nvidia Board of Directors Is Investigating Jensen Huang",
+        "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-08T20:26:43.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "MCP仕様を完全にサポートしたMCP公式のRuby SDKが登場。「MCP SDK Tier 1」に到達と",
+        "url": "https://www.publickey1.jp/blog/26/mcpmcpruby_sdkmcp_sdk_tier_1.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-08T15:12:29.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "日本ネットワークセキュリティ協会に不正アクセス 最大1.5万件の個人情報漏えいの恐れ",
+        "url": "https://japan.cnet.com/article/35254549/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-07T23:01:33.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS",
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "Excelで帳票レイアウトを作成、CSVデータから簡単に単票や明細付きの帳票を生成できる「AS-DataReport」が新登場［PR］",
+        "url": "https://www.publickey1.jp/blog/26/excelcsvas-datareportpr.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-08T15:16:44.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "sdk",
+      "term": "SDK",
+      "reading": "エスディーケー",
+      "category": "技術",
+      "level": 2,
+      "definition": "ある機能を自分のアプリに組み込むための道具一式です。APIを使いやすく包んだもの、と捉えておけば実務では困りません。",
+      "interview": "APIが「窓口」なら、SDKは「窓口に行くための定期券と地図」です。"
+    },
+    {
+      "id": "valuation",
+      "term": "バリュエーション",
+      "reading": "バリュエーション",
+      "category": "スタートアップ",
+      "level": 2,
+      "definition": "企業の値段のことです。調達時に「時価総額いくらとして、何%の株を渡すか」で決まります。",
+      "interview": "調達額そのものより、バリュエーションと調達額の比率のほうが、その会社の勢いを表します。"
+    },
+    {
+      "id": "tam",
+      "term": "TAM / SAM / SOM",
+      "reading": "タム、サム、ソム",
+      "category": "事業モデル",
+      "level": 3,
+      "definition": "市場規模を3段階で見る枠組みです。TAMは理論上の最大市場、SAMはそのうち自社が狙える範囲、SOMは現実的に取れる範囲を指します。",
+      "interview": "「この会社はどこまで伸びうるか」を自分で見積もる道具になります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 655
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 251
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 921
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 936
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 622
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 487
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 2010
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 891
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 404
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 480
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 3044
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 845
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 194,
+    "eligible": 64
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}
