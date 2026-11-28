@@ -1,0 +1,602 @@
+{
+  "id": "2026-11-14",
+  "createdAt": "2026-11-14T23:13:28.613Z",
+  "dateLabel": "11月14日（土）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.4,
+  "generator": "template",
+  "title": "11月14日（土） AI悪用の攻撃拠点、千台発見 サイトの弱点探索、不正侵入疑い ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月14日（土）のテックニュースをお届けします。今日の見出しは5本です。1つ目、AI悪用の攻撃拠点、千台発見 サイトの弱点探索、不正侵入疑い。2つ目、【追記あり】M365障害、ChatGPT／Claudeのコネクタにも影響 「ほとんどのリクエストで動作しない」。3つ目、SpaceX、スターシップ上段の「箸でキャッチ」に初成功--巨大ロケットの完全再使用に道筋。4つ目、NVIDIAフアン前CEOの復帰求める署名が11万人超 マスク氏らも賛同、米議会は追及継続。5つ目、The AI graveyard: a running list of projects and startups that didn’t make it。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "AI悪用の攻撃拠点、千台発見 サイトの弱点探索、不正侵入疑い",
+      "body": "1本目。はてなブックマーク テクノロジーから、AI悪用の攻撃拠点、千台発見 サイトの弱点探索、不正侵入疑い。高性能な人工知能（AI）を悪用したサイバー攻撃の拠点と疑われるサーバーが10月以降、世界のインターネット上に少なくとも千台前後存在していることが14日、分かった。日本の情報セキュリティー専門機関が海外企業と連携した国際的調査で判明した。国内外のウェブサイトを標的としてAIを使って弱点を探索し、不正侵入を...国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "AI悪用の攻撃拠点、千台発見 サイトの弱点探索、不正侵入疑い",
+          "url": "https://www.47news.jp/15231027.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-14T14:55:47.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "【追記あり】M365障害、ChatGPT／Claudeのコネクタにも影響 「ほとんどのリクエストで動作しない」",
+      "body": "2本目。ITmedia AI+から、【追記あり】M365障害、ChatGPT／Claudeのコネクタにも影響 「ほとんどのリクエストで動作しない」。「Microsoft 365」の複数サービスで障害が発生しており、OpenAIの「ChatGPT」とAnthropicの「Claude」のMicrosoft 365コネクタも正常に動作していないと両社が報告している。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "【追記あり】M365障害、ChatGPT／Claudeのコネクタにも影響 「ほとんどのリクエストで動作しない」",
+          "url": "https://www.itmedia.co.jp/aiplus/article/2611/13/2000003164/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-14T11:35:45.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "SpaceX、スターシップ上段の「箸でキャッチ」に初成功--巨大ロケットの完全再使用に道筋",
+      "body": "3本目。CNET Japanから、SpaceX、スターシップ上段の「箸でキャッチ」に初成功--巨大ロケットの完全再使用に道筋。SpaceXは11月15日朝（以下、日本時間）、大型ロケット「Starship（スターシップ）」の上段宇宙船を地球周回軌道から帰還させ、発射塔のアームで受け止める「タワーキャッチ」に初めて成功した。下段のブースターは海上への着水に切り替えたため、上下段を両方回収する「ダブルキャッチ」にはならなかった。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "SpaceX、スターシップ上段の「箸でキャッチ」に初成功--巨大ロケットの完全再使用に道筋",
+          "url": "https://japan.cnet.com/article/35254889/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-14T21:44:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "NVIDIAフアン前CEOの復帰求める署名が11万人超 マスク氏らも賛同、米議会は追及継続",
+      "body": "4本目。ITmedia NEWSから、NVIDIAフアン前CEOの復帰求める署名が11万人超 マスク氏らも賛同、米議会は追及継続。NVIDIAのジェンスン・フアン前CEOの復帰を求める署名運動が拡大しており、署名サイト「Stand with Jensen」には11万人超が賛同している。イーロン・マスク氏らも名を連ねており、取締役会に公正な調査と退任理由の説明を求めている。米政府や議会による調査も並行して進んでおり、波紋が広がっている。巨大企業の判断は、取引先や下流のサービスにそのまま波及します。",
+      "refs": [
+        {
+          "title": "NVIDIAフアン前CEOの復帰求める署名が11万人超 マスク氏らも賛同、米議会は追及継続",
+          "url": "https://www.itmedia.co.jp/news/article/2611/15/2000003207/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-14T22:15:24.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "The AI graveyard: a running list of projects and startups that didn’t make it",
+      "body": "5本目。TechCrunchから、The AI graveyard: a running list of projects and startups that didn’t make it。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。大手の動きは、業界全体のルールが変わる合図になることがあります。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-14T17:30:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。最後に、チャーンレート、読み方はチャーンレート。解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。職務経歴書は、前職の業務をそのまま書くより「どの課題を、どう測って、どう改善したか」に翻訳すると、業界が違っても伝わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang。はてなブックマーク テクノロジーから、Cognitoの自己サインアップが有効だと、誰でもAWSの一時認証情報を取得できる：AI攻撃ツールARTEXの事例と確認したい設定3点 | DevelopersIO。どうも！SaaStrから、Come Meet Us Live at Granola HQ in SF: Granola’s VP of Sales and I Will Be There to Talk Agents for GTM, What’s Working and What Isn’t。SaaStrから、Our AI VP of Revenue Can’t Close a Deal Yet. But It Co-Closed Two Six-Figure Deals in One Week.TechCrunchから、Transportation secretary blames ‘routine’ equipment upgrade for grounding flights nationwide。はてなブックマーク テクノロジーから、常時稼働エージェントの作り方（Claude公式ブログを資料化）。以下のURLを私のClaude Codeに渡して、スライドをポン出しする実験です。SaaStrから、SaaStr AI App of the Week: SciFin. The Nutanix and Cohesity Founder Raised $44 Million to Build AI for Sales Teams.CNET Japanから、FAA、全米の航空便の地上待機を解除 老朽システムに原因か。CNET Japanから、AIブームで進む「テック業界の人員削減」、小売・金融への波及に懸念。OpenAI Newsから、Introducing ChatGPT Wallet。ITmedia NEWSから、AI×裸眼3Dディスプレイ？ 2D映像をその場で3D化し、見る人の目も追う 現地で確かめた。以上です。",
+      "refs": [
+        {
+          "title": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
+          "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-14T21:41:22.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Cognitoの自己サインアップが有効だと、誰でもAWSの一時認証情報を取得できる：AI攻撃ツールARTEXの事例と確認したい設定3点 | DevelopersIO",
+          "url": "https://dev.classmethod.jp/articles/cognito-self-signup-agentic-attack/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-14T12:48:25.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Come Meet Us Live at Granola HQ in SF: Granola’s VP of Sales and I Will Be There to Talk Agents for GTM, What’s Working and What Isn’t",
+          "url": "https://www.saastr.com/come-meet-us-live-at-granola-hq-in-sf-granolas-vp-of-sales-and-i-will-be-there-to-talk-agents-for-gtm-whats-working-and-what-isnt/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-14T18:00:58.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Our AI VP of Revenue Can’t Close a Deal Yet. But It Co-Closed Two Six-Figure Deals in One Week.",
+          "url": "https://www.saastr.com/our-ai-vp-of-revenue-cant-close-a-deal-yet-it-co-closed-two-six-figure-deals-in-one-week/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-14T15:00:39.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Transportation secretary blames ‘routine’ equipment upgrade for grounding flights nationwide",
+          "url": "https://techcrunch.com/2026/11/14/transportation-secretary-blames-routine-equipment-upgrade-for-grounding-flights-nationwide/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-14T17:45:04.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "常時稼働エージェントの作り方（Claude公式ブログを資料化）",
+          "url": "https://speakerdeck.com/minorun365/jouji-kadou-ejento-no-tsukurikata",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-14T16:06:17.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "SaaStr AI App of the Week: SciFin. The Nutanix and Cohesity Founder Raised $44 Million to Build AI for Sales Teams.",
+          "url": "https://www.saastr.com/saastr-ai-app-of-the-week-scifin-the-nutanix-and-cohesity-founder-raised-44-million-to-close-the-context-gap-in-your-pipeline/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-14T12:00:15.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "FAA、全米の航空便の地上待機を解除 老朽システムに原因か",
+          "url": "https://japan.cnet.com/article/35254882/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-14T08:01:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AIブームで進む「テック業界の人員削減」、小売・金融への波及に懸念",
+          "url": "https://japan.cnet.com/article/35254866/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-13T22:35:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Introducing ChatGPT Wallet",
+          "url": "https://openai.com/index/introducing-chatgpt-wallet",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-11-13T15:00:00.000Z",
+          "alsoReportedBy": [
+            "OpenAI News"
+          ]
+        },
+        {
+          "title": "AI×裸眼3Dディスプレイ？ 2D映像をその場で3D化し、見る人の目も追う 現地で確かめた",
+          "url": "https://www.itmedia.co.jp/news/article/2611/13/2000003195/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-13T14:34:56.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "AI悪用の攻撃拠点、千台発見 サイトの弱点探索、不正侵入疑い",
+        "url": "https://www.47news.jp/15231027.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-14T14:55:47.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "【追記あり】M365障害、ChatGPT／Claudeのコネクタにも影響 「ほとんどのリクエストで動作しない」",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2611/13/2000003164/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-14T11:35:45.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "SpaceX、スターシップ上段の「箸でキャッチ」に初成功--巨大ロケットの完全再使用に道筋",
+        "url": "https://japan.cnet.com/article/35254889/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-14T21:44:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "NVIDIAフアン前CEOの復帰求める署名が11万人超 マスク氏らも賛同、米議会は追及継続",
+        "url": "https://www.itmedia.co.jp/news/article/2611/15/2000003207/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-14T22:15:24.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+        "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-14T17:30:00.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
+        "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-14T21:41:22.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Cognitoの自己サインアップが有効だと、誰でもAWSの一時認証情報を取得できる：AI攻撃ツールARTEXの事例と確認したい設定3点 | DevelopersIO",
+        "url": "https://dev.classmethod.jp/articles/cognito-self-signup-agentic-attack/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-14T12:48:25.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Come Meet Us Live at Granola HQ in SF: Granola’s VP of Sales and I Will Be There to Talk Agents for GTM, What’s Working and What Isn’t",
+        "url": "https://www.saastr.com/come-meet-us-live-at-granola-hq-in-sf-granolas-vp-of-sales-and-i-will-be-there-to-talk-agents-for-gtm-whats-working-and-what-isnt/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-14T18:00:58.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Our AI VP of Revenue Can’t Close a Deal Yet. But It Co-Closed Two Six-Figure Deals in One Week.",
+        "url": "https://www.saastr.com/our-ai-vp-of-revenue-cant-close-a-deal-yet-it-co-closed-two-six-figure-deals-in-one-week/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-14T15:00:39.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Transportation secretary blames ‘routine’ equipment upgrade for grounding flights nationwide",
+        "url": "https://techcrunch.com/2026/11/14/transportation-secretary-blames-routine-equipment-upgrade-for-grounding-flights-nationwide/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-14T17:45:04.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "常時稼働エージェントの作り方（Claude公式ブログを資料化）",
+        "url": "https://speakerdeck.com/minorun365/jouji-kadou-ejento-no-tsukurikata",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-14T16:06:17.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "SaaStr AI App of the Week: SciFin. The Nutanix and Cohesity Founder Raised $44 Million to Build AI for Sales Teams.",
+        "url": "https://www.saastr.com/saastr-ai-app-of-the-week-scifin-the-nutanix-and-cohesity-founder-raised-44-million-to-close-the-context-gap-in-your-pipeline/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-14T12:00:15.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "FAA、全米の航空便の地上待機を解除 老朽システムに原因か",
+        "url": "https://japan.cnet.com/article/35254882/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-14T08:01:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AIブームで進む「テック業界の人員削減」、小売・金融への波及に懸念",
+        "url": "https://japan.cnet.com/article/35254866/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-13T22:35:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Introducing ChatGPT Wallet",
+        "url": "https://openai.com/index/introducing-chatgpt-wallet",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-11-13T15:00:00.000Z",
+        "alsoReportedBy": [
+          "OpenAI News"
+        ]
+      },
+      {
+        "title": "AI×裸眼3Dディスプレイ？ 2D映像をその場で3D化し、見る人の目も追う 現地で確かめた",
+        "url": "https://www.itmedia.co.jp/news/article/2611/13/2000003195/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-13T14:34:56.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    },
+    {
+      "id": "churn",
+      "term": "チャーンレート",
+      "reading": "チャーンレート",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。",
+      "interview": "「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 599
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 166
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 932
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 912
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 667
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 489
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1130
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 891
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1116
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 610
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": false,
+      "error": "fetch failed",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://hnrss.org/frontpage",
+          "error": "fetch failed"
+        },
+        {
+          "url": "https://news.ycombinator.com/rss",
+          "error": "HTTP 419"
+        }
+      ],
+      "elapsedMs": 10790
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 2310
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 9,
+    "fetched": 185,
+    "unique": 174,
+    "eligible": 49
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 56.89
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "AI悪用の攻撃拠点、千台発見 サイトの弱点探索、不正侵入疑い",
+      "startSec": 56.89,
+      "endSec": 102.08
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "【追記あり】M365障害、ChatGPT／Claudeのコネクタにも影響 「ほとんどのリクエストで動作しない」",
+      "startSec": 102.08,
+      "endSec": 140.71
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "SpaceX、スターシップ上段の「箸でキャッチ」に初成功--巨大ロケットの完全再使用に道筋",
+      "startSec": 140.71,
+      "endSec": 185.35
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "NVIDIAフアン前CEOの復帰求める署名が11万人超 マスク氏らも賛同、米議会は追及継続",
+      "startSec": 185.35,
+      "endSec": 227.83
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "The AI graveyard: a running list of projects and startups that didn’t make it",
+      "startSec": 227.83,
+      "endSec": 260.12
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 260.12,
+      "endSec": 373.44
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 373.44,
+      "endSec": 386.71
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 386.71,
+      "endSec": 515.24
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 515.24,
+      "endSec": 525.72
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 25234476,
+    "durationSec": 525.72
+  }
+}

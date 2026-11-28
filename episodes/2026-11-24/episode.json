@@ -1,0 +1,547 @@
+{
+  "id": "2026-11-24",
+  "createdAt": "2026-11-24T04:21:38.621Z",
+  "dateLabel": "11月24日（火）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.9,
+  "generator": "template",
+  "title": "11月24日（火） CrowdStrike、Zscalerを約439億ドルで買収へ 狙いはAIエージェントの安全確保 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月24日（火）のテックニュースをお届けします。今日の見出しは5本です。1つ目、CrowdStrike、Zscalerを約439億ドルで買収へ 狙いはAIエージェントの安全確保。2つ目、事務職新卒「減らす」2割 採用意向、AI普及が影響（共同通信） - Yahoo!ニュース。3つ目、PostgreSQL 19正式リリース。ノンブロッキングなREPACKやI/Oワーカーのオートスケールなど新機能。4つ目、Metaの温室効果ガス排出量が45％増 2030年の実質ゼロ期限を再検討。5つ目、SpaceXをオレゴン州とバージニア州が提訴 Grokの性的画像生成で。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "CrowdStrike、Zscalerを約439億ドルで買収へ 狙いはAIエージェントの安全確保",
+      "body": "1本目。ITmedia AI+から、CrowdStrike、Zscalerを約439億ドルで買収へ 狙いはAIエージェントの安全確保。CrowdStrikeは、ネットワークセキュリティ大手のZscalerを全額株式交換で買収すると発表した。Zscalerの企業価値は約7兆円。Zscalerの「Zero Trust Exchange」などを「Falcon」基盤に統合し、AIエージェントの保護を強化する。統合後の年間経常収益は100億ドルを超える見込みだ。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "CrowdStrike、Zscalerを約439億ドルで買収へ 狙いはAIエージェントの安全確保",
+          "url": "https://www.itmedia.co.jp/news/article/2611/24/2000003398/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-23T22:20:30.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "事務職新卒「減らす」2割 採用意向、AI普及が影響（共同通信） - Yahoo!ニュース",
+      "body": "2本目。はてなブックマーク テクノロジーから、事務職新卒「減らす」2割 採用意向、AI普及が影響（共同通信） - Yahoo!ニュース。AIの普及を踏まえた企業の新卒採用の意向（KYODONEWS） 人工知能（AI）の普及を受け、2割の企業が事務職の新卒採用を「減らす」とした調査結果を、就職情報会社のマイナビがまとめた。一方でIT系や、代替されにくい現場職は採用増の意向が目立った。今後、AIの利用がさらに進めば、企業の求める人材と学生の志望とのず...AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "事務職新卒「減らす」2割 採用意向、AI普及が影響（共同通信） - Yahoo!ニュース",
+          "url": "https://news.yahoo.co.jp/articles/d05d80269b744ac2d480008e296670167cad73ba",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-23T23:48:25.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "PostgreSQL 19正式リリース。ノンブロッキングなREPACKやI/Oワーカーのオートスケールなど新機能",
+      "body": "3本目。Publickeyから、PostgreSQL 19正式リリース。ノンブロッキングなREPACKやI/Oワーカーのオートスケールなど新機能。オープンソースのリレーショナルデータベース「PostgreSQL」の最新版となる「PostgreSQL 19」正式版がリリースされました（日本語のプレスリリース）。 PostgreSQLは毎年9月もしくは10月にメジャーバージョンアップが行...このニュースははてなブックマーク テクノロジーでも同時に取り上げられています。それだけ注目度が高い話題です。新機能のニュースは、競合がどこを脅威だと思っているかの裏返しでもあります。",
+      "refs": [
+        {
+          "title": "PostgreSQL 19正式リリース。ノンブロッキングなREPACKやI/Oワーカーのオートスケールなど新機能",
+          "url": "https://www.publickey1.jp/blog/26/postgresql_19repackio.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-23T15:45:37.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "Metaの温室効果ガス排出量が45％増 2030年の実質ゼロ期限を再検討",
+      "body": "4本目。CNET Japanから、Metaの温室効果ガス排出量が45％増 2030年の実質ゼロ期限を再検討。ほかの巨大IT企業と同じく、Metaは人工知能（AI）とその稼働に必要なデータセンターを優先し、気候目標を犠牲にしている。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "Metaの温室効果ガス排出量が45％増 2030年の実質ゼロ期限を再検討",
+          "url": "https://japan.cnet.com/article/35255321/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-24T03:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "SpaceXをオレゴン州とバージニア州が提訴 Grokの性的画像生成で",
+      "body": "5本目。ITmedia NEWSから、SpaceXをオレゴン州とバージニア州が提訴 Grokの性的画像生成で。オレゴン州とバージニア州は、AI「Grok」が児童性的虐待コンテンツ（CSAM）や同意のない性的画像を生成・拡散したとしてSpaceXなどを提訴したと発表した。両州は「Spicy」モードなどで安全策を無視し、消費者を欺いたと主張。一方、Xの安全対策アカウントは悪用に対し保護策を強化したと説明している。新機能のニュースは、競合がどこを脅威だと思っているかの裏返しでもあります。",
+      "refs": [
+        {
+          "title": "SpaceXをオレゴン州とバージニア州が提訴 Grokの性的画像生成で",
+          "url": "https://www.itmedia.co.jp/news/article/2611/24/2000003399/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-23T23:39:38.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、ゼロトラスト、読み方はゼロトラスト。社内ネットワークの中だから安全、とは考えず、すべてのアクセスを毎回疑って確認する設計方針です。リモートワークの普及で主流になりました。「境界を守る」から「一つひとつを確認する」への転換、と一言で言えると伝わります。最後に、バリュエーション、読み方はバリュエーション。企業の値段のことです。調達時に「時価総額いくらとして、何%の株を渡すか」で決まります。調達額そのものより、バリュエーションと調達額の比率のほうが、その会社の勢いを表します。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。志望動機は「業界が伸びているから」だけだと弱くなります。どのニュースを見て何を面白いと思ったのか、具体的な一本があると説得力が変わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。ITmedia AI+から、Anthropic、PRのレビューから修正、承認までをAIで支援する「Claude Ship」公開。ITmedia AI+から、国内で採れないAI人材、インドで確保 “日本に呼ばない”開発ラボをZenkenが始めた理由。生成AIの普及で、企業が求めるエンジニア像は変わった。Hacker News フロントページから、New York Bans Subscription and Post-Purchase Fees on Cars。はてなブックマーク テクノロジーから、【ブラックフライデーで買いたいUdemyのAI関連講座】Claude Code、MCP、ハーネス設計など、AIとコーディングエージェントを「使いこなす」ための人気講座をまとめてレビュー！ - はてなニュース。▼大定番のClaude Codeを使い倒す！Hacker News フロントページから、Zero data retention with Enterprise Frontier Safeguards is now in beta。はてなブックマーク テクノロジーから、Museに後れを取るアップルとグーグル AIエージェント戦争のジレンマ【西田宗千佳のイマトミライ】。OpenAI Newsから、OpenAI and Cisco introduce Shirudo。Hacker News フロントページから、Show HN: Juncts, one DM inbox for five apps that Claude and ChatGPT can work in。TechCrunchから、Supertake raises $20M to let AI agents turn your market predictions into stock portfolios。TechCrunchから、Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes。Publickeyから、DHH氏が開発する「Omarchy 4.5」リリース。一般的なマルチウィンドウをサポート。最速7秒で導入、Appleシリコン対応、Webアプリ版MS Office用ランチャーなど新機能。TechCrunchから、Google Search’s AI Mode can now tap into Drive and Wallet for more personalized responses。以上です。",
+      "refs": [
+        {
+          "title": "Anthropic、PRのレビューから修正、承認までをAIで支援する「Claude Ship」公開",
+          "url": "https://www.itmedia.co.jp/aiplus/article/2611/24/2000003404/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-24T01:21:04.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "国内で採れないAI人材、インドで確保 “日本に呼ばない”開発ラボをZenkenが始めた理由",
+          "url": "https://www.itmedia.co.jp/aiplus/article/2611/24/2000003396/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-24T01:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "New York Bans Subscription and Post-Purchase Fees on Cars",
+          "url": "https://www.governor.ny.gov/news/money-your-pockets-governor-hochul-signs-bill-restricting-exploitative-vehicle-subscription",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-24T02:27:02.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        },
+        {
+          "title": "【ブラックフライデーで買いたいUdemyのAI関連講座】Claude Code、MCP、ハーネス設計など、AIとコーディングエージェントを「使いこなす」ための人気講座をまとめてレビュー！ - はてなニュース",
+          "url": "https://hatenanews.com/articles/2026/11/24/093000",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-24T00:49:11.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Zero data retention with Enterprise Frontier Safeguards is now in beta",
+          "url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-24T03:15:38.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Museに後れを取るアップルとグーグル AIエージェント戦争のジレンマ【西田宗千佳のイマトミライ】",
+          "url": "https://www.watch.impress.co.jp/docs/series/nishida/2158551.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-24T00:16:14.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "OpenAI and Cisco introduce Shirudo",
+          "url": "https://openai.com/index/introducing-shirudo",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-11-23T21:20:00.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        },
+        {
+          "title": "Show HN: Juncts, one DM inbox for five apps that Claude and ChatGPT can work in",
+          "url": "https://juncts.com/app?demo=1&utm_source=hackernews&utm_medium=launch&utm_campaign=launch-nov26",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-24T03:16:58.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Supertake raises $20M to let AI agents turn your market predictions into stock portfolios",
+          "url": "https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-23T22:02:05.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+          "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-23T22:05:50.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "DHH氏が開発する「Omarchy 4.5」リリース。一般的なマルチウィンドウをサポート。最速7秒で導入、Appleシリコン対応、Webアプリ版MS Office用ランチャーなど新機能",
+          "url": "https://www.publickey1.jp/blog/26/dhhomarchy_457applewebms_office.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-23T15:49:45.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        },
+        {
+          "title": "Google Search’s AI Mode can now tap into Drive and Wallet for more personalized responses",
+          "url": "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-23T19:14:46.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "CrowdStrike、Zscalerを約439億ドルで買収へ 狙いはAIエージェントの安全確保",
+        "url": "https://www.itmedia.co.jp/news/article/2611/24/2000003398/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-23T22:20:30.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "事務職新卒「減らす」2割 採用意向、AI普及が影響（共同通信） - Yahoo!ニュース",
+        "url": "https://news.yahoo.co.jp/articles/d05d80269b744ac2d480008e296670167cad73ba",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-23T23:48:25.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "PostgreSQL 19正式リリース。ノンブロッキングなREPACKやI/Oワーカーのオートスケールなど新機能",
+        "url": "https://www.publickey1.jp/blog/26/postgresql_19repackio.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-23T15:45:37.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "Metaの温室効果ガス排出量が45％増 2030年の実質ゼロ期限を再検討",
+        "url": "https://japan.cnet.com/article/35255321/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-24T03:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "SpaceXをオレゴン州とバージニア州が提訴 Grokの性的画像生成で",
+        "url": "https://www.itmedia.co.jp/news/article/2611/24/2000003399/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-23T23:39:38.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Anthropic、PRのレビューから修正、承認までをAIで支援する「Claude Ship」公開",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2611/24/2000003404/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-24T01:21:04.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "国内で採れないAI人材、インドで確保 “日本に呼ばない”開発ラボをZenkenが始めた理由",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2611/24/2000003396/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-24T01:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "New York Bans Subscription and Post-Purchase Fees on Cars",
+        "url": "https://www.governor.ny.gov/news/money-your-pockets-governor-hochul-signs-bill-restricting-exploitative-vehicle-subscription",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-24T02:27:02.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "【ブラックフライデーで買いたいUdemyのAI関連講座】Claude Code、MCP、ハーネス設計など、AIとコーディングエージェントを「使いこなす」ための人気講座をまとめてレビュー！ - はてなニュース",
+        "url": "https://hatenanews.com/articles/2026/11/24/093000",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-24T00:49:11.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Zero data retention with Enterprise Frontier Safeguards is now in beta",
+        "url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-24T03:15:38.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Museに後れを取るアップルとグーグル AIエージェント戦争のジレンマ【西田宗千佳のイマトミライ】",
+        "url": "https://www.watch.impress.co.jp/docs/series/nishida/2158551.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-24T00:16:14.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAI and Cisco introduce Shirudo",
+        "url": "https://openai.com/index/introducing-shirudo",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-11-23T21:20:00.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "Show HN: Juncts, one DM inbox for five apps that Claude and ChatGPT can work in",
+        "url": "https://juncts.com/app?demo=1&utm_source=hackernews&utm_medium=launch&utm_campaign=launch-nov26",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-24T03:16:58.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Supertake raises $20M to let AI agents turn your market predictions into stock portfolios",
+        "url": "https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-23T22:02:05.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+        "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-23T22:05:50.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "DHH氏が開発する「Omarchy 4.5」リリース。一般的なマルチウィンドウをサポート。最速7秒で導入、Appleシリコン対応、Webアプリ版MS Office用ランチャーなど新機能",
+        "url": "https://www.publickey1.jp/blog/26/dhhomarchy_457applewebms_office.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-23T15:49:45.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "Google Search’s AI Mode can now tap into Drive and Wallet for more personalized responses",
+        "url": "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-23T19:14:46.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "zero-trust",
+      "term": "ゼロトラスト",
+      "reading": "ゼロトラスト",
+      "category": "セキュリティ",
+      "level": 2,
+      "definition": "社内ネットワークの中だから安全、とは考えず、すべてのアクセスを毎回疑って確認する設計方針です。リモートワークの普及で主流になりました。",
+      "interview": "「境界を守る」から「一つひとつを確認する」への転換、と一言で言えると伝わります。"
+    },
+    {
+      "id": "valuation",
+      "term": "バリュエーション",
+      "reading": "バリュエーション",
+      "category": "スタートアップ",
+      "level": 2,
+      "definition": "企業の値段のことです。調達時に「時価総額いくらとして、何%の株を渡すか」で決まります。",
+      "interview": "調達額そのものより、バリュエーションと調達額の比率のほうが、その会社の勢いを表します。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 730
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 197
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 764
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 785
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 754
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 319
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1593
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 748
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 394
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 449
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 645
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 670
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 194,
+    "eligible": 93
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}

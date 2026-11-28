@@ -1,0 +1,542 @@
+{
+  "id": "2026-11-25",
+  "createdAt": "2026-11-25T03:06:49.874Z",
+  "dateLabel": "11月25日（水）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.6,
+  "generator": "template",
+  "title": "11月25日（水） 「Claude」で作ったアプリをMac／Windowsにインストール可能に 全プランでβ提供 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月25日（水）のテックニュースをお届けします。今日の見出しは5本です。1つ目、「Claude」で作ったアプリをMac／Windowsにインストール可能に 全プランでβ提供。2つ目、競合の価格改定や製品の更新を追って営業資料をつくる「Steve AI」のTrissino、累計124万ドルを調達。3つ目、米クラウドストライク、ゼットスケーラーを約7兆円で買収へ AI時代のセキュリティー需要狙う。4つ目、ずっしり重い新型ウォークマン 歴代最高65万円なぜここまで高級化：朝日新聞。5つ目、AWS、DynamoDB互換データベースをローカルマシンで構築可能にするオープンソース「ExtendDB」がバージョン1.0に到達。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "「Claude」で作ったアプリをMac／Windowsにインストール可能に 全プランでβ提供",
+      "body": "1本目。ITmedia AI+から、「Claude」で作ったアプリをMac／Windowsにインストール可能に 全プランでβ提供。Anthropicは、AIアシスタント「Claude」で作成したアーティファクトをMac／Windows向けのデスクトップアプリとして導入できる「Install as app」を全プラン向けにβ提供すると発表した。専用ウィンドウで動作し、通知やメニューバー表示、許可に応じたファイル操作にも対応する。このニュースははてなブックマーク テクノロジーとITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "「Claude」で作ったアプリをMac／Windowsにインストール可能に 全プランでβ提供",
+          "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003431/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-25T01:07:59.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー",
+            "ITmedia NEWS",
+            "CNET Japan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "競合の価格改定や製品の更新を追って営業資料をつくる「Steve AI」のTrissino、累計124万ドルを調達",
+      "body": "2本目。THE BRIDGEから、競合の価格改定や製品の更新を追って営業資料をつくる「Steve AI」のTrissino、累計124万ドルを調達。米国サンフランシスコに本社を置き、B2B ソフトウェア企業向けの AI エージェント「Steve AI」を開発する Trissino は24日、累計124万ドル（約2億円）を調達したと発表した。引受先は ANOBAKA、 […]。日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "競合の価格改定や製品の更新を追って営業資料をつくる「Steve AI」のTrissino、累計124万ドルを調達",
+          "url": "https://thebridge.jp/2026/11/trissino-steve-ai-1-24m",
+          "sourceName": "THE BRIDGE",
+          "publishedAt": "2026-11-25T01:55:23.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "米クラウドストライク、ゼットスケーラーを約7兆円で買収へ AI時代のセキュリティー需要狙う",
+      "body": "3本目。CNET Japanから、米クラウドストライク、ゼットスケーラーを約7兆円で買収へ AI時代のセキュリティー需要狙う。米サイバーセキュリティー企業のCrowdStrikeは11月23日、企業のネットワーク通信を保護する米Zscalerの買収で合意したと発表した。買収後は、パソコンやサーバーを守る同社のセキュリティー基盤「Falcon」に、端末とクラウドサービスなどの間の通信を守るZscalerの機能を組み込む。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "米クラウドストライク、ゼットスケーラーを約7兆円で買収へ AI時代のセキュリティー需要狙う",
+          "url": "https://japan.cnet.com/article/35255373/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-25T02:50:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "ずっしり重い新型ウォークマン 歴代最高65万円なぜここまで高級化：朝日新聞",
+      "body": "4本目。はてなブックマーク テクノロジーから、ずっしり重い新型ウォークマン 歴代最高65万円なぜここまで高級化：朝日新聞。ソニーは27日に携帯音楽プレーヤー「ウォークマン」の新型モデルを売り出す。発売前から話題を集めるのは、その価格だ。旗艦商品は約65万5千円（市場推定価格、税込み）と4年半前に出した1代前のモデルより…。日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "ずっしり重い新型ウォークマン 歴代最高65万円なぜここまで高級化：朝日新聞",
+          "url": "https://www.asahi.com/articles/ASVCN2QXSVCNULFA01XM.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-24T23:35:54.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "AWS、DynamoDB互換データベースをローカルマシンで構築可能にするオープンソース「ExtendDB」がバージョン1.0に到達",
+      "body": "5本目。Publickeyから、AWS、DynamoDB互換データベースをローカルマシンで構築可能にするオープンソース「ExtendDB」がバージョン1.0に到達。Amazon Web Services（AWS）は、同社がクラウドサービスとして提供しているNoSQLデータベース「Amazon DynamoDB」の互換データベースを、Windows、Linux、macOSなどのOSに対応したユーザーのロ...このニュースははてなブックマーク テクノロジーでも同時に取り上げられています。それだけ注目度が高い話題です。クラウド基盤の話は、その上で動くサービス全部に影響します。地味ですが土台の話です。",
+      "refs": [
+        {
+          "title": "AWS、DynamoDB互換データベースをローカルマシンで構築可能にするオープンソース「ExtendDB」がバージョン1.0に到達",
+          "url": "https://www.publickey1.jp/blog/26/awsdynamodbextenddb10.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-24T15:19:30.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、シード、シリーズA・B・C、読み方はシード、シリーズエー。スタートアップの資金調達の段階です。シードは製品を作り始める頃、シリーズAはPMFが見え始めた頃、BやCは営業や採用で一気に広げる段階を指します。段階ごとに社内の整い具合が全く違います。「整っていない環境を面白がれるか」は自己分析の材料になります。次に、MQL、SQL、読み方はエムキューエル、エスキューエル。見込み客の温度感を表す区分です。MQLはマーケティング側が「見込みあり」と判断した段階、SQLは営業が「商談になる」と認めた段階を指します。データベースのSQLとは全くの別物です。文脈で見分けてください。最後に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。知らない用語が出てきたら、その場で調べるより一度メモして夜にまとめて潰すほうが続きます。完璧に理解しようとしないことが、続けるコツです。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。ITmedia AI+から、AIエージェントは隙あらばサンドボックスの外に出るのか Anthropicが評価手法「Siren」を発表。ITmedia AI+から、音楽サービスのTIDAL、AI生成楽曲を削除・受付停止へ 直近90日の配信楽曲の43％がAI生成。THE BRIDGEから、現場で数分で部品を交換できるヒューマノイドのO-ID、プレシードで120万ドルを調達。TechCrunchから、Anthropic shares fall below IPO price, a worrying sign for AI startups。THE BRIDGEから、自分の考えをAIで投資に変えるSupertake、シードで2,000万ドルを調達。TechCrunchから、Even the best AI agents struggle with everyday life。Hacker News フロントページから、PenGPT: A Generative Transformer for Handwriting and Sketches。ITmedia NEWSから、復旧費用1000万円超が6割 被害相次ぐサイバー攻撃、保険広がるも中小企業に死角。サイバー攻撃の脅威がが増す中、「サイバー保険」に加入する企業が増えている。TechCrunchから、Maple raises $5.3M to build AI products that protect your data, even from itself。はてなブックマーク テクノロジーから、楽天証券、約441万件の個人情報漏えいを確認 168万口座の資産残高も流出。Publickeyから、jQuery 4.1正式版がリリース、内部実装をquerySelectorAllに統一でより高速に。jQuery 3.x系最後となるjQuery 3.8も同時リリース。はてなブックマーク テクノロジーから、楽天証券、顧客からの預かり資産残高168万件漏洩 性別や国籍も - 日本経済新聞。不正アクセスによる顧客情報流出を巡って楽天証券は24日、追加の調査結果を公表した。以上です。",
+      "refs": [
+        {
+          "title": "AIエージェントは隙あらばサンドボックスの外に出るのか Anthropicが評価手法「Siren」を発表",
+          "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003430/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-24T22:41:42.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "音楽サービスのTIDAL、AI生成楽曲を削除・受付停止へ 直近90日の配信楽曲の43％がAI生成",
+          "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003433/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-25T01:57:02.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        },
+        {
+          "title": "現場で数分で部品を交換できるヒューマノイドのO-ID、プレシードで120万ドルを調達",
+          "url": "https://thebridge.jp/2026/11/o-id-pre-seed-1-2m",
+          "sourceName": "THE BRIDGE",
+          "publishedAt": "2026-11-25T01:34:08.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Anthropic shares fall below IPO price, a worrying sign for AI startups",
+          "url": "https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-24T18:30:42.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "自分の考えをAIで投資に変えるSupertake、シードで2,000万ドルを調達",
+          "url": "https://thebridge.jp/2026/11/supertake-raises-20m-seed",
+          "sourceName": "THE BRIDGE",
+          "publishedAt": "2026-11-25T01:32:31.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Even the best AI agents struggle with everyday life",
+          "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-24T21:33:29.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "PenGPT: A Generative Transformer for Handwriting and Sketches",
+          "url": "https://greydanus.github.io/2026/11/12/pengpt/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-25T00:54:49.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "復旧費用1000万円超が6割 被害相次ぐサイバー攻撃、保険広がるも中小企業に死角",
+          "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003436/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-25T02:22:20.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Maple raises $5.3M to build AI products that protect your data, even from itself",
+          "url": "https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-24T21:19:52.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "楽天証券、約441万件の個人情報漏えいを確認 168万口座の資産残高も流出",
+          "url": "https://japan.cnet.com/article/35255354/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-24T22:17:25.000Z",
+          "alsoReportedBy": [
+            "CNET Japan"
+          ]
+        },
+        {
+          "title": "jQuery 4.1正式版がリリース、内部実装をquerySelectorAllに統一でより高速に。jQuery 3.x系最後となるjQuery 3.8も同時リリース",
+          "url": "https://www.publickey1.jp/blog/26/jquery_41queryselectoralljquery_3xjquery_38.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-24T15:15:39.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        },
+        {
+          "title": "楽天証券、顧客からの預かり資産残高168万件漏洩 性別や国籍も - 日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOUB24AXS0U6A121C2000000/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-24T21:28:35.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "「Claude」で作ったアプリをMac／Windowsにインストール可能に 全プランでβ提供",
+        "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003431/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-25T01:07:59.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー",
+          "ITmedia NEWS",
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "競合の価格改定や製品の更新を追って営業資料をつくる「Steve AI」のTrissino、累計124万ドルを調達",
+        "url": "https://thebridge.jp/2026/11/trissino-steve-ai-1-24m",
+        "sourceName": "THE BRIDGE",
+        "publishedAt": "2026-11-25T01:55:23.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "米クラウドストライク、ゼットスケーラーを約7兆円で買収へ AI時代のセキュリティー需要狙う",
+        "url": "https://japan.cnet.com/article/35255373/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-25T02:50:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ずっしり重い新型ウォークマン 歴代最高65万円なぜここまで高級化：朝日新聞",
+        "url": "https://www.asahi.com/articles/ASVCN2QXSVCNULFA01XM.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-24T23:35:54.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AWS、DynamoDB互換データベースをローカルマシンで構築可能にするオープンソース「ExtendDB」がバージョン1.0に到達",
+        "url": "https://www.publickey1.jp/blog/26/awsdynamodbextenddb10.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-24T15:19:30.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      }
+    ],
+    "roundup": [
+      {
+        "title": "AIエージェントは隙あらばサンドボックスの外に出るのか Anthropicが評価手法「Siren」を発表",
+        "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003430/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-24T22:41:42.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "音楽サービスのTIDAL、AI生成楽曲を削除・受付停止へ 直近90日の配信楽曲の43％がAI生成",
+        "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003433/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-25T01:57:02.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "現場で数分で部品を交換できるヒューマノイドのO-ID、プレシードで120万ドルを調達",
+        "url": "https://thebridge.jp/2026/11/o-id-pre-seed-1-2m",
+        "sourceName": "THE BRIDGE",
+        "publishedAt": "2026-11-25T01:34:08.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Anthropic shares fall below IPO price, a worrying sign for AI startups",
+        "url": "https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-24T18:30:42.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "自分の考えをAIで投資に変えるSupertake、シードで2,000万ドルを調達",
+        "url": "https://thebridge.jp/2026/11/supertake-raises-20m-seed",
+        "sourceName": "THE BRIDGE",
+        "publishedAt": "2026-11-25T01:32:31.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Even the best AI agents struggle with everyday life",
+        "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-24T21:33:29.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "PenGPT: A Generative Transformer for Handwriting and Sketches",
+        "url": "https://greydanus.github.io/2026/11/12/pengpt/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-25T00:54:49.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "復旧費用1000万円超が6割 被害相次ぐサイバー攻撃、保険広がるも中小企業に死角",
+        "url": "https://www.itmedia.co.jp/news/article/2611/25/2000003436/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-25T02:22:20.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Maple raises $5.3M to build AI products that protect your data, even from itself",
+        "url": "https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-24T21:19:52.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "楽天証券、約441万件の個人情報漏えいを確認 168万口座の資産残高も流出",
+        "url": "https://japan.cnet.com/article/35255354/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-24T22:17:25.000Z",
+        "alsoReportedBy": [
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "jQuery 4.1正式版がリリース、内部実装をquerySelectorAllに統一でより高速に。jQuery 3.x系最後となるjQuery 3.8も同時リリース",
+        "url": "https://www.publickey1.jp/blog/26/jquery_41queryselectoralljquery_3xjquery_38.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-24T15:15:39.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "楽天証券、顧客からの預かり資産残高168万件漏洩 性別や国籍も - 日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZQOUB24AXS0U6A121C2000000/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-24T21:28:35.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "series",
+      "term": "シード / シリーズA・B・C",
+      "reading": "シード、シリーズエー",
+      "category": "スタートアップ",
+      "level": 1,
+      "definition": "スタートアップの資金調達の段階です。シードは製品を作り始める頃、シリーズAはPMFが見え始めた頃、BやCは営業や採用で一気に広げる段階を指します。",
+      "interview": "段階ごとに社内の整い具合が全く違います。「整っていない環境を面白がれるか」は自己分析の材料になります。"
+    },
+    {
+      "id": "mql-sql",
+      "term": "MQL / SQL",
+      "reading": "エムキューエル、エスキューエル",
+      "category": "組織",
+      "level": 3,
+      "definition": "見込み客の温度感を表す区分です。MQLはマーケティング側が「見込みあり」と判断した段階、SQLは営業が「商談になる」と認めた段階を指します。",
+      "interview": "データベースのSQLとは全くの別物です。文脈で見分けてください。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 517
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 144
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 329
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 215
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 445
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 219
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1130
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://thebridge.jp/feed",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 180
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 168
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 176
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 2705
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 185
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 11,
+    "fetched": 225,
+    "unique": 213,
+    "eligible": 139
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}

@@ -1,0 +1,607 @@
+{
+  "id": "2026-11-15",
+  "createdAt": "2026-11-15T23:27:47.190Z",
+  "dateLabel": "11月15日（日）",
+  "durationMin": 10,
+  "estimatedMinutes": 10.1,
+  "generator": "template",
+  "title": "11月15日（日） ライセンス更新を機に「脱マクロ」 オートバックスセブンがGeminiで目指す売上高5000億円 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月15日（日）のテックニュースをお届けします。今日の見出しは5本です。1つ目、ライセンス更新を機に「脱マクロ」 オートバックスセブンがGeminiで目指す売上高5000億円。2つ目、テスラ「Cybercab」、購入しても別途「月5万円のサブスク契約」が必要 払わないと走行不可。3つ目、PostgreSQL 19リリース延期の背景。β4で多くの新機能取り下げが発生、原因はAIによるコードレビューか。4つ目、Museに雑に投げて頭を空けておく - taxin.dev。5つ目、Our new blog for science。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "ライセンス更新を機に「脱マクロ」 オートバックスセブンがGeminiで目指す売上高5000億円",
+      "body": "1本目。ITmedia AI+から、ライセンス更新を機に「脱マクロ」 オートバックスセブンがGeminiで目指す売上高5000億円。オートバックスセブンは2032年度の売上高5000億円を目指してGoogle WorkspaceとGeminiを導入した。従来の表計算ソフトからの移行とAI活用の全社展開を図る。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "ライセンス更新を機に「脱マクロ」 オートバックスセブンがGeminiで目指す売上高5000億円",
+          "url": "https://kn.itmedia.co.jp/kn/article/2611/16/2000003181/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-15T22:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "テスラ「Cybercab」、購入しても別途「月5万円のサブスク契約」が必要 払わないと走行不可",
+      "body": "2本目。CNET Japanから、テスラ「Cybercab」、購入しても別途「月5万円のサブスク契約」が必要 払わないと走行不可。テスラは自動運転車「Cybercab」の個人購入に向け、一部の顧客への招待を始めたと11月14日（日本時間）に発表した。公開した注文画面では、車両価格は税別2万9990ドルで、走行には月額299ドル（税別）の「Autonomy Subscription」への加入も必要となる。日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "テスラ「Cybercab」、購入しても別途「月5万円のサブスク契約」が必要 払わないと走行不可",
+          "url": "https://japan.cnet.com/article/35254914/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-15T23:15:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "PostgreSQL 19リリース延期の背景。β4で多くの新機能取り下げが発生、原因はAIによるコードレビューか",
+      "body": "3本目。Publickeyから、PostgreSQL 19リリース延期の背景。β4で多くの新機能取り下げが発生、原因はAIによるコードレビューか。オープンソースのリレーショナルデータベース「PostgreSQL」は、先週木曜日（2026年11月12日）に最終リリース候補版となるPostgreSQL 19 RC2が公開され、予定では今週の11月19日に正式リリースとなる見通しです。 そ...このニュースははてなブックマーク テクノロジーでも同時に取り上げられています。それだけ注目度が高い話題です。新機能のニュースは、競合がどこを脅威だと思っているかの裏返しでもあります。",
+      "refs": [
+        {
+          "title": "PostgreSQL 19リリース延期の背景。β4で多くの新機能取り下げが発生、原因はAIによるコードレビューか",
+          "url": "https://www.publickey1.jp/blog/26/postgresql_194ai.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-15T15:31:49.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "Museに雑に投げて頭を空けておく - taxin.dev",
+      "body": "4本目。はてなブックマーク テクノロジーから、Museに雑に投げて頭を空けておく - taxin.dev。2026年10月末にMeta社からパーソナルAIエージェント「Muse」の日本提供が開始されましたね。 私はリリースして数日経ったくらいから使い始めました。 仕事やエンジニアリングに関する内容ではなく、主にプライベートな調べ物やタスクをMuseに任せるようにしています。 「あれどうしてたっけ」「あれやらないと」と思った...日本市場特有の事情は、海外事例をそのまま持ち込めない理由として語られがちです。",
+      "refs": [
+        {
+          "title": "Museに雑に投げて頭を空けておく - taxin.dev",
+          "url": "https://taxin.dev/articles/2026-11-15",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-15T12:11:59.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Our new blog for science",
+      "body": "5本目。OpenAI Newsから、Our new blog for science。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。現場の人が何に反応したかは、公式発表からは読み取れない温度感を含んでいます。英語の記事です。見出しだけ先に押さえておいて、日本語の続報が出たら詳しく確認するのがおすすめです。",
+      "refs": [
+        {
+          "title": "Our new blog for science",
+          "url": "https://openai.com/index/our-new-blog-for-science",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-11-15T22:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。最後に、チャーンレート、読み方はチャーンレート。解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。カジュアル面談では、今日のニュースを一つ持っていくだけで会話が動きます。「これ見たんですが、御社ではどう捉えていますか」は、準備している人にしか出せない質問です。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。ITmedia AI+から、AIモデリングもできる無償3D CAD「SolidCraft」を試してみた！ITmedia AI+から、メルカリ、アプリ開発「2日→数十分」へ 直面したAI時代の“意外な課題”とは？Publickeyから、Cloudflare、AI専用でタブやテーマや拡張などない軽量ヘッドレスブラウザ「Kitesurf」、オープンソースで公開。TechCrunchから、Is bad news for Jensen Huang also bad news for the AI industry?TechCrunchから、SNL gathers all the tech tycoons for a lesson in dating and spycraft。Hacker News フロントページから、Your Agent Will Pick the Hackable One。Hacker News フロントページから、Boeing-Lockheed rocket fails mid-flight, destroys payload of Amazon satellites。SaaStrから、HubSpot Is Refounding as the “Customer Harness Company.” Here’s What That Means for Us, Right Now, in November 2026。OpenAI Newsから、A step toward defining the Standard Model on a lattice。Hacker News フロントページから、Vulcan rocket fails during return-to-flight launch, 40 Amazon satellites lost。CNET Japanから、ULAがロケット打ち上げ失敗、「Amazon Leo」衛星40基を喪失。TechCrunchから、TechCrunch Mobility: The Nvidia backup plan for China’s self-driving industry。以上です。",
+      "refs": [
+        {
+          "title": "AIモデリングもできる無償3D CAD「SolidCraft」を試してみた！",
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2611/16/news011.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-15T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "メルカリ、アプリ開発「2日→数十分」へ 直面したAI時代の“意外な課題”とは？",
+          "url": "https://www.itmedia.co.jp/business/articles/2611/16/news031.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-15T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Cloudflare、AI専用でタブやテーマや拡張などない軽量ヘッドレスブラウザ「Kitesurf」、オープンソースで公開",
+          "url": "https://www.publickey1.jp/blog/26/cloudflareaikitesurf.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-15T15:30:19.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Is bad news for Jensen Huang also bad news for the AI industry?",
+          "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-15T21:56:35.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "SNL gathers all the tech tycoons for a lesson in dating and spycraft",
+          "url": "https://techcrunch.com/2026/11/15/snl-gathers-all-the-tech-tycoons-for-a-lesson-in-dating-and-spycraft/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-15T20:20:57.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Your Agent Will Pick the Hackable One",
+          "url": "https://geoffstearns.com/blog/your-agent-will-pick-the-hackable-one/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-15T21:10:39.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Boeing-Lockheed rocket fails mid-flight, destroys payload of Amazon satellites",
+          "url": "https://www.reuters.com/business/aerospace-defense/us-rocket-fails-after-launch-payload-amazon-internet-satellites-destroyed-2026-11-15/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-15T21:38:11.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "HubSpot Is Refounding as the “Customer Harness Company.” Here’s What That Means for Us, Right Now, in November 2026",
+          "url": "https://www.saastr.com/hubspot-is-refounding-as-the-customer-harness-company-heres-what-that-means-for-us-right-now-in-november-2026/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-15T15:00:08.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "A step toward defining the Standard Model on a lattice",
+          "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-11-15T22:00:01.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Vulcan rocket fails during return-to-flight launch, 40 Amazon satellites lost",
+          "url": "https://www.space.com/space-exploration/launches-spacecraft/ula-vulcan-centaur-return-to-flight-amazon-leo-internet-satellite-launch",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-15T20:37:28.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "ULAがロケット打ち上げ失敗、「Amazon Leo」衛星40基を喪失",
+          "url": "https://japan.cnet.com/article/35254911/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-15T22:30:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "TechCrunch Mobility: The Nvidia backup plan for China’s self-driving industry",
+          "url": "https://techcrunch.com/2026/11/15/techcrunch-mobility-the-nvidia-backup-plan-for-chinas-self-driving-industry/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-15T17:05:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "ライセンス更新を機に「脱マクロ」 オートバックスセブンがGeminiで目指す売上高5000億円",
+        "url": "https://kn.itmedia.co.jp/kn/article/2611/16/2000003181/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-15T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "テスラ「Cybercab」、購入しても別途「月5万円のサブスク契約」が必要 払わないと走行不可",
+        "url": "https://japan.cnet.com/article/35254914/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-15T23:15:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "PostgreSQL 19リリース延期の背景。β4で多くの新機能取り下げが発生、原因はAIによるコードレビューか",
+        "url": "https://www.publickey1.jp/blog/26/postgresql_194ai.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-15T15:31:49.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "Museに雑に投げて頭を空けておく - taxin.dev",
+        "url": "https://taxin.dev/articles/2026-11-15",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-15T12:11:59.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Our new blog for science",
+        "url": "https://openai.com/index/our-new-blog-for-science",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-11-15T22:00:00.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "AIモデリングもできる無償3D CAD「SolidCraft」を試してみた！",
+        "url": "https://monoist.itmedia.co.jp/mn/articles/2611/16/news011.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-15T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "メルカリ、アプリ開発「2日→数十分」へ 直面したAI時代の“意外な課題”とは？",
+        "url": "https://www.itmedia.co.jp/business/articles/2611/16/news031.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-15T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Cloudflare、AI専用でタブやテーマや拡張などない軽量ヘッドレスブラウザ「Kitesurf」、オープンソースで公開",
+        "url": "https://www.publickey1.jp/blog/26/cloudflareaikitesurf.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-15T15:30:19.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Is bad news for Jensen Huang also bad news for the AI industry?",
+        "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-15T21:56:35.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "SNL gathers all the tech tycoons for a lesson in dating and spycraft",
+        "url": "https://techcrunch.com/2026/11/15/snl-gathers-all-the-tech-tycoons-for-a-lesson-in-dating-and-spycraft/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-15T20:20:57.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Your Agent Will Pick the Hackable One",
+        "url": "https://geoffstearns.com/blog/your-agent-will-pick-the-hackable-one/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-15T21:10:39.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Boeing-Lockheed rocket fails mid-flight, destroys payload of Amazon satellites",
+        "url": "https://www.reuters.com/business/aerospace-defense/us-rocket-fails-after-launch-payload-amazon-internet-satellites-destroyed-2026-11-15/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-15T21:38:11.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "HubSpot Is Refounding as the “Customer Harness Company.” Here’s What That Means for Us, Right Now, in November 2026",
+        "url": "https://www.saastr.com/hubspot-is-refounding-as-the-customer-harness-company-heres-what-that-means-for-us-right-now-in-november-2026/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-15T15:00:08.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "A step toward defining the Standard Model on a lattice",
+        "url": "https://openai.com/index/step-toward-defining-the-standard-model",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-11-15T22:00:01.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Vulcan rocket fails during return-to-flight launch, 40 Amazon satellites lost",
+        "url": "https://www.space.com/space-exploration/launches-spacecraft/ula-vulcan-centaur-return-to-flight-amazon-leo-internet-satellite-launch",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-15T20:37:28.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "ULAがロケット打ち上げ失敗、「Amazon Leo」衛星40基を喪失",
+        "url": "https://japan.cnet.com/article/35254911/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-15T22:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "TechCrunch Mobility: The Nvidia backup plan for China’s self-driving industry",
+        "url": "https://techcrunch.com/2026/11/15/techcrunch-mobility-the-nvidia-backup-plan-for-chinas-self-driving-industry/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-15T17:05:00.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    },
+    {
+      "id": "churn",
+      "term": "チャーンレート",
+      "reading": "チャーンレート",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。",
+      "interview": "「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 751
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 213
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 623
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 622
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 721
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 299
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1657
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 584
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 232
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 271
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 7652
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 547
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 197,
+    "eligible": 66
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 47.77
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "ライセンス更新を機に「脱マクロ」 オートバックスセブンがGeminiで目指す売上高5000億円",
+      "startSec": 47.77,
+      "endSec": 79.95
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "テスラ「Cybercab」、購入しても別途「月5万円のサブスク契約」が必要 払わないと走行不可",
+      "startSec": 79.95,
+      "endSec": 124.53
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "PostgreSQL 19リリース延期の背景。β4で多くの新機能取り下げが発生、原因はAIによるコードレビューか",
+      "startSec": 124.53,
+      "endSec": 173.45
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "Museに雑に投げて頭を空けておく - taxin.dev",
+      "startSec": 173.45,
+      "endSec": 212.71
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Our new blog for science",
+      "startSec": 212.71,
+      "endSec": 241.17
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 241.17,
+      "endSec": 354.5
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 354.5,
+      "endSec": 368.85
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 368.85,
+      "endSec": 483.07
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 483.07,
+      "endSec": 493.55
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 23690284,
+    "durationSec": 493.55
+  }
+}

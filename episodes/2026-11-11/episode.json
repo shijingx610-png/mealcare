@@ -1,0 +1,541 @@
+{
+  "id": "2026-11-11",
+  "createdAt": "2026-11-11T00:08:59.048Z",
+  "dateLabel": "11月11日（水）",
+  "durationMin": 10,
+  "estimatedMinutes": 11.8,
+  "generator": "template",
+  "title": "11月11日（水） Google、「Gemini 4 Carbon」一般提供開始 Geminiアプリでは最上位「AI Ultra」限定 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月11日（水）のテックニュースをお届けします。今日の見出しは5本です。1つ目、Google、「Gemini 4 Carbon」一般提供開始 Geminiアプリでは最上位「AI Ultra」限定。2つ目、Anthropic、IPOの仮条件を1株70?78ドルに 調達額は最大約644億ドル、GoogleとNVIDIAは各100億ドルを別途出資。3つ目、ソフトバンクG、7～9月期は1.1兆円の最終赤字--米AIデータセンター向け発電設備の調達見直し響く。4つ目、「盗撮」→「法律で規制」が話題のAI眼鏡 海外では大ヒットなのに、日本での普及は限定的 ビジネスでの活用事例を探る。5つ目、マイクロソフト、.NET 11正式リリース。C#に共用型を導入、JITやAOTコンパイラの高速化、コマンドラインツール強化など新機能。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Google、「Gemini 4 Carbon」一般提供開始 Geminiアプリでは最上位「AI Ultra」限定",
+      "body": "1本目。ITmedia AI+から、Google、「Gemini 4 Carbon」一般提供開始 Geminiアプリでは最上位「AI Ultra」限定。Googleは、最上位AIモデル「Gemini 4 Carbon」の提供を開始した。一般ユーザーは月額1万4500円の「Google AI Ultra」契約で利用可能となる。複雑な推論や高度なコーディングに特化しており、開発者向けAPIや新機能「/swarm」のプレビュー提供も始まった。このニュースはITmedia NEWSとCNET Japanでも同時に取り上げられています。それだけ注目度が高い話題です。新機能のニュースは、競合がどこを脅威だと思っているかの裏返しでもあります。",
+      "refs": [
+        {
+          "title": "Google、「Gemini 4 Carbon」一般提供開始 Geminiアプリでは最上位「AI Ultra」限定",
+          "url": "https://www.itmedia.co.jp/news/article/2611/11/2000003083/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-10T22:03:30.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS",
+            "CNET Japan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "Anthropic、IPOの仮条件を1株70?78ドルに 調達額は最大約644億ドル、GoogleとNVIDIAは各100億ドルを別途出資",
+      "body": "2本目。ITmedia NEWSから、Anthropic、IPOの仮条件を1株70?78ドルに 調達額は最大約644億ドル、GoogleとNVIDIAは各100億ドルを別途出資。Anthropicは、IPOに向けた修正版登録届出書を提出し、仮条件を1株70?78ドルに設定した。公開株数は8億2500万株で、調達額は最大約644億ドルとなる。Googleなど7社が260億ドル分を別途引き受ける。時価総額は最大約1兆4000億ドルに上る見込みで、11月19日に取引を開始すると報じられている。このニュースはCNET Japanでも同時に取り上げられています。それだけ注目度が高い話題です。調達額そのものより、何に使うと言っているかを聞くと、その会社がいま何に困っているかが分かります。",
+      "refs": [
+        {
+          "title": "Anthropic、IPOの仮条件を1株70?78ドルに 調達額は最大約644億ドル、GoogleとNVIDIAは各100億ドルを別途出資",
+          "url": "https://www.itmedia.co.jp/news/article/2611/11/2000003085/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-10T23:02:05.000Z",
+          "alsoReportedBy": [
+            "CNET Japan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "ソフトバンクG、7～9月期は1.1兆円の最終赤字--米AIデータセンター向け発電設備の調達見直し響く",
+      "body": "3本目。CNET Japanから、ソフトバンクG、7～9月期は1.1兆円の最終赤字--米AIデータセンター向け発電設備の調達見直し響く。ソフトバンクグループ（ソフトバンクG）が11月10日に発表した2026年4～9月期決算によると、7～9月期の親会社株主に帰属する最終損益は1兆1153億3700万円の赤字だった。前年同期の2兆5022億円の黒字から赤字に転じた。米国のAIデータセンター向け発電関連設備の調達計画を見直し、多額の損失を計上したことなどが響いた。国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "ソフトバンクG、7～9月期は1.1兆円の最終赤字--米AIデータセンター向け発電設備の調達見直し響く",
+          "url": "https://japan.cnet.com/article/35254675/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-10T22:15:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "「盗撮」→「法律で規制」が話題のAI眼鏡 海外では大ヒットなのに、日本での普及は限定的 ビジネスでの活用事例を探る",
+      "body": "4本目。はてなブックマーク テクノロジーから、「盗撮」→「法律で規制」が話題のAI眼鏡 海外では大ヒットなのに、日本での普及は限定的 ビジネスでの活用事例を探る。AI眼鏡で何ができるのか？ まず、AIグラスがどのように進化してきたのかを見てみよう。 AIグラスの先祖にあたるスマートグラスは、Googleが2013年に発売した「Google Glass」が草分けとされる。通常の眼鏡の外側にディスプレイが付いた構造で、一目で普通の眼鏡とは違うことが分かる。メモリは1GBでストレージは16GB。主...このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。現場の人が何に反応したかは、公式発表からは読み取れない温度感を含んでいます。",
+      "refs": [
+        {
+          "title": "「盗撮」→「法律で規制」が話題のAI眼鏡 海外では大ヒットなのに、日本での普及は限定的 ビジネスでの活用事例を探る",
+          "url": "https://www.itmedia.co.jp/news/article/2611/11/2000002913/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-10T20:34:16.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "マイクロソフト、.NET 11正式リリース。C#に共用型を導入、JITやAOTコンパイラの高速化、コマンドラインツール強化など新機能",
+      "body": "5本目。Publickeyから、マイクロソフト、.NET 11正式リリース。C#に共用型を導入、JITやAOTコンパイラの高速化、コマンドラインツール強化など新機能。マイクロソフトは日本時間の11月13日未明からオンラインイベント「.NET Conf 2026」を開催し、同社の包括的なアプリケーションフレームワークの最新版となる「.NET 11」正式版のリリースを発表しました。 Announcing ....新機能のニュースは、競合がどこを脅威だと思っているかの裏返しでもあります。",
+      "refs": [
+        {
+          "title": "マイクロソフト、.NET 11正式リリース。C#に共用型を導入、JITやAOTコンパイラの高速化、コマンドラインツール強化など新機能",
+          "url": "https://www.publickey1.jp/blog/26/net_11cjitaot.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-10T17:58:43.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。最後に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。求人票を見るときは、事業フェーズを先に確認してみてください。資金調達直後なのか、黒字化を目指している段階なのかで、求められる動き方がまるで違います。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Oura to acquire AI-native primary care startup Counsel Health for $625M。TechCrunchから、OpenAI acquires Odessia, travel startup created by Sonder founder。ITmedia AI+から、NotebookLMに公式APIが登場 WebページやYouTube動画の取り込みを自動化でき、MCPでAIエージェントからも使える。TechCrunchから、OpenAI, Anthropic face new oversight as New York’s AI safety law takes effect。CNET Japanから、「マネーフォワード ME」、毎日午前1～6時に全機能停止中 セキュリティ強化へ暫定措置。CNET Japanから、Claude、まるでExcelな表計算機能「Sheets」公開 共同作業用の「Whiteboards」も。SaaStrから、Anthropic’s IPO Puts ~$216 Billion in Employee Hands. Another $160 Billion Is Reserved for the Next Hires.ITmedia AI+から、通信大手3社こぞって「フィジカルAI」に参入、なぜ？ ロボットが動くともうかるワケ。ソフトバンク、NTT、KDDIがフィジカルAIビジネスに本格参入した。Hacker News フロントページから、After 7 Months, Glasswing Overwelms Maintainers with Underwhelming Findings。Google AI ブログから、We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps.SaaStrから、AI Startups May Have Fewer Sales Reps. But Not as a Percent of the Team. Has The Playbook Really Changed All That Much?Hacker News フロントページから、Apple has new Mac app coming to make running local AI models easy。以上です。",
+      "refs": [
+        {
+          "title": "Oura to acquire AI-native primary care startup Counsel Health for $625M",
+          "url": "https://techcrunch.com/2026/11/10/oura-to-acquire-ai-native-primary-care-startup-counsel-health-for-625m/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-10T19:23:34.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "OpenAI acquires Odessia, travel startup created by Sonder founder",
+          "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-10T21:08:52.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "NotebookLMに公式APIが登場 WebページやYouTube動画の取り込みを自動化でき、MCPでAIエージェントからも使える",
+          "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/11/news011.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-10T20:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "OpenAI, Anthropic face new oversight as New York’s AI safety law takes effect",
+          "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-10T20:52:13.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "「マネーフォワード ME」、毎日午前1～6時に全機能停止中 セキュリティ強化へ暫定措置",
+          "url": "https://japan.cnet.com/article/35254680/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-10T23:10:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Claude、まるでExcelな表計算機能「Sheets」公開 共同作業用の「Whiteboards」も",
+          "url": "https://japan.cnet.com/article/35254678/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-10T22:34:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Anthropic’s IPO Puts ~$216 Billion in Employee Hands. Another $160 Billion Is Reserved for the Next Hires.",
+          "url": "https://www.saastr.com/anthropics-ipo-puts-216-billion-in-employee-hands-another-160-billion-is-reserved-for-the-next-hires/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-10T18:00:03.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "通信大手3社こぞって「フィジカルAI」に参入、なぜ？ ロボットが動くともうかるワケ",
+          "url": "https://www.itmedia.co.jp/business/articles/2611/11/news038.html",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-10T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "After 7 Months, Glasswing Overwelms Maintainers with Underwhelming Findings",
+          "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-10T22:17:56.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps.",
+          "url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+          "sourceName": "Google AI ブログ",
+          "publishedAt": "2026-11-10T14:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "AI Startups May Have Fewer Sales Reps. But Not as a Percent of the Team. Has The Playbook Really Changed All That Much?",
+          "url": "https://www.saastr.com/ai-startups-may-have-fewer-sales-reps-but-not-as-a-percent-of-the-team-has-the-playbook-really-changed-all-that-much/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-10T15:10:06.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Apple has new Mac app coming to make running local AI models easy",
+          "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-10T21:25:03.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "Google、「Gemini 4 Carbon」一般提供開始 Geminiアプリでは最上位「AI Ultra」限定",
+        "url": "https://www.itmedia.co.jp/news/article/2611/11/2000003083/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-10T22:03:30.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS",
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "Anthropic、IPOの仮条件を1株70?78ドルに 調達額は最大約644億ドル、GoogleとNVIDIAは各100億ドルを別途出資",
+        "url": "https://www.itmedia.co.jp/news/article/2611/11/2000003085/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-10T23:02:05.000Z",
+        "alsoReportedBy": [
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "ソフトバンクG、7～9月期は1.1兆円の最終赤字--米AIデータセンター向け発電設備の調達見直し響く",
+        "url": "https://japan.cnet.com/article/35254675/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-10T22:15:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「盗撮」→「法律で規制」が話題のAI眼鏡 海外では大ヒットなのに、日本での普及は限定的 ビジネスでの活用事例を探る",
+        "url": "https://www.itmedia.co.jp/news/article/2611/11/2000002913/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-10T20:34:16.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "マイクロソフト、.NET 11正式リリース。C#に共用型を導入、JITやAOTコンパイラの高速化、コマンドラインツール強化など新機能",
+        "url": "https://www.publickey1.jp/blog/26/net_11cjitaot.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-10T17:58:43.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Oura to acquire AI-native primary care startup Counsel Health for $625M",
+        "url": "https://techcrunch.com/2026/11/10/oura-to-acquire-ai-native-primary-care-startup-counsel-health-for-625m/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-10T19:23:34.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAI acquires Odessia, travel startup created by Sonder founder",
+        "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-10T21:08:52.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "NotebookLMに公式APIが登場 WebページやYouTube動画の取り込みを自動化でき、MCPでAIエージェントからも使える",
+        "url": "https://atmarkit.itmedia.co.jp/ait/articles/2611/11/news011.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-10T20:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "OpenAI, Anthropic face new oversight as New York’s AI safety law takes effect",
+        "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-10T20:52:13.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "「マネーフォワード ME」、毎日午前1～6時に全機能停止中 セキュリティ強化へ暫定措置",
+        "url": "https://japan.cnet.com/article/35254680/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-10T23:10:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Claude、まるでExcelな表計算機能「Sheets」公開 共同作業用の「Whiteboards」も",
+        "url": "https://japan.cnet.com/article/35254678/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-10T22:34:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Anthropic’s IPO Puts ~$216 Billion in Employee Hands. Another $160 Billion Is Reserved for the Next Hires.",
+        "url": "https://www.saastr.com/anthropics-ipo-puts-216-billion-in-employee-hands-another-160-billion-is-reserved-for-the-next-hires/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-10T18:00:03.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "通信大手3社こぞって「フィジカルAI」に参入、なぜ？ ロボットが動くともうかるワケ",
+        "url": "https://www.itmedia.co.jp/business/articles/2611/11/news038.html",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-10T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "After 7 Months, Glasswing Overwelms Maintainers with Underwhelming Findings",
+        "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-10T22:17:56.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps.",
+        "url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+        "sourceName": "Google AI ブログ",
+        "publishedAt": "2026-11-10T14:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "AI Startups May Have Fewer Sales Reps. But Not as a Percent of the Team. Has The Playbook Really Changed All That Much?",
+        "url": "https://www.saastr.com/ai-startups-may-have-fewer-sales-reps-but-not-as-a-percent-of-the-team-has-the-playbook-really-changed-all-that-much/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-10T15:10:06.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Apple has new Mac app coming to make running local AI models easy",
+        "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-10T21:25:03.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 778
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 228
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1511
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 1539
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 769
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1180
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1914
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 1542
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1226
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1311
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 3683
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1560
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 193,
+    "eligible": 132
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}

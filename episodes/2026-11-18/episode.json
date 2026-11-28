@@ -1,0 +1,539 @@
+{
+  "id": "2026-11-18",
+  "createdAt": "2026-11-18T01:44:39.765Z",
+  "dateLabel": "11月18日（水）",
+  "durationMin": 10,
+  "estimatedMinutes": 11,
+  "generator": "template",
+  "title": "11月18日（水） ［速報］マイクロソフト、コーディング用AIモデルとして高性能かつ低価格「MAI Code 2」「MAI Code 2 Flash」発表 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月18日（水）のテックニュースをお届けします。今日の見出しは5本です。1つ目、［速報］マイクロソフト、コーディング用AIモデルとして高性能かつ低価格「MAI Code 2」「MAI Code 2 Flash」発表。2つ目、OpenAI、「GPT-6.2」の「Astra」と「Sol」を公開 AI自己改善能力は初の「High」に。3つ目、ホワイトハッカー報奨制度の中止相次ぐ AIがバグ発見、変わる役割 - 日本経済新聞。4つ目、Googleドライブの最新ファイルをGeminiが常時参照 「スキル」に新機能追加。5つ目、Gemini、「履歴オフ設定」でも会話を約2カ月保存 Googleが発表。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "［速報］マイクロソフト、コーディング用AIモデルとして高性能かつ低価格「MAI Code 2」「MAI Code 2 Flash」発表",
+      "body": "1本目。Publickeyから、［速報］マイクロソフト、コーディング用AIモデルとして高性能かつ低価格「MAI Code 2」「MAI Code 2 Flash」発表。マイクロソフトは日本時間11月18日未明に開幕した年次イベント「Microsoft Ignite 2026」で、同社が開発したコーディング用AIモデルのフラグシップで高性能かつ低価格を売り文句とする「MAI Code 2」と、さらに安価な「...このニュースははてなブックマーク テクノロジーでも同時に取り上げられています。それだけ注目度が高い話題です。大手の動きは、業界全体のルールが変わる合図になることがあります。",
+      "refs": [
+        {
+          "title": "［速報］マイクロソフト、コーディング用AIモデルとして高性能かつ低価格「MAI Code 2」「MAI Code 2 Flash」発表",
+          "url": "https://www.publickey1.jp/blog/26/aimai_code_2mai_code_2_flash.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-17T21:48:15.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "OpenAI、「GPT-6.2」の「Astra」と「Sol」を公開 AI自己改善能力は初の「High」に",
+      "body": "2本目。ITmedia NEWSから、OpenAI、「GPT-6.2」の「Astra」と「Sol」を公開 AI自己改善能力は初の「High」に。OpenAIは、専門業務向け最上位モデル「GPT-6.2 Astra」と汎用モデル「GPT-6.2 Sol」を発表した。AstraはAIの自己改善能力で同社初の「High」と評価された一方、両モデルともサイバーセキュリティ能力は「Critical」となり制限が強化された。同日より各有料プランで利用可能だ。このニュースはCNET Japanでも同時に取り上げられています。それだけ注目度が高い話題です。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "OpenAI、「GPT-6.2」の「Astra」と「Sol」を公開 AI自己改善能力は初の「High」に",
+          "url": "https://www.itmedia.co.jp/news/article/2611/18/2000003279/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-17T22:47:14.000Z",
+          "alsoReportedBy": [
+            "CNET Japan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "ホワイトハッカー報奨制度の中止相次ぐ AIがバグ発見、変わる役割 - 日本経済新聞",
+      "body": "3本目。はてなブックマーク テクノロジーから、ホワイトハッカー報奨制度の中止相次ぐ AIがバグ発見、変わる役割 - 日本経済新聞。サイバー攻撃につながるソフトウエアの弱点を見つけ、企業に報告するホワイトハッカー（善意のハッカー）の活用が岐路に立っている。人工知能（AI）の活用で報告が急増し、大会や報奨金制度を見直す企業が相次ぐ。トレンドマイクロ子会社のヴィックワン（東京・渋谷）は自動車関連ソフトウエアの脆弱性につながるバグの...国内の動きは、実際に面接で話題に出しやすいという実用的な利点があります。",
+      "refs": [
+        {
+          "title": "ホワイトハッカー報奨制度の中止相次ぐ AIがバグ発見、変わる役割 - 日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOUC097UG0Z01C26A1000000/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-17T21:50:19.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "Googleドライブの最新ファイルをGeminiが常時参照 「スキル」に新機能追加",
+      "body": "4本目。ITmedia AI+から、Googleドライブの最新ファイルをGeminiが常時参照 「スキル」に新機能追加。Geminiでカスタム指示を保存する「スキル」機能が拡張された。作成したスキルの他ユーザーへの共有や、Googleドライブなどのファイル追加が可能になり、常に最新データを参照してAIを動かせるようになる。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "Googleドライブの最新ファイルをGeminiが常時参照 「スキル」に新機能追加",
+          "url": "https://kn.itmedia.co.jp/kn/article/2611/18/2000003259/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-17T22:00:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Gemini、「履歴オフ設定」でも会話を約2カ月保存 Googleが発表",
+      "body": "5本目。CNET Japanから、Gemini、「履歴オフ設定」でも会話を約2カ月保存 Googleが発表。Googleは11月16日、生成AI「Gemini」で履歴をオフにした際の会話の保存期間を、従来の72時間から約2カ月に延長すると発表した。履歴一覧に残らない「一時チャット」も対象となる。今後数週間のうちに、世界で順次提供を始める。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "Gemini、「履歴オフ設定」でも会話を約2カ月保存 Googleが発表",
+          "url": "https://japan.cnet.com/article/35255032/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-17T22:49:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。SaaS、PaaS、IaaS、読み方はサース、パース、イアース。クラウドの提供範囲の違いです。SaaSは完成したソフトをそのまま使う形、PaaSはアプリを作る土台まで借りる形、IaaSはサーバーそのものを借りる形を指します。料理に例えるなら、SaaSは出来上がった定食、PaaSはキッチン付きの部屋、IaaSは更地です。次に、ARR、読み方はエーアールアール。年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。次に、MRR、読み方はエムアールアール。月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。最後に、チャーンレート、読み方はチャーンレート。解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。志望動機は「業界が伸びているから」だけだと弱くなります。どのニュースを見て何を面白いと思ったのか、具体的な一本があると説得力が変わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Amazon and Google will together own nearly 30% of Anthropic after its IPO。TechCrunchから、Nvidia is abandoning China after Jensen Huang’s ouster。Publickeyから、［速報］AIがOracle DBからPostgreSQLへの移行を支援、「Azure Database Migration Service」プレビュー。TechCrunchから、Nvidia’s startup stakes ballooned to $65B, but Huang’s exit puts future deals in doubt。Publickeyから、［速報］マイクロソフト、PostgreSQL互換のミッションクリティカル向けデータベースサービス「Azure HorizonDB」正式リリース。Hacker News フロントページから、Cerebras Disaggregated Inference。Hacker News フロントページから、Google's AI answers reducing search traffic by 40%。SaaStrから、Stripe’s New Index Shows Non-AI B2B Revenue Up 30%+ Year Over Year Through the SaaSpocalypse。はてなブックマーク テクノロジーから、Javaの「Java4Shell」（CVE-2026-114938）をOracleが正式公表 認証不要で悪用可能な脆弱性、Java 17・21・25・27などに影響|セキュリティニュースのセキュリティ対策Lab。ITmedia AI+から、GAS×Geminiが一般提供開始 IT管理者が確認すべき権限設定は？ITmedia NEWSから、NVIDIA、フアン氏退任後初の決算 取締役会「正式なCEOは急がず適任者を選ぶ」。NVIDIAは、フアン前CEO退任後初となる第3四半期決算を発表した。はてなブックマーク テクノロジーから、Windowsのフォント管理はこれが便利！ Windows10, 11対応、オープンソースの無料アプリ -tuna-fonts。当ブログでフォントを紹介する度に、「フォントの管理が、、、」という声がちらほら聞こえます。以上です。",
+      "refs": [
+        {
+          "title": "Amazon and Google will together own nearly 30% of Anthropic after its IPO",
+          "url": "https://techcrunch.com/2026/11/17/amazon-and-google-will-together-own-nearly-30-of-anthropic-after-its-ipo/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-17T22:29:05.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Nvidia is abandoning China after Jensen Huang’s ouster",
+          "url": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-17T23:37:48.000Z",
+          "alsoReportedBy": [
+            "TechCrunch"
+          ]
+        },
+        {
+          "title": "［速報］AIがOracle DBからPostgreSQLへの移行を支援、「Azure Database Migration Service」プレビュー",
+          "url": "https://www.publickey1.jp/blog/26/aioracle_dbpostgresqlazure_database_migration_service.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-17T21:40:32.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Nvidia’s startup stakes ballooned to $65B, but Huang’s exit puts future deals in doubt",
+          "url": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-18T01:44:21.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "［速報］マイクロソフト、PostgreSQL互換のミッションクリティカル向けデータベースサービス「Azure HorizonDB」正式リリース",
+          "url": "https://www.publickey1.jp/blog/26/postgresqlazure_horizondb.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-17T21:45:41.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Cerebras Disaggregated Inference",
+          "url": "https://www.cerebras.ai/blog/cerebras-launches-disaggregated-inference",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-18T00:56:23.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Google's AI answers reducing search traffic by 40%",
+          "url": "https://revscope.co/blog/search-seo-geo-2026/",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-18T00:17:58.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Stripe’s New Index Shows Non-AI B2B Revenue Up 30%+ Year Over Year Through the SaaSpocalypse",
+          "url": "https://www.saastr.com/stripes-new-index-shows-non-ai-b2b-revenue-up-30-year-over-year-through-the-saaspocalypse/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-17T13:00:54.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Javaの「Java4Shell」（CVE-2026-114938）をOracleが正式公表 認証不要で悪用可能な脆弱性、Java 17・21・25・27などに影響|セキュリティニュースのセキュリティ対策Lab",
+          "url": "https://rocket-boys.co.jp/security-measures-lab/java4shell-cve-2026-114938-oracle-openjdk-base64-rce-20261118/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-18T00:59:57.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "GAS×Geminiが一般提供開始 IT管理者が確認すべき権限設定は？",
+          "url": "https://kn.itmedia.co.jp/kn/article/2611/18/2000003256/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-17T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "NVIDIA、フアン氏退任後初の決算 取締役会「正式なCEOは急がず適任者を選ぶ」",
+          "url": "https://www.itmedia.co.jp/news/article/2611/18/2000003280/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-18T00:38:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Windowsのフォント管理はこれが便利！ Windows10, 11対応、オープンソースの無料アプリ -tuna-fonts",
+          "url": "https://coliss.com/articles/build-websites/operation/work/font-manager-for-windows-tuna-fonts.html",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-18T00:44:12.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "［速報］マイクロソフト、コーディング用AIモデルとして高性能かつ低価格「MAI Code 2」「MAI Code 2 Flash」発表",
+        "url": "https://www.publickey1.jp/blog/26/aimai_code_2mai_code_2_flash.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-17T21:48:15.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "OpenAI、「GPT-6.2」の「Astra」と「Sol」を公開 AI自己改善能力は初の「High」に",
+        "url": "https://www.itmedia.co.jp/news/article/2611/18/2000003279/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-17T22:47:14.000Z",
+        "alsoReportedBy": [
+          "CNET Japan"
+        ]
+      },
+      {
+        "title": "ホワイトハッカー報奨制度の中止相次ぐ AIがバグ発見、変わる役割 - 日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZQOUC097UG0Z01C26A1000000/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-17T21:50:19.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Googleドライブの最新ファイルをGeminiが常時参照 「スキル」に新機能追加",
+        "url": "https://kn.itmedia.co.jp/kn/article/2611/18/2000003259/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-17T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Gemini、「履歴オフ設定」でも会話を約2カ月保存 Googleが発表",
+        "url": "https://japan.cnet.com/article/35255032/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-17T22:49:00.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Amazon and Google will together own nearly 30% of Anthropic after its IPO",
+        "url": "https://techcrunch.com/2026/11/17/amazon-and-google-will-together-own-nearly-30-of-anthropic-after-its-ipo/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-17T22:29:05.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Nvidia is abandoning China after Jensen Huang’s ouster",
+        "url": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-17T23:37:48.000Z",
+        "alsoReportedBy": [
+          "TechCrunch"
+        ]
+      },
+      {
+        "title": "［速報］AIがOracle DBからPostgreSQLへの移行を支援、「Azure Database Migration Service」プレビュー",
+        "url": "https://www.publickey1.jp/blog/26/aioracle_dbpostgresqlazure_database_migration_service.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-17T21:40:32.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Nvidia’s startup stakes ballooned to $65B, but Huang’s exit puts future deals in doubt",
+        "url": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-18T01:44:21.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "［速報］マイクロソフト、PostgreSQL互換のミッションクリティカル向けデータベースサービス「Azure HorizonDB」正式リリース",
+        "url": "https://www.publickey1.jp/blog/26/postgresqlazure_horizondb.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-17T21:45:41.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Cerebras Disaggregated Inference",
+        "url": "https://www.cerebras.ai/blog/cerebras-launches-disaggregated-inference",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-18T00:56:23.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Google's AI answers reducing search traffic by 40%",
+        "url": "https://revscope.co/blog/search-seo-geo-2026/",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-18T00:17:58.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Stripe’s New Index Shows Non-AI B2B Revenue Up 30%+ Year Over Year Through the SaaSpocalypse",
+        "url": "https://www.saastr.com/stripes-new-index-shows-non-ai-b2b-revenue-up-30-year-over-year-through-the-saaspocalypse/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-17T13:00:54.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Javaの「Java4Shell」（CVE-2026-114938）をOracleが正式公表 認証不要で悪用可能な脆弱性、Java 17・21・25・27などに影響|セキュリティニュースのセキュリティ対策Lab",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/java4shell-cve-2026-114938-oracle-openjdk-base64-rce-20261118/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-18T00:59:57.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "GAS×Geminiが一般提供開始 IT管理者が確認すべき権限設定は？",
+        "url": "https://kn.itmedia.co.jp/kn/article/2611/18/2000003256/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-17T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "NVIDIA、フアン氏退任後初の決算 取締役会「正式なCEOは急がず適任者を選ぶ」",
+        "url": "https://www.itmedia.co.jp/news/article/2611/18/2000003280/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-18T00:38:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Windowsのフォント管理はこれが便利！ Windows10, 11対応、オープンソースの無料アプリ -tuna-fonts",
+        "url": "https://coliss.com/articles/build-websites/operation/work/font-manager-for-windows-tuna-fonts.html",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-18T00:44:12.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "saas-paas-iaas",
+      "term": "SaaS / PaaS / IaaS",
+      "reading": "サース、パース、イアース",
+      "category": "クラウド",
+      "level": 1,
+      "definition": "クラウドの提供範囲の違いです。SaaSは完成したソフトをそのまま使う形、PaaSはアプリを作る土台まで借りる形、IaaSはサーバーそのものを借りる形を指します。",
+      "interview": "料理に例えるなら、SaaSは出来上がった定食、PaaSはキッチン付きの部屋、IaaSは更地です。"
+    },
+    {
+      "id": "arr",
+      "term": "ARR",
+      "reading": "エーアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "年間経常収益。サブスクリプション契約から1年間に繰り返し入ってくる売上のことです。単発の受注ではなく「毎年続く売上」だけを数えるので、SaaS企業の規模はほぼこの数字で語られます。",
+      "interview": "「御社は今ARRどのくらいのフェーズですか」と聞けるだけで、事業の段階を理解しようとしている人だと伝わります。"
+    },
+    {
+      "id": "mrr",
+      "term": "MRR",
+      "reading": "エムアールアール",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "月次経常収益。ARRの月単位版です。月額課金のサービスでは、こちらの増減を毎月追いかけて事業の健康状態を見ます。",
+      "interview": "ARRとMRRは12倍の関係。どちらで語るかで、その会社が年単位契約か月単位契約かが透けて見えます。"
+    },
+    {
+      "id": "churn",
+      "term": "チャーンレート",
+      "reading": "チャーンレート",
+      "category": "SaaS指標",
+      "level": 1,
+      "definition": "解約率。契約してくれた顧客が一定期間でどれだけ離れたかの割合です。SaaSは水を溜めるバケツのようなもので、穴が大きいとどれだけ新規を入れても溜まりません。",
+      "interview": "「新規獲得より解約を減らすほうが効く局面もありますよね」と言えると、数字で事業を見る人という印象になります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 620
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 169
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 867
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 859
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 777
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 463
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1415
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 875
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 441
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 472
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 750
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 786
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 192,
+    "eligible": 124
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": null,
+  "audio": null
+}

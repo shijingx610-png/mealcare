@@ -1,0 +1,629 @@
+{
+  "id": "2026-11-12",
+  "createdAt": "2026-11-12T01:37:13.453Z",
+  "dateLabel": "11月12日（木）",
+  "durationMin": 10,
+  "estimatedMinutes": 11.4,
+  "generator": "template",
+  "title": "11月12日（木） Amazon、AWSのAPIを手元で再現する「AWS Emulator」を無償公開 コードはすべてAIエージェントが記述 ほか",
+  "segments": [
+    {
+      "id": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "body": "おはようございます。11月12日（木）のテックニュースをお届けします。今日の見出しは5本です。1つ目、Amazon、AWSのAPIを手元で再現する「AWS Emulator」を無償公開 コードはすべてAIエージェントが記述。2つ目、AWS、AIエージェント向けに強力な隔離環境とネイティブなEC2性能を備えた軽量VM「AWS Nitro Sandboxes」提供開始。3つ目、GitHub - aws/aws-emulator: AWS Emulator is a local emulator of the AWS APIs.。4つ目、MetaのAI「Muse」、Apple WatchとWear OSに対応--手首から指示や進捗確認。5つ目、Appleサポートコミュニティ、11月20日に閉鎖へ 新規投稿は既に終了。それでは順番に見ていきます。",
+      "refs": []
+    },
+    {
+      "id": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Amazon、AWSのAPIを手元で再現する「AWS Emulator」を無償公開 コードはすべてAIエージェントが記述",
+      "body": "1本目。ITmedia AI+から、Amazon、AWSのAPIを手元で再現する「AWS Emulator」を無償公開 コードはすべてAIエージェントが記述。AWSは、クラウド環境を使わずにローカルでAWS APIを再現できるツール「AWS Emulator」を無料で公開した。すべてのコードが自律型AIエージェントによって記述されており、人間のレビューは介在していない。開発者はAWSアカウント不要で、アプリの構築やCI/CDでの統合テストなどを手元で実行できる。このニュースはITmedia NEWSでも同時に取り上げられています。それだけ注目度が高い話題です。AI関連は発表の数が多いぶん、「実験段階なのか、もう業務で使われているのか」を見分けるのが大事です。",
+      "refs": [
+        {
+          "title": "Amazon、AWSのAPIを手元で再現する「AWS Emulator」を無償公開 コードはすべてAIエージェントが記述",
+          "url": "https://www.itmedia.co.jp/news/article/2611/12/2000003126/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-12T00:56:17.000Z",
+          "alsoReportedBy": [
+            "ITmedia NEWS"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "AWS、AIエージェント向けに強力な隔離環境とネイティブなEC2性能を備えた軽量VM「AWS Nitro Sandboxes」提供開始",
+      "body": "2本目。Publickeyから、AWS、AIエージェント向けに強力な隔離環境とネイティブなEC2性能を備えた軽量VM「AWS Nitro Sandboxes」提供開始。Amazon Web Services（AWS）は、Amazon EC2インスタンス上でほぼネイティブのEC2性能で動作しつつ、Nitroシステムハードウェアレベルのきわめて強力な隔離環境を備えた軽量な仮想マシン「AWS Nitro San...このニュースははてなブックマーク テクノロジーでも同時に取り上げられています。それだけ注目度が高い話題です。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "AWS、AIエージェント向けに強力な隔離環境とネイティブなEC2性能を備えた軽量VM「AWS Nitro Sandboxes」提供開始",
+          "url": "https://www.publickey1.jp/blog/26/awsaiec2vmaws_nitro_sandboxes.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-11T15:04:47.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "GitHub - aws/aws-emulator: AWS Emulator is a local emulator of the AWS APIs.",
+      "body": "3本目。はてなブックマーク テクノロジーから、GitHub - aws/aws-emulator: AWS Emulator is a local emulator of the AWS APIs.AWS Emulator is a local emulator of the AWS APIs. You use it to test your software without calling AWS, on your own machine, on a development server, or in continuous integration (…このニュースははてなブックマーク テクノロジーとHacker News フロントページでも同時に取り上げられています。それだけ注目度が高い話題です。開発者向けの話題は、技術職以外でも「現場が何を楽に感じるか」を知る手がかりになります。",
+      "refs": [
+        {
+          "title": "GitHub - aws/aws-emulator: AWS Emulator is a local emulator of the AWS APIs.",
+          "url": "https://github.com/aws/aws-emulator",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-11T20:28:40.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー",
+            "Hacker News フロントページ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "MetaのAI「Muse」、Apple WatchとWear OSに対応--手首から指示や進捗確認",
+      "body": "4本目。CNET Japanから、MetaのAI「Muse」、Apple WatchとWear OSに対応--手首から指示や進捗確認。Metaの個人向けAIエージェント「Muse」がApple Watchに対応し、手首から作業を依頼したり、進行状況を確認したりする画面例が公開された。米App Storeの更新履歴では、バージョン15.0でApple Watch向けの連携アプリを追加したと案内している。AIの話題は、できるようになったことより「これまで人が何時間かけていたか」に注目すると価値が測れます。",
+      "refs": [
+        {
+          "title": "MetaのAI「Muse」、Apple WatchとWear OSに対応--手首から指示や進捗確認",
+          "url": "https://japan.cnet.com/article/35254741/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-11T22:30:00.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Appleサポートコミュニティ、11月20日に閉鎖へ 新規投稿は既に終了",
+      "body": "5本目。ITmedia NEWSから、Appleサポートコミュニティ、11月20日に閉鎖へ 新規投稿は既に終了。Appleは、「Appleサポートコミュニティ」を11月20日に閉鎖すると発表した。1998年に開設された同フォーラムは、現在すでに新規投稿の受け付けを終了し、閲覧専用となっている。Appleは戦略と顧客ニーズを慎重に評価した結果としており、今後は公式サポートサイトを利用するよう呼び掛けている。新機能のニュースは、競合がどこを脅威だと思っているかの裏返しでもあります。",
+      "refs": [
+        {
+          "title": "Appleサポートコミュニティ、11月20日に閉鎖へ 新規投稿は既に終了",
+          "url": "https://www.itmedia.co.jp/news/article/2611/12/2000003124/",
+          "sourceName": "ITmedia NEWS",
+          "publishedAt": "2026-11-11T23:46:34.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "body": "続いて、今日の用語です。AIエージェント、読み方はエーアイエージェント。質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。次に、API、読み方はエーピーアイ。ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。次に、CI、CD、読み方はシーアイシーディー。コードを書いたら自動でテストして自動で公開する仕組みです。人が手作業でリリースしていた工程を機械に任せることで、1日に何度もリリースできるようになります。「リリース頻度はどのくらいですか」は開発文化を測る良い質問です。最後に、TAM、SAM、SOM、読み方はタム、サム、ソム。市場規模を3段階で見る枠組みです。TAMは理論上の最大市場、SAMはそのうち自社が狙える範囲、SOMは現実的に取れる範囲を指します。「この会社はどこまで伸びうるか」を自分で見積もる道具になります。一度で覚えなくて大丈夫です。何度か出てくるうちに馴染んできます。",
+      "refs": []
+    },
+    {
+      "id": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "body": "ここで転職メモを一つ。志望動機は「業界が伸びているから」だけだと弱くなります。どのニュースを見て何を面白いと思ったのか、具体的な一本があると説得力が変わります。",
+      "refs": []
+    },
+    {
+      "id": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "body": "最後に、その他の気になったニュースを短く並べます。TechCrunchから、Nvidia’s stock drops as board reportedly preps to oust CEO Jensen Huang。ITmedia AI+から、Claude Enterpriseがセキュリティと管理機能を強化 DLP・EDR連携など新機能の全容は。ITmedia AI+から、Google、選択肢から答えを選ぶことに特化した「Gemini Decisions API」発表 回答を生成せず確率で返す。TechCrunchから、Jensen Huang accused of having another affair — with an Nvidia exec。TechCrunchから、The unfolding Jensen Huang scandal: a timeline。Google AI ブログから、Gemini Decisions API: Fast, calibrated multimodal decisions。はてなブックマーク テクノロジーから、ゼロから独自開発した国産AIでトップクラスの日本語翻訳精度を実現する「PLaMo翻訳」を開発したPreferred Networksエンジニアに編集長が根掘り葉掘り聞いてみたよインタビュー。SaaStrから、Our Agents Never Picked Canva. 10 Learnings on Agent Pricing, Getting Picked, and Security From This Week’s “The Agents” With Ulrik Lehrskov-Schmidt。Publickeyから、テストフレームワーク「Playwright」がBunを正式サポート。テストランナーの実行を可能に。CNET Japanから、PayPayマネー、実質「PayPay銀行残高」に 連携を密にする新機能。OpenAI Newsから、Gilbert + Tobin rethinks the business of law with AI。Hacker News フロントページから、A general purpose Apple Silicon layer for x86-64 PCs。以上です。",
+      "refs": [
+        {
+          "title": "Nvidia’s stock drops as board reportedly preps to oust CEO Jensen Huang",
+          "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-11T23:28:45.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        },
+        {
+          "title": "Claude Enterpriseがセキュリティと管理機能を強化 DLP・EDR連携など新機能の全容は",
+          "url": "https://kn.itmedia.co.jp/kn/article/2611/12/2000003082/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-11T22:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Google、選択肢から答えを選ぶことに特化した「Gemini Decisions API」発表 回答を生成せず確率で返す",
+          "url": "https://www.itmedia.co.jp/aiplus/article/2611/12/2000003123/",
+          "sourceName": "ITmedia AI+",
+          "publishedAt": "2026-11-11T22:03:58.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Jensen Huang accused of having another affair — with an Nvidia exec",
+          "url": "https://techcrunch.com/2026/11/11/jensen-huang-accused-of-having-another-affair-with-a-nvidia-exec/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-11T23:17:05.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "The unfolding Jensen Huang scandal: a timeline",
+          "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+          "sourceName": "TechCrunch",
+          "publishedAt": "2026-11-11T23:50:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+          "sourceName": "Google AI ブログ",
+          "publishedAt": "2026-11-11T18:00:00.000Z",
+          "alsoReportedBy": [
+            "Hacker News フロントページ"
+          ]
+        },
+        {
+          "title": "ゼロから独自開発した国産AIでトップクラスの日本語翻訳精度を実現する「PLaMo翻訳」を開発したPreferred Networksエンジニアに編集長が根掘り葉掘り聞いてみたよインタビュー",
+          "url": "https://gigazine.net/news/20261112-preferred-networks-plamo-translate-interview/",
+          "sourceName": "はてなブックマーク テクノロジー",
+          "publishedAt": "2026-11-12T00:03:49.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Our Agents Never Picked Canva. 10 Learnings on Agent Pricing, Getting Picked, and Security From This Week’s “The Agents” With Ulrik Lehrskov-Schmidt",
+          "url": "https://www.saastr.com/our-agents-never-picked-canva-10-learnings-on-agent-pricing-getting-picked-and-security-from-this-weeks-the-agents-with-ulrik-lehrskov-schmidt/",
+          "sourceName": "SaaStr",
+          "publishedAt": "2026-11-11T18:09:46.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "テストフレームワーク「Playwright」がBunを正式サポート。テストランナーの実行を可能に",
+          "url": "https://www.publickey1.jp/blog/26/playwrightbun.html",
+          "sourceName": "Publickey",
+          "publishedAt": "2026-11-11T15:07:35.000Z",
+          "alsoReportedBy": [
+            "はてなブックマーク テクノロジー"
+          ]
+        },
+        {
+          "title": "PayPayマネー、実質「PayPay銀行残高」に 連携を密にする新機能",
+          "url": "https://japan.cnet.com/article/35254753/",
+          "sourceName": "CNET Japan",
+          "publishedAt": "2026-11-12T01:32:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "Gilbert + Tobin rethinks the business of law with AI",
+          "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+          "sourceName": "OpenAI News",
+          "publishedAt": "2026-11-12T00:00:00.000Z",
+          "alsoReportedBy": []
+        },
+        {
+          "title": "A general purpose Apple Silicon layer for x86-64 PCs",
+          "url": "https://github.com/tylertms/Stela",
+          "sourceName": "Hacker News フロントページ",
+          "publishedAt": "2026-11-11T23:02:38.000Z",
+          "alsoReportedBy": []
+        }
+      ]
+    },
+    {
+      "id": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "body": "今日は以上です。全部覚えようとしなくて大丈夫です。一つでも引っかかった話があれば、あとで記事を開いてみてください。それではまた明日。",
+      "refs": []
+    }
+  ],
+  "items": {
+    "deepDive": [
+      {
+        "title": "Amazon、AWSのAPIを手元で再現する「AWS Emulator」を無償公開 コードはすべてAIエージェントが記述",
+        "url": "https://www.itmedia.co.jp/news/article/2611/12/2000003126/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-12T00:56:17.000Z",
+        "alsoReportedBy": [
+          "ITmedia NEWS"
+        ]
+      },
+      {
+        "title": "AWS、AIエージェント向けに強力な隔離環境とネイティブなEC2性能を備えた軽量VM「AWS Nitro Sandboxes」提供開始",
+        "url": "https://www.publickey1.jp/blog/26/awsaiec2vmaws_nitro_sandboxes.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-11T15:04:47.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "GitHub - aws/aws-emulator: AWS Emulator is a local emulator of the AWS APIs.",
+        "url": "https://github.com/aws/aws-emulator",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-11T20:28:40.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー",
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "MetaのAI「Muse」、Apple WatchとWear OSに対応--手首から指示や進捗確認",
+        "url": "https://japan.cnet.com/article/35254741/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-11T22:30:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Appleサポートコミュニティ、11月20日に閉鎖へ 新規投稿は既に終了",
+        "url": "https://www.itmedia.co.jp/news/article/2611/12/2000003124/",
+        "sourceName": "ITmedia NEWS",
+        "publishedAt": "2026-11-11T23:46:34.000Z",
+        "alsoReportedBy": []
+      }
+    ],
+    "roundup": [
+      {
+        "title": "Nvidia’s stock drops as board reportedly preps to oust CEO Jensen Huang",
+        "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-11T23:28:45.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "Claude Enterpriseがセキュリティと管理機能を強化 DLP・EDR連携など新機能の全容は",
+        "url": "https://kn.itmedia.co.jp/kn/article/2611/12/2000003082/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-11T22:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Google、選択肢から答えを選ぶことに特化した「Gemini Decisions API」発表 回答を生成せず確率で返す",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2611/12/2000003123/",
+        "sourceName": "ITmedia AI+",
+        "publishedAt": "2026-11-11T22:03:58.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Jensen Huang accused of having another affair — with an Nvidia exec",
+        "url": "https://techcrunch.com/2026/11/11/jensen-huang-accused-of-having-another-affair-with-a-nvidia-exec/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-11T23:17:05.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "The unfolding Jensen Huang scandal: a timeline",
+        "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+        "sourceName": "TechCrunch",
+        "publishedAt": "2026-11-11T23:50:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+        "sourceName": "Google AI ブログ",
+        "publishedAt": "2026-11-11T18:00:00.000Z",
+        "alsoReportedBy": [
+          "Hacker News フロントページ"
+        ]
+      },
+      {
+        "title": "ゼロから独自開発した国産AIでトップクラスの日本語翻訳精度を実現する「PLaMo翻訳」を開発したPreferred Networksエンジニアに編集長が根掘り葉掘り聞いてみたよインタビュー",
+        "url": "https://gigazine.net/news/20261112-preferred-networks-plamo-translate-interview/",
+        "sourceName": "はてなブックマーク テクノロジー",
+        "publishedAt": "2026-11-12T00:03:49.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Our Agents Never Picked Canva. 10 Learnings on Agent Pricing, Getting Picked, and Security From This Week’s “The Agents” With Ulrik Lehrskov-Schmidt",
+        "url": "https://www.saastr.com/our-agents-never-picked-canva-10-learnings-on-agent-pricing-getting-picked-and-security-from-this-weeks-the-agents-with-ulrik-lehrskov-schmidt/",
+        "sourceName": "SaaStr",
+        "publishedAt": "2026-11-11T18:09:46.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "テストフレームワーク「Playwright」がBunを正式サポート。テストランナーの実行を可能に",
+        "url": "https://www.publickey1.jp/blog/26/playwrightbun.html",
+        "sourceName": "Publickey",
+        "publishedAt": "2026-11-11T15:07:35.000Z",
+        "alsoReportedBy": [
+          "はてなブックマーク テクノロジー"
+        ]
+      },
+      {
+        "title": "PayPayマネー、実質「PayPay銀行残高」に 連携を密にする新機能",
+        "url": "https://japan.cnet.com/article/35254753/",
+        "sourceName": "CNET Japan",
+        "publishedAt": "2026-11-12T01:32:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "Gilbert + Tobin rethinks the business of law with AI",
+        "url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+        "sourceName": "OpenAI News",
+        "publishedAt": "2026-11-12T00:00:00.000Z",
+        "alsoReportedBy": []
+      },
+      {
+        "title": "A general purpose Apple Silicon layer for x86-64 PCs",
+        "url": "https://github.com/tylertms/Stela",
+        "sourceName": "Hacker News フロントページ",
+        "publishedAt": "2026-11-11T23:02:38.000Z",
+        "alsoReportedBy": []
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "ai-agent",
+      "term": "AIエージェント",
+      "reading": "エーアイエージェント",
+      "category": "AI",
+      "level": 2,
+      "definition": "質問に答えるだけでなく、自分で手順を考えて道具を使い、作業を最後までやり切るAIです。調べる、書く、送るまでを任せる方向に進んでいます。",
+      "interview": "2025年以降のSaaSの主戦場。「人が使う道具」から「人の代わりに働く同僚」への移行と捉えると流れが掴めます。"
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "reading": "エーピーアイ",
+      "category": "技術",
+      "level": 1,
+      "definition": "ソフト同士がやり取りするための窓口です。人間が画面を操作する代わりに、プログラムから機能を呼び出せるようにした入口だと考えてください。",
+      "interview": "「API連携できますか」は、他のツールと繋げられますかという意味。SaaSの商談で最も頻出する質問の一つです。"
+    },
+    {
+      "id": "cicd",
+      "term": "CI/CD",
+      "reading": "シーアイシーディー",
+      "category": "開発プロセス",
+      "level": 2,
+      "definition": "コードを書いたら自動でテストして自動で公開する仕組みです。人が手作業でリリースしていた工程を機械に任せることで、1日に何度もリリースできるようになります。",
+      "interview": "「リリース頻度はどのくらいですか」は開発文化を測る良い質問です。"
+    },
+    {
+      "id": "tam",
+      "term": "TAM / SAM / SOM",
+      "reading": "タム、サム、ソム",
+      "category": "事業モデル",
+      "level": 3,
+      "definition": "市場規模を3段階で見る枠組みです。TAMは理論上の最大市場、SAMはそのうち自社が狙える範囲、SOMは現実的に取れる範囲を指します。",
+      "interview": "「この会社はどこまで伸びうるか」を自分で見積もる道具になります。"
+    }
+  ],
+  "health": [
+    {
+      "sourceId": "itmedia-ai",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 657
+    },
+    {
+      "sourceId": "openai-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://openai.com/news/rss.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 178
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://blog.google/technology/ai/rss/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 842
+    },
+    {
+      "sourceId": "venturebeat-ai",
+      "ok": false,
+      "error": "HTTP 429",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://venturebeat.com/category/ai/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/feed/",
+          "error": "HTTP 429"
+        },
+        {
+          "url": "https://venturebeat.com/category/ai/",
+          "error": "HTTP 429"
+        }
+      ],
+      "elapsedMs": 715
+    },
+    {
+      "sourceId": "itmedia-news",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 618
+    },
+    {
+      "sourceId": "publickey",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.publickey1.jp/atom.xml",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 444
+    },
+    {
+      "sourceId": "cnet-japan",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://feeds.japan.cnet.com/rss/cnet/all.rdf",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 1809
+    },
+    {
+      "sourceId": "thebridge",
+      "ok": false,
+      "error": "HTTP 403",
+      "resolvedUrl": null,
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [
+        {
+          "url": "https://thebridge.jp/feed",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/rss",
+          "error": "HTTP 403"
+        },
+        {
+          "url": "https://thebridge.jp/",
+          "error": "HTTP 403"
+        }
+      ],
+      "elapsedMs": 738
+    },
+    {
+      "sourceId": "hatena-it",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://b.hatena.ne.jp/hotentry/it.rss",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 462
+    },
+    {
+      "sourceId": "techcrunch",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://techcrunch.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 489
+    },
+    {
+      "sourceId": "hackernews",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://hnrss.org/frontpage",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 852
+    },
+    {
+      "sourceId": "saastr",
+      "ok": true,
+      "error": null,
+      "resolvedUrl": "https://www.saastr.com/feed/",
+      "movedFrom": null,
+      "discovered": false,
+      "tried": [],
+      "elapsedMs": 716
+    }
+  ],
+  "stats": {
+    "sources": 12,
+    "sourcesOk": 10,
+    "fetched": 205,
+    "unique": 192,
+    "eligible": 131
+  },
+  "fallbackReason": "ANTHROPIC_API_KEY が未設定のため、テンプレートで生成しました",
+  "chapters": [
+    {
+      "segmentId": "opening-0",
+      "kind": "opening",
+      "heading": "オープニング",
+      "startSec": 0,
+      "endSec": 61.49
+    },
+    {
+      "segmentId": "deepDive-1",
+      "kind": "deepDive",
+      "heading": "Amazon、AWSのAPIを手元で再現する「AWS Emulator」を無償公開 コードはすべてAIエージェントが記述",
+      "startSec": 61.49,
+      "endSec": 118.04
+    },
+    {
+      "segmentId": "deepDive-2",
+      "kind": "deepDive",
+      "heading": "AWS、AIエージェント向けに強力な隔離環境とネイティブなEC2性能を備えた軽量VM「AWS Nitro Sandboxes」提供開始",
+      "startSec": 118.04,
+      "endSec": 166.37
+    },
+    {
+      "segmentId": "deepDive-3",
+      "kind": "deepDive",
+      "heading": "GitHub - aws/aws-emulator: AWS Emulator is a local emulator of the AWS APIs.",
+      "startSec": 166.37,
+      "endSec": 215.94
+    },
+    {
+      "segmentId": "deepDive-4",
+      "kind": "deepDive",
+      "heading": "MetaのAI「Muse」、Apple WatchとWear OSに対応--手首から指示や進捗確認",
+      "startSec": 215.94,
+      "endSec": 255.33
+    },
+    {
+      "segmentId": "deepDive-5",
+      "kind": "deepDive",
+      "heading": "Appleサポートコミュニティ、11月20日に閉鎖へ 新規投稿は既に終了",
+      "startSec": 255.33,
+      "endSec": 294.44
+    },
+    {
+      "segmentId": "glossary-6",
+      "kind": "glossary",
+      "heading": "今日の用語",
+      "startSec": 294.44,
+      "endSec": 396.46
+    },
+    {
+      "segmentId": "career-7",
+      "kind": "career",
+      "heading": "転職メモ",
+      "startSec": 396.46,
+      "endSec": 409.74
+    },
+    {
+      "segmentId": "roundup-8",
+      "kind": "roundup",
+      "heading": "早耳ラウンドアップ",
+      "startSec": 409.74,
+      "endSec": 535.49
+    },
+    {
+      "segmentId": "closing-9",
+      "kind": "closing",
+      "heading": "クロージング",
+      "startSec": 535.49,
+      "endSec": 545.96
+    }
+  ],
+  "audio": {
+    "file": "audio.wav",
+    "contentType": "audio/wav",
+    "bytes": 26206252,
+    "durationSec": 545.96
+  }
+}
